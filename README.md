@@ -25,7 +25,7 @@ Just run `croct use <component url>` to integrate a component into your applicat
 
 ### What's Croct?
 
-Croct is a Component CMS designed for modern stacks with a developer-first mindset. Built by seasoned open-source contributors, we offer a **free-forever plan** — no credit card required — perfect for most teams and projects.
+Croct is a Component CMS designed for modern stacks with a developer-first mindset. Built by seasoned open-source contributors, we offer a **💚 free-forever plan** — no credit card required — perfect for most teams and projects.
 
 ### Try it in Next.js
 
@@ -129,7 +129,7 @@ templates/
  │   │   ├── template.json5
 ```
 
-The `[organization]` should be the company's domain **without** `.com`, `.io`, or similar. For example, for **croct.io**, the folder name should be `croct`.
+The `[organization]` should be the company's domain without `.com`, `.io`, or similar. For example, for `croct.com`, the folder name should be `croct`.
 
 ### Documentation
 

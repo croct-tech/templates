@@ -44,7 +44,7 @@ To use the Croct CLI, you need to have [Node.js](https://nodejs.org/) installed.
 You can install the CLI globally using npm:
 
 ```sh
-npm install -g @croct/cli
+npm install -g croct
 ```
 
 Or run it directly using `npx`:

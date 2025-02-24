@@ -33,7 +33,7 @@ Built by seasoned open-source contributors, we offer a **💚 forever-free plan*
 To use it with [Next.js](https://nextjs.org/), run:
 
 ```sh
-croct use nextjs:/starter
+croct use nextjs:/croct
 ```
 
 This will either set up a new Next.js project or add the component to an existing one, fully configured.

@@ -1,5 +1,5 @@
 {
-  "title": "Next.js + shadcn template",
+  "title": "Shadcn project using Next.js",
   "description": "A template for bootstrapping a new project with Next.js and shadcn.",
   "options": {
     "name": {
@@ -10,10 +10,21 @@
   },
   "actions": [
     {
+      "name": "import",
+      "template": "nextjs:/project",
+      "options": {
+        "name": "${options.name}",
+        "typescript": true,
+        "tailwind": true,
+        "eslint": true,
+        "router": "app"
+      }
+    },
+    {
       "name": "execute-package",
-      "package": "shadcn",
+      "package": "shadcn@latest",
       "runner": "npm",
-      "arguments": ["init", "-d"],
+      "arguments": ["init", "-d", "--cwd", "${options.name}"],
       "interactions": [
         {
           "when": "Would you like to start a new project?",

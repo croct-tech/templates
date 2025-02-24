@@ -1,6 +1,6 @@
 {
-  "title": "shadcn template",
-  "description": "A template for installing shadcn components.",
+  "title": "Add shadcn component",
+  "description": "A template for adding a shadcn component to a project.",
   "options": {
     "components": {
       "type": "array",
@@ -10,15 +10,26 @@
   },
   "actions": [
     {
+      "name": "check-dependencies",
+      "dependencies": [
+        {
+          "name": "tailwindcss",
+        }
+      ],
+      "result": {
+        "tailwindcss": "isTailwindcssInstalled"
+      }
+    },
+    {
       "name": "locate-file",
       "path": "tailwind.config.*",
       "limit": 1,
       "depth": 3,
-      "result": "isTailwindConfigured"
+      "result": "tailwindConfigFiles"
     },
     {
       "name": "test",
-      "condition": "${this.isTailwindConfigured.length === 0}",
+      "condition": "${!this.isTailwindcssInstalled && this.tailwindConfigFiles.length === 0}",
       "then": [
         {
           "name": "fail",
@@ -34,7 +45,7 @@
     },
     {
       "name": "execute-package",
-      "package": "shadcn",
+      "package": "shadcn@latest",
       "arguments": "${['add', ...options.components]}",
       "interactions": [
         {

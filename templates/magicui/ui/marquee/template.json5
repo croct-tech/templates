@@ -4,10 +4,12 @@
   "actions": [
     {
       "name": "import",
-      "template": "../component",
+      "template": "shadcn:/ui/component/install",
       "options": {
         "id": "marquee",
+        "url": "https://magicui.design/r/marquee",
         "component": "Marquee",
+        "code": "magicui:/ui/marquee/code",
         "slotReference": "slotSlug",
         "action": {
           "name": "run",

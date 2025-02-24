@@ -1,15 +1,25 @@
 {
-  "title": "Component template",
-  "description": "A reusable template for importing components.",
+  "title": "Install shadcn component",
+  "description": "A template for installing a shadcn component to a project.",
   "options": {
     "id": {
       "type": "string",
       "description": "The component ID.",
       "required": true
     },
+    "url": {
+      "type": "string",
+      "description": "The URL of the component registry.",
+      "required": true
+    },
     "component": {
       "type": "string",
       "description": "The component name.",
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "description": "The path to the directory containing the component code.",
       "required": true
     },
     "slotReference": {
@@ -24,12 +34,6 @@
     }
   },
   "actions": [
-    {
-      "name": "define",
-      "variables": {
-        "registryUrl": "https://magicui.design/r/${options.id}.json"
-      }
-    },
     {
       "name": "test",
       "condition": "${project.platform === 'unknown'}",
@@ -68,7 +72,7 @@
             },
             {
               "name": "import",
-              "template": "shadcn:/project",
+              "template": "../../../project",
               "options": {
                 "name": "${this.projectName}",
               }
@@ -111,10 +115,10 @@
       "then": [
         {
           "name": "import",
-          "template": "shadcn:/ui/component",
+          "template": "../add",
           "options": {
             "components": [
-              "${this.registryUrl}"
+              "${options.url}"
             ]
           }
         },
@@ -142,7 +146,7 @@
     },
     {
       "name": "download",
-      "source": "../${options.id}/code/${project.platform}/${this.exampleFile}",
+      "source": "${options.code}/${project.platform}/${this.exampleFile}",
       "destination": "${project.path.example}/${options.id}",
       "result": {
         "destination": "examplePath"

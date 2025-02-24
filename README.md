@@ -23,6 +23,10 @@ We're creating the largest **CMS-powered UI component library** — think of it 
 
 Just run `croct use <component url>` to integrate a component into your application with **CMS, analytics, A/B testing, and personalization**.
 
+### What's Croct?
+
+Croct is a Component CMS designed for modern stacks with a developer-first mindset. Built by seasoned open-source contributors, we offer a **free-forever plan** — no credit card required — perfect for most teams and projects.
+
 ### Try it in Next.js
 
 To use it with [Next.js](https://nextjs.org/), run:
@@ -32,6 +36,22 @@ croct use croct:/next
 ```
 
 This will either set up a new Next.js project or add the component to an existing one, fully configured.
+
+## Installation
+
+To use the Croct CLI, you need to have [Node.js](https://nodejs.org/) installed. 
+
+You can install the CLI globally using npm:
+
+```sh
+npm install -g @croct/cli
+```
+
+Or run it directly using `npx`:
+
+```sh
+npx croct@latest use <template-url>
+```
 
 ## Basic usage
 
@@ -76,6 +96,8 @@ These are the currently supported aliases:
 | **Croct**    | `croct:/<template>`                | `https://croct.com/templates/<template>`      |
 | **Vercel**   | `vercel:/<template>`               | `https://vercel.com/templates/<template>`     |
 | **Magic UI** | `magicui:/ui/<component>`          | `https://magicui.design/r/<component>`        |
+
+To add a new alias, open a pull request with the new entry in the [registry](registry.json).
 
 ## Contribute
 

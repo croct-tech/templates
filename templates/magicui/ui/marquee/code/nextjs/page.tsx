@@ -67,7 +67,7 @@ function EditToolbar() {
                 ✨ You can edit, test variations, and personalize this content
             </p>
             <a
-                href="%workspaceUrl%slots/edit/%slotId%/latest"
+                href="%workspaceUrl%/slots/edit/%slotId%/latest"
                 target="_blank"
                 className="rounded-full ring-1 ring-inset ring-indigo-300  px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
             >

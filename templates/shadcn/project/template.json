@@ -17,7 +17,8 @@
         "typescript": true,
         "tailwind": true,
         "eslint": true,
-        "router": "app"
+        "router": "app",
+        "import-alias": ""
       }
     },
     {

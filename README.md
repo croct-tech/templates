@@ -21,18 +21,19 @@
 
 We're creating the largest **CMS-powered UI component library** — think of it as [`shadcn`](https://github.com/shadcn-ui/ui) for CMS. 
 
-Just run `croct use <component url>` to integrate a component into your application with **CMS, analytics, A/B testing, and personalization**.
+Just run `croct use <template>` to integrate a component into your application with **CMS, analytics, A/B testing, and personalization**.
 
 ### What's Croct?
 
-Croct is a **Component CMS** designed for modern stacks with a developer-first mindset. Built by seasoned open-source contributors, we offer a **💚 forever-free plan** — no credit card required — perfect for most teams and projects.
+Croct is a **Component CMS** designed for modern stacks with a developer-first mindset.
+Built by seasoned open-source contributors, we offer a **💚 forever-free plan** — no credit card required — perfect for most teams and projects.
 
-### Try it in Next.js
+### 👉 Try it in Next.js
 
 To use it with [Next.js](https://nextjs.org/), run:
 
 ```sh
-croct use croct:/next
+croct use nextjs:/starter
 ```
 
 This will either set up a new Next.js project or add the component to an existing one, fully configured.
@@ -41,7 +42,7 @@ This will either set up a new Next.js project or add the component to an existin
 
 To use the Croct CLI, you need to have [Node.js](https://nodejs.org/) installed. 
 
-You can install the CLI globally using npm:
+You can install the CLI globally using NPM:
 
 ```sh
 npm install -g croct

@@ -38,7 +38,7 @@
     {
       "name": "execute-package",
       "runner": "npm",
-      "package": "create-next-app@latest",
+      "package": "create-next-app@${options.version}",
       "arguments": "${[options.name, options.typescript ? '--ts' : '--js', options.tailwind ? '--tailwind' : '--no-tailwind', options.eslint ? '--eslint' : '--no-eslint', ...(options.router === 'app' ? ['--app'] : []), '--no-turbopack', '--no-src-dir', '--import-alias', '@/*']}"
     }
   ]

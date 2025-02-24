@@ -1,6 +1,13 @@
 {
   "title": "Next.js + Croct",
   "description": "A Next.js project with Croct integration.",
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "default": "latest"
+    }
+  },
   "actions": [
     {
       "name": "test",
@@ -43,6 +50,7 @@
               "template": "../project",
               "options": {
                 "name": "${this.projectName}",
+                "version": "${options.version}",
                 "typescript": true,
                 "tailwind": true,
                 "eslint": true,

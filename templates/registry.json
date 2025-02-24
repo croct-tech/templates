@@ -17,10 +17,10 @@
   },
   {
     "pattern": "magicui:/*(.+?)$",
-    "destination": "github:/croct-tech/templates/templates/magic-ui/$1"
+    "destination": "github:/croct-tech/templates/templates/magicui/$1"
   },
   {
     "pattern": "^https://magicui.design/r/(.+?)$",
-    "destination": "github:/croct-tech/templates/templates/magic-ui/ui/$1"
+    "destination": "github:/croct-tech/templates/templates/magicui/ui/$1"
   }
 ]

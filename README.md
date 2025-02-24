@@ -135,6 +135,6 @@ The `[organization]` should be the company's domain without `.com`, `.io`, or si
 
 Check the [documentation](https://docs.croct.com/reference/cli/templates) for more information on how to create and publish templates.
 
-### License
+## License
 
 This library is licensed under the [MIT license](LICENSE).

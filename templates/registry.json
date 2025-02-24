@@ -8,15 +8,15 @@
     "destination": "github:/croct-tech/templates/templates/croct/$1"
   },
   {
-    "pattern": "nextjs:/*(.+?)$",
+    "pattern": "^nextjs:/*(.+?)$",
     "destination": "github:/croct-tech/templates/templates/nextjs/$1"
   },
   {
-    "pattern": "shadcn:/*(.+?)$",
+    "pattern": "^shadcn:/*(.+?)$",
     "destination": "github:/croct-tech/templates/templates/shadcn/$1"
   },
   {
-    "pattern": "magicui:/*(.+?)$",
+    "pattern": "^magicui:/*(.+?)$",
     "destination": "github:/croct-tech/templates/templates/magicui/$1"
   },
   {

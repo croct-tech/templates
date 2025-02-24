@@ -1,0 +1,140 @@
+{
+  "name": "Magic UI - Marquee Reviews",
+  "description": "An infinite scrolling component that displays user reviews.",
+  "definition": {
+    "type": "structure",
+    "title": "Magic UI - Marquee Reviews",
+    "attributes": {
+      "repeat": {
+        "type": {
+          "type": "number",
+          "integer": true,
+          "minimum": 1
+        },
+        "label": "Repetition",
+        "private": false,
+        "optional": true,
+        "position": 4,
+        "description": "Number of times to repeat the content."
+      },
+      "reverse": {
+        "type": {
+          "type": "boolean",
+          "label": {
+            "true": "Yes",
+            "false": "No"
+          },
+          "default": false
+        },
+        "label": "Reverse animation?",
+        "private": false,
+        "optional": false,
+        "position": 1,
+        "description": "Whether or not to reverse the direction of the marquee."
+      },
+      "reviews": {
+        "type": {
+          "type": "list",
+          "items": {
+            "type": "structure",
+            "attributes": {
+              "name": {
+                "type": {
+                  "type": "text",
+                  "minimumLength": 1
+                },
+                "label": "Name",
+                "private": false,
+                "optional": false,
+                "position": 0,
+                "description": "The name of the author."
+              },
+              "avatar": {
+                "type": {
+                  "id": "@croct/file",
+                  "type": "reference"
+                },
+                "label": "Avatar",
+                "private": false,
+                "optional": false,
+                "position": 2,
+                "description": "The URL of the author avatar."
+              },
+              "content": {
+                "type": {
+                  "type": "text",
+                  "format": "multiline",
+                  "minimumLength": 1
+                },
+                "label": "Content",
+                "private": false,
+                "optional": false,
+                "position": 3,
+                "description": "The content of the review."
+              },
+              "username": {
+                "type": {
+                  "type": "text",
+                  "minimumLength": 1
+                },
+                "label": "Username",
+                "private": false,
+                "optional": false,
+                "position": 1,
+                "description": "The username of the author."
+              }
+            }
+          },
+          "itemLabel": "Review"
+        },
+        "label": "Reviews",
+        "private": false,
+        "optional": false,
+        "position": 5,
+        "description": "The list of reviews."
+      },
+      "vertical": {
+        "type": {
+          "type": "boolean",
+          "label": {
+            "true": "Yes",
+            "false": "No"
+          },
+          "default": false
+        },
+        "label": "Vertical?",
+        "private": false,
+        "optional": false,
+        "position": 3,
+        "description": "Whether to animate vertically instead of horizontally."
+      },
+      "className": {
+        "type": {
+          "type": "text",
+          "minimumLength": 1
+        },
+        "label": "Class name",
+        "private": false,
+        "optional": true,
+        "position": 0,
+        "description": "Optional CSS class name to apply custom styles"
+      },
+      "pauseOnHover": {
+        "type": {
+          "type": "boolean",
+          "label": {
+            "true": "Yes",
+            "false": "No"
+          },
+          "default": false
+        },
+        "label": "Pause on hover?",
+        "private": false,
+        "optional": false,
+        "position": 2,
+        "description": "Whether to pause the animation on hover."
+      }
+    },
+    "description": "An infinite scrolling component that displays user reviews."
+  }
+}

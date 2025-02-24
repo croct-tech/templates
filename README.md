@@ -89,15 +89,16 @@ croct use https://magicui.design/r/marquee
 
 These are the currently supported aliases:
 
+| Project      | Short URL                          | Alternative URL                               | Redirect URL                             |
+|--------------|------------------------------------|-----------------------------------------------|------------------------------------------|
+| **Any**      | `github:/<user>/<repo>/<template>` | `https://github.com/<user>/<repo>/<template>` | [`github.com`](https://github.com)       |
+| **Any**      | `hub:/<template>`                  | -                                             | [`templates`](templates)                 |
+| **Croct**    | `croct:/<template>`                | -                                             | [`templates/croct`](templates/croct)     |
+| **Next.js**  | `nextjs:/<template>`               | -                                             | [`templates/nextjs`](templates/nextjs)   |
+| **Shadcn**   | `shadcn:/<template>`               | -                                             | [`templates/shadcn`](templates/shadcn)   |
+| **Magic UI** | `magicui:/<template>`              | `https://magicui.design/r/<component>`        | [`templates/magicui`](templates/magicui) |
 
-| Project      | Short URL                          | Full URL                                      |
-|--------------|------------------------------------|-----------------------------------------------|
-| **Any**      | `github:/<user>/<repo>/<template>` | `https://github.com/<user>/<repo>/<template>` |
-| **Croct**    | `croct:/<template>`                | `https://croct.com/templates/<template>`      |
-| **Vercel**   | `vercel:/<template>`               | `https://vercel.com/templates/<template>`     |
-| **Magic UI** | `magicui:/ui/<component>`          | `https://magicui.design/r/<component>`        |
-
-To add a new alias, open a pull request with the new entry in the [registry](registry.json).
+To add a new alias, open a pull request with the new entry in the [registry](templates/registry.json).
 
 ## Contribute
 

@@ -1,0 +1,43 @@
+{
+  "title": "Magic UI Marquee",
+  "description": "Import the Marquee example into the project.",
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "foo": "bar",
+      "options": {
+        "id": "marquee",
+        "component": "Marquee",
+        "slotReference": "slotSlug",
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-marquee-reviews": "${import('./configuration/marquee-component.json')}"
+                },
+                "slots": {
+                  "magic-ui-user-reviews": {
+                    "name": "Magic UI - User reviews",
+                    "component": "magic-ui-marquee-reviews",
+                    "content": {
+                      "en": "${import('./configuration/marquee-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-user-reviews": "slotSlug"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

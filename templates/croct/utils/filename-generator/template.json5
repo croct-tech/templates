@@ -1,0 +1,51 @@
+{
+  "title": "File name generator",
+  "description": "Finds an available file name and assigns the result to a specified variable.",
+  "options": {
+    "reference": {
+      "type": "string",
+      "description": "The variable name that holds the file name.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "define",
+      "variables": {
+        "attemptNumber": 0,
+      }
+    },
+    {
+      "name": "locate-file",
+      "path": "${this[options.reference]}",
+      "limit": 1,
+      "depth": 0,
+      "result": "matches"
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.matches.length !== 0}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "attemptNumber": "${this.attemptNumber + 1}"
+          }
+        },
+        {
+          "name": "locate-file",
+          "path": "${this[options.reference]}-${this.attemptNumber}",
+          "limit": 1,
+          "depth": 0,
+          "result": "matches"
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "${options.reference}": "${this[options.reference]}${this.attemptNumber > 0 ? '-' + this.attemptNumber : ''}"
+      }
+    }
+  ]
+}

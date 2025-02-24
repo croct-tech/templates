@@ -1,0 +1,26 @@
+[
+  {
+    "pattern": "^hub:/*(.+?)$",
+    "destination": "github:/croct-tech/templates/templates/$1"
+  },
+  {
+    "pattern": "^croct:/*(.+?)$",
+    "destination": "github:/croct-tech/templates/templates/croct/$1"
+  },
+  {
+    "pattern": "nextjs:/*(.+?)$",
+    "destination": "github:/croct-tech/templates/templates/nextjs/$1"
+  },
+  {
+    "pattern": "shadcn:/*(.+?)$",
+    "destination": "github:/croct-tech/templates/templates/shadcn/$1"
+  },
+  {
+    "pattern": "magicui:/*(.+?)$",
+    "destination": "github:/croct-tech/templates/templates/magic-ui/$1"
+  },
+  {
+    "pattern": "^https://magicui.design/r/(.+?)$",
+    "destination": "github:/croct-tech/templates/templates/magic-ui/ui/$1"
+  }
+]

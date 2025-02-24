@@ -1,0 +1,36 @@
+{
+  "title": "Next.js + shadcn template",
+  "description": "A template for bootstrapping a new project with Next.js and shadcn.",
+  "options": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-app"
+    }
+  },
+  "actions": [
+    {
+      "name": "execute-package",
+      "package": "shadcn",
+      "runner": "npm",
+      "arguments": ["init", "-d"],
+      "interactions": [
+        {
+          "when": "Would you like to start a new project?",
+          "once": true,
+          "then": ["[enter]"]
+        },
+        {
+          "when": "What is your project named?",
+          "once": true,
+          "then": ["${options.name}", "[enter]"]
+        },
+        {
+          "when": "How would you like to proceed?",
+          "once": true,
+          "then": ["[enter]"]
+        }
+      ]
+    }
+  ]
+}

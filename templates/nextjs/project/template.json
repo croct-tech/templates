@@ -1,0 +1,45 @@
+{
+  "title": "Next.js template",
+  "description": "A template for bootstrapping a new project with Next.js.",
+  "options": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-app"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "default": "latest"
+    },
+    "typescript": {
+      "type": "boolean",
+      "description": "Whether to use TypeScript.",
+      "default": false
+    },
+    "tailwind": {
+      "type": "boolean",
+      "description": "Whether to use Tailwind CSS.",
+      "default": false
+    },
+    "eslint": {
+      "type": "boolean",
+      "description": "Whether to use ESLint.",
+      "default": true
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "options": ["app", "page"],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "execute-package",
+      "runner": "npm",
+      "package": "create-next-app",
+      "arguments": "${[options.name, options.typescript ? '--ts' : '--js', options.tailwind ? '--tailwind' : '--no-tailwind', options.eslint ? '--eslint' : '--no-eslint', ...(options.router === 'app' ? ['--app'] : []), '--no-turbopack', '--no-src-dir', '--import-alias', '@/*']}"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ Just run `croct use <component url>` to integrate a component into your applicat
 
 ### What's Croct?
 
-Croct is a Component CMS designed for modern stacks with a developer-first mindset. Built by seasoned open-source contributors, we offer a **💚 forever-free plan** — no credit card required — perfect for most teams and projects.
+Croct is a **Component CMS** designed for modern stacks with a developer-first mindset. Built by seasoned open-source contributors, we offer a **💚 forever-free plan** — no credit card required — perfect for most teams and projects.
 
 ### Try it in Next.js
 

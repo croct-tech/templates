@@ -1,6 +1,6 @@
 {
-  "title": "Add shadcn component",
-  "description": "A template for adding a shadcn component to a project.",
+  "title": "Add Shadcn component",
+  "description": "A template for adding a Shadcn component to a project.",
   "options": {
     "components": {
       "type": "array",

@@ -21,11 +21,20 @@
         "import-alias": ""
       }
     },
+    /*
+     Shadcn CLI has a known issue with sibling projects when using the `--cwd` option.
+     As a workaround, navigate into the directory before running the command, then return afterward.
+     Issue: https://github.com/shadcn-ui/ui/issues/6767
+   */
+    {
+      "name": "change-directory",
+        "path": "${options.name}"
+    },
     {
       "name": "execute-package",
       "package": "shadcn@latest",
       "runner": "npm",
-      "arguments": ["init", "-d", "--cwd", "${options.name}"],
+      "arguments": ["init", "-d"],
       "interactions": [
         {
           "when": "Would you like to start a new project?",
@@ -43,6 +52,10 @@
           "then": ["[enter]"]
         }
       ]
+    },
+    {
+      "name": "change-directory",
+        "path": ".."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "title": "Install shadcn component",
-  "description": "A template for installing a shadcn component to a project.",
+  "title": "Install Shadcn component",
+  "description": "A template for installing a Shadcn component to a project.",
   "options": {
     "id": {
       "type": "string",

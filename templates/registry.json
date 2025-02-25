@@ -1,30 +1,30 @@
 [
   {
-    "pattern": "^hub:/*(.+?)$",
+    "pattern": "^hub:/(.+?)$",
     "destination": "github:/croct-tech/templates/templates/$1"
   },
   {
-    "pattern": "^npm:/*(.+?)$",
+    "pattern": "^npm:/(.+)$",
     "destination": "github:/croct-tech/templates/templates/npm/$1"
   },
   {
-    "pattern": "^croct:/*(.+?)$",
+    "pattern": "^croct:/(.+)$",
     "destination": "github:/croct-tech/templates/templates/croct/$1"
   },
   {
-    "pattern": "^nextjs:/*(.+?)$",
+    "pattern": "^nextjs:/(.+)$",
     "destination": "github:/croct-tech/templates/templates/nextjs/$1"
   },
   {
-    "pattern": "^shadcn:/*(.+?)$",
+    "pattern": "^shadcn:/(.+)$",
     "destination": "github:/croct-tech/templates/templates/shadcn/$1"
   },
   {
-    "pattern": "^magicui:/*(.+?)$",
+    "pattern": "^magicui:/(.+)$",
     "destination": "github:/croct-tech/templates/templates/magicui/$1"
   },
   {
-    "pattern": "^https://magicui.design/r/(.+?)$",
+    "pattern": "^https://magicui.design/r/(.+)$",
     "destination": "github:/croct-tech/templates/templates/magicui/ui/$1"
   }
 ]

@@ -31,31 +31,34 @@
         "path": "${options.name}"
     },
     {
-      "name": "execute-package",
-      "package": "shadcn@latest",
-      "runner": "npm",
-      "arguments": ["init", "-d"],
-      "interactions": [
-        {
-          "when": "Would you like to start a new project?",
-          "once": true,
-          "then": ["[enter]"]
-        },
-        {
-          "when": "What is your project named?",
-          "once": true,
-          "then": ["${options.name}", "[enter]"]
-        },
-        {
-          "when": "How would you like to proceed?",
-          "once": true,
-          "then": ["[enter]"]
-        }
-      ]
-    },
-    {
-      "name": "change-directory",
+      "name": "try",
+      "action": {
+        "name": "execute-package",
+        "package": "shadcn@latest",
+        "runner": "npm",
+        "arguments": ["init", "-d"],
+        "interactions": [
+          {
+            "when": "Would you like to start a new project?",
+            "once": true,
+            "then": ["[enter]"]
+          },
+          {
+            "when": "What is your project named?",
+            "once": true,
+            "then": ["${options.name}", "[enter]"]
+          },
+          {
+            "when": "How would you like to proceed?",
+            "once": true,
+            "then": ["[enter]"]
+          }
+        ]
+      },
+      "finally": {
+        "name": "change-directory",
         "path": ".."
-    }
+      }
+    },
   ]
 }

@@ -1,6 +1,6 @@
 [
   {
-    "pattern": "^hub:/(.+?)$",
+    "pattern": "^template:/(.+?)$",
     "destination": "github:/croct-tech/templates/templates/$1"
   },
   {

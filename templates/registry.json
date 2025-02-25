@@ -4,6 +4,10 @@
     "destination": "github:/croct-tech/templates/templates/$1"
   },
   {
+    "pattern": "^npm:/*(.+?)$",
+    "destination": "github:/croct-tech/templates/templates/npm/$1"
+  },
+  {
     "pattern": "^croct:/*(.+?)$",
     "destination": "github:/croct-tech/templates/templates/croct/$1"
   },

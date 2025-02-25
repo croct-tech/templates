@@ -94,6 +94,7 @@ These are the currently supported aliases:
 |--------------|------------------------------------|-----------------------------------------------|
 | **Any**      | `github:/<user>/<repo>/<template>` | `https://github.com/<user>/<repo>/<template>` |
 | **Any**      | `hub:/<template>`                  | -                                             |
+| **NPM**      | `npm:/<package>`                   | -                                             |
 | **Croct**    | `croct:/<template>`                | -                                             |
 | **Next.js**  | `nextjs:/<template>`               | -                                             |
 | **Shadcn**   | `shadcn:/<template>`               | -                                             |

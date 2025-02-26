@@ -99,7 +99,7 @@ These are the currently supported aliases:
 | **Shadcn**   | `shadcn:/<template>`               | -                                             |
 | **Magic UI** | `magicui:/<template>`              | `https://magicui.design/r/<component>`        |
 
-To add a new alias, open a pull request with the new entry in the [registry](templates/registry.json).
+To add a new alias, open a pull request with the new entry in the [registry](templates/registry.json5).
 
 ## Contribute
 

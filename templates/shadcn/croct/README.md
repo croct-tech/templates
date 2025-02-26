@@ -1,4 +1,4 @@
-# Croct + Shadcn Starter
+# Croct + Shadcn template
 
 Kickstart your project with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://shadcn.com/), and [Croct](https://croct.com/).
 

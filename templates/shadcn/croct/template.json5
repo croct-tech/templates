@@ -1,6 +1,6 @@
 {
-  "title": "Next.js + Croct",
-  "description": "A Next.js project with Croct integration.",
+  "title": "Shadcn + Croct",
+  "description": "A Next.js project with Shadcn and Croct integration.",
   "options": {
     "version": {
       "type": "string",
@@ -70,6 +70,8 @@
         }
       ],
     },
-    {"name": "initialize"}
+    {
+      "name": "initialize",
+    }
   ]
 }

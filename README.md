@@ -93,7 +93,6 @@ These are the currently supported aliases:
 | Project      | Short URL                          | Alternative URL                               |
 |--------------|------------------------------------|-----------------------------------------------|
 | **Any**      | `github:/<user>/<repo>/<template>` | `https://github.com/<user>/<repo>/<template>` |
-| **Any**      | `hub:/<template>`                  | -                                             |
 | **NPM**      | `npm:/<package>`                   | -                                             |
 | **Croct**    | `croct:/<template>`                | -                                             |
 | **Next.js**  | `nextjs:/<template>`               | -                                             |

@@ -1,9 +1,5 @@
 [
   {
-    "pattern": "^template:/(.+?)$",
-    "destination": "$1"
-  },
-  {
     "pattern": "^npm:/(.+)$",
     "destination": "npm/$1"
   },

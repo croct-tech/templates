@@ -1,6 +1,6 @@
 {
-  "title": "Install Shadcn component",
-  "description": "A template for installing a Shadcn component to a project.",
+  "title": "Shadcn component slot",
+  "description": "A template for adding a Shadcn component to a project with CMS integration.",
   "options": {
     "id": {
       "type": "string",
@@ -22,8 +22,8 @@
       "description": "The path to the directory containing the component code.",
       "required": true
     },
-    "slotReference": {
-      "type": "string",
+    "slot": {
+      "type": "reference",
       "description": "The variable name that holds the slot slug.",
       "required": true
     },
@@ -63,16 +63,13 @@
             {
               "name": "import",
               "template": "croct:/utils/filename-generator",
-              "share": [
-                "projectName"
-              ],
               "options": {
                 "reference": "projectName",
               }
             },
             {
               "name": "import",
-              "template": "../../../project",
+              "template": "../../project",
               "options": {
                 "name": "${this.projectName}",
               }
@@ -115,7 +112,7 @@
       "then": [
         {
           "name": "import",
-          "template": "../add",
+          "template": "../component",
           "options": {
             "components": [
               "${options.url}"
@@ -172,7 +169,7 @@
             },
             {
               "pattern": "%slotId%",
-              "value": "${this[options.slotReference]}"
+              "value": "${this[options.slot]}"
             },
             {
               "pattern": "%workspaceUrl%",

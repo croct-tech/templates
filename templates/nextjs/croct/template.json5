@@ -38,9 +38,6 @@
             {
               "name": "import",
               "template": "croct:/utils/filename-generator",
-              "share": [
-                "projectName"
-              ],
               "options": {
                 "reference": "projectName",
               }

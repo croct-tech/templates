@@ -3,7 +3,7 @@
   "description": "Finds an available file name and assigns the result to a specified variable.",
   "options": {
     "reference": {
-      "type": "string",
+      "type": "reference",
       "description": "The variable name that holds the file name.",
       "required": true
     },

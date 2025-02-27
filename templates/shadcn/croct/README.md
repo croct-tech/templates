@@ -10,7 +10,7 @@ Check out the [live demo](https://shadcn.croct.live).
 
 ## Get started
 
-If you have the Croct CLI installed, just click below to get started:
+Already have the [Croct CLI](https://docs.croct.com/reference/cli)? Just click below:
 
 [![Use template](https://croct.com/button)](croct:/use?arg=shadcn%3A%2Fcroct)
 

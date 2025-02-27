@@ -12,7 +12,7 @@ Check out the [live demo](https://shadcn.croct.live).
 
 Already have the [Croct CLI](https://docs.croct.com/reference/cli)? Just click below:
 
-[![Use template](https://croct.com/button)](croct:/use?arg=shadcn%3A%2Fcroct)
+[![Use template](https://croct.com/button)](https://croct.com/templates/shadcn-croct?launch=true)
 
 Or, run this command in your terminal:
 

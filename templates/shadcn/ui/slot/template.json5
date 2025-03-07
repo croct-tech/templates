@@ -35,60 +35,11 @@
   },
   "actions": [
     {
-      "name": "test",
-      "condition": "${project.platform === 'unknown'}",
-      "then": [
-        {
-          "name": "print",
-          "semantic": "info",
-          "message": "No project found in the current directory",
-        },
-        {
-          "name": "prompt",
-          "type": "confirmation",
-          "message": "Start a new project?",
-          "default": true,
-          "result": "createProject"
-        },
-        {
-          "name": "test",
-          "condition": "${this.createProject}",
-          "then": [
-            {
-              "name": "define",
-              "variables": {
-                "projectName": "${options.id}-example"
-              }
-            },
-            {
-              "name": "import",
-              "template": "croct:/utils/filename-generator",
-              "options": {
-                "reference": "projectName",
-              }
-            },
-            {
-              "name": "import",
-              "template": "../../project",
-              "options": {
-                "name": "${this.projectName}",
-              }
-            },
-            {
-              "name": "change-directory",
-              "path": "${this.projectName}"
-            }
-          ],
-          "else": {
-            "name": "fail",
-            "title": "Project not found",
-            "message": "Unable to locate a project in the current directory.",
-            "suggestions": [
-              "Navigate to the project directory and try again."
-            ]
-          }
-        }
-      ],
+      "name": "import",
+      "template": "../../integration",
+      "options": {
+        "projectName": "${options.id}-example",
+      }
     },
     {
       "name": "define",

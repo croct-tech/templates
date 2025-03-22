@@ -7,14 +7,9 @@
       "description": "The component ID.",
       "required": true
     },
-    "url": {
+    "registryId": {
       "type": "string",
-      "description": "The URL of the component registry.",
-      "required": true
-    },
-    "component": {
-      "type": "string",
-      "description": "The component name.",
+      "description": "The component ID or URL to the component.",
       "required": true
     },
     "code": {
@@ -42,54 +37,21 @@
       }
     },
     {
-      "name": "define",
-      "variables": {
-        "locate": {
-          "name": "locate-file",
-          "path": "**/${options.id}.{jsx,tsx}",
-          "limit": 1,
-          "depth": 10,
-          "matcher": {
-            "pattern": "function ${options.component}"
-          },
-          "result": "componentPaths"
-        }
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "components": ["${options.registryId}"]
       }
-    },
-    '${this.locate}',
-    {
-      "name": "test",
-      "condition": "${this.componentPaths.length === 0}",
-      "then": [
-        {
-          "name": "import",
-          "template": "../component",
-          "options": {
-            "components": [
-              "${options.url}"
-            ]
-          }
-        },
-        '${this.locate}',
-        {
-          "name": "test",
-          "condition": "${this.componentPaths.length === 0}",
-          "then": {
-            "name": "fail",
-            "title": "Component not found",
-            "message": "Unable to locate the file `${options.id}.{jsx,tsx}` with the component `${options.component}`.",
-            "suggestions": [
-              "Check the name of the file or the component.",
-            ]
-          }
-        }
-      ],
     },
     "${options.action}",
     {
+      "name": "add-slot",
+      "slots": ["${this[options.slot]}"]
+    },
+    {
       "name": "define",
       "variables": {
-        "exampleFile": "${project.platform === 'nextjs' ? 'page' : 'example'}.${ext(this.componentPaths[0])}"
+        "exampleFile": "${project.platform === 'nextjs' ? 'page' : 'example'}.tsx"
       }
     },
     {
@@ -101,23 +63,11 @@
       }
     },
     {
-      "name": "resolve-import",
-      "target": "${this.componentPaths[0]}",
-      "source": "${project.path.example}",
-      "result": {
-        "importPath": "importPath"
-      }
-    },
-    {
       "name": "replace-file-content",
       "files": [
         {
           "path": "${this.examplePath}/${this.exampleFile}",
           "replacements": [
-            {
-              "pattern": "(?<=from )\"@/components/ui/${options.id}\"",
-              "value": "\"${this.importPath}\""
-            },
             {
               "pattern": "%slotId%",
               "value": "${this[options.slot]}"
@@ -131,12 +81,6 @@
       ]
     },
     {
-      "name": "format-code",
-      "files": [
-        "${this.examplePath}/page.${ext(this.componentPaths[0])}"
-      ]
-    },
-    {
       "name": "print",
       "semantic": "success",
       "message": "Component successfully imported at `${this.examplePath}`."
@@ -146,48 +90,12 @@
       "condition": "${project.server !== null && project.platform === 'nextjs'}",
       "then": [
         {
-          "name": "prompt",
-          "type": "confirmation",
-          "message": "Open the example in the browser?",
-          "default": false,
-          "result": "openExample"
-        },
-        {
-          "name": "test",
-          "condition": "${this.openExample}",
-          "then": [
-            {
-              "name": "start-server",
-              "result": {
-                "url": "serverUrl",
-                "owned": "isServerOwned"
-              }
-            },
-            {
-              "name": "open-link",
-              "url": "${this.serverUrl}${options.id}"
-            },
-            {
-              "name": "print",
-              "semantic": "info",
-              "message": "The example is available at `${this.serverUrl}${options.id}`."
-            },
-            {
-              "name": "test",
-              "condition": "${this.isServerOwned}",
-              "then": [
-                {
-                  "name": "prompt",
-                  "type": "keypress",
-                  "message": "Press any key to exit"
-                },
-                {
-                  "name": "stop-server"
-                }
-              ]
+          "name": "import",
+          "template": "croct:/utils/example-launcher",
+            "options": {
+                "path": "${options.id}",
             }
-          ]
-        }
+        },
       ]
     },
   ]

@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
-import { PlanCard } from "@/components/plan-card";
+import { Switch } from "?/**/*/switch.tsx"
+import { Label } from "?/**/*/label.tsx"
+import { PlanCard } from "?/**/*/plan-card.tsx";
 
 type PlanProps = {
   name: string,

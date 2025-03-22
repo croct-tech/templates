@@ -1,0 +1,56 @@
+{
+  "title": "Example launcher",
+  "description": "Starts the development server and opens the example in the browser.",
+  "options": {
+    "path": {
+      "type": "string",
+      "description": "The path to the example.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "prompt",
+      "type": "confirmation",
+      "message": "Open the example in the browser?",
+      "default": false,
+      "result": "openExample"
+    },
+    {
+      "name": "test",
+      "condition": "${this.openExample}",
+      "then": [
+        {
+          "name": "start-server",
+          "result": {
+            "url": "serverUrl",
+            "owned": "isServerOwned"
+          }
+        },
+        {
+          "name": "open-link",
+          "url": "${this.serverUrl}${options.path}"
+        },
+        {
+          "name": "print",
+          "semantic": "info",
+          "message": "The example is available at `${this.serverUrl}${options.path}`."
+        },
+        {
+          "name": "test",
+          "condition": "${this.isServerOwned}",
+          "then": [
+            {
+              "name": "prompt",
+              "type": "keypress",
+              "message": "Press any key to exit"
+            },
+            {
+              "name": "stop-server"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

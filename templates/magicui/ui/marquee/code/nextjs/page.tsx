@@ -1,4 +1,4 @@
-import {Marquee} from "@/components/ui/marquee";
+import {Marquee} from "?/**/*/marquee.tsx";
 import {fetchContent} from "@croct/plug-next/server";
 
 export default async function Home() {

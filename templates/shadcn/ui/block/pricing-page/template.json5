@@ -4,114 +4,40 @@
   "actions": [
     {
       "name": "import",
-      "template": "../../../utility/integration",
+      "template": "../../../integration",
       "options": {
         "projectName": "pricing-plan-example",
       }
     },
     {
-      "name": "define",
-      "variables": {
-        "buttonImportPath": null,
-        "switchImportPath": null,
-        "labelImportPath": null
-      }
-    },
-    {
       "name": "import",
-      "template": "../../../utility/component-resolver",
+      "template": "../../component",
       "options": {
-        "id": "button",
-        "file": "button",
-        "name": "Button",
-        "importPath": "buttonImportPath",
-      }
-    },
-    {
-      "name": "import",
-      "template": "../../../utility/component-resolver",
-      "options": {
-        "id": "switch",
-        "file": "switch",
-        "name": "Switch",
-        "importPath": "switchImportPath",
-      }
-    },
-    {
-      "name": "import",
-      "template": "../../../utility/component-resolver",
-      "options": {
-        "id": "label",
-        "file": "label",
-        "name": "Label",
-        "importPath": "labelImportPath",
-      }
-    },
-    {
-      "name": "locate-file",
-      "path": "**/utils.ts",
-      "limit": 1,
-      "depth": 10,
-      "matcher": {
-        "pattern": "function cn"
-      },
-      "result": "utilsPaths"
-    },
-    {
-      "name": "test",
-      "condition": "${this.utilsPaths.length === 0}",
-      "then": {
-        "name": "fail",
-        "title": "Utils not found",
-        "message": "Unable to locate the file `utils.ts`.",
-      }
-    },
-    {
-      "name": "download",
-      "source": "code/page.tsx",
-      "destination": "${project.path.example}/pricing",
-      "result": {
-        "destination": "pagePath"
-      }
-    },
-    {
-      "name": "download",
-      "source": "code/pricing-section.tsx",
-      "destination": "${project.path.component}",
-      "result": {
-        "destination": "pricingSectionPath"
-      }
-    },
-    {
-      "name": "resolve-import",
-      "target": "${this.pricingSectionPath}/pricing-section.tsx",
-      "source": "${this.pagePath}",
-      "result": {
-        "importPath": "pricingSectionImportPath"
+        "components": ["button", "switch", "label"]
       }
     },
     {
       "name": "download",
       "source": "code/plan-card.tsx",
       "destination": "${project.path.component}",
-      "result": {
-        "destination": "planCardPath"
+    },
+    {
+      "name": "download",
+      "source": "code/pricing-section.tsx",
+      "destination": "${project.path.component}",
+    },
+    {
+      "name": "define",
+      "variables": {
+        "routePath": "pricing"
       }
     },
     {
-      "name": "resolve-import",
-      "target": "${this.planCardPath}/plan-card.tsx",
-      "source": "${project.path.component}",
+      "name": "download",
+      "source": "code/page.tsx",
+      "destination": "${project.path.example}/${this.routePath}",
       "result": {
-        "importPath": "planCardImportPath"
-      }
-    },
-    {
-      "name": "resolve-import",
-      "target": "${this.utilsPaths[0]}",
-      "source": "${this.planCardPath}",
-      "result": {
-        "importPath": "utilsImportPath"
+        "destination": "pagePath"
       }
     },
     {
@@ -148,10 +74,6 @@
           "path": "${this.pagePath}/page.tsx",
           "replacements": [
             {
-              "pattern": "(?<=from )\"@/components/pricing-section\"",
-              "value": "\"${this.pricingSectionImportPath}\""
-            },
-            {
               "pattern": "%slotId%",
               "value": "${this.pricingPageSlot}"
             }
@@ -160,44 +82,22 @@
       ]
     },
     {
-      "name": "replace-file-content",
-      "files": [
-        {
-          "path": "${this.pricingSectionPath}/pricing-section.tsx",
-          "replacements": [
-            {
-              "pattern": "(?<=from )\"@/components/plan-card\"",
-              "value": "\"${this.planCardImportPath}\""
-            },
-            {
-              "pattern": "(?<=from )\"@/components/ui/switch\"",
-              "value": "\"${this.switchImportPath}\""
-            },
-            {
-              "pattern": "(?<=from )\"@/components/ui/label\"",
-              "value": "\"${this.labelImportPath}\""
-            },
-          ]
-        }
-      ]
+      "name": "print",
+      "semantic": "success",
+      "message": "Component successfully imported at `${this.pagePath}`."
     },
     {
-      "name": "replace-file-content",
-      "files": [
+      "name": "test",
+      "condition": "${project.server !== null && project.platform === 'nextjs'}",
+      "then": [
         {
-          "path": "${this.planCardPath}/plan-card.tsx",
-          "replacements": [
-            {
-              "pattern": "(?<=from )\"@/components/ui/button\"",
-              "value": "\"${this.buttonImportPath}\""
-            },
-            {
-              "pattern": "(?<=from )\"@/lib/utils\"",
-              "value": "\"${this.utilsImportPath}\""
-            },
-          ]
-        }
+          "name": "import",
+          "template": "croct:/utils/example-launcher",
+          "options": {
+            "path": "${this.routePath}",
+          }
+        },
       ]
-    },
+    }
   ]
 }

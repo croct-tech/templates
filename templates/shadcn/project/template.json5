@@ -36,7 +36,7 @@
         "name": "execute-package",
         "package": "shadcn@latest",
         "runner": "npm",
-        "arguments": ["init", "-d"],
+        "arguments": ["init"],
         "interactions": [
           {
             "when": "Would you like to start a new project?",
@@ -47,6 +47,11 @@
             "when": "What is your project named?",
             "once": true,
             "then": ["${options.name}", "[enter]"]
+          },
+          {
+            "when": "Which color would you like to use as the base color?",
+            "once": true,
+            "then": ["[enter]"]
           },
           {
             "when": "How would you like to proceed?",

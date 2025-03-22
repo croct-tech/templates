@@ -1,4 +1,4 @@
-import { PricingSection } from "@/components/pricing-section";
+import {PricingSection} from "?/**/*/pricing-section.tsx";
 import {fetchContent} from "@croct/plug-next/server";
 
 export default async function Page() {

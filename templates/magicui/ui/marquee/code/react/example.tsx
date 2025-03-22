@@ -1,7 +1,6 @@
 import {Suspense} from "react";
-import {Marquee} from "@/components/ui/marquee";
+import {Marquee} from "?/**/*/marquee.tsx";
 import {useContent} from "@croct/plug-react";
-import defaultContent from '@croct/content/slot/en/%slotId%@1.json';
 
 export default function Example() {
     return (
@@ -12,9 +11,7 @@ export default function Example() {
 }
 
 const MarqueeCards = () => {
-    const {reviews, ...props} = useContent('%slotId%@1', {
-        fallback: defaultContent
-    });
+    const {reviews, ...props} = useContent('%slotId%@1');
 
     return (
         <>

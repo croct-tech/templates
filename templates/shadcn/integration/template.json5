@@ -44,7 +44,7 @@
             },
             {
               "name": "import",
-              "template": "../../project",
+              "template": "../project",
               "options": {
                 "name": "${this.projectName}",
               }

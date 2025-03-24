@@ -2,7 +2,7 @@ import {Marquee} from "?/**/*/marquee.tsx";
 import {fetchContent} from "@croct/plug-next/server";
 
 export default async function Home() {
-    const {content: {reviews, ...props}} = await fetchContent('%slotId%@1');
+    const {content: {reviews, ...props}} = await fetchContent('%slotId%@%slotVersion%');
 
     return (
         <>

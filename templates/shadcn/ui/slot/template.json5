@@ -17,9 +17,14 @@
       "description": "The path to the directory containing the component code.",
       "required": true
     },
-    "slot": {
+    "slotId": {
       "type": "reference",
-      "description": "The variable name that holds the slot slug.",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
       "required": true
     },
     "action": {
@@ -46,7 +51,7 @@
     "${options.action}",
     {
       "name": "add-slot",
-      "slots": ["${this[options.slot]}"]
+      "slots": ["${this[options.slotId]}@${this[options.slotVersion]}"],
     },
     {
       "name": "define",
@@ -70,7 +75,11 @@
           "replacements": [
             {
               "pattern": "%slotId%",
-              "value": "${this[options.slot]}"
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
             },
             {
               "pattern": "%workspaceUrl%",
@@ -87,7 +96,7 @@
     },
     {
       "name": "test",
-      "condition": "${project.server !== null && project.platform === 'nextjs'}",
+      "condition": "${project.platform === 'nextjs'}",
       "then": [
         {
           "name": "import",

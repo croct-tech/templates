@@ -11,7 +11,7 @@ export default function Example() {
 }
 
 const MarqueeCards = () => {
-    const {reviews, ...props} = useContent('%slotId%@1');
+    const {reviews, ...props} = useContent('%slotId%@%slotVersion%');
 
     return (
         <>

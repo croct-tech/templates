@@ -59,13 +59,16 @@
       },
       "result": {
         "slots": {
-          "pricing-page": "pricingPageSlot"
+          "pricing-page": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
         }
       }
     },
     {
       "name": "add-slot",
-      "slots": ["${this.pricingPageSlot}"]
+      "slots": ["${this.slotId}"]
     },
     {
       "name": "replace-file-content",
@@ -75,7 +78,11 @@
           "replacements": [
             {
               "pattern": "%slotId%",
-              "value": "${this.pricingPageSlot}"
+              "value": "${this.slotId}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this.slotVersion}"
             }
           ]
         }
@@ -88,7 +95,7 @@
     },
     {
       "name": "test",
-      "condition": "${project.server !== null && project.platform === 'nextjs'}",
+      "condition": "${project.platform === 'nextjs'}",
       "then": [
         {
           "name": "import",

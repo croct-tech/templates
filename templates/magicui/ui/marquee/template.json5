@@ -9,7 +9,8 @@
         "id": "marquee",
         "registryId": "https://magicui.design/r/marquee",
         "code": "magicui:/ui/marquee/code",
-        "slot": "slotSlug",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
         "action": {
           "name": "run",
           "actions": [
@@ -31,7 +32,10 @@
               },
               "result": {
                 "slots": {
-                  "magic-ui-user-reviews": "slotSlug"
+                  "magic-ui-user-reviews": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
                 }
               }
             }

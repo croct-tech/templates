@@ -10,47 +10,53 @@
   },
   "actions": [
     {
-      "name": "prompt",
-      "type": "confirmation",
-      "message": "Open the example in the browser?",
-      "default": false,
-      "result": "openExample"
-    },
-    {
       "name": "test",
-      "condition": "${this.openExample}",
+      "condition": "${project.server !== null}",
       "then": [
         {
-          "name": "start-server",
-          "result": {
-            "url": "serverUrl",
-            "owned": "isServerOwned"
-          }
-        },
-        {
-          "name": "open-link",
-          "url": "${this.serverUrl}${options.path}"
-        },
-        {
-          "name": "print",
-          "semantic": "info",
-          "message": "The example is available at `${this.serverUrl}${options.path}`."
+          "name": "prompt",
+          "type": "confirmation",
+          "message": "Open the example in the browser?",
+          "default": false,
+          "result": "openExample"
         },
         {
           "name": "test",
-          "condition": "${this.isServerOwned}",
+          "condition": "${this.openExample}",
           "then": [
             {
-              "name": "prompt",
-              "type": "keypress",
-              "message": "Press any key to exit"
+              "name": "start-server",
+              "result": {
+                "url": "serverUrl",
+                "owned": "isServerOwned"
+              }
             },
             {
-              "name": "stop-server"
+              "name": "open-link",
+              "url": "${this.serverUrl}${options.path}"
+            },
+            {
+              "name": "print",
+              "semantic": "info",
+              "message": "The example is available at `${this.serverUrl}${options.path}`."
+            },
+            {
+              "name": "test",
+              "condition": "${this.isServerOwned}",
+              "then": [
+                {
+                  "name": "prompt",
+                  "type": "keypress",
+                  "message": "Press any key to exit"
+                },
+                {
+                  "name": "stop-server"
+                }
+              ]
             }
           ]
         }
       ]
-    }
+    },
   ]
 }

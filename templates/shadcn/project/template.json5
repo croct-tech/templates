@@ -40,23 +40,23 @@
         "interactions": [
           {
             "when": "Would you like to start a new project?",
-            "once": true,
             "then": ["[enter]"]
           },
           {
             "when": "What is your project named?",
-            "once": true,
             "then": ["${options.name}", "[enter]"]
           },
           {
             "when": "Which color would you like to use as the base color?",
-            "once": true,
             "then": ["[enter]"]
           },
           {
             "when": "How would you like to proceed?",
-            "once": true,
             "then": ["[enter]"]
+          },
+          {
+            "when": "You may now add components",
+            "final": true,
           }
         ]
       },

@@ -50,33 +50,34 @@
       "interactions": [
         {
           "when": "You need to create a components.json file to add components. Proceed?",
-          "once": true,
           "then": ["[enter]"]
         },
         {
           "when": "How would you like to proceed?",
-          "once": true,
           "then": ["[enter]"]
         },
         {
           "when": "Which style would you like to use?",
-          "once": true,
           "then": ["[enter]"]
         },
         {
           "when": "Which color would you like to use as the base color?",
-          "once": true,
           "then": ["[enter]"]
         },
         {
           "when": "Would you like to use CSS variables for theming?",
-          "once": true,
           "then": ["[enter]"]
         },
         {
           "when": "Would you like to overwrite?",
-          "then": ["y"]
-        }
+          "then": ["y"],
+          "always": true
+        },
+        {
+          "when": "(Created|Skipped) \\d files?",
+          "pattern": true,
+          "final": true,
+        },
       ]
     }
   ]

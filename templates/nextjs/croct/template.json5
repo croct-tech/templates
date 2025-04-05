@@ -1,11 +1,41 @@
 {
-  "title": "Next.js + Croct",
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Next.js + Croct starter",
   "description": "A Next.js project with Croct integration.",
   "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "default": "latest"
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ],
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app",
+    },
+    "typescript": {
+      "type": "boolean",
+      "description": "Whether to use TypeScript.",
+      "default": true
+    },
+    "tailwind": {
+      "type": "boolean",
+      "description": "Whether to use Tailwind CSS.",
+      "default": false
+    },
+    "disableLauncher": {
+      "type": "boolean",
+      "description": "Whether to disable opening the project in the browser.",
+      "default": false
     }
   },
   "actions": [
@@ -15,7 +45,7 @@
       "then": [
         {
           "name": "print",
-          "semantic": "info",
+          "semantics": "info",
           "message": "No project found in the current directory"
         },
         {
@@ -32,7 +62,7 @@
             {
               "name": "define",
               "variables": {
-                "projectName": "my-app"
+                "projectName": "my-croct-app"
               }
             },
             {
@@ -48,15 +78,96 @@
               "options": {
                 "name": "${this.projectName}",
                 "version": "${options.version}",
-                "typescript": true,
-                "tailwind": true,
+                "typescript": "${options.typescript}",
+                "tailwind": "${options.tailwind}",
                 "eslint": true,
-                "router": "app",
+                "router": "${options.router}",
               }
             },
             {
               "name": "change-directory",
               "path": "${this.projectName}"
+            },
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "next-starter-page": {
+                    "name": "Next.js starter page",
+                    "description": "The structure for Next.js starter pages.",
+                    "schema": "${import('./configuration/next-starter-page-schema.json')}"
+
+                  }
+                },
+                "slots": {
+                  "next-homepage": {
+                    "name": "Next.js project homepage",
+                    "component": "next-starter-page",
+                    "content": {
+                      "en": "${import('./configuration/next-homepage-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "next-homepage": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            },
+            {
+              "name": "add-slot",
+              "slots": ["${this.slotId}@${this.slotVersion}"],
+            },
+            {
+              "name": "add-dependency",
+              "dependencies": ["@croct/template-ui", "@croct/md-lite"]
+            },
+            {
+              "name": "define",
+              "variables": {
+                "pageFile": "${(options.router === 'app' ? 'page' : 'index') + (options.typescript ? '.tsx' : '.jsx')}",
+                "pageDirectory": "${options.router === 'app' ? 'app' : 'pages'}"
+              }
+            },
+            {
+              "name": "download",
+              "overwrite": true,
+              // code/{version}/{js|ts}/{app|page}/{tailwind|default}/{index|page}.{js|tsx}
+              "source": "${[\
+                  'code',\
+                  (options.version ?? 'latest') === 'latest' ? '15' : options.version,\
+                  options.typescript ? 'ts' : 'js',\
+                  options.router,\
+                  options.tailwind ? 'tailwind' : 'default',\
+                  this.pageFile\
+                ].join('/')}",
+              "destination": "${this.pageDirectory}",
+            },
+            {
+              "name": "replace-file-content",
+              "files": [
+                {
+                  "path": "${this.pageDirectory}/${this.pageFile}",
+                  "replacements": [
+                    {
+                      "pattern": "%slotId%",
+                      "value": "${this.slotId}"
+                    },
+                    {
+                      "pattern": "%slotVersion%",
+                      "value": "${this.slotVersion}"
+                    },
+                    {
+                      "pattern": "%workspaceUrl%",
+                      "value": "${project.workspace.url}"
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "else": {
@@ -69,7 +180,21 @@
           }
         }
       ],
+      "else": [
+        {
+          "name": "initialize"
+        }
+      ]
     },
-    {"name": "initialize"}
+    {
+      "name": "test",
+      "condition": "${!options.disableLauncher}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct:/utils/example-launcher"
+        }
+      ]
+    }
   ]
 }

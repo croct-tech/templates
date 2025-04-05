@@ -5,7 +5,7 @@
     "path": {
       "type": "string",
       "description": "The path to the example.",
-      "required": true
+      "default": "",
     },
   },
   "actions": [
@@ -37,7 +37,7 @@
             },
             {
               "name": "print",
-              "semantic": "info",
+              "semantics": "info",
               "message": "The example is available at `${this.serverUrl}${options.path}`."
             },
             {

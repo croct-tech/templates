@@ -1,0 +1,122 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "hint": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Get started by editing `app/page.tsx`"
+      }
+    },
+    "links": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://app.croct.com/redirect/organizations/-organization-/workspaces/-workspace-/slots"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Edit"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Update this page's content directly in the Croct admin."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://docs.croct.com/reference/sdk/nextjs/installation"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Docs"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Find in-depth information about using Croct with Next.js."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://croct.com/templates/next"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Templates"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Explore starter templates powered by Croct for Next.js."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://vercel.com/new?utm_source=create-next-app&utm_medium=croct-appdir-template&utm_campaign=create-next-app"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Deploy"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Instantly deploy your Next.js site to a shareable URL with Vercel."
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

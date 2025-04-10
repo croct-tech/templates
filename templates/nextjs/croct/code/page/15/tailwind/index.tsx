@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type {GetServerSideProps} from "next"
 import { TemplateCanvas } from "@croct/template-ui/next"
+import { LinkButton } from "@croct/template-ui/react"
 import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
 import { fetchContent } from "@croct/plug-next/server"
 import type { SlotContent } from "@croct/plug-next"
@@ -26,7 +27,14 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async context =
 
 export default function Home({content}: HomeProps) {
   return (
-    <TemplateCanvas title="Next.js 15 starter" ctaLabel="Go to admin" ctaLink="%workspaceUrl%" src="#" fullScreen portal>
+    <TemplateCanvas
+      title="Next.js 14 starter"
+      ctaLabel="Go to admin"
+      ctaLink="%workspaceUrl%"
+      src="#"
+      fullScreen
+      portal
+    >
       <div
         className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
       >
@@ -121,6 +129,13 @@ export default function Home({content}: HomeProps) {
           </a>
         </footer>
       </div>
+      <LinkButton
+        branded
+        href="%workspaceUrl%/slots/edit/%slotId%/latest"
+        target="_parent"
+        label="Edit content"
+        position="bottom-right"
+      />
     </TemplateCanvas>
   );
 }

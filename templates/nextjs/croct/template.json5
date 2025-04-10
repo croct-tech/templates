@@ -43,7 +43,8 @@
       "name": "define",
       "variables": {
         "projectName": "my-croct-app",
-        "versionNumber": "${(options.version ?? 'latest') === 'latest' ? '15' : options.version}"
+        "versionNumber": "${(options.version ?? 'latest') === 'latest' ? '15' : options.version}",
+        "codeExtension": "${options.typescript ? '.tsx' : '.js'}"
       }
     },
     {
@@ -84,7 +85,7 @@
             "name": "Next.js project homepage",
             "component": "next${this.versionNumber}-starter-page",
             "content": {
-              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json')}"
+              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {extension: this.codeExtension})}"
             }
           }
         }
@@ -105,12 +106,6 @@
     {
       "name": "add-dependency",
       "dependencies": ["@croct/template-ui", "@croct/md-lite"]
-    },
-    {
-      "name": "define",
-      "variables": {
-        "codeExtension": "${options.typescript ? '.tsx' : '.js'}",
-      }
     },
     {
       "name": "define",

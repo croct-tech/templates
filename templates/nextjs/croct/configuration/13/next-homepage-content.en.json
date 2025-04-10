@@ -6,7 +6,7 @@
       "type": "text",
       "value": {
         "type": "static",
-        "value": "Get started by editing `app/page.tsx`"
+        "value": "Get started by editing `app/page${this.extension}`"
       }
     },
     "links": {

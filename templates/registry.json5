@@ -1,22 +1,22 @@
 [
   {
-    "pattern": "^npm:/(.+)$",
+    "pattern": "^npm://?(.+)$",
     "destination": "npm/$1"
   },
   {
-    "pattern": "^croct:/(.+)$",
+    "pattern": "^croct://?(.+)$",
     "destination": "croct/$1"
   },
   {
-    "pattern": "^nextjs:/(.+)$",
+    "pattern": "^nextjs://?(.+)$",
     "destination": "nextjs/$1"
   },
   {
-    "pattern": "^shadcn:/(.+)$",
+    "pattern": "^shadcn://?(.+)$",
     "destination": "shadcn/$1"
   },
   {
-    "pattern": "^magicui:/(.+)$",
+    "pattern": "^magicui://?(.+)$",
     "destination": "magicui/$1"
   },
   {

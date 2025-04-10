@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "instructions": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "text"
+        },
+        "itemLabel": "Step"
+      },
+      "label": "Instructions",
+      "description": "The steps to help users get started.",
+      "private": false,
+      "optional": false
+    },
+    "primaryButton": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "description": "The label shown on the button.",
+            "private": false,
+            "optional": false
+          },
+          "url": {
+            "type": {
+              "type": "text",
+              "format": "url"
+            },
+            "label": "URL",
+            "description": "The link the button points to.",
+            "private": false,
+            "optional": false
+          }
+        }
+      },
+      "label": "Primary button",
+      "description": "The primary call-to-action button.",
+      "private": false,
+      "optional": false
+    },
+    "secondaryButton": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "description": "The label shown on the button.",
+            "private": false,
+            "optional": false
+          },
+          "url": {
+            "type": {
+              "type": "text",
+              "format": "url"
+            },
+            "label": "URL",
+            "description": "The link the button points to.",
+            "private": false,
+            "optional": false
+          }
+        }
+      },
+      "label": "Secondary button",
+      "description": "The secondary call-to-action button.",
+      "private": false,
+      "optional": false
+    }
+  }
+}

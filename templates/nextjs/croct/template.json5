@@ -44,7 +44,9 @@
       "variables": {
         "projectName": "my-croct-app",
         "versionNumber": "${(options.version ?? 'latest') === 'latest' ? '15' : options.version}",
-        "codeExtension": "${options.typescript ? '.tsx' : '.js'}"
+        "codeExtension": "${options.typescript ? '.tsx' : '.js'}",
+        "pageFile": "${(options.router === 'app' ? 'page' : 'index')}${options.typescript ? '.tsx' : '.js'}",
+        "pageDirectory": "${options.router === 'app' ? 'app' : 'pages'}"
       }
     },
     {
@@ -75,17 +77,19 @@
       "resources": {
         "components": {
           "next${this.versionNumber}-starter-page": {
-            "name": "Next.js starter page",
-            "description": "The structure for Next.js starter pages.",
+            "name": "Next.js ${this.versionNumber} starter page",
+            "description": "The structure for Next.js ${this.versionNumber} starter pages.",
             "schema": "${import('./configuration/' + this.versionNumber + '/next-starter-page-schema.json')}"
           }
         },
         "slots": {
           "next${this.versionNumber}-homepage": {
-            "name": "Next.js project homepage",
+            "name": "Next.js ${this.versionNumber} project homepage",
             "component": "next${this.versionNumber}-starter-page",
             "content": {
-              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {extension: this.codeExtension})}"
+              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {\
+                page: this.pageDirectory + '/' + this.pageFile\
+              })}"
             }
           }
         }
@@ -106,13 +110,6 @@
     {
       "name": "add-dependency",
       "dependencies": ["@croct/template-ui", "@croct/md-lite"]
-    },
-    {
-      "name": "define",
-      "variables": {
-        "pageFile": "${(options.router === 'app' ? 'page' : 'index') + this.codeExtension}",
-        "pageDirectory": "${project.path.source}/${options.router === 'app' ? 'app' : 'pages'}"
-      }
     },
     {
       "name": "test",
@@ -152,6 +149,12 @@
       ]
     },
     {
+      "name": "define",
+      "variables": {
+        "pagePath": "${project.path.source}/${options.router === 'app' ? 'app' : 'pages'}"
+      }
+    },
+    {
       "name": "download",
       "overwrite": true,
       // code/lib/markdown.{js|tsx}
@@ -176,13 +179,13 @@
       "mapping": {
         "page.js": "${this.pageFile}"
       },
-      "destination": "${this.pageDirectory}",
+      "destination": "${this.pagePath}",
     },
     {
       "name": "replace-file-content",
       "files": [
         {
-          "path": "${this.pageDirectory}/${this.pageFile}",
+          "path": "${this.pagePath}/${this.pageFile}",
           "replacements": [
             {
               "pattern": "%slotId%",

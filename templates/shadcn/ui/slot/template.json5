@@ -91,7 +91,7 @@
     },
     {
       "name": "print",
-      "semantic": "success",
+      "semantics": "success",
       "message": "Component successfully imported at `${this.examplePath}`."
     },
     {

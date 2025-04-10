@@ -1,7 +1,7 @@
 {
   "name": "Pricing section",
   "description": "The pricing section.",
-  "definition": {
+  "schema": {
     "type": "structure",
     "attributes": {
       "plans": {

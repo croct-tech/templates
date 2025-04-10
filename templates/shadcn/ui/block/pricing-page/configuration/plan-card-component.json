@@ -1,7 +1,7 @@
 {
   "name": "Plan card",
   "description": "The details of a pricing plan.",
-  "definition": {
+  "schema": {
     "type": "structure",
     "title": "Plan card",
     "attributes": {

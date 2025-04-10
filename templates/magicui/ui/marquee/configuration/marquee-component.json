@@ -1,7 +1,7 @@
 {
   "name": "Magic UI - Marquee Reviews",
   "description": "An infinite scrolling component that displays user reviews.",
-  "definition": {
+  "schema": {
     "type": "structure",
     "title": "Magic UI - Marquee Reviews",
     "attributes": {

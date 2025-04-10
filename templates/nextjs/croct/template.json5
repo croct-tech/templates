@@ -1,75 +1,217 @@
 {
-  "title": "Next.js + Croct",
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Next.js + Croct starter",
   "description": "A Next.js project with Croct integration.",
   "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "default": "latest"
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ],
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app",
+    },
+    "typescript": {
+      "type": "boolean",
+      "description": "Whether to use TypeScript.",
+      "default": false
+    },
+    "tailwind": {
+      "type": "boolean",
+      "description": "Whether to use Tailwind CSS.",
+      "default": false
+    },
+    "disableLauncher": {
+      "type": "boolean",
+      "description": "Whether to disable opening the project in the browser.",
+      "default": false
     }
   },
   "actions": [
     {
-      "name": "test",
-      "condition": "${project.platform === 'unknown'}",
-      "then": [
-        {
-          "name": "print",
-          "semantic": "info",
-          "message": "No project found in the current directory"
+      "name": "define",
+      "variables": {
+        "projectName": "my-croct-app",
+        "versionNumber": "${(options.version ?? 'latest') === 'latest' ? '15' : options.version}",
+        "codeExtension": "${options.typescript ? '.tsx' : '.js'}",
+        "pageFile": "${(options.router === 'app' ? 'page' : 'index')}${options.typescript ? '.tsx' : '.js'}",
+        "pageDirectory": "${options.router === 'app' ? 'app' : 'pages'}"
+      }
+    },
+    {
+      "name": "import",
+      "template": "croct:/utils/filename-generator",
+      "options": {
+        "reference": "projectName",
+      }
+    },
+    {
+      "name": "import",
+      "template": "../project",
+      "options": {
+        "name": "${this.projectName}",
+        "version": "${options.version}",
+        "typescript": "${options.typescript}",
+        "tailwind": "${options.tailwind}",
+        "eslint": true,
+        "router": "${options.router}",
+      }
+    },
+    {
+      "name": "change-directory",
+      "path": "${this.projectName}"
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "next${this.versionNumber}-starter-page": {
+            "name": "Next.js ${this.versionNumber} starter page",
+            "description": "The structure for Next.js ${this.versionNumber} starter pages.",
+            "schema": "${import('./configuration/' + this.versionNumber + '/next-starter-page-schema.json')}"
+          }
         },
-        {
-          "name": "prompt",
-          "type": "confirmation",
-          "message": "Start a new project?",
-          "default": true,
-          "result": "createProject"
-        },
-        {
-          "name": "test",
-          "condition": "${this.createProject}",
-          "then": [
-            {
-              "name": "define",
-              "variables": {
-                "projectName": "my-app"
-              }
-            },
-            {
-              "name": "import",
-              "template": "croct:/utils/filename-generator",
-              "options": {
-                "reference": "projectName",
-              }
-            },
-            {
-              "name": "import",
-              "template": "../project",
-              "options": {
-                "name": "${this.projectName}",
-                "version": "${options.version}",
-                "typescript": true,
-                "tailwind": true,
-                "eslint": true,
-                "router": "app",
-              }
-            },
-            {
-              "name": "change-directory",
-              "path": "${this.projectName}"
+        "slots": {
+          "next${this.versionNumber}-homepage": {
+            "name": "Next.js ${this.versionNumber} project homepage",
+            "component": "next${this.versionNumber}-starter-page",
+            "content": {
+              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {\
+                page: this.pageDirectory + '/' + this.pageFile\
+              })}"
             }
-          ],
-          "else": {
-            "name": "fail",
-            "title": "Project not found",
-            "message": "Unable to locate a project in the current directory.",
-            "suggestions": [
-              "Navigate to the project directory and try again."
-            ]
           }
         }
-      ],
+      },
+      "result": {
+        "slots": {
+          "next${this.versionNumber}-homepage": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
     },
-    {"name": "initialize"}
+    {
+      "name": "add-slot",
+      "slots": ["${this.slotId}@${this.slotVersion}"],
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": ["@croct/template-ui", "@croct/md-lite"]
+    },
+    {
+      "name": "test",
+      // The assets in the Next.js 14 are broken
+      "condition": "${this.versionNumber === '14'}",
+      "then": [
+        {
+          "name": "download",
+          "source": "asset/file.svg",
+          "destination": "public",
+          "overwrite": true
+        },
+        {
+          "name": "download",
+          "source": "asset/globe.svg",
+          "destination": "public",
+          "overwrite": true
+        },
+        {
+          "name": "download",
+          "source": "asset/next.svg",
+          "destination": "public",
+          "overwrite": true
+        },
+        {
+          "name": "download",
+          "source": "asset/vercel.svg",
+          "destination": "public",
+          "overwrite": true
+        },
+        {
+          "name": "download",
+          "source": "asset/window.svg",
+          "destination": "public",
+          "overwrite": true
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "pagePath": "${project.path.source}/${options.router === 'app' ? 'app' : 'pages'}"
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      // code/lib/markdown.{js|tsx}
+      "source": "${[\
+        'code',\
+        'lib',\
+        'markdown' + this.codeExtension\
+      ].join('/')}",
+      "destination": "${project.path.utilities}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      // code/page/{version}/{app|page}/{tailwind|css}/{page|index.{js|tsx}}
+      "source": "${[\
+        'code',\
+        'page',\
+        this.versionNumber,\
+        options.tailwind ? 'tailwind' : 'css',\
+        options.router === 'app' ? 'page.js' : 'index' + this.codeExtension\
+      ].join('/')}",
+      "mapping": {
+        "page.js": "${this.pageFile}"
+      },
+      "destination": "${this.pagePath}",
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.pagePath}/${this.pageFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this.slotId}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this.slotVersion}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${!options.disableLauncher}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct:/utils/example-launcher"
+        }
+      ]
+    }
   ]
 }

@@ -1,55 +1,75 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/template.json",
   "title": "Next.js template",
   "description": "A template for bootstrapping a new project with Next.js.",
   "options": {
     "name": {
       "type": "string",
       "description": "The name of the project.",
-      "default": "my-app"
+      "default": "my-app",
     },
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "default": "latest"
+      "choices": ["13", "14", "15", "latest"],
     },
     "typescript": {
       "type": "boolean",
       "description": "Whether to use TypeScript.",
-      "default": false
     },
     "tailwind": {
       "type": "boolean",
       "description": "Whether to use Tailwind CSS.",
-      "default": false
     },
     "eslint": {
       "type": "boolean",
       "description": "Whether to use ESLint.",
-      "default": true
     },
     "turbopack": {
       "type": "boolean",
       "description": "Whether to use TurboPack.",
-      "default": false
+    },
+    "src-dir": {
+        "type": "boolean",
+        "description": "Whether to use the src directory structure.",
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "options": ["app", "page"],
-      "default": "app"
+      "choices": ["app", "page"],
+      "default": ""
     },
     "import-alias": {
       "type": "string",
       "description": "The import alias to use.",
-      "default": "@/*"
     }
   },
   "actions": [
     {
       "name": "execute-package",
       "runner": "npm",
-      "package": "create-next-app@${options.version}",
-      "arguments": "${[options.name, options.typescript ? '--ts' : '--js', options.tailwind ? '--tailwind' : '--no-tailwind', options.eslint ? '--eslint' : '--no-eslint', ...(options.router === 'app' ? ['--app'] : []), ...(options.turbopack ? ['--turbopack'] : ['--no-turbopack']), '--no-src-dir', ...(options['import-alias'] === '' ? ['--no-import-alias'] : ['--import-alias', options['import-alias']])]}"
-    }
+      "package": "create-next-app${options.version === null ? '' : '@' + options.version}",
+      "arguments": "${[\
+          options.name,\
+          ...(options['src-dir'] === null ? [] : [options['src-dir'] ? '--src-dir' : '--no-src-dir']),\
+          ...(options.typescript === null ? [] : [options.typescript ? '--ts' : '--js']),\
+          ...(options.tailwind === null ? [] : [options.tailwind ? '--tailwind' : '--no-tailwind']),\
+          ...(options.eslint === null ? [] : [options.eslint ? '--eslint' : '--no-eslint']),\
+          ...(options.router === null ? [] : [options.router === 'app' ? '--app' : '--no-app']),\
+          ...(options.turbopack === null ? [] : [options.turbopack ? '--turbopack' : '--no-turbopack']),\
+          ...(options['import-alias'] === null ? [] : ['--import-alias', options['import-alias']])\
+      ]}",
+      "interactions": [
+        {
+          "when": "Would you like",
+          "always": true,
+          "then": ["[enter]"]
+        },
+        {
+          "when": "Success!",
+          "final": true,
+        }
+      ]
+    },
   ]
 }

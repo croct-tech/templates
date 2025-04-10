@@ -15,7 +15,7 @@
       "then": [
         {
           "name": "print",
-          "semantic": "info",
+          "semantics": "info",
           "message": "No project found in the current directory",
         },
         {

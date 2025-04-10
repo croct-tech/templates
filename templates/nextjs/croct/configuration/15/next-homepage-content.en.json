@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "instructions": {
+      "type": "list",
+      "items": [
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Get started by editing `${this.page}`."
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Save and see your changes instantly."
+          }
+        }
+      ]
+    },
+    "primaryButton": {
+      "type": "structure",
+      "attributes": {
+        "url": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-croct&utm_campaign=create-next-app"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Deploy now"
+          }
+        }
+      }
+    },
+    "secondaryButton": {
+      "type": "structure",
+      "attributes": {
+        "url": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-croct&utm_campaign=create-next-app"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Read our docs"
+          }
+        }
+      }
+    }
+  }
+}

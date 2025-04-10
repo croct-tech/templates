@@ -174,7 +174,7 @@
         'page',\
         this.versionNumber,\
         options.tailwind ? 'tailwind' : 'css',\
-        options.router === 'app' ? 'page.js' : 'index' + this.codeExtension\
+        options.router === 'app' ? 'page.js' : ('index' + this.codeExtension)\
       ].join('/')}",
       "mapping": {
         "page.js": "${this.pageFile}"

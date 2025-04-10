@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TemplateCanvas } from "@croct/template-ui/next"
+import { LinkButton } from "@croct/template-ui/react"
 import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
 import { fetchContent } from "@croct/plug-next/server"
 import styles from "./page.module.css";
@@ -8,7 +9,14 @@ export default async function Home() {
   const {content} = await fetchContent("%slotId%@%slotVersion%");
 
   return (
-    <TemplateCanvas title="Next.js 15 starter" ctaLabel="Go to admin" ctaLink="%workspaceUrl%" src="#" fullScreen portal>
+    <TemplateCanvas
+      title="Next.js 15 starter"
+      ctaLabel="Go to admin"
+      ctaLink="%workspaceUrl%"
+      src="#"
+      fullScreen
+      portal
+    >
       <div className={styles.page}>
         <main className={styles.main}>
           <Image
@@ -98,6 +106,13 @@ export default async function Home() {
           </a>
         </footer>
       </div>
+      <LinkButton
+        branded
+        href="%workspaceUrl%/slots/edit/%slotId%/latest"
+        target="_parent"
+        label="Edit content"
+        position="bottom-right"
+      />
     </TemplateCanvas>
   );
 }

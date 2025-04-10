@@ -32,6 +32,10 @@
       "description": "Whether to use Tailwind CSS.",
       "default": false
     },
+    "src-dir": {
+      "type": "boolean",
+      "description": "Whether to use the src directory structure."
+    },
     "disableLauncher": {
       "type": "boolean",
       "description": "Whether to disable opening the project in the browser.",
@@ -65,6 +69,7 @@
         "typescript": "${options.typescript}",
         "tailwind": "${options.tailwind}",
         "eslint": true,
+        "src-dir": "${options['src-dir']}",
         "router": "${options.router}",
       }
     },

@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import {TemplateCanvas} from '@croct/template-ui/next';
-import {render} from "@croct/md-lite";
-import {fetchContent} from "@croct/plug-next/server";
+import { TemplateCanvas } from '@croct/template-ui/next'
+import { renderMarkdown } from '?/**/*/markdown.{tsx,js}'
+import {fetchContent} from '@croct/plug-next/server'
 
 export default async function Home() {
   const {content} = await fetchContent('%slotId%@%slotVersion%');
@@ -10,25 +10,13 @@ export default async function Home() {
       <TemplateCanvas title="Next.js 13 starter" ctaLabel="Go to admin" ctaLink="%workspaceUrl%" src="#" fullScreen portal>
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
           <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-            <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-              {
-                render(content.hint, {
-                  fragment: node => node.children,
-                  text: node => node.content,
-                  bold: node => <b className="font-bold" key={node.index}>{node.children}</b>,
-                  italic: node => <i className="italic" key={node.index}>{node.children}</i>,
-                  strike: node => <s className="line-through" key={node.index}>{node.children}</s>,
-                  code: node => <code className="font-mono font-bold" key={node.index}>{node.content}</code>,
-                  link: node => <a key={node.index} href={node.href}>{node.children}</a>,
-                  image: node => <Image key={node.index} src={node.src} alt={node.alt} />,
-                  paragraph: node => <p key={node.index}>{node.children}</p>,
-                })
-              }
+            <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30 whitespace-pre-wrap">
+              {renderMarkdown(content.hint, {code: 'font-mono font-bold'})}
             </p>
             <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
               <a
                   className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-                  href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+                  href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
                   target="_blank"
                   rel="noopener noreferrer"
               >
@@ -57,8 +45,9 @@ export default async function Home() {
           </div>
 
           <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-            {content.links.map(link => (
+            {content.links.map((link, index) => (
                 <a
+                    key={index}
                     href={link.url}
                     className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
                     target="_blank"

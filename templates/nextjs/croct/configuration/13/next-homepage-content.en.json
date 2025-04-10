@@ -6,7 +6,7 @@
       "type": "text",
       "value": {
         "type": "static",
-        "value": "Get started by editing `app/page.tsx`"
+        "value": "Get started by editing `app/page.tsx`"
       }
     },
     "links": {
@@ -19,7 +19,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://app.croct.com/redirect/organizations/-organization-/workspaces/-workspace-/slots"
+                "value": "${project.workspace.url}/slots"
               }
             },
             "title": {
@@ -97,7 +97,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://vercel.com/new?utm_source=create-next-app&utm_medium=croct-appdir-template&utm_campaign=create-next-app"
+                "value": "https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
               }
             },
             "title": {
@@ -111,7 +111,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "Instantly deploy your Next.js site to a shareable URL with Vercel."
+                "value": "Instantly deploy your Next.js site with Vercel."
               }
             }
           }

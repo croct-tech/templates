@@ -29,6 +29,10 @@
       "type": "boolean",
       "description": "Whether to use TurboPack.",
     },
+    "src-dir": {
+        "type": "boolean",
+        "description": "Whether to use the src directory structure.",
+    },
     "router": {
       "type": "string",
       "description": "The router to use.",
@@ -47,11 +51,11 @@
       "package": "create-next-app${options.version === null ? '' : '@' + options.version}",
       "arguments": "${[\
           options.name,\
-          '--no-src-dir',\
+          ...(options['src-dir'] === null ? [] : [options['src-dir'] ? '--src-dir' : '--no-src-dir']),\
           ...(options.typescript === null ? [] : [options.typescript ? '--ts' : '--js']),\
           ...(options.tailwind === null ? [] : [options.tailwind ? '--tailwind' : '--no-tailwind']),\
           ...(options.eslint === null ? [] : [options.eslint ? '--eslint' : '--no-eslint']),\
-          ...(options.router === null ? [] : ['--' + options.router]),\
+          ...(options.router === null ? [] : [options.router === 'app' ? '--app' : '--no-app']),\
           ...(options.turbopack === null ? [] : [options.turbopack ? '--turbopack' : '--no-turbopack']),\
           ...(options['import-alias'] === null ? [] : ['--import-alias', options['import-alias']])\
       ]}",

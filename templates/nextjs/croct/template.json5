@@ -214,13 +214,15 @@
       ]
     },
     {
-      "name": "change-directory",
-      "path": "../"
-    },
-    {
       "name": "test",
-      "condition": "${!options.disableLauncher}",
+      "condition": "${options.disableLauncher}",
       "then": [
+        {
+          "name": "change-directory",
+          "path": "../"
+        }
+      ],
+      "else":  [
         {
           "name": "import",
           "template": "croct:/utils/example-launcher"

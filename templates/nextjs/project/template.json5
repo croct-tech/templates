@@ -48,7 +48,7 @@
     {
       "name": "execute-package",
       "runner": "npm",
-      "package": "create-next-app${options.version === null ? '' : '@' + options.version}",
+      "package": "create-next-app@${options.version ?? 'latest'}",
       "arguments": "${[\
           options.name,\
           ...(options['src-dir'] === null ? [] : [options['src-dir'] ? '--src-dir' : '--no-src-dir']),\

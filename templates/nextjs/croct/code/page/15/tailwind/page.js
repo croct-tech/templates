@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <TemplateCanvas
-      title="Next.js 15 starter"
+      title="Next.js 14 starter"
       ctaLabel="Go to admin"
       ctaLink="%workspaceUrl%"
       src="#"

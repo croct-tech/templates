@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { TemplateCanvas } from "@croct/template-ui/next"
-import { LinkButton } from "@croct/template-ui/react"
 import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
 import { fetchContent } from "@croct/plug-next/server"
 import localFont from "next/font/local";
@@ -129,13 +128,6 @@ export default function Home({content}) {
           </a>
         </footer>
       </div>
-      <LinkButton
-        branded
-        href="%workspaceUrl%/slots/edit/%slotId%/latest"
-        target="_parent"
-        label="Edit content"
-        position="bottom-right"
-      />
     </TemplateCanvas>
   );
 }

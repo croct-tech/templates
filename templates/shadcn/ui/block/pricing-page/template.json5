@@ -19,12 +19,12 @@
     {
       "name": "download",
       "source": "code/plan-card.tsx",
-      "destination": "${project.path.component}",
+      "destination": "${project.path.components}",
     },
     {
       "name": "download",
       "source": "code/pricing-section.tsx",
-      "destination": "${project.path.component}",
+      "destination": "${project.path.components}",
     },
     {
       "name": "define",
@@ -35,7 +35,7 @@
     {
       "name": "download",
       "source": "code/page.tsx",
-      "destination": "${project.path.example}/${this.routePath}",
+      "destination": "${project.path.examples}/${this.routePath}",
       "result": {
         "destination": "pagePath"
       }
@@ -83,7 +83,11 @@
             {
               "pattern": "%slotVersion%",
               "value": "${this.slotVersion}"
-            }
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            },
           ]
         }
       ]

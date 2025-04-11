@@ -11,14 +11,13 @@
   "actions": [
     {
       "name": "import",
-      "template": "nextjs:/project",
+      "template": "nextjs://croct",
       "options": {
         "name": "${options.name}",
-        "typescript": true,
         "tailwind": true,
         "eslint": true,
         "router": "app",
-        "import-alias": ""
+        "disableLauncher": true
       }
     },
     /*

@@ -62,7 +62,7 @@
     {
       "name": "download",
       "source": "${options.code}/${project.platform}/${this.exampleFile}",
-      "destination": "${project.path.example}/${options.id}",
+      "destination": "${project.path.examples}/${options.id}",
       "result": {
         "destination": "examplePath"
       }

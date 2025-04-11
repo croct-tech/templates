@@ -3,6 +3,11 @@
   "title": "Next.js + Croct starter",
   "description": "A Next.js project with Croct integration.",
   "options": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-croct-app"
+    },
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
@@ -46,7 +51,7 @@
     {
       "name": "define",
       "variables": {
-        "projectName": "my-croct-app",
+        "projectName": "${options.name}",
         "versionNumber": "${(options.version ?? 'latest') === 'latest' ? '15' : options.version}",
         "codeExtension": "${options.javascript ? '.js' : '.tsx'}",
         "pageFile": "${(options.router === 'app' ? 'page' : 'index')}${options.javascript ? '.js' : '.tsx'}",
@@ -207,6 +212,10 @@
           ]
         }
       ]
+    },
+    {
+      "name": "change-directory",
+      "path": "../"
     },
     {
       "name": "test",

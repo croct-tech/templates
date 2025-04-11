@@ -1,6 +1,6 @@
-import {cn} from "?/**/*/utils.ts";
-import {Check} from "lucide-react";
-import {Button} from "?/**/*/button.tsx";
+import { cn } from "?/**/*/utils.ts"
+import { Check } from "lucide-react"
+import { Button } from "?/**/*/button.tsx"
 
 export type PlanCardProps = {
   name: string

@@ -7,8 +7,8 @@ import {
   GlobeIcon,
   InputIcon,
 } from "@radix-ui/react-icons";
-
 import { BentoCard, BentoGrid } from "?/**/*/magicui/bento-grid.tsx";
+import {cn} from "?/**/*/utils.ts";
 
 interface FeatureCardProps {
   name: string;
@@ -36,6 +36,17 @@ const icons = {
   InputIcon: InputIcon,
 }
 
+const gridClasses = {
+  row: {
+    start: ['row-start-1', 'row-start-2', 'row-start-3', 'row-start-4'],
+    end: ['row-end-1', 'row-end-2', 'row-end-3', 'row-end-4'],
+  },
+  column: {
+    start: ['col-start-1', 'col-start-2', 'col-start-3', 'col-start-4'],
+    end: ['col-end-1', 'col-end-2', 'col-end-3', 'col-end-4'],
+  }
+};
+
 export function FeatureGrid({cards}: FeatureGridProps) {
   return (
     <BentoGrid className="grid lg:grid-rows-3">
@@ -45,12 +56,12 @@ export function FeatureGrid({cards}: FeatureGridProps) {
           {...card}
           Icon={icons[icon]}
           background={<img className="absolute -right-20 -top-20 opacity-60" />}
-          className={[
-            `lg:row-start-${grid.rowStart}`,
-            `lg:row-end-${grid.rowEnd}`,
-            `lg:col-start-${grid.columnStart}`,
-            `lg:col-end-${grid.columnEnd}`,
-          ].join(' ')}
+          className={cn(
+            gridClasses.row.start[grid.rowStart - 1],
+            gridClasses.row.end[grid.rowEnd - 1],
+            gridClasses.column.start[grid.columnStart - 1],
+            gridClasses.column.end[grid.columnEnd - 1]
+          )}
         />
       ))}
     </BentoGrid>

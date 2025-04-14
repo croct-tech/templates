@@ -14,7 +14,7 @@ export default async function Page() {
       fullScreen
       portal
     >
-      <div className="flex relative h-full w-full justify-center p-10">
+      <div className="flex absolute h-full w-full justify-center p-10">
         <FeatureGrid {...content} />
       </div>
     </TemplateCanvas>

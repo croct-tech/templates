@@ -6,6 +6,17 @@
       "type": "string",
       "description": "The name of the project.",
       "default": "my-app"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
     }
   },
   "actions": [
@@ -47,6 +58,8 @@
               "template": "../project",
               "options": {
                 "name": "${this.projectName}",
+                "version": "${options.version}",
+                "router": "${options.router}",
               }
             },
             {

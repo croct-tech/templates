@@ -1,38 +1,32 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/content.json",
   "type": "structure",
   "attributes": {
-    "reverse": {
-      "type": "boolean",
-      "value": {
-        "type": "static",
-        "value": false
-      }
-    },
     "reviews": {
       "type": "list",
       "items": [
         {
           "type": "structure",
           "attributes": {
-            "name": {
-              "type": "text",
-              "value": {
-                "type": "static",
-                "value": "Jack"
-              }
-            },
-            "avatar": {
+            "img": {
               "type": "text",
               "value": {
                 "type": "static",
                 "value": "https://avatar.vercel.sh/jack"
               }
             },
-            "content": {
+            "body": {
               "type": "text",
               "value": {
                 "type": "static",
                 "value": "I've never seen anything like this before. It's amazing. I love it."
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Jack"
               }
             },
             "username": {
@@ -47,25 +41,25 @@
         {
           "type": "structure",
           "attributes": {
-            "name": {
-              "type": "text",
-              "value": {
-                "type": "static",
-                "value": "Jill"
-              }
-            },
-            "avatar": {
+            "img": {
               "type": "text",
               "value": {
                 "type": "static",
                 "value": "https://avatar.vercel.sh/jill"
               }
             },
-            "content": {
+            "body": {
               "type": "text",
               "value": {
                 "type": "static",
                 "value": "I don't know what to say. I'm speechless. This is amazing."
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Jill"
               }
             },
             "username": {
@@ -80,25 +74,25 @@
         {
           "type": "structure",
           "attributes": {
-            "name": {
-              "type": "text",
-              "value": {
-                "type": "static",
-                "value": "John"
-              }
-            },
-            "avatar": {
+            "img": {
               "type": "text",
               "value": {
                 "type": "static",
                 "value": "https://avatar.vercel.sh/john"
               }
             },
-            "content": {
+            "body": {
               "type": "text",
               "value": {
                 "type": "static",
                 "value": "I'm at a loss for words. This is amazing. I love it."
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "John"
               }
             },
             "username": {
@@ -112,11 +106,11 @@
         }
       ]
     },
-    "vertical": {
-      "type": "boolean",
+    "variant": {
+      "type": "text",
       "value": {
         "type": "static",
-        "value": false
+        "value": "horizontal"
       }
     },
     "pauseOnHover": {

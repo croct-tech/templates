@@ -1,0 +1,159 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Magic UI - Bento grid ",
+  "attributes": {
+    "cards": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "BellIcon": {
+                    "label": "Bell",
+                    "position": 2
+                  },
+                  "GlobeIcon": {
+                    "label": "Globe",
+                    "position": 4
+                  },
+                  "InputIcon": {
+                    "label": "Input",
+                    "position": 5
+                  },
+                  "CalendarIcon": {
+                    "label": "Calendar",
+                    "position": 0
+                  },
+                  "FileTextIcon": {
+                    "label": "File text",
+                    "position": 1
+                  }
+                }
+              },
+              "label": "Icon",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The icon of the bento card."
+            },
+            "name": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The title of the bento card."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "format": "multiline",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The description of the bento card."
+            },
+            "cta": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "CTA label",
+              "private": false,
+              "optional": false,
+              "position": 3,
+              "description": "The label of the bento card CTA."
+            },
+            "href": {
+              "type": {
+                "type": "text"
+              },
+              "label": "CTA link",
+              "private": false,
+              "optional": false,
+              "position": 4,
+              "description": "The link of the bento card CTA."
+            },
+            "grid": {
+              "type": {
+                "type": "structure",
+                "attributes": {
+                  "rowStart": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 1
+                    },
+                    "label": "Row start",
+                    "private": false,
+                    "optional": false,
+                    "position": 0,
+                    "description": "The index of the start row."
+                  },
+                  "rowEnd": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 1
+                    },
+                    "label": "Row end",
+                    "private": false,
+                    "optional": false,
+                    "position": 1,
+                    "description": "The index of the end row."
+                  },
+                  "columnStart": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 1
+                    },
+                    "label": "Column start",
+                    "private": false,
+                    "optional": false,
+                    "position": 2,
+                    "description": "The index of the start column."
+                  },
+                  "columnEnd": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 1
+                    },
+                    "label": "Column end",
+                    "private": false,
+                    "optional": false,
+                    "position": 3,
+                    "description": "The index of the end column."
+                  }
+                }
+              },
+              "label": "Grid",
+              "private": false,
+              "optional": false,
+              "position": 5,
+              "description": "The position the card takes on the grid."
+            }
+          }
+        },
+        "itemLabel": "Card"
+      },
+      "label": "Bento cards",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The list of bento cards."
+    }
+  }
+}

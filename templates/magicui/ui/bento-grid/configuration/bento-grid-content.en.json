@@ -1,0 +1,376 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "cards": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Learn more"
+              }
+            },
+            "grid": {
+              "type": "structure",
+              "attributes": {
+                "rowEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 4
+                  }
+                },
+                "rowStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 1
+                  }
+                },
+                "columnEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                },
+                "columnStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 2
+                  }
+                }
+              }
+            },
+            "href": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/"
+              }
+            },
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "FileTextIcon"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Save your files"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "We automatically save your files as you type."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Learn more"
+              }
+            },
+            "grid": {
+              "type": "structure",
+              "attributes": {
+                "rowEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                },
+                "rowStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 1
+                  }
+                },
+                "columnEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 2
+                  }
+                },
+                "columnStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 1
+                  }
+                }
+              }
+            },
+            "href": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/"
+              }
+            },
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "InputIcon"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Full text search"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Search through all your files in one place."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Learn more"
+              }
+            },
+            "grid": {
+              "type": "structure",
+              "attributes": {
+                "rowEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 4
+                  }
+                },
+                "rowStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                },
+                "columnEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 2
+                  }
+                },
+                "columnStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 1
+                  }
+                }
+              }
+            },
+            "href": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/"
+              }
+            },
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "GlobeIcon"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Multilingual"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Supports 100+ languages and counting."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Learn more"
+              }
+            },
+            "grid": {
+              "type": "structure",
+              "attributes": {
+                "rowEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 2
+                  }
+                },
+                "rowStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 1
+                  }
+                },
+                "columnEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                },
+                "columnStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                }
+              }
+            },
+            "href": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/"
+              }
+            },
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "CalendarIcon"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Calendar"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Use the calendar to filter your files by date."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Learn more"
+              }
+            },
+            "grid": {
+              "type": "structure",
+              "attributes": {
+                "rowEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 4
+                  }
+                },
+                "rowStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 2
+                  }
+                },
+                "columnEnd": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                },
+                "columnStart": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                }
+              }
+            },
+            "href": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/"
+              }
+            },
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "BellIcon"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Notifications"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Get notified when someone shares a file or mentions you in a comment."
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import { CliDemo } from "?/**/*/cli-demo.tsx"
+import { FeatureGrid } from "?/**/*/feature-grid.tsx"
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent } from "@croct/plug-next/server"
 
@@ -22,8 +22,8 @@ export default function Page({content}: PageProps) {
       fullScreen
       portal
     >
-      <div className="flex absolute h-full w-full items-center justify-center p-10">
-        <CliDemo {...content} />
+      <div className="flex absolute h-full w-full justify-center p-10">
+        <FeatureGrid {...content} />
       </div>
     </TemplateCanvas>
   );

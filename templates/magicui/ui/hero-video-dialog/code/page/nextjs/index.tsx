@@ -18,6 +18,7 @@ export default function Page({content}: PageProps) {
       title="Magic UI - Hero video dialog"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaTarget="_blank"
       src="#"
       fullScreen
       portal

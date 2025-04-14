@@ -18,6 +18,7 @@ export default function Page({content}: PageProps) {
       title="Magic UI - Marquee reviews"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaTarget="_blank"
       maxWidth="1200px"
       src="#"
       fullScreen

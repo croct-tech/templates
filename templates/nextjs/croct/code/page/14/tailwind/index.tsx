@@ -31,6 +31,7 @@ export default function Home({content}: HomeProps) {
       title="Next.js 14 starter"
       ctaLabel="Edit this page"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaTarget="_blank"
       src="#"
       fullScreen
       portal

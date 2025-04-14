@@ -10,6 +10,7 @@ export default async function Page() {
       title="Magic UI - Terminal"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaTarget="_blank"
       src="#"
       fullScreen
       portal

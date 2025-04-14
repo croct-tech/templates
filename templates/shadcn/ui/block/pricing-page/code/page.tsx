@@ -10,6 +10,7 @@ export default async function Page() {
       title="Pricing page"
       ctaLabel="Edit this page"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaTarget="_blank"
       src="#"
       fullScreen
       portal

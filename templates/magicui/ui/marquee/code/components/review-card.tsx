@@ -1,11 +1,11 @@
 import { cn } from "?/**/*/utils.ts";
 
-export type ReviewCardProps = {
+export interface ReviewCardProps {
   img: string;
   name: string;
   username: string;
   body: string;
-};
+}
 
 export const ReviewCard = ({
   img,

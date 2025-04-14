@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
   "title": "Magic UI - Marquee",
-  "description": "Import the Marquee example into the project.",
+  "description": "An infinite scrolling component that can be used to display text, images, or videos.",
   "options":  {
     "version": {
       "type": "string",

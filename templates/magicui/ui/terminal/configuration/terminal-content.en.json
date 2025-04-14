@@ -1,0 +1,440 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "output": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "log"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "pnpm dlx shadcn@latest init"
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "typing"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 1500
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Preflight checks."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 2000
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Verifying framework. Found Next.js."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 2500
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Validating Tailwind CSS."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 3000
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Validating import alias."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 4000
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Writing components.json."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 4000
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Checking registry."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 4500
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Updating tailwind.config.ts"
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 5000
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Updating app/globals.css"
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 5500
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "success"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "✔ Installing dependencies."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 6000
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "info"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "ℹ Updated 1 file:\n  - lib/utils.ts"
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "reveal"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 6500
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "log"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Success! Project initialization completed."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "typing"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "delay": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 7000
+              }
+            },
+            "semantics": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "log"
+              }
+            },
+            "message": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "You may now add components."
+              }
+            },
+            "animation": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "typing"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

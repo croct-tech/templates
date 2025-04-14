@@ -9,7 +9,7 @@ export default function Page() {
     <TemplateCanvas
       title="Magic UI - Marquee reviews"
       ctaLabel="Edit this content"
-      ctaLink="https://app.croct.com/organizations/vercel/workspaces/vercel/slots/edit/magic-ui-marquee-reviews/1"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       maxWidth="1200px"
       src="#"
       fullScreen

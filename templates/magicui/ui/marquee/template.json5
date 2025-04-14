@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
-  "title": "Magic UI Marquee",
+  "title": "Magic UI - Marquee",
   "description": "Import the Marquee example into the project.",
   "options":  {
     "version": {

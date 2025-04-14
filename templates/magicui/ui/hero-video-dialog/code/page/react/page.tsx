@@ -1,0 +1,24 @@
+import { HeroVideoPlayer } from "?/**/*/hero-video-player.tsx"
+import { TemplateCanvas } from "@croct/template-ui/react"
+import { useContent } from "@croct/plug-react"
+
+export default function Page() {
+  const content = useContent('%slotId%@%slotVersion%');
+
+  return (
+    <TemplateCanvas
+      title="Magic UI - Hero video dialog"
+      ctaLabel="Edit this content"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      src="#"
+      fullScreen
+      portal
+    >
+      <div className="flex absolute h-full w-full items-center justify-center p-10">
+        <div className="w-1/2">
+          <HeroVideoPlayer {...content} />
+        </div>
+      </div>
+    </TemplateCanvas>
+  );
+}

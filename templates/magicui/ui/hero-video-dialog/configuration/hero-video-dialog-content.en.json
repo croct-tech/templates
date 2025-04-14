@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "videoSrc": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+      }
+    },
+    "thumbnailAlt": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Hero Video"
+      }
+    },
+    "thumbnailSrc": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://startup-template-sage.vercel.app/hero-light.png"
+      }
+    },
+    "animationStyle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "from-center"
+      }
+    }
+  }
+}

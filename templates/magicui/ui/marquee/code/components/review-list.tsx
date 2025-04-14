@@ -1,5 +1,5 @@
 import { ReviewCard, ReviewCardProps } from "?/**/*/review-card.tsx";
-import {Marquee} from "?/**/*/marquee.tsx";
+import {Marquee} from "?/**/*/magicui/marquee.tsx";
 
 export interface ReviewListProps extends ReviewListVariantProps {
   variant: "horizontal" | "vertical" | "3d";

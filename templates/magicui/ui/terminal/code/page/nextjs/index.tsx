@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from 'next'
 import type { SlotContent } from '@croct/plug-next'
-import { ReviewList } from "?/**/*/review-list.tsx"
+import { CliDemo } from "?/**/*/cli-demo.tsx"
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent } from "@croct/plug-next/server"
 
@@ -15,15 +15,16 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
 export default function Page({content}: PageProps) {
   return (
     <TemplateCanvas
-      title="Magic UI - Marquee reviews"
+      title="Magic UI - Terminal"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      maxWidth="1200px"
       src="#"
       fullScreen
       portal
     >
       <div className="flex absolute h-full w-full items-center justify-center p-10">
-        <ReviewList {...content} />
+        <CliDemo {...content} />
       </div>
     </TemplateCanvas>
   );

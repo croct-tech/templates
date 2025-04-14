@@ -1,4 +1,4 @@
-import { ReviewList } from "?/**/*/review-list.tsx"
+import { CliDemo } from "?/**/*/cli-demo.tsx"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 
@@ -7,15 +7,16 @@ export default function Page() {
 
   return (
     <TemplateCanvas
-      title="Magic UI - Marquee reviews"
+      title="Magic UI - Terminal"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      maxWidth="1200px"
       src="#"
       fullScreen
       portal
     >
       <div className="flex absolute h-full w-full items-center justify-center p-10">
-        <ReviewList {...content} />
+        <CliDemo {...content} />
       </div>
     </TemplateCanvas>
   );

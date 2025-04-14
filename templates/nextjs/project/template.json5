@@ -27,7 +27,8 @@
     },
     "turbopack": {
       "type": "boolean",
-      "description": "Whether to use TurboPack."
+      "description": "Whether to use TurboPack.",
+      "default": false,
     },
     "src-dir": {
       "type": "boolean",

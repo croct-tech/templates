@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <TemplateCanvas
-      title="Next.js 14 starter"
+      title="Next.js 15 starter"
       ctaLabel="Edit this page"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       src="#"

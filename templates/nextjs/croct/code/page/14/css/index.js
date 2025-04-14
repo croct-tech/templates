@@ -51,12 +51,11 @@ export default function Home({content}) {
           />
           <ol>
             {content.instructions.map((step, index) => (
-                <li key={index}>
-                  {renderMarkdown(step)}
-                </li>
+              <li key={index}>
+                {renderMarkdown(step)}
+              </li>
             ))}
           </ol>
-
           <div className={styles.ctas}>
             <a
               className={styles.primary}

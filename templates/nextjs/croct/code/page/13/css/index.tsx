@@ -70,19 +70,19 @@ export default function Home({content}: HomeProps) {
         </div>
 
         <div className={styles.grid}>
-          {content.links.map((link, index) => (
-              <a
-                  key={index}
-                  href={link.url}
-                  className={styles.card}
-                  target="_blank"
-                  rel="noopener noreferrer"
-              >
-                <h2>
-                  {link.title} <span>-&gt;</span>
-                </h2>
-                <p>{link.description}</p>
-              </a>
+          {content.links.map(link => (
+            <a
+              key={link.url}
+              href={link.url}
+              className={styles.card}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2>
+                {link.title} <span>-&gt;</span>
+              </h2>
+              <p>{link.description}</p>
+            </a>
           ))}
         </div>
       </main>

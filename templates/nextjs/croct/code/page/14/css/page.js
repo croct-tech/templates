@@ -28,9 +28,9 @@ export default async function Home() {
           />
           <ol>
             {content.instructions.map((step, index) => (
-                <li key={index}>
-                  {renderMarkdown(step)}
-                </li>
+              <li key={index}>
+                {renderMarkdown(step)}
+              </li>
             ))}
           </ol>
 

@@ -23,7 +23,7 @@ export const getServerSideProps = async context => ({
 export default function Home({content}) {
   return (
     <TemplateCanvas
-      title="Next.js 14 starter"
+      title="Next.js 15 starter"
       ctaLabel="Go to admin"
       ctaLink="%workspaceUrl%"
       src="#"
@@ -50,9 +50,9 @@ export default function Home({content}) {
           />
           <ol>
             {content.instructions.map((step, index) => (
-                <li key={index}>
-                  {renderMarkdown(step)}
-                </li>
+              <li key={index}>
+                {renderMarkdown(step)}
+              </li>
             ))}
           </ol>
 

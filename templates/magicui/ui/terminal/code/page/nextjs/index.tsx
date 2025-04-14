@@ -1,5 +1,5 @@
-import type { GetServerSideProps } from 'next'
-import type { SlotContent } from '@croct/plug-next'
+import type { GetServerSideProps } from "next"
+import type { SlotContent } from "@croct/plug-next"
 import { CliDemo } from "?/**/*/cli-demo.tsx"
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent } from "@croct/plug-next/server"

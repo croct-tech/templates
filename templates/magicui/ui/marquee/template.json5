@@ -1,45 +1,59 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/template.json",
   "title": "Magic UI Marquee",
   "description": "Import the Marquee example into the project.",
+  "options":  {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
   "actions": [
     {
       "name": "import",
-      "template": "shadcn:/ui/slot",
+      "template": "../component",
       "options": {
         "id": "marquee",
-        "registryId": "https://magicui.design/r/marquee",
-        "code": "magicui:/ui/marquee/code",
+        "version": "${options.version}",
+        "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
+        "components": ["review-card.tsx", "review-list.tsx"],
         "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-marquee-reviews": "${import('./configuration/marquee-component.json')}"
-                },
-                "slots": {
-                  "magic-ui-user-reviews": {
-                    "name": "Magic UI - User reviews",
-                    "component": "magic-ui-marquee-reviews",
-                    "content": {
-                      "en": "${import('./configuration/marquee-content.en.json')}"
-                    }
-                  }
-                }
+          "name": "create-resource",
+          "resources": {
+            "components": {
+              "magic-ui-marquee-reviews": {
+                "name": "Magic UI - Marquee reviews",
+                "description": "An infinite scrolling component that displays user reviews.",
+                "schema": "${import('./configuration/marquee-schema.json')}"
               },
-              "result": {
-                "slots": {
-                  "magic-ui-user-reviews": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
+            },
+            "slots": {
+              "magic-ui-marquee-reviews": {
+                "name": "Magic UI - Marquee reviews",
+                "component": "magic-ui-marquee-reviews",
+                "content": {
+                  "en": "${import('./configuration/marquee-content.en.json')}"
                 }
               }
             }
-          ]
+          },
+          "result": {
+            "slots": {
+              "magic-ui-marquee-reviews": {
+                "id": "slotId",
+                "version": "slotVersion"
+              }
+            }
+          }
         }
       }
     }

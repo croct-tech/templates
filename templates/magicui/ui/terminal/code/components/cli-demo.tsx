@@ -24,7 +24,7 @@ const semanticsColors = {
   error: 'text-red-500',
 }
 
-export async function CliDemo(props: CliDemoProps) {
+export function CliDemo(props: CliDemoProps) {
   return (
     <Terminal>
       {props.output.map((log, index) => {

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "commands": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "command": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "npm run shadcn add button"
+              }
+            },
+            "tabName": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "npm"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "command": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "yarn shadcn add button"
+              }
+            },
+            "tabName": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "yarn"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "command": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "pnpm dlx shadcn@latest add button"
+              }
+            },
+            "tabName": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "pnpm"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "command": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "bun x shadcn@latest add button"
+              }
+            },
+            "tabName": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "bun"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "codeLanguage": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "shell"
+      }
+    }
+  }
+}

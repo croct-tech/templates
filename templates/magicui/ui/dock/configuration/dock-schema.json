@@ -1,0 +1,140 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Magic UI - Dock",
+  "attributes": {
+    "iconSize": {
+      "type": {
+        "type": "number",
+        "integer": true,
+        "minimum": 0
+      },
+      "label": "Icon size",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The size of the icon in pixels. The default is 40px."
+    },
+    "iconMagnification": {
+      "type": {
+        "type": "number",
+        "integer": true,
+        "minimum": 0
+      },
+      "label": "Icon magnification",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The final size of the icon when magnified in pixels. The default is 60px."
+    },
+    "iconDistance": {
+      "type": {
+        "type": "number",
+        "integer": true,
+        "minimum": 0
+      },
+      "label": "Icon distance",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The distance from cursor to magnify icon in pixels. The default is 140px."
+    },
+    "items": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "list",
+          "items": {
+            "type": "structure",
+            "attributes": {
+              "name": {
+                "type": {
+                  "type": "text"
+                },
+                "label": "Name",
+                "private": false,
+                "optional": false,
+                "position": 0,
+                "description": "The item name."
+              },
+              "url": {
+                "type": {
+                  "type": "text"
+                },
+                "label": "URL",
+                "private": false,
+                "optional": false,
+                "position": 1,
+                "description": "The item URL."
+              },
+              "icon": {
+                "type": {
+                  "type": "text",
+                  "choices": {
+                    "home": {
+                      "label": "Home",
+                      "position": 0,
+                      "default": false
+                    },
+                    "pencil": {
+                      "label": "Pencil",
+                      "position": 1,
+                      "default": false
+                    },
+                    "theme": {
+                      "label": "Theme",
+                      "position": 2,
+                      "default": false
+                    },
+                    "calendar": {
+                      "label": "Calendar",
+                      "position": 3,
+                      "default": false
+                    },
+                    "email": {
+                      "label": "Email",
+                      "position": 4,
+                      "default": false
+                    },
+                    "linkedin": {
+                      "label": "LinkedIn",
+                      "position": 5,
+                      "default": false
+                    },
+                    "youtube": {
+                      "label": "Youtube",
+                      "position": 6,
+                      "default": false
+                    },
+                    "github": {
+                      "label": "GitHub",
+                      "position": 7,
+                      "default": false
+                    },
+                    "x": {
+                      "label": "X",
+                      "position": 8,
+                      "default": false
+                    }
+                  }
+                },
+                "label": "Icon",
+                "description": "The item icon.",
+                "private": false,
+                "optional": false,
+                "position": 2
+              }
+            }
+          },
+          "itemLabel": "Item"
+        },
+        "itemLabel": "Group"
+      },
+      "label": "Items",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "List of item groups to display in the dock."
+    }
+  }
+}

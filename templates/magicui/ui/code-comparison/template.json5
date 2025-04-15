@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
-  "title": "Magic UI - Script copy button",
-  "description": "A button to copy code snippets to the clipboard.",
+  "title": "Magic UI - Code comparison",
+  "description": "A component which compares two code snippets.",
   "options":  {
     "version": {
       "type": "string",
@@ -20,38 +20,42 @@
       "name": "import",
       "template": "../component",
       "options": {
-        "id": "script-copy-btn",
+        "id": "code-comparison",
         "version": "${options.version}",
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["copy-command-block.tsx"],
+        "components": ["code-diff-pane.tsx"],
         "action": {
           "name": "run",
           "actions": [
             {
+              "name": "add-dependency",
+              "dependencies": ["@shikijs/transformers"]
+            },
+            {
               "name": "create-resource",
               "resources": {
                 "components": {
-                  "magic-ui-script-copy-btn": {
-                    "name": "Magic UI - Script copy button",
-                    "description": "A button to copy code snippets to the clipboard.",
-                    "schema": "${import('./configuration/script-copy-btn-schema.json')}"
+                  "magic-ui-code-comparison": {
+                    "name": "Magic UI - Code comparison",
+                    "description": "A component which compares two code snippets.",
+                    "schema": "${import('./configuration/code-comparison-schema.json')}"
                   },
                 },
                 "slots": {
-                  "magic-ui-script-copy-btn": {
-                    "name": "Magic UI - Script copy button",
-                    "component": "magic-ui-script-copy-btn",
+                  "magic-ui-code-comparison": {
+                    "name": "Magic UI - Code comparison",
+                    "component": "magic-ui-code-comparison",
                     "content": {
-                      "en": "${import('./configuration/script-copy-btn-content.en.json')}"
+                      "en": "${import('./configuration/code-comparison-content.en.json')}"
                     }
                   }
                 }
               },
               "result": {
                 "slots": {
-                  "magic-ui-script-copy-btn": {
+                  "magic-ui-code-comparison": {
                     "id": "slotId",
                     "version": "slotVersion"
                   }

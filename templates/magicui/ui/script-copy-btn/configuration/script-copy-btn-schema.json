@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Magic UI - Script copy button",
+  "attributes": {
+    "codeLanguage": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Code language",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The language of the code command (e.g., \"shell\")."
+    },
+    "showMultiplePackageOptions": {
+      "type": {
+        "type": "boolean",
+        "label": {
+          "true": "Yes",
+          "false": "No"
+        },
+        "default": true
+      },
+      "label": "Show multiple tabs?",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "Whether to show options for multiple package managers."
+    },
+    "commands": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "tabName": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Tab name",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The label of the tab (e.g., \"npm\", \"yearn\", \"shell\")"
+            },
+            "command": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Command",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The command for the given language."
+            }
+          }
+        },
+        "itemLabel": "Snippet"
+      },
+      "label": "Snippets",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The list of ordered code commands."
+    }
+  }
+}

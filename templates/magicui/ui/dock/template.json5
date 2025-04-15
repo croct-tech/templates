@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
   "title": "Magic UI - Dock",
-  "description": "A macOS-style dock built with React, Tailwind CSS, and Framer Motion",
+  "description": "A macOS-style dock built with React, Tailwind CSS, and Framer Motion.",
   "options":  {
     "version": {
       "type": "string",

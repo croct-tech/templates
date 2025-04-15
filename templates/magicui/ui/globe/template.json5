@@ -39,7 +39,7 @@
                 "components": {
                   "magic-ui-globe": {
                     "name": "Magic UI - Globe",
-                    "description": "An auto-rotating, interactive, and highly performant globe made using WebGL.",
+                    "description": "An auto-rotating, interactive globe.",
                     "schema": "${import('./configuration/globe-schema.json')}"
                   },
                 },

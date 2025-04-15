@@ -7,7 +7,8 @@ export default function Page() {
 
   return (
     <TemplateCanvas
-      title="Magic UI - Bento grid"
+      theme="light"
+      theme="light"title="Magic UI - Bento grid"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       ctaTarget="_blank"

@@ -7,6 +7,7 @@ export default function Page() {
 
   return (
     <TemplateCanvas
+      theme="light"
       title="Magic UI - Hero video dialog"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"

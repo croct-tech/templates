@@ -7,6 +7,7 @@ export default async function Page() {
 
   return (
     <TemplateCanvas
+      theme="light"
       title="Magic UI - Marquee reviews"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"

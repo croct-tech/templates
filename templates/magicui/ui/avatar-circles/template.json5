@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Magic UI - Avatar circles",
+  "description": "Overlapping circles of avatars.",
+  "options":  {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "avatar-circles",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": ["avatar-stack.tsx"],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-avatar-circles": {
+                    "name": "Magic UI - Avatar circles",
+                    "description": "Overlapping circles of avatars.",
+                    "schema": "${import('./configuration/avatar-circles-schema.json')}"
+                  },
+                },
+                "slots": {
+                  "magic-ui-avatar-circles": {
+                    "name": "Magic UI - Avatar circles",
+                    "component": "magic-ui-avatar-circles",
+                    "content": {
+                      "en": "${import('./configuration/avatar-circles-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-avatar-circles": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

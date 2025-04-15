@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Magic UI - Lens",
+  "description": "A interactive component that enables zooming into images, videos and other elements.",
+  "options":  {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "lens",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": ["lens-card.tsx"],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "import",
+              "template": "shadcn://ui/component",
+              "options": {
+                "components": ["button", "card"],
+              }
+            },
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-lens": {
+                    "name": "Magic UI - Lens",
+                    "description": "A interactive component that enables zooming into images, videos and other elements.",
+                    "schema": "${import('./configuration/lens-schema.json')}"
+                  },
+                },
+                "slots": {
+                  "magic-ui-lens": {
+                    "name": "Magic UI - Lens",
+                    "component": "magic-ui-lens",
+                    "content": {
+                      "en": "${import('./configuration/lens-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-lens": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

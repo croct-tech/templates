@@ -1,0 +1,271 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "markers": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.03
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 14.6
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 120.984
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.1
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 19.076
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 72.877
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.05
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 23.81
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 90.413
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.07
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 30.044
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 31.236
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.08
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 39.904
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 116.407
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.1
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": -23.551
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": -46.633
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.1
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 19.433
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": -99.133
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.1
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 40.713
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": -74.006
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.05
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 34.694
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 135.502
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "size": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 0.06
+              }
+            },
+            "latitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 41.008
+              }
+            },
+            "longitude": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 28.978
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

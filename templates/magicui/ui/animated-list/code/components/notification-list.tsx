@@ -3,7 +3,7 @@
 import {cn} from "?/**/*/utils.ts";
 import { AnimatedList } from "?/**/*/magicui/animated-list.tsx";
 
-export interface NotificationListProps {
+interface NotificationListProps {
   notifications: NotificationProps[];
 }
 

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "id": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "1668408059125702661"
+      }
+    }
+  }
+}

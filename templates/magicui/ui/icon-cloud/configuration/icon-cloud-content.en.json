@@ -1,0 +1,200 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "images": {
+      "type": "list",
+      "items": [
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/typescript/typescript"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/javascript/javascript"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/dart/dart"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/react/react"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/flutter/flutter"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/android/android"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/html5/html5"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/css3/css3"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/nodedotjs/nodedotjs"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/express/express"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/nextdotjs/nextdotjs"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/prisma/prisma"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/postgresql/postgresql"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/firebase/firebase"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/nginx/nginx"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/vercel/vercel"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/testinglibrary/testinglibrary"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/jest/jest"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/cypress/cypress"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/docker/docker"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/git/git"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/jira/jira"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/github/github"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/gitlab/gitlab"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/androidstudio/androidstudio"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/sonarqube/sonarqube"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.simpleicons.org/figma/figma"
+          }
+        }
+      ]
+    }
+  }
+}

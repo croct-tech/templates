@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import { FeatureGrid } from "?/**/*/feature-grid.tsx"
+import { NotificationList } from "?/**/*/notification-list.tsx"
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent } from "@croct/plug-next/server"
 
@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
 export default function Page({content}: PageProps) {
   return (
     <TemplateCanvas
-      title="Magic UI - Bento grid"
+      title="Magic UI - Animated list"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       ctaTarget="_blank"
@@ -23,8 +23,8 @@ export default function Page({content}: PageProps) {
       fullScreen
       portal
     >
-      <div className="flex absolute h-full w-full justify-center p-10">
-        <FeatureGrid {...content} />
+      <div className="p-10">
+        <NotificationList {...content} />
       </div>
     </TemplateCanvas>
   );

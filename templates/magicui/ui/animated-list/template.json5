@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Magic UI - Animated list",
+  "description": "A list that animates items with staggered timing, perfect for showcasing notifications or events on your landing page.",
+  "options":  {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "animated-list",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": ["notification-list.tsx"],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-animated-list": {
+                    "name": "Magic UI - Animated list",
+                    "description": "A grid layout designed to highlight product features.",
+                    "schema": "${import('./configuration/animated-list-schema.json')}"
+                  },
+                },
+                "slots": {
+                  "magic-ui-animated-list": {
+                    "name": "Magic UI - Animated list",
+                    "component": "magic-ui-animated-list",
+                    "content": {
+                      "en": "${import('./configuration/animated-list-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-animated-list": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

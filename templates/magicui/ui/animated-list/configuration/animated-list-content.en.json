@@ -1,0 +1,171 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "notifications": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "💸"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Payment received"
+              }
+            },
+            "time": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "15min ago"
+              }
+            },
+            "color": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#00C9A7"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Magic UI"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "👤"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "User signed up"
+              }
+            },
+            "time": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "10m ago"
+              }
+            },
+            "color": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#FFB800"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Magic UI"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "💬"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "New message"
+              }
+            },
+            "time": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "5m ago"
+              }
+            },
+            "color": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#FF3D71"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Magic UI"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "🗞️"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "New event"
+              }
+            },
+            "time": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "2m ago"
+              }
+            },
+            "color": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#1E86FF"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Magic UI"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

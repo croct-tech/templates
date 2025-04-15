@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Magic UI - Icon cloud",
+  "description": "An interactive 3D tag cloud component.",
+  "options":  {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "icon-cloud",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": ["icon-cloud-demo.tsx"],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-icon-cloud": {
+                    "name": "Magic UI - Icon cloud",
+                    "description": "An interactive 3D tag cloud component.",
+                    "schema": "${import('./configuration/icon-cloud-schema.json')}"
+                  },
+                },
+                "slots": {
+                  "magic-ui-icon-cloud": {
+                    "name": "Magic UI - Icon cloud",
+                    "component": "magic-ui-icon-cloud",
+                    "content": {
+                      "en": "${import('./configuration/icon-cloud-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-icon-cloud": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

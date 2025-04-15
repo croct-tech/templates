@@ -11,6 +11,6 @@ interface AvatarStackProps {
 }
 
 export function AvatarStack({avatars, numPeople}: AvatarStackProps) {
-  return <AvatarCircles avatars={avatars} numPeople={numPeople} />;
+  return <AvatarCircles avatarUrls={avatars} numPeople={numPeople} />;
 }
 

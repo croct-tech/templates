@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Magic UI - Code comparison",
+  "attributes": {
+    "beforeCode": {
+      "type": {
+        "type": "text",
+        "format": "multiline"
+      },
+      "label": "Before code",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The code snippet to display in the \"before\" section."
+    },
+    "afterCode": {
+      "type": {
+        "type": "text",
+        "format": "multiline"
+      },
+      "label": "After code",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The code snippet to display in the \"after\" section."
+    },
+    "language": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Language",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The language of the code snippets (e.g., \"typescript\")."
+    },
+    "filename": {
+      "type": {
+        "type": "text"
+      },
+      "label": "File name",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The filename to display for the code snippets."
+    },
+    "lightTheme": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Light theme",
+      "private": false,
+      "optional": false,
+      "position": 4,
+      "description": "The theme to use for light mode (e.g., \"github-light\"). You can see all available options [here](https://shiki.style/themes)."
+    },
+    "darkTheme": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Dark theme",
+      "private": false,
+      "optional": false,
+      "position": 5,
+      "description": "The theme to use for dark mode (e.g., \"github-dark\"). You can see all available options [here](https://shiki.style/themes)."
+    },
+    "highlightColor": {
+      "type": {
+        "type": "text",
+        "format": "color"
+      },
+      "label": "Highlight color",
+      "private": false,
+      "optional": false,
+      "position": 6,
+      "description": "The color to use for highlighting the code snippets. The default color is #657585."
+    }
+  }
+}

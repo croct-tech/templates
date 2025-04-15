@@ -1,0 +1,146 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "orbits": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "icons": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/2af78724-cb36-4a55-b205-a69f02680aa0"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/e6104d2f-4f7a-4cf0-bbc1-2e6accb7199b"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/f413741c-712a-4aa4-8a58-47ac822078be"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/cbaa9996-a5c9-4523-b8dd-9bd19004f776"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/cea2a5a4-fad1-45bc-8a67-bcc7d55f352d"
+                  }
+                }
+              ]
+            },
+            "style": {
+              "type": "structure",
+              "attributes": {
+                "iconSize": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 40
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icons": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/cea2a5a4-fad1-45bc-8a67-bcc7d55f352d"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/e6104d2f-4f7a-4cf0-bbc1-2e6accb7199b"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/f413741c-712a-4aa4-8a58-47ac822078be"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/f91342c6-693b-4c56-9ecf-1e7c81d947b3/cbaa9996-a5c9-4523-b8dd-9bd19004f776"
+                  }
+                }
+              ]
+            },
+            "style": {
+              "type": "structure",
+              "attributes": {
+                "speed": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 2
+                  }
+                },
+                "radius": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 100
+                  }
+                },
+                "reverse": {
+                  "type": "boolean",
+                  "value": {
+                    "type": "static",
+                    "value": true
+                  }
+                },
+                "iconSize": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 30
+                  }
+                },
+                "path": {
+                  "type": "boolean",
+                  "value": {
+                    "type": "static",
+                    "value": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

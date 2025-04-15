@@ -1,0 +1,208 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "items": {
+      "type": "list",
+      "items": [
+        {
+          "type": "list",
+          "items": [
+            {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "icon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "home"
+                  }
+                },
+                "name": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Home"
+                  }
+                }
+              }
+            },
+            {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "icon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "pencil"
+                  }
+                },
+                "name": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Blog"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "icon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "github"
+                  }
+                },
+                "name": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Github"
+                  }
+                }
+              }
+            },
+            {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "icon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "linkedin"
+                  }
+                },
+                "name": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "LinkedIn"
+                  }
+                }
+              }
+            },
+            {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "3"
+                  }
+                },
+                "icon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "x"
+                  }
+                },
+                "name": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "X"
+                  }
+                }
+              }
+            },
+            {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "icon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "email"
+                  }
+                },
+                "name": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Email"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "icon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "theme"
+                  }
+                },
+                "name": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Theme"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

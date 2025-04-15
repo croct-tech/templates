@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
 export default function Page({content}: PageProps) {
   return (
     <TemplateCanvas
-      title="Magic UI - Terminal"
+      title="Magic UI - Bento grid"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       ctaTarget="_blank"

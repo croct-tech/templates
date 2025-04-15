@@ -7,7 +7,7 @@ export default async function Page() {
 
   return (
     <TemplateCanvas
-      title="Magic UI - Bento grid"
+      title="Magic UI - Animated list"
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       ctaTarget="_blank"

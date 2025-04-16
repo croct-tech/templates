@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Hero section",
+  "attributes": {
+    "cta": {
+      "type": {
+        "id": "cta",
+        "type": "reference"
+      },
+      "label": "Call to action",
+      "private": false,
+      "optional": true,
+      "position": 3,
+      "description": "The main call-to-action button."
+    },
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Image",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The image to display alongside the heading and tagline."
+    },
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The main heading of the page."
+    },
+    "tagline": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Tagline",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The tagline of the page."
+    }
+  },
+  "description": "A big section featured at the top of a page."
+}

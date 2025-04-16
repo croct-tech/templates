@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Google campaign experience",
+  "description": "Creates a personalized experience based on the Google campaign that drove the user to the website.",
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "google-search-student-campaign": {
+            "name": "Google search student campaign",
+            "criteria": "campaign's source is \"google\" and campaign's term matches \"student\""
+          }
+        },
+        "components": {
+          "content-cards": {
+            "name": "Content cards",
+            "description": "A section featuring cards with content.",
+            "schema": "${import('./configuration/content-cards-schema.json')}"
+          },
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "testimonials": {
+            "name": "Testimonials",
+            "description": "A section featuring testimonials.",
+            "schema": "${import('./configuration/testimonials-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-featured-topics": {
+            "name": "Home featured topics",
+            "component": "content-cards",
+            "content": {
+              "en": "${import('./configuration/home-featured-topics-slot-content.en.json')}"
+            }
+          },
+          "testimonials": {
+            "name": "Testimonials",
+            "component": "testimonials",
+            "content": {
+              "en": "${import('./configuration/testimonials-slot-content.en.json')}"
+            }
+          },
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🎓 Student Google campaign",
+            "draft": true,
+            "audiences": [
+              "google-search-student-campaign"
+            ],
+            "slots": [
+              "home-featured-topics",
+              "home-hero",
+              "testimonials"
+            ],
+            "content": {
+              "default": {
+                "home-featured-topics": {
+                  "en": {
+                    "type": "structure",
+                    "en": "${import('./configuration/home-featured-topics-experience-content.en.json')}"
+                  }
+                },
+                "home-hero": {
+                  "en": {
+                    "type": "structure",
+                    "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                  }
+                },
+                "testimonials": {
+                  "en": {
+                    "type": "structure",
+                    "en": "${import('./configuration/testimonials-experience-content.en.json')}"
+                  }
+                }
+              },
+              "segmented": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

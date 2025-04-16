@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Google campaign experience",
+  "description": "Creates a personalized experience based on the Google campaign that drove the user to the website.",
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "google-search-shoes-campaign": {
+            "name": "Google search shoes campaign",
+            "criteria": "campaign's source is \"google\" and campaign's term matches \"shoes\""
+          }
+        },
+        "components": {
+          "banner-image": {
+            "name": "Banner image",
+            "schema": "${import('./configuration/banner-image-schema.json')}"
+          },
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "navbar": {
+            "name": "Navbar",
+            "description": "A section of links and CTAs featured at the top of a page.",
+            "schema": "${import('./configuration/navbar-schema.json')}"
+          },
+          "carousel-section": {
+            "name": "Carousel section",
+            "description": "A section of ordered banners.",
+            "schema": "${import('./configuration/carousel-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-carousel": {
+            "name": "Home carousel",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configurationhome-carousel-slot-content.en.json')}"
+            }
+          },
+          "home-featured-products": {
+            "name": "Home featured products",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/home-featured-products-slot-content.en.json')}"
+            }
+          },
+          "navbar": {
+            "name": "Navbar",
+            "component": "navbar",
+            "content": {
+              "en": "${import('./configuration/navbar-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "👠 Shoes Google campaign",
+            "draft": true,
+            "audiences": [
+              "google-search-shoes-campaign"
+            ],
+            "slots": [
+              "home-featured-products",
+              "home-carousel",
+              "navbar"
+            ],
+            "content": {
+              "default": {
+                "home-featured-products": {
+                  "en": "${import('./configuration/home-featured-products-experience-content.en.json')}"
+                },
+                "home-carousel": {
+                  "en": "${import('./configurationhome-carousel-experience-content.en.json')}"
+                },
+                "navbar": {
+                  "en": "${import('./configuration/navbar-experience-content.en.json')}"
+                }
+              },
+              "segmented": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

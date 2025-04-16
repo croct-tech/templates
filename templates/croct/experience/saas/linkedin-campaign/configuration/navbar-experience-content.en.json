@@ -90,32 +90,6 @@
           "type": "text",
           "value": {
             "type": "static",
-            "value": "https://example.com/signup"
-          }
-        },
-        "label": {
-          "type": "text",
-          "value": {
-            "type": "static",
-            "value": "Sign up"
-          }
-        },
-        "appearance": {
-          "type": "text",
-          "value": {
-            "type": "static",
-            "value": "primary"
-          }
-        }
-      }
-    },
-    "secondaryCta": {
-      "type": "structure",
-      "attributes": {
-        "link": {
-          "type": "text",
-          "value": {
-            "type": "static",
             "value": "https://example.com/sales"
           }
         },
@@ -123,7 +97,7 @@
           "type": "text",
           "value": {
             "type": "static",
-            "value": "For business"
+            "value": "Contact sales"
           }
         },
         "appearance": {

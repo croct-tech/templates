@@ -7,8 +7,8 @@
       "name": "create-resource",
       "resources": {
         "audiences": {
-          "google-search-student-campaign": {
-            "name": "Google search student campaign",
+          "student-google-campaign": {
+            "name": "Student Google campaign",
             "criteria": "campaign's source is \"google\" and campaign's term matches \"student\""
           }
         },
@@ -62,7 +62,7 @@
             "name": "🎓 Student Google campaign",
             "draft": true,
             "audiences": [
-              "google-search-student-campaign"
+              "student-google-campaign"
             ],
             "slots": [
               "home-featured-topics",
@@ -72,22 +72,13 @@
             "content": {
               "default": {
                 "home-featured-topics": {
-                  "en": {
-                    "type": "structure",
-                    "en": "${import('./configuration/home-featured-topics-experience-content.en.json')}"
-                  }
+                  "en": "${import('./configuration/home-featured-topics-experience-content.en.json')}"
                 },
                 "home-hero": {
-                  "en": {
-                    "type": "structure",
-                    "en": "${import('./configuration/home-hero-experience-content.en.json')}"
-                  }
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
                 },
                 "testimonials": {
-                  "en": {
-                    "type": "structure",
-                    "en": "${import('./configuration/testimonials-experience-content.en.json')}"
-                  }
+                  "en": "${import('./configuration/testimonials-experience-content.en.json')}"
                 }
               },
               "segmented": []

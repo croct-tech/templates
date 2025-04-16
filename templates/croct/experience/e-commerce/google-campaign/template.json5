@@ -7,8 +7,8 @@
       "name": "create-resource",
       "resources": {
         "audiences": {
-          "google-search-shoes-campaign": {
-            "name": "Google search shoes campaign",
+          "shoes-google-campaign": {
+            "name": "Shoes Google campaign",
             "criteria": "campaign's source is \"google\" and campaign's term matches \"shoes\""
           }
         },
@@ -38,7 +38,7 @@
             "name": "Home carousel",
             "component": "carousel-section",
             "content": {
-              "en": "${import('./configurationhome-carousel-slot-content.en.json')}"
+              "en": "${import('./configuration/home-carousel-slot-content.en.json')}"
             }
           },
           "home-featured-products": {
@@ -61,7 +61,7 @@
             "name": "👠 Shoes Google campaign",
             "draft": true,
             "audiences": [
-              "google-search-shoes-campaign"
+              "shoes-google-campaign"
             ],
             "slots": [
               "home-featured-products",
@@ -74,7 +74,7 @@
                   "en": "${import('./configuration/home-featured-products-experience-content.en.json')}"
                 },
                 "home-carousel": {
-                  "en": "${import('./configurationhome-carousel-experience-content.en.json')}"
+                  "en": "${import('./configuration/home-carousel-experience-content.en.json')}"
                 },
                 "navbar": {
                   "en": "${import('./configuration/navbar-experience-content.en.json')}"

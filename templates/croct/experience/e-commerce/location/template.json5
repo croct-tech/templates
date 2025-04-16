@@ -7,8 +7,8 @@
       "name": "create-resource",
       "resources": {
         "audiences": {
-          "location-new-york-city": {
-            "name": "Location New York city",
+          "new-york-city": {
+            "name": "New York city",
             "criteria": "location's city is \"New York\""
           }
         },
@@ -49,7 +49,7 @@
             "name": "🗽 New York",
             "draft": true,
             "audiences": [
-              "location-new-york-city"
+              "new-york-city"
             ],
             "slots": [
               "announcement-bar",
@@ -69,6 +69,11 @@
           }
         ]
       }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
     }
   ]
 }

@@ -7,8 +7,8 @@
       "name": "create-resource",
       "resources": {
         "audiences": {
-          "instagram-shoes-campaign": {
-            "name": "Instagram shoes campaign",
+          "shoes-instagram-campaign": {
+            "name": "Shoes  Instagram campaign",
             "criteria": "campaign's source is \"instagram\" and campaign's term matches \"shoes\""
           }
         },
@@ -61,7 +61,7 @@
             "name": "👠 Shoes Instagram campaign",
             "draft": true,
             "audiences": [
-              "instagram-shoes-campaign"
+              "shoes-instagram-campaign"
             ],
             "slots": [
               "home-featured-products",
@@ -77,7 +77,7 @@
                   "en": "${import('./configuration/home-carousel-experience-content.en.json')}"
                 },
                 "navbar": {
-                  "en": "${import('./configuration/navbar-slot-experience.en.json')}"
+                  "en": "${import('./configuration/navbar-experience-content.en.json')}"
                 }
               },
               "segmented": []

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "banners": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/women"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/b4cb19af-70ba-4fc9-a83e-e213b1fc7150"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/men"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/01462ecd-9323-4fa4-bba8-5d9affac996c"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/shoes"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/2edf720a-abd6-40b2-bf27-9f98eb59acab"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

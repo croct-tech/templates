@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "cta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com/sales"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Request a demo"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    },
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/ebe676ce-f4ef-4d99-ab66-a913121d66e0"
+      }
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Listo for business"
+      }
+    },
+    "tagline": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Note-taking app for more productivity."
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Why they love us"
+      }
+    },
+    "testimonials": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "logo": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/6245b2c3-ce4f-4d02-8f3b-e2200ab09776"
+              }
+            },
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "This is the best alternative you'll find in the market."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "John Doe"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/e47cecc9-44dd-450f-8ae3-b69705366e9b"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "logo": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/889f3411-116e-4db9-945a-8e6614d71b78"
+              }
+            },
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "I'm stunned by the quality of this app. It's perfect!"
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Carol Duran"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/91dade3c-f2c8-4537-8489-0c40e97bdd5a"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "logo": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/ac1067ea-820b-4a17-8854-94936151ae74"
+              }
+            },
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Trust me, they're good. Their support team is amazing."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Alex Bobby"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/d92cab97-b052-482c-a0fa-2e2204d9f92c"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Navbar",
+  "attributes": {
+    "items": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": {
+                "type": "text",
+                "format": "url"
+              },
+              "label": "Link",
+              "private": false,
+              "optional": true,
+              "position": 1,
+              "description": "The target URL of the menu item."
+            },
+            "label": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Label",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The label of the menu item."
+            }
+          }
+        },
+        "itemLabel": "Menu item"
+      },
+      "label": "Items",
+      "private": false,
+      "optional": false,
+      "position": 2
+    },
+    "primaryCta": {
+      "type": {
+        "id": "cta",
+        "type": "reference"
+      },
+      "label": "Primary call to action",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The primary action button of the menu."
+    },
+    "secondaryCta": {
+      "type": {
+        "id": "cta",
+        "type": "reference"
+      },
+      "label": "Secondary call to action",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The secondary action button of the menu."
+    }
+  },
+  "description": "A section of links and CTAs featured at the top of a page."
+}

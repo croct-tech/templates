@@ -23,6 +23,10 @@ We're creating the largest **CMS-powered UI component library** — think of it 
 
 Just run `croct use <template>` to integrate a component into your application with **CMS, analytics, A/B testing, and personalization**.
 
+### Demo
+
+https://github.com/user-attachments/assets/e10fce0a-3122-4d95-bf26-7fabfc917a20
+
 ### What's Croct?
 
 Croct is a **Component CMS** designed for modern stacks with a developer-first mindset.

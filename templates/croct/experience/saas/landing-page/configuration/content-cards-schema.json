@@ -1,0 +1,85 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Content cards",
+  "attributes": {
+    "cards": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": {
+                "id": "cta",
+                "type": "reference"
+              },
+              "label": "Call to action",
+              "private": false,
+              "optional": true,
+              "position": 3
+            },
+            "image": {
+              "type": {
+                "id": "@croct/file",
+                "type": "reference",
+                "properties": {}
+              },
+              "label": "Image",
+              "private": false,
+              "optional": true,
+              "position": 0,
+              "description": "The URL or path to an illustration image."
+            },
+            "title": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The title inside the card."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": true,
+              "position": 2,
+              "description": "A short description."
+            }
+          }
+        },
+        "itemLabel": "Card"
+      },
+      "label": "Cards",
+      "private": false,
+      "optional": false,
+      "position": 2
+    },
+    "title": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Title",
+      "private": false,
+      "optional": true,
+      "position": 0
+    },
+    "description": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 1
+    }
+  },
+  "description": "A section featuring cards with content."
+}

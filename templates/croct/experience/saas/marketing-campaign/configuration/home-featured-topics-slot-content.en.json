@@ -1,0 +1,174 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "cards": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com/checklists"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Learn more"
+                  }
+                },
+                "appearance": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "primary"
+                  }
+                }
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/9b7f0ed2-e25a-4f63-b92d-ed6d6b5bd905"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Checklists"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Create simple checklists so you don't miss anything."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com/calendar"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Learn more"
+                  }
+                },
+                "appearance": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "primary"
+                  }
+                }
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/e773b72d-4f36-45f6-bb14-6ae3c67b59d3"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Calendar"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Plan ahead and organize your week."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com/reminders"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Learn more"
+                  }
+                },
+                "appearance": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "primary"
+                  }
+                }
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/40f4e16a-d8e0-4f5b-a76d-ef75cd956adf"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Reminders"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Never forget important things."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Why Listo is better"
+      }
+    }
+  }
+}

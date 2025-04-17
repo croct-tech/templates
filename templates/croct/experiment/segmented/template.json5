@@ -1,0 +1,107 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Segmented AB test",
+  "description": "A segmented experiment for new users.",
+  "metadata": {
+    "id": "strategy/experiment/segmented-users",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/experiment"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experiment/segmented-users/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experiment/segmented-users/cover.png",
+    "installationUrl": "croct://strategy/experiment/segmented-users",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experiment/segmented-users/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "new-users": {
+            "name": "New users",
+            "criteria": "user is not returning"
+          }
+        },
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Experiment for new users",
+            "draft": true,
+            "audiences": [
+              "new-users"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {},
+              "segmented": []
+            },
+            "experiment": {
+              "name": "Home hero CTA label",
+              "goalId": "sign-up",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Get started",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+                      }
+                    },
+                    "segmented": []
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Start for free",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-experiment-content.en.json')}"
+                      }
+                    },
+                    "segmented": []
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experiment successfully created."
+    }
+  ]
+}

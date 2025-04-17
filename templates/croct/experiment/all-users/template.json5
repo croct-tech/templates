@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Simple AB test",
-  "description": "Creates an experiment to test two different CTA variations.",
   "description": "A simple experiment for all users.",
   "actions": [
     {

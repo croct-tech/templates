@@ -1,8 +1,7 @@
 # Introduction
 
 This template sets up a project using [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/), and Croct.
-It shows how to use the [Croct Next.js SDK](https://docs.croct.com/reference/sdk/nextjs/installation) to add a CMS, 
-analytics, A/B testing and personalization to your application.
+It either initializes a [Next.js](https://nextjs.org/) project with Shadcn UI or adds Shadcn UI to an existing project if one is found.
 
 ## Usage
 

@@ -7,7 +7,7 @@
     "author": {
       "name": "Shadcn UI",
       "avatarUrl": "https://github.com/shadcn-ui.png",
-      "websiteUrl": "https://github.com/shadcn-ui"
+      "websiteUrl": "https://ui.shadcn.com/"
     },
     "categories": [
       "boilerplate/starter",
@@ -55,7 +55,7 @@
         {
           "name": "print",
           "semantics": "info",
-          "message": "No project found in the current directory"
+          "message": "No project found in the current directory",
         },
         {
           "name": "prompt",
@@ -87,9 +87,6 @@
               "options": {
                 "name": "${this.projectName}",
                 "version": "${options.version}",
-                "typescript": true,
-                "tailwind": true,
-                "eslint": true,
                 "router": "${options.router}",
               }
             },
@@ -108,9 +105,11 @@
           }
         }
       ],
+      "else": [
+        {
+          "name": "initialize"
+        }
+      ]
     },
-    {
-      "name": "initialize",
-    }
   ]
 }

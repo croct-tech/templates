@@ -7,7 +7,7 @@
     "author": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
-      "websiteUrl": "https://github.com/magicuidesign"
+      "websiteUrl": "https://magicui.design"
     },
     "categories": [
       "framework/nextjs",
@@ -85,7 +85,7 @@
     },
     {
       "name": "import",
-      "template": "shadcn-ui://integration",
+      "template": "shadcn-ui://croct",
       "options": {
         "projectName": "${options.id}-example",
         "version": "${options.version}",

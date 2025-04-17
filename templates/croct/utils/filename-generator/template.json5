@@ -1,6 +1,22 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "File name generator",
   "description": "Finds an available file name and assigns the result to a specified variable.",
+  "metadata": {
+    "id": "boilerplate/utility/filename-generator",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://github.com/croct-tech"
+    },
+    "categories": [
+      "boilerplate/utility"
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/filename-generator/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/filename-generator/cover.png",
+    "installationUrl": "croct://utils/filename-generator",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/filename-generator/README.md"
+  },
   "options": {
     "reference": {
       "type": "reference",

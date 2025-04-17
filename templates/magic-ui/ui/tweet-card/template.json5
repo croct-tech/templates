@@ -1,0 +1,103 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Magic UI - Tweet card",
+  "description": "A card that displays a tweet with the author's name, handle, and profile picture.",
+  "metadata": {
+    "id": "library/magic-ui/tweet-card",
+    "author": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://github.com/magicuidesign"
+    },
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/marketing",
+      "interface/motion",
+      "interface/social-proof",
+      "language/javascript",
+      "language/typescript",
+      "library/magic-ui"
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/cover.png",
+    "installationUrl": "magic-ui://ui/tweet-card",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/README.md"
+  },
+  "options":  {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    },
+    "rsc": {
+      "type": "boolean",
+      "description": "Whether to use React Server Components (RSC).",
+      "default": false
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${options.rsc && (!['nextjs', 'unknown'].includes(project.platform) || options.version === '13')}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "React Server Components (RSC) are only supported in Next.js 14 and above."
+        }
+      ]
+    },
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "tweet-card",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": ["${options.rsc ? 'server' : 'client'}/tweet.tsx"],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-tweet-card": {
+                    "name": "Magic UI - Tweet card",
+                    "description": "A card that displays a tweet with the author's name, handle, and profile picture.",
+                    "schema": "${import('./configuration/tweet-card-schema.json')}"
+                  },
+                },
+                "slots": {
+                  "magic-ui-tweet-card": {
+                    "name": "Magic UI - Tweet card",
+                    "component": "magic-ui-tweet-card",
+                    "content": {
+                      "en": "${import('./configuration/tweet-card-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-tweet-card": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,7 +1,31 @@
 {
-  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Next.js template",
   "description": "A template for bootstrapping a new project with Next.js.",
+  "metadata": {
+    "id": "boilerplate/starter/nextjs-project",
+    "author": {
+      "name": "Vercel",
+      "avatarUrl": "https://github.com/vercel.png",
+      "websiteUrl": "https://github.com/vercel"
+    },
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs-croct",
+      "boilerplate/starter/shadcn-croct",
+      "boilerplate/starter/shadcn-project",
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/cover.png",
+    "installationUrl": "nextjs://project",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/README.md"
+  },
   "options": {
     "name": {
       "type": "string",

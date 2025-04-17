@@ -69,7 +69,7 @@ croct use <template-url>
 For example:
 
 ```sh
-croct use https://github.com/croct/templates/tree/main/templates/magicui/ui/marquee
+croct use https://github.com/croct/templates/tree/main/templates/magic-ui/ui/marquee
 ```
 
 This command will fetch and apply the template to your project automatically.
@@ -81,7 +81,7 @@ For more information, check the [documentation](https://docs.croct.com/reference
 We support aliases for popular libraries, so you can skip the full URL. For example, to use the [Marquee](https://magicui.design/docs/components/marquee) component from [Magic UI](https://magicui.design/), you can run:
 
 ```sh
-croct use magicui:/ui/marquee
+croct use magic-ui:/ui/marquee
 ```
 
 Or use the component's registry URL:
@@ -94,14 +94,14 @@ croct use https://magicui.design/r/marquee
 
 These are the currently supported aliases:
 
-| Project      | Short URL                          | Alternative URL                               |
-|--------------|------------------------------------|-----------------------------------------------|
-| **Any**      | `github:/<user>/<repo>/<template>` | `https://github.com/<user>/<repo>/<template>` |
-| **NPM**      | `npm:/<package>`                   | -                                             |
-| **Croct**    | `croct:/<template>`                | -                                             |
-| **Next.js**  | `nextjs:/<template>`               | -                                             |
-| **Shadcn**   | `shadcn:/<template>`               | -                                             |
-| **Magic UI** | `magicui:/<template>`              | `https://magicui.design/r/<component>`        |
+| Project       | Short URL                          | Alternative URL                               |
+|---------------|------------------------------------|-----------------------------------------------|
+| **Any**       | `github:/<user>/<repo>/<template>` | `https://github.com/<user>/<repo>/<template>` |
+| **NPM**       | `npm:/<package>`                   | -                                             |
+| **Croct**     | `croct:/<template>`                | -                                             |
+| **Next.js**   | `nextjs:/<template>`               | -                                             |
+| **Shadcn UI** | `shadcn-ui:/<template>`            | -                                             |
+| **Magic UI**  | `magic-ui:/<template>`             | `https://magicui.design/r/<component>`        |
 
 To add a new alias, open a pull request with the new entry in the [registry](templates/registry.json5).
 

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Magic UI - Code comparison",
+  "description": "A component which compares two code snippets.",
+  "metadata": {
+    "id": "library/magic-ui/code-comparison",
+    "author": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://github.com/magicuidesign"
+    },
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/code",
+      "language/javascript",
+      "language/typescript",
+      "library/framer-motion",
+      "library/magic-ui",
+      "library/shiki"
+    ],
+    "relatedTemplates": [
+      "library/magic-ui/script-copy-btn",
+      "library/magic-ui/terminal"
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/cover.png",
+    "installationUrl": "magic-ui://ui/code-comparison",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/README.md"
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "code-comparison",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": [
+          "code-diff-pane.tsx"
+        ],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "add-dependency",
+              "dependencies": [
+                "@shikijs/transformers"
+              ]
+            },
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-code-comparison": {
+                    "name": "Magic UI - Code comparison",
+                    "description": "A component which compares two code snippets.",
+                    "schema": "${import('./configuration/code-comparison-schema.json')}"
+                  },
+                },
+                "slots": {
+                  "magic-ui-code-comparison": {
+                    "name": "Magic UI - Code comparison",
+                    "component": "magic-ui-code-comparison",
+                    "content": {
+                      "en": "${import('./configuration/code-comparison-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-code-comparison": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

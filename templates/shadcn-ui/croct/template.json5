@@ -1,0 +1,116 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Shadcn UI + Croct starter",
+  "description": "A Next.js project with Shadcn UI and Croct integration.",
+  "metadata": {
+    "id": "boilerplate/starter/shadcn-croct",
+    "author": {
+      "name": "Shadcn UI",
+      "avatarUrl": "https://github.com/shadcn-ui.png",
+      "websiteUrl": "https://github.com/shadcn-ui"
+    },
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/shadcn-ui",
+      "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs-croct",
+      "boilerplate/starter/nextjs-project",
+      "boilerplate/starter/shadcn-integration",
+      "boilerplate/starter/shadcn-project"
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/cover.png",
+    "installationUrl": "shadcn-ui://croct",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/README.md"
+  },
+  "options": {
+    "projectName": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-app"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${project.platform === 'unknown'}",
+      "then": [
+        {
+          "name": "print",
+          "semantics": "info",
+          "message": "No project found in the current directory"
+        },
+        {
+          "name": "prompt",
+          "type": "confirmation",
+          "message": "Start a new project?",
+          "default": true,
+          "result": "createProject"
+        },
+        {
+          "name": "test",
+          "condition": "${this.createProject}",
+          "then": [
+            {
+              "name": "define",
+              "variables": {
+                "projectName": "${options.projectName}"
+              }
+            },
+            {
+              "name": "import",
+              "template": "croct:/utils/filename-generator",
+              "options": {
+                "reference": "projectName",
+              }
+            },
+            {
+              "name": "import",
+              "template": "../project",
+              "options": {
+                "name": "${this.projectName}",
+                "version": "${options.version}",
+                "typescript": true,
+                "tailwind": true,
+                "eslint": true,
+                "router": "${options.router}",
+              }
+            },
+            {
+              "name": "change-directory",
+              "path": "${this.projectName}"
+            }
+          ],
+          "else": {
+            "name": "fail",
+            "title": "Project not found",
+            "message": "Unable to locate a project in the current directory.",
+            "suggestions": [
+              "Navigate to the project directory and try again."
+            ]
+          }
+        }
+      ],
+    },
+    {
+      "name": "initialize",
+    }
+  ]
+}

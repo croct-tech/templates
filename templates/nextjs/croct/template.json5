@@ -1,7 +1,31 @@
 {
-  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Next.js + Croct starter",
   "description": "A Next.js project with Croct integration.",
+  "metadata": {
+    "id": "boilerplate/starter/nextjs-croct",
+    "author": {
+      "name": "Vercel",
+      "avatarUrl": "https://github.com/vercel.png",
+      "websiteUrl": "https://github.com/vercel"
+    },
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs-project",
+      "boilerplate/starter/shadcn-croct",
+      "boilerplate/starter/shadcn-project",
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/cover.png",
+    "installationUrl": "nextjs://croct",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/README.md"
+  },
   "options": {
     "name": {
       "type": "string",

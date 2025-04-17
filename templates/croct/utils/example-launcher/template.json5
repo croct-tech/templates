@@ -1,6 +1,23 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Example launcher",
   "description": "Starts the development server and opens the example in the browser.",
+  "metadata": {
+    "id": "boilerplate/utility/example-launcher",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://github.com/croct-tech"
+    },
+    "categories": [
+      "boilerplate/utility"
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/cover.mp4",
+    "installationUrl": "croct://utils/example-launcher",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/README.md"
+  },
   "options": {
     "path": {
       "type": "string",

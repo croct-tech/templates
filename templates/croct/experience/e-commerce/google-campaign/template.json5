@@ -1,7 +1,7 @@
 {
-  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Google campaign experience",
-  "description": "Creates a personalized experience based on the Google campaign that drove the user to the website.",
+  "description": "A personalized experience based on the Google campaign associated with the session.",
   "actions": [
     {
       "name": "create-resource",

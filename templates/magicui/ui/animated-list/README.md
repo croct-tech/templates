@@ -1,21 +1,22 @@
 # Introduction
 
-This template sets up a project using [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/), and Croct.
-It shows how to use the [Croct Next.js SDK](https://docs.croct.com/reference/sdk/nextjs/installation) to add a CMS, 
-analytics, A/B testing and personalization to your application.
+This template adds the [Magic UI Animated List](https://magicui.design/docs/components/animated-list) component to your 
+project or creates a new project using [Next.js](https://nextjs.org/) if none is found in the current directory.
+
+It comes fully integrated with Croct, giving you CMS, A/B testing, and personalization out of the box.
 
 ## Usage
 
 To create a new project using this template, run:
 
 ```js-pm
-croct@latest use shadcn://croct
+croct@latest use magicui://ui/animated-list
 ```
 
-To specify a Next.js version, use the `version` option:
+You can customize the template by specifying options:
 
 ```js-pm
-croct@latest use shadcn://croct --version=14
+croct@latest use magicui://ui/animated-list --router=page
 ```
 
 ## Options

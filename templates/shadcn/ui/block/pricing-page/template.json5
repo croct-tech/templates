@@ -1,12 +1,28 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/template.json",
   "title": "Pricing page",
   "description": "A dynamic pricing page using Shadcn components and Croct.",
+  "options":  {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
   "actions": [
     {
       "name": "import",
       "template": "../../../integration",
       "options": {
         "projectName": "pricing-plan-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
       }
     },
     {
@@ -22,12 +38,12 @@
     },
     {
       "name": "download",
-      "source": "code/plan-card.tsx",
+      "source": "code/components/plan-card.tsx",
       "destination": "${project.path.components}",
     },
     {
       "name": "download",
-      "source": "code/pricing-section.tsx",
+      "source": "code/components/pricing-section.tsx",
       "destination": "${project.path.components}",
     },
     {
@@ -37,12 +53,25 @@
       }
     },
     {
-      "name": "download",
-      "source": "code/page.tsx",
-      "destination": "${project.path.examples}/${this.routePath}",
-      "result": {
-        "destination": "pagePath"
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${this.routePath}",
+        "exampleFile": "${{\
+          nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx',\
+          react: 'page.tsx',\
+        }[project.platform]}",
       }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "examplePath": "${this.exampleDirectory}/${this.exampleFile}",
+      }
+    },
+    {
+      "name": "download",
+      "source": "code/page/${project.platform}/${this.exampleFile}",
+      "destination": "${this.exampleDirectory}",
     },
     {
       "name": "create-resource",
@@ -78,7 +107,7 @@
       "name": "replace-file-content",
       "files": [
         {
-          "path": "${this.pagePath}/page.tsx",
+          "path": "${this.examplePath}",
           "replacements": [
             {
               "pattern": "%slotId%",
@@ -99,7 +128,7 @@
     {
       "name": "print",
       "semantics": "success",
-      "message": "Component successfully imported at `${this.pagePath}`."
+      "message": "Component successfully imported at `${this.exampleDirectory}`."
     },
     {
       "name": "test",

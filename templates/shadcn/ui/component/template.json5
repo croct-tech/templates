@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/template.json",
   "title": "Shadcn component",
   "description": "A template for adding a Shadcn component to a project.",
   "options": {

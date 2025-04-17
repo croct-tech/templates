@@ -1,5 +1,6 @@
 {
-  "title": "Configure or create a new Shadcn project.",
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Shadcn project integration",
   "description": "A template for configuring or creating a new Shadcn project.",
   "options": {
     "projectName": {

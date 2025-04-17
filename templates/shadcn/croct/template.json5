@@ -1,11 +1,23 @@
 {
-  "title": "Shadcn + Croct",
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Shadcn + Croct starter",
   "description": "A Next.js project with Shadcn and Croct integration.",
   "options": {
+    "projectName": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-app"
+    },
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "default": "latest"
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
     }
   },
   "actions": [
@@ -32,7 +44,7 @@
             {
               "name": "define",
               "variables": {
-                "projectName": "my-app"
+                "projectName": "${options.projectName}"
               }
             },
             {
@@ -51,7 +63,7 @@
                 "typescript": true,
                 "tailwind": true,
                 "eslint": true,
-                "router": "app",
+                "router": "${options.router}",
               }
             },
             {

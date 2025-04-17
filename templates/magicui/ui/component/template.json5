@@ -8,10 +8,6 @@
       "description": "The component ID.",
       "required": true
     },
-    "magicuiId": {
-      "type": "string",
-      "description": "The Magic UI ID.",
-    },
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
@@ -85,7 +81,7 @@
       "template": "shadcn://ui/component",
       "options": {
         "components": [
-          "https://magicui.design/r/${options.magicuiId ?? options.id}"
+          "https://magicui.design/r/${options.id}"
         ]
       }
     },

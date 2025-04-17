@@ -1,5 +1,6 @@
 {
-  "title": "Shadcn project",
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Next.js + Shadcn project",
   "description": "A template for bootstrapping a new project with Next.js and shadcn.",
   "options": {
     "name": {
@@ -39,7 +40,7 @@
    */
     {
       "name": "change-directory",
-        "path": "${options.name}"
+      "path": "${options.name}"
     },
     {
       "name": "try",
@@ -87,6 +88,6 @@
         "name": "change-directory",
         "path": ".."
       }
-    },
+    }
   ]
 }

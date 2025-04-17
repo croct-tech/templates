@@ -12,15 +12,15 @@
     "destination": "nextjs/$1"
   },
   {
-    "pattern": "^shadcn://?(.+)$",
-    "destination": "shadcn/$1"
+    "pattern": "^shadcn-ui://?(.+)$",
+    "destination": "shadcn-ui/$1"
   },
   {
-    "pattern": "^magicui://?(.+)$",
-    "destination": "magicui/$1"
+    "pattern": "^magic-ui://?(.+)$",
+    "destination": "magic-ui/$1"
   },
   {
     "pattern": "^https://magicui.design/r/(.+)$",
-    "destination": "magicui/ui/$1"
+    "destination": "magic-ui/ui/$1"
   }
 ]

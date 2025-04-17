@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Marketing campaign experience",
   "description": "A personalized experience based on the marketing campaign associated with the session.",
+  "metadata": {
+    "id": "strategy/e-commerce/marketing-campaign",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/marketing-campaign/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/marketing-campaign/cover.png",
+    "installationUrl": "croct://strategy/e-commerce/marketing-campaign",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/marketing-campaign/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

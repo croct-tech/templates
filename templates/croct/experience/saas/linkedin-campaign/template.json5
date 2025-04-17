@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "LinkedIn campaign experience",
   "description": "A personalized experience based on the LinkedIn campaign associated with the session.",
+  "metadata": {
+    "id": "strategy/saas/linkedin-campaign",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/saas"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/linkedin-campaign/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/linkedin-campaign/cover.png",
+    "installationUrl": "croct://strategy/saas/linkedin-campaign",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/linkedin-campaign/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

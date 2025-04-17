@@ -1,7 +1,20 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Google campaign experience",
-  "description": "A personalized experience based on the Google campaign associated with the session.",
+  "title": "Search campaign experience",
+  "description": "A personalized experience based on the search campaign associated with the session.",
+  "metadata": {
+    "id": "strategy/e-commerce/search-campaign-campaign",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/search-campaign-campaign/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/search-campaign-campaign/cover.png",
+    "installationUrl": "croct://strategy/e-commerce/search-campaign-campaign",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/search-campaign-campaign/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

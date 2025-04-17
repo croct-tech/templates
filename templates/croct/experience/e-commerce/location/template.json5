@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Location-based experience",
   "description": "A personalized experience based on the user's location.",
+  "metadata": {
+    "id": "strategy/e-commerce/location",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/location/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/location/cover.png",
+    "installationUrl": "croct://strategy/e-commerce/location",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/location/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

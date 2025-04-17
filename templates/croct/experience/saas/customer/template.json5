@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Customer experience",
   "description": "A personalized experience for users who are paid customers.",
+  "metadata": {
+    "id": "strategy/saas/customer",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/saas"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/customer/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/customer/cover.png",
+    "installationUrl": "croct://strategy/saas/customer",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/customer/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

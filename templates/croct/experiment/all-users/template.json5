@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Simple AB test",
   "description": "A simple experiment for all users.",
+  "metadata": {
+    "id": "strategy/experiment/all-users",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/experiment"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experiment/all-users/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experiment/all-users/cover.png",
+    "installationUrl": "croct://strategy/experiment/all-users",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experiment/all-users/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

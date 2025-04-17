@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Segmented AB test",
   "description": "A segmented experiment for new users.",
+  "metadata": {
+    "id": "strategy/experiment/segmented-users",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/experiment"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experiment/segmented-users/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experiment/segmented-users/cover.png",
+    "installationUrl": "croct://strategy/experiment/segmented-users",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experiment/segmented-users/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

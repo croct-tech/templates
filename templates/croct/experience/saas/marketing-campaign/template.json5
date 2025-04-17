@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Marketing campaign experience",
   "description": "A personalized experience based on the marketing campaign associated with the session.",
+  "metadata": {
+    "id": "strategy/saas/marketing-campaign",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/saas"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/marketing-campaign/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/marketing-campaign/cover.png",
+    "installationUrl": "croct://strategy/saas/marketing-campaign",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/saas/marketing-campaign/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

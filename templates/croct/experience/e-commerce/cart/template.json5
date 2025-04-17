@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Cart-based experience",
   "description": "A personalized experience based on the total amount of the shopping cart.",
+  "metadata": {
+    "id": "strategy/e-commerce/cart",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/cart/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/cart/cover.png",
+    "installationUrl": "croct://strategy/e-commerce/cart",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/cart/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",

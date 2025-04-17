@@ -2,6 +2,19 @@
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Instagram campaign experience",
   "description": "A personalized experience based on the Instagram campaign associated with the session.",
+  "metadata": {
+    "id": "strategy/e-commerce/instagram-campaign",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "pending",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/instagram-campaign/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/instagram-campaign/cover.png",
+    "installationUrl": "croct://strategy/e-commerce/instagram-campaign",
+    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/experience/e-commerce/instagram-campaign/README.md"
+  },
   "actions": [
     {
       "name": "create-resource",
@@ -9,7 +22,7 @@
         "audiences": {
           "shoes-instagram-campaign": {
             "name": "Shoes  Instagram campaign",
-            "criteria": "campaign's source is \"instagram\" and campaign's term matches \"shoes\""
+            "criteria": "campaign's source is \"instagram\" and campaign's content matches \"shoes\""
           }
         },
         "components": {

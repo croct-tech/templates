@@ -13,7 +13,7 @@ import chalk from 'chalk';
 
 const SCHEMA_URL = 'https://schema.croct.com/json/next/catalog-template.json';
 const BASE_URL = 'https://github.com/croct-tech/templates/blob/master/';
-const CDN_URL = 'https://cdn.croct.io/assets/template';
+const CDN_URL = 'https://cdn.croct.io/assets/templates';
 const ASSET_PATH = 'assets';
 
 const categoryMap = {

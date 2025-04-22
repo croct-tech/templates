@@ -4,10 +4,11 @@
   "description": "A Next.js project with Croct integration.",
   "metadata": {
     "id": "boilerplate/starter/nextjs-croct",
+    "verified": true,
     "author": {
-      "name": "Vercel",
-      "avatarUrl": "https://github.com/vercel.png",
-      "websiteUrl": "https://vercel.com?utm_source=croct"
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next"
     },
     "categories": [
       "boilerplate/starter",

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Marketing campaign experience",
+  "description": "A personalized experience based on the marketing campaign associated with the session.",
+  "metadata": {
+    "id": "use-case/e-commerce/marketing-campaign",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=marketing_campaign"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/marketing-campaign/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/marketing-campaign/cover.png",
+    "installationUrl": "croct://use-case/e-commerce/marketing-campaign",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/marketing-campaign/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "shoes-marketing-campaign": {
+            "name": "Shoes marketing campaign",
+            "criteria": "campaign's name matches \"shoes\""
+          }
+        },
+        "components": {
+          "banner-image": {
+            "name": "Banner image",
+            "schema": "${import('./configuration/banner-image-schema.json')}"
+          },
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "navbar": {
+            "name": "Navbar",
+            "description": "A section of links and CTAs featured at the top of a page.",
+            "schema": "${import('./configuration/navbar-schema.json')}"
+          },
+          "carousel-section": {
+            "name": "Carousel section",
+            "description": "A section of ordered banners.",
+            "schema": "${import('./configuration/carousel-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-carousel": {
+            "name": "Home carousel",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/home-carousel-slot-content.en.json')}"
+            }
+          },
+          "home-featured-products": {
+            "name": "Home featured products",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/home-featured-products-slot-content.en.json')}"
+            }
+          },
+          "navbar": {
+            "name": "Navbar",
+            "component": "navbar",
+            "content": {
+              "en": "${import('./configuration/navbar-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "👠 Shoes marketing campaign",
+            "draft": true,
+            "audiences": [
+              "shoes-marketing-campaign"
+            ],
+            "slots": [
+              "home-featured-products",
+              "home-carousel",
+              "navbar"
+            ],
+            "content": {
+              "default": {
+                "home-featured-products": {
+                  "en": "${import('./configuration/home-featured-products-experience-content.en.json')}"
+                },
+                "home-carousel": {
+                  "en": "${import('./configuration/home-carousel-experience-content.en.json')}"
+                },
+                "navbar": {
+                  "en": "${import('./configuration/navbar-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

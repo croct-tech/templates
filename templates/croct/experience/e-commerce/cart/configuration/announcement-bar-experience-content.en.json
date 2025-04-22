@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "text": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Free shipping for orders over $150"
+      }
+    },
+    "style": {
+      "type": "structure",
+      "attributes": {
+        "textColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#ffffff"
+          }
+        },
+        "backgroundColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#000000"
+          }
+        }
+      }
+    }
+  }
+}

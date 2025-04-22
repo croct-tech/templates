@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "link": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://www.example.com/case/morley"
+      }
+    },
+    "text": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Learn how Morley uses Listo to increase productivity"
+      }
+    },
+    "style": {
+      "type": "structure",
+      "attributes": {
+        "textColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#ffffff"
+          }
+        },
+        "backgroundColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#000000"
+          }
+        }
+      }
+    }
+  }
+}

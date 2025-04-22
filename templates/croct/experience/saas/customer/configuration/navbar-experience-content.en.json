@@ -1,0 +1,132 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "items": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/features"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Features"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/new"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "What's new"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/templates"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Templates"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/blog"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Blog"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Support"
+              }
+            },
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/blog"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "primaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com/signin"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Sign in"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    }
+  }
+}

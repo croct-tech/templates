@@ -1,0 +1,108 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "LinkedIn campaign experience",
+  "description": "A personalized experience based on the LinkedIn campaign associated with the session.",
+  "metadata": {
+    "id": "use-case/saas/linkedin-campaign",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=linkedin_campaign"
+    },
+    "categories": ["use-case/saas"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/linkedin-campaign/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/linkedin-campaign/cover.png",
+    "installationUrl": "croct://use-case/saas/linkedin-campaign",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/linkedin-campaign/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "business-linkedin-campaign": {
+            "name": "Business LinkedIn campaign",
+            "criteria": "campaign's source is \"linkedin\" and campaign's content matches \"business\""
+          }
+        },
+        "components": {
+          "content-cards": {
+            "name": "Content cards",
+            "description": "A section featuring cards with content.",
+            "schema": "${import('./configuration/content-cards-schema.json')}"
+          },
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "navbar": {
+            "name": "Navbar",
+            "description": "A section of links and CTAs featured at the top of a page.",
+            "schema": "${import('./configuration/navbar-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-featured-topics": {
+            "name": "Home featured topics",
+            "component": "content-cards",
+            "content": {
+              "en": "${import('./configuration/home-featured-topics-slot-content.en.json')}"
+            }
+          },
+          "navbar": {
+            "name": "Navbar",
+            "component": "navbar",
+            "content": {
+              "en": "${import('./configuration/navbar-slot-content.en.json')}"
+            }
+          },
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "💼 Business LinkedIn campaign",
+            "draft": true,
+            "audiences": [
+              "business-linkedin-campaign"
+            ],
+            "slots": [
+              "home-featured-topics",
+              "home-hero",
+              "navbar"
+            ],
+            "content": {
+              "default": {
+                "home-featured-topics": {
+                  "en": "${import('./configuration/home-featured-topics-experience-content.en.json')}"
+                },
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                },
+                "navbar": {
+                  "en": "${import('./configuration/navbar-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

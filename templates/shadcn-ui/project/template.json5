@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Next.js + Shadcn UI project",
-  "description": "A template for bootstrapping a new project with Next.js and shadcn.",
+  "description": "A template for bootstrapping a new project with Next.js and Shadcn UI.",
   "metadata": {
     "id": "boilerplate/starter/shadcn-project",
     "author": {

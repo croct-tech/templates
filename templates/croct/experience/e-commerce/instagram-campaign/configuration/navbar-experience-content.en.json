@@ -1,0 +1,177 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "items": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/new-shoes"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "New Shoes"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/women-shoes"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Women Shoes"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/men-shoes"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Men Shoes"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/clothes"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Clothes"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/accessories"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Accessories"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/sale"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Sale"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "primaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com/checkout"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Checkout"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    },
+    "secondaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com/login"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Login"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "secondary"
+          }
+        }
+      }
+    }
+  }
+}

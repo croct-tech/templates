@@ -1,0 +1,108 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Interest-based experience",
+  "description": "A personalized experience based on the user's interests.",
+  "metadata": {
+    "id": "use-case/saas/interest",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=interest"
+    },
+    "categories": ["use-case/saas"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/interest/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/interest/cover.png",
+    "installationUrl": "croct://use-case/saas/interest",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/interest/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "student-interest": {
+            "name": "Student interest",
+            "criteria": "user's interest includes \"student\""
+          }
+        },
+        "components": {
+          "content-cards": {
+            "name": "Content cards",
+            "description": "A section featuring cards with content.",
+            "schema": "${import('./configuration/content-cards-schema.json')}"
+          },
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "testimonials": {
+            "name": "Testimonials",
+            "description": "A section featuring testimonials.",
+            "schema": "${import('./configuration/testimonials-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-featured-topics": {
+            "name": "Home featured topics",
+            "component": "content-cards",
+            "content": {
+              "en": "${import('./configuration/home-featured-topics-slot-content.en.json')}"
+            }
+          },
+          "testimonials": {
+            "name": "Testimonials",
+            "component": "testimonials",
+            "content": {
+              "en": "${import('./configuration/testimonials-slot-content.en.json')}"
+            }
+          },
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🎓 Student interest",
+            "draft": true,
+            "audiences": [
+              "student-interest"
+            ],
+            "slots": [
+              "home-featured-topics",
+              "home-hero",
+              "testimonials"
+            ],
+            "content": {
+              "default": {
+                "home-featured-topics": {
+                  "en": "${import('./configuration/home-featured-topics-experience-content.en.json')}"
+                },
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                },
+                "testimonials": {
+                  "en": "${import('./configuration/testimonials-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

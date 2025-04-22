@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Cart-based experience",
+  "description": "A personalized experience based on the total amount of the shopping cart.",
+  "metadata": {
+    "id": "use-case/e-commerce/cart",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=cart"
+    },
+    "categories": [
+      "use-case/e-commerce"
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/cover.png",
+    "installationUrl": "croct://use-case/e-commerce/cart",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "cart-with-less-than-150": {
+            "name": "Cart with less than $150",
+            "criteria": "cart's total is less than 150"
+          }
+        },
+        "components": {
+          "banner-image": {
+            "name": "Banner image",
+            "schema": "${import('./configuration/banner-image-schema.json')}"
+          },
+          "carousel-section": {
+            "name": "Carousel section",
+            "description": "A section of ordered banners.",
+            "schema": "${import('./configuration/carousel-section-schema.json')}"
+          },
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "description": "A small text bar featured at the top of a page.",
+            "schema": "${import('./configuration/announcement-bar-schema.json')}"
+          }
+        },
+        "slots": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "component": "announcement-bar",
+            "content": {
+              "en": "${import('./configuration/announcement-bar-slot-content.en.json')}"
+            }
+          },
+          "home-carousel": {
+            "name": "Home carousel",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/home-carousel-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🚚 Free shipping",
+            "draft": true,
+            "audiences": [
+              "cart-with-less-than-150"
+            ],
+            "slots": [
+              "announcement-bar",
+              "home-carousel"
+            ],
+            "content": {
+              "default": {
+                "announcement-bar": {
+                  "en": "${import('./configuration/announcement-bar-experience-content.en.json')}"
+                },
+                "home-carousel": {
+                  "en": "${import('./configuration/home-carousel-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Landing page-based experience",
+  "description": "A personalized experience based on the session's landing page.",
+  "metadata": {
+    "id": "use-case/e-commerce/landing-page",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=landing_page"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/landing-page/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/landing-page/cover.png",
+    "installationUrl": "croct://use-case/e-commerce/landing-page",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/landing-page/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "shoes-landing-page": {
+            "name": "Shoes landing page",
+            "criteria": "session's landingPage matches \"shoes\""
+          }
+        },
+        "components": {
+          "banner-image": {
+            "name": "Banner image",
+            "schema": "${import('./configuration/banner-image-schema.json')}"
+          },
+          "carousel-section": {
+            "name": "Carousel section",
+            "description": "A section of ordered banners.",
+            "schema": "${import('./configuration/carousel-section-schema.json')}"
+          },
+          "testimonials": {
+            "name": "Testimonials",
+            "description": "A section featuring testimonials.",
+            "schema": "${import('./configuration/testimonials-schema.json')}"
+          }
+        },
+        "slots": {
+          "testimonials": {
+            "name": "Testimonials",
+            "component": "testimonials",
+            "content": {
+              "en": "${import('./configuration/testimonials-slot-content.en.json')}"
+            }
+          },
+          "home-carousel": {
+            "name": "Home carousel",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/home-carousel-slot-content.en.json')}"
+            }
+          },
+          "home-featured-products": {
+            "name": "Home featured products",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/home-featured-products-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "👠 Shoes landing page",
+            "draft": true,
+            "audiences": [
+              "shoes-landing-page"
+            ],
+            "slots": [
+              "home-featured-products",
+              "home-carousel",
+              "testimonials"
+            ],
+            "content": {
+              "default": {
+                "home-featured-products": {
+                  "en": "${import('./configuration/home-featured-products-experience-content.en.json')}"
+                },
+                "home-carousel": {
+                  "en": "${import('./configuration/home-carousel-experience-content.en.json')}"
+                },
+                "testimonials": {
+                  "en": "${import('./configuration/testimonials-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

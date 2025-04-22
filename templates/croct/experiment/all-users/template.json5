@@ -1,0 +1,106 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Simple AB test",
+  "description": "A simple experiment for all users.",
+  "metadata": {
+    "id": "use-case/experiment/all-users",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.experiment&utm_content=all_users"
+    },
+    "categories": [
+      "use-case/experiment"
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/cover.png",
+    "installationUrl": "croct://use-case/experiment/all-users",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "all-users": {
+            "name": "All users",
+            "criteria": "true"
+          }
+        },
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Experiment for all users",
+            "draft": true,
+            "audiences": [
+              "all-users"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Home hero CTA label",
+              "goalId": "sign-up",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Get started",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Start for free",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-experiment-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experiment successfully created."
+    }
+  ]
+}

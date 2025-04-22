@@ -90,7 +90,7 @@ export default function Home({content}: HomeProps) {
         </main>
         <footer className={styles.footer}>
           <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-croct&utm_campaign=create-next-app"
+            href="https://nextjs.org/learn?utm_source=croct&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -104,7 +104,7 @@ export default function Home({content}: HomeProps) {
             Learn
           </a>
           <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-croct&utm_campaign=create-next-app"
+            href="https://vercel.com/templates?framework=next.js&utm_source=croct&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -118,7 +118,7 @@ export default function Home({content}: HomeProps) {
             Examples
           </a>
           <a
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-croct&utm_campaign=create-next-app"
+            href="https://nextjs.org?utm_source=croct&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -1,7 +1,7 @@
 # Introduction
 
-This template sets up a project using [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/), and Croct.
-It either initializes a [Next.js](https://nextjs.org/) project with Shadcn UI or adds Shadcn UI to an existing project if one is found.
+This template sets up a project using [Next.js](https://nextjs.org/?utm_source=croct), [Tailwind CSS](https://tailwindcss.com/?utm_source=croct), [Shadcn UI](https://ui.shadcn.com/?utm_source=croct), and Croct.
+It either initializes a [Next.js](https://nextjs.org/?utm_source=croct) project with Shadcn UI or adds Shadcn UI to an existing project if one is found.
 
 ## Usage
 

@@ -1,6 +1,6 @@
 # Introduction
 
-This template sets up a project using [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [Shadcn UI](https://ui.shadcn.com/).
+This template sets up a project using [Next.js](https://nextjs.org/?utm_source=croct), [Tailwind CSS](https://tailwindcss.com/?utm_source=croct) and [Shadcn UI](https://ui.shadcn.com/?utm_source=croct).
 
 ## Usage
 

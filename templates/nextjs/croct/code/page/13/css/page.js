@@ -24,7 +24,7 @@ export default async function Home() {
           </p>
           <div>
             <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
+              href="https://vercel.com?utm_source=croct&utm_medium=appdir-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >

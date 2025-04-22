@@ -45,7 +45,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://docs.croct.com/reference/sdk/nextjs/installation"
+                "value": "https://docs.croct.com/reference/sdk/nextjs/installation?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next_13"
               }
             },
             "title": {
@@ -71,7 +71,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://croct.com/templates/next"
+                "value": "https://croct.com/templates/next?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next_13"
               }
             },
             "title": {
@@ -97,7 +97,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
+                "value": "https://vercel.com/new?utm_source=croct&utm_medium=appdir-template&utm_campaign=create-next-app"
               }
             },
             "title": {

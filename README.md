@@ -74,7 +74,7 @@ croct use https://github.com/croct/templates/tree/main/templates/magic-ui/ui/mar
 
 This command will fetch and apply the template to your project automatically.
 
-For more information, check the [documentation](https://docs.croct.com/reference/cli).
+For more information, check the [documentation](https://docs.croct.com/reference/cli?utm_medium=repo&utm_source=template&utm_campaign=00000000.CO.DE.templates).
 
 ### Aliases
 
@@ -139,7 +139,7 @@ The `[organization]` should be the company's domain without `.com`, `.io`, or si
 
 ### Documentation
 
-Check the [documentation](https://docs.croct.com/reference/cli/templates) for more information on how to create and publish templates.
+Check the [documentation](https://docs.croct.com/reference/cli/templates?utm_medium=repo&utm_source=template&utm_campaign=00000000.CO.DE.templates) for more information on how to create and publish templates.
 
 ## License
 

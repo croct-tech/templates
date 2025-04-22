@@ -1,11 +1,11 @@
 # Introduction
 
-This template integrates [Shadcn UI](https://ui.shadcn.com/) components into a project, similar to running the `shadcn add` command but structured as a reusable template.
+This template integrates [Shadcn UI](https://ui.shadcn.com/?utm_source=croct) components into a project, similar to running the `shadcn add` command but structured as a reusable template.
 
 If Shadcn UI is not already configured, the template automatically handles the setup.
 
 > [!NOTE]
-> This template requires [Tailwind CSS](https://tailwindcss.com/) to be installed in the project, otherwise it will fail.
+> This template requires [Tailwind CSS](https://tailwindcss.com/?utm_source=croct) to be installed in the project, otherwise it will fail.
 
 ## Usage
 

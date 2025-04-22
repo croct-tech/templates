@@ -1,7 +1,7 @@
 # Introduction
 
-This template sets up a project using [Next.js](https://nextjs.org/) and Croct.
-It shows how to use the [Croct Next.js SDK](https://docs.croct.com/reference/sdk/nextjs/installation) to add a CMS, 
+This template sets up a project using [Next.js](https://nextjs.org/?utm_source=croct) and Croct.
+It shows how to use the [Croct Next.js SDK](https://docs.croct.com/reference/sdk/nextjs/installation?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next) to add a CMS, 
 analytics, A/B testing and personalization to your application.
 
 ## Usage

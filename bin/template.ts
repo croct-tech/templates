@@ -153,7 +153,7 @@ type Template = {
     title: string,
     description: string,
     metadata: TemplateMetadata,
-    options: Record<string, OptionDefinition>,
+    options?: Record<string, OptionDefinition>,
     actions: Array<Record<string, any>>,
 };
 
@@ -254,7 +254,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             sourceUrl: metadata.sourceUrl,
             verified: metadata.verified,
             relatedTemplates: metadata.relatedTemplates ?? [],
-            options: Object.entries(template.options).map(
+            options: Object.entries(template.options ?? []).map(
                 ([name, definition]) => ({
                     name: name,
                     type: definition.type,

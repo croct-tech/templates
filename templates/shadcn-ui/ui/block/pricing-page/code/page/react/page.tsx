@@ -11,7 +11,7 @@ export default function Page() {
       <LinkButton
         branded
         label="Edit this page"
-        href="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+        href="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.shadcn_ui&utm_content=pricing_page&utm_term=react"
         target="_blank"
         position="bottom-right"
       />

@@ -11,7 +11,7 @@ export default async function Home() {
     <TemplateCanvas
       title="Next.js 15 starter"
       ctaLabel="Edit this page"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next&utm_content=next_15&utm_term=css"
       ctaTarget="_blank"
       src="#"
       fullScreen
@@ -62,7 +62,7 @@ export default async function Home() {
         </main>
         <footer className={styles.footer}>
           <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
+            href="https://nextjs.org/learn?utm_source=croct&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -76,7 +76,7 @@ export default async function Home() {
             Learn
           </a>
           <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
+            href="https://vercel.com/templates?framework=next.js&utm_source=croct&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -90,7 +90,7 @@ export default async function Home() {
             Examples
           </a>
           <a
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
+            href="https://nextjs.org?utm_source=croct&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >

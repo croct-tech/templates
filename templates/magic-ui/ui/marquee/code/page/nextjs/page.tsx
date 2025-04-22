@@ -10,7 +10,7 @@ export default async function Page() {
       theme="light"
       title="Magic UI - Marquee reviews"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.magic_ui&utm_content=marquee&utm_term=nextjs"
       ctaTarget="_blank"
       maxWidth="1200px"
       src="#"

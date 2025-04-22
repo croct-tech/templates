@@ -1,6 +1,6 @@
 # Introduction
 
-This template sets up a project using [Next.js](https://nextjs.org/) and Croct, similar to running the `create-next-app` command but structured as a reusable template.
+This template sets up a project using [Next.js](https://nextjs.org/?utm_source=croct) and Croct, similar to running the `create-next-app` command but structured as a reusable template.
 
 ## Usage
 

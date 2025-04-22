@@ -30,7 +30,7 @@ export default function Home({content}: HomeProps) {
     <TemplateCanvas
       title="Next.js 14 starter"
       ctaLabel="Edit this page"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next&utm_content=next_14&utm_term=tailwind"
       ctaTarget="_blank"
       src="#"
       fullScreen
@@ -85,7 +85,7 @@ export default function Home({content}: HomeProps) {
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw-croct&utm_campaign=create-next-app"
+            href="https://nextjs.org/learn?utm_source=croct&utm_medium=default-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -100,7 +100,7 @@ export default function Home({content}: HomeProps) {
           </a>
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw-croct&utm_campaign=create-next-app"
+            href="https://vercel.com/templates?framework=next.js&utm_source=croct&utm_medium=default-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -115,7 +115,7 @@ export default function Home({content}: HomeProps) {
           </a>
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw-croct&utm_campaign=create-next-app"
+            href="https://nextjs.org?utm_source=croct&utm_medium=default-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >

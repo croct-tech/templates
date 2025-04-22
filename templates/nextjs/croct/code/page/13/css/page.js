@@ -11,7 +11,7 @@ export default async function Home() {
     <TemplateCanvas
       title="Next.js 13 starter"
       ctaLabel="Edit this page"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next&utm_content=next_13&utm_term=css"
       ctaTarget="_blank"
       src="#"
       fullScreen
@@ -24,7 +24,7 @@ export default async function Home() {
           </p>
           <div>
             <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template-croct&utm_campaign=create-next-app"
+              href="https://vercel.com?utm_source=croct&utm_medium=appdir-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >

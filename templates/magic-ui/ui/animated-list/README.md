@@ -1,7 +1,7 @@
 # Introduction
 
-This template adds the [Magic UI Animated List](https://magicui.design/docs/components/animated-list) component to your 
-project or creates a new project using [Next.js](https://nextjs.org/) if none is found in the current directory.
+This template adds the [Magic UI Animated List](https://magicui.design/docs/components/animated-list?utm_source=croct) component to your 
+project or creates a new project using [Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current directory.
 
 It comes fully integrated with Croct, giving you CMS, A/B testing, and personalization out of the box.
 

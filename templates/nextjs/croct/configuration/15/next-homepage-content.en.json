@@ -28,7 +28,7 @@
           "type": "text",
           "value": {
             "type": "static",
-            "value": "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-croct&utm_campaign=create-next-app"
+            "value": "https://vercel.com/new?utm_source=croct&utm_medium=default-template&utm_campaign=create-next-app"
           }
         },
         "label": {
@@ -47,7 +47,7 @@
           "type": "text",
           "value": {
             "type": "static",
-            "value": "https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-croct&utm_campaign=create-next-app"
+            "value": "https://nextjs.org/docs?utm_source=croct&utm_medium=default-template&utm_campaign=create-next-app"
           }
         },
         "label": {

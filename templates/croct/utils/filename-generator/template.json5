@@ -4,6 +4,7 @@
   "description": "Finds an available file name and assigns the result to a specified variable.",
   "metadata": {
     "id": "boilerplate/utility/filename-generator",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

@@ -4,6 +4,7 @@
   "description": "A segmented experiment for new users.",
   "metadata": {
     "id": "use-case/experiment/segmented",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

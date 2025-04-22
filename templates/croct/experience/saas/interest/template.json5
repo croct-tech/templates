@@ -4,6 +4,7 @@
   "description": "A personalized experience based on the user's interests.",
   "metadata": {
     "id": "use-case/saas/interest",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

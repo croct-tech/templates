@@ -4,6 +4,7 @@
   "description": "Starts the development server and opens the example in the browser.",
   "metadata": {
     "id": "boilerplate/utility/example-launcher",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

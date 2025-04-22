@@ -4,6 +4,7 @@
   "description": "A simple experiment for all users.",
   "metadata": {
     "id": "use-case/experiment/all-users",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

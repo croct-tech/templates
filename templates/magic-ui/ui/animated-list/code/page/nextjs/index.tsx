@@ -18,7 +18,7 @@ export default function Page({content}: PageProps) {
       theme="light"
       title="Magic UI - Animated list"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.magic_ui&utm_content=animated_list&tum_term=nextjs"
       ctaTarget="_blank"
       src="#"
       fullScreen

@@ -10,7 +10,7 @@ export default async function Home() {
     <TemplateCanvas
       title="Next.js 14 starter"
       ctaLabel="Edit this page"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next&utm_content=next_14&tum_term=tailwind"
       ctaTarget="_blank"
       src="#"
       fullScreen

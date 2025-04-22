@@ -720,19 +720,27 @@ function formatCategoryTree(categories: string[], counts: Record<string, number>
 }
 
 function countCategories(catalog: TemplateCatalog): Record<string, number> {
-    const counts: Record<string, number> = Object.fromEntries(
-        catalog.categories.map(category => [category, 0]),
-    );
+    const counts: Record<string, Set<string>> = {};
 
     for (const template of Object.values(catalog.templates)) {
         for (const category of template.metadata.categories) {
-            if (counts[category] !== undefined) {
-                counts[category]++;
+            const path = category.split('/');
+
+            for (let index = 0; index < path.length; index++) {
+                const prefix = path.slice(0, index + 1).join('/');
+
+                if (counts[prefix] === undefined) {
+                    counts[prefix] = new Set<string>();
+                }
+
+                counts[prefix].add(template.metadata.id);
             }
         }
     }
 
-    return counts;
+    console.log(counts);
+
+    return Object.fromEntries(Object.entries(counts).map(([category, templates]) => [category, templates.size]));
 }
 
 function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate): void {

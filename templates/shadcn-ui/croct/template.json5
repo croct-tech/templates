@@ -4,10 +4,11 @@
   "description": "A Next.js project with Shadcn UI and Croct integration.",
   "metadata": {
     "id": "boilerplate/starter/shadcn-croct",
+    "verified": true,
     "author": {
-      "name": "Shadcn UI",
-      "avatarUrl": "https://github.com/shadcn-ui.png",
-      "websiteUrl": "https://ui.shadcn.com?utm_source=croct"
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_shadcn"
     },
     "categories": [
       "boilerplate/starter",

@@ -4,6 +4,7 @@
   "description": "A personalized experience based on the session's landing page.",
   "metadata": {
     "id": "use-case/saas/landing-page",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

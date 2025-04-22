@@ -4,6 +4,7 @@
   "description": "A personalized experience based on the marketing campaign associated with the session.",
   "metadata": {
     "id": "use-case/saas/marketing-campaign",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

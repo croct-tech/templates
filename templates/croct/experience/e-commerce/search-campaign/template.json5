@@ -4,6 +4,7 @@
   "description": "A personalized experience based on the search campaign associated with the session.",
   "metadata": {
     "id": "use-case/e-commerce/search-campaign",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

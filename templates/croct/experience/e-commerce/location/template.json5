@@ -4,6 +4,7 @@
   "description": "A personalized experience based on the user's location.",
   "metadata": {
     "id": "use-case/e-commerce/location",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

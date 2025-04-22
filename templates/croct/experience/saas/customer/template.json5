@@ -4,6 +4,7 @@
   "description": "A personalized experience for users who are paid customers.",
   "metadata": {
     "id": "use-case/saas/customer",
+    "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",

@@ -27,7 +27,7 @@
     "lint": "eslint 'bin/**/*.ts'",
     "validate": "tsc --noEmit",
     "validate-templates": "tsx bin/template.ts validate templates",
-    "publish-templates": "tsx bin/template.ts publish --typesense-key=$TYPESENSE_KEY --typesense-url=$TYPESENSE_URL --typesense-collection=$TYPESENSE_COLLECTION templates --asset-output=build"
+    "publish-templates": "tsx bin/template.ts publish"
   },
   "dependencies": {
     "@babel/runtime": "^7.27.0",

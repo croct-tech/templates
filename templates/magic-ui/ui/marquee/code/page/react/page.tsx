@@ -10,7 +10,7 @@ export default function Page() {
       theme="light"
       title="Magic UI - Marquee reviews"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.magic_ui&utm_content=marquee&tum_term=react"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.magic_ui&utm_content=marquee&utm_term=react"
       ctaTarget="_blank"
       maxWidth="1200px"
       src="#"

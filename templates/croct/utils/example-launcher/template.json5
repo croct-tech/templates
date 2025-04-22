@@ -16,7 +16,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/cover.mp4",
     "installationUrl": "croct://utils/example-launcher",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/README.md"
   },
   "options": {
     "path": {

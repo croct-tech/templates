@@ -22,7 +22,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/cover.png",
     "installationUrl": "magic-ui://ui/animated-list",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/README.md"
   },
   "options": {
     "version": {

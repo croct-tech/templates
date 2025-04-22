@@ -22,12 +22,11 @@
       "boilerplate/starter/nextjs-croct",
       "boilerplate/starter/nextjs-project",
       "boilerplate/starter/shadcn-croct",
-      "boilerplate/starter/shadcn-integration"
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/cover.png",
     "installationUrl": "shadcn-ui://project",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/README.md"
   },
   "options": {
     "name": {

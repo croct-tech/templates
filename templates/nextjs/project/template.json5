@@ -24,7 +24,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/cover.png",
     "installationUrl": "nextjs://project",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/README.md"
   },
   "options": {
     "name": {

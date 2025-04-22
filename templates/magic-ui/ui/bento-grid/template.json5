@@ -25,7 +25,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/cover.png",
     "installationUrl": "magic-ui://ui/bento-grid",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/README.md"
   },
   "options":  {
     "version": {

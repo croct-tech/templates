@@ -22,7 +22,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/cover.png",
     "installationUrl": "magic-ui://ui/tweet-card",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/README.md"
   },
   "options":  {
     "version": {

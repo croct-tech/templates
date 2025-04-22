@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Update index
-        run: npm run publish-templates -- --typesense-key=${TYPESENSE_KEY} --typesense-url=${TYPESENSE_URL} --typesense-collection=${TYPESENSE_COLLECTION} --asset-output=build templates
+        run: npm run publish-templates -- --typesense-key=${TYPESENSE_KEY} --typesense-url=${TYPESENSE_URL} --typesense-collection=templates --asset-output=build templates
         env:
           TYPESENSE_KEY: ${{ secrets.TYPESENSE_KEY }}
           TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}

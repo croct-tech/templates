@@ -7,7 +7,7 @@ import {JsonParser} from '@croct/json5-parser';
 import {JsonValue} from '@croct/json';
 import Ajv, {type JSONSchemaType, type ValidateFunction} from 'ajv/dist/2019';
 import addFormats from 'ajv-formats';
-import Table from 'cli-table';
+import Table from 'cli-table3';
 import {Client as TypesenseClient} from 'typesense';
 import chalk from 'chalk';
 
@@ -630,9 +630,19 @@ function findTemplateFiles(directory: string): string[] {
 
 function reportViolations(violations: Violation[]): void {
     const table = new Table({
-        style: {head: ['red']},
-        head: ['Path', 'Violation', 'Details'],
+        colWidths: [40, 40, 40],
+        wordWrap: true,
     });
+
+    table.push([
+        {
+            colSpan: 3,
+            hAlign: 'center',
+            content: chalk.red.bold('Template violations'),
+        },
+    ]);
+
+    table.push(['Path', 'Violation', 'Details']);
 
     for (const violation of violations) {
         table.push([violation.path, violation.description, violation.details?.[0] ?? '--']);
@@ -689,16 +699,12 @@ function formatCategoryTree(categories: string[], counts: Record<string, number>
     };
 
     const printTree = (tree: Tree, prefix = ''): void => {
-        if (prefix === '') {
-            lines.push(chalk.bold(tree.label));
-            lines.push(chalk.grey(`┌${'─'.repeat(tree.label.length - 1)}`));
-        }
-
         const children = Object.values(tree.children).sort((left, right) => left.label.localeCompare(right.label));
 
         for (const [index, subtree] of children.entries()) {
             const last = index === children.length - 1;
-            const connector = chalk.grey(last ? '└─ ' : '├─ ');
+            const topConnector = index === 0 && prefix.length === 0 ? '┌─ ' : '├─ ';
+            const connector = chalk.grey(last ? '└─ ' : topConnector);
             const counter = `${chalk.dim('(')}${chalk.green(subtree.count)}${chalk.dim(')')}`;
 
             lines.push(`${prefix + connector + subtree.label} ${counter}`);
@@ -731,8 +737,16 @@ function countCategories(catalog: TemplateCatalog): Record<string, number> {
 
 function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate): void {
     const table = new Table({
-        style: {head: ['green']},
+        colWidths: [40, 40],
     });
+
+    table.push([
+        {
+            colSpan: 2,
+            hAlign: 'center',
+            content: chalk.bold('Summary'),
+        },
+    ]);
 
     let relatedTemplates = 0;
     let categoriesCount = 0;
@@ -769,11 +783,21 @@ function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate)
         {
             'Average templates per category': (categoriesCount / update.summary.total).toFixed(2),
         },
+        [
+            {
+                colSpan: 2,
+                content: 'Categories',
+            },
+        ],
+        [
+            {
+                colSpan: 2,
+                content: formatCategoryTree(catalog.categories, countCategories(catalog)),
+            },
+        ],
     );
 
     console.log(table.toString());
-    console.log('');
-    console.log(formatCategoryTree(catalog.categories, countCategories(catalog)));
 }
 
 async function run(): Promise<void> {

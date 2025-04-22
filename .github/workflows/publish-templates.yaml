@@ -44,7 +44,6 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Deploy release to GCS
-        if: ${{ github.event.release && !github.event.release.prerelease && github.ref }}
         run: |-
           gsutil -m rsync -r -d build "gs://${GCLOUD_BUCKET}/assets/templates"
           gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/assets/templates/**"

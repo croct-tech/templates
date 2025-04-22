@@ -26,7 +26,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/cover.png",
     "installationUrl": "magic-ui://ui/code-comparison",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/README.md"
   },
   "options": {
     "version": {

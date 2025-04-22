@@ -25,7 +25,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/orbiting-circles/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/orbiting-circles/cover.png",
     "installationUrl": "magic-ui://ui/orbiting-circles",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/orbiting-circles/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/orbiting-circles/README.md"
   },
   "options":  {
     "version": {

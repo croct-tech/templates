@@ -27,7 +27,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/cover.png",
     "installationUrl": "magic-ui://ui/marquee",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/README.md"
   },
   "options":  {
     "version": {

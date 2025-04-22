@@ -20,7 +20,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/cover.png",
     "installationUrl": "magic-ui://ui/lens",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/README.md"
   },
   "options":  {
     "version": {

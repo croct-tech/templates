@@ -22,7 +22,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/cover.png",
     "installationUrl": "magic-ui://ui/component",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/README.md"
   },
   "options": {
     "id": {

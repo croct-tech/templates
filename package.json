@@ -24,7 +24,7 @@
   "homepage": "https://github.com/croct-tech/templates",
   "type": "module",
   "scripts": {
-    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
+    "lint": "eslint 'bin/**/*.ts'",
     "validate": "tsc --noEmit",
     "validate-templates": "tsx bin/template.ts validate templates"
   },

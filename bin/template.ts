@@ -530,18 +530,20 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
             ...template,
         };
 
-        const documentation = updateDocumentationAssets(
-            metadata.id,
-            readFileSync(metadata.documentationUrl, 'utf-8'),
-            dirname(path),
-        );
+        if (existsSync(metadata.documentationUrl)) {
+            const documentation = updateDocumentationAssets(
+                metadata.id,
+                readFileSync(metadata.documentationUrl, 'utf-8'),
+                dirname(path),
+            );
 
-        for (const asset of Object.keys(documentation.assets)) {
-            if (!existsSync(asset)) {
-                violations.push({
-                    path: metadata.documentationUrl,
-                    description: `The documentation asset "${asset}" is missing.`,
-                });
+            for (const asset of Object.keys(documentation.assets)) {
+                if (!existsSync(asset)) {
+                    violations.push({
+                        path: metadata.documentationUrl,
+                        description: `The documentation asset "${asset}" is missing.`,
+                    });
+                }
             }
         }
     }

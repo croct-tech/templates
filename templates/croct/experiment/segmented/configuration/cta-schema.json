@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "link": {
+      "type": {
+        "type": "text",
+        "format": "url"
+      },
+      "label": "Link",
+      "private": false,
+      "optional": false,
+      "position": 1
+    },
+    "label": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Label",
+      "private": false,
+      "optional": false,
+      "position": 0
+    },
+    "appearance": {
+      "type": {
+        "type": "text",
+        "choices": {
+          "primary": {
+            "label": "Primary",
+            "default": true,
+            "position": 0
+          },
+          "secondary": {
+            "label": "Secondary",
+            "default": false,
+            "position": 1
+          }
+        }
+      },
+      "label": "Appearance",
+      "private": false,
+      "optional": false,
+      "position": 2
+    }
+  }
+}

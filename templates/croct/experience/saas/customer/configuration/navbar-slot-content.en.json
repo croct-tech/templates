@@ -1,0 +1,158 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "items": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/features"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Features"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/students"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "For students"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/business"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "For business"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/personal"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "For you"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/pricing"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Pricing"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "primaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com/signup"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Sign up"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    },
+    "secondaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com/sales"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "For business"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "secondary"
+          }
+        }
+      }
+    }
+  }
+}

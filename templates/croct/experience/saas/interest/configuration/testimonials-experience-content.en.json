@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Why students love us"
+      }
+    },
+    "testimonials": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "I never forget a project due date, thanks to Listo."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "John Doe"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/e47cecc9-44dd-450f-8ae3-b69705366e9b"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "I'm stunned by the quality of this app. It's a perfect planner."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Carol Duran"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/91dade3c-f2c8-4537-8489-0c40e97bdd5a"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Trust me, they're good. Their checklist is the best."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Alex Bobby"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/d92cab97-b052-482c-a0fa-2e2204d9f92c"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

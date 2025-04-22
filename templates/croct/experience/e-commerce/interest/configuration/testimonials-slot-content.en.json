@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Why they love us"
+      }
+    },
+    "testimonials": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "I bought several T-shirts, and I loved it!"
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "John Doe"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/ef30dcd2-22f3-4477-9d1a-a9291b932521"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "I'm stunned by the quality of their jeans. It's perfect!"
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Carol Duran"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/a53e3215-a76b-48b2-8f1e-2755f052971c"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Trust me, this is my favorite place to buy glasses."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Alex Bobby"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/ff550851-aebd-4838-b1e9-cb5893413220"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Customer experience",
+  "description": "A personalized experience for users who are paid customers.",
+  "metadata": {
+    "id": "use-case/saas/customer",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=customer"
+    },
+    "categories": ["use-case/saas"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/customer/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/customer/cover.png",
+    "installationUrl": "croct://use-case/saas/customer",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/customer/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "customers": {
+            "name": "Customers",
+            "criteria": "user's activities include \"login\" and user's plan is not \"free\""
+          }
+        },
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "navbar": {
+            "name": "Navbar",
+            "description": "A section of links and CTAs featured at the top of a page.",
+            "schema": "${import('./configuration/navbar-schema.json')}"
+          },
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "description": "A small text bar featured at the top of a page.",
+            "schema": "${import('./configuration/announcement-bar-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "navbar": {
+            "name": "Navbar",
+            "component": "navbar",
+            "content": {
+              "en": "${import('./configuration/navbar-slot-content.en.json')}"
+            }
+          },
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+            }
+          },
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "component": "announcement-bar",
+            "content": {
+              "en": "${import('./configuration/announcement-bar-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🥰 Customers",
+            "draft": true,
+            "audiences": [
+              "customers"
+            ],
+            "slots": [
+              "home-hero",
+              "announcement-bar",
+              "navbar"
+            ],
+            "content": {
+              "default": {
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                },
+                "announcement-bar": {
+                  "en": "${import('./configuration/announcement-bar-experience-content.en.json')}"
+                },
+                "navbar": {
+                  "en": "${import('./configuration/navbar-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

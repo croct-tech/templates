@@ -40,7 +40,7 @@ const categoryMap = {
     'library/shadcn-ui': 'Shadcn UI',
     'library/shiki': 'Shiki',
     'library/tailwind-css': 'Tailwind CSS',
-    'use-case/ecommerce': 'E-commerce',
+    'use-case/e-commerce': 'E-commerce',
     'use-case/experiment': 'Experiment',
     'use-case/saas': 'SaaS',
 };

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Location-based experience",
+  "description": "A personalized experience based on the user's location.",
+  "metadata": {
+    "id": "use-case/e-commerce/location",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=location"
+    },
+    "categories": ["use-case/e-commerce"],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/location/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/location/cover.png",
+    "installationUrl": "croct://use-case/e-commerce/location",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/location/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "new-york-city": {
+            "name": "New York city",
+            "criteria": "location's city is \"New York\""
+          }
+        },
+        "components": {
+          "banner-image": {
+            "name": "Banner image",
+            "schema": "${import('./configuration/banner-image-schema.json')}"
+          },
+          "carousel-section": {
+            "name": "Carousel section",
+            "description": "A section of ordered banners.",
+            "schema": "${import('./configuration/carousel-section-schema.json')}"
+          },
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "description": "A small text bar featured at the top of a page.",
+            "schema": "${import('./configuration/announcement-bar-schema.json')}"
+          }
+        },
+        "slots": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "component": "announcement-bar",
+            "content": {
+              "en": "${import('./configuration/announcement-bar-slot-content.en.json')}"
+            }
+          },
+          "home-carousel": {
+            "name": "Home carousel",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/home-carousel-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🗽 New York",
+            "draft": true,
+            "audiences": [
+              "new-york-city"
+            ],
+            "slots": [
+              "announcement-bar",
+              "home-carousel"
+            ],
+            "content": {
+              "default": {
+                "announcement-bar": {
+                  "en": "${import('./configuration/announcement-bar-experience-content.en.json')}"
+                },
+                "home-carousel": {
+                  "en": "${import('./configuration/home-carousel-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

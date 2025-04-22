@@ -23,7 +23,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/cover.png",
     "installationUrl": "shadcn-ui://ui/component",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/README.md"
   },
   "options": {
     "components": {
@@ -34,7 +34,7 @@
   },
   "actions": [
     {
-      "name": "check-dependencies",
+      "name": "check-dependency",
       "dependencies": [
         {
           "name": "tailwindcss",

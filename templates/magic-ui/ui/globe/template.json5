@@ -22,7 +22,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/globe/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/globe/cover.png",
     "installationUrl": "magic-ui://ui/globe",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/globe/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/globe/README.md"
   },
   "options":  {
     "version": {

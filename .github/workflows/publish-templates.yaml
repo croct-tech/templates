@@ -1,0 +1,53 @@
+name: Publish schemas
+
+on:
+  workflow_dispatch:
+  release:
+    types:
+      - published
+
+jobs:
+  publish-templates:
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+
+      - name: Cache dependencies
+        id: cache-dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node_modules-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install dependencies
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: npm ci
+
+      - name: Update index
+        run: |-
+          bin/template.ts publish --typesense-key=${TYPESENSE_KEY} --typesense-url=${TYPESENSE_URL} --typesense-collection=${TYPESENSE_COLLECTION} templates --asset-output=build
+        env:
+          TYPESENSE_KEY: ${{ secrets.TYPESENSE_KEY }}
+          TYPESENSE_URL: ${{ secrets.TYPESENSE_URL }}
+          TYPESENSE_COLLECTION: ${{ secrets.TYPESENSE_COLLECTION }}
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCLOUD_WORKLOAD_IDENTITY }}
+          service_account: ${{ secrets.GCLOUD_SERVICE_ACCOUNT }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy release to GCS
+        if: ${{ github.event.release && !github.event.release.prerelease && github.ref }}
+        run: |-
+          gsutil -m rsync -r -d build "gs://${GCLOUD_BUCKET}/assets/templates"
+          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/assets/templates/**"
+        env:
+          GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}

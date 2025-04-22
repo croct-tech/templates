@@ -22,7 +22,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/cover.png",
     "installationUrl": "magic-ui://ui/hero-video-dialog",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/README.md"
   },
   "options":  {
     "version": {

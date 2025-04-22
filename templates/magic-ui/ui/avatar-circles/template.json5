@@ -20,7 +20,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/cover.png",
     "installationUrl": "magic-ui://ui/avatar-circles",
-    "documentation": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/README.md"
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/README.md"
   },
   "options":  {
     "version": {

@@ -1,4 +1,4 @@
-name: Validate templates schemas
+name: Validate templates
 
 on:
   push:

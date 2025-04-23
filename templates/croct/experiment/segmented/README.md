@@ -4,12 +4,11 @@ This template creates a segmented experiment for new users who browse the websit
 
 ## What's included
 
-This experience includes:
+This experience includes 2 components, a slot for a home hero section, an experiment with 2 variants (50/50 split), and the following audience:
 
-- **Components:** CTA and hero section
-- **Slots:** home hero section
-- **Experiment:** 2 variants with 50/50 split
-- **Audience:** `user is not returning`
+```cql
+user is not returning
+```
 
 ## Usage
 

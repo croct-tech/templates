@@ -6,13 +6,13 @@ By leveraging [geographic information](https://docs.croct.com/reference/cql/data
 
 ## What's included
 
-This experience includes:
+This experience includes 4 components, 2 slots (an announcement bar and a carousel section), and the following audience:
 
-- **Components:** banner image, CTA, announcement bar, and carousel section
-- **Slots:** announcement bar and carousel section
-- **Audience:** `location's city is "New York"`
+```cql
+location's city is "New York"
+```
 
-Custom audiences can be defined using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=location), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It allows, for instance, to add two or more regions to the same audience using [or](https://docs.croct.com/reference/cql/expressions/operations/logical#or), [and](https://docs.croct.com/reference/cql/expressions/operations/logical#and), [is](https://docs.croct.com/reference/cql/expressions/tests/comparison#equal), or [is in](https://docs.croct.com/reference/cql/expressions/tests/collection#in).
+Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=location), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It allows, for instance, to add two or more regions to the same audience using [or](https://docs.croct.com/reference/cql/expressions/operations/logical#or), [and](https://docs.croct.com/reference/cql/expressions/operations/logical#and), [is](https://docs.croct.com/reference/cql/expressions/tests/comparison#equal), or [is in](https://docs.croct.com/reference/cql/expressions/tests/collection#in).
 
 ## Usage
 

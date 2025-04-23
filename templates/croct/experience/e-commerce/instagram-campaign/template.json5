@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Instagram campaign experience",
-  "description": "A personalized experience based on the Instagram campaign associated with the session.",
+  "description": "A personalized experience based on Instagram campaigns.",
   "metadata": {
     "id": "use-case/e-commerce/instagram-campaign",
     "verified": true,

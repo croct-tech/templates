@@ -4,11 +4,7 @@ This template creates an experiment for all users who browse the website and spl
 
 ## What's included
 
-This experience includes:
-
-- **Components:** CTA and hero section
-- **Slots:** home hero section
-- **Experiment:** 2 variants with 50/50 split
+This experience includes 2 components, a slot for a home hero section, and an experiment with 2 variants (50/50 split).
 
 ## Usage
 

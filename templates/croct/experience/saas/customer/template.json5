@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Customer experience",
-  "description": "A personalized experience for users who are paid customers.",
+  "description": "A personalized experience for existing customers.",
   "metadata": {
     "id": "use-case/saas/customer",
     "verified": true,

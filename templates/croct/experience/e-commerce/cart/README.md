@@ -6,16 +6,15 @@ It can be used to encourage higher-order values by highlighting incentives such 
 
 ## What's included
 
-This experience includes:
+This experience includes 4 components, 2 slots (an announcement bar and a carousel section), and the following audience:
 
-- **Components:** banner image, CTA, announcement bar, and carousel section
-- **Slots:** announcement bar and carousel section
-- **Audience:** `cart's total is less than 150`
+```cql
+cart's total is less than 150
+```
 
-Custom audiences can be defined using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=cart), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It supports, for instance, other comparisons like [greater than](https://docs.croct.com/reference/cql/expressions/tests/comparison#greater-than) or [between](https://docs.croct.com/reference/cql/expressions/tests/comparison#between).
+Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=cart), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It supports, for instance, other comparisons like [greater than](https://docs.croct.com/reference/cql/expressions/tests/comparison#greater-than) or [between](https://docs.croct.com/reference/cql/expressions/tests/comparison#between).
 
-> 💬 Event tracking
->
+> [!IMPORTANT]
 > Personalization with the `cart` variable requires tracking [e-commerce events](https://docs.croct.com/reference/event/overview?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=cart#e-commerce-events) in advance.
 
 ## Usage

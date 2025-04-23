@@ -6,13 +6,13 @@ By referencing the [session's landing page](https://docs.croct.com/reference/cql
 
 ## What's included
 
-This experience includes:
+This experience includes 4 components, 2 slots (a carousel and a testimonials sections), and the following audience:
 
-- **Components:** banner image, CTA, testimonials, and carousel section
-- **Slots:** testimonials and carousel section
-- **Audience:** `session's landingPage matches "shoes"`
+```cql
+session's landingPage matches "shoes"
+```
 
-Custom audiences can be defined using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=landing_page), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It allows, for instance, to add two or more landing pages to the same audience using [or](https://docs.croct.com/reference/cql/expressions/operations/logical#or), [and](https://docs.croct.com/reference/cql/expressions/operations/logical#and), [starts with](https://docs.croct.com/reference/cql/expressions/tests/string#starts-with), [ends with](https://docs.croct.com/reference/cql/expressions/tests/string#ends-with), or [matches](https://docs.croct.com/reference/cql/expressions/tests/string#matches).
+Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=landing_page), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It allows, for instance, to add two or more landing pages to the same audience using [or](https://docs.croct.com/reference/cql/expressions/operations/logical#or), [and](https://docs.croct.com/reference/cql/expressions/operations/logical#and), [starts with](https://docs.croct.com/reference/cql/expressions/tests/string#starts-with), [ends with](https://docs.croct.com/reference/cql/expressions/tests/string#ends-with), or [matches](https://docs.croct.com/reference/cql/expressions/tests/string#matches).
 
 ## Usage
 

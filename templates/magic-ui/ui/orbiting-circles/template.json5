@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Magic UI - Orbiting circles",
-  "description": "A collection of circles which move in orbit along a circular path.",
+  "description": "Animated circles orbiting a central element to represent relationships or connections.",
   "metadata": {
     "id": "library/magic-ui/orbiting-circles",
     "author": {
@@ -60,7 +60,7 @@
                 "components": {
                   "magic-ui-orbiting-circles": {
                     "name": "Magic UI - Orbiting circles",
-                    "description": "A collection of circles which move in orbit along a circular path.",
+                    "description": "Animated circles orbiting a central element to represent relationships or connections.",
                     "schema": "${import('./configuration/orbiting-circles-schema.json')}"
                   },
                 },

@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Magic UI - Globe",
-  "description": "An auto-rotating, interactive, and highly performant globe made using WebGL.",
+  "description": "A 3D globe to visualize global presence, activity, or reach.",
   "metadata": {
     "id": "library/magic-ui/globe",
     "author": {
@@ -61,7 +61,7 @@
                 "components": {
                   "magic-ui-globe": {
                     "name": "Magic UI - Globe",
-                    "description": "An auto-rotating, interactive globe.",
+                    "description": "A 3D globe to visualize global presence, activity, or reach.",
                     "schema": "${import('./configuration/globe-schema.json')}"
                   },
                 },

@@ -285,8 +285,6 @@ function updateDocumentationAssets(id: string, documentation: string, path: stri
         const src = imgSrc ?? mdSrc;
         const fileName = generateDocumentationAssetFileName(id, src);
 
-        console.log(fileName);
-
         assets[join(path, src)] = join('documentation', fileName);
 
         return match.replace(src, getDocumentationAssetUrl(fileName));
@@ -737,8 +735,6 @@ function countCategories(catalog: TemplateCatalog): Record<string, number> {
             }
         }
     }
-
-    console.log(counts);
 
     return Object.fromEntries(Object.entries(counts).map(([category, templates]) => [category, templates.size]));
 }

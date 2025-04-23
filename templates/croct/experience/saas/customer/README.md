@@ -12,7 +12,10 @@ This experience includes 3 components, 2 slots (an announcement bar and a home h
 user's activities include "login" and user's plan is not "free"
 ```
 
-Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=customer), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It supports profile [enrichment with first-party data](https://docs.croct.com/reference/sdk/javascript/data-collection) and allows the use of [custom attributes](https://docs.croct.com/reference/cql/data-types/user) to fine-tune personalization strategies. 
+Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=customer), a readable, natural-language-inspired syntax designed for flexibility and ease of use. It supports profile [enrichment with first-party data](https://docs.croct.com/reference/sdk/javascript/data-collection?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=customer) and allows the use of [custom attributes](https://docs.croct.com/reference/cql/data-types/user?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=customer) to fine-tune personalization strategies. 
+
+> [!IMPORTANT]
+> Personalization with the `user's activities` and other custom variables requires implementing [data collection](https://docs.croct.com/reference/sdk/javascript/data-collection?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=customer in advance.
 
 ## Usage
 

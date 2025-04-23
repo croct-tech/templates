@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Magic UI - Tweet card",
-  "description": "A card that displays a tweet with the author's name, handle, and profile picture.",
+  "description": "A styled tweet embed to highlight social proof or share updates.",
   "metadata": {
     "id": "library/magic-ui/tweet-card",
     "author": {
@@ -72,7 +72,7 @@
                 "components": {
                   "magic-ui-tweet-card": {
                     "name": "Magic UI - Tweet card",
-                    "description": "A card that displays a tweet with the author's name, handle, and profile picture.",
+                    "description": "A styled tweet embed to highlight social proof or share updates.",
                     "schema": "${import('./configuration/tweet-card-schema.json')}"
                   },
                 },

@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Magic UI - Animated list",
-  "description": "A list that animates items with staggered timing, perfect for showcasing notifications or events on your landing page.",
+  "description": "A list with animations to display notifications, updates, or events.",
   "metadata": {
     "id": "library/magic-ui/animated-list",
     "author": {
@@ -67,7 +67,7 @@
                 "components": {
                   "magic-ui-animated-list": {
                     "name": "Magic UI - Animated list",
-                    "description": "A list that animates items with staggered timing, perfect for showcasing notifications or events on your landing page.",
+                    "description": "A list with animations to display notifications, updates, or events.",
                     "schema": "${import('./configuration/animated-list-schema.json')}"
                   },
                 },

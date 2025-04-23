@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
   "title": "Magic UI - Terminal",
-  "description": "A macOS-style terminal UI for showcasing a command line interface.",
+  "description": "A terminal-style UI to showcase commands, output, or interactive code.",
   "metadata": {
     "id": "library/magic-ui/terminal",
     "author": {
@@ -65,7 +65,7 @@
                 "components": {
                   "magic-ui-terminal": {
                     "name": "Magic UI - Terminal",
-                    "description": "A macOS-style terminal UI for showcasing a command line interface.",
+                    "description": "A terminal-style UI to showcase commands, output, or interactive code.",
                     "schema": "${import('./configuration/terminal-schema.json')}"
                   },
                 },

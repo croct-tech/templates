@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Magic UI - Script copy button",
-  "description": "A button to copy code snippets to the clipboard.",
+  "description": "A button for quickly copying scripts, commands, or code snippets.",
   "metadata": {
     "id": "library/magic-ui/script-copy-btn",
     "author": {
@@ -61,7 +61,7 @@
                 "components": {
                   "magic-ui-script-copy-btn": {
                     "name": "Magic UI - Script copy button",
-                    "description": "A button to copy code snippets to the clipboard.",
+                    "description": "A button for quickly copying scripts, commands, or code snippets.",
                     "schema": "${import('./configuration/script-copy-btn-schema.json')}"
                   },
                 },

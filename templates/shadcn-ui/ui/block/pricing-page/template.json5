@@ -43,7 +43,7 @@
   "actions": [
     {
       "name": "import",
-      "template": "../../../integration",
+      "template": "../../../croct",
       "options": {
         "projectName": "pricing-plan-example",
         "version": "${options.version}",

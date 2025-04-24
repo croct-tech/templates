@@ -1,0 +1,95 @@
+{
+  "type": "structure",
+  "attributes": {
+    "banners": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/8961d769-5a64-4c3f-a230-11fd06111bdc"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/8961d769-5a64-4c3f-a230-11fd06111bdc"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/8961d769-5a64-4c3f-a230-11fd06111bdc"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "autoplay": {
+      "type": "boolean",
+      "value": {
+        "type": "static",
+        "value": true
+      }
+    },
+    "headline": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "pauseOnHover": {
+      "type": "boolean",
+      "value": {
+        "type": "static",
+        "value": true
+      }
+    }
+  }
+}

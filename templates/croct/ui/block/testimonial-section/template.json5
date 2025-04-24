@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Testimonial section",
+  "description": "Schema-only template for a testimonial section.",
+  "metadata": {
+    "id": "interface/section/testimonial-section",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=testimonial_section"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'interface/social-proof',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/cover.png",
+    "installationUrl": "croct://interface/section/testimonial-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "testimonial-section": {
+            "name": "Testimonial section",
+            "description": "A section featuring testimonials.",
+            "schema": "${import('./configuration/testimonial-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "testimonial-section": {
+            "name": "Testimonial section",
+            "component": "testimonial-section",
+            "content": {
+              "en": "${import('./configuration/testimonial-section-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

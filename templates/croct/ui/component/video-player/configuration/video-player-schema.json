@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "autoplay": {
+      "type": {
+        "type": "boolean",
+        "label": {
+          "true": "Yes",
+          "false": "No"
+        },
+        "default": false
+      },
+      "label": "Autoplay",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "Whether to automatically play the video when the page loads or not."
+    },
+    "controls": {
+      "type": {
+        "type": "boolean",
+        "label": {
+          "true": "Yes",
+          "false": "No"
+        },
+        "default": false
+      },
+      "label": "Controls",
+      "private": false,
+      "optional": true,
+      "position": 3,
+      "description": "Whether to display the display native player controls."
+    },
+    "videoUrl": {
+      "type": {
+        "type": "text",
+        "format": "url"
+      },
+      "label": "Video URL",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The url of a video to play."
+    },
+    "thumbnail": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Thumbnail",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The thumbnail image."
+    }
+  }
+}

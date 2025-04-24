@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Form",
+  "attributes": {
+    "fields": {
+      "type": {
+        "type": "list",
+        "items": {
+          "id": "form-field",
+          "type": "reference"
+        },
+        "itemLabel": "Field"
+      },
+      "label": "Fields",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The list of fields in the form."
+    },
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The title of the form."
+    },
+    "ctaLabel": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Call to action",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The label of the button that submits the form."
+    },
+    "subtitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Subtitle",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The text displayed below the title and above the fields."
+    }
+  },
+  "description": "A form with fields."
+}

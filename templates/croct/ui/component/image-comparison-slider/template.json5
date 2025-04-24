@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Image comparison slider",
+  "description": "Schema-only template for a image comparison slider component.",
+  "metadata": {
+    "id": "interface/component/image-comparison-slider",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=image_comparison_slider"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/component',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/cover.png",
+    "installationUrl": "croct://interface/component/image-comparison-slider",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "image-comparison-slider": {
+            "name": "Image comparison slider",
+            "description": "A slider component for comparing images (before and after).",
+            "schema": "${import('./configuration/image-comparison-slider-schema.json')}"
+          },
+        },
+        "slots": {
+          "image-comparison-slider": {
+            "name": "Image comparison slider",
+            "component": "image-comparison-slider",
+            "content": {
+              "en": "${import('./configuration/image-comparison-slider-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

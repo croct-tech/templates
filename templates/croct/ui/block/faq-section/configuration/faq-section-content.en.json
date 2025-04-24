@@ -1,0 +1,113 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Frequently asked questions"
+      }
+    },
+    "questions": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet?"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Callout",
+  "description": "Schema-only template for a callout component.",
+  "metadata": {
+    "id": "interface/component/callout",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=callout"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/component',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/callout/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/callout/cover.png",
+    "installationUrl": "croct://interface/component/callout",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/callout/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "callout": {
+            "name": "Callout",
+            "description": "A component to highlight important information.",
+            "schema": "${import('./configuration/callout-schema.json')}"
+          }
+        },
+        "slots": {
+          "callout": {
+            "name": "Callout",
+            "component": "callout",
+            "content": {
+              "en": "${import('./configuration/callout-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

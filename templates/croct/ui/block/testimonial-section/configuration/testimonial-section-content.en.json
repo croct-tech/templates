@@ -1,0 +1,95 @@
+{
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor"
+      }
+    },
+    "testimonials": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/6722cc29-0f35-4cd0-82c8-1c18da95f732"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/17143dc3-6197-4e39-9474-0d91b633f170"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "quote": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            },
+            "author": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "headshot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/6b9ce032-6014-48ab-a12b-e68a1ba94526"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Logo cloud",
+  "description": "Schema-only template for an logo cloud section.",
+  "metadata": {
+    "id": "interface/section/logo-cloud",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=logo_cloud"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/logo-cloud/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/logo-cloud/cover.png",
+    "installationUrl": "croct://interface/section/logo-cloud",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/logo-cloud/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "logo-cloud": {
+            "name": "Logo cloud",
+            "description": "A section of ordered logos.",
+            "schema": "${import('./configuration/logo-cloud-schema.json')}"
+          }
+        },
+        "slots": {
+          "logo-cloud": {
+            "name": "Logo cloud",
+            "component": "logo-cloud",
+            "content": {
+              "en": "${import('./configuration/logo-cloud-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Form field",
+  "attributes": {
+    "type": {
+      "type": {
+        "type": "text",
+        "choices": {
+          "url": {
+            "label": "URL field",
+            "position": 4,
+            "description": "A field for entering a URL."
+          },
+          "text": {
+            "label": "Text field",
+            "position": 1,
+            "description": "A field for entering plain text."
+          },
+          "email": {
+            "label": "Email field",
+            "position": 2,
+            "description": "A field for entering an email."
+          },
+          "phone": {
+            "label": "Phone field",
+            "position": 3,
+            "description": "A field for entering a phone number."
+          },
+          "selectbox": {
+            "label": "Select box",
+            "position": 5,
+            "description": "A field with list of predefined values."
+          }
+        }
+      },
+      "label": "Field type",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The type of the field."
+    },
+    "label": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Label",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The label of the field."
+    },
+    "required": {
+      "type": {
+        "type": "boolean",
+        "label": {
+          "true": "Required",
+          "false": "Optional"
+        },
+        "default": true
+      },
+      "label": "Required?",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "Whether the field is required or can be left empty."
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Image",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "An image or icon to display alongside the title."
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The title inside the modal dialog."
+    },
+    "primaryCta": {
+      "type": {
+        "id": "cta",
+        "type": "reference"
+      },
+      "label": "Primary call to action",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The primary call to action button."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The description inside the modal dialog."
+    },
+    "dismissable": {
+      "type": {
+        "type": "boolean",
+        "label": {
+          "true": "Yes",
+          "false": "No"
+        },
+        "default": false
+      },
+      "label": "Dismissable",
+      "private": false,
+      "optional": true,
+      "position": 5,
+      "description": "Whether to allow the user to close the modal dialog or not."
+    },
+    "secondaryCta": {
+      "type": {
+        "id": "cta",
+        "type": "reference"
+      },
+      "label": "Secondary call to action",
+      "private": false,
+      "optional": true,
+      "position": 4,
+      "description": "The secondary call to action button."
+    }
+  }
+}

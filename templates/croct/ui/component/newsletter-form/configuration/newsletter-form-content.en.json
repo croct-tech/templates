@@ -1,0 +1,76 @@
+{
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Subscribe to our newsletter"
+      }
+    },
+    "fields": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "type": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "text"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Name"
+              }
+            },
+            "required": {
+              "type": "boolean",
+              "value": {
+                "type": "static",
+                "value": true
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "type": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "email"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "E-mail"
+              }
+            },
+            "required": {
+              "type": "boolean",
+              "value": {
+                "type": "static",
+                "value": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ctaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Subscribe"
+      }
+    }
+  }
+}

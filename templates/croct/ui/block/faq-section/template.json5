@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "FAQ section",
+  "description": "Schema-only template for a FAQ section.",
+  "metadata": {
+    "id": "interface/section/faq-section",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=faq_section"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/cover.png",
+    "installationUrl": "croct://interface/section/faq-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "faq-section": {
+            "name": "FAQ section",
+            "description": "A section with an ordered list of questions and answers.",
+            "schema": "${import('./configuration/faq-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "faq-section": {
+            "name": "FAQ section",
+            "component": "faq-section",
+            "content": {
+              "en": "${import('./configuration/faq-section-content.en.json')}",
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

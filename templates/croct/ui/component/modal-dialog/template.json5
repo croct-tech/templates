@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Modal dialog",
+  "description": "Schema-only template for a modal dialog component.",
+  "metadata": {
+    "id": "interface/component/modal-dialog",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=modal_dialog"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/component',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/cover.png",
+    "installationUrl": "croct://interface/component/modal-dialog",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "modal-dialog": {
+            "name": "Modal dialog",
+            "description": "A modal dialog component.",
+            "schema": "${import('./configuration/modal-dialog-schema.json')}"
+          },
+        },
+        "slots": {
+          "modal-dialog": {
+            "name": "Modal dialog",
+            "component": "modal-dialog",
+            "content": {
+              "en": "${import('./configuration/modal-dialog-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

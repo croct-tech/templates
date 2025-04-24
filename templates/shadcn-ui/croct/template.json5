@@ -90,10 +90,6 @@
                 "router": "${options.router}",
               }
             },
-            {
-              "name": "change-directory",
-              "path": "${this.projectName}"
-            }
           ],
           "else": {
             "name": "fail",

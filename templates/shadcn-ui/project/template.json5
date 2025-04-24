@@ -65,55 +65,44 @@
      Issue: https://github.com/shadcn-ui/ui/issues/6767
    */
     {
-      "name": "change-directory",
-      "path": "${options.name}"
-    },
-    {
-      "name": "try",
-      "action": {
-        "name": "execute-package",
-        "package": "shadcn@latest",
-        "runner": "npm",
-        "arguments": ["init"],
-        "interactions": [
-          {
-            "when": "Would you like to start a new project?",
-            "then": ["[enter]"]
-          },
-          {
-            "when": "What is your project named?",
-            "then": ["${options.name}", "[enter]"]
-          },
-          {
-            "when": "You need to create a components.json file to add components. Proceed?",
-            "then": ["[enter]"]
-          },
-          {
-            "when": "How would you like to proceed?",
-            "then": ["[enter]"]
-          },
-          {
-            "when": "Which style would you like to use?",
-            "then": ["[enter]"]
-          },
-          {
-            "when": "Which color would you like to use as the base color?",
-            "then": ["[enter]"]
-          },
-          {
-            "when": "Would you like to use CSS variables for theming?",
-            "then": ["[enter]"]
-          },
-          {
-            "when": "You may now add components",
-            "final": true,
-          }
-        ]
-      },
-      "finally": {
-        "name": "change-directory",
-        "path": ".."
-      }
+      "name": "execute-package",
+      "package": "shadcn@latest",
+      "runner": "npm",
+      "arguments": ["init"],
+      "interactions": [
+        {
+          "when": "Would you like to start a new project?",
+          "then": ["[enter]"]
+        },
+        {
+          "when": "What is your project named?",
+          "then": ["${options.name}", "[enter]"]
+        },
+        {
+          "when": "You need to create a components.json file to add components. Proceed?",
+          "then": ["[enter]"]
+        },
+        {
+          "when": "How would you like to proceed?",
+          "then": ["[enter]"]
+        },
+        {
+          "when": "Which style would you like to use?",
+          "then": ["[enter]"]
+        },
+        {
+          "when": "Which color would you like to use as the base color?",
+          "then": ["[enter]"]
+        },
+        {
+          "when": "Would you like to use CSS variables for theming?",
+          "then": ["[enter]"]
+        },
+        {
+          "when": "Project initialization completed",
+          "final": true,
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,180 @@
+{
+  "type": "structure",
+  "attributes": {
+    "cards": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Lorem ipsum"
+                  }
+                },
+                "appearance": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "primary"
+                  }
+                }
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/3b0682c6-e142-47e0-8ec1-259c6a9470a1"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Lorem ipsum"
+                  }
+                },
+                "appearance": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "primary"
+                  }
+                }
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/319eeba7-21d1-4698-bff1-e5dcbebeec31"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Lorem ipsum"
+                  }
+                },
+                "appearance": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "primary"
+                  }
+                }
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/25d789dc-b1e6-43aa-8483-467fe6303ed1"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    }
+  }
+}

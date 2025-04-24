@@ -1,0 +1,33 @@
+{
+  "type": "structure",
+  "attributes": {
+    "autoplay": {
+      "type": "boolean",
+      "value": {
+        "type": "static",
+        "value": false
+      }
+    },
+    "controls": {
+      "type": "boolean",
+      "value": {
+        "type": "static",
+        "value": true
+      }
+    },
+    "videoUrl": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://example.com"
+      }
+    },
+    "thumbnail": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/63a0bcf8-a8af-43bc-ac39-c7aefc03c98a"
+      }
+    }
+  }
+}

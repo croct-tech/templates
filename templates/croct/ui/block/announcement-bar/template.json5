@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Announcement bar",
+  "description": "An example of an announcement bar setup.",
+  "metadata": {
+    "id": "interface/section/announcement-bar",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=announcement_bar"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/announcement-bar/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/announcement-bar/cover.png",
+    "installationUrl": "croct://interface/section/announcement-bar",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/announcement-bar/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "description": "A small text bar featured at the top of a page.",
+            "schema": "${import('./configuration/announcement-bar-schema.json')}"
+          }
+        },
+        "slots": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "component": "announcement-bar",
+            "content": {
+              "en": "${import('./configuration/announcement-bar-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

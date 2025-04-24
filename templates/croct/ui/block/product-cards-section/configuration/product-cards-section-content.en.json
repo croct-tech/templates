@@ -1,0 +1,180 @@
+{
+  "type": "structure",
+  "attributes": {
+    "cards": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Lorem ipsum"
+                  }
+                }
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/4ed0d2a8-07e4-4808-a5f5-a163aa114e48"
+              }
+            },
+            "price": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 99.99
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Lorem ipsum"
+                  }
+                }
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/4ed0d2a8-07e4-4808-a5f5-a163aa114e48"
+              }
+            },
+            "price": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 99.99
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Lorem ipsum"
+                  }
+                }
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/4ed0d2a8-07e4-4808-a5f5-a163aa114e48"
+              }
+            },
+            "price": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 99.99
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    }
+  }
+}

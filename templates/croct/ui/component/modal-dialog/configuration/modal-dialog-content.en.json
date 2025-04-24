@@ -1,0 +1,85 @@
+{
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/261232bd-74c4-4d00-a998-1210aded9e4b"
+      }
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor sit ame"
+      }
+    },
+    "primaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Lorem ipsum"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "dismissable": {
+      "type": "boolean",
+      "value": {
+        "type": "static",
+        "value": true
+      }
+    },
+    "secondaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Lorem ipsum"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    }
+  }
+}

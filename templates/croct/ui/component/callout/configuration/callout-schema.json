@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Callout",
+  "attributes": {
+    "cta": {
+      "type": {
+        "id": "cta",
+        "type": "reference"
+      },
+      "label": "Call to action",
+      "private": false,
+      "optional": true,
+      "position": 3,
+      "description": "The call to action button displayed in the callout."
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "A short, attention-grabbing title for the callout."
+    },
+    "content": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Content",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The main message or information displayed within the callout."
+    },
+    "semantics": {
+      "type": {
+        "type": "text",
+        "choices": {
+          "neutral": {
+            "label": "Neutral",
+            "default": true,
+            "position": 0,
+            "description": "For general or harmless information."
+          },
+          "cautious": {
+            "label": "Cautious",
+            "position": 2,
+            "description": "For warnings or actions needing careful consideration."
+          },
+          "positive": {
+            "label": "Positive",
+            "position": 3,
+            "description": "For successful actions or confirmations."
+          },
+          "informative": {
+            "label": "Informative",
+            "position": 1,
+            "description": " For important updates, news, or insights."
+          }
+        }
+      },
+      "label": "Semantics",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "Defines the semantics the callout."
+    },
+    "targetElement": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Target element",
+      "private": false,
+      "optional": false,
+      "position": 4,
+      "description": "Defines the page element where the callout is shown, for example #menu."
+    }
+  },
+  "description": "A component to highlight important information."
+}

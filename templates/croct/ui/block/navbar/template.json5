@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Navbar",
+  "description": "An example of a navbar setup.",
+  "metadata": {
+    "id": "interface/section/navbar",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=navbar"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'interface/menu',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/navbar/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/navbar/cover.png",
+    "installationUrl": "croct://interface/section/navbar",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/navbar/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "navbar": {
+            "name": "Navbar",
+            "description": "A section of links and CTAs featured at the top of a page.",
+            "schema": "${import('./configuration/navbar-schema.json')}"
+          }
+        },
+        "slots": {
+          "navbar": {
+            "name": "Navbar",
+            "component": "navbar",
+            "content": {
+              "en": "${import('./configuration/navbar-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

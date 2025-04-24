@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "FAQ section",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The title of the section."
+    },
+    "questions": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Answer",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The answer to the question."
+            },
+            "question": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Question",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The question in first person."
+            }
+          }
+        }
+      },
+      "label": "Questions",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The list of questions and answers."
+    }
+  },
+  "description": "A section with an ordered list of questions and answers."
+}

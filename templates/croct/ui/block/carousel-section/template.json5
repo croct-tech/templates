@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Carousel section",
+  "description": "An example of a carousel setup.",
+  "metadata": {
+    "id": "interface/section/carousel-section",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=carousel_section"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'use-case/e-commerce',
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/cover.png",
+    "installationUrl": "croct://interface/section/carousel-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "banner-image": {
+            "name": "Banner image",
+            "schema": "${import('./configuration/banner-image-schema.json')}"
+          },
+          "carousel-section": {
+            "name": "Carousel section",
+            "description": "A section of ordered banners.",
+            "schema": "${import('./configuration/carousel-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "carousel-section": {
+            "name": "Carousel section",
+            "component": "carousel-section",
+            "content": {
+              "en": "${import('./configuration/carousel-section-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

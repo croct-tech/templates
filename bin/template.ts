@@ -22,6 +22,7 @@ const categoryMap = {
     'framework/nextjs': 'Next.js',
     'framework/react': 'React',
     'interface/code': 'Code',
+    'interface/component': 'Component',
     'interface/feedback': 'Feedback',
     'interface/hero': 'Hero',
     'interface/marketing': 'Marketing',

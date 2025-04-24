@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Product cards section",
+  "description": "An example of a product cards section setup.",
+  "metadata": {
+    "id": "interface/section/product-cards-section",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=product_cards_section"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'use-case/e-commerce'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/product-cards-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/product-cards-section/cover.png",
+    "installationUrl": "croct://interface/section/product-cards-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/product-cards-section/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "product-cards": {
+            "name": "Product cards",
+            "description": "A section featuring product cards.",
+            "schema": "${import('./configuration/product-cards-schema.json')}"
+          }
+        },
+        "slots": {
+          "product-cards-section": {
+            "name": "Product cards section",
+            "component": "product-cards",
+            "content": {
+              "en": "${import('./configuration/product-cards-section-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

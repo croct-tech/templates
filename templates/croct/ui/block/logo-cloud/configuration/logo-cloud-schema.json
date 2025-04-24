@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Logo cloud",
+  "attributes": {
+    "logos": {
+      "type": {
+        "type": "list",
+        "items": {
+          "id": "@croct/file",
+          "type": "reference",
+          "properties": {}
+        },
+        "itemLabel": "Logo"
+      },
+      "label": "Logos",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The list of logos."
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The title displayed at the top of the list of logos."
+    },
+    "subtitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Subtitle",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The subtitle displayed bellow the title."
+    }
+  },
+  "description": "A section of ordered logos."
+}

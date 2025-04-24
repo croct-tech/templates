@@ -1,0 +1,158 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "items": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Ipsum"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Dolor"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Sit"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Amet"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "primaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Lorem ipsum"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    },
+    "secondaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Lorem ipsum"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "secondary"
+          }
+        }
+      }
+    }
+  }
+}

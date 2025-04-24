@@ -1,0 +1,59 @@
+{
+  "type": "structure",
+  "attributes": {
+    "cta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://example.com/"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Lorem ipsum"
+          }
+        },
+        "appearance": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "primary"
+          }
+        }
+      }
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor"
+      }
+    },
+    "content": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "semantics": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "neutral"
+      }
+    },
+    "targetElement": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "lorem-ipsum-id"
+      }
+    }
+  }
+}

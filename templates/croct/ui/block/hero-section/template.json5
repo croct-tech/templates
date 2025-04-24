@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Hero section",
+  "description": "An example of a hero section setup.",
+  "metadata": {
+    "id": "interface/section/hero-section",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.saas&utm_content=hero_section"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/section',
+      'interface/hero',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/cover.png",
+    "installationUrl": "croct://interface/section/hero-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "hero-section": {
+            "name": "Hero section",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/hero-section-content.en.json')}",
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

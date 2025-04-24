@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "link": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://example.com"
+      }
+    },
+    "text": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    },
+    "style": {
+      "type": "structure",
+      "attributes": {
+        "textColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#ffffff"
+          }
+        },
+        "backgroundColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#000000"
+          }
+        }
+      }
+    }
+  }
+}

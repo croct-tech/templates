@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Video player",
+  "description": "An example of a video player setup.",
+  "metadata": {
+    "id": "interface/component/video-player",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=video_player"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/component',
+      'use-case/e-commerce',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/cover.png",
+    "installationUrl": "croct://interface/component/video-player",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "video-player": {
+            "name": "Video player",
+            "description": "A video player component.",
+            "schema": "${import('./configuration/video-player-schema.json')}"
+          },
+        },
+        "slots": {
+          "video-player": {
+            "name": "Video player",
+            "component": "video-player",
+            "content": {
+              "en": "${import('./configuration/video-player-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

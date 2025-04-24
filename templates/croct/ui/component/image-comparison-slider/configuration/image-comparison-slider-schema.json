@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "firstImage": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "First image",
+      "private": false,
+      "optional": false,
+      "position": 0
+    },
+    "orientation": {
+      "type": {
+        "type": "text",
+        "choices": {
+          "vertical": {
+            "label": "Vertical",
+            "default": false,
+            "position": 1
+          },
+          "horizontal": {
+            "label": "Horizontal",
+            "default": true,
+            "position": 0
+          }
+        }
+      },
+      "label": "Orientation",
+      "private": false,
+      "optional": true,
+      "position": 3,
+      "description": "Whether to use horizontal or vertical orientation."
+    },
+    "secondImage": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Second image",
+      "private": false,
+      "optional": false,
+      "position": 1
+    },
+    "startPosition": {
+      "type": {
+        "type": "number",
+        "integer": true,
+        "maximum": 100,
+        "minimum": 0
+      },
+      "label": "Start position",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The initial delimiter position, from 0 to 100. The default is 50."
+    }
+  }
+}

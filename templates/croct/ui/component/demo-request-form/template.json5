@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Demo request form",
+  "description": "An example of a demo request form setup.",
+  "metadata": {
+    "id": "interface/component/demo-request-form",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=demo_request_form"
+    },
+    "categories": [
+      'interface/marketing',
+      'interface/component',
+      'use-case/saas'
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/cover.png",
+    "installationUrl": "croct://interface/component/demo-request-form",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/README.md"
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "form-field": {
+            "name": "Form field",
+            "schema": "${import('./configuration/form-field-schema.json')}"
+          },
+          "form": {
+            "name": "Form",
+            "description": "A form with fields.",
+            "schema": "${import('./configuration/form-schema.json')}"
+          }
+        },
+        "slots": {
+          "demo-request-form": {
+            "name": "Demo request form",
+            "component": "form",
+            "content": {
+              "en": "${import('./configuration/demo-request-form-content.en.json')}"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component and slot successfully created."
+    }
+  ]
+}

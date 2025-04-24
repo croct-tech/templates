@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Testimonials",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The title displayed at the top of the section."
+    },
+    "testimonials": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "logo": {
+              "type": {
+                "id": "@croct/file",
+                "type": "reference",
+                "properties": {}
+              },
+              "label": "Logo",
+              "private": false,
+              "optional": true,
+              "position": 3,
+              "description": "The logo of the company the author works for."
+            },
+            "quote": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Quote",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The quote or feedback from the customer."
+            },
+            "author": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Author",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The name or title of the person providing the testimonial."
+            },
+            "headshot": {
+              "type": {
+                "id": "@croct/file",
+                "type": "reference",
+                "properties": {}
+              },
+              "label": "Headshot",
+              "private": false,
+              "optional": true,
+              "position": 2,
+              "description": "The headshot of the author of the testimonial."
+            }
+          }
+        },
+        "itemLabel": "Testimonial"
+      },
+      "label": "Testimonials",
+      "private": false,
+      "optional": false,
+      "position": 1
+    }
+  },
+  "description": "A section featuring testimonials."
+}

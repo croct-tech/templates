@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Newsletter subscription form",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "position": 0,
+      "description": "The title that appears at the top of the form."
+    },
+    "fields": {
+      "type": {
+        "type": "list",
+        "items": {
+          "id": "form-field",
+          "type": "reference"
+        },
+        "itemLabel": "Field"
+      },
+      "label": "Fields",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The list of fields in the form."
+    },
+    "ctaLabel": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Call to action",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The label of the button that submits the form."
+    }
+  },
+  "description": "A form for subscribing to a newsletter."
+}

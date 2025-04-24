@@ -8,6 +8,13 @@
         {
           "type": "structure",
           "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/sale"
+              }
+            },
             "image": {
               "type": "text",
               "value": {

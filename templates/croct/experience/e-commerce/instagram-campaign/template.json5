@@ -22,7 +22,7 @@
       "resources": {
         "audiences": {
           "shoes-instagram-campaign": {
-            "name": "Shoes  Instagram campaign",
+            "name": "Shoes Instagram campaign",
             "criteria": "campaign's source is \"instagram\" and campaign's content matches \"shoes\""
           }
         },

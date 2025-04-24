@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Video player",
-  "description": "An example of a video player setup.",
+  "description": "Schema-only template for a video player component.",
   "metadata": {
     "id": "interface/component/video-player",
     "verified": true,

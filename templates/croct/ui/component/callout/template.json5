@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Callout",
-  "description": "An example of a callout setup.",
+  "description": "Schema-only template for a callout component.",
   "metadata": {
     "id": "interface/component/callout",
     "verified": true,

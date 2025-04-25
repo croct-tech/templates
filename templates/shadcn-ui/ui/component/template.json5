@@ -10,6 +10,7 @@
       "websiteUrl": "https://ui.shadcn.com?utm_source=croct"
     },
     "categories": [
+      "boilerplate/utility",
       "framework/nextjs",
       "framework/react",
       "language/javascript",

@@ -4,8 +4,8 @@ This template integrates [Shadcn UI](https://ui.shadcn.com/?utm_source=croct) co
 
 If Shadcn UI is not already configured, the template automatically handles the setup.
 
-> [!NOTE]
-> This template requires [Tailwind CSS](https://tailwindcss.com/?utm_source=croct) to be installed in the project, otherwise it will fail.
+> [!IMPORTANT Tailwind CSS required]
+> Make sure [Tailwind CSS](https://tailwindcss.com/docs/installation/using-vite?utm_source=croct) is set up before using this template.
 
 ## Usage
 

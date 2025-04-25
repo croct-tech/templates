@@ -2,7 +2,7 @@
 
 This template defines a personalized experience for SaaS visitors based on the first page they land on.
 
-By referencing the [session's landing page](https://docs.croct.com/reference/cql/data-types/session#web-session-landingpage-prop, it’s possible to infer visitor intent and adjust onsite content to create a consistent and relevant experience across the website.
+By referencing the [session's landing page](https://docs.croct.com/reference/cql/data-types/session#web-session-landingpage-prop), it’s possible to infer visitor intent and adjust onsite content to create a consistent and relevant experience across the website.
 
 ## What's included
 

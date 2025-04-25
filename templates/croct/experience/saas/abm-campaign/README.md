@@ -2,7 +2,7 @@
 
 This template defines a personalized experience for SaaS visitors coming from ABM campaigns.
 
-It leverages [UTM parameters](https://docs.croct.com/reference/cql/data-types/marketing from ad URLs to align onsite content with the visitor’s interests, creating a seamless and consistent journey from ad to landing page and beyond.
+It leverages [UTM parameters](https://docs.croct.com/reference/cql/data-types/marketing) from ad URLs to align onsite content with the visitor’s interests, creating a seamless and consistent journey from ad to landing page and beyond.
 
 ## What's included
 

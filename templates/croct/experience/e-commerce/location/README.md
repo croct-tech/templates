@@ -2,7 +2,7 @@
 
 This template defines a personalized experience for e-commerce visitors based on their current location.
 
-By leveraging [geographic information](https://docs.croct.com/reference/cql/data-types/location, content can be tailored to specific regions while maintaining a consistent navigation experience for visitors outside the targeted areas.
+By leveraging [geographic information](https://docs.croct.com/reference/cql/data-types/location), content can be tailored to specific regions while maintaining a consistent navigation experience for visitors outside the targeted areas.
 
 ## What's included
 

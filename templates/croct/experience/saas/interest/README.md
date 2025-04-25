@@ -1,6 +1,6 @@
 # Introduction
 
-This template defines a personalized experience for SaaS websites that uses data from multiple sources, such as onsite behavior and inferred [interests](https://docs.croct.com/reference/cql/data-types/user#user-interests-prop, to deliver tailored recommendations for products, blog posts, and other offerings.
+This template defines a personalized experience for SaaS websites that uses data from multiple sources, such as onsite behavior and inferred [interests](https://docs.croct.com/reference/cql/data-types/user#user-interests-prop), to deliver tailored recommendations for products, blog posts, and other offerings.
 
 ## What's included
 

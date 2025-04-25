@@ -1,11 +1,11 @@
 # Introduction
 
-A callout highlights key information or actions within a page to draw extra attention and guide user focus. Besides
-the static, generic content, it can also display personalized content for different audiences.
+A callout highlights key information or actions within a page, using contrasting styles to emphasize limited-time
+offers, important updates, feature highlights, or next steps in a user journey. It breaks the flow intentionally
+to ensure critical content stands out.
 
-Often styled with contrasting styles, callouts help emphasize limited-time offers, important updates,
-feature highlights, or the next steps in a user journey. This component breaks the flow intentionally to ensure
-critical content stands out.
+Personalizing callouts, such as showing different messages based on user stage or referral source, and AB testing
+variations in copy, placement, or design can improve visibility, relevance, and engagement.
 
 ## Usage
 

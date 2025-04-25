@@ -1,10 +1,13 @@
 # Introduction
 
-A card section organizes products, which can be personalized for different audiences, into visually distinct blocks.
+A card section organizes products into visually distinct blocks, typically arranged in a grid or carousel to enable
+quick browsing and comparison.
 
-Arranged in a grid or carousel, these cards allow for quick browsing and comparison across multiple offerings.
-Product cards are commonly used in e-commerce sites, feature pages, and landing pages to highlight key details
-and drive engagement or conversions.
+Common in e-commerce, feature pages, and landing pages, product cards highlight key details to drive engagement
+and conversions.
+
+Personalizing the products shown, such as surfacing items based on browsing history or purchase intent, and testing
+different layouts, imagery, or calls to action can improve relevance and boost performance.
 
 ## Usage
 

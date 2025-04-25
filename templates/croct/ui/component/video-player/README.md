@@ -8,7 +8,7 @@ play, pause, volume, fullscreen, and captions. Positioned in hero sections, feat
 content blocks, the video player adds a dynamic, engaging element to the page.
 
 > [!TIP Need the code?]
-> Explore popular React video player libraries in our [guide](https://blog.croct.com/post/best-react-video-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=video_player).
+> Explore popular React video player libraries in our [guide](https://blog.croct.com/post/best-react-video-libraries.
 
 ## Usage
 

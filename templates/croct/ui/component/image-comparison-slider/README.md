@@ -8,7 +8,7 @@ component allows users to explore changes clearly and engagingly. Typically plac
 the slider enhances visual storytelling by emphasizing contrast and impact.
 
 > [!TIP Need the code?]
-> Explore popular React comparison slider libraries in our [guide](https://blog.croct.com/post/best-react-before-after-image-comparison-slider-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=image_comparison_slider).
+> Explore popular React comparison slider libraries in our [guide](https://blog.croct.com/post/best-react-before-after-image-comparison-slider-libraries.
 
 ## Usage
 

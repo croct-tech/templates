@@ -8,7 +8,7 @@ streamlines the process of scheduling personalized product walkthroughs. Clear i
 and easy-to-fill fields encourage users to take the next step, moving them closer to conversion.
 
 > [!TIP Need the code?]
-> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=demo_request_form).
+> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries.
 
 ## Usage
 

@@ -8,7 +8,7 @@ Common use cases include forms, confirmations, alerts, or additional information
 it centers the user's focus on a specific task.
 
 > [!TIP Need the code?]
-> Explore popular React modal dialog libraries in our [guide](https://blog.croct.com/post/best-react-modal-dialog-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=modal_dialog).
+> Explore popular React modal dialog libraries in our [guide](https://blog.croct.com/post/best-react-modal-dialog-libraries.
 
 ## Usage
 

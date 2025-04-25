@@ -8,7 +8,7 @@ of highlights within limited space. By cycling through content, a carousel secti
 while maintaining visual interest and emphasizing multiple focal points.
 
 > [!TIP Need the code?]
-> Explore popular React carousel libraries in our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=carousel).
+> Explore popular React carousel libraries in our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries.
 
 ## Usage
 

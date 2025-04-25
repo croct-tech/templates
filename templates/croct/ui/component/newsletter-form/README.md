@@ -9,7 +9,7 @@ an email address and offering a clear call to action. A well-designed newsletter
 strengthen customer relationships, and keep the audience informed.
 
 > [!TIP Need the code?]
-> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=newsletter_form).
+> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries.
 
 ## Usage
 

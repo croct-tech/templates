@@ -11,6 +11,6 @@ user experience and support efficient site navigation.
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/navbar
 ```

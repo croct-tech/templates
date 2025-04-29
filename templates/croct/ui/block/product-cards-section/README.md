@@ -10,6 +10,6 @@ and drive engagement or conversions.
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/product-cards-section
 ```

@@ -10,6 +10,6 @@ This experience includes 2 components, a slot for a home hero section, and an ex
 
 To create a new experience using this template, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://experiment/all-users
 ```

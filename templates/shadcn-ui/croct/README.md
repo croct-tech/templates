@@ -7,13 +7,13 @@ It either initializes a [Next.js](https://nextjs.org/?utm_source=croct) project 
 
 To create a new project using this template, run:
 
-```js-pm
+```croct-cmd
 croct@latest use shadcn-ui://croct
 ```
 
 To specify a Next.js version, use the `version` option:
 
-```js-pm
+```croct-cmd
 croct@latest use shadcn-ui://croct --version=14
 ```
 

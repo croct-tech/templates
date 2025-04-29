@@ -14,6 +14,6 @@ it centers the user's focus on a specific task.
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/component/modal-dialog
 ```

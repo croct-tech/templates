@@ -12,6 +12,6 @@ details—ensures critical answers are accessible at key decision-making moments
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/faq-section
 ```

@@ -10,6 +10,6 @@ is often placed near testimonials, hero sections, or calls to action to reinforc
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/logo-cloud
 ```

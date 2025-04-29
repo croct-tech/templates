@@ -14,6 +14,6 @@ while maintaining visual interest and emphasizing multiple focal points.
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/carousel-section
 ```

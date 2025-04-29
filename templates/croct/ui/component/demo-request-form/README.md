@@ -14,6 +14,6 @@ and easy-to-fill fields encourage users to take the next step, moving them close
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/component/demo-request-form
 ```

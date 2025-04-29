@@ -14,6 +14,6 @@ content blocks, the video player adds a dynamic, engaging element to the page.
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/component/video-player
 ```

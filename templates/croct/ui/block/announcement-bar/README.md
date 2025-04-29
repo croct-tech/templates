@@ -12,6 +12,6 @@ visitor attention to essential information or next steps.
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/announcement-bar
 ```

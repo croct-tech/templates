@@ -14,6 +14,6 @@ user is not returning
 
 To create a new experience using this template, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://experiment/segmented-users
 ```

@@ -14,6 +14,6 @@ the slider enhances visual storytelling by emphasizing contrast and impact.
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/component/image-comparison-slider
 ```

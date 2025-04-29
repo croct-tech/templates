@@ -11,6 +11,6 @@ by providing social proof and reinforcing key messaging through relatable, persu
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/testimonial-section
 ```

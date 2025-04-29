@@ -9,13 +9,13 @@ It comes fully integrated with Croct, giving you CMS, A/B testing, and personali
 
 To create a new project using this template, run:
 
-```js-pm
+```croct-cmd
 croct@latest use magic-ui://ui/animated-list
 ```
 
 You can customize the template by specifying options:
 
-```js-pm
+```croct-cmd
 croct@latest use magic-ui://ui/animated-list --router=page
 ```
 

@@ -18,6 +18,6 @@ Define custom audiences using the [Contextual Query Language (CQL)](https://docs
 
 To create a new experience using this template, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://experience/e-commerce/landing-page
 ```

@@ -11,6 +11,6 @@ the hero section plays a key role in driving engagement and guiding visitors tow
 
 To add this component to your workspace, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/block/hero-section
 ```

@@ -6,13 +6,13 @@ This template sets up a project using [Next.js](https://nextjs.org/?utm_source=c
 
 To create a new project using this template, run:
 
-```js-pm
+```croct-cmd
 croct@latest use nextjs://project
 ```
 
 To specify a Next.js version, use the `version` option:
 
-```js-pm
+```croct-cmd
 croct@latest use nextjs://project --version=14
 ```
 

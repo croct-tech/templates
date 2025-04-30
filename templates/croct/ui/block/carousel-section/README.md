@@ -1,14 +1,15 @@
 # Introduction
 
-A carousel section displays multiple banners in a rotating, swipeable format. Besides the static,
-generic set of banners, it can also display personalized content for different audiences.
+A carousel section displays multiple banners in a rotating, swipeable format.
 
-Positioned prominently on home pages, landing pages, or product sections, it allows for showcasing a variety
-of highlights within limited space. By cycling through content, a carousel section keeps the layout dynamic
-while maintaining visual interest and emphasizing multiple focal points.
+Often used on home pages, landing pages, or product sections to showcase various highlights within limited space,
+it helps keep the layout dynamic and maintains visual interest.
+
+Running AB tests on banner order, visuals, or messaging and personalizing the banners based on audience segments,
+such as showing different promotions by source, device, or behavior, can increase engagement and conversion.
 
 > [!TIP Need the code?]
-> Explore popular React carousel libraries in our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=carousel).
+> Explore popular React carousel libraries in our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries.
 
 ## Usage
 

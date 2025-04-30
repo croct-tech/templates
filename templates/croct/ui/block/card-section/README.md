@@ -1,10 +1,10 @@
 # Introduction
 
-A card section organizes content, which can be personalized for different audiences, into visually distinct blocks.
+A card section organizes content into visually distinct blocks, ideal for showcasing features, services, or articles in
+a clean, scannable format.
 
-This layout presents multiple offerings—such as features, services, or articles—in a clean and scannable format.
-The call-to-action in each card encourages further interaction, making this section ideal for guiding visitors
-toward deeper exploration or conversion.
+AB testing different arrangements or messaging within cards and personalizing the card content based on user behavior or
+segment, such as showing relevant features to returning visitors, can increase relevance, engagement, and performance.
 
 ## Usage
 

@@ -8,7 +8,7 @@
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
-      "websiteUrl": "https://croct.com?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.e_commerce&utm_content=instagram_campaign"
+      "websiteUrl": "https://croct.com"
     },
     "categories": ["use-case/e-commerce"],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/instagram-campaign/template.json5",

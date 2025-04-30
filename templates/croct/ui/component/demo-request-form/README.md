@@ -1,14 +1,16 @@
 # Introduction
 
-A demo request form allows potential customers to request a live product or service demonstration. Besides the static,
-generic form structure and fields, it can also display a personalized form for different audiences.
+A demo request form allows potential customers to request a live product or service demonstration.
 
-Typically including fields for basic information like name, email, company, and preferred demo time, this form
-streamlines the process of scheduling personalized product walkthroughs. Clear instructions, a compelling offer,
-and easy-to-fill fields encourage users to take the next step, moving them closer to conversion.
+It typically collects basic information like name, email, company, and preferred demo time and offers clear
+instructions, a compelling offer, and easy-to-fill fields to help streamline the scheduling process and move users
+closer to conversion.
+
+Personalizing the form, such as pre-filling fields based on known data, adapting messaging by audience segment, and
+AB testing different layouts or incentives, can increase form completion rates and accelerate the sales pipeline.
 
 > [!TIP Need the code?]
-> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=demo_request_form).
+> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries.
 
 ## Usage
 

@@ -13,7 +13,7 @@
     "categories": ["use-case/e-commerce"],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/search-campaign/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/search-campaign/cover.png",
-    "installationUrl": "croct://use-case/e-commerce/search-campaign",
+    "installationUrl": "croct://experience/e-commerce/search-campaign",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/search-campaign/README.md"
   },
   "actions": [

@@ -13,7 +13,7 @@
     "categories": ["use-case/experiment"],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/segmented/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/segmented/cover.png",
-    "installationUrl": "croct://use-case/experiment/segmented",
+    "installationUrl": "croct://experiment/segmented",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/segmented/README.md"
   },
   "actions": [

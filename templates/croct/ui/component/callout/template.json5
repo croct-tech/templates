@@ -18,7 +18,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/callout/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/callout/cover.png",
-    "installationUrl": "croct://interface/component/callout",
+    "installationUrl": "croct://ui/component/callout",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/callout/README.md"
   },
   "actions": [

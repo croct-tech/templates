@@ -19,7 +19,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/navbar/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/navbar/cover.png",
-    "installationUrl": "croct://interface/component/navbar",
+    "installationUrl": "croct://ui/component/navbar",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/navbar/README.md"
   },
   "actions": [

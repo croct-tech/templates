@@ -17,7 +17,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/cards-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/cards-section/cover.png",
-    "installationUrl": "croct://interface/section/cards-section",
+    "installationUrl": "croct://ui/block/cards-section",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/cards-section/README.md"
   },
   "actions": [

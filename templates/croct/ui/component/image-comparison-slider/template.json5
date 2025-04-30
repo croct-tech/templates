@@ -18,7 +18,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/cover.png",
-    "installationUrl": "croct://interface/component/image-comparison-slider",
+    "installationUrl": "croct://ui/component/image-comparison-slider",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/README.md"
   },
   "actions": [

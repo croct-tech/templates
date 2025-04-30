@@ -17,7 +17,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/cover.png",
-    "installationUrl": "croct://interface/component/demo-request-form",
+    "installationUrl": "croct://ui/component/demo-request-form",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/README.md"
   },
   "actions": [

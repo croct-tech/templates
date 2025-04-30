@@ -13,7 +13,7 @@
     "categories": ["use-case/e-commerce"],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/interest/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/interest/cover.png",
-    "installationUrl": "croct://use-case/e-commerce/interest",
+    "installationUrl": "croct://experience/e-commerce/interest",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/interest/README.md"
   },
   "actions": [

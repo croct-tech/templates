@@ -18,7 +18,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/cover.png",
-    "installationUrl": "croct://interface/section/faq-section",
+    "installationUrl": "croct://ui/block/faq-section",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/README.md"
   },
   "actions": [

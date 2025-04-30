@@ -13,7 +13,7 @@
     "categories": ["use-case/saas"],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/interest/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/interest/cover.png",
-    "installationUrl": "croct://use-case/saas/interest",
+    "installationUrl": "croct://experience/saas/interest",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/interest/README.md"
   },
   "actions": [

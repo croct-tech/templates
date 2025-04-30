@@ -17,7 +17,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/cover.png",
-    "installationUrl": "croct://interface/section/carousel-section",
+    "installationUrl": "croct://ui/block/carousel-section",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/README.md"
   },
   "actions": [

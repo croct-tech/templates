@@ -19,7 +19,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/cover.png",
-    "installationUrl": "croct://interface/section/testimonial-section",
+    "installationUrl": "croct://ui/block/testimonial-section",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/README.md"
   },
   "actions": [

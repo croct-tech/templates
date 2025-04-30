@@ -18,7 +18,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/cover.png",
-    "installationUrl": "croct://interface/section/hero-section",
+    "installationUrl": "croct://ui/block/hero-section",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/README.md"
   },
   "actions": [

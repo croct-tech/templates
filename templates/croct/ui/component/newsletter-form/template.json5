@@ -18,7 +18,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/newsletter-form/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/newsletter-form/cover.png",
-    "installationUrl": "croct://interface/component/newsletter-form",
+    "installationUrl": "croct://ui/component/newsletter-form",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/newsletter-form/README.md"
   },
   "actions": [

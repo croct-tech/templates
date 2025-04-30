@@ -18,7 +18,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/cover.png",
-    "installationUrl": "croct://interface/component/modal-dialog",
+    "installationUrl": "croct://ui/component/modal-dialog",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/README.md"
   },
   "actions": [

@@ -13,7 +13,7 @@
     "categories": ["use-case/saas"],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/cover.png",
-    "installationUrl": "croct://use-case/saas/abm-campaign",
+    "installationUrl": "croct://experience/saas/abm-campaign",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/README.md"
   },
   "actions": [

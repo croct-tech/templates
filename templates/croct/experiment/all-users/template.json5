@@ -15,7 +15,7 @@
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/cover.png",
-    "installationUrl": "croct://use-case/experiment/all-users",
+    "installationUrl": "croct://experiment/all-users",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/README.md"
   },
   "actions": [

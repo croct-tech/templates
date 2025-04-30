@@ -10,7 +10,7 @@ Personalizing the form, such as pre-filling fields based on known data, adapting
 AB testing different layouts or incentives, can increase form completion rates and accelerate the sales pipeline.
 
 > [!TIP Need the code?]
-> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries.
+> Explore popular React form libraries in our [guide](https://blog.croct.com/post/best-react-form-libraries).
 
 ## Usage
 

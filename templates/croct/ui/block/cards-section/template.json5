@@ -1,9 +1,9 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Card section",
-  "description": "Schema-only template for a card section.",
+  "title": "Cards section",
+  "description": "Schema-only template for a cards section.",
   "metadata": {
-    "id": "interface/section/card-section",
+    "id": "interface/section/cards-section",
     "verified": true,
     "author": {
       "name": "Croct",
@@ -15,10 +15,10 @@
       'interface/section',
       'use-case/saas'
     ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/card-section/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/card-section/cover.png",
-    "installationUrl": "croct://interface/section/card-section",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/card-section/README.md"
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/cards-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/cards-section/cover.png",
+    "installationUrl": "croct://interface/section/cards-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/cards-section/README.md"
   },
   "actions": [
     {
@@ -37,11 +37,11 @@
           }
         },
         "slots": {
-          "card-section": {
-            "name": "Card section",
+          "cards-section": {
+            "name": "Cards section",
             "component": "content-cards",
             "content": {
-              "en": "${import('./configuration/card-section-content.en.json')}"
+              "en": "${import('./configuration/cards-section-content.en.json')}"
             }
           }
         }

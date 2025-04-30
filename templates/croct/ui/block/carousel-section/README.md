@@ -9,7 +9,7 @@ Running AB tests on banner order, visuals, or messaging and personalizing the ba
 such as showing different promotions by source, device, or behavior, can increase engagement and conversion.
 
 > [!TIP Need the code?]
-> Explore popular React carousel libraries in our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries.
+> Explore popular React carousel libraries in our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries).
 
 ## Usage
 

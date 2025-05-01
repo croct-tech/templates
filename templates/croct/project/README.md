@@ -1,19 +1,19 @@
 # Introduction
 
-This template sets up a project using [Next.js](https://nextjs.org/?utm_source=croct), [Tailwind CSS](https://tailwindcss.com/?utm_source=croct) and [Shadcn UI](https://ui.shadcn.com/?utm_source=croct).
+This template integrates Croct in an existing project or creates a new [Next.js](https://nextjs.org/) project already integrated with Croct.
 
 ## Usage
 
-To create a new project using this template, run:
+Run the following command to integrate Croct into an existing project:
 
 ```croct-cmd
-croct@latest use shadcn-ui://project
+croct@latest use croct://project
 ```
 
 To specify a Next.js version, use the `version` option:
 
 ```croct-cmd
-croct@latest use shadcn-ui://project --version=14
+croct@latest use croct://project --version=14
 ```
 
 ## Options

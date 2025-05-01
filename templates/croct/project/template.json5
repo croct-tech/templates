@@ -1,0 +1,107 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Croct project",
+  "description": "A template for creating or integrating a Croct project.",
+  "metadata": {
+    "id": "boilerplate/starter/croct-project",
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs-croct",
+      "boilerplate/starter/shadcn-croct",
+    ],
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/cover.png",
+    "installationUrl": "croct://project",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/README.md"
+  },
+  "options": {
+    "projectName": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-app"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${project.platform === 'unknown'}",
+      "then": [
+        {
+          "name": "print",
+          "semantics": "info",
+          "message": "No project found in the current directory",
+        },
+        {
+          "name": "prompt",
+          "type": "confirmation",
+          "message": "Start a new project?",
+          "default": true,
+          "result": "createProject"
+        },
+        {
+          "name": "test",
+          "condition": "${this.createProject}",
+          "then": [
+            {
+              "name": "define",
+              "variables": {
+                "projectName": "${options.projectName}"
+              }
+            },
+            {
+              "name": "import",
+              "template": "croct:/utils/filename-generator",
+              "options": {
+                "reference": "projectName",
+              }
+            },
+            {
+              "name": "import",
+              "template": "nextjs:/croct",
+              "options": {
+                "name": "${this.projectName}",
+                "version": "${options.version}",
+                "router": "${options.router}",
+              }
+            },
+          ],
+          "else": {
+            "name": "fail",
+            "title": "Project not found",
+            "message": "Unable to locate a project in the current directory.",
+            "suggestions": [
+              "Navigate to the project directory and try again."
+            ]
+          }
+        }
+      ],
+      "else": [
+        {
+          "name": "initialize"
+        }
+      ]
+    }
+  ]
+}

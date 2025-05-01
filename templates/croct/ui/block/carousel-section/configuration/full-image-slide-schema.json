@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/content-schema.json",
   "type": "structure",
-  "title": "Full Image Slide",
+  "title": "Full-image slide",
   "attributes": {
     "url": {
       "type": {

@@ -22,6 +22,104 @@
   },
   "actions": [
     {
+      "name": "import",
+      "template": "croct://project",
+      "options": {
+        "projectName": "carousel-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "disableLauncher": true,
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript",
+        }
+      ],
+      "help": {
+        "message": "This template requires a TypeScript project.",
+        "suggestions": [
+          "Run in an empty folder to create a new TypeScript project.",
+        ]
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": ["@croct/template-ui"]
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/header.module.css",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/header.tsx",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/product-grid.module.css",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/product-grid.tsx",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/carousel.module.css",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/carousel.tsx",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "define",
+      "variables": {
+        "routePath": "carousel",
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${this.routePath}",
+        "exampleFile": "${{\
+          nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx',\
+          react: 'page.tsx',\
+        }[project.platform]}",
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "examplePath": "${this.exampleDirectory}/${this.exampleFile}",
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/page.module.css",
+      "destination": "${this.exampleDirectory}"
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/${project.platform}/${this.exampleFile}",
+      "destination": "${this.exampleDirectory}",
+    },
+    {
       "name": "create-resource",
       "resources": {
         "components": {
@@ -34,15 +132,15 @@
             "schema": "${import('./configuration/slide-schema.json')}"
           },
           "full-image-slide": {
-            "name": "Full Image Slide",
+            "name": "Full-image slide",
             "schema": "${import('./configuration/full-image-slide-schema.json')}"
           },
           "side-image-slide": {
-            "name": "Side Image Slide",
+            "name": "Side-image slide",
             "schema": "${import('./configuration/side-image-slide-schema.json')}"
           },
           "hero-slide": {
-            "name": "Hero Slide",
+            "name": "Hero slide",
             "schema": "${import('./configuration/hero-slide-schema.json')}"
           }
         },
@@ -58,9 +156,48 @@
       }
     },
     {
+      "name": "add-slot",
+      "slots": ["${this.slotId}"]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.examplePath}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this.slotId}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this.slotVersion}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            },
+          ]
+        }
+      ]
+    },
+    {
       "name": "print",
       "semantics": "success",
-      "message": "Component and slot successfully created."
-    }
+      "message": "Component successfully imported at `${this.exampleDirectory}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct:/utils/example-launcher",
+          "options": {
+            "path": "${this.routePath}",
+          }
+        },
+      ]
+    },
   ]
 }

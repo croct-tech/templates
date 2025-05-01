@@ -25,14 +25,25 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "banner-image": {
-            "name": "Banner image",
-            "schema": "${import('./configuration/banner-image-schema.json')}"
-          },
           "carousel-section": {
             "name": "Carousel section",
-            "description": "A section of ordered banners.",
             "schema": "${import('./configuration/carousel-section-schema.json')}"
+          },
+          "slide": {
+            "name": "Slide",
+            "schema": "${import('./configuration/slide-schema.json')}"
+          },
+          "full-image-slide": {
+            "name": "Full Image Slide",
+            "schema": "${import('./configuration/full-image-slide-schema.json')}"
+          },
+          "side-image-slide": {
+            "name": "Side Image Slide",
+            "schema": "${import('./configuration/side-image-slide-schema.json')}"
+          },
+          "hero-slide": {
+            "name": "Hero Slide",
+            "schema": "${import('./configuration/hero-slide-schema.json')}"
           }
         },
         "slots": {

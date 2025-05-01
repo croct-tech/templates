@@ -1,95 +1,355 @@
 {
   "type": "structure",
   "attributes": {
-    "banners": {
+    "slides": {
       "type": "list",
       "items": [
         {
+          "name": "hero-slide",
           "type": "structure",
           "attributes": {
-            "link": {
-              "type": "text",
-              "value": {
-                "type": "static",
-                "value": "https://example.com"
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "/shop"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Shop Now"
+                  }
+                }
               }
             },
-            "image": {
+            "media": {
+              "type": "structure",
+              "attributes": {
+                "videoUrl": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/7fcb7b26-c543-436f-a204-5f6de14f4d27"
+                  }
+                }
+              }
+            },
+            "offer": {
+              "type": "structure",
+              "attributes": {
+                "price": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 129
+                  }
+                },
+                "coupon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "SUMMER25"
+                  }
+                },
+                "originalPrice": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 179
+                  }
+                }
+              }
+            },
+            "style": {
+              "type": "structure",
+              "attributes": {
+                "textColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#FFF"
+                  }
+                },
+                "accentColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#000"
+                  }
+                },
+                "backgroundColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#000"
+                  }
+                }
+              }
+            },
+            "title": {
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/8961d769-5a64-4c3f-a230-11fd06111bdc"
+                "value": "JUST DO IT"
+              }
+            },
+            "subtitle": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "New Arrivals for Summer"
               }
             }
           }
         },
         {
+          "name": "hero-slide",
           "type": "structure",
           "attributes": {
-            "link": {
-              "type": "text",
-              "value": {
-                "type": "static",
-                "value": "https://example.com"
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "/shop"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Shop Collection"
+                  }
+                }
               }
             },
-            "image": {
+            "media": {
+              "type": "structure",
+              "attributes": {
+                "imageUrl": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/745d1b5a-ad61-49e3-a4f1-7ad9446f8125"
+                  }
+                }
+              }
+            },
+            "offer": {
+              "type": "structure",
+              "attributes": {
+                "price": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 149
+                  }
+                },
+                "coupon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "STYLE25"
+                  }
+                },
+                "originalPrice": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 189
+                  }
+                }
+              }
+            },
+            "style": {
+              "type": "structure",
+              "attributes": {
+                "centered": {
+                  "type": "boolean",
+                  "value": {
+                    "type": "static",
+                    "value": true
+                  }
+                },
+                "textColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#FFF"
+                  }
+                },
+                "accentColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#000"
+                  }
+                },
+                "backgroundColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#000"
+                  }
+                },
+                "backgroundMediaBlur": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 3
+                  }
+                },
+                "backgroundMediaOpacity": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 0.5
+                  }
+                }
+              }
+            },
+            "title": {
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/8961d769-5a64-4c3f-a230-11fd06111bdc"
+                "value": "STYLE MEETS PERFORMANCE"
+              }
+            },
+            "subtitle": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "The latest lifestyle essentials"
               }
             }
           }
         },
         {
+          "name": "side-image-slide",
           "type": "structure",
           "attributes": {
-            "link": {
-              "type": "text",
-              "value": {
-                "type": "static",
-                "value": "https://example.com"
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "url": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "/shop"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Get Started"
+                  }
+                }
               }
             },
             "image": {
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/8961d769-5a64-4c3f-a230-11fd06111bdc"
+                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/45cd5f72-ca8f-456d-9ed7-5678c6c74916"
+              }
+            },
+            "offer": {
+              "type": "structure",
+              "attributes": {
+                "price": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 89
+                  }
+                },
+                "coupon": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "TRAIN30"
+                  }
+                },
+                "originalPrice": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 129
+                  }
+                }
+              }
+            },
+            "style": {
+              "type": "structure",
+              "attributes": {
+                "textColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#FFF"
+                  }
+                },
+                "backgroundColor": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#111"
+                  }
+                }
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "TRAIN HARDER"
+              }
+            },
+            "subtitle": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Gear up for your best workout"
+              }
+            }
+          }
+        },
+        {
+          "name": "full-image-slide",
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/shop"
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/66a4cd25-7f9c-426d-802e-36a9172918b3"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "ELEVATE YOUR GAME"
               }
             }
           }
         }
       ]
-    },
-    "autoplay": {
-      "type": "boolean",
-      "value": {
-        "type": "static",
-        "value": true
-      }
-    },
-    "headline": {
-      "type": "text",
-      "value": {
-        "type": "static",
-        "value": "Lorem ipsum dolor"
-      }
-    },
-    "description": {
-      "type": "text",
-      "value": {
-        "type": "static",
-        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      }
-    },
-    "pauseOnHover": {
-      "type": "boolean",
-      "value": {
-        "type": "static",
-        "value": true
-      }
     }
   }
 }

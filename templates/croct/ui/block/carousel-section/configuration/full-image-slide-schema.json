@@ -1,26 +1,35 @@
 {
   "$schema": "https://schema.croct.com/json/v1/content-schema.json",
   "type": "structure",
+  "title": "Full Image Slide",
   "attributes": {
-    "link": {
+    "url": {
       "type": {
         "type": "text",
-        "format": "url"
+        "minimumLength": 1
       },
       "label": "Link",
       "private": false,
-      "optional": true,
-      "position": 1
+      "optional": false,
+      "position": 2
     },
     "image": {
       "type": {
         "id": "@croct/file",
         "type": "reference",
-        "properties": {
-          "maximumSize": 307200
-        }
+        "properties": {}
       },
       "label": "Image",
+      "private": false,
+      "optional": false,
+      "position": 1
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
       "private": false,
       "optional": false,
       "position": 0

@@ -1,4 +1,4 @@
-import styles from '?/product-grid.module.css'
+import styles from '?/./product-grid.module.css'
 
 export function ProductGrid() {
   const skeletonItems = Array.from({length: 4}, (_, index) => index)

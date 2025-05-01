@@ -136,14 +136,6 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "carousel-section": {
-            "name": "Carousel section",
-            "schema": "${import('./configuration/carousel-section-schema.json')}"
-          },
-          "slide": {
-            "name": "Slide",
-            "schema": "${import('./configuration/slide-schema.json')}"
-          },
           "full-image-slide": {
             "name": "Full-image slide",
             "schema": "${import('./configuration/full-image-slide-schema.json')}"
@@ -155,6 +147,14 @@
           "hero-slide": {
             "name": "Hero slide",
             "schema": "${import('./configuration/hero-slide-schema.json')}"
+          },
+          "slide": {
+            "name": "Slide",
+            "schema": "${import('./configuration/slide-schema.json')}"
+          },
+          "carousel-section": {
+            "name": "Carousel section",
+            "schema": "${import('./configuration/carousel-section-schema.json')}"
           }
         },
         "slots": {

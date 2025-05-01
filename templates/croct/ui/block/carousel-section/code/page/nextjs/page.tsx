@@ -1,7 +1,7 @@
-import styles from '?/page.module.css';
-import { Header } from '?/**/*/header';
-import { ProductGrid } from '?/**/*/product-grid'
-import { Carousel } from '?/**/*/carousel';
+import styles from '?/./page.module.css';
+import { Header } from '?/**/*/header.tsx';
+import { ProductGrid } from '?/**/*/product-grid.tsx'
+import { Carousel } from '?/**/*/carousel.tsx';
 import { fetchContent } from '@croct/plug-next/server'
 
 export default async function Home() {

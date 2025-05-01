@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect, type CSSProperties, type TouchEventHandler } from 'react'
-import styles from '?/carousel.module.css'
+import styles from '?/./carousel.module.css'
 
 type Offer = {
   price?: number
@@ -25,7 +25,7 @@ interface ImageCarouselProps {
   slides: Slide[]
 }
 
-export default function Carousel({ slides }: ImageCarouselProps) {
+export function Carousel({ slides }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [touchStart, setTouchStart] = useState(0)
   const [touchEnd, setTouchEnd] = useState(0)

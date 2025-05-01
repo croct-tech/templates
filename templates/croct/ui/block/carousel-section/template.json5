@@ -20,6 +20,19 @@
     "installationUrl": "croct://ui/block/carousel-section",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/README.md"
   },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": ["13", "14", "15", "latest"]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": ["app", "page"],
+      "default": "app"
+    }
+  },
   "actions": [
     {
       "name": "import",

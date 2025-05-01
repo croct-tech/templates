@@ -1,3 +1,5 @@
+import type { GetServerSideProps } from "next"
+import type { SlotContent } from "@croct/plug-next"
 import styles from "?/./page.module.css";
 import { Header } from "?/**/*/header.tsx";
 import { ProductGrid } from "?/**/*/product-grid.tsx"
@@ -5,9 +7,15 @@ import { Carousel } from "?/**/*/carousel.tsx";
 import { fetchContent } from "@croct/plug-next/server"
 import { LinkButton } from "@croct/template-ui/react"
 
-export default async function Page() {
-  const {content} = await fetchContent("%slotId%@%slotVersion%");
+export type PageProps = {
+  content: SlotContent<'%slotId%@%slotVersion%'>
+}
 
+export const getServerSideProps: GetServerSideProps<PageProps> = async context => ({
+  props: await fetchContent('%slotId%@%slotVersion%', {route: context})
+});
+
+export default function Page({content}: PageProps) {
   return (
     <>
       <main className={styles.main}>

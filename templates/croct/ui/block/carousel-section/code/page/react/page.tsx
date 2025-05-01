@@ -2,11 +2,11 @@ import styles from "?/./page.module.css";
 import { Header } from "?/**/*/header.tsx";
 import { ProductGrid } from "?/**/*/product-grid.tsx"
 import { Carousel } from "?/**/*/carousel.tsx";
-import { fetchContent } from "@croct/plug-next/server"
 import { LinkButton } from "@croct/template-ui/react"
+import { useContent } from "@croct/plug-react"
 
-export default async function Page() {
-  const {content} = await fetchContent("%slotId%@%slotVersion%");
+export default function Page() {
+  const content = useContent('%slotId%@%slotVersion%');
 
   return (
     <>

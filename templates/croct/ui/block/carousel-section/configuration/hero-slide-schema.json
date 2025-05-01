@@ -31,7 +31,7 @@
       },
       "label": "CTA",
       "private": false,
-      "optional": true,
+      "optional": false,
       "position": 3
     },
     "media": {

@@ -6,7 +6,7 @@
       "type": "list",
       "items": [
         {
-          "name": "hero-slide",
+          "name": "hero",
           "type": "structure",
           "attributes": {
             "cta": {
@@ -109,7 +109,7 @@
           }
         },
         {
-          "name": "hero-slide",
+          "name": "hero",
           "type": "structure",
           "attributes": {
             "cta": {
@@ -233,7 +233,7 @@
           }
         },
         {
-          "name": "side-image-slide",
+          "name": "side-image",
           "type": "structure",
           "attributes": {
             "cta": {
@@ -324,7 +324,7 @@
           }
         },
         {
-          "name": "full-image-slide",
+          "name": "full-image",
           "type": "structure",
           "attributes": {
             "url": {

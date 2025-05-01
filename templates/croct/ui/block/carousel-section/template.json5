@@ -166,6 +166,14 @@
             }
           }
         }
+      },
+      "result": {
+        "slots": {
+          "carousel-section": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
       }
     },
     {

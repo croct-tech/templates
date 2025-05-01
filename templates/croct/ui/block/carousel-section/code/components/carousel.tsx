@@ -1,7 +1,7 @@
-'use client'
+"use client"
 
-import { useState, useRef, useEffect, type CSSProperties, type TouchEventHandler } from 'react'
-import styles from '?/./carousel.module.css'
+import { useState, useRef, useEffect, type CSSProperties, type TouchEventHandler } from "react"
+import styles from "?/./carousel.module.css"
 
 type Offer = {
   price?: number
@@ -10,9 +10,9 @@ type Offer = {
 }
 
 type SlideMap = {
-  'hero': HeroSlideProps
-  'side-image': SideImageSlideProps
-  'full-image': FullImageSlideProps
+  "hero": HeroSlideProps
+  "side-image": SideImageSlideProps
+  "full-image": FullImageSlideProps
 }
 
 export type Slide<L extends keyof SlideMap = keyof SlideMap> = {
@@ -94,16 +94,16 @@ export function Carousel({ slides }: ImageCarouselProps) {
     }
   }
 
-  const renderSlideContent = (slide: Slide) => {
+  const renderSlideContent = (slide: Slide, key: number) => {
     switch (slide.layout) {
       case "hero":
-        return <HeroSlide {...slide} />
+        return <HeroSlide key={key} {...slide} />
 
       case "side-image":
-        return <SideImageSlide {...slide} />
+        return <SideImageSlide key={key} {...slide} />
 
       case "full-image":
-        return <FullImageSlide {...slide} />
+        return <FullImageSlide key={key} {...slide} />
     }
   }
 
@@ -117,7 +117,7 @@ export function Carousel({ slides }: ImageCarouselProps) {
         onTouchEnd={handleTouchEnd}
       >
         <div className={styles.slidesTrack} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {slides.map((slide) => renderSlideContent(slide))}
+          {slides.map((slide, index) => renderSlideContent(slide, index))}
         </div>
       </div>
 
@@ -204,12 +204,12 @@ function HeroSlide({ title, subtitle, media, cta, offer, style }: HeroSlideProps
     <div
       className={`${styles.slide} ${style.centered ? styles.heroCenteredSlide : styles.heroSlide}`}
       style={{
-        '--text-color': style.textColor,
-        '--background-color': style.backgroundColor,
-        '--accent-color': style.accentColor,
-        '--background-image': media?.imageUrl ? `url(${media?.imageUrl})` : undefined,
-        '--background-media-opacity': style.backgroundMediaOpacity,
-        '--background-media-blur': style.backgroundMediaBlur,
+        "--text-color": style.textColor,
+        "--background-color": style.backgroundColor,
+        "--accent-color": style.accentColor,
+        "--background-image": media?.imageUrl ? `url(${media?.imageUrl})` : undefined,
+        "--background-media-opacity": style.backgroundMediaOpacity,
+        "--background-media-blur": style.backgroundMediaBlur,
       } as CSSProperties}
     >
       {media?.videoUrl && (
@@ -217,6 +217,9 @@ function HeroSlide({ title, subtitle, media, cta, offer, style }: HeroSlideProps
           <source src={media.videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      )}
+      {!media?.videoUrl && media?.imageUrl && (
+        <div className={styles.backgroundImage} />
       )}
       <div className={style.centered ? styles.heroCenteredContent : styles.heroContent}>
         <h2 className={style.centered ? styles.heroCenteredTitle : styles.heroTitle}>{title}</h2>
@@ -259,9 +262,9 @@ function SideImageSlide({ title, subtitle, image, cta, offer, style }: SideImage
     <div
       className={`${styles.slide} ${styles.sideImageSlide}`}
       style={{
-        '--text-color': style.textColor,
-        '--background-color': style.backgroundColor,
-        '--accent-color': style.accentColor,
+        "--text-color": style.textColor,
+        "--background-color": style.backgroundColor,
+        "--accent-color": style.accentColor,
       } as CSSProperties}
     >
       <div className={styles.sideImageContent}>

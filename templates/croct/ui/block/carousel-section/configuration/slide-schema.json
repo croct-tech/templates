@@ -2,15 +2,15 @@
   "$schema": "https://schema.croct.com/json/v1/content-schema.json",
   "type": "union",
   "types": {
-    "hero-slide": {
+    "hero": {
       "id": "hero-slide",
       "type": "reference"
     },
-    "full-image-slide": {
+    "full-image": {
       "id": "full-image-slide",
       "type": "reference"
     },
-    "side-image-slide": {
+    "side-image": {
       "id": "side-image-slide",
       "type": "reference"
     }

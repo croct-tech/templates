@@ -54,7 +54,7 @@
 }
 
 .discountBadge {
-  background-color: #ff3b30;
+  background-color: var(--discount-badge-color, #ff3b30);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
@@ -128,6 +128,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
+  z-index: 1;
 }
 
 .heroTitle {
@@ -154,7 +155,7 @@
 
 .heroCta {
   background-color: var(--text-color);
-  color: var(--accent-color);
+  color: var(--background-color);
   border: none;
   padding: 1rem 3rem;
   font-size: 1.2rem;
@@ -181,6 +182,7 @@
 .heroCenteredContent {
   max-width: 800px;
   padding: 0 5%;
+  z-index: 1;
 }
 
 .heroCenteredTitle {

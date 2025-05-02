@@ -17,7 +17,7 @@ type SlideMap = {
 
 export type Slide<L extends keyof SlideMap = keyof SlideMap> = {
   [K in L]: SlideMap[K] & {
-    layout: K
+    _type: K
   }
 }[L];
 
@@ -95,7 +95,7 @@ export function Carousel({ slides }: ImageCarouselProps) {
   }
 
   const renderSlideContent = (slide: Slide, key: number) => {
-    switch (slide.layout) {
+    switch (slide._type) {
       case "hero":
         return <HeroSlide key={key} {...slide} />
 
@@ -193,9 +193,9 @@ type HeroSlideProps = {
     centered?: boolean
     backgroundColor: string
     textColor: string
-    accentColor: string
     backgroundMediaOpacity?: number
     backgroundMediaBlur?: number
+    discountBadgeColor?: string
   }
 }
 
@@ -206,10 +206,10 @@ function HeroSlide({ title, subtitle, media, cta, offer, style }: HeroSlideProps
       style={{
         "--text-color": style.textColor,
         "--background-color": style.backgroundColor,
-        "--accent-color": style.accentColor,
         "--background-image": media?.imageUrl ? `url(${media?.imageUrl})` : undefined,
         "--background-media-opacity": style.backgroundMediaOpacity,
         "--background-media-blur": style.backgroundMediaBlur,
+        "--discount-badge-color": style.discountBadgeColor,
       } as CSSProperties}
     >
       {media?.videoUrl && (
@@ -253,7 +253,7 @@ type SideImageSlideProps = {
   style: {
     backgroundColor: string
     textColor?: string
-    accentColor?: string
+    discountBadgeColor?: string
   }
 };
 
@@ -264,7 +264,7 @@ function SideImageSlide({ title, subtitle, image, cta, offer, style }: SideImage
       style={{
         "--text-color": style.textColor,
         "--background-color": style.backgroundColor,
-        "--accent-color": style.accentColor,
+        "--discount-badge-color": style.discountBadgeColor,
       } as CSSProperties}
     >
       <div className={styles.sideImageContent}>

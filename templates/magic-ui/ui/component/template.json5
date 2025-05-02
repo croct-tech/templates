@@ -88,7 +88,7 @@
       "name": "import",
       "template": "shadcn-ui://croct",
       "options": {
-        "projectName": "${options.id}-example",
+        "name": "${options.id}-example",
         "version": "${options.version}",
         "router": "${options.router}",
       }
@@ -192,7 +192,7 @@
       "then": [
         {
           "name": "import",
-          "template": "croct:/utils/example-launcher",
+          "template": "croct://utils/example-launcher",
           "options": {
             "path": "${options.id}",
           }

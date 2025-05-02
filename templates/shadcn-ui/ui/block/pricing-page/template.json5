@@ -161,7 +161,7 @@
       "then": [
         {
           "name": "import",
-          "template": "croct:/utils/example-launcher",
+          "template": "croct://utils/example-launcher",
           "options": {
             "path": "${this.routePath}",
           }

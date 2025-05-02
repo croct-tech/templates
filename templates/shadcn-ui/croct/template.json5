@@ -30,7 +30,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/README.md"
   },
   "options": {
-    "projectName": {
+    "name": {
       "type": "string",
       "description": "The name of the project.",
       "default": "my-app"
@@ -71,12 +71,12 @@
             {
               "name": "define",
               "variables": {
-                "projectName": "${options.projectName}"
+                "projectName": "${options.name}"
               }
             },
             {
               "name": "import",
-              "template": "croct:/utils/filename-generator",
+              "template": "croct://utils/filename-generator",
               "options": {
                 "reference": "projectName",
               }

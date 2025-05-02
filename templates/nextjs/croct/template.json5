@@ -85,7 +85,7 @@
     },
     {
       "name": "import",
-      "template": "croct:/utils/filename-generator",
+      "template": "croct://utils/filename-generator",
       "options": {
         "reference": "projectName",
       }
@@ -244,7 +244,7 @@
       "then": [
         {
           "name": "import",
-          "template": "croct:/utils/example-launcher"
+          "template": "croct://utils/example-launcher"
         }
       ]
     }

@@ -22,8 +22,12 @@ croct@latest use nextjs://croct --version=14
 
 The following options are available for this template:
 
-| Option        | Description                          | Required | Default  |
-|---------------|--------------------------------------|----------|----------|
-| `projectName` | The name of the project.             | No       | `my-app` |
-| `version`     | The Next.js version to use.          | No       | `latest` |
-| `router`      | The router to use (`app` or `page`). | No       | `app`    |
+| Option            | Description                                      | Required | Default  |
+|-------------------|--------------------------------------------------|----------|----------|
+| `name`            | The name of the project.                         | No       | `my-app` |
+| `version`         | The Next.js version to use.                      | No       | `latest` |
+| `javascript`      | Whether to use JavaScript instead of TypeScript. | No       | `false`  |
+| `tailwind`        | Whether to use Tailwind CSS.                     | No       | `false`  |
+| `src-dir`         | Whether to use a `src` directory.                | No       | `false`  |
+| `router`          | The router to use (`app` or `page`).             | No       | `app`    |
+| `disableLauncher` | Whether to disable the project launcher.         | No       | `false`  |

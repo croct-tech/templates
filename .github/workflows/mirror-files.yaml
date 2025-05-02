@@ -1,0 +1,34 @@
+name: Mirror files
+
+on:
+  workflow_dispatch:
+  push:
+    tags-ignore:
+      - '**'
+    branches:
+      - master
+
+jobs:
+  publish-templates:
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCLOUD_WORKLOAD_IDENTITY }}
+          service_account: ${{ secrets.GCLOUD_SERVICE_ACCOUNT }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy release to GCS
+        run: |-
+          rsync -av --exclude='cover.png' --exclude='cover.mp4' --exclude='README.md' templates mirror
+          gsutil -m rsync -r -d mirror "gs://${GCLOUD_BUCKET}/templates"
+        env:
+          GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}

@@ -48,6 +48,5 @@ jobs:
       - name: Deploy release to GCS
         run: |-
           gsutil -m rsync -r -d build "gs://${GCLOUD_BUCKET}/assets/templates"
-          gsutil -m setmeta -h "Cache-Control: public, max-age=3600" "gs://${GCLOUD_BUCKET}/assets/templates/**"
         env:
           GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}

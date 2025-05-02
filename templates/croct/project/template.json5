@@ -111,9 +111,8 @@
                 "name": "${this.projectName}",
                 "version": "${options.version}",
                 "router": "${options.router}",
-                "javascript": "${!options.javascript}",
+                "javascript": "${options.javascript}",
                 "tailwind": "${options.tailwind}",
-                "eslint": "${options.eslint}",
                 "src-dir": "${options['src-dir']}",
                 "disableLauncher": "${options.disableLauncher}",
               }

@@ -16,7 +16,7 @@
                   "type": "text",
                   "value": {
                     "type": "static",
-                    "value": "/shop"
+                    "value": "#shop"
                   }
                 },
                 "label": {
@@ -112,7 +112,7 @@
                   "type": "text",
                   "value": {
                     "type": "static",
-                    "value": "/shop"
+                    "value": "#shop"
                   }
                 },
                 "label": {
@@ -229,7 +229,7 @@
                   "type": "text",
                   "value": {
                     "type": "static",
-                    "value": "/shop"
+                    "value": "#shop"
                   }
                 },
                 "label": {
@@ -317,7 +317,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "/shop"
+                "value": "#shop"
               }
             },
             "image": {

@@ -39,6 +39,11 @@
         "page"
       ],
       "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
     }
   },
   "actions": [
@@ -49,6 +54,7 @@
         "name": "carousel-example",
         "version": "${options.version}",
         "router": "${options.router}",
+        "javascript": "${options.javascript}",
         "disableLauncher": true,
       }
     },

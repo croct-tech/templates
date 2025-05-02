@@ -108,7 +108,7 @@
               "name": "import",
               "template": "nextjs://croct",
               "options": {
-                "name": "${this.name}",
+                "name": "${this.projectName}",
                 "version": "${options.version}",
                 "router": "${options.router}",
                 "javascript": "${!options.javascript}",

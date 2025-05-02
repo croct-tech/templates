@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Carousel section",
-  "description": "Schema-only template for a carousel section.",
+  "description": "Component template for a carousel section.",
   "metadata": {
     "id": "interface/section/carousel-section",
     "verified": true,
@@ -11,8 +11,12 @@
       "websiteUrl": "https://croct.com"
     },
     "categories": [
+      "framework/nextjs",
+      "framework/react",
       'interface/marketing',
       'interface/section',
+      "language/javascript",
+      "language/typescript",
       'use-case/e-commerce',
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/template.json5",

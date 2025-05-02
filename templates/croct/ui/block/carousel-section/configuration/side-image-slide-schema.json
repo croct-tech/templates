@@ -98,16 +98,6 @@
             "optional": true,
             "position": 1
           },
-          "accentColor": {
-            "type": {
-              "type": "text",
-              "format": "color"
-            },
-            "label": "Accent Color",
-            "private": false,
-            "optional": true,
-            "position": 2
-          },
           "backgroundColor": {
             "type": {
               "type": "text",

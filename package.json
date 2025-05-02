@@ -26,8 +26,8 @@
   "scripts": {
     "lint": "eslint 'bin/**/*.ts'",
     "validate": "tsc --noEmit",
-    "validate-templates": "tsx bin/template.ts validate templates",
-    "publish-templates": "tsx bin/template.ts publish"
+    "validate-templates": "tsx bin/cli.ts validate templates",
+    "publish-templates": "tsx bin/cli.ts publish"
   },
   "dependencies": {
     "@babel/runtime": "^7.27.0",

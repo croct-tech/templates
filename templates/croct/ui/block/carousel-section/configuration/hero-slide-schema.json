@@ -63,6 +63,7 @@
         }
       },
       "label": "Media",
+      "description": "The video or image to show on the background. When used together, the image appears before a video starts playing.",
       "private": false,
       "optional": true,
       "position": 2
@@ -86,6 +87,7 @@
               "minimumLength": 1
             },
             "label": "Coupon",
+            "description": "The coupon code to use on the cart.",
             "private": false,
             "optional": true,
             "position": 2
@@ -115,6 +117,7 @@
               "type": "boolean"
             },
             "label": "Centered",
+            "description": "Whether the content should align in the center or not.",
             "private": false,
             "optional": true,
             "position": 0

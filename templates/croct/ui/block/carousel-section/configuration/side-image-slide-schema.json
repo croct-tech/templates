@@ -64,6 +64,7 @@
               "minimumLength": 1
             },
             "label": "Coupon",
+            "description": "The coupon code to use on the cart.",
             "private": false,
             "optional": true,
             "position": 2

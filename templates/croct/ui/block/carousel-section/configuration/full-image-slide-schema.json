@@ -24,12 +24,12 @@
       "optional": false,
       "position": 1
     },
-    "title": {
+    "alt": {
       "type": {
         "type": "text",
         "minimumLength": 1
       },
-      "label": "Title",
+      "label": "Alternative text",
       "private": false,
       "optional": false,
       "position": 0

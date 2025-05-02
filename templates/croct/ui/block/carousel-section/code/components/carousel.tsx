@@ -288,13 +288,13 @@ function SideImageSlide({ title, subtitle, image, cta, offer, style }: SideImage
 type FullImageSlideProps = {
   image: string
   url: string
-  title: string
+  alt: string
 }
 
-function FullImageSlide({ image, title, url }: FullImageSlideProps) {
+function FullImageSlide({ image, alt, url }: FullImageSlideProps) {
   return (
     <a
-      title={title}
+      title={alt}
       className={`${styles.slide} ${styles.fullImageSlide}`}
       style={{backgroundImage: `url(${image})`}}
       href={url}

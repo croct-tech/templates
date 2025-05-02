@@ -6,6 +6,17 @@
   color: #111;
 }
 
+main * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .heroSection {
   position: relative;
   width: 100%;

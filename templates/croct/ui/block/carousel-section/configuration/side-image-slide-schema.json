@@ -108,6 +108,16 @@
             "private": false,
             "optional": false,
             "position": 0
+          },
+          "discountBadgeColor": {
+            "type": {
+              "type": "text",
+              "format": "color"
+            },
+            "label": "Discount Badge Color",
+            "private": false,
+            "optional": true,
+            "position": 2
           }
         }
       },

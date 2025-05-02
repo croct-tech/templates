@@ -327,7 +327,7 @@
                 "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/1f03c497-ff5d-4437-bce2-324839541a6b"
               }
             },
-            "title": {
+            "alt": {
               "type": "text",
               "value": {
                 "type": "static",

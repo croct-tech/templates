@@ -76,13 +76,6 @@
                     "value": "#FFF"
                   }
                 },
-                "accentColor": {
-                  "type": "text",
-                  "value": {
-                    "type": "static",
-                    "value": "#000"
-                  }
-                },
                 "backgroundColor": {
                   "type": "text",
                   "value": {
@@ -184,13 +177,6 @@
                   "value": {
                     "type": "static",
                     "value": "#FFF"
-                  }
-                },
-                "accentColor": {
-                  "type": "text",
-                  "value": {
-                    "type": "static",
-                    "value": "#000"
                   }
                 },
                 "backgroundColor": {

@@ -132,16 +132,6 @@
             "optional": false,
             "position": 2
           },
-          "accentColor": {
-            "type": {
-              "type": "text",
-              "format": "color"
-            },
-            "label": "Accent Color",
-            "private": false,
-            "optional": false,
-            "position": 3
-          },
           "backgroundColor": {
             "type": {
               "type": "text",

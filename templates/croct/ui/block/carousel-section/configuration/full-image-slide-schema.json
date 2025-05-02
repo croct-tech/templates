@@ -9,6 +9,7 @@
         "minimumLength": 1
       },
       "label": "Link",
+      "description": "The link of the image.",
       "private": false,
       "optional": false,
       "position": 2
@@ -20,6 +21,7 @@
         "properties": {}
       },
       "label": "Image",
+      "description": "The background image.",
       "private": false,
       "optional": false,
       "position": 1
@@ -30,6 +32,7 @@
         "minimumLength": 1
       },
       "label": "Alternative text",
+      "description": "The alternative text of the image.",
       "private": false,
       "optional": false,
       "position": 0

@@ -13,6 +13,7 @@
               "minimumLength": 1
             },
             "label": "Link",
+            "description": "The link of the CTA.",
             "private": false,
             "optional": false,
             "position": 1
@@ -23,6 +24,7 @@
               "minimumLength": 1
             },
             "label": "Label",
+            "description": "The label of the CTA.",
             "private": false,
             "optional": false,
             "position": 0
@@ -30,6 +32,7 @@
         }
       },
       "label": "CTA",
+      "description": "The call to action.",
       "private": false,
       "optional": false,
       "position": 3
@@ -45,6 +48,7 @@
               "properties": {}
             },
             "label": "Image",
+            "description": "The background image.",
             "private": false,
             "optional": true,
             "position": 0
@@ -56,6 +60,7 @@
               "properties": {}
             },
             "label": "Video",
+            "description": "The background video.",
             "private": false,
             "optional": true,
             "position": 1
@@ -63,7 +68,7 @@
         }
       },
       "label": "Media",
-      "description": "The video or image to show on the background. When used together, the image appears before a video starts playing.",
+      "description": "The video and image to show on the background. When used together, the image appears before the video starts playing.",
       "private": false,
       "optional": true,
       "position": 2
@@ -77,6 +82,7 @@
               "type": "number"
             },
             "label": "Price",
+            "description": "The final price of the product, after the discount.",
             "private": false,
             "optional": true,
             "position": 0
@@ -96,7 +102,8 @@
             "type": {
               "type": "number"
             },
-            "label": "Original Price",
+            "label": "Original price",
+            "description": "The original price of the product, before the discount.",
             "private": false,
             "optional": true,
             "position": 1
@@ -104,6 +111,7 @@
         }
       },
       "label": "Offer",
+      "description": "The special offer.",
       "private": false,
       "optional": true,
       "position": 4
@@ -127,7 +135,8 @@
               "type": "text",
               "format": "color"
             },
-            "label": "Text Color",
+            "label": "Text color",
+            "description": "The text color of the left section.",
             "private": false,
             "optional": false,
             "position": 2
@@ -137,7 +146,8 @@
               "type": "text",
               "format": "color"
             },
-            "label": "Background Color",
+            "label": "Background color",
+            "description": "The background color of the left section.",
             "private": false,
             "optional": false,
             "position": 1
@@ -148,7 +158,8 @@
               "integer": true,
               "minimum": 0
             },
-            "label": "Background Media Blur",
+            "label": "Background media blur",
+            "description": "The blur of the background image, where zero means no blur.",
             "private": false,
             "optional": true,
             "position": 5
@@ -159,7 +170,8 @@
               "maximum": 1,
               "minimum": 0
             },
-            "label": "Background Media Opacity",
+            "label": "Background media opacity",
+            "description": "The opacity of the background image, from 0 (completely transparent) to 1 (no transparency).",
             "private": false,
             "optional": true,
             "position": 4
@@ -169,7 +181,8 @@
               "type": "text",
               "format": "color"
             },
-            "label": "Discount Badge Color",
+            "label": "Discount badge color",
+            "description": "The color of the discount badge.",
             "private": false,
             "optional": true,
             "position": 6
@@ -177,6 +190,7 @@
         }
       },
       "label": "Style",
+      "description": "The style of the slide.",
       "private": false,
       "optional": false,
       "position": 5
@@ -187,6 +201,7 @@
         "minimumLength": 1
       },
       "label": "Title",
+      "description": "The title to show on the hero.",
       "private": false,
       "optional": false,
       "position": 0
@@ -198,6 +213,7 @@
         "minimumLength": 1
       },
       "label": "Subtitle",
+      "description": "The subtitle to show on the hero.",
       "private": false,
       "optional": false,
       "position": 1

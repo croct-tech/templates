@@ -52,5 +52,5 @@ export function Header() {
         </button>
       </div>
     </header>
-  );
+  )
 }

@@ -24,12 +24,20 @@
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -38,7 +46,7 @@
       "name": "import",
       "template": "croct://project",
       "options": {
-        "projectName": "carousel-example",
+        "name": "carousel-example",
         "version": "${options.version}",
         "router": "${options.router}",
         "disableLauncher": true,
@@ -51,16 +59,21 @@
           "name": "typescript",
         }
       ],
-      "help": {
-        "message": "This template requires a TypeScript project.",
-        "suggestions": [
-          "Run in an empty folder to create a new TypeScript project.",
-        ]
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "codeExtension": "${this.isTypescript ? '.tsx' : '.js'}"
       }
     },
     {
       "name": "add-dependency",
-      "dependencies": ["@croct/template-ui"]
+      "dependencies": [
+        "@croct/template-ui"
+      ]
     },
     {
       "name": "download",
@@ -73,6 +86,9 @@
       "overwrite": true,
       "source": "code/components/header.tsx",
       "destination": "${project.path.components}",
+      "mapping": {
+        "header.tsx": "header${this.codeExtension}",
+      }
     },
     {
       "name": "download",
@@ -85,6 +101,9 @@
       "overwrite": true,
       "source": "code/components/product-grid.tsx",
       "destination": "${project.path.components}",
+      "mapping": {
+        "product-grid.tsx": "product-grid${this.codeExtension}",
+      }
     },
     {
       "name": "download",
@@ -97,6 +116,9 @@
       "overwrite": true,
       "source": "code/components/carousel.tsx",
       "destination": "${project.path.components}",
+      "mapping": {
+        "carousel.tsx": "carousel${this.codeExtension}",
+      }
     },
     {
       "name": "define",
@@ -109,15 +131,9 @@
       "variables": {
         "exampleDirectory": "${project.path.examples}/${this.routePath}",
         "exampleFile": "${{\
-          nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx',\
-          react: 'page.tsx',\
+          nextjs: project.path.examples.endsWith('app') ? 'page' : 'index',\
+          react: 'page',\
         }[project.platform]}",
-      }
-    },
-    {
-      "name": "define",
-      "variables": {
-        "examplePath": "${this.exampleDirectory}/${this.exampleFile}",
       }
     },
     {
@@ -129,8 +145,11 @@
     {
       "name": "download",
       "overwrite": true,
-      "source": "code/page/${project.platform}/${this.exampleFile}",
+      "source": "code/page/${project.platform}/${this.exampleFile}.tsx",
       "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}",
+      }
     },
     {
       "name": "create-resource",
@@ -178,13 +197,15 @@
     },
     {
       "name": "add-slot",
-      "slots": ["${this.slotId}"]
+      "slots": [
+        "${this.slotId}"
+      ]
     },
     {
       "name": "replace-file-content",
       "files": [
         {
-          "path": "${this.examplePath}",
+          "path": "${this.exampleDirectory}/${this.exampleFile}${this.codeExtension}",
           "replacements": [
             {
               "pattern": "%slotId%",

@@ -1,7 +1,7 @@
 import styles from "?/./page.module.css";
-import { Header } from "?/**/*/header.tsx";
-import { ProductGrid } from "?/**/*/product-grid.tsx"
-import { Carousel } from "?/**/*/carousel.tsx";
+import { Header } from "?/**/*/header.{js,tsx}";
+import { ProductGrid } from "?/**/*/product-grid.{js,tsx}"
+import { Carousel } from "?/**/*/carousel.{js,tsx}";
 import { fetchContent } from "@croct/plug-next/server"
 import { LinkButton } from "@croct/template-ui/react"
 

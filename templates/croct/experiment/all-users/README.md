@@ -1,6 +1,7 @@
 # Introduction
 
-This template creates an experiment for all users who browse the website and splits them into two variants, each with 50% of the traffic.
+This template creates an experiment for all users who browse the website and splits them into two variants, each with
+50% of the traffic.
 
 ## What's included
 

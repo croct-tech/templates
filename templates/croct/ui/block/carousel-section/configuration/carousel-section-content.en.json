@@ -6,8 +6,8 @@
       "type": "list",
       "items": [
         {
-          "name": "hero",
           "type": "structure",
+          "name": "hero",
           "attributes": {
             "cta": {
               "type": "structure",
@@ -102,8 +102,8 @@
           }
         },
         {
-          "name": "hero",
           "type": "structure",
+          "name": "hero",
           "attributes": {
             "cta": {
               "type": "structure",
@@ -132,32 +132,6 @@
                   "value": {
                     "type": "static",
                     "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/745d1b5a-ad61-49e3-a4f1-7ad9446f8125"
-                  }
-                }
-              }
-            },
-            "offer": {
-              "type": "structure",
-              "attributes": {
-                "price": {
-                  "type": "number",
-                  "value": {
-                    "type": "static",
-                    "value": 149
-                  }
-                },
-                "coupon": {
-                  "type": "text",
-                  "value": {
-                    "type": "static",
-                    "value": "STYLE25"
-                  }
-                },
-                "originalPrice": {
-                  "type": "number",
-                  "value": {
-                    "type": "static",
-                    "value": 189
                   }
                 }
               }
@@ -219,8 +193,8 @@
           }
         },
         {
-          "name": "side-image",
           "type": "structure",
+          "name": "side-image",
           "attributes": {
             "cta": {
               "type": "structure",
@@ -310,9 +284,16 @@
           }
         },
         {
-          "name": "full-image",
           "type": "structure",
+          "name": "full-image",
           "attributes": {
+            "alt": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "ELEVATE YOUR GAME"
+              }
+            },
             "url": {
               "type": "text",
               "value": {
@@ -324,14 +305,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/1f03c497-ff5d-4437-bce2-324839541a6b"
-              }
-            },
-            "alt": {
-              "type": "text",
-              "value": {
-                "type": "static",
-                "value": "ELEVATE YOUR GAME"
+                "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/531287e8-afb9-444d-9d7a-439d3006da40"
               }
             }
           }

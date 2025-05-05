@@ -1,0 +1,163 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Announcement bar",
+  "attributes": {
+    "bar": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "message": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Message",
+            "private": false,
+            "optional": false,
+            "position": 0,
+            "description": "The message to display in the text bar. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
+          },
+          "dismissible": {
+            "type": {
+              "type": "boolean",
+              "default": false
+            },
+            "label": "Dismissible",
+            "description": "Whether to allow the user to close the text bar or not.",
+            "private": false,
+            "optional": true,
+            "position": 2
+          },
+          "style": {
+            "type": {
+              "type": "structure",
+              "attributes": {
+                "alignment": {
+                  "type": {
+                    "type": "text",
+                    "choices": {
+                      "left": {
+                        "label": "Left",
+                        "position": 0,
+                        "default": false
+                      },
+                      "center": {
+                        "label": "Center",
+                        "position": 1,
+                        "default": true
+                      }
+                    }
+                  },
+                  "label": "Alignment",
+                  "description": "The alignment of the message inside the text bar.",
+                  "private": false,
+                  "optional": true,
+                  "position": 0
+                },
+                "placement": {
+                  "type": {
+                    "type": "text",
+                    "choices": {
+                      "top": {
+                        "label": "Top",
+                        "position": 0,
+                        "default": true
+                      },
+                      "bottom": {
+                        "label": "Bottom",
+                        "position": 1,
+                        "default": false
+                      },
+                      "floating-bottom": {
+                        "label": "Floating bottom",
+                        "position": 2,
+                        "default": false
+                      },
+                      "floating-bottom-center": {
+                        "label": "Floating bottom center",
+                        "position": 3,
+                        "default": false
+                      }
+                    }
+                  },
+                  "label": "Placement",
+                  "description": "The position of the text bar in the page.",
+                  "private": false,
+                  "optional": true,
+                  "position": 1
+                },
+                "emphasized": {
+                  "type": {
+                    "type": "boolean"
+                  },
+                  "label": "Emphasized",
+                  "description": "Whether the text bar should be emphasized or not.",
+                  "private": false,
+                  "optional": true,
+                  "position": 2
+                }
+              }
+            },
+            "label": "Style",
+            "position": 3,
+            "description": "The style of the text bar."
+          },
+          "link": {
+            "type": {
+              "type": "structure",
+              "attributes": {
+                "label": {
+                  "type": {
+                    "type": "text"
+                  },
+                  "label": "Label",
+                  "description": "The label of the CTA inside the text bar.",
+                  "private": false,
+                  "optional": true,
+                  "position": 0
+                },
+                "url": {
+                  "type": {
+                    "type": "text",
+                    "format": "url"
+                  },
+                  "label": "Link",
+                  "description": "The destination link of the text bar.",
+                  "private": false,
+                  "optional": false,
+                  "position": 1
+                },
+                "newTab": {
+                  "type": {
+                    "type": "boolean",
+                    "label": {
+                      "true": "New tab",
+                      "false": "Same tab"
+                    },
+                    "default": false
+                  },
+                  "label": "New tab",
+                  "description": "Whether to open the link in a new tab or not.",
+                  "private": false,
+                  "optional": true,
+                  "position": 2
+                }
+              }
+            },
+            "label": "Link",
+            "description": "The link of the text bar.",
+            "private": false,
+            "optional": true,
+            "position": 1
+          }
+        }
+      },
+      "label": "Announcement bar",
+      "private": false,
+      "optional": true,
+      "position": 0
+    }
+  },
+  "description": "A small text bar featured on a page."
+}

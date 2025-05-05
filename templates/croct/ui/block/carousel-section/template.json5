@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Carousel section",
-  "description": "Schema-only template for a carousel section.",
+  "description": "Component template for a carousel section.",
   "metadata": {
     "id": "interface/section/carousel-section",
     "verified": true,
@@ -11,8 +11,12 @@
       "websiteUrl": "https://croct.com"
     },
     "categories": [
+      "framework/nextjs",
+      "framework/react",
       'interface/marketing',
       'interface/section',
+      "language/javascript",
+      "language/typescript",
       'use-case/e-commerce',
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/template.json5",
@@ -20,18 +24,165 @@
     "installationUrl": "croct://ui/block/carousel-section",
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/README.md"
   },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    }
+  },
   "actions": [
+    {
+      "name": "import",
+      "template": "croct://project",
+      "options": {
+        "name": "carousel-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "disableLauncher": true,
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript",
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "codeExtension": "${this.isTypescript ? '.tsx' : '.js'}"
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@croct/template-ui"
+      ]
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/header.module.css",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/header.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "header.tsx": "header${this.codeExtension}",
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/product-grid.module.css",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/product-grid.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "product-grid.tsx": "product-grid${this.codeExtension}",
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/carousel.module.css",
+      "destination": "${project.path.components}",
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/carousel.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "carousel.tsx": "carousel${this.codeExtension}",
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "routePath": "carousel",
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${this.routePath}",
+        "exampleFile": "${{\
+          nextjs: project.path.examples.endsWith('app') ? 'page' : 'index',\
+          react: 'page',\
+        }[project.platform]}",
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/page.module.css",
+      "destination": "${this.exampleDirectory}"
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/${project.platform}/${this.exampleFile}.tsx",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}",
+      }
+    },
     {
       "name": "create-resource",
       "resources": {
         "components": {
-          "banner-image": {
-            "name": "Banner image",
-            "schema": "${import('./configuration/banner-image-schema.json')}"
+          "full-image-slide": {
+            "name": "Full-image slide",
+            "schema": "${import('./configuration/full-image-slide-schema.json')}"
+          },
+          "side-image-slide": {
+            "name": "Side-image slide",
+            "schema": "${import('./configuration/side-image-slide-schema.json')}"
+          },
+          "hero-slide": {
+            "name": "Hero slide",
+            "schema": "${import('./configuration/hero-slide-schema.json')}"
+          },
+          "slide": {
+            "name": "Slide",
+            "schema": "${import('./configuration/slide-schema.json')}"
           },
           "carousel-section": {
             "name": "Carousel section",
-            "description": "A section of ordered banners.",
             "schema": "${import('./configuration/carousel-section-schema.json')}"
           }
         },
@@ -44,12 +195,61 @@
             }
           }
         }
+      },
+      "result": {
+        "slots": {
+          "carousel-section": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
       }
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this.slotId}"
+      ]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.exampleDirectory}/${this.exampleFile}${this.codeExtension}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this.slotId}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this.slotVersion}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            },
+          ]
+        }
+      ]
     },
     {
       "name": "print",
       "semantics": "success",
-      "message": "Component and slot successfully created."
-    }
+      "message": "Component successfully imported at `${this.exampleDirectory}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct:/utils/example-launcher",
+          "options": {
+            "path": "${this.routePath}",
+          }
+        },
+      ]
+    },
   ]
 }

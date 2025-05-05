@@ -3,70 +3,20 @@
   "type": "structure",
   "title": "Carousel section",
   "attributes": {
-    "banners": {
+    "slides": {
       "type": {
         "type": "list",
         "items": {
-          "id": "banner-image",
+          "id": "slide",
           "type": "reference"
         },
-        "itemLabel": "Banner"
+        "itemLabel": "Slide"
       },
-      "label": "Banners",
+      "label": "Slides",
       "private": false,
       "optional": false,
-      "position": 2
-    },
-    "autoplay": {
-      "type": {
-        "type": "boolean",
-        "label": {
-          "true": "Yes",
-          "false": "No"
-        },
-        "default": true
-      },
-      "label": "Autoplay",
-      "private": false,
-      "optional": true,
-      "position": 3
-    },
-    "headline": {
-      "type": {
-        "type": "text",
-        "minimumLength": 1
-      },
-      "label": "Title",
-      "private": false,
-      "optional": true,
-      "position": 0,
-      "description": "The title displayed at the top of the section."
-    },
-    "description": {
-      "type": {
-        "type": "text",
-        "minimumLength": 1
-      },
-      "label": "Description",
-      "private": false,
-      "optional": true,
-      "position": 1,
-      "description": "The description displayed bellow the title."
-    },
-    "pauseOnHover": {
-      "type": {
-        "type": "boolean",
-        "label": {
-          "true": "Yes",
-          "false": "No"
-        },
-        "default": true
-      },
-      "label": "Pause on hover",
-      "private": false,
-      "optional": true,
-      "position": 4
+      "position": 0
     }
   },
-  "description": "A section of ordered banners."
+  "description": "A section of ordered slides."
 }

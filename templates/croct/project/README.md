@@ -1,6 +1,6 @@
 # Introduction
 
-This template integrates Croct in an existing project or creates a new [Next.js](https://nextjs.org/) project already integrated with Croct.
+This template adds Croct to an existing project or sets up a new [Next.js](https://nextjs.org/) project with Croct already integrated.
 
 ## Usage
 

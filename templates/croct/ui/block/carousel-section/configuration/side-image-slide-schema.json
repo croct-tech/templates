@@ -1,0 +1,164 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Side-image slide",
+  "attributes": {
+    "cta": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "url": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Link",
+            "description": "The link of the CTA.",
+            "private": false,
+            "optional": false,
+            "position": 1
+          },
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "description": "The label of the CTA.",
+            "private": false,
+            "optional": false,
+            "position": 0
+          }
+        }
+      },
+      "label": "CTA",
+      "description": "The call to action of the left section.",
+      "private": false,
+      "optional": false,
+      "position": 3
+    },
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Image",
+      "description": "The image of the right section.",
+      "private": false,
+      "optional": false,
+      "position": 2
+    },
+    "offer": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "price": {
+            "type": {
+              "type": "number"
+            },
+            "label": "Price",
+            "description": "The final price of the product, after the discount.",
+            "private": false,
+            "optional": true,
+            "position": 0
+          },
+          "coupon": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Coupon",
+            "description": "The coupon code to use on the cart.",
+            "private": false,
+            "optional": true,
+            "position": 2
+          },
+          "originalPrice": {
+            "type": {
+              "type": "number"
+            },
+            "label": "Original price",
+            "description": "The original price of the product, before the discount.",
+            "private": false,
+            "optional": true,
+            "position": 1
+          }
+        }
+      },
+      "label": "Offer",
+      "description": "The special offer.",
+      "private": false,
+      "optional": true,
+      "position": 4
+    },
+    "style": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "textColor": {
+            "type": {
+              "type": "text",
+              "format": "color"
+            },
+            "label": "Text color",
+            "description": "The text color of the left section.",
+            "private": false,
+            "optional": true,
+            "position": 1
+          },
+          "backgroundColor": {
+            "type": {
+              "type": "text",
+              "format": "color"
+            },
+            "label": "Background color",
+            "description": "The background color of the left section.",
+            "private": false,
+            "optional": false,
+            "position": 0
+          },
+          "discountBadgeColor": {
+            "type": {
+              "type": "text",
+              "format": "color"
+            },
+            "label": "Discount badge color",
+            "description": "The color of the discount badge.",
+            "private": false,
+            "optional": true,
+            "position": 2
+          }
+        }
+      },
+      "label": "Style",
+      "description": "The style of the slide.",
+      "private": false,
+      "optional": false,
+      "position": 5
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "description": "The title to show on the left section.",
+      "private": false,
+      "optional": false,
+      "position": 0
+    },
+    "subtitle": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Subtitle",
+      "description": "The subtitle to show on the left section.",
+      "private": false,
+      "optional": false,
+      "position": 1
+    }
+  }
+}

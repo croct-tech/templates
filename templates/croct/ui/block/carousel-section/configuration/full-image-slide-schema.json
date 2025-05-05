@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Full-image slide",
+  "attributes": {
+    "url": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Link",
+      "description": "The link of the image.",
+      "private": false,
+      "optional": false,
+      "position": 2
+    },
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Image",
+      "description": "The background image.",
+      "private": false,
+      "optional": false,
+      "position": 1
+    },
+    "alt": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Alternative text",
+      "description": "The alternative text of the image.",
+      "private": false,
+      "optional": false,
+      "position": 0
+    }
+  }
+}

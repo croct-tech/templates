@@ -8,13 +8,36 @@ it helps keep the layout dynamic and maintains visual interest.
 Running AB tests on banner order, visuals, or messaging and personalizing the banners based on audience segments,
 such as showing different promotions by source, device, or behavior, can increase engagement and conversion.
 
-> [!TIP Need the code?]
-> Explore popular React carousel libraries in our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries).
+This template adds an announcement bar component to your project or creates a new project using
+[Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current directory.
+
+It comes fully integrated with Croct, giving you CMS, A/B testing, and personalization out of the box.
+
+> [!TIP Need help with the code?]
+> Explore popular React carousel libraries in
+> our [guide](https://blog.croct.com/post/best-react-carousel-slider-libraries).
 
 ## Usage
 
-To add this component to your workspace, run:
+To create a new project using this template, run:
 
 ```croct-cmd
 croct@latest use croct://ui/block/carousel-section
 ```
+
+You can customize the template by specifying options:
+
+```croct-cmd
+croct@latest use croct://ui/block/carousel-section --router=page
+```
+
+## Options
+
+The following options are available for this template:
+
+| Option        | Description                                      | Required | Default  |
+|---------------|--------------------------------------------------|----------|----------|
+| `projectName` | The name of the project.                         | No       | `my-app` |
+| `version`     | The Next.js version to use.                      | No       | `latest` |
+| `router`      | The router to use (`app` or `page`).             | No       | `app`    |
+| `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |

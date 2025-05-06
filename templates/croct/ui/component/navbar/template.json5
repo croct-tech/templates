@@ -11,11 +11,11 @@
       "websiteUrl": "https://croct.com"
     },
     "categories": [
-      'interface/marketing',
-      'interface/component',
-      'interface/menu',
-      'use-case/e-commerce',
-      'use-case/saas'
+      "interface/marketing",
+      "interface/component",
+      "interface/menu",
+      "use-case/e-commerce",
+      "use-case/saas"
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/navbar/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/navbar/cover.png",

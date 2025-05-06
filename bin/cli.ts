@@ -713,7 +713,7 @@ function isFormatted(value: JsonValueNode): boolean {
 
     clone.reset();
 
-    return value.toString() === clone.toString(formatting);
+    return value.toString() === `${clone.toString(formatting)}\n`;
 }
 
 function sortElements(array: JsonArrayNode): JsonArrayNode {

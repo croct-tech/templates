@@ -11,9 +11,9 @@
       "websiteUrl": "https://croct.com"
     },
     "categories": [
-      'interface/marketing',
-      'interface/component',
-      'use-case/saas'
+      "interface/marketing",
+      "interface/component",
+      "use-case/saas"
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/demo-request-form/cover.png",

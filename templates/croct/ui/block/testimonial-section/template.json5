@@ -11,11 +11,11 @@
       "websiteUrl": "https://croct.com"
     },
     "categories": [
-      'interface/marketing',
-      'interface/section',
-      'interface/social-proof',
-      'use-case/e-commerce',
-      'use-case/saas'
+      "interface/marketing",
+      "interface/section",
+      "interface/social-proof",
+      "use-case/e-commerce",
+      "use-case/saas"
     ],
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/testimonial-section/cover.png",

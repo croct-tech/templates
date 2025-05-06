@@ -10,20 +10,20 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/cover.png",
+    "installationUrl": "croct://ui/component/announcement-bar",
     "categories": [
       "framework/nextjs",
       "framework/react",
-      'interface/marketing',
       'interface/component',
+      'interface/marketing',
       "language/javascript",
       "language/typescript",
       'use-case/e-commerce',
       'use-case/saas'
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/cover.png",
-    "installationUrl": "croct://ui/component/announcement-bar",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/README.md"
+    ]
   },
   "options": {
     "version": {
@@ -60,14 +60,14 @@
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
-        "disableLauncher": true,
+        "disableLauncher": true
       }
     },
     {
       "name": "check-dependency",
       "dependencies": [
         {
-          "name": "typescript",
+          "name": "typescript"
         }
       ],
       "result": {
@@ -91,13 +91,13 @@
       "name": "download",
       "overwrite": true,
       "source": "code/lib/markdown.tsx",
-      "destination": "${project.path.utilities}",
+      "destination": "${project.path.utilities}"
     },
     {
       "name": "download",
       "overwrite": true,
       "source": "code/components/announcement-bar.module.css",
-      "destination": "${project.path.components}",
+      "destination": "${project.path.components}"
     },
     {
       "name": "download",
@@ -105,13 +105,13 @@
       "source": "code/components/announcement-bar.tsx",
       "destination": "${project.path.components}",
       "mapping": {
-        "announcement-bar.tsx": "announcement-bar{this.codeExtension}",
+        "announcement-bar.tsx": "announcement-bar${this.codeExtension}"
       }
     },
     {
       "name": "define",
       "variables": {
-        "routePath": "announcement-bar",
+        "routePath": "announcement-bar"
       }
     },
     {
@@ -121,7 +121,7 @@
         "exampleFile": "${{\
           nextjs: project.path.examples.endsWith('app') ? 'page' : 'index',\
           react: 'page',\
-        }[project.platform]}",
+        }[project.platform]}"
       }
     },
     {
@@ -136,7 +136,7 @@
       "source": "code/page/${project.platform}/${this.exampleFile}.tsx",
       "destination": "${this.exampleDirectory}",
       "mapping": {
-        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}",
+        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}"
       }
     },
     {
@@ -191,7 +191,7 @@
             {
               "pattern": "%workspaceUrl%",
               "value": "${project.workspace.url}"
-            },
+            }
           ]
         }
       ]
@@ -209,10 +209,10 @@
           "name": "import",
           "template": "croct:/utils/example-launcher",
           "options": {
-            "path": "${this.routePath}",
+            "path": "${this.routePath}"
           }
-        },
+        }
       ]
-    },
+    }
   ]
 }

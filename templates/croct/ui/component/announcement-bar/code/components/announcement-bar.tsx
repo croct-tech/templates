@@ -1,7 +1,7 @@
 "use client"
 
 import {X} from "lucide-react"
-import styles from "?/**/*/announcement-bar.module.css"
+import styles from "?/./announcement-bar.module.css"
 import {useState} from "react"
 import {renderMarkdown} from "?/**/*/markdown.tsx"
 

@@ -1,8 +1,7 @@
 .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
+    padding: 24px 32px 64px 32px;
+    background-color: #fff;
 }
 
 .header {

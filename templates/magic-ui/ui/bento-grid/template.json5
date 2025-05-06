@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/cover.png",
+    "installationUrl": "magic-ui://ui/bento-grid",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -21,22 +25,26 @@
     ],
     "relatedTemplates": [
       "library/magic-ui/marquee"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/cover.png",
-    "installationUrl": "magic-ui://ui/bento-grid",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/bento-grid/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -50,7 +58,9 @@
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["feature-grid.tsx"],
+        "components": [
+          "feature-grid.tsx"
+        ],
         "action": {
           "name": "run",
           "actions": [
@@ -62,7 +72,7 @@
                     "name": "Magic UI - Bento grid",
                     "description": "A modular grid layout for featuring content blocks, use cases, or product highlights.",
                     "schema": "${import('./configuration/bento-grid-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-bento-grid": {

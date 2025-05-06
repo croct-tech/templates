@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/shadcn-ui.png",
       "websiteUrl": "https://ui.shadcn.com?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/cover.png",
+    "installationUrl": "shadcn-ui://ui/component",
     "categories": [
       "boilerplate/utility",
       "framework/nextjs",
@@ -19,12 +23,8 @@
       "library/tailwind-css"
     ],
     "relatedTemplates": [
-      "library/magic-ui/component",
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/cover.png",
-    "installationUrl": "shadcn-ui://ui/component",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/README.md"
+      "library/magic-ui/component"
+    ]
   },
   "options": {
     "components": {
@@ -38,7 +38,7 @@
       "name": "check-dependency",
       "dependencies": [
         {
-          "name": "tailwindcss",
+          "name": "tailwindcss"
         }
       ],
       "result": {
@@ -61,8 +61,8 @@
           "message": "Tailwind CSS is not installed.",
           "links": [
             {
-                "label": "Install Tailwind CSS",
-                "url": "https://tailwindcss.com/docs/installation?utm_source=croct"
+              "label": "Install Tailwind CSS",
+              "url": "https://tailwindcss.com/docs/installation?utm_source=croct"
             }
           ]
         }
@@ -75,34 +75,46 @@
       "interactions": [
         {
           "when": "You need to create a components.json file to add components. Proceed?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "How would you like to proceed?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Which style would you like to use?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Which color would you like to use as the base color?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Would you like to use CSS variables for theming?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Would you like to overwrite?",
-          "then": ["y"],
+          "then": [
+            "y"
+          ],
           "always": true
         },
         {
           "when": "(Created|Skipped) \\d files?",
           "pattern": true,
-          "final": true,
-        },
+          "final": true
+        }
       ]
     }
   ]

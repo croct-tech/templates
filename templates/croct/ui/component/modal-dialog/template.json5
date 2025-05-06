@@ -10,16 +10,16 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "interface/marketing",
-      "interface/component",
-      "use-case/e-commerce",
-      "use-case/saas"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/cover.png",
     "installationUrl": "croct://ui/component/modal-dialog",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/modal-dialog/README.md"
+    "categories": [
+      "interface/component",
+      "interface/marketing",
+      "use-case/e-commerce",
+      "use-case/saas"
+    ]
   },
   "actions": [
     {
@@ -30,7 +30,7 @@
             "name": "Modal dialog",
             "description": "A modal dialog component.",
             "schema": "${import('./configuration/modal-dialog-schema.json')}"
-          },
+          }
         },
         "slots": {
           "modal-dialog": {

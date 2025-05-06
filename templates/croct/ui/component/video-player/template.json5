@@ -10,16 +10,16 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "interface/marketing",
-      "interface/component",
-      "use-case/e-commerce",
-      "use-case/saas"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/cover.png",
     "installationUrl": "croct://ui/component/video-player",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/README.md"
+    "categories": [
+      "interface/component",
+      "interface/marketing",
+      "use-case/e-commerce",
+      "use-case/saas"
+    ]
   },
   "actions": [
     {
@@ -30,7 +30,7 @@
             "name": "Video player",
             "description": "A video player component.",
             "schema": "${import('./configuration/video-player-schema.json')}"
-          },
+          }
         },
         "slots": {
           "video-player": {

@@ -10,6 +10,10 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/cover.png",
+    "installationUrl": "shadcn-ui://croct",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",
@@ -23,11 +27,7 @@
       "boilerplate/starter/nextjs-croct",
       "boilerplate/starter/nextjs-project",
       "boilerplate/starter/shadcn-project"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/cover.png",
-    "installationUrl": "shadcn-ui://croct",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/README.md"
+    ]
   },
   "options": {
     "name": {
@@ -38,12 +38,20 @@
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -55,7 +63,7 @@
         {
           "name": "print",
           "semantics": "info",
-          "message": "No project found in the current directory",
+          "message": "No project found in the current directory"
         },
         {
           "name": "prompt",
@@ -78,7 +86,7 @@
               "name": "import",
               "template": "croct://utils/filename-generator",
               "options": {
-                "reference": "projectName",
+                "reference": "projectName"
               }
             },
             {
@@ -87,9 +95,9 @@
               "options": {
                 "name": "${this.projectName}",
                 "version": "${options.version}",
-                "router": "${options.router}",
+                "router": "${options.router}"
               }
-            },
+            }
           ],
           "else": {
             "name": "fail",
@@ -106,6 +114,6 @@
           "name": "initialize"
         }
       ]
-    },
+    }
   ]
 }

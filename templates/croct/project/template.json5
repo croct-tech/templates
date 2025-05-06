@@ -9,21 +9,21 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/cover.png",
+    "installationUrl": "croct://project",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",
       "framework/react",
       "language/javascript",
-      "language/typescript",
+      "language/typescript"
     ],
     "relatedTemplates": [
       "boilerplate/starter/nextjs-croct",
-      "boilerplate/starter/shadcn-croct",
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/cover.png",
-    "installationUrl": "croct://project",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/project/README.md"
+      "boilerplate/starter/shadcn-croct"
+    ]
   },
   "options": {
     "name": {
@@ -39,7 +39,7 @@
         "14",
         "15",
         "latest"
-      ],
+      ]
     },
     "router": {
       "type": "string",
@@ -48,7 +48,7 @@
         "app",
         "page"
       ],
-      "default": "app",
+      "default": "app"
     },
     "javascript": {
       "type": "boolean",
@@ -78,7 +78,7 @@
         {
           "name": "print",
           "semantics": "info",
-          "message": "No project found in the current directory",
+          "message": "No project found in the current directory"
         },
         {
           "name": "prompt",
@@ -101,7 +101,7 @@
               "name": "import",
               "template": "croct://utils/filename-generator",
               "options": {
-                "reference": "projectName",
+                "reference": "projectName"
               }
             },
             {
@@ -114,9 +114,9 @@
                 "javascript": "${options.javascript}",
                 "tailwind": "${options.tailwind}",
                 "src-dir": "${options['src-dir']}",
-                "disableLauncher": "${options.disableLauncher}",
+                "disableLauncher": "${options.disableLauncher}"
               }
-            },
+            }
           ],
           "else": {
             "name": "fail",

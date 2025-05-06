@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/cover.png",
+    "installationUrl": "magic-ui://ui/avatar-circles",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -16,22 +20,26 @@
       "language/javascript",
       "language/typescript",
       "library/magic-ui"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/cover.png",
-    "installationUrl": "magic-ui://ui/avatar-circles",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/avatar-circles/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -45,7 +53,9 @@
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["avatar-stack.tsx"],
+        "components": [
+          "avatar-stack.tsx"
+        ],
         "action": {
           "name": "run",
           "actions": [
@@ -57,7 +67,7 @@
                     "name": "Magic UI - Avatar circles",
                     "description": "A list of avatars to represent people, brands, or tools.",
                     "schema": "${import('./configuration/avatar-circles-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-avatar-circles": {

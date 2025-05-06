@@ -27,6 +27,7 @@
     "lint": "eslint 'bin/**/*.ts'",
     "validate": "tsc --noEmit",
     "validate-templates": "tsx bin/cli.ts validate templates",
+    "format-templates": "tsx bin/cli.ts format templates",
     "publish-templates": "tsx bin/cli.ts publish"
   },
   "dependencies": {

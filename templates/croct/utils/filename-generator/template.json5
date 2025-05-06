@@ -10,26 +10,26 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "boilerplate/utility"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/filename-generator/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/filename-generator/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/filename-generator/cover.png",
     "installationUrl": "croct://utils/filename-generator",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/filename-generator/README.md"
+    "categories": [
+      "boilerplate/utility"
+    ]
   },
   "options": {
     "reference": {
       "type": "reference",
       "description": "The variable name that holds the file name.",
       "required": true
-    },
+    }
   },
   "actions": [
     {
       "name": "define",
       "variables": {
-        "attemptNumber": 0,
+        "attemptNumber": 0
       }
     },
     {

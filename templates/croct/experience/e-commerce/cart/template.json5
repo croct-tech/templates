@@ -10,13 +10,13 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "use-case/e-commerce"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/cover.png",
     "installationUrl": "croct://experience/e-commerce/cart",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/README.md"
+    "categories": [
+      "use-case/e-commerce"
+    ]
   },
   "actions": [
     {

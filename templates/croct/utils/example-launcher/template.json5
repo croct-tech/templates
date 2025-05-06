@@ -10,21 +10,21 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "boilerplate/utility"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/cover.mp4",
     "installationUrl": "croct://utils/example-launcher",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/utils/example-launcher/README.md"
+    "categories": [
+      "boilerplate/utility"
+    ]
   },
   "options": {
     "path": {
       "type": "string",
       "description": "The path to the example.",
-      "default": "",
-    },
+      "default": ""
+    }
   },
   "actions": [
     {
@@ -75,6 +75,6 @@
           ]
         }
       ]
-    },
+    }
   ]
 }

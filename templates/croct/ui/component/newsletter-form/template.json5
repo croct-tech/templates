@@ -10,16 +10,16 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "interface/marketing",
-      "interface/component",
-      "use-case/e-commerce",
-      "use-case/saas"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/newsletter-form/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/newsletter-form/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/newsletter-form/cover.png",
     "installationUrl": "croct://ui/component/newsletter-form",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/newsletter-form/README.md"
+    "categories": [
+      "interface/component",
+      "interface/marketing",
+      "use-case/e-commerce",
+      "use-case/saas"
+    ]
   },
   "actions": [
     {

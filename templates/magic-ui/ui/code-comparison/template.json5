@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/cover.png",
+    "installationUrl": "magic-ui://ui/code-comparison",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -22,11 +26,7 @@
     "relatedTemplates": [
       "library/magic-ui/script-copy-btn",
       "library/magic-ui/terminal"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/cover.png",
-    "installationUrl": "magic-ui://ui/code-comparison",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/code-comparison/README.md"
+    ]
   },
   "options": {
     "version": {
@@ -79,7 +79,7 @@
                     "name": "Magic UI - Code comparison",
                     "description": "A side-by-side code block layout for comparing implementations or versions.",
                     "schema": "${import('./configuration/code-comparison-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-code-comparison": {

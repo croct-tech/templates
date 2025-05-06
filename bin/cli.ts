@@ -1,17 +1,27 @@
 #!/usr/bin/env tsx
 
-import {readdirSync, lstatSync, readFileSync, existsSync, mkdirSync, cpSync} from 'fs';
+import {
+    readdirSync,
+    lstatSync,
+    readFileSync,
+    existsSync,
+    mkdirSync,
+    cpSync,
+    writeFileSync,
+} from 'fs';
 import {join, extname, dirname} from 'path';
 import {Option, program} from '@commander-js/extra-typings';
-import {JsonParser} from '@croct/json5-parser';
+import {Formatting, JsonArrayNode, JsonObjectNode, JsonParser, JsonValueNode} from '@croct/json5-parser';
 import {JsonValue} from '@croct/json';
 import Ajv, {type JSONSchemaType, type ValidateFunction} from 'ajv/dist/2019';
 import addFormats from 'ajv-formats';
 import Table from 'cli-table3';
 import {Client as TypesenseClient} from 'typesense';
 import chalk from 'chalk';
+import * as process from 'node:process';
 
-const SCHEMA_URL = 'https://schema.croct.com/json/next/catalog-template.json';
+const CATALOG_TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/catalog-template.json';
+const TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/template.json';
 const BASE_URL = 'https://github.com/croct-tech/templates/blob/master/';
 const CDN_URL = 'https://cdn.croct.io/assets/templates';
 const ASSET_PATH = 'assets';
@@ -48,136 +58,191 @@ const categoryMap = {
 
 const technologyCategories = ['library', 'language', 'framework'];
 
+const templatePropertyOrder: OrderMap = {
+    '': ['$schema', 'title', 'description', 'metadata', 'options', 'actions'],
+    metadata: {
+        '': [
+            'id',
+            'verified',
+            'author',
+            'documentationUrl',
+            'sourceUrl',
+            'demoUrl',
+            'deployUrl',
+            'coverImageUrl',
+            'coverVideoUrl',
+            'installationUrl',
+            'categories',
+            'relatedTemplates',
+        ],
+        author: {
+            '': ['name', 'avatarUrl', 'websiteUrl'],
+        },
+    },
+};
+
+const formatting: Formatting = {
+    string: {
+        quote: 'double',
+    },
+    property: {
+        quote: 'double',
+    },
+    object: {
+        colonSpacing: true,
+        commaSpacing: true,
+        trailingComma: false,
+        entryIndentation: true,
+        indentationSize: 2,
+        leadingIndentation: true,
+        trailingIndentation: true,
+    },
+    array: {
+        colonSpacing: true,
+        commaSpacing: true,
+        trailingComma: false,
+        entryIndentation: true,
+        indentationSize: 2,
+        leadingIndentation: true,
+        trailingIndentation: true,
+    },
+};
+
 type TemplateDocumentOptions = {
-    name: string,
-    type: 'string' | 'boolean' | 'number' | 'object' | 'array' | 'reference',
-    description: string,
-    default: string,
-    required: boolean,
+  name: string,
+  type: 'string' | 'boolean' | 'number' | 'object' | 'array' | 'reference',
+  description: string,
+  default: string,
+  required: boolean,
 };
 
 type TemplateDocumentCategory = {
-    id: string,
-    name: string,
-    iconUrl?: string,
+  id: string,
+  name: string,
+  iconUrl?: string,
 };
 
 type TemplateDocument = {
-    id: string,
-    title: string,
-    description: string,
-    documentation: string,
-    demoUrl?: string,
-    deployUrl?: string,
-    coverImageUrl: string,
-    coverVideoUrl?: string,
-    installationUrl: string,
-    sourceUrl: string,
-    categories: TemplateDocumentCategory[],
-    verified?: boolean,
-    relatedTemplates: string[],
-    options: TemplateDocumentOptions[],
-    author: {
-        name: string,
-        avatarUrl: string,
-        websiteUrl: string,
-    },
-    popularity?: number,
-    publishTime?: number,
+  id: string,
+  title: string,
+  description: string,
+  documentation: string,
+  demoUrl?: string,
+  deployUrl?: string,
+  coverImageUrl: string,
+  coverVideoUrl?: string,
+  installationUrl: string,
+  sourceUrl: string,
+  categories: TemplateDocumentCategory[],
+  verified?: boolean,
+  relatedTemplates: string[],
+  options: TemplateDocumentOptions[],
+  author: {
+    name: string,
+    avatarUrl: string,
+    websiteUrl: string,
+  },
+  popularity?: number,
+  publishTime?: number,
 };
 
 type TemplateCatalog = {
-    categories: string[],
-    templates: Record<string, TemplateFile>,
-    violations: Violation[],
+  categories: string[],
+  catalogTemplates: Record<string, TemplateFile>,
+  otherTemplates: TemplateFile[],
+  violations: Violation[],
 };
 
 type TemplateUpdate = {
-    index: TemplateDocument[],
-    covers: Record<string, string>,
-    assets: Record<string, string>,
-    removedTemplates: string[],
-    summary: {
-        indexed: number,
-        additions: number,
-        removals: number,
-        total: number,
-    },
+  index: TemplateDocument[],
+  covers: Record<string, string>,
+  assets: Record<string, string>,
+  removedTemplates: string[],
+  summary: {
+    indexed: number,
+    additions: number,
+    removals: number,
+    total: number,
+  },
 };
 
 type Violation = {
-    path: string,
-    description: string,
-    details?: string[],
+  path: string,
+  description: string,
+  details?: string[],
 };
 
 type TemplateMetadata = {
-    id: string,
-    verified?: boolean,
-    documentationUrl: string,
-    sourceUrl: string,
-    demoUrl?: string,
-    deployUrl?: string,
-    coverImageUrl: string,
-    coverVideoUrl?: string,
-    installationUrl: string,
-    categories: string[],
-    relatedTemplates?: string[],
-    author: {
-        name: string,
-        avatarUrl: string,
-        websiteUrl: string,
-    },
+  id: string,
+  verified?: boolean,
+  documentationUrl: string,
+  sourceUrl: string,
+  demoUrl?: string,
+  deployUrl?: string,
+  coverImageUrl: string,
+  coverVideoUrl?: string,
+  installationUrl: string,
+  categories: string[],
+  relatedTemplates?: string[],
+  author: {
+    name: string,
+    avatarUrl: string,
+    websiteUrl: string,
+  },
 };
 
 type OptionTypes = {
-    string: {
-        choices?: string[],
-    },
-    boolean: Record<never, never>,
-    number: Record<never, never>,
-    array: Record<never, never>,
-    object: Record<never, never>,
-    reference: Record<never, never>,
+  string: {
+    choices?: string[],
+  },
+  boolean: Record<never, never>,
+  number: Record<never, never>,
+  array: Record<never, never>,
+  object: Record<never, never>,
+  reference: Record<never, never>,
 };
 
 type OptionDefinition<T extends keyof OptionTypes = keyof OptionTypes> = {
-    [K in T]: OptionTypes[K] & {
-        type: K,
-        default?: JsonValue,
-        description: string,
-        required?: boolean,
-    }
+  [K in T]: OptionTypes[K] & {
+    type: K,
+    default?: JsonValue,
+    description: string,
+    required?: boolean,
+  }
 }[T];
 
 type Template = {
-    title: string,
-    description: string,
-    metadata: TemplateMetadata,
-    options?: Record<string, OptionDefinition>,
-    actions: Array<Record<string, any>>,
+  title: string,
+  description: string,
+  metadata: TemplateMetadata,
+  options?: Record<string, OptionDefinition>,
+  actions: Array<Record<string, any>>,
 };
 
-type TemplateFile = Template & {
-    path: string,
+type CatalogTemplate = Template & {
+  metadata: TemplateMetadata,
+};
+
+type TemplateFile<T extends Template = Template | CatalogTemplate> = T & {
+  path: string,
 };
 
 type PropertyAccessor = {
-    path: string,
-    label: string,
-    value?: string,
-    set: (value: string) => void,
+  path: string,
+  label: string,
+  value?: string,
+  set: (value: string) => void,
 };
 
 type UpdateOptions = {
-    catalog: TemplateCatalog,
-    client: TypesenseClient,
-    collection: string,
+  catalog: TemplateCatalog,
+  client: TypesenseClient,
+  collection: string,
 };
 
 type UpdatedDocumentation = {
-    documentation: string,
-    assets: Record<string, string>,
+  documentation: string,
+  assets: Record<string, string>,
 };
 
 async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpdate> {
@@ -199,13 +264,13 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
     };
 
     for (const {id} of index) {
-        if (catalog.templates[id] === undefined) {
+        if (catalog.catalogTemplates[id] === undefined) {
             update.removedTemplates.push(id);
             update.summary.removals++;
         }
     }
 
-    for (const {metadata, ...template} of Object.values(catalog.templates)) {
+    for (const {metadata, ...template} of Object.values(catalog.catalogTemplates)) {
         const isNew = !indexedTemplates.has(metadata.id);
         const coverImageName = generateCoverFileName(metadata.id, metadata.coverImageUrl);
         const coverVideoName = metadata.coverVideoUrl !== undefined
@@ -297,7 +362,7 @@ function updateDocumentationAssets(id: string, documentation: string, path: stri
     };
 }
 
-function getCategoryIconUrl(name: string): string|undefined {
+function getCategoryIconUrl(name: string): string | undefined {
     const fileName = getCategoryIconFile(name);
 
     if (fileName === undefined) {
@@ -307,7 +372,7 @@ function getCategoryIconUrl(name: string): string|undefined {
     return `${CDN_URL}/${fileName.replace(/\\/g, '/')}`;
 }
 
-function getCategoryIconFile(name: string): string|undefined {
+function getCategoryIconFile(name: string): string | undefined {
     if (isTechnologyCategory(name)) {
         return join('icons', 'technology', `${name.split('/').pop()}.png`);
     }
@@ -366,9 +431,11 @@ async function updateTemplateIndex(client: TypesenseClient, collection: string, 
 
 async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> {
     const categories = new Set<string>();
-    const templates: Record<string, TemplateFile> = {};
+    const catalogTemplates: Record<string, TemplateFile> = {};
+    const otherTemplates: TemplateFile[] = [];
     const violations: Violation[] = [];
-    const validate = await createTemplateValidator();
+    const validateCatalogTemplate = await createTemplateValidator<CatalogTemplate>(CATALOG_TEMPLATE_SCHEMA_URL);
+    const validateTemplate = await createTemplateValidator<Template>(TEMPLATE_SCHEMA_URL);
 
     for (const category of Object.keys(categoryMap)) {
         const iconPath = getCategoryIconFile(category);
@@ -395,10 +462,10 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
             });
         }
 
-        let template: JsonValue;
+        let templateNode: JsonValueNode;
 
         try {
-            template = JsonParser.parse(readFileSync(path, 'utf-8')).toJSON();
+            templateNode = JsonParser.parse(readFileSync(path, 'utf-8'));
         } catch (error) {
             violations.push({
                 path: path,
@@ -408,11 +475,31 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
             continue;
         }
 
-        if (!validate(template)) {
+        const template = templateNode.toJSON();
+
+        const schema = typeof template === 'object'
+          && !Array.isArray(template)
+          && typeof template?.$schema === 'string'
+          && [TEMPLATE_SCHEMA_URL, CATALOG_TEMPLATE_SCHEMA_URL].includes(template.$schema)
+            ? template.$schema
+            : null;
+
+        if (schema === null) {
+            violations.push({
+                path: path,
+                description: 'The template file does not have a valid $schema property.',
+            });
+        }
+
+        const validator = schema === TEMPLATE_SCHEMA_URL
+            ? validateTemplate
+            : validateCatalogTemplate;
+
+        if (!validator(template)) {
             violations.push({
                 path: path,
                 description: 'The template is not valid.',
-                details: validate.errors?.map(
+                details: validateCatalogTemplate.errors?.map(
                     error => (
                         error.instancePath === ''
                             ? error.message ?? 'Unknown error'
@@ -424,13 +511,22 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
             continue;
         }
 
+        if (schema === TEMPLATE_SCHEMA_URL) {
+            otherTemplates.push({
+                path: path,
+                ...template,
+            });
+
+            continue;
+        }
+
         const {metadata} = template;
         const {id} = metadata;
 
-        if (templates[id] !== undefined) {
+        if (catalogTemplates[id] !== undefined) {
             violations.push({
                 path: path,
-                description: `The template ID "${id}" is already used by "${templates[id].path}".`,
+                description: `The template ID "${id}" is already used by "${catalogTemplates[id].path}".`,
             });
         }
 
@@ -510,6 +606,27 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
             }
         }
 
+        if (!isFormatted(templateNode)) {
+            violations.push({
+                path: path,
+                description: 'Template file must be formatted.',
+            });
+        }
+
+        if (!isArraySorted(metadata.categories)) {
+            violations.push({
+                path: path,
+                description: 'Categories must be sorted in alphabetical order.',
+            });
+        }
+
+        if (!isArraySorted(metadata.relatedTemplates ?? [])) {
+            violations.push({
+                path: path,
+                description: 'Related templates must be sorted in alphabetical order.',
+            });
+        }
+
         for (const duplicate of findDuplicates(metadata.categories)) {
             violations.push({
                 path: path,
@@ -524,7 +641,7 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
             });
         }
 
-        templates[template.metadata.id] = {
+        catalogTemplates[template.metadata.id] = {
             path: path,
             ...template,
         };
@@ -547,11 +664,11 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
         }
     }
 
-    for (const template of Object.values(templates)) {
+    for (const template of Object.values(catalogTemplates)) {
         const relatedTemplates = template.metadata.relatedTemplates ?? [];
 
         for (const relatedTemplate of relatedTemplates) {
-            if (templates[relatedTemplate] === undefined) {
+            if (catalogTemplates[relatedTemplate] === undefined) {
                 violations.push({
                     path: template.path,
                     description: `Related template "${relatedTemplate}" does not exist.`,
@@ -569,9 +686,76 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
 
     return {
         categories: Array.from(categories),
-        templates: templates,
+        catalogTemplates: catalogTemplates,
+        otherTemplates: otherTemplates,
         violations: violations,
     };
+}
+
+function isArraySorted<T extends string | number>(array: T[]): boolean {
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < array[i - 1]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+interface OrderMap {
+  '': string[];
+
+  [key: string]: OrderMap | string[];
+}
+
+function isFormatted(value: JsonValueNode): boolean {
+    const clone = value.clone();
+
+    clone.reset();
+
+    return value.toString() === clone.toString(formatting);
+}
+
+function sortElements(array: JsonArrayNode): JsonArrayNode {
+    return JsonArrayNode.of(
+        ...[...array.elements].sort(
+            (leftValue, rightValue) => (
+                `${leftValue.toJSON()}`.localeCompare(`${rightValue.toJSON()}`)
+            ),
+        ),
+    );
+}
+
+function sortKeys(object: JsonObjectNode, order: OrderMap): JsonObjectNode {
+    const result = JsonObjectNode.of({});
+    const keys = new Set(object.properties.map(property => property.key.toJSON()));
+
+    for (const key of order[''] ?? []) {
+        if (!keys.has(key)) {
+            continue;
+        }
+
+        const value = object.get(key);
+
+        if (
+            value instanceof JsonObjectNode
+            && typeof order[key] === 'object'
+            && !Array.isArray(order[key])
+            && order[key] !== null
+        ) {
+            result.set(key, sortKeys(value, order[key]));
+        } else {
+            result.set(key, value);
+        }
+
+        keys.delete(key);
+    }
+
+    for (const key of Array.from(keys).sort()) {
+        result.set(key, object.get(key));
+    }
+
+    return result;
 }
 
 function findDuplicates(values: string[]): string[] {
@@ -589,22 +773,22 @@ function findDuplicates(values: string[]): string[] {
     return duplicates;
 }
 
-async function createTemplateValidator(): Promise<ValidateFunction<Template>> {
+async function createTemplateValidator<T>(schemaUrl: string): Promise<ValidateFunction<T>> {
     const ajv = new Ajv();
 
     addFormats(ajv);
 
-    return ajv.compile(await loadTemplateSchema());
+    return ajv.compile(await loadTemplateSchema<T>(schemaUrl));
 }
 
-async function loadTemplateSchema(): Promise<JSONSchemaType<Template>> {
-    const response = await fetch(SCHEMA_URL);
+async function loadTemplateSchema<T>(url: string): Promise<JSONSchemaType<T>> {
+    const response = await fetch(url);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch schema: ${response.statusText}`);
     }
 
-    return response.json() as Promise<JSONSchemaType<Template>>;
+    return response.json() as Promise<JSONSchemaType<T>>;
 }
 
 function findTemplateFiles(directory: string): string[] {
@@ -651,9 +835,9 @@ function reportViolations(violations: Violation[]): void {
 }
 
 interface Tree {
-    label: string;
-    children: Record<string, Tree>;
-    count: number;
+  label: string;
+  children: Record<string, Tree>;
+  count: number;
 }
 
 function formatCategoryTree(categories: string[], counts: Record<string, number> = {}): string {
@@ -721,7 +905,7 @@ function formatCategoryTree(categories: string[], counts: Record<string, number>
 function countCategories(catalog: TemplateCatalog): Record<string, number> {
     const counts: Record<string, Set<string>> = {};
 
-    for (const template of Object.values(catalog.templates)) {
+    for (const template of Object.values(catalog.catalogTemplates)) {
         for (const category of template.metadata.categories) {
             const path = category.split('/');
 
@@ -757,7 +941,7 @@ function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate)
     let categoriesCount = 0;
     const authors = new Set<string>();
 
-    for (const template of Object.values(catalog.templates)) {
+    for (const template of Object.values(catalog.catalogTemplates)) {
         relatedTemplates += template.metadata.relatedTemplates?.length ?? 0;
         categoriesCount += template.metadata.categories?.length ?? 0;
         authors.add(template.metadata.author.websiteUrl);
@@ -820,6 +1004,42 @@ async function run(): Promise<void> {
             reportViolations(catalog.violations);
 
             process.exit(1);
+        });
+
+    program.command('format')
+        .argument('<directory>')
+        .action(async directory => {
+            console.log('Formatting templates...');
+
+            const catalog = await loadTemplateCatalog(directory);
+            const templates = [...Object.values(catalog.catalogTemplates), ...catalog.otherTemplates];
+
+            for (const {path} of templates) {
+                const source = JsonParser.parse(readFileSync(path, 'utf-8'), JsonObjectNode);
+                const formattedTemplate = sortKeys(source, templatePropertyOrder);
+
+                if (formattedTemplate.has('metadata')) {
+                    const metadata = formattedTemplate.get('metadata').cast(JsonObjectNode);
+
+                    metadata.set(
+                        'categories',
+                        sortElements(metadata.get('categories').cast(JsonArrayNode)),
+                    );
+
+                    if (metadata.has('relatedTemplates')) {
+                        metadata.set(
+                            'relatedTemplates',
+                            sortElements(metadata.get('relatedTemplates').cast(JsonArrayNode)),
+                        );
+                    }
+                }
+
+                formattedTemplate.reset();
+
+                writeFileSync(path, formattedTemplate.toString(formatting));
+            }
+
+            console.log(chalk.green('Templates formatted successfully!'));
         });
 
     program.command('publish')

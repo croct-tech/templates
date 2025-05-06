@@ -22,6 +22,9 @@
       "language/javascript",
       "language/typescript",
       "use-case/e-commerce"
+    ],
+    "relatedTemplates": [
+      "interface/section/react-swiper-carousel"
     ]
   },
   "options": {
@@ -48,6 +51,10 @@
       "type": "boolean",
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
+    },
+    "extensionTemplate": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
     }
   },
   "actions": [
@@ -230,6 +237,21 @@
               "value": "${project.workspace.url}"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.extensionTemplate !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extensionTemplate}",
+          "options": {
+            "exampleDirectory": "${this.exampleDirectory}",
+            "exampleFile": "${this.exampleFile}",
+            "codeExtension": "${this.codeExtension}"
+          }
         }
       ]
     },

@@ -1,0 +1,35 @@
+# Introduction
+
+This carousel section template uses [Swiper.js](https://swiperjs.com/) with React to
+create [carousels](https://croct.com/templates/interface/section/carousel-section) for displaying rotating content, such
+as images, videos, or text.
+
+It adds a carousel section component to your project or creates a new project
+using [Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current directory.
+
+It comes fully integrated with Croct, giving you CMS, A/B testing, and personalization out of the box.
+
+## Usage
+
+To create a new project using this template, run:
+
+```croct-cmd
+croct@latest use npm://swiper/react
+```
+
+You can customize the template by specifying options:
+
+```croct-cmd
+croct@latest use npm://swiper/react --router=page
+```
+
+## Options
+
+The following options are available for this template:
+
+| Option        | Description                                      | Required | Default  |
+|---------------|--------------------------------------------------|----------|----------|
+| `projectName` | The name of the project.                         | No       | `my-app` |
+| `version`     | The Next.js version to use.                      | No       | `latest` |
+| `router`      | The router to use (`app` or `page`).             | No       | `app`    |
+| `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |

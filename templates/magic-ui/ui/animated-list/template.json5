@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/cover.png",
+    "installationUrl": "magic-ui://ui/animated-list",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -18,11 +22,7 @@
       "language/typescript",
       "library/framer-motion",
       "library/magic-ui"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/cover.png",
-    "installationUrl": "magic-ui://ui/animated-list",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/animated-list/README.md"
+    ]
   },
   "options": {
     "version": {
@@ -69,7 +69,7 @@
                     "name": "Magic UI - Animated list",
                     "description": "A list with animations to display notifications, updates, or events.",
                     "schema": "${import('./configuration/animated-list-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-animated-list": {

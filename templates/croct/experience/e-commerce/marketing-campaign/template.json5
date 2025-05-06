@@ -10,11 +10,13 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": ["use-case/e-commerce"],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/marketing-campaign/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/marketing-campaign/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/marketing-campaign/cover.png",
     "installationUrl": "croct://experience/e-commerce/marketing-campaign",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/marketing-campaign/README.md"
+    "categories": [
+      "use-case/e-commerce"
+    ]
   },
   "actions": [
     {

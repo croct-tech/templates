@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/cover.png",
+    "installationUrl": "magic-ui://ui/marquee",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -23,22 +27,26 @@
     ],
     "relatedTemplates": [
       "library/magic-ui/bento-grid"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/cover.png",
-    "installationUrl": "magic-ui://ui/marquee",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -52,7 +60,10 @@
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["review-card.tsx", "review-list.tsx"],
+        "components": [
+          "review-card.tsx",
+          "review-list.tsx"
+        ],
         "action": {
           "name": "create-resource",
           "resources": {
@@ -61,7 +72,7 @@
                 "name": "Magic UI - Marquee reviews",
                 "description": "An infinite scrolling component for displaying testimonials, or user reviews.",
                 "schema": "${import('./configuration/marquee-schema.json')}"
-              },
+              }
             },
             "slots": {
               "magic-ui-marquee-reviews": {

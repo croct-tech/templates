@@ -10,6 +10,10 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/cover.png",
+    "installationUrl": "nextjs://croct",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",
@@ -20,12 +24,8 @@
     "relatedTemplates": [
       "boilerplate/starter/nextjs-project",
       "boilerplate/starter/shadcn-croct",
-      "boilerplate/starter/shadcn-project",
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/cover.png",
-    "installationUrl": "nextjs://croct",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/README.md"
+      "boilerplate/starter/shadcn-project"
+    ]
   },
   "options": {
     "name": {
@@ -41,7 +41,7 @@
         "14",
         "15",
         "latest"
-      ],
+      ]
     },
     "router": {
       "type": "string",
@@ -50,7 +50,7 @@
         "app",
         "page"
       ],
-      "default": "app",
+      "default": "app"
     },
     "javascript": {
       "type": "boolean",
@@ -87,7 +87,7 @@
       "name": "import",
       "template": "croct://utils/filename-generator",
       "options": {
-        "reference": "projectName",
+        "reference": "projectName"
       }
     },
     {
@@ -100,7 +100,7 @@
         "tailwind": "${options.tailwind}",
         "eslint": true,
         "src-dir": "${options['src-dir']}",
-        "router": "${options.router}",
+        "router": "${options.router}"
       }
     },
     {
@@ -122,9 +122,7 @@
             "name": "Next.js ${this.versionNumber} project homepage",
             "component": "next${this.versionNumber}-starter-page",
             "content": {
-              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {\
-                page: this.pageDirectory + '/' + this.pageFile\
-              })}"
+              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {                page: this.pageDirectory + '/' + this.pageFile              })}"
             }
           }
         }
@@ -140,15 +138,19 @@
     },
     {
       "name": "add-slot",
-      "slots": ["${this.slotId}@${this.slotVersion}"],
+      "slots": [
+        "${this.slotId}@${this.slotVersion}"
+      ]
     },
     {
       "name": "add-dependency",
-      "dependencies": ["@croct/template-ui", "@croct/md-lite"]
+      "dependencies": [
+        "@croct/template-ui",
+        "@croct/md-lite"
+      ]
     },
     {
       "name": "test",
-      // The assets in the Next.js 14 are broken
       "condition": "${this.versionNumber === '14'}",
       "then": [
         {
@@ -192,29 +194,17 @@
     {
       "name": "download",
       "overwrite": true,
-      // code/lib/markdown.{js|tsx}
-      "source": "${[\
-        'code',\
-        'lib',\
-        'markdown' + this.codeExtension\
-      ].join('/')}",
-      "destination": "${project.path.utilities}",
+      "source": "${[        'code',        'lib',        'markdown' + this.codeExtension      ].join('/')}",
+      "destination": "${project.path.utilities}"
     },
     {
       "name": "download",
       "overwrite": true,
-      // code/page/{version}/{app|page}/{tailwind|css}/{page|index.{js|tsx}}
-      "source": "${[\
-        'code',\
-        'page',\
-        this.versionNumber,\
-        options.tailwind ? 'tailwind' : 'css',\
-        options.router === 'app' ? 'page.js' : ('index' + this.codeExtension)\
-      ].join('/')}",
+      "source": "${[        'code',        'page',        this.versionNumber,        options.tailwind ? 'tailwind' : 'css',        options.router === 'app' ? 'page.js' : ('index' + this.codeExtension)      ].join('/')}",
       "mapping": {
         "page.js": "${this.pageFile}"
       },
-      "destination": "${this.pagePath}",
+      "destination": "${this.pagePath}"
     },
     {
       "name": "replace-file-content",

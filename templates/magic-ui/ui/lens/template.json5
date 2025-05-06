@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/cover.png",
+    "installationUrl": "magic-ui://ui/lens",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -16,22 +20,26 @@
       "language/javascript",
       "language/typescript",
       "library/magic-ui"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/cover.png",
-    "installationUrl": "magic-ui://ui/lens",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/lens/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -45,7 +53,9 @@
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["lens-card.tsx"],
+        "components": [
+          "lens-card.tsx"
+        ],
         "action": {
           "name": "run",
           "actions": [
@@ -53,7 +63,10 @@
               "name": "import",
               "template": "shadcn-ui://ui/component",
               "options": {
-                "components": ["button", "card"],
+                "components": [
+                  "button",
+                  "card"
+                ]
               }
             },
             {
@@ -64,7 +77,7 @@
                     "name": "Magic UI - Lens",
                     "description": "A hover effect that highlights or magnifies content within a section.",
                     "schema": "${import('./configuration/lens-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-lens": {

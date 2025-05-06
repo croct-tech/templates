@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/shadcn-ui.png",
       "websiteUrl": "https://ui.shadcn.com?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/cover.png",
+    "installationUrl": "shadcn-ui://project",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",
@@ -21,12 +25,8 @@
     "relatedTemplates": [
       "boilerplate/starter/nextjs-croct",
       "boilerplate/starter/nextjs-project",
-      "boilerplate/starter/shadcn-croct",
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/cover.png",
-    "installationUrl": "shadcn-ui://project",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/project/README.md"
+      "boilerplate/starter/shadcn-croct"
+    ]
   },
   "options": {
     "name": {
@@ -37,12 +37,20 @@
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -59,48 +67,60 @@
         "disableLauncher": true
       }
     },
-    /*
-     Shadcn CLI has a known issue with sibling projects when using the `--cwd` option.
-     As a workaround, navigate into the directory before running the command, then return afterward.
-     Issue: https://github.com/shadcn-ui/ui/issues/6767
-   */
     {
       "name": "execute-package",
       "package": "shadcn@latest",
       "runner": "npm",
-      "arguments": ["init"],
+      "arguments": [
+        "init"
+      ],
       "interactions": [
         {
           "when": "Would you like to start a new project?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "What is your project named?",
-          "then": ["${options.name}", "[enter]"]
+          "then": [
+            "${options.name}",
+            "[enter]"
+          ]
         },
         {
           "when": "You need to create a components.json file to add components. Proceed?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "How would you like to proceed?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Which style would you like to use?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Which color would you like to use as the base color?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Would you like to use CSS variables for theming?",
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Project initialization completed",
-          "final": true,
+          "final": true
         }
       ]
     }

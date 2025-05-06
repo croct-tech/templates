@@ -10,6 +10,10 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/cover.png",
+    "installationUrl": "croct://ui/block/carousel-section",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -17,12 +21,8 @@
       "interface/section",
       "language/javascript",
       "language/typescript",
-      "use-case/e-commerce",
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/cover.png",
-    "installationUrl": "croct://ui/block/carousel-section",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/README.md"
+      "use-case/e-commerce"
+    ]
   },
   "options": {
     "version": {
@@ -59,14 +59,14 @@
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
-        "disableLauncher": true,
+        "disableLauncher": true
       }
     },
     {
       "name": "check-dependency",
       "dependencies": [
         {
-          "name": "typescript",
+          "name": "typescript"
         }
       ],
       "result": {
@@ -89,7 +89,7 @@
       "name": "download",
       "overwrite": true,
       "source": "code/components/header.module.css",
-      "destination": "${project.path.components}",
+      "destination": "${project.path.components}"
     },
     {
       "name": "download",
@@ -97,14 +97,14 @@
       "source": "code/components/header.tsx",
       "destination": "${project.path.components}",
       "mapping": {
-        "header.tsx": "header${this.codeExtension}",
+        "header.tsx": "header${this.codeExtension}"
       }
     },
     {
       "name": "download",
       "overwrite": true,
       "source": "code/components/product-grid.module.css",
-      "destination": "${project.path.components}",
+      "destination": "${project.path.components}"
     },
     {
       "name": "download",
@@ -112,14 +112,14 @@
       "source": "code/components/product-grid.tsx",
       "destination": "${project.path.components}",
       "mapping": {
-        "product-grid.tsx": "product-grid${this.codeExtension}",
+        "product-grid.tsx": "product-grid${this.codeExtension}"
       }
     },
     {
       "name": "download",
       "overwrite": true,
       "source": "code/components/carousel.module.css",
-      "destination": "${project.path.components}",
+      "destination": "${project.path.components}"
     },
     {
       "name": "download",
@@ -127,13 +127,13 @@
       "source": "code/components/carousel.tsx",
       "destination": "${project.path.components}",
       "mapping": {
-        "carousel.tsx": "carousel${this.codeExtension}",
+        "carousel.tsx": "carousel${this.codeExtension}"
       }
     },
     {
       "name": "define",
       "variables": {
-        "routePath": "carousel",
+        "routePath": "carousel"
       }
     },
     {
@@ -143,7 +143,7 @@
         "exampleFile": "${{\
           nextjs: project.path.examples.endsWith('app') ? 'page' : 'index',\
           react: 'page',\
-        }[project.platform]}",
+        }[project.platform]}"
       }
     },
     {
@@ -158,7 +158,7 @@
       "source": "code/page/${project.platform}/${this.exampleFile}.tsx",
       "destination": "${this.exampleDirectory}",
       "mapping": {
-        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}",
+        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}"
       }
     },
     {
@@ -228,7 +228,7 @@
             {
               "pattern": "%workspaceUrl%",
               "value": "${project.workspace.url}"
-            },
+            }
           ]
         }
       ]
@@ -246,10 +246,10 @@
           "name": "import",
           "template": "croct:/utils/example-launcher",
           "options": {
-            "path": "${this.routePath}",
+            "path": "${this.routePath}"
           }
-        },
+        }
       ]
-    },
+    }
   ]
 }

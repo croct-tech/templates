@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/cover.png",
+    "installationUrl": "magic-ui://ui/hero-video-dialog",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -18,22 +22,26 @@
       "language/javascript",
       "language/typescript",
       "library/magic-ui"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/cover.png",
-    "installationUrl": "magic-ui://ui/hero-video-dialog",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/hero-video-dialog/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -47,7 +55,9 @@
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["hero-video-player.tsx"],
+        "components": [
+          "hero-video-player.tsx"
+        ],
         "action": {
           "name": "run",
           "actions": [
@@ -59,7 +69,7 @@
                     "name": "Magic UI - Hero video dialog",
                     "description": "A hero section with a video dialog to introduce or demo your product.",
                     "schema": "${import('./configuration/hero-video-dialog-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-hero-video-dialog": {

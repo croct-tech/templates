@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/cover.png",
+    "installationUrl": "magic-ui://ui/component",
     "categories": [
       "boilerplate/utility",
       "framework/nextjs",
@@ -18,12 +22,8 @@
       "library/magic-ui"
     ],
     "relatedTemplates": [
-      "library/shadcn-ui/component",
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/cover.png",
-    "installationUrl": "magic-ui://ui/component",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/component/README.md"
+      "library/shadcn-ui/component"
+    ]
   },
   "options": {
     "id": {
@@ -62,7 +62,7 @@
     },
     "components": {
       "type": "array",
-      "description": "The components to import.",
+      "description": "The components to import."
     },
     "action": {
       "type": "object",
@@ -79,7 +79,7 @@
           "name": "fail",
           "message": "This template is only supported in Next.js and React projects.",
           "suggestions": [
-            "Run the command in an empty folder to create a new project.",
+            "Run the command in an empty folder to create a new project."
           ]
         }
       ]
@@ -90,7 +90,7 @@
       "options": {
         "name": "${options.id}-example",
         "version": "${options.version}",
-        "router": "${options.router}",
+        "router": "${options.router}"
       }
     },
     {
@@ -112,23 +112,20 @@
       "name": "define",
       "variables": {
         "exampleDirectory": "${project.path.examples}/${options.id}",
-        "exampleFile": "${{\
-          nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx',\
-          react: 'page.tsx',\
-        }[project.platform]}",
+        "exampleFile": "${{          nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx',          react: 'page.tsx',        }[project.platform]}"
       }
     },
     {
       "name": "define",
       "variables": {
-        "examplePath": "${this.exampleDirectory}/${this.exampleFile}",
+        "examplePath": "${this.exampleDirectory}/${this.exampleFile}"
       }
     },
     "${options.action}",
     {
       "name": "define",
       "variables": {
-        "componentIndex": 0,
+        "componentIndex": 0
       }
     },
     {
@@ -138,12 +135,12 @@
         {
           "name": "download",
           "source": "magic-ui://ui/${options.id}/code/components/${options.components[this.componentIndex]}",
-          "destination": "${project.path.components}",
+          "destination": "${project.path.components}"
         },
         {
           "name": "define",
           "variables": {
-            "componentIndex": "${this.componentIndex + 1}",
+            "componentIndex": "${this.componentIndex + 1}"
           }
         }
       ]
@@ -151,13 +148,13 @@
     {
       "name": "download",
       "source": "magic-ui://ui/${options.id}/code/page/${project.platform}/${this.exampleFile}",
-      "destination": "${this.exampleDirectory}",
+      "destination": "${this.exampleDirectory}"
     },
     {
       "name": "add-slot",
       "slots": [
         "${this[options.slotId]}@${this[options.slotVersion]}"
-      ],
+      ]
     },
     {
       "name": "replace-file-content",
@@ -194,10 +191,10 @@
           "name": "import",
           "template": "croct://utils/example-launcher",
           "options": {
-            "path": "${options.id}",
+            "path": "${options.id}"
           }
-        },
+        }
       ]
-    },
+    }
   ]
 }

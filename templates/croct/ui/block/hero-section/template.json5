@@ -10,16 +10,16 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "interface/marketing",
-      "interface/section",
-      "interface/hero",
-      "use-case/saas"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/cover.png",
     "installationUrl": "croct://ui/block/hero-section",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/hero-section/README.md"
+    "categories": [
+      "interface/hero",
+      "interface/marketing",
+      "interface/section",
+      "use-case/saas"
+    ]
   },
   "actions": [
     {
@@ -42,7 +42,7 @@
             "name": "Hero section",
             "component": "hero-section",
             "content": {
-              "en": "${import('./configuration/hero-section-content.en.json')}",
+              "en": "${import('./configuration/hero-section-content.en.json')}"
             }
           }
         }

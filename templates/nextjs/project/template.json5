@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/vercel.png",
       "websiteUrl": "https://vercel.com?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/cover.png",
+    "installationUrl": "nextjs://project",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",
@@ -19,12 +23,8 @@
     "relatedTemplates": [
       "boilerplate/starter/nextjs-croct",
       "boilerplate/starter/shadcn-croct",
-      "boilerplate/starter/shadcn-project",
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/cover.png",
-    "installationUrl": "nextjs://project",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/project/README.md"
+      "boilerplate/starter/shadcn-project"
+    ]
   },
   "options": {
     "name": {
@@ -35,7 +35,12 @@
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "typescript": {
       "type": "boolean",
@@ -52,7 +57,7 @@
     "turbopack": {
       "type": "boolean",
       "description": "Whether to use TurboPack.",
-      "default": false,
+      "default": false
     },
     "src-dir": {
       "type": "boolean",
@@ -61,7 +66,10 @@
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": ""
     },
     "import-alias": {
@@ -74,27 +82,20 @@
       "name": "execute-package",
       "runner": "npm",
       "package": "create-next-app@${options.version ?? 'latest'}",
-      "arguments": "${[\
-          options.name,\
-          ...(options['src-dir'] === null ? [] : [options['src-dir'] ? '--src-dir' : '--no-src-dir']),\
-          ...(options.typescript === null ? [] : [options.typescript ? '--ts' : '--js']),\
-          ...(options.tailwind === null ? [] : [options.tailwind ? '--tailwind' : '--no-tailwind']),\
-          ...(options.eslint === null ? [] : [options.eslint ? '--eslint' : '--no-eslint']),\
-          ...(options.router === null ? [] : [options.router === 'app' ? '--app' : '--no-app']),\
-          ...(options.turbopack === null ? [] : [options.turbopack ? '--turbopack' : '--no-turbopack']),\
-          ...(options['import-alias'] === null ? [] : ['--import-alias', options['import-alias']])\
-      ]}",
+      "arguments": "${[          options.name,          ...(options['src-dir'] === null ? [] : [options['src-dir'] ? '--src-dir' : '--no-src-dir']),          ...(options.typescript === null ? [] : [options.typescript ? '--ts' : '--js']),          ...(options.tailwind === null ? [] : [options.tailwind ? '--tailwind' : '--no-tailwind']),          ...(options.eslint === null ? [] : [options.eslint ? '--eslint' : '--no-eslint']),          ...(options.router === null ? [] : [options.router === 'app' ? '--app' : '--no-app']),          ...(options.turbopack === null ? [] : [options.turbopack ? '--turbopack' : '--no-turbopack']),          ...(options['import-alias'] === null ? [] : ['--import-alias', options['import-alias']])      ]}",
       "interactions": [
         {
           "when": "Would you like",
           "always": true,
-          "then": ["[enter]"]
+          "then": [
+            "[enter]"
+          ]
         },
         {
           "when": "Initializing project",
-          "final": true,
+          "final": true
         }
       ]
-    },
+    }
   ]
 }

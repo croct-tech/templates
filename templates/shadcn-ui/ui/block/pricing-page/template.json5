@@ -9,6 +9,11 @@
       "avatarUrl": "https://github.com/shadcn-ui.png",
       "websiteUrl": "https://ui.shadcn.com?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/cover.mp4",
+    "installationUrl": "shadcn-ui://ui/block/pricing-page",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -20,23 +25,26 @@
       "library/shadcn-ui",
       "library/tailwind-css",
       "use-case/saas"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/cover.mp4",
-    "installationUrl": "shadcn-ui://ui/block/pricing-page",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/block/pricing-page/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -47,29 +55,35 @@
       "options": {
         "projectName": "pricing-plan-example",
         "version": "${options.version}",
-        "router": "${options.router}",
+        "router": "${options.router}"
       }
     },
     {
       "name": "add-dependency",
-      "dependencies": ["@croct/template-ui"]
+      "dependencies": [
+        "@croct/template-ui"
+      ]
     },
     {
       "name": "import",
       "template": "../../component",
       "options": {
-        "components": ["button", "switch", "label"]
+        "components": [
+          "button",
+          "switch",
+          "label"
+        ]
       }
     },
     {
       "name": "download",
       "source": "code/components/plan-card.tsx",
-      "destination": "${project.path.components}",
+      "destination": "${project.path.components}"
     },
     {
       "name": "download",
       "source": "code/components/pricing-section.tsx",
-      "destination": "${project.path.components}",
+      "destination": "${project.path.components}"
     },
     {
       "name": "define",
@@ -81,22 +95,19 @@
       "name": "define",
       "variables": {
         "exampleDirectory": "${project.path.examples}/${this.routePath}",
-        "exampleFile": "${{\
-          nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx',\
-          react: 'page.tsx',\
-        }[project.platform]}",
+        "exampleFile": "${{          nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx',          react: 'page.tsx',        }[project.platform]}"
       }
     },
     {
       "name": "define",
       "variables": {
-        "examplePath": "${this.exampleDirectory}/${this.exampleFile}",
+        "examplePath": "${this.exampleDirectory}/${this.exampleFile}"
       }
     },
     {
       "name": "download",
       "source": "code/page/${project.platform}/${this.exampleFile}",
-      "destination": "${this.exampleDirectory}",
+      "destination": "${this.exampleDirectory}"
     },
     {
       "name": "create-resource",
@@ -110,7 +121,7 @@
             "name": "Pricing page",
             "component": "pricing-section",
             "content": {
-              "en": "${import('configuration/pricing-section-content.en.json')}",
+              "en": "${import('configuration/pricing-section-content.en.json')}"
             }
           }
         }
@@ -126,7 +137,9 @@
     },
     {
       "name": "add-slot",
-      "slots": ["${this.slotId}"]
+      "slots": [
+        "${this.slotId}"
+      ]
     },
     {
       "name": "replace-file-content",
@@ -145,7 +158,7 @@
             {
               "pattern": "%workspaceUrl%",
               "value": "${project.workspace.url}"
-            },
+            }
           ]
         }
       ]
@@ -163,9 +176,9 @@
           "name": "import",
           "template": "croct://utils/example-launcher",
           "options": {
-            "path": "${this.routePath}",
+            "path": "${this.routePath}"
           }
-        },
+        }
       ]
     }
   ]

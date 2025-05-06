@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/script-copy-btn/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/script-copy-btn/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/script-copy-btn/cover.png",
+    "installationUrl": "magic-ui://ui/script-copy-btn",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -22,22 +26,26 @@
     "relatedTemplates": [
       "library/magic-ui/code-comparison",
       "library/magic-ui/terminal"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/script-copy-btn/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/script-copy-btn/cover.png",
-    "installationUrl": "magic-ui://ui/script-copy-btn",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/script-copy-btn/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     }
   },
@@ -51,7 +59,9 @@
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["copy-command-block.tsx"],
+        "components": [
+          "copy-command-block.tsx"
+        ],
         "action": {
           "name": "run",
           "actions": [
@@ -63,7 +73,7 @@
                     "name": "Magic UI - Script copy button",
                     "description": "A button for quickly copying scripts, commands, or code snippets.",
                     "schema": "${import('./configuration/script-copy-btn-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-script-copy-btn": {

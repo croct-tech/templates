@@ -10,13 +10,13 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "use-case/experiment"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/cover.png",
     "installationUrl": "croct://experiment/all-users",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experiment/all-users/README.md"
+    "categories": [
+      "use-case/experiment"
+    ]
   },
   "actions": [
     {
@@ -45,7 +45,7 @@
             "name": "Home hero",
             "component": "hero-section",
             "content": {
-              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
             }
           }
         },

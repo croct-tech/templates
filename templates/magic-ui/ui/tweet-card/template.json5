@@ -9,6 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/cover.png",
+    "installationUrl": "magic-ui://ui/tweet-card",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -18,22 +22,26 @@
       "language/javascript",
       "language/typescript",
       "library/magic-ui"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/cover.png",
-    "installationUrl": "magic-ui://ui/tweet-card",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/README.md"
+    ]
   },
-  "options":  {
+  "options": {
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
-      "choices": ["13", "14", "15", "latest"]
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
     },
     "router": {
       "type": "string",
       "description": "The router to use.",
-      "choices": ["app", "page"],
+      "choices": [
+        "app",
+        "page"
+      ],
       "default": "app"
     },
     "rsc": {
@@ -62,7 +70,9 @@
         "router": "${options.router}",
         "slotId": "slotId",
         "slotVersion": "slotVersion",
-        "components": ["${options.rsc ? 'server' : 'client'}/tweet.tsx"],
+        "components": [
+          "${options.rsc ? 'server' : 'client'}/tweet.tsx"
+        ],
         "action": {
           "name": "run",
           "actions": [
@@ -74,7 +84,7 @@
                     "name": "Magic UI - Tweet card",
                     "description": "A styled tweet embed to highlight social proof or share updates.",
                     "schema": "${import('./configuration/tweet-card-schema.json')}"
-                  },
+                  }
                 },
                 "slots": {
                   "magic-ui-tweet-card": {

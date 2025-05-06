@@ -10,16 +10,16 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": [
-      "interface/marketing",
-      "interface/component",
-      "use-case/e-commerce",
-      "use-case/saas"
-    ],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/cover.png",
     "installationUrl": "croct://ui/component/image-comparison-slider",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/README.md"
+    "categories": [
+      "interface/component",
+      "interface/marketing",
+      "use-case/e-commerce",
+      "use-case/saas"
+    ]
   },
   "actions": [
     {
@@ -30,7 +30,7 @@
             "name": "Image comparison slider",
             "description": "A slider component for comparing images (before and after).",
             "schema": "${import('./configuration/image-comparison-slider-schema.json')}"
-          },
+          }
         },
         "slots": {
           "image-comparison-slider": {

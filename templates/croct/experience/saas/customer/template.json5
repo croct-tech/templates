@@ -10,11 +10,13 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "categories": ["use-case/saas"],
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/customer/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/customer/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/customer/cover.png",
     "installationUrl": "croct://experience/saas/customer",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/customer/README.md"
+    "categories": [
+      "use-case/saas"
+    ]
   },
   "actions": [
     {
@@ -60,7 +62,7 @@
             "name": "Home hero",
             "component": "hero-section",
             "content": {
-              "en": "${import('./configuration/home-hero-slot-content.en.json')}",
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
             }
           },
           "announcement-bar": {

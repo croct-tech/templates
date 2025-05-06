@@ -10,16 +10,16 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/cover.png",
+    "installationUrl": "croct://ui/block/faq-section",
     "categories": [
       "interface/marketing",
       "interface/section",
       "use-case/e-commerce",
       "use-case/saas"
-    ],
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/cover.png",
-    "installationUrl": "croct://ui/block/faq-section",
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/README.md"
+    ]
   },
   "actions": [
     {
@@ -37,7 +37,7 @@
             "name": "FAQ section",
             "component": "faq-section",
             "content": {
-              "en": "${import('./configuration/faq-section-content.en.json')}",
+              "en": "${import('./configuration/faq-section-content.en.json')}"
             }
           }
         }

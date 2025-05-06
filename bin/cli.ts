@@ -1036,7 +1036,7 @@ async function run(): Promise<void> {
 
                 formattedTemplate.reset();
 
-                writeFileSync(path, formattedTemplate.toString(formatting));
+                writeFileSync(path, `${formattedTemplate.toString(formatting)}\n`);
             }
 
             console.log(chalk.green('Templates formatted successfully!'));

@@ -8,7 +8,7 @@ it helps keep the layout dynamic and maintains visual interest.
 Running AB tests on banner order, visuals, or messaging and personalizing the banners based on audience segments,
 such as showing different promotions by source, device, or behavior, can increase engagement and conversion.
 
-This template adds an announcement bar component to your project or creates a new project using
+This template adds a carousel section component to your project or creates a new project using
 [Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current directory.
 
 It comes fully integrated with Croct, giving you CMS, A/B testing, and personalization out of the box.

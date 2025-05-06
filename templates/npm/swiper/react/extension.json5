@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Carousel section customization",
+  "description": "A Swiper.js customization template for the carousel section.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "add-dependency",
+      "dependencies": ["swiper"]
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/carousel.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "carousel.tsx": "carousel${options.codeExtension}",
+      }
+    }
+  ]
+}

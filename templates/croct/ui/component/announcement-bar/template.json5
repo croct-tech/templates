@@ -1,0 +1,247 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Announcement bar",
+  "description": "Component template for an announcement bar.",
+  "metadata": {
+    "id": "interface/component/announcement-bar",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/cover.png",
+    "installationUrl": "croct://ui/component/announcement-bar",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      'interface/component',
+      'interface/marketing',
+      "language/javascript",
+      "language/typescript",
+      'use-case/e-commerce',
+      'use-case/saas'
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    },
+    "content": {
+      "type": "string",
+      "description": "The URL of the content to use."
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "This template is only supported in Next.js and React projects.",
+          "suggestions": [
+            "Run the command in an empty folder to create a new project."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "import",
+      "template": "croct://project",
+      "options": {
+        "projectName": "announcement-bar-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "disableLauncher": true
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript"
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "codeExtension": "${this.isTypescript ? '.tsx' : '.jsx'}"
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@croct/template-ui",
+        "lucide-react"
+      ]
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/lib/${project.platform === 'nextjs' ? 'nextjs' : 'react'}/markdown.tsx",
+      "destination": "${project.path.utilities}",
+      "mapping": {
+        "markdown.tsx": "markdown${this.codeExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/announcement-bar.module.css",
+      "destination": "${project.path.components}"
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/announcement-bar.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "announcement-bar.tsx": "announcement-bar${this.codeExtension}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "routePath": "announcement-bar"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${this.routePath}",
+        "exampleFile": "${{\
+          nextjs: project.path.examples.endsWith('app') ? 'page' : 'index',\
+          react: 'page',\
+        }[project.platform] ?? 'page'}"
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/content.module.css",
+      "destination": "${this.exampleDirectory}"
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/content.tsx",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "content.tsx": "content${this.codeExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/${project.platform}/${this.exampleFile}.tsx",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}"
+      }
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "description": "A small text bar featured at the top of a page.",
+            "schema": "${import('./configuration/announcement-bar-schema.json')}"
+          }
+        },
+        "slots": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "component": "announcement-bar",
+            "content": {
+              "en": "${import(options.content ?? './configuration/announcement-bar-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "announcement-bar": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this.slotId}"
+      ]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.exampleDirectory}/${this.exampleFile}${this.codeExtension}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this.slotId}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this.slotVersion}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component successfully imported at `${this.exampleDirectory}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct:/utils/example-launcher",
+          "options": {
+            "path": "${this.routePath}"
+          }
+        }
+      ]
+    }
+  ]
+}

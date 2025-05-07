@@ -1,0 +1,238 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content-schema.json",
+  "type": "structure",
+  "title": "Announcement bar",
+  "attributes": {
+    "bar": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "message": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Message",
+            "private": false,
+            "optional": false,
+            "position": 1,
+            "description": "The message to display in the text bar. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
+          },
+          "link": {
+            "type": {
+              "type": "structure",
+              "attributes": {
+                "label": {
+                  "type": {
+                    "type": "text"
+                  },
+                  "label": "Label",
+                  "private": false,
+                  "optional": true,
+                  "position": 0,
+                  "description": "The label of the CTA inside the text bar."
+                },
+                "url": {
+                  "type": {
+                    "type": "text",
+                    "format": "url"
+                  },
+                  "label": "Link",
+                  "private": false,
+                  "optional": false,
+                  "position": 1,
+                  "description": "The destination link of the text bar."
+                },
+                "newTab": {
+                  "type": {
+                    "type": "boolean",
+                    "label": {
+                      "true": "New tab",
+                      "false": "Same tab"
+                    },
+                    "default": false
+                  },
+                  "label": "New tab",
+                  "private": false,
+                  "optional": true,
+                  "position": 2,
+                  "description": "Whether to open the link in a new tab or not."
+                }
+              }
+            },
+            "label": "Link",
+            "private": false,
+            "optional": true,
+            "position": 3,
+            "description": "The link of the text bar."
+          },
+          "dismissible": {
+            "type": {
+              "type": "boolean",
+              "default": false
+            },
+            "label": "Dismissible",
+            "private": false,
+            "optional": true,
+            "position": 2,
+            "description": "Whether to allow the user to close the text bar or not."
+          },
+          "style": {
+            "type": {
+              "type": "structure",
+              "attributes": {
+                "backgroundColor": {
+                  "type": {
+                    "type": "text",
+                    "format": "color"
+                  },
+                  "label": "Background color",
+                  "description": "The color of the background.",
+                  "private": false,
+                  "optional": true,
+                  "position": 0
+                },
+                "textColor": {
+                  "type": {
+                    "type": "text",
+                    "format": "color"
+                  },
+                  "label": "Text color",
+                  "description": "The color of the text.",
+                  "private": false,
+                  "optional": true,
+                  "position": 1
+                },
+                "alignment": {
+                  "type": {
+                    "type": "text",
+                    "choices": {
+                      "left": {
+                        "label": "Left",
+                        "position": 0
+                      },
+                      "center": {
+                        "label": "Center",
+                        "default": true,
+                        "position": 1
+                      }
+                    }
+                  },
+                  "label": "Alignment",
+                  "private": false,
+                  "optional": true,
+                  "position": 2,
+                  "description": "The alignment of the message inside the text bar."
+                },
+                "placement": {
+                  "type": {
+                    "type": "text",
+                    "choices": {
+                      "top": {
+                        "label": "Top",
+                        "default": true,
+                        "position": 0
+                      },
+                      "bottom": {
+                        "label": "Bottom",
+                        "position": 1
+                      },
+                      "floating-bottom": {
+                        "label": "Floating bottom",
+                        "position": 2
+                      },
+                      "floating-bottom-center": {
+                        "label": "Floating bottom center",
+                        "position": 3
+                      }
+                    }
+                  },
+                  "label": "Placement",
+                  "private": false,
+                  "optional": true,
+                  "position": 3,
+                  "description": "The position of the text bar in the page."
+                }
+              }
+            },
+            "label": "Style",
+            "position": 4,
+            "description": "The style of the text bar."
+          },
+          "icon": {
+            "type": {
+              "type": "text",
+              "choices": {
+                "pin": {
+                  "label": "Pin",
+                  "position": 0,
+                  "default": false
+                },
+                "truck": {
+                  "label": "Truck",
+                  "position": 1,
+                  "default": false
+                },
+                "sparkles": {
+                  "label": "Sparkles",
+                  "position": 2,
+                  "default": false
+                },
+                "gift": {
+                  "label": "Gift",
+                  "position": 3,
+                  "default": false
+                },
+                "star": {
+                  "label": "Star",
+                  "position": 4,
+                  "default": false
+                },
+                "discount": {
+                  "label": "Discount",
+                  "position": 5,
+                  "default": false
+                },
+                "alarm": {
+                  "label": "Alarm",
+                  "position": 6,
+                  "default": false
+                },
+                "check": {
+                  "label": "Check",
+                  "position": 7,
+                  "default": false
+                },
+                "info": {
+                  "label": "Info",
+                  "position": 8,
+                  "default": false
+                },
+                "warning": {
+                  "label": "Warning",
+                  "position": 9,
+                  "default": false
+                },
+                "error": {
+                  "label": "Error",
+                  "position": 10,
+                  "default": false
+                }
+              }
+            },
+            "label": "Icon",
+            "description": "The icon on the left.",
+            "private": false,
+            "optional": true,
+            "position": 0
+          }
+        }
+      },
+      "label": "Announcement bar",
+      "private": false,
+      "optional": true,
+      "position": 0
+    }
+  },
+  "description": "A small text bar featured at the top of a page."
+}

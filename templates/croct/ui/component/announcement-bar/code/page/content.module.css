@@ -1,0 +1,162 @@
+.container {
+    width: 100vw;
+    padding: 24px 32px 64px 32px;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    margin-bottom: 24px;
+}
+
+.logo {
+    width: 120px;
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.navItem {
+    width: 60px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.actionButton {
+    width: 80px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0 0 0;
+    gap: 48px;
+}
+
+.heroContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.heroTitle {
+    width: 100%;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.heroSubtitle {
+    width: 80%;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 6px;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.button {
+    width: 120px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.heroImage {
+    flex: 1;
+    height: 320px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .heroImage {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 32px 0;
+    }
+
+    .heroContent {
+        width: 100%;
+    }
+
+    .heroImage {
+        width: 100%;
+        height: 240px;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 16px 0;
+    }
+
+    .logo {
+        width: 100px;
+        height: 28px;
+    }
+
+    .actionButton {
+        width: 70px;
+        height: 32px;
+    }
+
+    .heroTitle {
+        height: 36px;
+    }
+
+    .heroSubtitle {
+        height: 60px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+    }
+
+    .heroImage {
+        height: 180px;
+    }
+}

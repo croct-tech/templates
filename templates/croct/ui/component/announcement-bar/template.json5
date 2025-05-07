@@ -50,6 +50,10 @@
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
     },
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    },
     "content": {
       "type": "string",
       "description": "The URL of the content to use."
@@ -219,6 +223,21 @@
               "value": "${project.workspace.url}"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "exampleDirectory": "${this.exampleDirectory}",
+            "exampleFile": "${this.exampleFile}",
+            "codeExtension": "${this.codeExtension}"
+          }
         }
       ]
     },

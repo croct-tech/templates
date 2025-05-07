@@ -4,7 +4,7 @@ import { type CSSProperties, useState } from "react"
 import styles from "?/./carousel.module.css"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { A11y, Navigation } from "swiper/modules"
-import type {Swiper as SwiperInstance} from "swiper/types"
+import type { Swiper as SwiperInstance } from "swiper/types"
 import "swiper/css"
 
 type Offer = {

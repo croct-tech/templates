@@ -1,4 +1,4 @@
-import type {ReactNode} from "react"
+import type { ReactNode } from "react"
 import { render } from "@croct/md-lite"
 import Image from "next/image"
 

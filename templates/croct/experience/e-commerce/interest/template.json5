@@ -16,6 +16,14 @@
     "installationUrl": "croct://experience/e-commerce/interest",
     "categories": [
       "use-case/e-commerce"
+    ],
+    "relatedTemplates": [
+      "use-case/e-commerce/cart",
+      "use-case/e-commerce/instagram-campaign",
+      "use-case/e-commerce/landing-page",
+      "use-case/e-commerce/location",
+      "use-case/e-commerce/marketing-campaign",
+      "use-case/e-commerce/search-campaign"
     ]
   },
   "actions": [

@@ -16,6 +16,9 @@
     "installationUrl": "croct://experiment/segmented",
     "categories": [
       "use-case/experiment"
+    ],
+    "relatedTemplates": [
+      "use-case/experiment/all-users"
     ]
   },
   "actions": [

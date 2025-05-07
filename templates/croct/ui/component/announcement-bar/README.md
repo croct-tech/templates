@@ -19,13 +19,13 @@ It comes fully integrated with Croct, giving you CMS, A/B testing, and personali
 
 To create a new project using this template, run:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/component/announcement-bar
 ```
 
 You can customize the template by specifying options:
 
-```js-pm
+```croct-cmd
 croct@latest use croct://ui/component/announcement-bar --router=page
 ```
 

@@ -16,7 +16,7 @@ import {
 } from "lucide-react"
 import styles from "?/./announcement-bar.module.css"
 import {useState, type ElementType, type CSSProperties} from "react"
-import {renderMarkdown} from "?/**/*/markdown.{js,tsx}"
+import {renderMarkdown} from "?/**/*/markdown.{jsx,tsx}"
 
 type AnnouncementBarProps = {
   bar ? : {

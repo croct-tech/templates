@@ -1,5 +1,5 @@
-import { PageContent } from "?/./content.{js,tsx}";
-import { AnnouncementBar } from "?/**/*/announcement-bar.{js,tsx}";
+import { PageContent } from "?/./content.{jsx,tsx}";
+import { AnnouncementBar } from "?/**/*/announcement-bar.{jsx,tsx}";
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 

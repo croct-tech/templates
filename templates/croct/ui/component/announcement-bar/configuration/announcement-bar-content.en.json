@@ -4,6 +4,13 @@
     "bar": {
       "type": "structure",
       "attributes": {
+        "icon": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "sparkles"
+          }
+        },
         "link": {
           "type": "structure",
           "attributes": {
@@ -30,13 +37,6 @@
             }
           }
         },
-        "message": {
-          "type": "text",
-          "value": {
-            "type": "static",
-            "value": "**Big update or discount?** Let your users know right here."
-          }
-        },
         "style": {
           "type": "structure",
           "attributes": {
@@ -53,14 +53,14 @@
                 "type": "static",
                 "value": "top"
               }
-            },
-            "emphasized": {
-              "type": "boolean",
-              "value": {
-                "type": "static",
-                "value": true
-              }
             }
+          }
+        },
+        "message": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "**Big update or discount?** Let your users know right here."
           }
         },
         "dismissible": {

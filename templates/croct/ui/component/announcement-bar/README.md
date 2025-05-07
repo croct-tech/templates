@@ -13,7 +13,7 @@ higher conversion.
 This template adds an announcement bar component to your project or creates a new project using
 [Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current directory.
 
-It comes fully integrated with Croct, giving you CMS, A/B testing, and personalization out of the box.
+It comes fully integrated with Croct, giving you CMS, AB testing, and personalization out of the box.
 
 ## Usage
 

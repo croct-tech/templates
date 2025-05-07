@@ -11,7 +11,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "?/**/*/ui/tooltip.tsx";
-import {cn} from "?/**/*/utils.ts"
+import { cn } from "?/**/*/utils.ts"
 import { Dock, DockIcon } from "?/**/*/magicui/dock.tsx"
 
 export type IconProps = React.HTMLAttributes<SVGElement>;

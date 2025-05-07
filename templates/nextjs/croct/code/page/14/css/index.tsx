@@ -1,11 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import type {GetServerSideProps} from "next"
+import Head from "next/head"
+import Image from "next/image"
+import type { GetServerSideProps } from "next"
 import { TemplateCanvas } from "@croct/template-ui/next"
-import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
+import { renderMarkdown } from "?/**/*/markdown.{js,tsx}"
 import { fetchContent } from "@croct/plug-next/server"
 import type { SlotContent } from "@croct/plug-next"
-import localFont from "next/font/local";
+import localFont from "next/font/local"
 import styles from "?/**/styles/Home.module.css"
 
 const geistSans = localFont({

@@ -1,4 +1,4 @@
-import { TweetCard } from "?/**/*/magicui/tweet-card.tsx";
+import { TweetCard } from "?/**/*/magicui/tweet-card.tsx"
 
 interface TweetCardProps {
   id: string;

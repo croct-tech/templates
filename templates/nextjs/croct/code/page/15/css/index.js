@@ -3,7 +3,7 @@ import Image from "next/image";
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
 import { fetchContent } from "@croct/plug-next/server"
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google"
 import styles from "?/**/styles/Home.module.css"
 
 const geistSans = Geist({

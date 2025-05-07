@@ -1,6 +1,6 @@
 "use client";
 
-import { IconCloud } from "?/**/*/magicui/icon-cloud.tsx";
+import { IconCloud } from "?/**/*/magicui/icon-cloud.tsx"
 
 interface IconCloudDemoProps {
   images: string[];

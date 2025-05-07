@@ -1,6 +1,6 @@
 "use client";
 
-import { useTweet } from "react-tweet";
+import { useTweet } from "react-tweet"
 import {
   MagicTweet,
   TweetNotFound,

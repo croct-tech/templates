@@ -82,7 +82,15 @@
       "name": "execute-package",
       "runner": "npm",
       "package": "create-next-app@${options.version ?? 'latest'}",
-      "arguments": "${[          options.name,          ...(options['src-dir'] === null ? [] : [options['src-dir'] ? '--src-dir' : '--no-src-dir']),          ...(options.typescript === null ? [] : [options.typescript ? '--ts' : '--js']),          ...(options.tailwind === null ? [] : [options.tailwind ? '--tailwind' : '--no-tailwind']),          ...(options.eslint === null ? [] : [options.eslint ? '--eslint' : '--no-eslint']),          ...(options.router === null ? [] : [options.router === 'app' ? '--app' : '--no-app']),          ...(options.turbopack === null ? [] : [options.turbopack ? '--turbopack' : '--no-turbopack']),          ...(options['import-alias'] === null ? [] : ['--import-alias', options['import-alias']])      ]}",
+      "arguments": "${[options.name, \
+        ...(options['src-dir'] === null ? [] : [options['src-dir'] ? '--src-dir' : '--no-src-dir']),\
+        ...(options.typescript === null ? [] : [options.typescript ? '--ts' : '--js']),\
+        ...(options.tailwind === null ? [] : [options.tailwind ? '--tailwind' : '--no-tailwind']),\
+        ...(options.eslint === null ? [] : [options.eslint ? '--eslint' : '--no-eslint']),\
+        ...(options.router === null ? [] : [options.router === 'app' ? '--app' : '--no-app']),\
+        ...(options.turbopack === null ? [] : [options.turbopack ? '--turbopack' : '--no-turbopack']),\
+        ...(options['import-alias'] === null ? [] : ['--import-alias', options['import-alias']])\
+      ]}",
       "interactions": [
         {
           "when": "Would you like",

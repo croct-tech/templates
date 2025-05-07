@@ -1,8 +1,8 @@
-import type {GetServerSideProps} from 'next'
-import type {SlotContent} from '@croct/plug-next'
-import {HeroVideoPlayer} from "?/**/*/hero-video-player.tsx"
-import {TemplateCanvas} from "@croct/template-ui/next"
-import {fetchContent} from "@croct/plug-next/server"
+import type { GetServerSideProps } from 'next'
+import type { SlotContent } from '@croct/plug-next'
+import { HeroVideoPlayer } from "?/**/*/hero-video-player.tsx"
+import { TemplateCanvas } from "@croct/template-ui/next"
+import { fetchContent } from "@croct/plug-next/server"
 
 export type PageProps = {
   content: SlotContent<'%slotId%@%slotVersion%'>

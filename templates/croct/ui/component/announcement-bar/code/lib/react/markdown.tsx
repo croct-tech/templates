@@ -1,5 +1,5 @@
-import type {ReactNode} from "react"
-import {render} from "@croct/md-lite"
+import type { ReactNode } from "react"
+import { render } from "@croct/md-lite"
 
 export type MarkdownClasses = {
     bold?: string;

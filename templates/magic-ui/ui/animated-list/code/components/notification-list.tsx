@@ -1,7 +1,7 @@
 "use client";
 
-import {cn} from "?/**/*/utils.ts";
-import { AnimatedList } from "?/**/*/magicui/animated-list.tsx";
+import { cn } from "?/**/*/utils.ts"
+import { AnimatedList } from "?/**/*/magicui/animated-list.tsx"
 
 interface NotificationListProps {
   notifications: NotificationProps[];

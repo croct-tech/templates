@@ -1,6 +1,6 @@
 "use client";
 
-import { CodeComparison } from "?/**/*/magicui/code-comparison.tsx";
+import { CodeComparison } from "?/**/*/magicui/code-comparison.tsx"
 
 interface CodeDiffPaneProps {
   beforeCode: string;

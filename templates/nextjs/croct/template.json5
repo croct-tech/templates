@@ -122,7 +122,7 @@
             "name": "Next.js ${this.versionNumber} project homepage",
             "component": "next${this.versionNumber}-starter-page",
             "content": {
-              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {                page: this.pageDirectory + '/' + this.pageFile              })}"
+              "en": "${import('./configuration/' + this.versionNumber + '/next-homepage-content.en.json', {page: this.pageDirectory + '/' + this.pageFile})}"
             }
           }
         }
@@ -194,13 +194,13 @@
     {
       "name": "download",
       "overwrite": true,
-      "source": "${[        'code',        'lib',        'markdown' + this.codeExtension      ].join('/')}",
+      "source": "${['code', 'lib', 'markdown' + this.codeExtension].join('/')}",
       "destination": "${project.path.utilities}"
     },
     {
       "name": "download",
       "overwrite": true,
-      "source": "${[        'code',        'page',        this.versionNumber,        options.tailwind ? 'tailwind' : 'css',        options.router === 'app' ? 'page.js' : ('index' + this.codeExtension)      ].join('/')}",
+      "source": "${['code', 'page', this.versionNumber, options.tailwind ? 'tailwind' : 'css', options.router === 'app' ? 'page.js' : ('index' + this.codeExtension)].join('/')}",
       "mapping": {
         "page.js": "${this.pageFile}"
       },

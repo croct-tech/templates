@@ -138,10 +138,7 @@
       "name": "define",
       "variables": {
         "exampleDirectory": "${project.path.examples}/${this.routePath}",
-        "exampleFile": "${{\
-          nextjs: project.path.examples.endsWith('app') ? 'page' : 'index',\
-          react: 'page',\
-        }[project.platform] ?? 'page'}"
+        "exampleFile": "${{nextjs: project.path.examples.endsWith('app') ? 'page' : 'index', react: 'page'}[project.platform] ?? 'page'}"
       }
     },
     {

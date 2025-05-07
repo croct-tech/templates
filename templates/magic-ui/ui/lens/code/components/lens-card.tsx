@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "?/**/*/ui/button.tsx";
+import { Button } from "?/**/*/ui/button.tsx"
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "?/**/*/ui/card.tsx";
-import { Lens } from "?/**/*/magicui/lens.tsx";
+import { Lens } from "?/**/*/magicui/lens.tsx"
 
 interface LensCardProps {
   image: string;

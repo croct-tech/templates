@@ -3,6 +3,7 @@
 import {
   X,
   MapPin,
+  Truck,
   Sparkles,
   Gift,
   Star,
@@ -19,7 +20,7 @@ import {renderMarkdown} from "?/**/*/markdown.{js,tsx}"
 
 type AnnouncementBarProps = {
   bar ? : {
-    icon? : 'pin' | 'sparkles' | 'gift' | 'star' | 'discount' | 'alarm' | 'check' | 'info' | 'warning' | 'error'
+    icon? : 'pin' | 'truck' | 'sparkles' | 'gift' | 'star' | 'discount' | 'alarm' | 'check' | 'info' | 'warning' | 'error'
     message: string
     dismissible? : boolean
     link? : {
@@ -39,6 +40,7 @@ type AnnouncementBarProps = {
 
 const iconMap: Record<string, ElementType> = {
   pin: MapPin,
+  truck: Truck,
   sparkles: Sparkles,
   gift: Gift,
   star: Star,
@@ -85,8 +87,10 @@ export function AnnouncementBar(props: AnnouncementBarProps) {
       )}
 
       {dismissible && (
-        <button className={styles['close-button']} onClick={() => setIsVisible(false)}
-                aria-label="Close announcement">
+        <button
+          className={styles['close-button']} onClick={() => setIsVisible(false)}
+          aria-label="Close announcement"
+        >
           <X size={18}/>
         </button>
       )}

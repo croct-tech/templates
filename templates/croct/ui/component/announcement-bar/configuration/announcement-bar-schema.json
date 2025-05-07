@@ -168,49 +168,54 @@
                   "position": 0,
                   "default": false
                 },
+                "truck": {
+                  "label": "Truck",
+                  "position": 1,
+                  "default": false
+                },
                 "sparkles": {
                   "label": "Sparkles",
-                  "position": 1,
+                  "position": 2,
                   "default": false
                 },
                 "gift": {
                   "label": "Gift",
-                  "position": 2,
+                  "position": 3,
                   "default": false
                 },
                 "star": {
                   "label": "Star",
-                  "position": 3,
+                  "position": 4,
                   "default": false
                 },
                 "discount": {
                   "label": "Discount",
-                  "position": 4,
+                  "position": 5,
                   "default": false
                 },
                 "alarm": {
                   "label": "Alarm",
-                  "position": 5,
+                  "position": 6,
                   "default": false
                 },
                 "check": {
                   "label": "Check",
-                  "position": 6,
+                  "position": 7,
                   "default": false
                 },
                 "info": {
                   "label": "Info",
-                  "position": 7,
+                  "position": 8,
                   "default": false
                 },
                 "warning": {
                   "label": "Warning",
-                  "position": 8,
+                  "position": 9,
                   "default": false
                 },
                 "error": {
                   "label": "Error",
-                  "position": 9,
+                  "position": 10,
                   "default": false
                 }
               }

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { TemplateCanvas } from '@croct/template-ui/next'
-import { renderMarkdown } from '?/**/*/markdown.{tsx,js}'
+import { renderMarkdown } from '?/**/*/markdown.{js,tsx}'
 import {fetchContent} from '@croct/plug-next/server'
 
 export default async function Home() {

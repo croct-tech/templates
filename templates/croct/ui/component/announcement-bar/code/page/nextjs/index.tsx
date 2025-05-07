@@ -1,7 +1,7 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import { PageContent } from "?/./content.{jsx,tsx}";
-import { AnnouncementBar } from "?/**/*/announcement-bar.{jsx,tsx}";
+import { PageContent } from "?/./content.{jsx,tsx}"
+import { AnnouncementBar } from "?/**/*/announcement-bar.{jsx,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent } from "@croct/plug-next/server"
 

@@ -1,7 +1,7 @@
 "use client";
 
-import { Globe } from "?/**/*/magicui/globe.tsx";
-import { COBEOptions } from "cobe";
+import { Globe } from "?/**/*/magicui/globe.tsx"
+import { COBEOptions } from "cobe"
 
 interface GlobeMaker {
   latitude: number;

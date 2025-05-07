@@ -1,6 +1,6 @@
 "use client";
 
-import HeroVideoDialog from "?/**/*/magicui/hero-video-dialog.tsx";
+import HeroVideoDialog from "?/**/*/magicui/hero-video-dialog.tsx"
 
 export interface HeroVideoPlayerProps {
   animationStyle: "from-bottom"

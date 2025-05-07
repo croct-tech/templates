@@ -1,9 +1,9 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import styles from "?/./page.module.css";
-import { Header } from "?/**/*/header.{js,tsx}";
-import { ProductGrid } from "?/**/*/product-grid.{js,tsx}"
-import { Carousel } from "?/**/*/carousel.{js,tsx}";
+import styles from "?/./page.module.css"
+import { Header } from "?/**/*/header.{jsx,tsx}"
+import { ProductGrid } from "?/**/*/product-grid.{jsx,tsx}"
+import { Carousel } from "?/**/*/carousel.{jsx,tsx}"
 import { fetchContent } from "@croct/plug-next/server"
 import { LinkButton } from "@croct/template-ui/react"
 

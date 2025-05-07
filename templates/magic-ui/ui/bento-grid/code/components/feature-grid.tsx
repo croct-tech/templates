@@ -7,8 +7,8 @@ import {
   GlobeIcon,
   InputIcon,
 } from "@radix-ui/react-icons";
-import { BentoCard, BentoGrid } from "?/**/*/magicui/bento-grid.tsx";
-import {cn} from "?/**/*/utils.ts";
+import { BentoCard, BentoGrid } from "?/**/*/magicui/bento-grid.tsx"
+import {cn} from "?/**/*/utils.ts"
 
 interface FeatureCardProps {
   name: string;

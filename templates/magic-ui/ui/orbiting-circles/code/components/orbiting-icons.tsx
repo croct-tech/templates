@@ -1,6 +1,6 @@
 "use client";
 
-import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles"
 
 interface Orbit {
   icons: string[];

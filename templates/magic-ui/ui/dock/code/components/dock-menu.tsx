@@ -1,18 +1,18 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon, SunIcon } from "lucide-react";
-import Link from "next/link";
-import React, {Fragment} from "react";
-import { buttonVariants } from "?/**/*/ui/button.tsx";
-import { Separator } from "?/**/*/separator.tsx";
+import { CalendarIcon, HomeIcon, MailIcon, PencilIcon, SunIcon } from "lucide-react"
+import Link from "next/link"
+import React, {Fragment} from "react"
+import { buttonVariants } from "?/**/*/ui/button.tsx"
+import { Separator } from "?/**/*/separator.tsx"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "?/**/*/ui/tooltip.tsx";
-import {cn} from "?/**/*/utils.ts";
-import { Dock, DockIcon } from "?/**/*/magicui/dock.tsx";
+import {cn} from "?/**/*/utils.ts"
+import { Dock, DockIcon } from "?/**/*/magicui/dock.tsx"
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 

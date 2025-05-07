@@ -1,4 +1,4 @@
-import { AvatarCircles } from "?/**/*/magicui/avatar-circles.tsx";
+import { AvatarCircles } from "?/**/*/magicui/avatar-circles.tsx"
 
 interface AvatarProps {
   imageUrl: string;

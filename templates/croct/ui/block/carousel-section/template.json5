@@ -96,7 +96,7 @@
     {
       "name": "define",
       "variables": {
-        "codeExtension": "${this.isTypescript ? '.tsx' : '.js'}"
+        "codeExtension": "${this.isTypescript ? '.tsx' : '.jsx'}"
       }
     },
     {

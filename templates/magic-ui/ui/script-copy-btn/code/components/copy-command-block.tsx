@@ -1,4 +1,4 @@
-import { ScriptCopyBtn } from "?/**/*/magicui/script-copy-btn.tsx";
+import { ScriptCopyBtn } from "?/**/*/magicui/script-copy-btn.tsx"
 
 interface Command {
   tabName: string;

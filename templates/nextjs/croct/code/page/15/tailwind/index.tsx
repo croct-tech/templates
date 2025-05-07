@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image from "next/image"
 import type {GetServerSideProps} from "next"
 import { TemplateCanvas } from "@croct/template-ui/next"
-import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
+import { renderMarkdown } from "?/**/*/markdown.{js,tsx}"
 import { fetchContent } from "@croct/plug-next/server"
 import type { SlotContent } from "@croct/plug-next"
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

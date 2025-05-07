@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Switch } from "?/**/*/switch.tsx"
 import { Label } from "?/**/*/label.tsx"
-import { PlanCard } from "?/**/*/plan-card.tsx";
+import { PlanCard } from "?/**/*/plan-card.tsx"
 
 type PlanProps = {
   name: string,

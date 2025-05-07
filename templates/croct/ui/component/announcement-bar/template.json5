@@ -49,6 +49,10 @@
       "type": "boolean",
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
+    },
+    "content": {
+      "type": "string",
+      "description": "The URL of the content to use.",
     }
   },
   "actions": [
@@ -157,7 +161,7 @@
             "name": "Announcement bar",
             "component": "announcement-bar",
             "content": {
-              "en": "${import('./configuration/announcement-bar-content.en.json')}"
+              "en": "${import(options.content ?? './configuration/announcement-bar-content.en.json')}"
             }
           }
         }

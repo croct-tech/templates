@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import type {GetServerSideProps} from 'next'
+import type { GetServerSideProps } from 'next'
 import { TemplateCanvas } from '@croct/template-ui/next'
 import { renderMarkdown } from '?/**/*/markdown.{js,tsx}'
 import { fetchContent } from '@croct/plug-next/server'

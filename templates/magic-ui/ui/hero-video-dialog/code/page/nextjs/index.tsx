@@ -1,4 +1,4 @@
-import type {GetServerSideProps} from 'next'
+import type { GetServerSideProps } from 'next'
 import type {SlotContent} from '@croct/plug-next'
 import {HeroVideoPlayer} from "?/**/*/hero-video-player.tsx"
 import {TemplateCanvas} from "@croct/template-ui/next"

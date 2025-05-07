@@ -1,5 +1,5 @@
 .container {
-    width: 100%;
+    width: 100vw;
     padding: 24px 32px 64px 32px;
     background-color: #fff;
 }

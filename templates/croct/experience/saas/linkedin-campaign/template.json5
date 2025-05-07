@@ -16,6 +16,14 @@
     "installationUrl": "croct://experience/saas/linkedin-campaign",
     "categories": [
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "use-case/saas/abm-campaign",
+      "use-case/saas/customer",
+      "use-case/saas/interest",
+      "use-case/saas/landing-page",
+      "use-case/saas/marketing-campaign",
+      "use-case/saas/search-campaign"
     ]
   },
   "actions": [

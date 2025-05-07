@@ -5,7 +5,7 @@ This template provides a fully featured SaaS pricing page built using [Shadcn UI
 It includes all standard pricing page elements, along with:
 
 - **Content management**: Update page content without redeploying your application.
-- **A/B testing**: Create and compare multiple page versions to determine which converts best.
+- **AB testing**: Create and compare multiple page versions to determine which converts best.
 - **Personalization**: Customize page elements dynamically based on user attributes. Adjust billing frequency (monthly/yearly), highlight specific plans, reorder features, and more.
 - **Analytics**: Monitor user interactions, measure element effectiveness, and track conversion rates.
 

@@ -60,7 +60,8 @@
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
-        "content": "url('./content/announcement-bar-content.en.json')",
+        "extension": "${url('./extension.json5')}",
+        "content": "${url('./configuration/announcement-bar-content.en.json')}",
       }
     }
   ]

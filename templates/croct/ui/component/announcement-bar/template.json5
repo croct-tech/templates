@@ -205,6 +205,21 @@
       ]
     },
     {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "exampleDirectory": "${this.exampleDirectory}",
+            "exampleFile": "${this.exampleFile}",
+            "codeExtension": "${this.codeExtension}"
+          }
+        }
+      ]
+    },
+    {
       "name": "replace-file-content",
       "files": [
         {
@@ -223,21 +238,6 @@
               "value": "${project.workspace.url}"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "test",
-      "condition": "${options.extension !== null}",
-      "then": [
-        {
-          "name": "import",
-          "template": "${options.extension}",
-          "options": {
-            "exampleDirectory": "${this.exampleDirectory}",
-            "exampleFile": "${this.exampleFile}",
-            "codeExtension": "${this.codeExtension}"
-          }
         }
       ]
     },

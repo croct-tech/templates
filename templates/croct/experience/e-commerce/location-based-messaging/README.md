@@ -1,17 +1,13 @@
 # Introduction
 
-Announcement bars highlight time-sensitive updates, offers, legal notices, or other key messages in a clear and
-accessible way.
+This template demonstrates how to display location-based messages using [slots](https://docs.croct.com/explanation/slot) with Croct. 
+It is implemented using the [announcement bar component](https://croct.com/templates/interface/component/announcement-bar) and 
+can be added to an existing project or used to bootstrap a new [Next.js](https://nextjs.org/?utm_source=croct) application.
 
-Placing them at the top of the screen and using effective color, layout, and typography ensures the message stands out
-without interrupting the browsing experience and helps guide visitor attention to essential information or next steps.
-
-Besides showing general messaging, running AB tests with different variations and applying personalization, such as
-tailoring promotions based on visitor location or behavior, can help optimize visibility, boost engagement, and drive
-higher conversion.
-
-This template adds an announcement bar component to your project or creates a new project using
-[Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current directory.
+> [!INFO Dynamic content]
+> This template uses different implementations based on whether the 
+> [Dynamic values](https://docs.croct.com/reference/content/definition/introduction#dynamic-values) feature is 
+> available in your workspace. When enabled, it provides a simpler and more powerful approach to location-based messaging.
 
 It comes fully integrated with Croct, giving you CMS, A/B testing, and personalization out of the box.
 
@@ -20,13 +16,13 @@ It comes fully integrated with Croct, giving you CMS, A/B testing, and personali
 To create a new project using this template, run:
 
 ```js-pm
-croct@latest use croct://ui/component/announcement-bar
+croct@latest use croct://experience/e-commerce/location-based-messaging
 ```
 
 You can customize the template by specifying options:
 
 ```js-pm
-croct@latest use croct://ui/component/announcement-bar --router=page
+croct@latest use croct://experience/e-commerce/location-based-messaging --router=page
 ```
 
 ## Options

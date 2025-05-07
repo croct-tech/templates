@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "type": "structure",
+  "attributes": {
+    "bar": {
+      "type": "structure",
+      "attributes": {
+        "icon": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "pin"
+          }
+        },
+        "style": {
+          "type": "structure",
+          "attributes": {
+            "alignment": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "center"
+              }
+            },
+            "placement": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "top"
+              }
+            },
+            "textColor": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#fff"
+              }
+            },
+            "backgroundColor": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#7928ca"
+              }
+            }
+          }
+        },
+        "message": {
+          "type": "text",
+          "value": {
+            "type": "dynamic",
+            "nullable": false,
+            "expression": "'**' & location's region & ' residents:** Free next-day shipping on all orders!'",
+            "default": "**Next-day delivery:** Free shipping available in select locations!"
+          }
+        },
+        "dismissible": {
+          "type": "boolean",
+          "value": {
+            "type": "static",
+            "value": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -61,7 +61,7 @@
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
-        "extensionTemplate": "npm://swiper/react/extension.json5"
+        "extension": "npm://swiper/react/extension.json5"
       }
     }
   ]

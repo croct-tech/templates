@@ -35,9 +35,10 @@ croct@latest use croct://ui/block/carousel-section --router=page
 
 The following options are available for this template:
 
-| Option        | Description                                      | Required | Default  |
-|---------------|--------------------------------------------------|----------|----------|
-| `projectName` | The name of the project.                         | No       | `my-app` |
-| `version`     | The Next.js version to use.                      | No       | `latest` |
-| `router`      | The router to use (`app` or `page`).             | No       | `app`    |
-| `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |
+| Option        | Description                                          | Required | Default  |
+|---------------|------------------------------------------------------|----------|----------|
+| `projectName` | The name of the project.                             | No       | `my-app` |
+| `version`     | The Next.js version to use.                          | No       | `latest` |
+| `router`      | The router to use (`app` or `page`).                 | No       | `app`    |
+| `javascript`  | Whether to use JavaScript instead of TypeScript.     | No       | `false`  |
+| `extension`   | An extension template to execute after the template. | No       | `none`   |

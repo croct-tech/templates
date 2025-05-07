@@ -52,7 +52,7 @@
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
     },
-    "extensionTemplate": {
+    "extension": {
       "type": "string",
       "description": "The URL of the extension template to apply."
     }
@@ -252,11 +252,11 @@
     },
     {
       "name": "test",
-      "condition": "${options.extensionTemplate !== null}",
+      "condition": "${options.extension !== null}",
       "then": [
         {
           "name": "import",
-          "template": "${options.extensionTemplate}",
+          "template": "${options.extension}",
           "options": {
             "exampleDirectory": "${this.exampleDirectory}",
             "exampleFile": "${this.exampleFile}",

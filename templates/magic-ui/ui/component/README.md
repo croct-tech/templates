@@ -1,7 +1,7 @@
 # Introduction
 
 This template creates a reusable setup for importing [Magic UI](https://magicui.design?utm_source=croct) components, fully integrated
-with Croct for content management, A/B testing, and real-time personalization.
+with Croct for content management, AB testing, and real-time personalization.
 
 It supports downloading code, configuring slots, and extending functionality with additional
 custom actions. If the current directory does not contain a project, the template creates a new one using [Next.js](https://nextjs.org/?utm_source=croct).

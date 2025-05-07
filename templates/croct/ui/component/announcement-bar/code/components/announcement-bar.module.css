@@ -1,17 +1,15 @@
 .announcement-bar {
+    --background: var(--background-color, #111828);
+    --foreground: var(--text-color, #ffffff);
     width: 100%;
-    background-color: #111828;
-    color: white;
+    background-color: var(--background);
+    color: var(--foreground);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 16px 24px;
     position: relative;
     z-index: 50;
-}
-
-.announcement-bar.emphasized {
-    background-color: #0070f3;
 }
 
 .top {
@@ -83,26 +81,32 @@
     margin: 0;
 }
 
+.icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+}
+
 .action {
     font-size: 14px;
-    color: #0070f3;
+    color: var(--background);
     font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--foreground);
     padding: 6px 12px;
     border-radius: 999px;
     transition: background-color 0.2s;
 }
 
 .action:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(from var(--foreground) r g b / 90%)
 }
 
 .close-button {
     background: transparent;
     border: none;
-    color: white;
+    color: var(--foreground);
     cursor: pointer;
     display: flex;
     align-items: center;

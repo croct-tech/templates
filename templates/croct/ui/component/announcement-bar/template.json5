@@ -134,8 +134,17 @@
     {
       "name": "download",
       "overwrite": true,
-      "source": "code/page/page.module.css",
+      "source": "code/page/content.module.css",
       "destination": "${this.exampleDirectory}"
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/content.tsx",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "content.tsx": "content${this.codeExtension}"
+      }
     },
     {
       "name": "download",

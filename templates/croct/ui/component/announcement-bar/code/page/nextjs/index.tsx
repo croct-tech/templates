@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
+import { PageContent } from "?/./content.{js,tsx}";
 import { AnnouncementBar } from "?/**/*/announcement-bar.{js,tsx}";
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent } from "@croct/plug-next/server"
@@ -25,6 +26,7 @@ export default function Page({content}: PageProps) {
           portal
       >
       <AnnouncementBar {...content} />
+      <PageContent />
     </TemplateCanvas>
   );
 }

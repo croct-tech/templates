@@ -25,9 +25,7 @@ export default async function Page() {
    *
    * With Dynamic values enabled, the same result could be achieved with:
    *
-   * ```ts
    * const {content} = await fetchContent('%slotId%@%slotVersion%');
-   * ```
    *
    * Learn more in the documentation:
    * https://docs.croct.com/reference/content/definition/introduction#dynamic-values

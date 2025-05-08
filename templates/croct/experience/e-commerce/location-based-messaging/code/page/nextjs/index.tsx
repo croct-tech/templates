@@ -31,9 +31,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
    *
    * With Dynamic values enabled, the same result could be achieved with:
    *
-   * ```ts
    * props: fetchContent('%slotId%@%slotVersion%');
-   * ```
    *
    * Learn more in the documentation:
    * https://docs.croct.com/reference/content/definition/introduction#dynamic-values

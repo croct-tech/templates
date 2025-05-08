@@ -43,7 +43,7 @@
           "replacements": [
             {
               "pattern": "title=\".+?\"",
-              "value": "title=\"Location-based messaging\""
+              "value": "title=\"Geomarketing strategy\""
             }
           ]
         }

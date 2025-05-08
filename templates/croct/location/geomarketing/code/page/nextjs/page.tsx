@@ -1,16 +1,10 @@
-import type { GetServerSideProps, GetServerSidePropsContext } from "next"
-import type { SlotContent } from "@croct/plug-next"
-import { PageContent } from "?/./content.{js,tsx}";
-import { AnnouncementBar } from "?/**/*/announcement-bar.{js,tsx}";
+import { PageContent } from "?/./content.{js,tsx}"
+import { AnnouncementBar } from "?/**/*/announcement-bar.{js,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent, evaluate, type FetchResponse } from "@croct/plug-next/server"
 import type { JsonObject } from "@croct/plug-next"
 
-export type PageProps = {
-  content: SlotContent<'%slotId%@%slotVersion%'>
-}
-
-export const getServerSideProps: GetServerSideProps<PageProps> = async context => ({
+export default async function Page() {
   /*
    * 💡Pro tip
    *
@@ -31,36 +25,34 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
    *
    * With Dynamic values enabled, the same result could be achieved with:
    *
-   * props: fetchContent('%slotId%@%slotVersion%');
+   * const {content} = await fetchContent('%slotId%@%slotVersion%');
    *
    * Learn more in the documentation:
    * https://docs.croct.com/reference/content/definition/introduction#dynamic-values
    */
-  props: await fetchPersonalizedContent(context)
-});
+  const {content} = await fetchPersonalizedContent();
 
-export default function Page({content}: PageProps) {
   return (
     <TemplateCanvas
       theme="light"
       title="Announcement bar"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_component&utm_content=announcement_bar&utm_term=nextjs"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.use_case_location&utm_content=geomarketing&utm_term=nextjs"
       ctaTarget="_blank"
       src="#"
       fullScreen
       portal
     >
       <AnnouncementBar {...content} />
-      <PageContent />
+      <PageContent/>
     </TemplateCanvas>
   );
 }
 
-async function fetchPersonalizedContent(context: GetServerSidePropsContext): Promise<FetchResponse<'%slotId%@%slotVersion%'>> {
+async function fetchPersonalizedContent(): Promise<FetchResponse<'%slotId%@%slotVersion%'>> {
   const [response, location] = await Promise.all([
-    fetchContent('%slotId%@%slotVersion%', {route: context}),
-    evaluate<JsonObject>('location', {route: context}),
+    fetchContent('%slotId%@%slotVersion%'),
+    evaluate<JsonObject>('location'),
   ]);
 
   if (response.content.bar !== undefined) {

@@ -1,19 +1,19 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Location-based messaging",
-  "description": "A top bar that displays a message based on the user's location.",
+  "title": "Geomarketing strategy",
+  "description": "An announcement bar with a location-based message.",
   "metadata": {
-    "id": "use-case/e-commerce/location-based-messaging",
+    "id": "use-case/location/geomarketing",
     "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/location-based-messaging/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/location-based-messaging/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/location-based-messaging/cover.png",
-    "installationUrl": "croct://experience/e-commerce/location-based-messaging",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/cover.png",
+    "installationUrl": "croct://location/geomarketing",
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -22,10 +22,12 @@
       "language/javascript",
       "language/typescript",
       'use-case/e-commerce',
+      'use-case/location',
       'use-case/saas'
     ],
     "relatedTemplates": [
-      "interface/component/announcement-bar"
+      "interface/component/announcement-bar",
+      "use-case/e-commerce/location"
     ]
   },
   "options": {
@@ -59,7 +61,7 @@
       "name": "import",
       "template": "croct://ui/component/announcement-bar",
       "options": {
-        "projectName": "location-messaging-example",
+        "projectName": "geomarketting-example",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",

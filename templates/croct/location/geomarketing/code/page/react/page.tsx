@@ -36,7 +36,7 @@ export default function Page() {
       theme="light"
       title="Announcement bar"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_componentutm_content=announcement_bar&utm_term=react"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.use_case_location&utm_content=geomarketing&utm_term=react"
       ctaTarget="_blank"
       src="#"
       fullScreen

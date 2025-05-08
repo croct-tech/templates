@@ -23,7 +23,8 @@
       "use-case/e-commerce/interest",
       "use-case/e-commerce/landing-page",
       "use-case/e-commerce/marketing-campaign",
-      "use-case/e-commerce/search-campaign"
+      "use-case/e-commerce/search-campaign",
+      "use-case/location/geomarketing"
     ]
   },
   "actions": [

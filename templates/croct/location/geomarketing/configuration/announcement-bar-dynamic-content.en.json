@@ -9,7 +9,7 @@
           "type": "text",
           "value": {
             "type": "static",
-            "value": "truck"
+            "value": "alarm"
           }
         },
         "style": {
@@ -48,8 +48,10 @@
         "message": {
           "type": "text",
           "value": {
-            "type": "static",
-            "value": "**%state% residents:** Free next-day shipping on all orders!"
+            "type": "dynamic",
+            "nullable": false,
+            "expression": "'Register now for our **' & location's region & '** launch event!'",
+            "default": "Sign up for our upcoming **launch event** in your region!"
           }
         },
         "dismissible": {
@@ -63,5 +65,3 @@
     }
   }
 }
-
-

@@ -21,8 +21,11 @@
       'interface/marketing',
       "language/javascript",
       "language/typescript",
-      'use-case/e-commerce',
-      'use-case/saas'
+      "use-case/e-commerce",
+      "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "use-case/location/geomarketing"
     ]
   },
   "options": {

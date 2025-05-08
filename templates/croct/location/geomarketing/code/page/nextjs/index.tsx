@@ -77,14 +77,15 @@ function interpolate(message: string, properties: JsonObject): string|null {
     const placeholder = `%${key}%`;
 
     if (typeof value !== 'string') {
-      if (result.includes(placeholder)) {
-        return null;
+      let result = message;
+
+      for (const [key, value] of Object.entries(properties)) {
+        if (typeof value === 'string') {
+          result = result.replace(`%${key}%`, value);
+        }
       }
 
-      continue;
-    }
-
-    result = result.replace(`%${key}%`, value);
+      return /%\S+%/.test(result) ? null : result;
   }
 
   return /%\S+%/.test(result) ? null : result;

@@ -62,18 +62,11 @@ function usePersonalizedContent(): Promise<SlotContent<'%slotId%@%slotVersion%'>
 
 function interpolate(message: string, properties: JsonObject): string|null {
   let result = message;
+
   for (const [key, value] of Object.entries(properties)) {
-    const placeholder = `%${key}%`;
-
-    if (typeof value !== 'string') {
-      if (result.includes(placeholder)) {
-        return null;
-      }
-
-      continue;
+    if (typeof value === 'string') {
+      result = result.replace(`%${key}%`, value);
     }
-
-    result = result.replace(`%${key}%`, value);
   }
 
   return /%\S+%/.test(result) ? null : result;

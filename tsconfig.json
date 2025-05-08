@@ -33,8 +33,5 @@
   ],
   "ts-node": {
     "require": ["tsconfig-paths/register"]
-  },
-  "files": [
-    "slots.d.ts"
-  ]
+  }
 }

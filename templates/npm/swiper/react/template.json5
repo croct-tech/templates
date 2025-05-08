@@ -6,9 +6,9 @@
     "id": "interface/section/react-swiper-carousel",
     "verified": true,
     "author": {
-      "name": "Croct",
-      "avatarUrl": "https://github.com/croct-tech.png",
-      "websiteUrl": "https://croct.com"
+      "name": "Swiper.js",
+      "avatarUrl": "https://swiperjs.com/images/favicon.png",
+      "websiteUrl": "https://swiperjs.com"
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/template.json5",

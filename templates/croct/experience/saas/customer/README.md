@@ -19,7 +19,7 @@ user's activities include "login" and user's plan is not "free"
 Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction),
 a readable, natural-language-inspired syntax designed for flexibility and ease of use. It supports
 profile [enrichment with first-party data](https://docs.croct.com/reference/sdk/javascript/data-collection) and allows
-the use of [custom attributes](https://docs.croct.com/reference/cql/data-types/user) to fine-tune personalization
+the use of [custom attributes](https://docs.croct.com/reference/cql/data-types/user/user) to fine-tune personalization
 strategies.
 
 > [!IMPORTANT]

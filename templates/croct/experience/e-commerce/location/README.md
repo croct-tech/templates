@@ -19,8 +19,8 @@ location's city is "New York"
 Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction),
 a readable, natural-language-inspired syntax designed for flexibility and ease of use. It allows, for instance, to add
 two or more regions to the same audience
-using [or](https://docs.croct.com/reference/cql/expressions/operations/logical#or), [and](https://docs.croct.com/reference/cql/expressions/operations/logical#and), [is](https://docs.croct.com/reference/cql/expressions/tests/comparison#equal),
-or [is in](https://docs.croct.com/reference/cql/expressions/tests/collection#in).
+using [or](https://docs.croct.com/reference/cql/expressions/operations/logical/or), [and](https://docs.croct.com/reference/cql/expressions/operations/logical/and), [is](https://docs.croct.com/reference/cql/expressions/tests/comparison/equal),
+or [is in](https://docs.croct.com/reference/cql/expressions/tests/collection/in).
 
 ## Usage
 

@@ -29,7 +29,7 @@ jobs:
       - name: Deploy release to GCS
         run: |-
           rsync -av --exclude='cover.png' --exclude='cover.mp4' --exclude='README.md' templates mirror
-          curl -sL "https://api.github.com/repos/croct-tech/templates/git/trees/HEAD?recursive=true" -o mirror/git-tree.json
+          curl -sL "https://api.github.com/repos/croct-tech/templates/git/trees/HEAD?recursive=true" -o mirror/templates/git-tree.json
           gsutil -m rsync -r -d mirror/templates "gs://${GCLOUD_BUCKET}/templates"
         env:
           GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}

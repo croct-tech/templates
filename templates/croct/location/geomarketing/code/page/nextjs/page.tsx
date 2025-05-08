@@ -1,5 +1,5 @@
-import { PageContent } from "?/./content.{js,tsx}"
-import { AnnouncementBar } from "?/**/*/announcement-bar.{js,tsx}"
+import { PageContent } from "?/./content.{jsx,tsx}"
+import { AnnouncementBar } from "?/**/*/announcement-bar.{jsx,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/next"
 import { fetchContent, evaluate, type FetchResponse } from "@croct/plug-next/server"
 import type { JsonObject } from "@croct/plug-next"
@@ -79,5 +79,5 @@ function interpolate(message: string, properties: JsonObject): string|null {
     result = result.replace(`%${key}%`, value);
   }
 
-  return result.search(/%[a-zA-Z]+%/) == -1 ? result : null;
+  return /%\S+%/.test(result) ? null : result;
 }

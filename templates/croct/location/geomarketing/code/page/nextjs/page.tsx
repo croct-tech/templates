@@ -56,20 +56,28 @@ async function fetchPersonalizedContent(): Promise<FetchResponse<'%slotId%@%slot
   ]);
 
   if (response.content.bar !== undefined) {
-    response.content.bar.message = interpolate(response.content.bar.message, location);
+    response.content.bar.message = interpolate(response.content.bar.message, location)
+        ?? "Sign up for our upcoming **launch event** in your region!";
   }
 
   return response;
 }
 
-function interpolate(message: string, properties: JsonObject): string {
+function interpolate(message: string, properties: JsonObject): string|null {
   let result = message;
-
   for (const [key, value] of Object.entries(properties)) {
-    if (typeof value === 'string') {
-      result = result.replace(`%${key}%`, value);
+    const placeholder = `%${key}%`;
+
+    if (typeof value !== 'string') {
+      if (result.includes(placeholder)) {
+        return null;
+      }
+
+      continue;
     }
+
+    result = result.replace(`%${key}%`, value);
   }
 
-  return result;
+  return result.search(/%[a-zA-Z]+%/) == -1 ? result : null;
 }

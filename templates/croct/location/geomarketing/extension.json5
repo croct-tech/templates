@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Announcement bar customization",
+  "description": "A location-based messaging example for the announcement bar.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${project.quotas.dynamicAttributesPerContent === 0}",
+      "then": [
+        {
+          "name": "download",
+          "overwrite": true,
+          "source": "code/page/${project.platform}/${options.exampleFile}.tsx",
+          "destination": "${options.exampleDirectory}",
+          "mapping": {
+            "${options.exampleFile}.tsx": "${options.exampleFile}${options.codeExtension}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}${options.codeExtension}",
+          "replacements": [
+            {
+              "pattern": "title=\".+?\"",
+              "value": "title=\"Geomarketing strategy\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

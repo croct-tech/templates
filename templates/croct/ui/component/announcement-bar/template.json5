@@ -21,8 +21,11 @@
       'interface/marketing',
       "language/javascript",
       "language/typescript",
-      'use-case/e-commerce',
-      'use-case/saas'
+      "use-case/e-commerce",
+      "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "use-case/location/geomarketing"
     ]
   },
   "options": {
@@ -49,6 +52,10 @@
       "type": "boolean",
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
+    },
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
     },
     "content": {
       "type": "string",
@@ -198,6 +205,21 @@
       "name": "add-slot",
       "slots": [
         "${this.slotId}"
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "exampleDirectory": "${this.exampleDirectory}",
+            "exampleFile": "${this.exampleFile}",
+            "codeExtension": "${this.codeExtension}"
+          }
+        }
       ]
     },
     {

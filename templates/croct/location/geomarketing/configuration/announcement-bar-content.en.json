@@ -1,0 +1,1 @@
+"${import('./announcement-bar-' + (project.quotas.dynamicAttributesPerContent > 0 ? 'dynamic' : 'static') + '-content.en.json')}"

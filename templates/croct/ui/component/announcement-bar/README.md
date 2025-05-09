@@ -39,3 +39,5 @@ The following options are available for this template:
 | `version`     | The Next.js version to use.                      | No       | `latest` |
 | `router`      | The router to use (`app` or `page`).             | No       | `app`    |
 | `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |
+| `content`     | The URL of the slot content to use.              | No       | `none`   |
+| `extension`   | The URL of an extension template to apply.       | No       | `none`   |

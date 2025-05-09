@@ -54,6 +54,7 @@ const categoryMap = {
     'use-case/e-commerce': 'E-commerce',
     'use-case/experiment': 'Experiment',
     'use-case/saas': 'SaaS',
+    'use-case/location': 'Location',
 };
 
 const technologyCategories = ['library', 'language', 'framework'];

@@ -4,19 +4,15 @@ import { PhoneInput } from "?/**/*/phone-input.{jsx,tsx}"
 import { useEvaluation } from "@croct/plug-react"
 
 type Location = {
-  regionCode?: string
-  city: string
-  country: string
-  countryCode?: string
+  regionCode: string|null,
+  city: string|null,
+  country: string|null,
+  countryCode: string|null,
 }
 
 export default function Page() {
   const location = useEvaluation<Location|null>('location', {
     initial: null,
-    fallback: {
-      city: 'Unknown',
-      country: 'Unknown',
-    }
   });
 
   return (
@@ -38,15 +34,15 @@ export default function Page() {
           <div className={styles.demoContainer}>
             <div className={styles.wrapper}>
               <div className={styles.locationInfo}>
-                <div className={styles.locationIcon}>📍</div>
+                <div className={styles.locationIcon}>{location?.city === null ? "🌊" : "📍"}</div>
                 <div className={styles.locationDetails}>
                   <span className={styles.locationPrimary}>
                     {location === null ?
                       'Loading...'
-                      : <>{location.city}{location.regionCode && `, ${location.regionCode}`}</>
+                      : <>{location.city ?? "Atlantis" }{location.regionCode && `, ${location.regionCode}`}</>
                     }
                   </span>
-                  {location && (<span className={styles.locationSecondary}>{location.country}</span>)}
+                  {location && (<span className={styles.locationSecondary}>{location.country ?? "Island of Atlas"}</span>)}
                 </div>
               </div>
               <div className={styles.inputContainer}>

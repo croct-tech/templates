@@ -4,19 +4,14 @@ import { PhoneInput } from "?/**/*/phone-input.{jsx,tsx}"
 import { evaluate } from "@croct/plug-next/server"
 
 type Location = {
-  regionCode?: string
-  city: string
-  country: string
-  countryCode?: string
+  regionCode: string|null,
+  city: string|null,
+  country: string|null,
+  countryCode: string|null,
 }
 
 export default async function Page() {
-  const location = await evaluate<Location>('location', {
-    fallback: {
-      city: 'Unknown',
-      country: 'Unknown',
-    }
-  });
+  const location = await evaluate<Location>('location');
 
   return (
     <TemplateCanvas
@@ -37,12 +32,14 @@ export default async function Page() {
           <div className={styles.demoContainer}>
             <div className={styles.wrapper}>
               <div className={styles.locationInfo}>
-                <div className={styles.locationIcon}>📍</div>
+                <div className={styles.locationIcon}>
+                  {location.city === null ? "🌊" : "📍"}
+                </div>
                 <div className={styles.locationDetails}>
                   <span className={styles.locationPrimary}>
-                    {location.city}{location.regionCode && `, ${location.regionCode}`}
+                    {location.city ?? "Atlantis" }{location.regionCode && `, ${location.regionCode}`}
                   </span>
-                  <span className={styles.locationSecondary}>{location.country}</span>
+                  <span className={styles.locationSecondary}>{location.country ?? "Island of Atlas"}</span>
                 </div>
               </div>
               <div className={styles.inputContainer}>

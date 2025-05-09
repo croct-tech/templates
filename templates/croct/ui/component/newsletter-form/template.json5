@@ -16,6 +16,7 @@
     "installationUrl": "croct://ui/component/newsletter-form",
     "categories": [
       "interface/component",
+      "interface/form",
       "interface/marketing",
       "use-case/e-commerce",
       "use-case/saas"

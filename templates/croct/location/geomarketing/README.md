@@ -12,10 +12,10 @@ It is a good alternative for IP geolocation APIs and ideal for geomarketing stra
 localized user experiences, and **IP-based customization**. Additionally, it is fully integrated with Croct, providing
 you with a **headless CMS**, AB testing, and ready-to-use location-based personalization.
 
-> [!INFO Dynamic content]
-> This template uses different implementations based on whether the
-> [Dynamic values](https://docs.croct.com/reference/content/definition/introduction#dynamic-values) feature is available
-> in your workspace. When enabled, it provides a simpler and more powerful approach to location-based messaging.
+> [!NOTE Dynamic content]
+> This template uses different implementations based on whether the [Dynamic values](https://docs.croct.com/reference/content/definition/introduction#dynamic-values) 
+> feature is available in your workspace. 
+> When enabled, it provides a simpler and more powerful approach to location-based messaging.
 
 ## Usage
 

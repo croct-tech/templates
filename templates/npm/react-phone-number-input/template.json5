@@ -103,7 +103,7 @@
       "name": "add-dependency",
       "dependencies": [
         "@croct/template-ui",
-        "react-phone-number-input",
+        "react-phone-number-input"
       ]
     },
     {

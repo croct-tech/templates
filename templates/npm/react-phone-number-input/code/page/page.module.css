@@ -7,6 +7,7 @@
   min-height: 100vh;
   padding: 2rem;
   background-color: #fafafa;
+  color: #0A0A0A;
 }
 
 .container {
@@ -16,7 +17,6 @@
 }
 
 .title {
-  color: #666;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -64,7 +64,6 @@
 }
 
 .locationPrimary {
-  color: #666;
   font-weight: 600;
   font-size: 0.875rem;
 }

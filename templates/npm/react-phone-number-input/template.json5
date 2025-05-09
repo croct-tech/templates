@@ -121,7 +121,7 @@
     {
       "name": "download",
       "overwrite": true,
-      "source": "code/components/phone-input.css",
+      "source": "code/components/phone-input.module.css",
       "destination": "${project.path.components}"
     },
     {

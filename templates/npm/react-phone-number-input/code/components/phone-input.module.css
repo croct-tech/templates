@@ -42,14 +42,14 @@
     color: var(--muted-foreground-color);
 }
 
-.PhoneInputCountry {
+.PhoneInput :global .PhoneInputCountry {
     display: flex;
     align-items: center;
     margin-right: 0.5rem;
     position: relative;
 }
 
-.PhoneInputCountrySelect {
+.PhoneInput :global .PhoneInputCountrySelect {
     position: absolute;
     opacity: 0;
     width: 100%;
@@ -60,7 +60,7 @@
     left: 0;
 }
 
-.PhoneInputCountryIcon {
+.PhoneInput :global .PhoneInputCountryIcon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,12 +71,12 @@
     margin-right: 0.25rem;
 }
 
-.PhoneInputCountryIconImg {
+.PhoneInput :global .PhoneInputCountryIconImg {
     width: 100%;
     height: auto;
 }
 
-.PhoneInputCountrySelectArrow {
+.PhoneInput :global .PhoneInputCountrySelectArrow {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +85,7 @@
     opacity: 0.7;
 }
 
-.PhoneInputCountrySelectArrow::after {
+.PhoneInput :global .PhoneInputCountrySelectArrow::after {
     content: "";
     display: block;
     width: 0.25rem;
@@ -95,7 +95,7 @@
     transform: rotate(45deg) translateY(-1px);
 }
 
-.PhoneInputInput {
+.PhoneInput :global .PhoneInputInput {
     flex: 1;
     background-color: transparent;
     border: none;
@@ -104,15 +104,15 @@
     color: var(--foreground-color);
 }
 
-.PhoneInputInput:focus {
+.PhoneInput :global .PhoneInputInput:focus {
     outline: none;
 }
 
-.PhoneInputInput::placeholder {
+.PhoneInput :global .PhoneInputInput::placeholder {
     color: var(--muted-foreground-color);
 }
 
-.PhoneInputInput:disabled {
+.PhoneInput :global .PhoneInputInput:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }

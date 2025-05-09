@@ -19,6 +19,9 @@
       "interface/form",
       "interface/marketing",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "interface/form/react-phone-number-input"
     ]
   },
   "actions": [

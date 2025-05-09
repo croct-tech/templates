@@ -22,6 +22,9 @@
       "language/javascript",
       "language/typescript",
       "use-case/location"
+    ],
+    "relatedTemplates": [
+      "interface/component/demo-request-form"
     ]
   },
   "options": {

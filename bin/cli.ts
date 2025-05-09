@@ -34,6 +34,7 @@ const categoryMap = {
     'interface/code': 'Code',
     'interface/component': 'Component',
     'interface/feedback': 'Feedback',
+    'interface/form': 'Form',
     'interface/hero': 'Hero',
     'interface/marketing': 'Marketing',
     'interface/media': 'Media',

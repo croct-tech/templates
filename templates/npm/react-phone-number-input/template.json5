@@ -17,9 +17,11 @@
     "categories": [
       "framework/nextjs",
       "framework/react",
+      "interface/component",
       "interface/form",
       "language/javascript",
       "language/typescript",
+      "use-case/location"
     ]
   },
   "options": {

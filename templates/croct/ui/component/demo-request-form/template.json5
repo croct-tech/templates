@@ -16,6 +16,7 @@
     "installationUrl": "croct://ui/component/demo-request-form",
     "categories": [
       "interface/component",
+      "interface/form",
       "interface/marketing",
       "use-case/saas"
     ]

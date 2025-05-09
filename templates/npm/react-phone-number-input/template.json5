@@ -162,6 +162,20 @@
       }
     },
     {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.exampleDirectory}/${this.exampleFile}${this.codeExtension}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "print",
       "semantics": "success",
       "message": "Component successfully imported at `${this.exampleDirectory}`."

@@ -106,7 +106,7 @@
             },
             {
               "name": "import",
-              "template": "nextjs://croct",
+              "template": "croct://starter/nextjs",
               "options": {
                 "name": "${this.projectName}",
                 "version": "${options.version}",

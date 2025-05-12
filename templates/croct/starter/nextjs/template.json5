@@ -13,7 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/cover.png",
-    "installationUrl": "nextjs://croct",
+    "installationUrl": "croct://starter/nextjs",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",

@@ -20,6 +20,18 @@
     ]
   },
   "options": {
+    "script": {
+      "type": "string",
+      "description": "The script to run the example.",
+    },
+    "arguments": {
+      "type": "array",
+      "description": "The arguments to pass to the script.",
+    },
+    "url": {
+      "type": "string",
+      "description": "The server URL.",
+    },
     "path": {
       "type": "string",
       "description": "The path to the example.",
@@ -29,8 +41,18 @@
   "actions": [
     {
       "name": "test",
-      "condition": "${project.server !== null}",
+      "condition": "${options.script !== null || options.url !== null || options.arguments !== null || project.server !== null}",
       "then": [
+        {
+          "name": "test",
+          "condition": "${(options.script === null || options.url === null) && (options.script !== null || options.url !== null || options.arguments !== null)}",
+          "then": [
+            {
+              "name": "fail",
+              "message": "The script and URL options are required for launching a server manually."
+            }
+          ],
+        },
         {
           "name": "prompt",
           "type": "confirmation",
@@ -43,11 +65,31 @@
           "condition": "${this.openExample}",
           "then": [
             {
-              "name": "start-server",
-              "result": {
-                "url": "serverUrl",
-                "owned": "isServerOwned"
-              }
+              "name": "test",
+              "condition": "${options.script === null}",
+              "then": [
+                {
+                  "name": "start-server",
+                  "result": {
+                    "id": "serverId",
+                    "url": "serverUrl"
+                  }
+                }
+              ],
+              "else": [
+                {
+                  "name": "start-server",
+                  "server": {
+                    "script": "${options.script}",
+                    "url": "${options.url}",
+                    "arguments": "${options.arguments ?? []}"
+                  },
+                  "result": {
+                    "id": "serverId",
+                    "url": "serverUrl",
+                  }
+                }
+              ]
             },
             {
               "name": "open-link",
@@ -60,7 +102,7 @@
             },
             {
               "name": "test",
-              "condition": "${this.isServerOwned}",
+              "condition": "${this.serverId !== null}",
               "then": [
                 {
                   "name": "prompt",
@@ -68,13 +110,14 @@
                   "message": "Press any key to exit"
                 },
                 {
-                  "name": "stop-server"
+                  "name": "stop-server",
+                  "id": "${this.serverId}",
                 }
               ]
             }
           ]
-        }
-      ]
+        },
+      ],
     }
   ]
 }

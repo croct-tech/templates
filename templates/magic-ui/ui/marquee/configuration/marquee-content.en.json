@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.croct.com/json/v1/content.json",
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
   "type": "structure",
   "attributes": {
     "reviews": {

@@ -776,7 +776,9 @@ function findDuplicates(values: string[]): string[] {
 }
 
 async function createTemplateValidator<T>(schemaUrl: string): Promise<ValidateFunction<T>> {
-    const ajv = new Ajv();
+    const ajv = new Ajv({
+        allowUnionTypes: true,
+    });
 
     addFormats(ajv);
 

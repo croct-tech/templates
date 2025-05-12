@@ -1,0 +1,191 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "React phone number input",
+  "description": "A phone field formatted based on the user's location.",
+  "metadata": {
+    "id": "interface/form/react-phone-number-input",
+    "verified": true,
+    "author": {
+      "name": "Nikolay",
+      "avatarUrl": "https://github.com/catamphetamine.png",
+      "websiteUrl": "https://github.com/catamphetamine"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/react-phone-number-input/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/react-phone-number-input/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/react-phone-number-input/cover.png",
+    "installationUrl": "npm://react-phone-number-input",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/component",
+      "interface/form",
+      "language/javascript",
+      "language/typescript",
+      "use-case/location"
+    ],
+    "relatedTemplates": [
+      "interface/component/demo-request-form"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    },
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "This template is only supported in Next.js and React projects.",
+          "suggestions": [
+            "Run the command in an empty folder to create a new project."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "import",
+      "template": "croct://project",
+      "options": {
+        "name": "phone-field-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "disableLauncher": true
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript"
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "codeExtension": "${this.isTypescript ? '.tsx' : '.jsx'}"
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@croct/template-ui",
+        "react-phone-number-input"
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${this.isTypescript}",
+      "then": [
+        {
+          "name": "add-dependency",
+          "dependencies": [
+            "@types/react-phone-number-input"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/components/phone-input.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "phone-input.tsx": "phone-input${this.codeExtension}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "routePath": "phone-field"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${this.routePath}",
+        "exampleFile": "${{nextjs: project.path.examples.endsWith('app') ? 'page' : 'index', react: 'page'}[project.platform]}"
+      }
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/page.module.css",
+      "destination": "${this.exampleDirectory}"
+    },
+    {
+      "name": "download",
+      "overwrite": true,
+      "source": "code/page/${project.platform}/${this.exampleFile}.tsx",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "${this.exampleFile}.tsx": "${this.exampleFile}${this.codeExtension}"
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.exampleDirectory}/${this.exampleFile}${this.codeExtension}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component successfully imported at `${this.exampleDirectory}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct:/utils/example-launcher",
+          "options": {
+            "path": "${this.routePath}"
+          }
+        }
+      ]
+    }
+  ]
+}

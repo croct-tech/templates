@@ -121,12 +121,6 @@
     {
       "name": "download",
       "overwrite": true,
-      "source": "code/components/phone-input.module.css",
-      "destination": "${project.path.components}"
-    },
-    {
-      "name": "download",
-      "overwrite": true,
       "source": "code/components/phone-input.tsx",
       "destination": "${project.path.components}",
       "mapping": {

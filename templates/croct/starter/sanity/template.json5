@@ -1,0 +1,182 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Croct + Sanity starter",
+  "description": "A starter template for Next.js projects using Croct and Sanity.",
+  "actions": [
+    {
+      "name": "define",
+      "variables": {
+        "projectName": "croct-sanity-project",
+      }
+    },
+    {
+      "name": "import",
+      "template": "croct://utils/filename-generator",
+      "options": {
+        "reference": "projectName"
+      }
+    },
+    {
+      "name": "execute-package",
+      "package": "sanity@latest",
+      "arguments": [
+        "init",
+        "--create-project",
+        "Croct + Sanity starter",
+        "--dataset-default",
+        "production",
+        "--template",
+        "sanity-io/sanity-template-nextjs-clean",
+        "--output-path",
+        "${this.projectName}"
+      ],
+      "interactions": true,
+    },
+    {
+      "name": "change-directory",
+      "path": "${this.projectName}/studio"
+    },
+    {
+      "name": "download",
+      "source": "./assets/sample-data.tar.gz",
+      "destination": "./",
+      "overwrite": true,
+    },
+    {
+      "name": "download",
+      "source": "./code/studio/schemaTypes/documents/heroSection.ts",
+      "destination": "src/schemaTypes/documents",
+    },
+    {
+      "name": "download",
+      "source": "./code/studio/schemaTypes/index.ts",
+      "destination": "src/schemaTypes",
+      "overwrite": true
+    },
+    {
+      "name": "execute-package",
+      "package": "sanity@latest",
+      "arguments": [
+        "dataset",
+        "import",
+        "sample-data.tar.gz",
+        "--replace"
+      ],
+      "interactions": [
+        {
+          "when": "Select target dataset",
+          "then": ["[down]", "[enter]"],
+          "final": true
+        }
+      ]
+    },
+    {
+      "name": "execute-package",
+      "package": "sanity@latest",
+      "arguments": [
+        "schema",
+        "extract",
+        "--enforce-required-fields"
+      ],
+    },
+    {
+      "name": "change-directory",
+      "path": "../nextjs-app"
+    },
+    {
+      "name": "execute-package",
+      "package": "sanity@latest",
+      "arguments": [
+        "typegen",
+        "generate",
+      ],
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "home-hero": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this.slotId}"
+      ]
+    },
+    {
+      "name": "download",
+      "source": "./code/nextjs/sanity/lib/queries.ts",
+      "destination": "sanity/lib",
+      "overwrite": true
+    },
+    {
+      "name": "download",
+      "source": "./code/nextjs/app/components/GetStartedCode.tsx",
+      "destination": "app/components",
+      "overwrite": true
+    },
+    {
+      "name": "download",
+      "source": "./code/nextjs/app/page.tsx",
+      "destination": "app",
+      "overwrite": true
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "app/page.tsx",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this.slotId}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this.slotVersion}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "change-directory",
+      "path": "../"
+    },
+    {
+      "name": "import",
+      "template": "croct:/utils/example-launcher",
+      "options": {
+        "script": "dev",
+        "url": "http://localhost:3000",
+      }
+    }
+  ]
+}

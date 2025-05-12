@@ -10,10 +10,10 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/nextjs/croct/cover.png",
-    "installationUrl": "nextjs://croct",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/nextjs/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/nextjs/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/nextjs/cover.png",
+    "installationUrl": "croct://starter/nextjs",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",

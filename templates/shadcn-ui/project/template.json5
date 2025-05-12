@@ -57,7 +57,7 @@
   "actions": [
     {
       "name": "import",
-      "template": "nextjs://croct",
+      "template": "croct://starter/nextjs",
       "options": {
         "name": "${options.name}",
         "version": "${options.version}",

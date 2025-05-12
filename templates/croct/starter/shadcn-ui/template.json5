@@ -10,10 +10,10 @@
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/croct/cover.png",
-    "installationUrl": "shadcn-ui://croct",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/shadcn-ui/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/shadcn-ui/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/shadcn-ui/cover.png",
+    "installationUrl": "croct://starter/shacn-ui",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",

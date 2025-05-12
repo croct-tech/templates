@@ -86,7 +86,7 @@
     },
     {
       "name": "import",
-      "template": "shadcn-ui://croct",
+      "template": "croct://starter/shacn-ui",
       "options": {
         "name": "${options.id}-example",
         "version": "${options.version}",

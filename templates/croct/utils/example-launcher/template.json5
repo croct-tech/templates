@@ -22,15 +22,15 @@
   "options": {
     "script": {
       "type": "string",
-      "description": "The script to run the example.",
+      "description": "The script to run the example."
     },
     "arguments": {
       "type": "array",
-      "description": "The arguments to pass to the script.",
+      "description": "The arguments to pass to the script."
     },
     "url": {
       "type": "string",
-      "description": "The server URL.",
+      "description": "The server URL."
     },
     "path": {
       "type": "string",
@@ -51,7 +51,7 @@
               "name": "fail",
               "message": "The script and URL options are required for launching a server manually."
             }
-          ],
+          ]
         },
         {
           "name": "prompt",
@@ -86,7 +86,7 @@
                   },
                   "result": {
                     "id": "serverId",
-                    "url": "serverUrl",
+                    "url": "serverUrl"
                   }
                 }
               ]
@@ -111,13 +111,13 @@
                 },
                 {
                   "name": "stop-server",
-                  "id": "${this.serverId}",
+                  "id": "${this.serverId}"
                 }
               ]
             }
           ]
-        },
-      ],
+        }
+      ]
     }
   ]
 }

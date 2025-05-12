@@ -1,7 +1,30 @@
 {
-  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "$schema": "https://schema.croct.com/json/v1/template-catalog.json",
   "title": "Croct + Sanity starter",
   "description": "A starter template for Next.js projects using Croct and Sanity.",
+  "metadata": {
+    "id": "boilerplate/starter/sanity-croct",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/sanity/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/sanity/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/sanity/cover.png",
+    "installationUrl": "nextjs://croct",
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs-croct",
+    ]
+  },
   "actions": [
     {
       "name": "define",

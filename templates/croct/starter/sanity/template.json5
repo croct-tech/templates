@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.croct.com/json/v1/template-catalog.json",
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Croct + Sanity starter",
   "description": "A starter template for Next.js projects using Croct and Sanity.",
   "metadata": {

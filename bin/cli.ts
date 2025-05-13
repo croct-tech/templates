@@ -320,7 +320,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
                 : undefined,
             installationUrl: metadata.installationUrl,
             sourceUrl: metadata.sourceUrl,
-            verified: metadata.verified,
+            verified: metadata.verified ?? false,
             relatedTemplates: metadata.relatedTemplates ?? [],
             options: Object.entries(template.options ?? []).map(
                 ([name, definition]) => ({

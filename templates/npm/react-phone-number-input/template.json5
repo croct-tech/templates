@@ -4,7 +4,6 @@
   "description": "A phone field formatted based on the user's location.",
   "metadata": {
     "id": "interface/form/react-phone-number-input",
-    "verified": true,
     "author": {
       "name": "Nikolay",
       "avatarUrl": "https://github.com/catamphetamine.png",

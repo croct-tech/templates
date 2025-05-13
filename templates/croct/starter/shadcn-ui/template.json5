@@ -91,7 +91,7 @@
             },
             {
               "name": "import",
-              "template": "../project",
+              "template": "shadcn-ui://project",
               "options": {
                 "name": "${this.projectName}",
                 "version": "${options.version}",

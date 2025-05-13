@@ -92,7 +92,7 @@
     },
     {
       "name": "import",
-      "template": "../project",
+      "template": "nextjs://project",
       "options": {
         "name": "${this.projectName}",
         "version": "${options.version}",

@@ -2,15 +2,16 @@
 
 Looking to add **AB testing** or **personalization** to your Sanity-powered site?
 
-This template combines [Sanity](https://www.sanity.io/?utm_source=croct), [Next.js](https://nextjs.org/?utm_source=croct), 
-and Croct to help you run experiments, personalize content by audience, and analyze results—without changing your CMS. 
+This template
+combines [Sanity.io](https://www.sanity.io/?utm_source=croct), [Next.js](https://nextjs.org/?utm_source=croct), and
+Croct to help you run experiments, personalize content by audience, and analyze results without changing your CMS.
 
-It's the fastest way to add experimentation and personalization on top of Sanity.
+It's the fastest way to add experimentation and personalization on top of Sanity Studio.
 
 * AB testing support with real-time audience evaluation
 * Content personalization based on location, behavior, or custom rules
 * Built-in analytics for every variant and experience
-* Seamlessly compatibility with your existing Sanity schemas
+* Seamless compatibility with your existing Sanity schemas
 * Fast to implement with zero CMS migration
 
 ## Usage
@@ -18,5 +19,5 @@ It's the fastest way to add experimentation and personalization on top of Sanity
 Run the following command in an empty directory to create a new project using this template:
 
 ```croct-cmd
-croct@latest use croct://starter/sanity-nextjs
+croct@latest use croct://starter/sanity
 ```

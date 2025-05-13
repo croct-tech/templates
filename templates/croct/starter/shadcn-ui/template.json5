@@ -13,7 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/shadcn-ui/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/shadcn-ui/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/shadcn-ui/cover.png",
-    "installationUrl": "croct://starter/shacn-ui",
+    "installationUrl": "croct://starter/shadcn-ui",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",

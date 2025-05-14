@@ -31,6 +31,8 @@ const categoryMap = {
     'boilerplate/utility': 'Utilities',
     'framework/nextjs': 'Next.js',
     'framework/react': 'React',
+    'integration/cms': 'CMS',
+    'integration/cdp': 'CDP',
     'interface/code': 'Code',
     'interface/component': 'Component',
     'interface/feedback': 'Feedback',

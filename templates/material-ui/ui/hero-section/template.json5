@@ -9,11 +9,9 @@
       "avatarUrl": "https://github.com/mui.png",
       "websiteUrl": "https://mui.com/?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/hero-section/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/hero-section/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/hero-section/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/hero-section/cover.mp4",
-    "installationUrl": "material-ui://ui/hero-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/hero-section/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/hero-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/hero-section/cover.png",
     "categories": [
       "library/material-ui"
     ]

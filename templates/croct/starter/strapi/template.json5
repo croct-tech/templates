@@ -14,7 +14,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/strapi/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/strapi/cover.png",
     "categories": [
-      "integration/cms",
+      "integration/cms"
     ]
   },
   "actions": [

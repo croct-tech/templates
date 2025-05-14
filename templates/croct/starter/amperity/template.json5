@@ -14,7 +14,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/amperity/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/amperity/cover.png",
     "categories": [
-      "integration/cdp",
+      "integration/cdp"
     ]
   },
   "actions": [

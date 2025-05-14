@@ -14,7 +14,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/customer-io/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/customer-io/cover.png",
     "categories": [
-      "integration/cdp",
+      "integration/cdp"
     ]
   },
   "actions": [

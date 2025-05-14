@@ -9,11 +9,9 @@
       "avatarUrl": "https://github.com/mui.png",
       "websiteUrl": "https://mui.com/?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/features-section/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/features-section/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/features-section/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/features-section/cover.mp4",
-    "installationUrl": "material-ui://ui/features-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/features-section/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/features-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/features-section/cover.png",
     "categories": [
       "library/material-ui"
     ]

@@ -3,18 +3,18 @@
   "title": "Croct + GrowthLoop integration",
   "description": "An integration template for projects using Croct and GrowthLoop.",
   "metadata": {
-    "id": "integration/cdp/growthLoop",
+    "id": "integration/cdp/growthloop",
     "verified": true,
     "author": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/growthLoop/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/growthLoop/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/growthLoop/cover.png",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/growthloop/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/growthloop/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/growthloop/cover.png",
     "categories": [
-      "integration/cdp",
+      "integration/cdp"
     ]
   },
   "actions": [

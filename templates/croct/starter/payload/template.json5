@@ -14,7 +14,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/payload/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/payload/cover.png",
     "categories": [
-      "integration/cms",
+      "integration/cms"
     ]
   },
   "actions": [

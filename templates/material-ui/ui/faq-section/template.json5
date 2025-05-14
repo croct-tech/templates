@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "FAQ section",
+  "description": "A dynamic FAQ section using Material UI components and Croct.",
+  "metadata": {
+    "id": "library/material-ui/faq-section",
+    "author": {
+      "name": "Material UI",
+      "avatarUrl": "https://github.com/mui.png",
+      "websiteUrl": "https://mui.com/?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/faq-section/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/faq-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/faq-section/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/ui/block/faq-section/cover.mp4",
+    "installationUrl": "material-ui://ui/faq-section",
+    "categories": [
+      "library/material-ui"
+    ]
+  },
+  "actions": [
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "We are working on this template, but your click pushes it up the priority list."
+    }
+  ]
+}

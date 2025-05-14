@@ -51,6 +51,7 @@ const categoryMap = {
     'language/html': 'HTML',
     'library/framer-motion': 'Framer Motion',
     'library/magic-ui': 'Magic UI',
+    'library/material-ui': 'Material UI',
     'library/shadcn-ui': 'Shadcn UI',
     'library/shiki': 'Shiki',
     'library/tailwind-css': 'Tailwind CSS',

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Croct + Amperity integration",
+  "description": "An integration template for projects using Croct and Amperity.",
+  "metadata": {
+    "id": "integration/cdp/amperity",
+    "verified": true,
+    "author": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/amperity/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/amperity/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/amperity/cover.png",
+    "categories": [
+      "integration/cdp",
+    ]
+  },
+  "actions": [
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "We are working on this template, but your click pushes it up the priority list."
+    }
+  ]
+}

@@ -27,7 +27,7 @@
     {
       "name": "prompt",
       "type": "keypress",
-      "message": "Press any key to request access",
+      "message": "Press any key to request access"
     },
     {
       "name": "open-link",

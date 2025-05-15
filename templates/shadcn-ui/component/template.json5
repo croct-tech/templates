@@ -9,9 +9,9 @@
       "avatarUrl": "https://github.com/shadcn-ui.png",
       "websiteUrl": "https://ui.shadcn.com?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/cover.png",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/component/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/component/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/component/cover.png",
     "installationUrl": "shadcn-ui://component",
     "categories": [
       "boilerplate/utility",

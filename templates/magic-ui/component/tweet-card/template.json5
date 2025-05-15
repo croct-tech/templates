@@ -9,9 +9,9 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/tweet-card/cover.png",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/tweet-card/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/tweet-card/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/tweet-card/cover.png",
     "installationUrl": "magic-ui://component/tweet-card",
     "categories": [
       "framework/nextjs",

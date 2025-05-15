@@ -9,10 +9,10 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/marquee/cover.mp4",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/cover.mp4",
     "installationUrl": "magic-ui://component/marquee",
     "categories": [
       "framework/nextjs",

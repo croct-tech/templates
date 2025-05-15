@@ -9,9 +9,9 @@
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/icon-cloud/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/icon-cloud/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/icon-cloud/cover.png",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/cover.png",
     "installationUrl": "magic-ui://component/icon-cloud",
     "categories": [
       "framework/nextjs",

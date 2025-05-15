@@ -46,10 +46,11 @@ const categoryMap = {
     'interface/section': 'Section',
     'interface/social-proof': 'Social proof',
     'interface/visualization': 'Visualization',
+    'language/html': 'HTML',
     'language/javascript': 'JavaScript',
     'language/typescript': 'TypeScript',
-    'language/html': 'HTML',
     'library/framer-motion': 'Framer Motion',
+    'library/hero-ui': 'Hero UI',
     'library/magic-ui': 'Magic UI',
     'library/material-ui': 'Material UI',
     'library/shadcn-ui': 'Shadcn UI',
@@ -57,8 +58,8 @@ const categoryMap = {
     'library/tailwind-css': 'Tailwind CSS',
     'use-case/e-commerce': 'E-commerce',
     'use-case/experiment': 'Experiment',
-    'use-case/saas': 'SaaS',
     'use-case/location': 'Location',
+    'use-case/saas': 'SaaS',
 };
 
 const technologyCategories = ['library', 'language', 'framework'];
@@ -323,7 +324,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
                 : undefined,
             installationUrl: metadata.installationUrl,
             sourceUrl: metadata.sourceUrl,
-            verified: metadata.verified,
+            verified: metadata.verified ?? false,
             relatedTemplates: metadata.relatedTemplates ?? [],
             options: Object.entries(template.options ?? []).map(
                 ([name, definition]) => ({

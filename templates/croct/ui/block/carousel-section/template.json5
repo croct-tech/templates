@@ -73,12 +73,13 @@
     },
     {
       "name": "import",
-      "template": "croct://project",
+      "template": "croct://starter/croct",
       "options": {
         "name": "carousel-example",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
+        "defaultHomepage": true,
         "disableLauncher": true
       }
     },

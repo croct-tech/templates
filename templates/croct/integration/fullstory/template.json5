@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Croct + Fullstory integration",
+  "title": "Fullstory integration",
   "description": "An integration template for projects using Croct and Fullstory.",
   "metadata": {
     "id": "integration/cdp/fullstory",

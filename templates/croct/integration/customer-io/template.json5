@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Croct + Customer.Io integration",
+  "title": "Customer.io integration",
   "description": "An integration template for projects using Croct and Customer.io.",
   "metadata": {
     "id": "integration/cdp/customer-io",

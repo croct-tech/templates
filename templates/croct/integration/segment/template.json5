@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Croct + Segment integration",
+  "title": "Segment integration",
   "description": "An integration template for projects using Croct and Segment.",
   "metadata": {
     "id": "integration/cdp/segment",

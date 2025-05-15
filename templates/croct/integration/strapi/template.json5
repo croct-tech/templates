@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Croct + Strapi CMS integration",
+  "title": "Strapi CMS integration",
   "description": "An integration template for projects using Croct and Strapi.",
   "metadata": {
     "id": "integration/cms/strapi",

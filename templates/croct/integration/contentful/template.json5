@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Croct + Contentful CMS integration",
+  "title": "Contentful CMS integration",
   "description": "An integration template for projects using Croct and Contentful.",
   "metadata": {
     "id": "integration/cms/contentful",

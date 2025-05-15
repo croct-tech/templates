@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Croct + Hygraph CMS integration",
+  "title": "Hygraph CMS integration",
   "description": "An integration template for projects using Croct and Hygraph.",
   "metadata": {
     "id": "integration/cms/hygraph",

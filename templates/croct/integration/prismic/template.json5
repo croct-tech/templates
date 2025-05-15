@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Croct + Prismic CMS integration",
+  "title": "Prismic CMS integration",
   "description": "An integration template for projects using Croct and Prismic CMS.",
   "metadata": {
     "id": "integration/cms/prismic",

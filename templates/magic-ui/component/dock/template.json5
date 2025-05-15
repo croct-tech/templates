@@ -1,0 +1,109 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Magic UI - Dock",
+  "description": "A list of avatars to represent people, brands, or tools.",
+  "metadata": {
+    "id": "library/magic-ui/dock",
+    "author": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/cover.png",
+    "installationUrl": "magic-ui://component/dock",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/menu",
+      "interface/motion",
+      "language/javascript",
+      "language/typescript",
+      "library/framer-motion",
+      "library/magic-ui"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "dock",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": [
+          "dock-menu.tsx"
+        ],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "import",
+              "template": "shadcn-ui://component",
+              "options": {
+                "components": [
+                  "button",
+                  "separator",
+                  "tooltip"
+                ]
+              }
+            },
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-dock": {
+                    "name": "Magic UI - Dock",
+                    "description": "A list of avatars to represent people, brands, or tools.",
+                    "schema": "${import('./configuration/dock-schema.json')}"
+                  }
+                },
+                "slots": {
+                  "magic-ui-dock": {
+                    "name": "Magic UI - Dock",
+                    "component": "magic-ui-dock",
+                    "content": {
+                      "en": "${import('./configuration/dock-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-dock": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

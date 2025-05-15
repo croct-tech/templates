@@ -12,7 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/cover.mp4",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/cover.webm",
     "installationUrl": "magic-ui://component/marquee",
     "categories": [
       "framework/nextjs",

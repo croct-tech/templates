@@ -12,7 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/cover.mp4",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/cover.webm",
     "installationUrl": "magic-ui://component/bento-grid",
     "categories": [
       "framework/nextjs",

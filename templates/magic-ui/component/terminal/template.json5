@@ -12,7 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/cover.mp4",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/cover.webm",
     "installationUrl": "magic-ui://component/terminal",
     "categories": [
       "framework/nextjs",

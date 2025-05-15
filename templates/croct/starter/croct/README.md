@@ -1,21 +1,19 @@
 # Introduction
 
-This template sets up a project using [Next.js](https://nextjs.org/?utm_source=croct) and Croct.
-It shows how to use the [Croct Next.js SDK](https://docs.croct.com/reference/sdk/nextjs/installation) to add a CMS, 
-analytics, AB testing and personalization to your application.
+This template adds Croct to an existing project or sets up a new [Next.js](https://nextjs.org/) project with Croct already integrated.
 
 ## Usage
 
-To create a new project using this template, run:
+Run the following command to integrate Croct into an existing project:
 
 ```croct-cmd
-croct@latest use croct://starter/nextjs
+croct@latest use croct://starter/croct
 ```
 
 To specify a Next.js version, use the `version` option:
 
 ```croct-cmd
-croct@latest use croct://starter/nextjs --version=14
+croct@latest use croct://starter/croct --version=14
 ```
 
 ## Options

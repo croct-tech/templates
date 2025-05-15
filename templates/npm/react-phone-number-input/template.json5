@@ -72,12 +72,13 @@
     },
     {
       "name": "import",
-      "template": "croct://project",
+      "template": "croct://starter/croct",
       "options": {
-        "name": "phone-field-example",
+        "name": "announcement-bar-example",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
+        "defaultHomepage": true,
         "disableLauncher": true
       }
     },

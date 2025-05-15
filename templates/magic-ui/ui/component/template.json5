@@ -90,7 +90,9 @@
       "options": {
         "name": "${options.id}-example",
         "version": "${options.version}",
-        "router": "${options.router}"
+        "router": "${options.router}",
+        "defaultHomepage": true,
+        "disableLauncher": true
       }
     },
     {

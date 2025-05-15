@@ -3,7 +3,7 @@
   "title": "Shadcn UI + Croct starter",
   "description": "A Next.js project with Shadcn UI and Croct integration.",
   "metadata": {
-    "id": "boilerplate/starter/shadcn-croct",
+    "id": "boilerplate/starter/shadcn-ui",
     "verified": true,
     "author": {
       "name": "Croct",
@@ -24,16 +24,14 @@
       "library/tailwind-css"
     ],
     "relatedTemplates": [
-      "boilerplate/starter/nextjs-croct",
-      "boilerplate/starter/nextjs-project",
-      "boilerplate/starter/shadcn-project"
+      "boilerplate/starter/nextjs"
     ]
   },
   "options": {
     "name": {
       "type": "string",
       "description": "The name of the project.",
-      "default": "my-app"
+      "default": "my-croct-app"
     },
     "version": {
       "type": "string",
@@ -45,14 +43,38 @@
         "latest"
       ]
     },
+    "eslint": {
+      "type": "boolean",
+      "description": "Whether to use ESLint."
+    },
+    "turbopack": {
+      "type": "boolean",
+      "description": "Whether to use TurboPack."
+    },
+    "src-dir": {
+      "type": "boolean",
+      "description": "Whether to use the src directory structure."
+    },
     "router": {
       "type": "string",
       "description": "The router to use.",
       "choices": [
         "app",
         "page"
-      ],
-      "default": "app"
+      ]
+    },
+    "import-alias": {
+      "type": "string",
+      "description": "The import alias to use."
+    },
+    "defaultHomepage": {
+      "type": "boolean",
+      "description": "Whether to use the default homepage over Croct's."
+    },
+    "disableLauncher": {
+      "type": "boolean",
+      "description": "Whether to disable opening the project in the browser.",
+      "default": false
     }
   },
   "actions": [
@@ -61,57 +83,92 @@
       "condition": "${project.platform === 'unknown'}",
       "then": [
         {
-          "name": "print",
-          "semantics": "info",
-          "message": "No project found in the current directory"
-        },
-        {
-          "name": "prompt",
-          "type": "confirmation",
-          "message": "Start a new project?",
-          "default": true,
-          "result": "createProject"
-        },
-        {
-          "name": "test",
-          "condition": "${this.createProject}",
-          "then": [
-            {
-              "name": "define",
-              "variables": {
-                "projectName": "${options.name}"
-              }
-            },
-            {
-              "name": "import",
-              "template": "croct://utils/filename-generator",
-              "options": {
-                "reference": "projectName"
-              }
-            },
-            {
-              "name": "import",
-              "template": "shadcn-ui://project",
-              "options": {
-                "name": "${this.projectName}",
-                "version": "${options.version}",
-                "router": "${options.router}"
-              }
-            }
-          ],
-          "else": {
-            "name": "fail",
-            "title": "Project not found",
-            "message": "Unable to locate a project in the current directory.",
-            "suggestions": [
-              "Navigate to the project directory and try again."
-            ]
+          "name": "import",
+          "template": "croct://starter/nextjs",
+          "options": {
+            "name": "${options.name}",
+            "version": "${options.version}",
+            "eslint": "${options.eslint}",
+            "turbopack": "${options.turbopack}",
+            "router": "${options.router}",
+            "javascript": false,
+            "tailwind": true,
+            "src-dir": "${options['src-dir']}",
+            "disableLauncher": true,
+            "defaultHomepage": "${options.defaultHomepage}"
           }
         }
       ],
       "else": [
         {
           "name": "initialize"
+        }
+      ]
+    },
+    {
+      "name": "execute-package",
+      "package": "shadcn@latest",
+      "runner": "npm",
+      "arguments": [
+        "init"
+      ],
+      "interactions": [
+        {
+          "when": "Would you like to start a new project?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "What is your project named?",
+          "then": [
+            "${options.name}",
+            "[enter]"
+          ]
+        },
+        {
+          "when": "You need to create a components.json file to add components. Proceed?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "How would you like to proceed?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Which style would you like to use?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Which color would you like to use as the base color?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Would you like to use CSS variables for theming?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Project initialization completed",
+          "final": true
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${!options.disableLauncher}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher"
         }
       ]
     }

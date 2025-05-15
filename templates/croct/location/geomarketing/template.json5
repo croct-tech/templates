@@ -27,6 +27,7 @@
     ],
     "relatedTemplates": [
       "interface/component/announcement-bar",
+      "interface/form/react-phone-number-input",
       "use-case/e-commerce/location"
     ]
   },

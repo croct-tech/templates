@@ -18,6 +18,8 @@
       "use-case/e-commerce"
     ],
     "relatedTemplates": [
+      "interface/component/announcement-bar",
+      "interface/section/carousel-section",
       "use-case/e-commerce/cart",
       "use-case/e-commerce/instagram-campaign",
       "use-case/e-commerce/interest",

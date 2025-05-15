@@ -1,0 +1,202 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Magic UI component",
+  "description": "Import the Magic UI example into the project.",
+  "metadata": {
+    "id": "library/magic-ui/component",
+    "author": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/component/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/component/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/component/cover.png",
+    "installationUrl": "magic-ui://component/component",
+    "categories": [
+      "boilerplate/utility",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/magic-ui"
+    ],
+    "relatedTemplates": [
+      "library/shadcn-ui/component"
+    ]
+  },
+  "options": {
+    "id": {
+      "type": "string",
+      "description": "The component ID.",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "components": {
+      "type": "array",
+      "description": "The components to import."
+    },
+    "action": {
+      "type": "object",
+      "description": "Additional actions to execute.",
+      "required": false
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "This template is only supported in Next.js and React projects.",
+          "suggestions": [
+            "Run the command in an empty folder to create a new project."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "import",
+      "template": "croct://starter/shadcn-ui",
+      "options": {
+        "name": "${options.id}-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "defaultHomepage": true,
+        "disableLauncher": true
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@croct/template-ui"
+      ]
+    },
+    {
+      "name": "import",
+      "template": "shadcn-ui://component",
+      "options": {
+        "components": [
+          "https://magicui.design/r/${options.id}"
+        ]
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${options.id}",
+        "exampleFile": "${{nextjs: project.path.examples.endsWith('app') ? 'page.tsx' : 'index.tsx', react: 'page.tsx'}[project.platform]}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "examplePath": "${this.exampleDirectory}/${this.exampleFile}"
+      }
+    },
+    "${options.action}",
+    {
+      "name": "define",
+      "variables": {
+        "componentIndex": 0
+      }
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.componentIndex < options.components.length}",
+      "actions": [
+        {
+          "name": "download",
+          "source": "magic-ui://component/${options.id}/code/components/${options.components[this.componentIndex]}",
+          "destination": "${project.path.components}"
+        },
+        {
+          "name": "define",
+          "variables": {
+            "componentIndex": "${this.componentIndex + 1}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "download",
+      "source": "magic-ui://component/${options.id}/code/page/${project.platform}/${this.exampleFile}",
+      "destination": "${this.exampleDirectory}"
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this[options.slotId]}@${this[options.slotVersion]}"
+      ]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.examplePath}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component successfully imported at `${this.examplePath}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher",
+          "options": {
+            "path": "${options.id}"
+          }
+        }
+      ]
+    }
+  ]
+}

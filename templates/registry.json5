@@ -25,6 +25,6 @@
   },
   {
     "pattern": "^https://magicui.design/r/(.+)$",
-    "destination": "magic-ui/ui/$1"
+    "destination": "magic-ui/component/$1"
   }
 ]

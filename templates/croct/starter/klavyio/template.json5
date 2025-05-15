@@ -19,9 +19,8 @@
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "success",
-      "message": "We are working on this template, but your click pushes it up the priority list."
+      "name": "open-link",
+      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Kavyio%20integration%20template."
     }
   ]
 }

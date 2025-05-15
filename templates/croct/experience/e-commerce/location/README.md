@@ -13,7 +13,7 @@ areas.
 This experience includes 4 components, 2 slots (an announcement bar and a carousel section), and the following audience:
 
 ```cql
-location's city is "New York"
+location's cityName is "New York"
 ```
 
 Define custom audiences using the [Contextual Query Language (CQL)](https://docs.croct.com/reference/cql/introduction),

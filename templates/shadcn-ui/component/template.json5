@@ -1,0 +1,121 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Shadcn UI component",
+  "description": "A template for adding a Shadcn UI component to a project.",
+  "metadata": {
+    "id": "library/shadcn-ui/component",
+    "author": {
+      "name": "Shadcn UI",
+      "avatarUrl": "https://github.com/shadcn-ui.png",
+      "websiteUrl": "https://ui.shadcn.com?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/ui/component/cover.png",
+    "installationUrl": "shadcn-ui://component",
+    "categories": [
+      "boilerplate/utility",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/shadcn-ui",
+      "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "library/magic-ui/component"
+    ]
+  },
+  "options": {
+    "components": {
+      "type": "array",
+      "description": "The components to install.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "tailwindcss"
+        }
+      ],
+      "result": {
+        "tailwindcss": "isTailwindcssInstalled"
+      }
+    },
+    {
+      "name": "locate-file",
+      "path": "tailwind.config.*",
+      "limit": 1,
+      "depth": 3,
+      "result": "tailwindConfigFiles"
+    },
+    {
+      "name": "test",
+      "condition": "${!this.isTailwindcssInstalled && this.tailwindConfigFiles.length === 0}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "Tailwind CSS is not installed.",
+          "links": [
+            {
+              "label": "Install Tailwind CSS",
+              "url": "https://tailwindcss.com/docs/installation?utm_source=croct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "execute-package",
+      "package": "shadcn@latest",
+      "arguments": "${['add', ...options.components]}",
+      "interactions": [
+        {
+          "when": "You need to create a components.json file to add components. Proceed?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "How would you like to proceed?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Which style would you like to use?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Which color would you like to use as the base color?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Would you like to use CSS variables for theming?",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "Would you like to overwrite?",
+          "then": [
+            "y"
+          ],
+          "always": true
+        },
+        {
+          "when": "(Created|Skipped) \\d files?",
+          "pattern": true,
+          "final": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Magic UI - Globe",
+  "description": "A 3D globe to visualize global presence, activity, or reach.",
+  "metadata": {
+    "id": "library/magic-ui/globe",
+    "author": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/globe/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/globe/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/ui/globe/cover.png",
+    "installationUrl": "magic-ui://component/globe",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/marketing",
+      "interface/motion",
+      "interface/visualization",
+      "language/javascript",
+      "language/typescript",
+      "library/magic-ui"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "globe",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion",
+        "components": [
+          "global-presence.tsx"
+        ],
+        "action": {
+          "name": "run",
+          "actions": [
+            {
+              "name": "add-dependency",
+              "dependencies": [
+                "motion"
+              ]
+            },
+            {
+              "name": "create-resource",
+              "resources": {
+                "components": {
+                  "magic-ui-globe": {
+                    "name": "Magic UI - Globe",
+                    "description": "A 3D globe to visualize global presence, activity, or reach.",
+                    "schema": "${import('./configuration/globe-schema.json')}"
+                  }
+                },
+                "slots": {
+                  "magic-ui-globe": {
+                    "name": "Magic UI - Globe",
+                    "component": "magic-ui-globe",
+                    "content": {
+                      "en": "${import('./configuration/globe-content.en.json')}"
+                    }
+                  }
+                }
+              },
+              "result": {
+                "slots": {
+                  "magic-ui-globe": {
+                    "id": "slotId",
+                    "version": "slotVersion"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

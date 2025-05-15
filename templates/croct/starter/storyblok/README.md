@@ -13,8 +13,10 @@ It's the fastest way to add experimentation and personalization on top of Storyb
 * Seamless compatibility with your existing Storyblok schemas
 * Fast to implement with zero CMS migration
 
-> [!NOTE Coming soon]
-> We are currently working on this template and will launch it soon. If you have a Storyblok project and are interested
-> in collaborating,
-> please [reach out](https://croct.com/contact/support?subject=feature-request&message=I%20need%20help%20to%20integrate%20a%20project%20using%20Storyblok%20CMS.).
-> We’d love to prioritize your ideas and work together!
+## Usage
+
+Run the following command in an empty directory to create a new project using this template:
+
+```croct-cmd
+croct@latest use croct://starter/storyblok
+```

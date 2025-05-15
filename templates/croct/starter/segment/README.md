@@ -13,8 +13,10 @@ It's the fastest way to use data from Segment CDP to power personalized website 
 * Seamless compatibility with your existing Segment schemas
 * Fast to implement with zero CDP migration
 
-> [!NOTE Coming soon]
-> We are currently working on this template and will launch it soon. If you use Segment and are interested in
-> collaborating,
-> please [reach out](https://croct.com/contact/support?subject=feature-request&message=I%20need%20help%20to%20integrate%20Croct%20with%20Segment.).
-> We’d love to prioritize your ideas and work together!
+## Usage
+
+Run the following command in an empty directory to create a new project using this template:
+
+```croct-cmd
+croct@latest use croct://starter/segment
+```

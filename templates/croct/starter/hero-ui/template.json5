@@ -4,10 +4,11 @@
   "description": "A template for bootstrapping a new project with Next.js and Hero UI.",
   "metadata": {
     "id": "boilerplate/starter/hero-ui",
+    "verified": true,
     "author": {
-      "name": "Hero UI",
-      "avatarUrl": "https://github.com/hero-ui.png",
-      "websiteUrl": "https://heroui.com?utm_source=croct"
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/hero-ui/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/hero-ui/template.json5",

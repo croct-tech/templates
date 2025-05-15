@@ -18,6 +18,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
+      "interface/component/announcement-bar",
       "use-case/saas/abm-campaign",
       "use-case/saas/interest",
       "use-case/saas/landing-page",

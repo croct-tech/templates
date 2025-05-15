@@ -23,7 +23,8 @@
       "use-case/location"
     ],
     "relatedTemplates": [
-      "interface/component/demo-request-form"
+      "interface/component/demo-request-form",
+      "use-case/location/geomarketing"
     ]
   },
   "options": {

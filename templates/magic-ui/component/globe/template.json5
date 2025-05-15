@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/globe/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/globe/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/globe/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/globe/cover.mp4",
     "installationUrl": "magic-ui://component/globe",
     "categories": [
       "framework/nextjs",

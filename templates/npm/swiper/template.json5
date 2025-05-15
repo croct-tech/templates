@@ -33,6 +33,20 @@
       "name": "import",
       "template": "react/template.json5",
       "options": "${options}"
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}",
+          "replacements": [
+            {
+              "pattern": "00000000.CO.DE.ui_block&utm_content=carousel_section",
+              "value": "00000000.CO.DE.npm&utm_content=swiper"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

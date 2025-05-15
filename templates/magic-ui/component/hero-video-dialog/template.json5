@@ -12,7 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/cover.webm",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/cover.mp4",
     "installationUrl": "magic-ui://component/hero-video-dialog",
     "categories": [
       "framework/nextjs",

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "logos": {
+      "type": "list",
+      "items": [
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/d85b3e6f-48f1-48ba-ad26-71bcff3f380a"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/bc81f3a4-49bb-48a6-9c2a-29fed75b28a1"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/cff6632e-24d3-45bd-a84c-6defa6f2d56c"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/55abebb1-6712-41f9-a21d-2eda7878b186"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/5de59236-4130-4ab1-87b4-4c36aa0a41b9"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/dfaa7492-c952-4ee7-8a1a-af8a6abf9a27"
+          }
+        }
+      ]
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Trusted by the best companies"
+      }
+    }
+  }
+}

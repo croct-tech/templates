@@ -18,19 +18,30 @@
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Material%20UI%20navbar%20template."
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "navbar": {
+            "name": "Navbar",
+            "description": "The navigation bar at the top of a page.",
+            "schema": "${import('./configuration/navbar-schema.json')}"
+          },
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          }
+        },
+        "slots": {
+          "navbar": {
+            "name": "Navbar",
+            "component": "navbar",
+            "content": {
+              "en": "${import('./configuration/navbar-content.en.json')}"
+            }
+          }
+        }
+      }
     }
   ]
 }

@@ -18,19 +18,25 @@
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Material%20UI%20hero%20section%20template."
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "The big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "hero-section": {
+            "name": "Hero section",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/hero-section-content.en.json')}"
+            }
+          }
+        }
+      }
     }
   ]
 }

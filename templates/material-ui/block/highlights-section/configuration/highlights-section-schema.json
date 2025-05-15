@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "title": "Highlights section",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The section title."
+    },
+    "highlights": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "QueryStatsRoundedIcon": {
+                    "label": "Query Stats Icon",
+                    "position": 5
+                  },
+                  "ThumbUpAltRoundedIcon": {
+                    "label": "Thumb Up Icon",
+                    "position": 2
+                  },
+                  "AutoFixHighRoundedIcon": {
+                    "label": "Auto Fix Icon",
+                    "position": 3
+                  },
+                  "ConstructionRoundedIcon": {
+                    "label": "Construction Icon",
+                    "position": 1
+                  },
+                  "SupportAgentRoundedIcon": {
+                    "label": "Support Agent Icon",
+                    "position": 4
+                  },
+                  "SettingsSuggestRoundedIcon": {
+                    "label": "Settings Icon",
+                    "position": 0
+                  }
+                }
+              },
+              "label": "Icon",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The icon related to the highlight."
+            },
+            "title": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The highlight title."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The highlight description."
+            }
+          }
+        },
+        "itemLabel": "Highlight"
+      },
+      "label": "Highlights",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The list of highlights."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The section description."
+    }
+  },
+  "description": "A section of highlights."
+}

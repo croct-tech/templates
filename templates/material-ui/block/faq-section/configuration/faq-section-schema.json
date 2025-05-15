@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "title": "FAQ section",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The section title."
+    },
+    "questions": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": {
+                "type": "text",
+                "format": "multiline",
+                "minimumLength": 1
+              },
+              "label": "Answer",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The answer for the question."
+            },
+            "question": {
+              "type": {
+                "type": "text",
+                "format": "multiline",
+                "minimumLength": 1
+              },
+              "label": "Question",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The frequently asked question."
+            }
+          }
+        }
+      },
+      "label": "Questions",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The list of questions."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The section description."
+    }
+  },
+  "description": "A section of frequently asked questions."
+}

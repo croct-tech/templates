@@ -28,6 +28,10 @@
     "destination": "magic-ui/component/$1"
   },
   {
+    "pattern": "^tailwind://?(.+)$",
+    "destination": "tailwind/$1"
+  },
+  {
     "pattern": "^material-ui://?(.+)$",
     "destination": "material-ui/$1"
   }

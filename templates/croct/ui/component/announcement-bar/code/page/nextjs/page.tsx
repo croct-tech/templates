@@ -1,6 +1,6 @@
 import { PageContent } from "?/./content.{jsx,tsx}"
 import { AnnouncementBar } from "?/**/*/announcement-bar.{jsx,tsx}"
-import { TemplateCanvas } from "@croct/template-ui/next"
+import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 
 export default async function Page() {
@@ -15,7 +15,7 @@ export default async function Page() {
           ctaTarget="_blank"
           src="#"
           fullScreen
-          portal
+          isolated
       >
           <AnnouncementBar {...content} />
           <PageContent />

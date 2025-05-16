@@ -13,9 +13,8 @@ export default function Page() {
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.magic_ui&utm_content=marquee&utm_term=react"
       ctaTarget="_blank"
       maxWidth="1200px"
-      src="#"
       fullScreen
-      portal
+      isolated
     >
       <div className="flex absolute h-full w-full items-center justify-center p-10">
         <ReviewList {...content} />

@@ -61,19 +61,6 @@
   },
   "actions": [
     {
-      "name": "test",
-      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
-      "then": [
-        {
-          "name": "fail",
-          "message": "This template is only supported in Next.js and React projects.",
-          "suggestions": [
-            "Run the command in an empty folder to create a new project."
-          ]
-        }
-      ]
-    },
-    {
       "name": "import",
       "template": "croct://starter/shadcn-ui",
       "options": {

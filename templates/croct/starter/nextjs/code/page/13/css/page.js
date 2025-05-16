@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { TemplateCanvas } from '@croct/template-ui/next'
+import { TemplateCanvas } from '@croct/template-ui/react'
 import { renderMarkdown } from '?/**/*/markdown.{js,tsx}'
 import { fetchContent } from '@croct/plug-next/server'
 import styles from './page.module.css'
@@ -13,9 +13,8 @@ export default async function Home() {
       ctaLabel="Edit this page"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next&utm_content=next_13&utm_term=css"
       ctaTarget="_blank"
-      src="#"
       fullScreen
-      portal
+      isolated
     >
       <main className={styles.main}>
         <div className={styles.description}>

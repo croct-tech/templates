@@ -1,5 +1,5 @@
 import styles from "?/./page.module.css"
-import { TemplateCanvas } from "@croct/template-ui/next"
+import { TemplateCanvas } from "@croct/template-ui/react"
 import { PhoneInput } from "?/**/*/phone-input.{jsx,tsx}"
 import { evaluate } from "@croct/plug-next/server"
 
@@ -19,9 +19,8 @@ export default async function Page() {
       ctaLabel="Go to admin"
       ctaLink="%workspaceUrl%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.npm&utm_content=react_phone_number_input&utm_term=nextjs"
       ctaTarget="_blank"
-      src="#"
       fullScreen
-      portal
+      isolated
     >
       <main className={styles.main}>
         <div className={styles.container}>

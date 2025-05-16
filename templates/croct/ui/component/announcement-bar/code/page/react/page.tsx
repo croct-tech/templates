@@ -15,7 +15,7 @@ export default function Page() {
           ctaTarget="_blank"
           src="#"
           fullScreen
-          portal
+          isolated
       >
           <AnnouncementBar {...content} />
           <PageContent />

@@ -12,9 +12,8 @@ export default function Page() {
       ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.magic_ui&utm_content=bento_grid&utm_term=react"
       ctaTarget="_blank"
-      src="#"
       fullScreen
-      portal
+      isolated
     >
       <div className="flex absolute h-full w-full justify-center p-10">
         <FeatureGrid {...content} />

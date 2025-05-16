@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Orbiting circles customization",
+  "description": "A customization template for the orbiting circles component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-orbiting-circles": {
+            "name": "Magic UI - Orbiting circles",
+            "description": "Animated circles orbiting a central element to represent relationships or connections.",
+            "schema": "${import('./configuration/orbiting-circles-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-orbiting-circles": {
+            "name": "Magic UI - Orbiting circles",
+            "component": "magic-ui-orbiting-circles",
+            "content": {
+              "en": "${import('./configuration/orbiting-circles-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-orbiting-circles": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

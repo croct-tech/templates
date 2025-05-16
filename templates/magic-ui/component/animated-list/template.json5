@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Animated list",
+  "title": "Animated list",
   "description": "A list with animations to display notifications, updates, or events.",
   "metadata": {
     "id": "library/magic-ui/animated-list",
@@ -53,45 +53,10 @@
         "id": "animated-list",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "notification-list.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-animated-list": {
-                    "name": "Magic UI - Animated list",
-                    "description": "A list with animations to display notifications, updates, or events.",
-                    "schema": "${import('./configuration/animated-list-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-animated-list": {
-                    "name": "Magic UI - Animated list",
-                    "component": "magic-ui-animated-list",
-                    "content": {
-                      "en": "${import('./configuration/animated-list-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-animated-list": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/animated-list/extension.json5"
       }
     }
   ]

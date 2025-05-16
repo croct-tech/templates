@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Globe",
+  "title": "Globe",
   "description": "A 3D globe to visualize global presence, activity, or reach.",
   "metadata": {
     "id": "library/magic-ui/globe",
@@ -54,51 +54,10 @@
         "id": "globe",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "global-presence.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "add-dependency",
-              "dependencies": [
-                "motion"
-              ]
-            },
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-globe": {
-                    "name": "Magic UI - Globe",
-                    "description": "A 3D globe to visualize global presence, activity, or reach.",
-                    "schema": "${import('./configuration/globe-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-globe": {
-                    "name": "Magic UI - Globe",
-                    "component": "magic-ui-globe",
-                    "content": {
-                      "en": "${import('./configuration/globe-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-globe": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/globe/extension.json5"
       }
     }
   ]

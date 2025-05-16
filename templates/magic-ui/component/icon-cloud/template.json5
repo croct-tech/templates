@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Icon cloud",
+  "title": "Icon cloud",
   "description": "A floating cloud of icons to showcase integrations, tools, or technologies.",
   "metadata": {
     "id": "library/magic-ui/icon-cloud",
@@ -55,45 +55,10 @@
         "id": "icon-cloud",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "icon-cloud-demo.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-icon-cloud": {
-                    "name": "Magic UI - Icon cloud",
-                    "description": "A floating cloud of icons to showcase integrations, tools, or technologies.",
-                    "schema": "${import('./configuration/icon-cloud-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-icon-cloud": {
-                    "name": "Magic UI - Icon cloud",
-                    "component": "magic-ui-icon-cloud",
-                    "content": {
-                      "en": "${import('./configuration/icon-cloud-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-icon-cloud": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/icon-cloud/extension.json5"
       }
     }
   ]

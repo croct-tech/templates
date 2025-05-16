@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Orbiting circles",
+  "title": "Orbiting circles",
   "description": "Animated circles orbiting a central element to represent relationships or connections.",
   "metadata": {
     "id": "library/magic-ui/orbiting-circles",
@@ -57,45 +57,10 @@
         "id": "orbiting-circles",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "orbiting-icons.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-orbiting-circles": {
-                    "name": "Magic UI - Orbiting circles",
-                    "description": "Animated circles orbiting a central element to represent relationships or connections.",
-                    "schema": "${import('./configuration/orbiting-circles-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-orbiting-circles": {
-                    "name": "Magic UI - Orbiting circles",
-                    "component": "magic-ui-orbiting-circles",
-                    "content": {
-                      "en": "${import('./configuration/orbiting-circles-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-orbiting-circles": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/orbiting-circles/extension.json5"
       }
     }
   ]

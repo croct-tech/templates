@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Terminal",
+  "title": "Terminal",
   "description": "A terminal-style UI to showcase commands, output, or interactive code.",
   "metadata": {
     "id": "library/magic-ui/terminal",
@@ -58,51 +58,10 @@
         "id": "terminal",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "cli-demo.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "add-dependency",
-              "dependencies": [
-                "motion"
-              ]
-            },
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-terminal": {
-                    "name": "Magic UI - Terminal",
-                    "description": "A terminal-style UI to showcase commands, output, or interactive code.",
-                    "schema": "${import('./configuration/terminal-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-terminal": {
-                    "name": "Magic UI - Terminal",
-                    "component": "magic-ui-terminal",
-                    "content": {
-                      "en": "${import('./configuration/terminal-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-terminal": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/terminal/extension.json5"
       }
     }
   ]

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Code comparison customization",
+  "description": "A customization template for the code comparison component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@shikijs/transformers"
+      ]
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-code-comparison": {
+            "name": "Magic UI - Code comparison",
+            "description": "A side-by-side code block layout for comparing implementations or versions.",
+            "schema": "${import('./configuration/code-comparison-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-code-comparison": {
+            "name": "Magic UI - Code comparison",
+            "component": "magic-ui-code-comparison",
+            "content": {
+              "en": "${import('./configuration/code-comparison-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-code-comparison": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

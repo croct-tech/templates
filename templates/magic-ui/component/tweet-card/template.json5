@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Tweet card",
+  "title": "Tweet card",
   "description": "A styled tweet embed to highlight social proof or share updates.",
   "metadata": {
     "id": "library/magic-ui/tweet-card",

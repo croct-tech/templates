@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Script copy button",
+  "title": "Script copy button",
   "description": "A button for quickly copying scripts, commands, or code snippets.",
   "metadata": {
     "id": "library/magic-ui/script-copy-btn",

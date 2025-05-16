@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Animated list",
+  "title": "Animated list",
   "description": "A list with animations to display notifications, updates, or events.",
   "metadata": {
     "id": "library/magic-ui/animated-list",

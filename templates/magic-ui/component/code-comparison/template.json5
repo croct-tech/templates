@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Code comparison",
+  "title": "Code comparison",
   "description": "A side-by-side code block layout for comparing implementations or versions.",
   "metadata": {
     "id": "library/magic-ui/code-comparison",

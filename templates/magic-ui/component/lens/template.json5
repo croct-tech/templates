@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Lens",
+  "title": "Lens",
   "description": "A hover effect that highlights or magnifies content within a section.",
   "metadata": {
     "id": "library/magic-ui/lens",

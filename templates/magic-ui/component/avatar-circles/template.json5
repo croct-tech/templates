@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Avatar circles",
+  "title": "Avatar circles",
   "description": "A list of avatars to represent people, brands, or tools.",
   "metadata": {
     "id": "library/magic-ui/avatar-circles",

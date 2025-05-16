@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Globe",
+  "title": "Globe",
   "description": "A 3D globe to visualize global presence, activity, or reach.",
   "metadata": {
     "id": "library/magic-ui/globe",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Bento grid",
+  "title": "Bento grid",
   "description": "A modular grid layout for featuring content blocks, use cases, or product highlights.",
   "metadata": {
     "id": "library/magic-ui/bento-grid",

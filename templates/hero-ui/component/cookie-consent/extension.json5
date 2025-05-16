@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Cookie consent customization",
+  "description": "A customization template for the cookie consent component.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "replace-file-content",
+          "files": [
+            {
+              "path": "${project.path.components}/cookie-consent${options.codeExtension}",
+              "replacements": [
+                {
+                  "pattern": "@croct/plug-react",
+                  "value": "@croct/plug-next"
+                },
+              ]
+            },
+            {
+              "path": "${project.path.components}/cookie-consent-demo${options.codeExtension}",
+              "replacements": [
+                {
+                  "pattern": "@croct/plug-react",
+                  "value": "@croct/plug-next"
+                },
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

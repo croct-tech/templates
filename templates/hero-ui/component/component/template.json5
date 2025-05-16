@@ -52,17 +52,13 @@
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
     },
-    "slotId": {
-      "type": "reference",
-      "description": "The variable name that holds the slot ID."
-    },
-    "slotVersion": {
-      "type": "reference",
-      "description": "The variable name that holds the slot version."
-    },
     "components": {
       "type": "array",
       "description": "The components to import."
+    },
+    "utils": {
+      "type": "array",
+      "description": "The utilities to import."
     },
     "extension": {
       "type": "string",
@@ -122,8 +118,36 @@
     {
       "name": "define",
       "variables": {
-        "componentIndex": 0
+        "componentIndex": 0,
+        "utilityIndex": 0,
       }
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.utilityIndex < options.utils.length}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "utilityFile": "${options.utils[this.utilityIndex]}",
+            "utilityBaseName": "${basename(options.utils[this.utilityIndex], true)}"
+          }
+        },
+        {
+          "name": "download",
+          "source": "hero-ui://component/${options.id}/code/utils/${this.utilityFile}",
+          "destination": "${project.path.utilities}",
+          "mapping": {
+            "${this.utilityFile}": "${this.utilityBaseName}${/x$/.test(this.codeExtension) ? this.codeExtension : this.codeExtension.slice(0, -1)}"
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "utilityIndex": "${this.utilityIndex + 1}"
+          }
+        }
+      ]
     },
     {
       "name": "repeat",
@@ -161,20 +185,37 @@
       }
     },
     {
+      "name": "define",
+      "variables": {
+        "slotId": "",
+        "slotVersion": ""
+      }
+    },
+    {
       "name": "test",
-      "condition": "${options.slotId !== null}",
+      "condition": "${options.extension !== null}",
       "then": [
         {
-          "name": "define",
-          "variables": {
-            "slotId": "${options.slotId}",
-            "slotVersion": "${options.slotVersion}"
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "exampleDirectory": "${this.exampleDirectory}",
+            "exampleFile": "${this.exampleFile}",
+            "codeExtension": "${this.codeExtension}",
+            "slotId": "slotId",
+            "slotVersion": "slotVersion"
           }
-        },
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${this.slotId !== '' && this.slotVersion !== ''}",
+      "then": [
         {
           "name": "add-slot",
           "slots": [
-            "${this[options.slotId]}@${this[options.slotVersion]}"
+            "${this.slotId}@${this.slotVersion}"
           ]
         },
         {
@@ -185,11 +226,11 @@
               "replacements": [
                 {
                   "pattern": "%slotId%",
-                  "value": "${this[options.slotId]}"
+                  "value": "${this.slotId}"
                 },
                 {
                   "pattern": "%slotVersion%",
-                  "value": "${this[options.slotVersion]}"
+                  "value": "${this.slotVersion}"
                 }
               ]
             }
@@ -208,21 +249,6 @@
               "value": "${project.workspace.url}"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "test",
-      "condition": "${options.extension !== null}",
-      "then": [
-        {
-          "name": "import",
-          "template": "${options.extension}",
-          "options": {
-            "exampleDirectory": "${this.exampleDirectory}",
-            "exampleFile": "${this.exampleFile}",
-            "codeExtension": "${this.codeExtension}"
-          }
         }
       ]
     },

@@ -1,6 +1,6 @@
 # Introduction
 
-This template creates a reusable setup for importing [Hero UI](https://heroui.com?utm_source=croct) components, fully integrated
+This template provides a reusable setup for importing [Hero UI](https://heroui.com?utm_source=croct) components, fully integrated
 with Croct for content management, AB testing, and real-time personalization.
 
 It supports downloading code, configuring slots, and extending functionality with additional actions. 

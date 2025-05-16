@@ -1,7 +1,8 @@
 # Introduction
 
-This template adds a cookie consent component built with https://heroui.com/?utm_source=croct to your project 
-or creates a new project using [Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current directory.
+This template adds a cookie consent component built with [Hero UI](https://heroui.com/?utm_source=croct) to your project
+or creates a new project using [Next.js](https://nextjs.org/?utm_source=croct) if none is found in the current
+directory.
 
 It comes fully integrated with Croct, giving you CMS, AB testing, and personalization out of the box.
 

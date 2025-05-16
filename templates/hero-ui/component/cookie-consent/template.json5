@@ -20,7 +20,7 @@
       "language/javascript",
       "language/typescript",
       "library/hero-ui",
-      "library/tailwind-css",
+      "library/tailwind-css"
     ]
   },
   "options": {

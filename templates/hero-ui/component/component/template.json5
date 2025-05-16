@@ -54,11 +54,11 @@
     },
     "slotId": {
       "type": "reference",
-      "description": "The variable name that holds the slot ID.",
+      "description": "The variable name that holds the slot ID."
     },
     "slotVersion": {
       "type": "reference",
-      "description": "The variable name that holds the slot version.",
+      "description": "The variable name that holds the slot version."
     },
     "components": {
       "type": "array",
@@ -190,7 +190,7 @@
                 {
                   "pattern": "%slotVersion%",
                   "value": "${this[options.slotVersion]}"
-                },
+                }
               ]
             }
           ]

@@ -99,7 +99,7 @@
     {
       "name": "define",
       "variables": {
-        "isNewProject": "${project.platform === 'unknown'}",
+        "isNewProject": "${project.platform === 'unknown'}"
       }
     },
     {
@@ -254,7 +254,7 @@
                   "name": "download",
                   "source": "./code/configuration/globals.css",
                   "destination": "${dirname(this.matches[0])}",
-                  "overwrite": true,
+                  "overwrite": true
                 }
               ]
             },

@@ -13,6 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hygraph/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hygraph/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hygraph/cover.png",
+    "installationUrl": "croct://integration/hygraph",
     "categories": [
       "integration/cms"
     ]

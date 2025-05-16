@@ -13,6 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hightouch/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hightouch/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hightouch/cover.png",
+    "installationUrl": "croct://integration/hightouch",
     "categories": [
       "integration/cdp"
     ]

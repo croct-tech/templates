@@ -13,6 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/segment/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/segment/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/segment/cover.png",
+    "installationUrl": "croct://integration/segment",
     "categories": [
       "integration/cdp"
     ]

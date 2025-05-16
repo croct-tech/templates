@@ -13,6 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/prismic/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/prismic/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/prismic/cover.png",
+    "installationUrl": "croct://integration/prismic",
     "categories": [
       "integration/cms"
     ]

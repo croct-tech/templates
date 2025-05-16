@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/cover.png",
+    "installationUrl": "material-ui://block/navbar",
     "categories": [
       "library/material-ui"
     ]

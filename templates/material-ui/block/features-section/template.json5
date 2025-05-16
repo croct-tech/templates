@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/cover.png",
+    "installationUrl": "material-ui://block/features-section",
     "categories": [
       "library/material-ui"
     ]

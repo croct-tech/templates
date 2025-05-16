@@ -50,24 +50,13 @@
       ],
       "default": "app"
     },
-    "slotId": {
-      "type": "reference",
-      "description": "The variable name that holds the slot ID.",
-      "required": true
-    },
-    "slotVersion": {
-      "type": "reference",
-      "description": "The variable name that holds the slot version.",
-      "required": true
-    },
     "components": {
       "type": "array",
       "description": "The components to import."
     },
-    "action": {
-      "type": "object",
-      "description": "Additional actions to execute.",
-      "required": false
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
     }
   },
   "actions": [
@@ -123,7 +112,23 @@
         "examplePath": "${this.exampleDirectory}/${this.exampleFile}"
       }
     },
-    "${options.action}",
+    {
+      "name": "define",
+      "variables": {
+        "slotId": "",
+        "slotVersion": ""
+      }
+    },
+    {
+      "name": "import",
+      "template": "${options.extension}",
+      "options": {
+        "exampleDirectory": "${this.exampleDirectory}",
+        "exampleFile": "${this.exampleFile}",
+        "slotId": "slotId",
+        "slotVersion": "slotVersion"
+      }
+    },
     {
       "name": "define",
       "variables": {
@@ -155,7 +160,7 @@
     {
       "name": "add-slot",
       "slots": [
-        "${this[options.slotId]}@${this[options.slotVersion]}"
+        "${this.slotId}@${this.slotVersion}"
       ]
     },
     {
@@ -166,11 +171,11 @@
           "replacements": [
             {
               "pattern": "%slotId%",
-              "value": "${this[options.slotId]}"
+              "value": "${this.slotId}"
             },
             {
               "pattern": "%slotVersion%",
-              "value": "${this[options.slotVersion]}"
+              "value": "${this.slotVersion}"
             },
             {
               "pattern": "%workspaceUrl%",

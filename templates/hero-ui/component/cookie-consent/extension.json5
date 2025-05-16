@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
-  "title": "Hero UI customization",
+  "title": "Cookie consent customization",
   "description": "A customization template cookie consent template.",
   "options": {
     "exampleDirectory": {

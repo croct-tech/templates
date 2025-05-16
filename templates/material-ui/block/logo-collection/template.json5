@@ -21,16 +21,16 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "logo-collection": {
-            "name": "Logo collection",
+          "material-ui-logo-collection": {
+            "name": "Material UI - Logo collection",
             "description": "A logo cloud section.",
             "schema": "${import('./configuration/logo-collection-schema.json')}"
           }
         },
         "slots": {
-          "logo-collection": {
-            "name": "Logo collection",
-            "component": "logo-collection",
+          "material-ui-logo-collection": {
+            "name": "Material UI - Logo collection",
+            "component": "material-ui-logo-collection",
             "content": {
               "en": "${import('./configuration/logo-collection-content.en.json')}"
             }

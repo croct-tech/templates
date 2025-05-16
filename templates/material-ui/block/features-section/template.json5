@@ -21,16 +21,16 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "features-section": {
-            "name": "Features section",
+          "material-ui-features-section": {
+            "name": "Material UI - Features section",
             "description": "A section of features.",
             "schema": "${import('./configuration/features-section-schema.json')}"
           }
         },
         "slots": {
-          "features-section": {
-            "name": "Features section",
-            "component": "features-section",
+          "material-ui-features-section": {
+            "name": "Material UI - Features section",
+            "component": "material-ui-features-section",
             "content": {
               "en": "${import('./configuration/features-section-content.en.json')}"
             }

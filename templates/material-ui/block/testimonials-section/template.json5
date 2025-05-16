@@ -21,16 +21,16 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "testimonials-section": {
-            "name": "Testimonials section",
+          "material-ui-testimonials-section": {
+            "name": "Material UI - Testimonials section",
             "description": "A section of testimonials.",
             "schema": "${import('./configuration/testimonials-section-schema.json')}"
           }
         },
         "slots": {
-          "testimonials-section": {
-            "name": "Testimonials section",
-            "component": "testimonials-section",
+          "material-ui-testimonials-section": {
+            "name": "Material UI - Testimonials section",
+            "component": "material-ui-testimonials-section",
             "content": {
               "en": "${import('./configuration/testimonials-section-content.en.json')}"
             }

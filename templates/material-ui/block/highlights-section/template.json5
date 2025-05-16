@@ -21,16 +21,16 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "highlights-section": {
-            "name": "Highlights section",
+          "material-ui-highlights-section": {
+            "name": "Material UI - Highlights section",
             "description": "A section of highlights.",
             "schema": "${import('./configuration/highlights-section-schema.json')}"
           }
         },
         "slots": {
-          "highlights-section": {
-            "name": "Highlights section",
-            "component": "highlights-section",
+          "material-ui-highlights-section": {
+            "name": "Material UI - Highlights section",
+            "component": "material-ui-highlights-section",
             "content": {
               "en": "${import('./configuration/highlights-section-content.en.json')}"
             }

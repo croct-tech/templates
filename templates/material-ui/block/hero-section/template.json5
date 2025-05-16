@@ -21,16 +21,16 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "hero-section": {
-            "name": "Hero section",
+          "material-ui-hero-section": {
+            "name": "Material UI - Hero section",
             "description": "The big section featured at the top of a page.",
             "schema": "${import('./configuration/hero-section-schema.json')}"
           }
         },
         "slots": {
-          "hero-section": {
-            "name": "Hero section",
-            "component": "hero-section",
+          "material-ui-hero-section": {
+            "name": "Material UI - Hero section",
+            "component": "material-ui-hero-section",
             "content": {
               "en": "${import('./configuration/hero-section-content.en.json')}"
             }

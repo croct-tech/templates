@@ -21,8 +21,8 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "navbar": {
-            "name": "Navbar",
+          "material-ui-navbar": {
+            "name": "Material UI - Navbar",
             "description": "The navigation bar at the top of a page.",
             "schema": "${import('./configuration/navbar-schema.json')}"
           },
@@ -33,9 +33,9 @@
           }
         },
         "slots": {
-          "navbar": {
-            "name": "Navbar",
-            "component": "navbar",
+          "material-ui-navbar": {
+            "name": "Material UI - Navbar",
+            "component": "material-ui-navbar",
             "content": {
               "en": "${import('./configuration/navbar-content.en.json')}"
             }

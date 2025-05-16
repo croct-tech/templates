@@ -21,16 +21,16 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "faq-section": {
-            "name": "FAQ section",
+          "material-ui-faq-section": {
+            "name": "Material UI - FAQ section",
             "description": "A section of frequently asked questions.",
             "schema": "${import('./configuration/faq-section-schema.json')}"
           }
         },
         "slots": {
-          "faq-section": {
-            "name": "FAQ section",
-            "component": "faq-section",
+          "material-ui-faq-section": {
+            "name": "Material UI - FAQ section",
+            "component": "material-ui-faq-section",
             "content": {
               "en": "${import('./configuration/faq-section-content.en.json')}"
             }

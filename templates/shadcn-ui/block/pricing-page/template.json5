@@ -51,11 +51,13 @@
   "actions": [
     {
       "name": "import",
-      "template": "../../../croct",
+      "template": "croct://starter/croct",
       "options": {
-        "projectName": "pricing-plan-example",
+        "name": "pricing-plan-example",
         "version": "${options.version}",
-        "router": "${options.router}"
+        "router": "${options.router}",
+        "defaultHomepage": true,
+        "disableLauncher": true
       }
     },
     {
@@ -66,7 +68,7 @@
     },
     {
       "name": "import",
-      "template": "../../component",
+      "template": "shadcn-ui://component",
       "options": {
         "components": [
           "button",

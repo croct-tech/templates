@@ -85,30 +85,38 @@
   "actions": [
     {
       "name": "test",
-      "condition": "${project.platform === 'unknown'}",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
       "then": [
         {
-          "name": "import",
-          "template": "croct://starter/nextjs",
-          "options": {
-            "name": "${options.name}",
-            "version": "${options.version}",
-            "eslint": "${options.eslint}",
-            "turbopack": "${options.turbopack}",
-            "router": "${options.router}",
-            "javascript": "${options.javascript}",
-            "tailwind": true,
-            "src-dir": "${options['src-dir']}",
-            "disableLauncher": true,
-            "defaultHomepage": "${options.defaultHomepage}"
-          }
-        }
-      ],
-      "else": [
-        {
-          "name": "initialize"
+          "name": "fail",
+          "message": "This template is only supported in React projects.",
+          "suggestions": [
+            "Run the command in an empty folder to create a new project."
+          ]
         }
       ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "isNewProject": "${project.platform === 'unknown'}",
+      }
+    },
+    {
+      "name": "import",
+      "template": "croct://starter/croct",
+      "options": {
+        "name": "${options.name}",
+        "version": "${options.version}",
+        "eslint": "${options.eslint}",
+        "turbopack": "${options.turbopack}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "tailwind": true,
+        "src-dir": "${options['src-dir']}",
+        "disableLauncher": true,
+        "defaultHomepage": "${options.defaultHomepage}"
+      }
     },
     {
       "name": "check-dependency",
@@ -239,6 +247,18 @@
               ]
             },
             {
+              "name": "test",
+              "condition": "${this.isNewProject}",
+              "then": [
+                {
+                  "name": "download",
+                  "source": "./code/configuration/globals.css",
+                  "destination": "${dirname(this.matches[0])}",
+                  "overwrite": true,
+                }
+              ]
+            },
+            {
               "name": "define",
               "variables": {
                 "rootPath": "${'../'.repeat(this.matches[0].split('/').length - 1)}"
@@ -252,7 +272,7 @@
                   replacements: [
                     {
                       "pattern": "@import\\s+\"tailwindcss\"s*;",
-                      value: "@import \"tailwindcss\";\n@plugin '${this.rootPath}hero.ts';\n@source '${this.rootPath}node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';\n@custom-variant dark (&:is(.dark *));"
+                      value: "@import \"tailwindcss\";\n@plugin \"${this.rootPath}hero${this.codeExtension}\";\n@source \"${this.rootPath}node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}\";\n@custom-variant dark (&:is(.dark *));"
                     }
                   ]
                 }

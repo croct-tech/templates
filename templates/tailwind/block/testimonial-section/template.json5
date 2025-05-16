@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/testimonial-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/testimonial-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/testimonial-section/cover.png",
+    "installationUrl": "tailwind://block/testimonial-section",
     "categories": [
       "library/tailwind-css"
     ]

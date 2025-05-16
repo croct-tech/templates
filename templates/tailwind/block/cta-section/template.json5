@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/cta-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/cta-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/cta-section/cover.png",
+    "installationUrl": "tailwind://block/cta-section",
     "categories": [
       "library/tailwind-css"
     ]

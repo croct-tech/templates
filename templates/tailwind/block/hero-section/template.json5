@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/hero-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/hero-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/hero-section/cover.png",
+    "installationUrl": "tailwind://block/hero-section",
     "categories": [
       "library/tailwind-css"
     ]

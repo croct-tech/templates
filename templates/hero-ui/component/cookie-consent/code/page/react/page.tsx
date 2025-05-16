@@ -6,7 +6,7 @@ export default function Page() {
     <TemplateCanvas
       title="Hero UI - Cookie consent"
       ctaLabel="Go to admin"
-      ctaLink="%workspaceUrl%/?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.magic_ui&utm_content=animated_list&utm_term=nextjs"
+      ctaLink="%workspaceUrl%/?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.hero_ui&utm_content=cookie_consent&utm_term=react"
       ctaTarget="_blank"
       fullScreen
       isolated

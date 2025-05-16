@@ -12,7 +12,6 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/cookie-consent/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/cookie-consent/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/cookie-consent/cover.png",
-    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/cookie-consent/cover.mp4",
     "installationUrl": "hero-ui://component/cookie-consent",
     "categories": [
       "framework/nextjs",

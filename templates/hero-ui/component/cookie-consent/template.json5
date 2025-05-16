@@ -62,7 +62,7 @@
           "cookie-consent-demo.tsx"
         ],
         "utils": [
-          "markdown.tsx",
+          "markdown.tsx"
         ],
         "extension": "hero-ui://component/cookie-consent/extension.json5"
       }

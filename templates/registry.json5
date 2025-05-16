@@ -26,5 +26,9 @@
   {
     "pattern": "^https://magicui.design/r/(.+)$",
     "destination": "magic-ui/component/$1"
+  },
+  {
+    "pattern": "^tailwind://?(.+)$",
+    "destination": "tailwind/$1"
   }
 ]

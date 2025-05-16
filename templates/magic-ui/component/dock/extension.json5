@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Dock customization",
+  "description": "A customization template for the dock component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "shadcn-ui://component",
+      "options": {
+        "components": [
+          "button",
+          "separator",
+          "tooltip"
+        ]
+      }
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-dock": {
+            "name": "Magic UI - Dock",
+            "description": "A list of avatars to represent people, brands, or tools.",
+            "schema": "${import('./configuration/dock-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-dock": {
+            "name": "Magic UI - Dock",
+            "component": "magic-ui-dock",
+            "content": {
+              "en": "${import('./configuration/dock-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-dock": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

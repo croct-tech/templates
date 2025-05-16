@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "CTA section",
+  "description": "A dynamic CTA section using Tailwind components and Croct.",
+  "metadata": {
+    "id": "library/tailwind-css/cta-section",
+    "author": {
+      "name": "Tailwind",
+      "avatarUrl": "https://github.com/tailwindui.png",
+      "websiteUrl": "https://tailwindcss.com/?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/cta-section/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/cta-section/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/cta-section/cover.png",
+    "categories": [
+      "library/tailwind-css"
+    ]
+  },
+  "actions": [
+    {
+      "name": "print",
+      "semantics": "info",
+      "title": "Request early access",
+      "message": "This template is still under development, but we're inviting early adopters."
+    },
+    {
+      "name": "prompt",
+      "type": "keypress",
+      "message": "Press any key to request access"
+    },
+    {
+      "name": "open-link",
+      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Tailwind%20CTA%20section%20template."
+    }
+  ]
+}

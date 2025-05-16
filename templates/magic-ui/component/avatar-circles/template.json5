@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Avatar circles",
+  "title": "Avatar circles",
   "description": "A list of avatars to represent people, brands, or tools.",
   "metadata": {
     "id": "library/magic-ui/avatar-circles",
@@ -52,45 +52,10 @@
         "id": "avatar-circles",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "avatar-stack.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-avatar-circles": {
-                    "name": "Magic UI - Avatar circles",
-                    "description": "A list of avatars to represent people, brands, or tools.",
-                    "schema": "${import('./configuration/avatar-circles-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-avatar-circles": {
-                    "name": "Magic UI - Avatar circles",
-                    "component": "magic-ui-avatar-circles",
-                    "content": {
-                      "en": "${import('./configuration/avatar-circles-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-avatar-circles": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/avatar-circles/extension.json5"
       }
     }
   ]

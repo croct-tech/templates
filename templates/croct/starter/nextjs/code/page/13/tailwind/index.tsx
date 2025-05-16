@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import type { GetServerSideProps } from 'next'
-import { TemplateCanvas } from '@croct/template-ui/next'
+import { TemplateCanvas } from '@croct/template-ui/react'
 import { renderMarkdown } from '?/**/*/markdown.{js,tsx}'
 import { fetchContent } from '@croct/plug-next/server'
 import { SlotContent } from '@croct/plug-next'
@@ -25,7 +25,7 @@ export default function Home({content}: HomeProps) {
       ctaTarget="_blank"
         src="#"
         fullScreen
-        portal
+        isolated
     >
       <main
         className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}

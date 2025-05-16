@@ -2,7 +2,7 @@ import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
 import { PageContent } from "?/./content.{jsx,tsx}"
 import { AnnouncementBar } from "?/**/*/announcement-bar.{jsx,tsx}"
-import { TemplateCanvas } from "@croct/template-ui/next"
+import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 
 export type PageProps = {
@@ -23,7 +23,7 @@ export default function Page({content}: PageProps) {
           ctaTarget="_blank"
           src="#"
           fullScreen
-          portal
+          isolated
       >
       <AnnouncementBar {...content} />
       <PageContent />

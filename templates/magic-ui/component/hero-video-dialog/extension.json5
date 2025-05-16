@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Hero video dialog customization",
+  "description": "A customization template for the hero video dialog component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-hero-video-dialog": {
+            "name": "Magic UI - Hero video dialog",
+            "description": "A hero section with a video dialog to introduce or demo your product.",
+            "schema": "${import('./configuration/hero-video-dialog-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-hero-video-dialog": {
+            "name": "Magic UI - Hero video dialog",
+            "component": "magic-ui-hero-video-dialog",
+            "content": {
+              "en": "${import('./configuration/hero-video-dialog-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-hero-video-dialog": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

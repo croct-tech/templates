@@ -12,7 +12,6 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/banner/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/banner/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/banner/cover.png",
-    "installationUrl": "tailwind://block/banner",
     "categories": [
       "library/tailwind-css"
     ]

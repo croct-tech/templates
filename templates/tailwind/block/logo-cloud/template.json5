@@ -12,7 +12,6 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/logo-cloud/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/logo-cloud/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/logo-cloud/cover.png",
-    "installationUrl": "tailwind://block/logo-cloud",
     "categories": [
       "library/tailwind-css"
     ]

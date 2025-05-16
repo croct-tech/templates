@@ -12,7 +12,6 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/pricing-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/pricing-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/pricing-section/cover.png",
-    "installationUrl": "tailwind://block/pricing-section",
     "categories": [
       "library/tailwind-css"
     ]

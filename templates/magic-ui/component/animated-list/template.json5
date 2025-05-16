@@ -56,7 +56,7 @@
         "components": [
           "notification-list.tsx"
         ],
-        "extension": "magic-ui://component/animated-list/extension.json5",
+        "extension": "magic-ui://component/animated-list/extension.json5"
       }
     }
   ]

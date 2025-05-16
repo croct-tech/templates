@@ -69,45 +69,10 @@
         "id": "tweet-card",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "${options.rsc ? 'server' : 'client'}/tweet.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-tweet-card": {
-                    "name": "Magic UI - Tweet card",
-                    "description": "A styled tweet embed to highlight social proof or share updates.",
-                    "schema": "${import('./configuration/tweet-card-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-tweet-card": {
-                    "name": "Magic UI - Tweet card",
-                    "component": "magic-ui-tweet-card",
-                    "content": {
-                      "en": "${import('./configuration/tweet-card-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-tweet-card": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/tweet-card/extension.json5"
       }
     }
   ]

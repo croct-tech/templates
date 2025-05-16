@@ -57,51 +57,10 @@
         "id": "code-comparison",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "code-diff-pane.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "add-dependency",
-              "dependencies": [
-                "@shikijs/transformers"
-              ]
-            },
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-code-comparison": {
-                    "name": "Magic UI - Code comparison",
-                    "description": "A side-by-side code block layout for comparing implementations or versions.",
-                    "schema": "${import('./configuration/code-comparison-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-code-comparison": {
-                    "name": "Magic UI - Code comparison",
-                    "component": "magic-ui-code-comparison",
-                    "content": {
-                      "en": "${import('./configuration/code-comparison-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-code-comparison": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/code-comparison/extension.json5"
       }
     }
   ]

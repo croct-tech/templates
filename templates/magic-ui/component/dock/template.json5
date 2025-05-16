@@ -54,56 +54,10 @@
         "id": "dock",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "dock-menu.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "import",
-              "template": "shadcn-ui://component",
-              "options": {
-                "components": [
-                  "button",
-                  "separator",
-                  "tooltip"
-                ]
-              }
-            },
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-dock": {
-                    "name": "Magic UI - Dock",
-                    "description": "A list of avatars to represent people, brands, or tools.",
-                    "schema": "${import('./configuration/dock-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-dock": {
-                    "name": "Magic UI - Dock",
-                    "component": "magic-ui-dock",
-                    "content": {
-                      "en": "${import('./configuration/dock-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-dock": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/dock/extension.json5"
       }
     }
   ]

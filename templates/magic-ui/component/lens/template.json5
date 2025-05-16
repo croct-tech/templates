@@ -51,55 +51,10 @@
         "id": "lens",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "lens-card.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "import",
-              "template": "shadcn-ui://component",
-              "options": {
-                "components": [
-                  "button",
-                  "card"
-                ]
-              }
-            },
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-lens": {
-                    "name": "Magic UI - Lens",
-                    "description": "A hover effect that highlights or magnifies content within a section.",
-                    "schema": "${import('./configuration/lens-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-lens": {
-                    "name": "Magic UI - Lens",
-                    "component": "magic-ui-lens",
-                    "content": {
-                      "en": "${import('./configuration/lens-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-lens": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/lens/extension.json5"
       }
     }
   ]

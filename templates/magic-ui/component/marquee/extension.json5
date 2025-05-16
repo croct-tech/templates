@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Marquee customization",
+  "description": "A customization template for the marquee component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-marquee-reviews": {
+            "name": "Magic UI - Marquee reviews",
+            "description": "An infinite scrolling component for displaying testimonials, or user reviews.",
+            "schema": "${import('./configuration/marquee-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-marquee-reviews": {
+            "name": "Magic UI - Marquee reviews",
+            "component": "magic-ui-marquee-reviews",
+            "content": {
+              "en": "${import('./configuration/marquee-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-marquee-reviews": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -106,13 +106,7 @@
     {
       "name": "define",
       "variables": {
-        "exampleFile": "${this.pageBaseName}.tsx"
-      }
-    },
-    {
-      "name": "define",
-      "variables": {
-        "examplePath": "${this.exampleDirectory}/${this.exampleFile}"
+        "examplePath": "${this.exampleDirectory}/${this.pageBaseName}${this.codeExtension}"
       }
     },
     {
@@ -177,11 +171,18 @@
       ]
     },
     {
+      "name": "define",
+      "variables": {
+        "exampleSourceFile": "${this.pageBaseName}.tsx",
+        "exampleFile": "${this.pageBaseName}${this.codeExtension}"
+      }
+    },
+    {
       "name": "download",
-      "source": "hero-ui://component/${options.id}/code/page/${project.platform}/${this.exampleFile}",
+      "source": "hero-ui://component/${options.id}/code/page/${project.platform}/${this.exampleSourceFile}",
       "destination": "${this.exampleDirectory}",
       "mapping": {
-        "${this.exampleFile}": "${this.pageBaseName}${this.codeExtension}"
+        "${this.exampleSourceFile}": "${this.exampleFile}"
       }
     },
     {
@@ -255,7 +256,7 @@
     {
       "name": "print",
       "semantics": "success",
-      "message": "Component successfully imported at `${this.exampleDirectory}/${this.pageBaseName}${this.codeExtension}`."
+      "message": "Component successfully imported at `${this.exampleDirectory}/${this.exampleFile}`."
     },
     {
       "name": "test",

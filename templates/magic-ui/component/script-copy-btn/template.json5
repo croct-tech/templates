@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Script copy button",
+  "title": "Script copy button",
   "description": "A button for quickly copying scripts, commands, or code snippets.",
   "metadata": {
     "id": "library/magic-ui/script-copy-btn",
@@ -57,45 +57,10 @@
         "id": "script-copy-btn",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "copy-command-block.tsx"
         ],
-        "action": {
-          "name": "run",
-          "actions": [
-            {
-              "name": "create-resource",
-              "resources": {
-                "components": {
-                  "magic-ui-script-copy-btn": {
-                    "name": "Magic UI - Script copy button",
-                    "description": "A button for quickly copying scripts, commands, or code snippets.",
-                    "schema": "${import('./configuration/script-copy-btn-schema.json')}"
-                  }
-                },
-                "slots": {
-                  "magic-ui-script-copy-btn": {
-                    "name": "Magic UI - Script copy button",
-                    "component": "magic-ui-script-copy-btn",
-                    "content": {
-                      "en": "${import('./configuration/script-copy-btn-content.en.json')}"
-                    }
-                  }
-                }
-              },
-              "result": {
-                "slots": {
-                  "magic-ui-script-copy-btn": {
-                    "id": "slotId",
-                    "version": "slotVersion"
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "extension": "magic-ui://component/script-copy-btn/extension.json5"
       }
     }
   ]

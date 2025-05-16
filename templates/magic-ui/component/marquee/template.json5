@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Magic UI - Marquee",
+  "title": "Marquee",
   "description": "An infinite scrolling component for displaying testimonials, or user reviews.",
   "metadata": {
     "id": "library/magic-ui/marquee",
@@ -59,41 +59,11 @@
         "id": "marquee",
         "version": "${options.version}",
         "router": "${options.router}",
-        "slotId": "slotId",
-        "slotVersion": "slotVersion",
         "components": [
           "review-card.tsx",
           "review-list.tsx"
         ],
-        "action": {
-          "name": "create-resource",
-          "resources": {
-            "components": {
-              "magic-ui-marquee-reviews": {
-                "name": "Magic UI - Marquee reviews",
-                "description": "An infinite scrolling component for displaying testimonials, or user reviews.",
-                "schema": "${import('./configuration/marquee-schema.json')}"
-              }
-            },
-            "slots": {
-              "magic-ui-marquee-reviews": {
-                "name": "Magic UI - Marquee reviews",
-                "component": "magic-ui-marquee-reviews",
-                "content": {
-                  "en": "${import('./configuration/marquee-content.en.json')}"
-                }
-              }
-            }
-          },
-          "result": {
-            "slots": {
-              "magic-ui-marquee-reviews": {
-                "id": "slotId",
-                "version": "slotVersion"
-              }
-            }
-          }
-        }
+        "extension": "magic-ui://component/marquee/extension.json5"
       }
     }
   ]

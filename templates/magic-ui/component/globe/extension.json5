@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Globe customization",
+  "description": "A customization template for the globe component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-globe": {
+            "name": "Magic UI - Globe",
+            "description": "A 3D globe to visualize global presence, activity, or reach.",
+            "schema": "${import('./configuration/globe-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-globe": {
+            "name": "Magic UI - Globe",
+            "component": "magic-ui-globe",
+            "content": {
+              "en": "${import('./configuration/globe-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-globe": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

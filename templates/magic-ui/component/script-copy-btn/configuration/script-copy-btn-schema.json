@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Magic UI - Script copy button",
+  "title": "Script copy button",
   "attributes": {
     "codeLanguage": {
       "type": {

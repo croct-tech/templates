@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import type { GetServerSideProps } from "next"
-import { TemplateCanvas } from "@croct/template-ui/next"
+import { TemplateCanvas } from "@croct/template-ui/react"
 import { renderMarkdown } from "?/**/*/markdown.{js,tsx}"
 import { fetchContent } from "@croct/plug-next/server"
 import type { SlotContent } from "@croct/plug-next"
@@ -34,9 +34,8 @@ export default function Home({content}: HomeProps) {
       ctaLabel="Edit this page"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.starter_next&utm_content=next_14&utm_term=css"
       ctaTarget="_blank"
-      src="#"
       fullScreen
-      portal
+      isolated
     >
       <Head>
         <title>Create Next App</title>

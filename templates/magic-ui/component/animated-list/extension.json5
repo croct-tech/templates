@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Animated list customization",
+  "description": "A customization template for the animated list component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-animated-list": {
+            "name": "Magic UI - Animated list",
+            "description": "A list with animations to display notifications, updates, or events.",
+            "schema": "${import('./configuration/animated-list-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-animated-list": {
+            "name": "Magic UI - Animated list",
+            "component": "magic-ui-animated-list",
+            "content": {
+              "en": "${import('./configuration/animated-list-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-animated-list": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -17,9 +17,66 @@
       "type": "string",
       "description": "The file extension for the code files.",
       "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
     }
   },
   "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "hero-ui-consent-banner": {
+            "name": "Hero UI - Consent banner",
+            "description": "A banner to collect user consent for data collection.",
+            "schema": "${import('./configuration/consent-banner-schema.json')}"
+          }
+        },
+        "slots": {
+          "hero-ui-cookie-banner": {
+            "name": "Hero UI - Cookie banner",
+            "component": "hero-ui-consent-banner",
+            "content": {
+              "en": "${import('./configuration/consent-banner.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "hero-ui-cookie-banner": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${project.path.components}/cookie-consent${options.codeExtension}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            }
+          ]
+        },
+      ]
+    },
     {
       "name": "test",
       "condition": "${project.platform === 'nextjs'}",
@@ -46,7 +103,8 @@
               ]
             }
           ]
-        }
+        },
+
       ]
     }
   ]

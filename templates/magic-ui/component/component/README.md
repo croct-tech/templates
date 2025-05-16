@@ -1,6 +1,6 @@
 # Introduction
 
-This template creates a reusable setup for importing [Magic UI](https://magicui.design?utm_source=croct) components, fully integrated
+This template provides a reusable setup for importing [Magic UI](https://magicui.design?utm_source=croct) components, fully integrated
 with Croct for content management, AB testing, and real-time personalization.
 
 It supports downloading code, configuring slots, and extending functionality with additional actions. 

@@ -14,6 +14,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/logo-cloud/cover.png",
     "categories": [
       "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "interface/section/logo-cloud",
+      "library/material-ui/logo-collection"
     ]
   },
   "actions": [

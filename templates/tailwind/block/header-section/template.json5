@@ -14,6 +14,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/header-section/cover.png",
     "categories": [
       "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "interface/component/navbar",
+      "library/material-ui/navbar"
     ]
   },
   "actions": [

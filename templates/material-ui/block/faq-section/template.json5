@@ -14,6 +14,9 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/faq-section/cover.png",
     "categories": [
       "library/material-ui"
+    ],
+    "relatedTemplates": [
+      "interface/section/faq-section"
     ]
   },
   "actions": [

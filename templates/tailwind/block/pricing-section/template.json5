@@ -14,6 +14,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/pricing-section/cover.png",
     "categories": [
       "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "library/material-ui/pricing-section",
+      "library/shadcn-ui/pricing-page"
     ]
   },
   "actions": [

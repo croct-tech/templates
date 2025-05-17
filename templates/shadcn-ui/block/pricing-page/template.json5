@@ -25,6 +25,9 @@
       "library/shadcn-ui",
       "library/tailwind-css",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/shadcn-ui/pricing-page"
     ]
   },
   "options": {

@@ -19,6 +19,9 @@
       "interface/marketing",
       "use-case/e-commerce",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/magic-ui/hero-video-dialog"
     ]
   },
   "actions": [

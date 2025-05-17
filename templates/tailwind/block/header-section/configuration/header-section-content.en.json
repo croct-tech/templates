@@ -1,0 +1,319 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "items": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "ctas": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "structure",
+                  "attributes": {
+                    "icon": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "play-circle-icon"
+                      }
+                    },
+                    "link": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "#demo"
+                      }
+                    },
+                    "label": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "Watch demo"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "structure",
+                  "attributes": {
+                    "icon": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "phone-icon"
+                      }
+                    },
+                    "link": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "#contact"
+                      }
+                    },
+                    "label": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "Contact sales"
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#product"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Product"
+              }
+            },
+            "submenu": {
+              "type": "structure",
+              "attributes": {
+                "items": {
+                  "type": "list",
+                  "items": [
+                    {
+                      "type": "structure",
+                      "attributes": {
+                        "icon": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "pie-chart-icon"
+                          }
+                        },
+                        "link": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "#analytics"
+                          }
+                        },
+                        "label": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Analytics"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Get a better understanding of your traffic"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "structure",
+                      "attributes": {
+                        "icon": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "cursor-icon"
+                          }
+                        },
+                        "link": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "#engagement"
+                          }
+                        },
+                        "label": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Engagement"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Speak directly to your customers"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "structure",
+                      "attributes": {
+                        "icon": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "fingerprint-icon"
+                          }
+                        },
+                        "link": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "#security"
+                          }
+                        },
+                        "label": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Security"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Your customers' data will be save and secure"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "structure",
+                      "attributes": {
+                        "icon": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "squares-icon"
+                          }
+                        },
+                        "link": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "#integrations"
+                          }
+                        },
+                        "label": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Integrations"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Connect with third-party tools"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "structure",
+                      "attributes": {
+                        "icon": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "return-icon"
+                          }
+                        },
+                        "link": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "#automations"
+                          }
+                        },
+                        "label": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Automations"
+                          }
+                        },
+                        "description": {
+                          "type": "text",
+                          "value": {
+                            "type": "static",
+                            "value": "Build strategic funnels that will convert"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#features"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Features"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#marketplace"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Marketplace"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#company"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Company"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

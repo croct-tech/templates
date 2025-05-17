@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "cta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Register now"
+          }
+        }
+      }
+    },
+    "text": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": " **GeneriCon 2023** Join us in Denver from June 7 – 9 to see what’s coming next."
+      }
+    }
+  }
+}

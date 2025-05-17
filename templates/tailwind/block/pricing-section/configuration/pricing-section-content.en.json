@@ -1,0 +1,226 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "plans": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Get started today"
+                  }
+                }
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Hobby"
+              }
+            },
+            "price": {
+              "type": "structure",
+              "attributes": {
+                "value": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 29
+                  }
+                },
+                "frequency": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "month"
+                  }
+                }
+              }
+            },
+            "features": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "25 products"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Up to 10,000 subscribers"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Advanced analytics"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "24-hour support response time"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "The perfect plan if you're just getting started with our product."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "#"
+                  }
+                },
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Get started today"
+                  }
+                }
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Enterprise"
+              }
+            },
+            "price": {
+              "type": "structure",
+              "attributes": {
+                "value": {
+                  "type": "number",
+                  "value": {
+                    "type": "static",
+                    "value": 99
+                  }
+                },
+                "frequency": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "month"
+                  }
+                }
+              }
+            },
+            "features": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Unlimited products"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Unlimited subscribers"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Advanced analytics"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Dedicated support representative"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Marketing automations"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Custom integrations"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Dedicated support and infrastructure for your company."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Choose the right plan for you"
+      }
+    },
+    "preTitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Pricing"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales."
+      }
+    }
+  }
+}

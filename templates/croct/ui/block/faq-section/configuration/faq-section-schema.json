@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "FAQ section",
   "attributes": {
     "title": {
       "type": {
@@ -51,6 +50,5 @@
       "position": 1,
       "description": "The list of questions and answers."
     }
-  },
-  "description": "A section with an ordered list of questions and answers."
+  }
 }

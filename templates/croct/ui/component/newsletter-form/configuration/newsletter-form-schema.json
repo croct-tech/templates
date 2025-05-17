@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Newsletter subscription form",
   "attributes": {
     "title": {
       "type": {
@@ -38,6 +37,5 @@
       "position": 2,
       "description": "The label of the button that submits the form."
     }
-  },
-  "description": "A form for subscribing to a newsletter."
+  }
 }

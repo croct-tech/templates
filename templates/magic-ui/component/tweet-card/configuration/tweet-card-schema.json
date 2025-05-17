@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Tweet card",
   "attributes": {
     "id": {
       "type": {

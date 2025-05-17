@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Logo cloud",
   "attributes": {
     "logos": {
       "type": {
@@ -41,6 +40,5 @@
       "position": 1,
       "description": "The subtitle displayed bellow the title."
     }
-  },
-  "description": "A section of ordered logos."
+  }
 }

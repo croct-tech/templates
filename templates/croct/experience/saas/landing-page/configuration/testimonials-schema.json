@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Testimonials",
   "attributes": {
     "title": {
       "type": {
@@ -75,6 +74,5 @@
       "optional": false,
       "position": 1
     }
-  },
-  "description": "A section featuring testimonials."
+  }
 }

@@ -18,6 +18,10 @@
       "interface/marketing",
       "interface/section",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/material-ui/highlights-section",
+      "library/tailwind-css/feature-section"
     ]
   },
   "actions": [

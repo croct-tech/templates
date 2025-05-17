@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Announcement bar",
   "attributes": {
     "link": {
       "type": {
@@ -57,6 +56,5 @@
       "position": 2,
       "description": "The style of the top bar."
     }
-  },
-  "description": "A small text bar featured at the top of a page."
+  }
 }

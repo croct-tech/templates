@@ -28,6 +28,7 @@
     "relatedTemplates": [
       "interface/component/announcement-bar",
       "interface/form/react-phone-number-input",
+      "library/tailwind-css/banner",
       "use-case/e-commerce/location"
     ]
   },

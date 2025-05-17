@@ -62,6 +62,5 @@
       "position": 1,
       "description": "A list of links that provide quick access to useful resources for getting started."
     }
-  },
-  "description": "The default Next.js starter page powered by Croct CMS."
+  }
 }

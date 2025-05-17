@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Hero section",
   "attributes": {
     "cta": {
       "type": {
@@ -48,6 +47,5 @@
       "position": 1,
       "description": "The tagline of the page."
     }
-  },
-  "description": "A big section featured at the top of a page."
+  }
 }

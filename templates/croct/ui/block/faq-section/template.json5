@@ -19,6 +19,9 @@
       "interface/section",
       "use-case/e-commerce",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/material-ui/faq-section"
     ]
   },
   "actions": [

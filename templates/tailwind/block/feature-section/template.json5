@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Feature section",
-  "description": "A dynamic feature section using Tailwind components and Croct.",
+  "description": "A feature section using Tailwind components and Croct.",
   "metadata": {
     "id": "library/tailwind-css/feature-section",
     "author": {
@@ -14,6 +14,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/feature-section/cover.png",
     "categories": [
       "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "interface/section/cards-section",
+      "library/material-ui/highlights-section"
     ]
   },
   "actions": [

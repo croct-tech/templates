@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Carousel section",
   "attributes": {
     "banners": {
       "type": {
@@ -67,6 +66,5 @@
       "optional": true,
       "position": 4
     }
-  },
-  "description": "A section of ordered banners."
+  }
 }

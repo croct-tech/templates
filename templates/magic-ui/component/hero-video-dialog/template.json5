@@ -23,6 +23,9 @@
       "language/javascript",
       "language/typescript",
       "library/magic-ui"
+    ],
+    "relatedTemplates": [
+      "interface/component/video-player"
     ]
   },
   "options": {

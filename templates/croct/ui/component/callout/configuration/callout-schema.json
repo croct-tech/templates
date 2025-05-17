@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Callout",
   "attributes": {
     "cta": {
       "type": {
@@ -79,6 +78,5 @@
       "position": 4,
       "description": "Defines the page element where the callout is shown, for example #menu."
     }
-  },
-  "description": "A component to highlight important information."
+  }
 }

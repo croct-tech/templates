@@ -589,6 +589,11 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
                     path: path,
                     description: 'The installation URL does not match the template path.',
                 });
+            } else if (!existsSync(join(directory, resolvedPath, 'template.json5'))) {
+                violations.push({
+                    path: path,
+                    description: 'The installation URL does not point to a valid template.',
+                });
             }
         }
 

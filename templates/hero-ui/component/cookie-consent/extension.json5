@@ -74,7 +74,7 @@
               "value": "${this[options.slotVersion]}"
             }
           ]
-        },
+        }
       ]
     },
     {
@@ -90,7 +90,7 @@
                 {
                   "pattern": "@croct/plug-react",
                   "value": "@croct/plug-next"
-                },
+                }
               ]
             },
             {
@@ -99,12 +99,11 @@
                 {
                   "pattern": "@croct/plug-react",
                   "value": "@croct/plug-next"
-                },
+                }
               ]
             }
           ]
-        },
-
+        }
       ]
     }
   ]

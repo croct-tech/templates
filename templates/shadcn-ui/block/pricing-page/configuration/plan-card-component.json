@@ -1,78 +1,73 @@
 {
-  "name": "Plan card",
-  "description": "The details of a pricing plan.",
-  "schema": {
-    "type": "structure",
-    "title": "Plan card",
-    "attributes": {
-      "link": {
-        "type": {
-          "type": "text",
-          "format": "url"
-        },
-        "label": "Checkout link",
-        "position": 3
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "link": {
+      "type": {
+        "type": "text",
+        "format": "url"
       },
-      "name": {
-        "type": {
-          "type": "text",
-          "minimumLength": 1
-        },
-        "label": "Plan name",
-        "position": 0
-      },
-      "price": {
-        "type": {
-          "type": "structure",
-          "attributes": {
-            "monthly": {
-              "type": {
-                "type": "text",
-                "minimumLength": 1
-              },
-              "label": "Price per month",
-              "position": 0
-            },
-            "annually": {
-              "type": {
-                "type": "text",
-                "minimumLength": 1
-              },
-              "label": "Price per year",
-              "position": 1
-            }
-          }
-        },
-        "label": "Price",
-        "position": 4
-      },
-      "features": {
-        "type": {
-          "type": "list",
-          "items": {
-            "type": "text",
-            "minimumLength": 1
-          }
-        },
-        "label": "Features",
-        "position": 5
-      },
-      "description": {
-        "type": {
-          "type": "text",
-          "minimumLength": 1
-        },
-        "label": "Description",
-        "position": 1
-      },
-      "mostPopular": {
-        "type": {
-          "type": "boolean"
-        },
-        "label": "Most popular",
-        "position": 2
-      }
+      "label": "Checkout link",
+      "position": 3
     },
-    "description": "The details of a pricing plan."
+    "name": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Plan name",
+      "position": 0
+    },
+    "price": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "monthly": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Price per month",
+            "position": 0
+          },
+          "annually": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Price per year",
+            "position": 1
+          }
+        }
+      },
+      "label": "Price",
+      "position": 4
+    },
+    "features": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "text",
+          "minimumLength": 1
+        }
+      },
+      "label": "Features",
+      "position": 5
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "position": 1
+    },
+    "mostPopular": {
+      "type": {
+        "type": "boolean"
+      },
+      "label": "Most popular",
+      "position": 2
+    }
   }
 }

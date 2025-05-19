@@ -115,8 +115,16 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "plan-card": "${import('configuration/plan-card-component.json')}",
-          "pricing-section": "${import('configuration/pricing-section-component.json')}"
+          "plan-card": {
+            "name": "Plan card",
+            "description": "The details of a pricing plan.",
+            "schema": "${import('configuration/plan-card-component.json')}"
+          },
+          "pricing-section": {
+            "name": "Pricing section",
+            "description": "The pricing section.",
+            "schema": "${import('configuration/pricing-section-component.json')}"
+          }
         },
         "slots": {
           "pricing-page": {

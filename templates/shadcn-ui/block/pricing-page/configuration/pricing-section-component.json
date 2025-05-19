@@ -1,59 +1,54 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
-  "name": "Pricing section",
-  "description": "The pricing section.",
-  "schema": {
-    "type": "structure",
-    "attributes": {
-      "plans": {
-        "type": {
-          "type": "list",
-          "items": {
-            "id": "plan-card",
-            "type": "reference"
-          },
-          "maximumLength": 3,
-          "minimumLength": 3
+  "type": "structure",
+  "attributes": {
+    "plans": {
+      "type": {
+        "type": "list",
+        "items": {
+          "id": "plan-card",
+          "type": "reference"
         },
-        "label": "Plans",
-        "position": 3,
-        "description": "The available pricing plans."
+        "maximumLength": 3,
+        "minimumLength": 3
       },
-      "title": {
-        "type": {
-          "type": "text",
-          "minimumLength": 1
-        },
-        "label": "Page title",
-        "position": 1,
-        "description": "The main title of the page."
-      },
-      "subtitle": {
-        "type": {
-          "type": "text",
-          "minimumLength": 1
-        },
-        "label": "Page subtitle",
-        "position": 2,
-        "description": "A two-line text displayed below the page title."
-      },
-      "defaultFrequency": {
-        "type": {
-          "type": "text",
-          "choices": {
-            "monthly": {
-              "label": "Monthly"
-            },
-            "annually": {
-              "label": "Annually"
-            }
-          }
-        },
-        "label": "Default frequency",
-        "position": 2,
-        "description": "The billing frequency selected by default."
-      }
+      "label": "Plans",
+      "position": 3,
+      "description": "The available pricing plans."
     },
-    "description": "The pricing section."
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Page title",
+      "position": 1,
+      "description": "The main title of the page."
+    },
+    "subtitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Page subtitle",
+      "position": 2,
+      "description": "A two-line text displayed below the page title."
+    },
+    "defaultFrequency": {
+      "type": {
+        "type": "text",
+        "choices": {
+          "monthly": {
+            "label": "Monthly"
+          },
+          "annually": {
+            "label": "Annually"
+          }
+        }
+      },
+      "label": "Default frequency",
+      "position": 2,
+      "description": "The billing frequency selected by default."
+    }
   }
 }

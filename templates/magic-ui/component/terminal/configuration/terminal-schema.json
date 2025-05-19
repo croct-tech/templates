@@ -73,15 +73,15 @@
               "type": {
                 "type": "text",
                 "choices": {
-                    "typing": {
-                        "label": "Typing",
-                        "position": 0,
-                        "default": true
-                    },
-                    "reveal": {
-                        "label": "Reveal",
-                        "position": 1
-                    }
+                  "typing": {
+                    "label": "Typing",
+                    "position": 0,
+                    "default": true
+                  },
+                  "reveal": {
+                    "label": "Reveal",
+                    "position": 1
+                  }
                 }
               },
               "label": "Animation",

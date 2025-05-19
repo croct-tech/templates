@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "name": "Plan card",
   "description": "The details of a pricing plan.",
   "schema": {

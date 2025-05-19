@@ -755,7 +755,7 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
     };
 }
 
-function resolvePath(url: URL, registry: Registry): string|null {
+function resolvePath(url: URL, registry: Registry): string | null {
     for (const {pattern, destination} of registry) {
         const match = url.href.match(new RegExp(pattern));
 

@@ -945,7 +945,7 @@ async function loadSchema<T>(url: string): Promise<JSONSchemaType<T>> {
         return cachedSchema as JSONSchemaType<T>;
     }
 
-    const response = await fetch(url.replace(/v[0-9]+/, 'next'));
+    const response = await fetch(url);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch schema: ${response.statusText}`);

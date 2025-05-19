@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "Form",
   "attributes": {
     "fields": {
       "type": {
@@ -51,6 +50,5 @@
       "position": 1,
       "description": "The text displayed below the title and above the fields."
     }
-  },
-  "description": "A form with fields."
+  }
 }

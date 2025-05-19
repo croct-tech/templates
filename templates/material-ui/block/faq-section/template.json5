@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "FAQ section",
-  "description": "A dynamic FAQ section using Material UI components and Croct.",
+  "description": "A FAQ section using Material UI components and Croct.",
   "metadata": {
     "id": "library/material-ui/faq-section",
     "author": {
@@ -14,6 +14,9 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/faq-section/cover.png",
     "categories": [
       "library/material-ui"
+    ],
+    "relatedTemplates": [
+      "interface/section/faq-section"
     ]
   },
   "actions": [

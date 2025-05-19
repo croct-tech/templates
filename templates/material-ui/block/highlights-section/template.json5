@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Highlights section",
-  "description": "A dynamic highlights section using Material UI components and Croct.",
+  "description": "A highlights section using Material UI components and Croct.",
   "metadata": {
     "id": "library/material-ui/highlights-section",
     "author": {
@@ -14,6 +14,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/highlights-section/cover.png",
     "categories": [
       "library/material-ui"
+    ],
+    "relatedTemplates": [
+      "interface/section/cards-section",
+      "library/tailwind-css/feature-section"
     ]
   },
   "actions": [

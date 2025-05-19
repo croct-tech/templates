@@ -20,6 +20,10 @@
       "interface/menu",
       "use-case/e-commerce",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/material-ui/navbar",
+      "library/tailwind-css/header-section"
     ]
   },
   "actions": [

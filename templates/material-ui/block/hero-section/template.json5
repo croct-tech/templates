@@ -14,6 +14,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/hero-section/cover.png",
     "categories": [
       "library/material-ui"
+    ],
+    "relatedTemplates": [
+      "library/tailwind-css/hero-section",
+      "interface/section/hero-section",
     ]
   },
   "actions": [

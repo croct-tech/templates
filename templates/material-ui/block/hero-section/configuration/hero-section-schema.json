@@ -1,0 +1,113 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "title": "Hero section",
+  "attributes": {
+    "form": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "ctaLabel": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "CTA Label",
+            "private": false,
+            "optional": false,
+            "position": 1,
+            "description": "The CTA label of the form."
+          },
+          "inputLabel": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Input Label",
+            "private": false,
+            "optional": false,
+            "position": 0,
+            "description": "The input label of the form."
+          }
+        }
+      },
+      "label": "Form",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The form of the hero."
+    },
+    "note": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Note",
+      "private": false,
+      "optional": true,
+      "position": 3,
+      "description": "The note below the form. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
+    },
+    "images": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "dark": {
+            "type": {
+              "id": "@croct/file",
+              "type": "reference",
+              "properties": {}
+            },
+            "label": "Dark mode",
+            "private": false,
+            "optional": false,
+            "position": 0,
+            "description": "The image for the dark mode theme."
+          },
+          "light": {
+            "type": {
+              "id": "@croct/file",
+              "type": "reference",
+              "properties": {}
+            },
+            "label": "Light mode",
+            "private": false,
+            "optional": false,
+            "position": 1,
+            "description": "The image for the dark mode theme."
+          }
+        }
+      },
+      "label": "Images",
+      "private": false,
+      "optional": true,
+      "position": 4,
+      "description": "Dark and light mode images."
+    },
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The main heading of the hero. Enclose a text in double asterisks to highlight it."
+    },
+    "tagline": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Tagline",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The tagline of the hero."
+    }
+  },
+  "description": "The big section featured at the top of a page."
+}

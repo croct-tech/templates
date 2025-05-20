@@ -20,7 +20,7 @@ export function HeroDemo(props: HeroDemoProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-      <div className="bg-white">
+      <div className="bg-white overflow-hidden">
         <header className="absolute inset-x-0 top-0 z-50">
           <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
             <div className="flex lg:flex-1">

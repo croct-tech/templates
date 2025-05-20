@@ -27,19 +27,25 @@
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Material%20UI%20testimonials%20section%20template."
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "material-ui-testimonials-section": {
+            "name": "Material UI - Testimonials section",
+            "description": "A section of testimonials.",
+            "schema": "${import('./configuration/testimonials-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "material-ui-testimonials-section": {
+            "name": "Material UI - Testimonials section",
+            "component": "material-ui-testimonials-section",
+            "content": {
+              "en": "${import('./configuration/testimonials-section-content.en.json')}"
+            }
+          }
+        }
+      }
     }
   ]
 }

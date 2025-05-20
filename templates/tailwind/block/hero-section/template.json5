@@ -56,7 +56,10 @@
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
-        "dependencies": ["@headlessui/react", "@heroicons/react"],
+        "dependencies": [
+          "@headlessui/react",
+          "@heroicons/react"
+        ],
         "components": [
           "hero-section.tsx",
           "hero-demo.tsx"

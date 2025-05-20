@@ -16,8 +16,8 @@
       "library/material-ui"
     ],
     "relatedTemplates": [
-      "library/tailwind-css/hero-section",
       "interface/section/hero-section",
+      "library/tailwind-css/hero-section"
     ]
   },
   "actions": [

@@ -7,13 +7,13 @@ It either initializes a Next.js project with Hero UI or adds Hero UI to an exist
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use croct://starter/hero-ui
+croct use croct://starter/hero-ui
 ```
 
 To specify a Next.js version, use the `version` option:
 
 ```croct-cmd
-croct@latest use croct://starter/hero-ui --version=14
+croct use croct://starter/hero-ui --version=14
 ```
 
 ## Options

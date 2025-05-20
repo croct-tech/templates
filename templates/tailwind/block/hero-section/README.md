@@ -14,13 +14,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use tailwind://block/hero-section
+croct use tailwind://block/hero-section
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use tailwind://block/hero-section --router=page
+croct use tailwind://block/hero-section --router=page
 ```
 
 ## Options

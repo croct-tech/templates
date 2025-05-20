@@ -17,5 +17,5 @@ user is not returning
 To create a new experience using this template, run:
 
 ```croct-cmd
-croct@latest use croct://experiment/segmented-users
+croct use croct://experiment/segmented-users
 ```

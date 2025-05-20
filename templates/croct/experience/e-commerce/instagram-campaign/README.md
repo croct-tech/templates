@@ -27,5 +27,5 @@ or [matches](https://docs.croct.com/reference/cql/expressions/tests/string/match
 To create a new experience using this template, run:
 
 ```croct-cmd
-croct@latest use croct://experience/e-commerce/instagram-campaign
+croct use croct://experience/e-commerce/instagram-campaign
 ```

@@ -16,13 +16,13 @@ The template is compatible with any React project using [Tailwind CSS](https://t
 Run the following command on an existing project or in an empty folder to create a new one:
 
 ```croct-cmd
-croct@latest use shadcn-ui://block/pricing-page
+croct use shadcn-ui://block/pricing-page
 ```
 
 You can pass options in the command line to customize the template:
 
 ```croct-cmd
-croct@latest use shadcn-ui://block/pricing-page --router=page
+croct use shadcn-ui://block/pricing-page --router=page
 ```
 
 ## Options

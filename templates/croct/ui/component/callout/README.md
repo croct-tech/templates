@@ -12,5 +12,5 @@ variations in copy, placement, or design can improve visibility, relevance, and 
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/callout
+croct use croct://ui/component/callout
 ```

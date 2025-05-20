@@ -16,5 +16,5 @@ and AB testing variations in timing or copy, can increase relevance, reduce fric
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/modal-dialog
+croct use croct://ui/component/modal-dialog
 ```

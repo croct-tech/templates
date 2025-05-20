@@ -16,5 +16,5 @@ or default positions can improve engagement and make the content more relatable 
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/image-comparison-slider
+croct use croct://ui/component/image-comparison-slider
 ```

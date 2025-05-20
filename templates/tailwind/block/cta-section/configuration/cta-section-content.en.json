@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/7ffc41ec-b8a3-47dd-9422-87acdf83a0a3"
+      }
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Boost your productivity. Start using our app today."
+      }
+    },
+    "primaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Get started"
+          }
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla."
+      }
+    },
+    "secondaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Learn more"
+          }
+        }
+      }
+    }
+  }
+}

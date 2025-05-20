@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Hero section customization",
+  "description": "A customization template for the hero section block.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "reactExtension": {
+      "type": "string",
+      "description": "The file extension for React files.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "material-ui-hero-section": {
+            "name": "Material UI - Hero section",
+            "description": "A hero section with centered headline, email input, and call to action button.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "material-ui-home-hero": {
+            "name": "Material UI - Home hero",
+            "component": "material-ui-hero-section",
+            "content": {
+              "en": "${import('./configuration/hero-section-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "material-ui-home-hero": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -25,19 +25,25 @@
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Tailwind%20pricing%20section%20template."
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "tailwind-pricing-section": {
+            "name": "Tailwind - Pricing section",
+            "description": "A section of plan cards.",
+            "schema": "${import('./configuration/pricing-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "tailwind-pricing-section": {
+            "name": "Tailwind - Pricing section",
+            "component": "tailwind-pricing-section",
+            "content": {
+              "en": "${import('./configuration/pricing-section-content.en.json')}"
+            }
+          }
+        }
+      }
     }
   ]
 }

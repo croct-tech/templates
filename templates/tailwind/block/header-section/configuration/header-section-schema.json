@@ -1,0 +1,203 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "items": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "ctas": {
+              "type": {
+                "type": "list",
+                "items": {
+                  "type": "structure",
+                  "attributes": {
+                    "icon": {
+                      "type": {
+                        "type": "text",
+                        "choices": {
+                          "phone-icon": {
+                            "label": "Phone Icon",
+                            "default": false,
+                            "position": 1
+                          },
+                          "play-circle-icon": {
+                            "label": "Play Circle Icon",
+                            "default": false,
+                            "position": 0
+                          }
+                        }
+                      },
+                      "label": "Icon",
+                      "private": false,
+                      "optional": false,
+                      "position": 0,
+                      "description": "The CTA icon."
+                    },
+                    "link": {
+                      "type": {
+                        "type": "text",
+                        "minimumLength": 1
+                      },
+                      "label": "Link",
+                      "private": false,
+                      "optional": false,
+                      "position": 2,
+                      "description": "The CTA link."
+                    },
+                    "label": {
+                      "type": {
+                        "type": "text",
+                        "minimumLength": 1
+                      },
+                      "label": "Label",
+                      "private": false,
+                      "optional": false,
+                      "position": 1,
+                      "description": "The CTA label."
+                    }
+                  }
+                },
+                "itemLabel": "CTA"
+              },
+              "label": "CTAs",
+              "private": false,
+              "optional": true,
+              "position": 3,
+              "description": "The CTAs on the bottom of the submenu."
+            },
+            "link": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Link",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The item link or anchor."
+            },
+            "label": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Label",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The item label."
+            },
+            "submenu": {
+              "type": {
+                "type": "structure",
+                "attributes": {
+                  "items": {
+                    "type": {
+                      "type": "list",
+                      "items": {
+                        "type": "structure",
+                        "attributes": {
+                          "icon": {
+                            "type": {
+                              "type": "text",
+                              "choices": {
+                                "cursor-icon": {
+                                  "label": "Cursor Icon",
+                                  "default": false,
+                                  "position": 1
+                                },
+                                "return-icon": {
+                                  "label": "Return Icon",
+                                  "default": false,
+                                  "position": 4
+                                },
+                                "squares-icon": {
+                                  "label": "Squares Icon",
+                                  "default": false,
+                                  "position": 3
+                                },
+                                "pie-chart-icon": {
+                                  "label": "Pie Chart Icon",
+                                  "default": false,
+                                  "position": 0
+                                },
+                                "fingerprint-icon": {
+                                  "label": "Fingerprint Icon",
+                                  "default": false,
+                                  "position": 2
+                                }
+                              }
+                            },
+                            "label": "Icon",
+                            "private": false,
+                            "optional": false,
+                            "position": 0,
+                            "description": "The item icon"
+                          },
+                          "link": {
+                            "type": {
+                              "type": "text",
+                              "minimumLength": 1
+                            },
+                            "label": "Link",
+                            "private": false,
+                            "optional": false,
+                            "position": 3,
+                            "description": "The item link url or anchor."
+                          },
+                          "label": {
+                            "type": {
+                              "type": "text",
+                              "minimumLength": 1
+                            },
+                            "label": "Label",
+                            "private": false,
+                            "optional": false,
+                            "position": 1,
+                            "description": "The item label."
+                          },
+                          "description": {
+                            "type": {
+                              "type": "text",
+                              "minimumLength": 1
+                            },
+                            "label": "Description",
+                            "private": false,
+                            "optional": false,
+                            "position": 2,
+                            "description": "The item description."
+                          }
+                        }
+                      },
+                      "maximumLength": 5,
+                      "minimumLength": 2
+                    },
+                    "label": "Items",
+                    "private": false,
+                    "optional": false,
+                    "position": 0,
+                    "description": "A list of links to be display on the submenu."
+                  }
+                }
+              },
+              "label": "Submenu",
+              "private": false,
+              "optional": true,
+              "position": 2
+            }
+          }
+        },
+        "maximumLength": 6,
+        "minimumLength": 2
+      },
+      "label": "Items",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "A list of links to be display on the navbar."
+    }
+  }
+}

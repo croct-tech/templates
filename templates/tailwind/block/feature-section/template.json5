@@ -25,19 +25,25 @@
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Tailwind%20feature%20section%20template."
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "tailwind-features-section": {
+            "name": "Tailwind - Features section",
+            "description": "A section of features.",
+            "schema": "${import('./configuration/feature-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "tailwind-features-section": {
+            "name": "Tailwind - Features section",
+            "component": "tailwind-features-section",
+            "content": {
+              "en": "${import('./configuration/feature-section-content.en.json')}"
+            }
+          }
+        }
+      }
     }
   ]
 }

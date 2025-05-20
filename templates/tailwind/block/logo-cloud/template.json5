@@ -26,19 +26,25 @@
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Tailwind%20logo%20cloud%20template."
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "tailwind-logo-cloud": {
+            "name": "Tailwind - Logo cloud",
+            "description": "A logo cloud section.",
+            "schema": "${import('./configuration/logo-cloud-schema.json')}"
+          }
+        },
+        "slots": {
+          "tailwind-logo-cloud": {
+            "name": "Tailwind - Logo cloud",
+            "component": "tailwind-logo-cloud",
+            "content": {
+              "en": "${import('./configuration/logo-cloud-content.en.json')}"
+            }
+          }
+        }
+      }
     }
   ]
 }

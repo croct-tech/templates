@@ -1,0 +1,117 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Image",
+      "private": false,
+      "optional": false,
+      "position": 4,
+      "description": "The section image."
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The section title."
+    },
+    "features": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "ServerIcon": {
+                    "label": "Server Icon",
+                    "default": false,
+                    "position": 2
+                  },
+                  "LockClosedIcon": {
+                    "label": "Lock Closed Icon",
+                    "default": false,
+                    "position": 1
+                  },
+                  "CloudArrowUpIcon": {
+                    "label": "Cloud Arrow Up Icon",
+                    "default": false,
+                    "position": 0
+                  }
+                }
+              },
+              "label": "Icon",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The icon related to the feature."
+            },
+            "title": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The feature title."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The feature description."
+            }
+          }
+        },
+        "itemLabel": "Feature"
+      },
+      "label": "Features",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The features list."
+    },
+    "preTitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Pre-title",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The section pre-title."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The section description."
+    }
+  }
+}

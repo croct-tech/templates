@@ -8,13 +8,13 @@ It either initializes a Next.js project with Shadcn UI or adds Shadcn UI to an e
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use croct://starter/shadcn-ui
+croct use croct://starter/shadcn-ui
 ```
 
 To specify a Next.js version, use the `version` option:
 
 ```croct-cmd
-croct@latest use croct://starter/shadcn-ui --version=14
+croct use croct://starter/shadcn-ui --version=14
 ```
 
 ## Options

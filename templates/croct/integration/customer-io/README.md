@@ -19,5 +19,5 @@ It's the fastest way to use data from Customer.io CDP to power personalized webs
 Run the following command in an empty directory to create a new project using this template:
 
 ```croct-cmd
-croct@latest use croct://integration/customer-io
+croct use croct://integration/customer-io
 ```

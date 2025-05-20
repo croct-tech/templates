@@ -10,5 +10,5 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use tailwind://block/testimonial-section
+croct use tailwind://block/testimonial-section
 ```

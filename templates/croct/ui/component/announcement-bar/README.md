@@ -20,13 +20,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/announcement-bar
+croct use croct://ui/component/announcement-bar
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use croct://ui/component/announcement-bar --router=page
+croct use croct://ui/component/announcement-bar --router=page
 ```
 
 ## Options

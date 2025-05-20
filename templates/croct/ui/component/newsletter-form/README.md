@@ -18,5 +18,5 @@ in copy, placement, or incentives can improve subscription rates and audience re
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/newsletter-form
+croct use croct://ui/component/newsletter-form
 ```

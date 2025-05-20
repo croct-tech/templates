@@ -10,13 +10,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use magic-ui://component/avatar-circles
+croct use magic-ui://component/avatar-circles
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use magic-ui://component/avatar-circles --router=page
+croct use magic-ui://component/avatar-circles --router=page
 ```
 
 ## Options

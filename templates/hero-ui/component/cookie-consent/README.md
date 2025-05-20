@@ -11,13 +11,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use hero-ui://component/cookie-consent
+croct use hero-ui://component/cookie-consent
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use hero-ui://component/cookie-consent --router=page
+croct use hero-ui://component/cookie-consent --router=page
 ```
 
 ## Options

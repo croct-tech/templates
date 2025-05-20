@@ -11,5 +11,5 @@ segment, such as showing relevant features to returning visitors, can increase r
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/cards-section
+croct use croct://ui/block/cards-section
 ```

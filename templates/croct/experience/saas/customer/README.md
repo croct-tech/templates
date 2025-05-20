@@ -31,5 +31,5 @@ strategies.
 To create a new experience using this template, run:
 
 ```croct-cmd
-croct@latest use croct://experience/saas/customer
+croct use croct://experience/saas/customer
 ```

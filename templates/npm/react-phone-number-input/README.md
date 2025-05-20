@@ -16,13 +16,13 @@ experiences**.
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use npm://react-phone-number-input
+croct use npm://react-phone-number-input
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use npm://react-phone-number-input --router=page
+croct use npm://react-phone-number-input --router=page
 ```
 
 ## Options

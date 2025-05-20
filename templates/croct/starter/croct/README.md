@@ -7,13 +7,13 @@ This template adds Croct to an existing project or sets up a new [Next.js](https
 Run the following command to integrate Croct into an existing project:
 
 ```croct-cmd
-croct@latest use croct://starter/croct
+croct use croct://starter/croct
 ```
 
 To specify a Next.js version, use the `version` option:
 
 ```croct-cmd
-croct@latest use croct://starter/croct --version=14
+croct use croct://starter/croct --version=14
 ```
 
 ## Options

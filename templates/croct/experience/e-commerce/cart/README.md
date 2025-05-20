@@ -30,5 +30,5 @@ or [between](https://docs.croct.com/reference/cql/expressions/tests/comparison/b
 To create a new experience using this template, run:
 
 ```croct-cmd
-croct@latest use croct://experience/e-commerce/cart
+croct use croct://experience/e-commerce/cart
 ```

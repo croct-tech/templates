@@ -19,5 +19,5 @@ It's the fastest way to use data from Insider CDP to power personalized website 
 Run the following command in an empty directory to create a new project using this template:
 
 ```croct-cmd
-croct@latest use croct://integration/insider
+croct use croct://integration/insider
 ```

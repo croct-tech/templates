@@ -15,5 +15,5 @@ and testing different phrasing or order, can increase clarity, engagement, and c
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/faq-section
+croct use croct://ui/block/faq-section
 ```

@@ -14,5 +14,5 @@ and conversion.
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/hero-section
+croct use croct://ui/block/hero-section
 ```

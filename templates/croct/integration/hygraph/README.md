@@ -18,5 +18,5 @@ It's the fastest way to add experimentation and personalization on top of Hygrap
 Run the following command in an empty directory to create a new project using this template:
 
 ```croct-cmd
-croct@latest use croct://integration/hygraph
+croct use croct://integration/hygraph
 ```

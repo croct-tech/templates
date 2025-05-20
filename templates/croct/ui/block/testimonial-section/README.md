@@ -13,5 +13,5 @@ different quotes, formats, or placements can strengthen social proof and improve
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/testimonial-section
+croct use croct://ui/block/testimonial-section
 ```

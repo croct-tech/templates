@@ -9,13 +9,13 @@ analytics, AB testing and personalization to your application.
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use croct://starter/nextjs
+croct use croct://starter/nextjs
 ```
 
 To specify a Next.js version, use the `version` option:
 
 ```croct-cmd
-croct@latest use croct://starter/nextjs --version=14
+croct use croct://starter/nextjs --version=14
 ```
 
 ## Options

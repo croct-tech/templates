@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "text": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Text",
+      "description": "The banner text. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com).",
+      "private": false,
+      "optional": false,
+      "position": 0
+    },
+    "cta": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "private": false,
+            "optional": false,
+            "position": 0,
+            "description": "The CTA label."
+          },
+          "link": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Link",
+            "private": false,
+            "optional": false,
+            "position": 1,
+            "description": "The CTA link."
+          }
+        }
+      },
+      "label": "CTA",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The call to action button."
+    }
+  }
+}

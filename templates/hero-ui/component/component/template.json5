@@ -52,6 +52,11 @@
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
     },
+    "dependencies": {
+      "type": "array",
+      "description": "The dependencies to install.",
+      "default": []
+    },
     "components": {
       "type": "array",
       "description": "The components to import."
@@ -80,9 +85,7 @@
     },
     {
       "name": "add-dependency",
-      "dependencies": [
-        "@croct/template-ui"
-      ]
+      "dependencies": "${['@croct/template-ui', ...options.dependencies]}"
     },
     {
       "name": "check-dependency",

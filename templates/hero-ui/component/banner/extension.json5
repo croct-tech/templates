@@ -1,0 +1,101 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Banner customization",
+  "description": "A customization template for the banner component.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "hero-ui-banner": {
+            "name": "Hero UI - Banner",
+            "description": "The section at the top of a page.",
+            "schema": "${import('./configuration/banner-schema.json')}"
+          }
+        },
+        "slots": {
+          "hero-ui-banner": {
+            "name": "Hero UI - Banner",
+            "component": "hero-ui-banner",
+            "content": {
+              "en": "${import('./configuration/banner-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "hero-ui-banner": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${project.path.components}/banner${options.codeExtension}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "replace-file-content",
+          "files": [
+            {
+              "path": "${project.path.components}/banner${options.codeExtension}",
+              "replacements": [
+                {
+                  "pattern": "@croct/plug-react",
+                  "value": "@croct/plug-next"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

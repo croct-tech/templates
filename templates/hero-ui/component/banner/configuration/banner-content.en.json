@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "cta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Explore"
+          }
+        }
+      }
+    },
+    "text": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "The Winter 2024 Release is here: new editor, analytics API, and so much more."
+      }
+    }
+  }
+}

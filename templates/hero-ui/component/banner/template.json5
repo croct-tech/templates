@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Banner",
+  "description": "A banner component built with Hero UI.",
+  "metadata": {
+    "id": "library/hero-ui/banner",
+    "author": {
+      "name": "Hero UI",
+      "avatarUrl": "https://github.com/heroui-inc.png",
+      "websiteUrl": "https://heroui.com?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/banner/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/banner/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/banner/cover.png",
+    "installationUrl": "hero-ui://component/banner",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/hero-ui",
+      "library/tailwind-css"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "hero-ui://component/component",
+      "options": {
+        "id": "banner",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "dependencies": [
+          "@iconify/react"
+        ],
+        "utils": [],
+        "components": [
+          "banner.tsx"
+        ],
+        "extension": "hero-ui://component/banner/extension.json5"
+      }
+    }
+  ]
+}

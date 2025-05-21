@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "Testimonial section",
-  "description": "A testimonial section using Tailwind components and Croct.",
+  "description": "A customization template for the testimonial section block.",
   "metadata": {
     "id": "library/tailwind-css/testimonial-section",
     "author": {
@@ -14,12 +14,19 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/testimonial-section/cover.png",
     "installationUrl": "tailwind://block/testimonial-section",
     "categories": [
-      "library/tailwind-css"
+      "library/tailwind-css",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "interface/social-proof",
+      "interface/marketing",
     ],
     "relatedTemplates": [
       "interface/section/testimonial-section",
       "library/magic-ui/marquee",
-      "library/material-ui/testimonials-section"
+      "library/material-ui/testimonials-section",
+      "library/magic-ui/tweet-card",
     ]
   },
   "options": {

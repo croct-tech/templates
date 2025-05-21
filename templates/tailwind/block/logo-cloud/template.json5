@@ -12,7 +12,10 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/logo-cloud/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/logo-cloud/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/logo-cloud/cover.png",
+    "installationUrl": "tailwind://block/logo-cloud",
     "categories": [
+      "framework/nextjs",
+      "framework/react",
       "interface/marketing",
       "interface/section",
       "interface/social-proof",
@@ -26,20 +29,46 @@
       "library/material-ui/logo-collection"
     ]
   },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    }
+  },
   "actions": [
     {
       "name": "import",
       "template": "tailwind://block/block",
       "options": {
-        "id": "logo-section",
+        "id": "logo-cloud",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "dependencies": [],
         "components": [
-          "logo-section.tsx"
+          "logo-cloud.tsx"
         ],
-        "extension": "tailwind://block/logo-section/extension.json5"
+        "extension": "tailwind://block/logo-cloud/extension.json5"
       }
     }
   ]

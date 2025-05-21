@@ -14,7 +14,15 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/hero-section/cover.png",
     "installationUrl": "material-ui://block/hero-section",
     "categories": [
-      "library/material-ui"
+      "framework/nextjs",
+      "framework/react",
+      "interface/hero",
+      "interface/marketing",
+      "interface/section",
+      "language/javascript",
+      "language/typescript",
+      "library/material-ui",
+      "use-case/saas"
     ],
     "relatedTemplates": [
       "interface/section/hero-section",

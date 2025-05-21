@@ -14,7 +14,15 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/cta-section/cover.png",
     "installationUrl": "tailwind://block/cta-section",
     "categories": [
-      "library/tailwind-css"
+      "framework/nextjs",
+      "framework/react",
+      "interface/hero",
+      "interface/marketing",
+      "interface/section",
+      "language/javascript",
+      "language/typescript",
+      "library/tailwind-css",
+      "use-case/saas"
     ]
   },
   "options": {

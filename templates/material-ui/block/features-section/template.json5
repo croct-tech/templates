@@ -13,7 +13,10 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/cover.png",
     "categories": [
-      "library/material-ui"
+      "interface/marketing",
+      "interface/section",
+      "library/material-ui",
+      "use-case/saas"
     ]
   },
   "actions": [

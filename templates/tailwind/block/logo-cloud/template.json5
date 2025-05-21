@@ -17,7 +17,9 @@
       "interface/section",
       "interface/social-proof",
       "library/tailwind-css",
-      "use-case/saas"
+      "use-case/saas",
+      "language/javascript",
+      "language/typescript",
     ],
     "relatedTemplates": [
       "interface/section/logo-cloud",

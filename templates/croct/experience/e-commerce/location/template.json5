@@ -36,7 +36,7 @@
         "audiences": {
           "new-york-city": {
             "name": "New York city",
-            "criteria": "location's city is \"New York\""
+            "criteria": "location's cityName is \"New York\""
           }
         },
         "components": {

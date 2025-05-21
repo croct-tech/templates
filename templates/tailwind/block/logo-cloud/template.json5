@@ -18,11 +18,10 @@
       "framework/react",
       "interface/marketing",
       "interface/section",
-      "interface/social-proof",
-      "library/tailwind-css",
-      "use-case/saas",
       "language/javascript",
       "language/typescript",
+      "library/tailwind-css",
+      "use-case/saas"
     ],
     "relatedTemplates": [
       "interface/section/logo-cloud",

@@ -21,7 +21,7 @@
       "language/javascript",
       "language/typescript",
       "library/material-ui",
-      "use-case/saas",
+      "use-case/saas"
     ],
     "relatedTemplates": [
       "interface/section/cards-section",

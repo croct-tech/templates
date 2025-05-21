@@ -10,7 +10,7 @@ export type TestimonialSectionProps = {
     }
 }
 
-export default function TestimonialSection(props: TestimonialSectionProps) {
+export function TestimonialSection(props: TestimonialSectionProps) {
   const {logo, quote, quotee} = props
   return (
     <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">

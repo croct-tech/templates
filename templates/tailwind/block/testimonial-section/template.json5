@@ -14,7 +14,11 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/testimonial-section/cover.png",
     "installationUrl": "tailwind://block/testimonial-section",
     "categories": [
-      "library/tailwind-css"
+      "interface/marketing",
+      "interface/section",
+      "interface/social-proof",
+      "library/tailwind-css",
+      "use-case/saas"
     ],
     "relatedTemplates": [
       "interface/section/testimonial-section",

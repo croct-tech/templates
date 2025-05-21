@@ -13,7 +13,10 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/feature-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/feature-section/cover.png",
     "categories": [
-      "library/tailwind-css"
+      "interface/marketing",
+      "interface/section",
+      "library/tailwind-css",
+      "use-case/saas"
     ],
     "relatedTemplates": [
       "interface/section/cards-section",

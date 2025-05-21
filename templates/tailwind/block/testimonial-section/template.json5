@@ -14,19 +14,19 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/tailwind/block/testimonial-section/cover.png",
     "installationUrl": "tailwind://block/testimonial-section",
     "categories": [
-      "library/tailwind-css",
       "framework/nextjs",
       "framework/react",
+      "interface/marketing",
+      "interface/social-proof",
       "language/javascript",
       "language/typescript",
-      "interface/social-proof",
-      "interface/marketing",
+      "library/tailwind-css"
     ],
     "relatedTemplates": [
       "interface/section/testimonial-section",
       "library/magic-ui/marquee",
-      "library/material-ui/testimonials-section",
       "library/magic-ui/tweet-card",
+      "library/material-ui/testimonials-section"
     ]
   },
   "options": {

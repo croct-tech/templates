@@ -1,17 +1,18 @@
 'use client'
 
 export type TestimonialSectionProps = {
-    logo?: string
-    quote: string
+    logo?: string,
+    quote: string,
     quotee: {
-        name: string
-        role: string
-        avatar: string
+        name: string,
+        role: string,
+        avatar: string,
     }
 }
 
 export function TestimonialSection(props: TestimonialSectionProps) {
   const {logo, quote, quotee} = props
+
   return (
     <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20" />

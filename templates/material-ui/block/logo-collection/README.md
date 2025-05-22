@@ -13,3 +13,20 @@ To create a new project using this template, run:
 ```croct-cmd
 croct use material-ui://block/logo-collection
 ```
+
+You can customize the template by specifying options:
+
+```croct-cmd
+croct@latest use material-ui://block/logo-collection --router=page
+```
+
+## Options
+
+The following options are available for this template:
+
+| Option        | Description                                      | Required | Default  |
+|---------------|--------------------------------------------------|----------|----------|
+| `projectName` | The name of the project.                         | No       | `my-app` |
+| `version`     | The Next.js version to use.                      | No       | `latest` |
+| `router`      | The router to use (`app` or `page`).             | No       | `app`    |
+| `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |

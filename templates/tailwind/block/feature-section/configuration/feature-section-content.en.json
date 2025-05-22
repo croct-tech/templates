@@ -1,0 +1,117 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/1065bd71-0195-4837-84ef-fae29af64e06"
+      }
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "A better workflow"
+      }
+    },
+    "features": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "CloudArrowUpIcon"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Push to deploy."
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "LockClosedIcon"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "SSL certificates."
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "ServerIcon"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Database backups."
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "preTitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Deploy faster"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione."
+      }
+    }
+  }
+}

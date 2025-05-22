@@ -18,6 +18,7 @@
       "framework/react",
       "interface/marketing",
       "interface/section",
+      "interface/social-proof",
       "language/javascript",
       "language/typescript",
       "library/tailwind-css",

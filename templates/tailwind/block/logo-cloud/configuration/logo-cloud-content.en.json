@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "logos": {
+      "type": "list",
+      "items": [
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/ba9ef47d-6ac8-4a5b-bb18-5e5635b3a7e8"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/bb0099e4-ec8c-495d-83a0-917f96a89b49"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/bdf32c2d-ed24-4363-bbad-64bcc0139a5a"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/f7c74554-22f3-48f6-affe-c58df640c743"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/8a28e23e-247c-4f4d-80c5-63f5f8dbf845"
+          }
+        }
+      ]
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Trusted by the world’s most innovative teams"
+      }
+    }
+  }
+}

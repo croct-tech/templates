@@ -1,0 +1,129 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "title": "Features section",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The section title."
+    },
+    "features": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "DevicesRounded": {
+                    "label": "Devices icon",
+                    "position": 2
+                  },
+                  "ViewQuiltRounded": {
+                    "label": "Dashboard icon",
+                    "position": 0
+                  },
+                  "EdgesensorHighRounded": {
+                    "label": "Mobile icon",
+                    "position": 1
+                  }
+                }
+              },
+              "label": "Icon",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The icon related to the feature."
+            },
+            "title": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The feature name."
+            },
+            "images": {
+              "type": {
+                "type": "structure",
+                "attributes": {
+                  "dark": {
+                    "type": {
+                      "id": "@croct/file",
+                      "type": "reference",
+                      "properties": {}
+                    },
+                    "label": "Dark mode",
+                    "private": false,
+                    "optional": false,
+                    "position": 0,
+                    "description": "The image for the dark mode theme."
+                  },
+                  "light": {
+                    "type": {
+                      "id": "@croct/file",
+                      "type": "reference",
+                      "properties": {}
+                    },
+                    "label": "Light mode",
+                    "private": false,
+                    "optional": false,
+                    "position": 1,
+                    "description": "The image for the light mode theme."
+                  }
+                }
+              },
+              "label": "Images",
+              "private": false,
+              "optional": false,
+              "position": 3,
+              "description": "Dark and light mode images."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The feature description."
+            }
+          }
+        },
+        "itemLabel": "Feature"
+      },
+      "label": "Features",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The features list."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The section description."
+    }
+  },
+  "description": "A section of features."
+}

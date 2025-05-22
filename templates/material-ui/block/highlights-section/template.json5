@@ -20,6 +20,7 @@
     ],
     "relatedTemplates": [
       "interface/section/cards-section",
+      "library/material-ui/features-section",
       "library/tailwind-css/feature-section"
     ]
   },

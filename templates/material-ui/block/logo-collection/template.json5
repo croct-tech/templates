@@ -16,7 +16,6 @@
     "categories": [
       "framework/nextjs",
       "framework/react",
-      "interface/hero",
       "interface/marketing",
       "interface/section",
       "interface/social-proof",

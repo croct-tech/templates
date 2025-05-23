@@ -89,23 +89,25 @@
               "position": 3,
               "description": "The plan features."
             },
-            "recommendedBadge": {
+            "recommended": {
               "type": {
                 "type": "boolean",
                 "label": {
-                  "true": "Show",
-                  "false": "Hide"
+                  "true": "Yes",
+                  "false": "No"
                 },
                 "default": false
               },
-              "label": "Recommended badge",
+              "label": "Recommended",
               "private": false,
               "optional": true,
               "position": 0,
-              "description": "Whether to display the recommendation badge."
+              "description": "Whether to apply the recommendation style."
             }
           }
         },
+        "minimumLength": 1,
+        "maximumLength": 3,
         "itemLabel": "Plan"
       },
       "label": "Plans",

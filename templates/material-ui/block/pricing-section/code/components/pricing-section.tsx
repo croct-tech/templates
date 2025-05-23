@@ -22,7 +22,7 @@ type PricingCardProps = {
   },
   features: string[],
   cta: string,
-  recommendedBadge?: boolean,
+  recommended?: boolean,
 }
 
 export type PricingSectionProps = {
@@ -71,9 +71,9 @@ export function PricingSection(props: PricingSectionProps) {
         spacing={3}
         sx={{alignItems: 'center', justifyContent: 'center', width: '100%'}}
       >
-        {plans.map((tier, index) => (
+        {plans.map((tier) => (
           <Grid
-            size={{xs: 12, sm: index === 2 ? 12 : 6, md: 4}}
+            size={{xs: 12, sm: 6, md: 4}}
             key={tier.name}
           >
             <Card
@@ -84,18 +84,18 @@ export function PricingSection(props: PricingSectionProps) {
                   flexDirection: 'column',
                   gap: 4,
                 },
-                index === 1 &&
-                ((theme) => ({
-                  border: 'none',
-                  background:
-                    'radial-gradient(circle at 50% 0%, hsl(220, 20%, 35%), hsl(220, 30%, 6%))',
-                  boxShadow: `0 8px 12px hsla(220, 20%, 42%, 0.2)`,
-                  ...theme.applyStyles('dark', {
+                tier.recommended &&
+                  ((theme) => ({
+                    border: 'none',
                     background:
-                      'radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))',
-                    boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
-                  }),
-                })),
+                      'radial-gradient(circle at 50% 0%, hsl(220, 20%, 35%), hsl(220, 30%, 6%))',
+                    boxShadow: `0 8px 12px hsla(220, 20%, 42%, 0.2)`,
+                    ...theme.applyStyles('dark', {
+                      background:
+                        'radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))',
+                      boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
+                    }),
+                  })),
               ]}
             >
               <CardContent>
@@ -106,15 +106,16 @@ export function PricingSection(props: PricingSectionProps) {
                       display: 'flex',
                       justifyContent: 'space-between',
                       alignItems: 'center',
+                      marginTop: '5em',
                       gap: 2,
                     },
-                    index === 1 ? {color: 'grey.100'} : {color: ''},
+                    tier.recommended ? {color: 'grey.100'} : {color: ''},
                   ]}
                 >
                   <Typography component="h3" variant="h6">
                     {tier.name}
                   </Typography>
-                  {tier.recommendedBadge && (
+                  {tier.recommended && (
                     <Chip icon={<AutoAwesomeIcon/>} label='Recommended'/>
                   )}
                 </Box>
@@ -124,7 +125,7 @@ export function PricingSection(props: PricingSectionProps) {
                       display: 'flex',
                       alignItems: 'baseline',
                     },
-                    index === 1 ? {color: 'grey.50'} : {color: null},
+                    tier.recommended ? {color: 'grey.50'} : {color: null},
                   ]}
                 >
                   <Typography component="h3" variant="h2">
@@ -145,14 +146,14 @@ export function PricingSection(props: PricingSectionProps) {
                         {
                           width: 20,
                         },
-                        index === 1 ? {color: 'primary.light'} : {color: 'primary.main'},
+                        tier.recommended ? {color: 'primary.light'} : {color: 'primary.main'},
                       ]}
                     />
                     <Typography
                       variant="subtitle2"
                       component={'span'}
                       sx={[
-                        index === 1 ? {color: 'grey.50'} : {color: null},
+                        tier.recommended ? {color: 'grey.50'} : {color: null},
                       ]}
                     >
                       {line}
@@ -163,8 +164,8 @@ export function PricingSection(props: PricingSectionProps) {
               <CardActions>
                 <Button
                   fullWidth
-                  variant={index === 1 ? 'contained' : 'outlined'}
-                  color={index === 1 ? 'primary' : 'secondary'}
+                  variant={tier.recommended ? 'contained' : 'outlined'}
+                  color={tier.recommended ? 'secondary' : 'primary'}
                 >
                   {tier.cta}
                 </Button>

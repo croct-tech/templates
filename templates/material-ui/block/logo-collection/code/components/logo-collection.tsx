@@ -4,7 +4,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/system';
+import { useColorScheme } from "@mui/material/styles";
 
 export type LogoCollectionProps = {
   title: string,
@@ -23,7 +23,7 @@ const logoStyle = {
 
 export function LogoCollection(props: LogoCollectionProps) {
   const {title, logos} = props;
-  const theme = useTheme();
+  const theme = useColorScheme();
 
   return (
     <Box id="logoCollection" sx={{ py: 4 }}>
@@ -39,7 +39,7 @@ export function LogoCollection(props: LogoCollectionProps) {
         {logos.map((logo, index) => (
           <Grid key={index}>
             <img
-              src={theme.palette.mode === 'light' ? logo.light : logo.dark}
+              src={theme.mode === 'light' ? logo.light : logo.dark}
               alt={`Company logo number ${index + 1}`}
               style={logoStyle}
             />

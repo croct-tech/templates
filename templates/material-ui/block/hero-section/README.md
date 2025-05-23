@@ -17,7 +17,7 @@ croct use material-ui://block/hero-section
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use material-ui://block/hero-section --router=page
+croct use material-ui://block/hero-section --router=page
 ```
 
 ## Options

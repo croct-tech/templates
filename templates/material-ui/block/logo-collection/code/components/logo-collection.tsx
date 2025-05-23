@@ -26,7 +26,7 @@ export function LogoCollection(props: LogoCollectionProps) {
   const theme = useColorScheme();
 
   return (
-    <Box id="logoCollection" sx={{ py: 4 }}>
+    <Box id="logoCollection" sx={{ py: 4, marginTop: "10em" }}>
       <Typography
         component="p"
         variant="subtitle2"

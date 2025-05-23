@@ -8,7 +8,7 @@ export type FeatureSectionProps = {
   title: string,
   description?: string,
   features: Array<{
-    icon: "ServerIcon" | "LockClosedIcon" | "CloudArrowUpIcon";
+    icon: "Server" | "LockClosed" | "CloudArrowUp";
     title: string,
     description: string
   }>,
@@ -18,9 +18,9 @@ export function FeatureSection(props: FeatureSectionProps) {
   const {image, preTitle, title, description, features} = props
 
   const iconMap = {
-    ServerIcon: ServerIcon,
-    LockClosedIcon: LockClosedIcon,
-    CloudArrowUpIcon: CloudArrowUpIcon,
+    Server: ServerIcon,
+    LockClosed: LockClosedIcon,
+    CloudArrowUp: CloudArrowUpIcon,
   }
 
   return (
@@ -62,7 +62,7 @@ export function FeatureSection(props: FeatureSectionProps) {
             src={image}
             width={2432}
             height={1442}
-            className="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
+            className="max-w-4xl h-auto rounded-xl shadow-xl ring-1 ring-gray-400/10"
           />
         </div>
       </div>

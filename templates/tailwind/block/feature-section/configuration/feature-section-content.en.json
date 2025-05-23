@@ -26,7 +26,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "CloudArrowUpIcon"
+                "value": "CloudArrowUp"
               }
             },
             "title": {
@@ -52,7 +52,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "LockClosedIcon"
+                "value": "LockClosed"
               }
             },
             "title": {
@@ -78,7 +78,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "ServerIcon"
+                "value": "Server"
               }
             },
             "title": {

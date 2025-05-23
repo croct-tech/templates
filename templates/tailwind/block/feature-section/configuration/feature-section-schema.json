@@ -2,17 +2,16 @@
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
   "attributes": {
-    "image": {
+    "preTitle": {
       "type": {
-        "id": "@croct/file",
-        "type": "reference",
-        "properties": {}
+        "type": "text",
+        "minimumLength": 1
       },
-      "label": "Image",
+      "label": "Pre-title",
       "private": false,
-      "optional": false,
-      "position": 4,
-      "description": "The section image."
+      "optional": true,
+      "position": 0,
+      "description": "The section pre-title."
     },
     "title": {
       "type": {
@@ -25,6 +24,18 @@
       "position": 1,
       "description": "The section title."
     },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The section description."
+    },
     "features": {
       "type": {
         "type": "list",
@@ -35,19 +46,16 @@
               "type": {
                 "type": "text",
                 "choices": {
-                  "ServerIcon": {
-                    "label": "Server Icon",
-                    "default": false,
+                  "Server": {
+                    "label": "Server icon",
                     "position": 2
                   },
-                  "LockClosedIcon": {
-                    "label": "Lock Closed Icon",
-                    "default": false,
+                  "LockClosed": {
+                    "label": "Lock closed icon",
                     "position": 1
                   },
-                  "CloudArrowUpIcon": {
-                    "label": "Cloud Arrow Up Icon",
-                    "default": false,
+                  "CloudArrowUp": {
+                    "label": "Cloud arrow up icon",
                     "position": 0
                   }
                 }
@@ -82,36 +90,27 @@
             }
           }
         },
-        "itemLabel": "Feature"
+        "minimumLength": 1,
+        "maximumLength": 3
       },
       "label": "Features",
+      "description": "The features list.",
       "private": false,
       "optional": false,
-      "position": 3,
-      "description": "The features list."
+      "position": 3
     },
-    "preTitle": {
+    "image": {
       "type": {
-        "type": "text",
-        "minimumLength": 1
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
       },
-      "label": "Pre-title",
+      "label": "Image",
       "private": false,
-      "optional": true,
-      "position": 0,
-      "description": "The section pre-title."
-    },
-    "description": {
-      "type": {
-        "type": "text",
-        "format": "multiline",
-        "minimumLength": 1
-      },
-      "label": "Description",
-      "private": false,
-      "optional": true,
-      "position": 2,
-      "description": "The section description."
+      "optional": false,
+      "position": 4,
+      "description": "The section image."
     }
-  }
+  },
+  "description": "A section of features."
 }

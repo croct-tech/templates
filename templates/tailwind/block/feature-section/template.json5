@@ -25,6 +25,7 @@
     ],
     "relatedTemplates": [
       "interface/section/cards-section",
+      "library/material-ui/features-section",
       "library/material-ui/highlights-section"
     ]
   },

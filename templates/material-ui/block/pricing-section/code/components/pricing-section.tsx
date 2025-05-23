@@ -43,6 +43,7 @@ export function PricingSection(props: PricingSectionProps) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        marginTop: '5em',
         gap: {xs: 3, sm: 6},
       }}
     >
@@ -106,7 +107,6 @@ export function PricingSection(props: PricingSectionProps) {
                       display: 'flex',
                       justifyContent: 'space-between',
                       alignItems: 'center',
-                      marginTop: '5em',
                       gap: 2,
                     },
                     tier.recommended ? {color: 'grey.100'} : {color: ''},

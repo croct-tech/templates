@@ -1,0 +1,197 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "preTitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Pre-title",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The section pre-title."
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The section title."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The section description."
+    },
+    "plans": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "highlight": {
+              "type": {
+                "type": "boolean",
+                "label": {
+                  "true": "Highlight",
+                  "false": "No highlight"
+                }
+              },
+              "label": "Highlight",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "Highlight the plan card."
+            },
+            "planId": {
+              "type": {
+                "type": "text"
+              },
+              "label": "Plan Id",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The plan id. Such as free-plan."
+            },
+            "name": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Name",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The plan name."
+            },
+            "price": {
+              "type": {
+                "type": "structure",
+                "attributes": {
+                  "value": {
+                    "type": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "label": "Value",
+                    "private": false,
+                    "optional": false,
+                    "position": 0,
+                    "description": "The price value."
+                  },
+                  "frequency": {
+                    "type": {
+                      "type": "text",
+                      "choices": {
+                        "year": {
+                          "label": "Year",
+                          "position": 1
+                        },
+                        "month": {
+                          "label": "Month",
+                          "default": true,
+                          "position": 0
+                        }
+                      }
+                    },
+                    "label": "Frequency",
+                    "private": false,
+                    "optional": false,
+                    "position": 1,
+                    "description": "The payment frequency."
+                  }
+                }
+              },
+              "label": "Price",
+              "private": false,
+              "optional": false,
+              "position": 3,
+              "description": "The plan price."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": true,
+              "position": 4,
+              "description": "Plan description"
+            },
+            "features": {
+              "type": {
+                "type": "list",
+                "items": {
+                  "type": "text",
+                  "minimumLength": 1
+                },
+                "maximumLength": 6,
+                "minimumLength": 3
+              },
+              "label": "Features",
+              "private": false,
+              "optional": false,
+              "position": 5,
+              "description": "The plan features."
+            },
+            "cta": {
+              "type": {
+                "type": "structure",
+                "attributes": {
+                  "label": {
+                    "type": {
+                      "type": "text",
+                      "minimumLength": 1
+                    },
+                    "label": "Label",
+                    "private": false,
+                    "optional": false,
+                    "position": 0,
+                    "description": "The CTA label."
+                  },
+                  "link": {
+                    "type": {
+                      "type": "text",
+                      "minimumLength": 1
+                    },
+                    "label": "Link",
+                    "private": false,
+                    "optional": false,
+                    "position": 1,
+                    "description": "The CTA link."
+                  }
+                }
+              },
+              "label": "CTA",
+              "private": false,
+              "optional": false,
+              "position": 6,
+              "description": "The call to action button."
+            }
+          }
+        },
+        "itemLabel": "Plan"
+      },
+      "label": "Plans",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The plans list."
+    }
+  },
+  "description": "A section of plan cards."
+}

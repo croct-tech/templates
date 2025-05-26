@@ -5,8 +5,8 @@ import { useEvaluation } from "@croct/plug-react"
 
 type Location = {
   regionCode: string|null,
-  city: string|null,
-  country: string|null,
+  cityName: string|null,
+  countryName: string|null,
   countryCode: string|null,
 }
 
@@ -33,15 +33,15 @@ export default function Page() {
           <div className={styles.demoContainer}>
             <div className={styles.wrapper}>
               <div className={styles.locationInfo}>
-                <div className={styles.locationIcon}>{location?.city === null ? "🌊" : "📍"}</div>
+                <div className={styles.locationIcon}>{location?.cityName === null ? "🌊" : "📍"}</div>
                 <div className={styles.locationDetails}>
                   <span className={styles.locationPrimary}>
                     {location === null ?
                       'Loading...'
-                      : <>{location.city ?? "Atlantis" }{location.regionCode && `, ${location.regionCode}`}</>
+                      : <>{location.cityName ?? "Atlantis" }{location.regionCode && `, ${location.regionCode}`}</>
                     }
                   </span>
-                  {location && (<span className={styles.locationSecondary}>{location.country ?? "Island of Atlas"}</span>)}
+                  {location && (<span className={styles.locationSecondary}>{location.countryName ?? "Island of Atlas"}</span>)}
                 </div>
               </div>
               <div className={styles.inputContainer}>

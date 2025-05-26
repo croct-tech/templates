@@ -12,10 +12,15 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/logo-collection/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/logo-collection/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/logo-collection/cover.png",
+    "installationUrl": "material-ui://block/logo-collection",
     "categories": [
+      "framework/nextjs",
+      "framework/react",
       "interface/marketing",
       "interface/section",
       "interface/social-proof",
+      "language/javascript",
+      "language/typescript",
       "library/material-ui",
       "use-case/saas"
     ],
@@ -23,21 +28,50 @@
       "interface/section/logo-cloud"
     ]
   },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    }
+  },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Material%20UI%20logo%20collection%20template."
+      "name": "import",
+      "template": "material-ui://block/block",
+      "options": {
+        "id": "logo-collection",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "components": [
+          "logo-collection.tsx",
+          "logo-collection-demo.tsx"
+        ],
+        "utils": [
+          "markdown.tsx"
+        ],
+        "extension": "material-ui://block/logo-collection/extension.json5"
+      }
     }
   ]
 }

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The title of section."
+    },
+    "logos": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "dark": {
+              "type": {
+                "type": "reference",
+                "id": "@croct/file",
+                "properties": {}
+              },
+              "label": "Dark mode",
+              "description": "The image for the dark mode theme.",
+              "private": false,
+              "optional": false,
+              "position": 0
+            },
+            "light": {
+              "type": {
+                "type": "reference",
+                "id": "@croct/file",
+                "properties": {}
+              },
+              "label": "Light mode",
+              "description": "The image for the light mode theme.",
+              "private": false,
+              "optional": false,
+              "position": 1
+            }
+          }
+        },
+        "minimumLength": 3,
+        "maximumLength": 6
+      },
+      "label": "Logos",
+      "description": "The list of logos.",
+      "private": false,
+      "optional": false,
+      "position": 1
+    }
+  }
+}

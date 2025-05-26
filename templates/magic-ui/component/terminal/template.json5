@@ -4,7 +4,7 @@
   "description": "A terminal-style UI to showcase commands, output, or interactive code.",
   "metadata": {
     "id": "library/magic-ui/terminal",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

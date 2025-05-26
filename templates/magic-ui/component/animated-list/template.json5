@@ -4,7 +4,7 @@
   "description": "A list with animations to display notifications, updates, or events.",
   "metadata": {
     "id": "library/magic-ui/animated-list",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

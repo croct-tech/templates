@@ -4,7 +4,7 @@
   "description": "A template for creating or integrating a Croct project.",
   "metadata": {
     "id": "boilerplate/starter/croct",
-    "author": {
+    "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"

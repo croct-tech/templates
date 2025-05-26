@@ -4,7 +4,7 @@
   "description": "An infinite scrolling component for displaying testimonials, or user reviews.",
   "metadata": {
     "id": "library/magic-ui/marquee",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

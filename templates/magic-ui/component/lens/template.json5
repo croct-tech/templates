@@ -4,7 +4,7 @@
   "description": "A hover effect that highlights or magnifies content within a section.",
   "metadata": {
     "id": "library/magic-ui/lens",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

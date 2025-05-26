@@ -23,8 +23,7 @@
     ],
     "relatedTemplates": [
       "library/magic-ui/marquee",
-      "library/material-ui/testimonials-section",
-      "library/tailwind-css/testimonial-section"
+      "library/material-ui/testimonials-section"
     ]
   },
   "actions": [

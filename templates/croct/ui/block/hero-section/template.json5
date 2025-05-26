@@ -21,8 +21,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "library/material-ui/hero-section",
-      "library/tailwind-css/hero-section"
+      "library/material-ui/hero-section"
     ]
   },
   "actions": [

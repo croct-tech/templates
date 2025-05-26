@@ -26,7 +26,6 @@
     ],
     "relatedTemplates": [
       "interface/component/announcement-bar",
-      "library/tailwind-css/banner",
       "use-case/location/geomarketing"
     ]
   },

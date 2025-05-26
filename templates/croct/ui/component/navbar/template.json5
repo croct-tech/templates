@@ -22,8 +22,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "library/material-ui/navbar",
-      "library/tailwind-css/header-section"
+      "library/material-ui/navbar"
     ]
   },
   "actions": [

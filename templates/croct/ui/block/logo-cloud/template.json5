@@ -20,8 +20,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "library/material-ui/logo-collection",
-      "library/tailwind-css/logo-cloud"
+      "library/material-ui/logo-collection"
     ]
   },
   "actions": [

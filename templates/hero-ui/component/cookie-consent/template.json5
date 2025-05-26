@@ -4,7 +4,7 @@
   "description": "A banner to collect user consent built with Hero UI.",
   "metadata": {
     "id": "library/hero-ui/cookie-consent",
-    "author": {
+    "ecosystem": {
       "name": "Hero UI",
       "avatarUrl": "https://github.com/heroui-inc.png",
       "websiteUrl": "https://heroui.com?utm_source=croct"

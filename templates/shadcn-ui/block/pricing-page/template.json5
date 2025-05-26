@@ -4,7 +4,7 @@
   "description": "A pricing page using Shadcn UI components and Croct.",
   "metadata": {
     "id": "library/shadcn-ui/pricing-page",
-    "author": {
+    "ecosystem": {
       "name": "Shadcn UI",
       "avatarUrl": "https://github.com/shadcn-ui.png",
       "websiteUrl": "https://ui.shadcn.com?utm_source=croct"

@@ -4,7 +4,7 @@
   "description": "A template for adding a Shadcn UI component to a project.",
   "metadata": {
     "id": "library/shadcn-ui/component",
-    "author": {
+    "ecosystem": {
       "name": "Shadcn UI",
       "avatarUrl": "https://github.com/shadcn-ui.png",
       "websiteUrl": "https://ui.shadcn.com?utm_source=croct"

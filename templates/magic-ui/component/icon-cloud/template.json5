@@ -4,7 +4,7 @@
   "description": "A floating cloud of icons to showcase integrations, tools, or technologies.",
   "metadata": {
     "id": "library/magic-ui/icon-cloud",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

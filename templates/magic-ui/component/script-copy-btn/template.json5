@@ -4,7 +4,7 @@
   "description": "A button for quickly copying scripts, commands, or code snippets.",
   "metadata": {
     "id": "library/magic-ui/script-copy-btn",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

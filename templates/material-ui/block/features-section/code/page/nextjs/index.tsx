@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import { HeroDemo } from "?/**/*/hero-demo.{js,jsx,ts,tsx}"
+import { FeaturesDemo } from "?/**/*/features-demo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 
@@ -15,14 +15,14 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
 export default function Page({content}: PageProps) {
   return (
     <TemplateCanvas
-      title="Tailwind - Hero section"
+      title="Material UI - Features section"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.tailwind&utm_content=hero_section&utm_term=nextjs"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.material_ui&utm_content=features_section&utm_term=nextjs"
       ctaTarget="_blank"
       fullScreen
       isolated
     >
-      <HeroDemo hero={content} />
+      <FeaturesDemo {...content} />
     </TemplateCanvas>
   );
 }

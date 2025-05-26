@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
-  "title": "Hero section customization",
-  "description": "A customization template for the hero section block.",
+  "title": "Features section customization",
+  "description": "A customization template for the features section block.",
   "options": {
     "exampleDirectory": {
       "type": "string",
@@ -11,6 +11,11 @@
     "exampleFile": {
       "type": "string",
       "description": "The name of the example file.",
+      "required": true
+    },
+    "reactExtension": {
+      "type": "string",
+      "description": "The file extension for React files.",
       "required": true
     },
     "codeExtension": {
@@ -34,25 +39,25 @@
       "name": "create-resource",
       "resources": {
         "components": {
-          "tailwind-hero-section": {
-            "name": "Tailwind - Hero section",
-            "description": "A hero section with centered headline and call to action.",
-            "schema": "${import('./configuration/hero-section-schema.json')}"
+          "material-ui-features-section": {
+            "name": "Material UI - Features section",
+            "description": "A section of features.",
+            "schema": "${import('./configuration/features-section-schema.json')}"
           }
         },
         "slots": {
-          "tailwind-home-hero": {
-            "name": "Tailwind - Home hero",
-            "component": "tailwind-hero-section",
+          "material-ui-home-features": {
+            "name": "Material UI - Features section",
+            "component": "material-ui-features-section",
             "content": {
-              "en": "${import('./configuration/hero-section-content.en.json')}"
+              "en": "${import('./configuration/features-section-content.en.json')}"
             }
           }
         }
       },
       "result": {
         "slots": {
-          "tailwind-home-hero": {
+          "material-ui-home-features": {
             "id": "${options.slotId}",
             "version": "${options.slotVersion}"
           }

@@ -4,7 +4,7 @@
   "description": "A carousel section using React and Swiper.js.",
   "metadata": {
     "id": "interface/section/react-swiper-carousel",
-    "author": {
+    "ecosystem": {
       "name": "Swiper.js",
       "avatarUrl": "https://swiperjs.com/images/favicon.png",
       "websiteUrl": "https://swiperjs.com"

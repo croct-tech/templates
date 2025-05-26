@@ -21,8 +21,7 @@
     ],
     "relatedTemplates": [
       "interface/section/testimonial-section",
-      "library/magic-ui/marquee",
-      "library/tailwind-css/testimonial-section"
+      "library/magic-ui/marquee"
     ]
   },
   "actions": [

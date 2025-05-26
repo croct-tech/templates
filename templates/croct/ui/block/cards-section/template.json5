@@ -21,8 +21,7 @@
     ],
     "relatedTemplates": [
       "library/material-ui/features-section",
-      "library/material-ui/highlights-section",
-      "library/tailwind-css/feature-section"
+      "library/material-ui/highlights-section"
     ]
   },
   "actions": [

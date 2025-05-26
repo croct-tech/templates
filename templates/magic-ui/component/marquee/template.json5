@@ -30,8 +30,7 @@
       "interface/section/testimonial-section",
       "library/magic-ui/bento-grid",
       "library/magic-ui/marquee",
-      "library/material-ui/testimonials-section",
-      "library/tailwind-css/testimonial-section"
+      "library/material-ui/testimonials-section"
     ]
   },
   "options": {

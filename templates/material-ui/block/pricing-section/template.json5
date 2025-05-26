@@ -19,8 +19,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "library/shadcn-ui/pricing-page",
-      "library/tailwind-css/pricing-section"
+      "library/shadcn-ui/pricing-page"
     ]
   },
   "actions": [

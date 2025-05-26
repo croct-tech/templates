@@ -20,8 +20,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/component/navbar",
-      "library/tailwind-css/header-section"
+      "interface/component/navbar"
     ]
   },
   "actions": [

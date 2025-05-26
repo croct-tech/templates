@@ -27,5 +27,5 @@ or [is in](https://docs.croct.com/reference/cql/expressions/tests/collection/in)
 To create a new experience using this template, run:
 
 ```croct-cmd
-croct@latest use croct://experience/e-commerce/location
+croct use croct://experience/e-commerce/location
 ```

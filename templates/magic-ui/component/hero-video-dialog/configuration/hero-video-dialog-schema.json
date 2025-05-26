@@ -1,0 +1,94 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "videoSrc": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Video URL",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The URL of the video to be played."
+    },
+    "thumbnailSrc": {
+      "type": {
+        "type": "reference",
+        "id": "@croct/file",
+        "properties": {}
+      },
+      "label": "Thumbnail",
+      "description": "The URL of the thumbnail image.",
+      "private": false,
+      "optional": false,
+      "position": 1
+    },
+    "thumbnailAlt": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Alt text",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "Alt text for the thumbnail image. The default is \"Video thumbnail\"."
+    },
+    "animationStyle": {
+      "type": {
+        "type": "text",
+        "choices": {
+          "fade": {
+            "label": "Fade",
+            "position": 5,
+            "description": "Dialog fades in and out."
+          },
+          "from-top": {
+            "label": "From top",
+            "position": 2,
+            "description": "Dialog enters from the top and exits to the top."
+          },
+          "from-left": {
+            "label": "From left",
+            "position": 3,
+            "description": "Dialog enters from the left and exits to the left."
+          },
+          "from-right": {
+            "label": "From right",
+            "position": 4,
+            "description": "Dialog enters from the right and exits to the right."
+          },
+          "from-bottom": {
+            "label": "From bottom",
+            "position": 0,
+            "description": "Dialog enters from the bottom and exits to the bottom."
+          },
+          "from-center": {
+            "label": "From center",
+            "default": true,
+            "position": 1,
+            "description": "Dialog scales up from the center and scales down to the center."
+          },
+          "left-in-right-out": {
+            "label": "Left in right out",
+            "position": 7,
+            "description": "Dialog enters from the left and exits to the right."
+          },
+          "top-in-bottom-out": {
+            "label": "Top in bottom out",
+            "position": 6,
+            "description": "Dialog enters from the top and exits to the bottom."
+          }
+        }
+      },
+      "label": "Animation style",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The animation style of the dialog."
+    }
+  }
+}

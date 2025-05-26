@@ -5,7 +5,7 @@
   "metadata": {
     "id": "interface/component/announcement-bar",
     "verified": true,
-    "author": {
+    "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
@@ -25,6 +25,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
+      "interface/component/announcement-bar",
       "use-case/location/geomarketing"
     ]
   },
@@ -78,12 +79,13 @@
     },
     {
       "name": "import",
-      "template": "croct://project",
+      "template": "croct://starter/croct",
       "options": {
-        "projectName": "announcement-bar-example",
+        "name": "announcement-bar-example",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
+        "defaultHomepage": true,
         "disableLauncher": true
       }
     },

@@ -1,0 +1,491 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Next.js + Hero UI project",
+  "description": "A template for bootstrapping a new project with Next.js and Hero UI.",
+  "metadata": {
+    "id": "boilerplate/starter/hero-ui",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/hero-ui/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/hero-ui/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/hero-ui/cover.png",
+    "installationUrl": "croct://starter/hero-ui",
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/hero-ui",
+      "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs"
+    ]
+  },
+  "options": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-croct-app"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    },
+    "eslint": {
+      "type": "boolean",
+      "description": "Whether to use ESLint."
+    },
+    "turbopack": {
+      "type": "boolean",
+      "description": "Whether to use TurboPack."
+    },
+    "src-dir": {
+      "type": "boolean",
+      "description": "Whether to use the src directory structure."
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ]
+    },
+    "import-alias": {
+      "type": "string",
+      "description": "The import alias to use."
+    },
+    "defaultHomepage": {
+      "type": "boolean",
+      "description": "Whether to use the default homepage over Croct's."
+    },
+    "disableLauncher": {
+      "type": "boolean",
+      "description": "Whether to disable opening the project in the browser.",
+      "default": false
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "This template is only supported in React projects.",
+          "suggestions": [
+            "Run the command in an empty folder to create a new project."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "isNewProject": "${project.platform === 'unknown'}"
+      }
+    },
+    {
+      "name": "import",
+      "template": "croct://starter/croct",
+      "options": {
+        "name": "${options.name}",
+        "version": "${options.version}",
+        "eslint": "${options.eslint}",
+        "turbopack": "${options.turbopack}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "tailwind": true,
+        "src-dir": "${options['src-dir']}",
+        "disableLauncher": true,
+        "defaultHomepage": "${options.defaultHomepage}"
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "tailwindcss"
+        }
+      ],
+      "result": {
+        "tailwindcss": "isTailwindcssInstalled"
+      }
+    },
+    {
+      "name": "locate-file",
+      "path": "tailwind.config.{js,ts}",
+      "limit": 1,
+      "depth": 3,
+      "result": "tailwindConfigFiles"
+    },
+    {
+      "name": "test",
+      "condition": "${!this.isTailwindcssInstalled && this.tailwindConfigFiles.length === 0}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "Tailwind CSS is not installed.",
+          "links": [
+            {
+              "label": "Install Tailwind CSS",
+              "url": "https://tailwindcss.com/docs/installation?utm_source=croct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript"
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "codeExtension": "${this.isTypescript ? '.ts' : '.js'}"
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "tailwindcss",
+          "version": ">=4"
+        }
+      ],
+      "result": {
+        "tailwindcss": "isTailwindV4"
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@heroui/system",
+        "@heroui/theme",
+        "@heroui/react${this.isTailwindV4 ? '@>=2.8.0-beta.4' : ''}"
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${this.isTailwindV4}",
+      "then": [
+        {
+          "name": "download",
+          "source": "./code/configuration/hero.ts",
+          "destination": "./",
+          "overwrite": true,
+          "mapping": {
+            "hero.ts": "hero${this.codeExtension}"
+          }
+        },
+        {
+          "name": "locate-file",
+          "path": "**/*.css",
+          "limit": 1,
+          "matcher": {
+            "type": "and",
+            "matchers": [
+              {
+                pattern: "@import\\s+\"tailwindcss\""
+              },
+              {
+                "pattern": "@heroui/theme"
+              }
+            ]
+          },
+          "result": "matches"
+        },
+        {
+          "name": "test",
+          "condition": "${this.matches.length === 0}",
+          "then": [
+            {
+              "name": "locate-file",
+              "path": "**/*.css",
+              "limit": 1,
+              "matcher": {
+                pattern: "@import\\s+\"tailwindcss\""
+              },
+              "result": "matches"
+            },
+            {
+              "name": "test",
+              "condition": "${this.matches.length === 0}",
+              "then": [
+                {
+                  "name": "fail",
+                  "title": "Global CSS not found",
+                  "message": "No files with the @import \"tailwindcss\" directive were found.",
+                  "suggestions": [
+                    "Please make sure Tailwind CSS is installed and configured correctly."
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "test",
+              "condition": "${this.isNewProject}",
+              "then": [
+                {
+                  "name": "download",
+                  "source": "./code/configuration/globals.css",
+                  "destination": "${dirname(this.matches[0])}",
+                  "overwrite": true
+                }
+              ]
+            },
+            {
+              "name": "define",
+              "variables": {
+                "rootPath": "${'../'.repeat(this.matches[0].split('/').length - 1)}"
+              }
+            },
+            {
+              "name": "replace-file-content",
+              "files": [
+                {
+                  path: "${this.matches[0]}",
+                  replacements: [
+                    {
+                      "pattern": "@import\\s+\"tailwindcss\"s*;",
+                      value: "@import \"tailwindcss\";\n@plugin \"${this.rootPath}hero${this.codeExtension}\";\n@source \"${this.rootPath}node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}\";\n@custom-variant dark (&:is(.dark *));"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "else": [
+        {
+          "name": "define",
+          "variables": {
+            "tailwindConfigFile": "tailwind.config${this.codeExtension}"
+          }
+        },
+        {
+          "name": "locate-file",
+          "path": "${this.tailwindConfigFile}",
+          "limit": 1,
+          "depth": 0,
+          "result": "tailwindConfigMatches"
+        },
+        {
+          "name": "test",
+          "condition": "${this.tailwindConfigMatches.length === 0}",
+          "then": [
+            {
+              "name": "fail",
+              "title": "Tailwind config not found",
+              "message": "No tailwind.config.js file was found.",
+              "suggestions": [
+                "Please make sure Tailwind CSS is installed and configured correctly."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "locate-file",
+          "path": "${this.tailwindConfigFile}",
+          "limit": 1,
+          "depth": 0,
+          "matcher": {
+            pattern: "heroui/react"
+          },
+          "result": "tailwindConfigMatches"
+        },
+        {
+          "name": "test",
+          "condition": "${this.tailwindConfigMatches.length === 0}",
+          "then": [
+            {
+              "name": "locate-file",
+              path: "${this.tailwindConfigFile}",
+              "limit": 1,
+              "depth": 0,
+              "matcher": {
+                pattern: "plugins:\\s*\\["
+              },
+              "result": "hasPluginsEntry"
+            },
+            {
+              "name": "replace-file-content",
+              "files": [
+                {
+                  path: "${this.tailwindConfigFile}",
+                  replacements: [
+                    {
+                      "pattern": "^(?=.)",
+                      "value": "import { heroui } from \"@heroui/react\";\n"
+                    },
+                    {
+                      "pattern": "(content:\\s*\\[)(\\s*)",
+                      "value": "$1$2'./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',$2"
+                    },
+                    {
+                      "pattern": "(plugins:\\s*\\[)(\\s*)",
+                      "value": "$1$2heroui(),$2"
+                    },
+                    {
+                      "pattern": "(darkMode:\\s*)[^\\n,]+(?=,)",
+                      "value": "$1'class'"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "locate-file",
+              path: "${this.tailwindConfigFile}",
+              "limit": 1,
+              "depth": 0,
+              "matcher": {
+                pattern: "plugins:"
+              },
+              "result": "pluginsMatches"
+            },
+            {
+              "name": "test",
+              "condition": "${this.pluginsMatches.length === 0}",
+              "then": [
+                {
+                  "name": "replace-file-content",
+                  "files": [
+                    {
+                      path: "${this.tailwindConfigFile}",
+                      replacements: [
+                        {
+                          "pattern": "((\\s*)content:)",
+                          "value": "$2plugins: [heroui()],$1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "locate-file",
+              path: "${this.tailwindConfigFile}",
+              "limit": 1,
+              "depth": 0,
+              "matcher": {
+                pattern: "darkMode:"
+              },
+              "result": "darkModeMatches"
+            },
+            {
+              "name": "test",
+              "condition": "${this.darkModeMatches.length === 0}",
+              "then": [
+                {
+                  "name": "replace-file-content",
+                  "files": [
+                    {
+                      path: "${this.tailwindConfigFile}",
+                      replacements: [
+                        {
+                          "pattern": "((\\s*)content:)",
+                          "value": "$2darkMode: 'class',$1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${packageManager.name === 'pnpm'}",
+      "then": [
+        {
+          "name": "locate-file",
+          "path": ".npmrc",
+          "limit": 1,
+          "result": "npmrcMatches"
+        },
+        {
+          "name": "test",
+          "condition": "${this.npmrcMatches.length === 0}",
+          "then": [
+            {
+              "name": "download",
+              "source": "./code/configuration/.npmrc",
+              "destination": "./"
+            }
+          ],
+          "else": [
+            {
+              "name": "locate-file",
+              "path": ".npmrc",
+              "limit": 1,
+              "matcher": {
+                pattern: "public-hoist-pattern\\[]=\\*@heroui/\\*"
+              },
+              "result": "npmrcEntryMatches"
+            },
+            {
+              "name": "test",
+              "condition": "${this.npmrcEntryMatches.length === 0}",
+              "then": [
+                {
+                  "name": "replace-file-content",
+                  "files": [
+                    {
+                      "path": ".npmrc",
+                      "replacements": [
+                        {
+                          "pattern": "^",
+                          "value": "public-hoist-pattern[]=*@heroui/*\n"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${!options.disableLauncher}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher"
+        }
+      ]
+    }
+  ]
+}

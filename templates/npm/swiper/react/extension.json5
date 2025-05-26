@@ -22,7 +22,9 @@
   "actions": [
     {
       "name": "add-dependency",
-      "dependencies": ["swiper"]
+      "dependencies": [
+        "swiper"
+      ]
     },
     {
       "name": "download",
@@ -30,7 +32,7 @@
       "source": "code/components/carousel.tsx",
       "destination": "${project.path.components}",
       "mapping": {
-        "carousel.tsx": "carousel${options.codeExtension}",
+        "carousel.tsx": "carousel${options.codeExtension}"
       }
     }
   ]

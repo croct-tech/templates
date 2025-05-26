@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { TemplateCanvas } from "@croct/template-ui/next"
+import { TemplateCanvas } from "@croct/template-ui/react"
 import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
 import { fetchContent } from "@croct/plug-next/server"
 import localFont from "next/font/local";
@@ -28,9 +28,8 @@ export default function Home({content}) {
       ctaLabel="Edit this page"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       ctaTarget="_blank"
-      src="#"
       fullScreen
-      portal
+      isolated
     >
       <Head>
         <title>Create Next App</title>

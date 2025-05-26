@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Avatar circles customization",
+  "description": "A customization template for the avatar circles component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-avatar-circles": {
+            "name": "Magic UI - Avatar circles",
+            "description": "A list of avatars to represent people, brands, or tools.",
+            "schema": "${import('./configuration/avatar-circles-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-avatar-circles": {
+            "name": "Magic UI - Avatar circles",
+            "component": "magic-ui-avatar-circles",
+            "content": {
+              "en": "${import('./configuration/avatar-circles-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-avatar-circles": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

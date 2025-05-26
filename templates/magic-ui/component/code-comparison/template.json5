@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Code comparison",
+  "description": "A side-by-side code block layout for comparing implementations or versions.",
+  "metadata": {
+    "id": "library/magic-ui/code-comparison",
+    "ecosystem": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/code-comparison/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/code-comparison/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/code-comparison/cover.png",
+    "installationUrl": "magic-ui://component/code-comparison",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/code",
+      "language/javascript",
+      "language/typescript",
+      "library/framer-motion",
+      "library/magic-ui",
+      "library/shiki"
+    ],
+    "relatedTemplates": [
+      "library/magic-ui/script-copy-btn",
+      "library/magic-ui/terminal"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "code-comparison",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "components": [
+          "code-diff-pane.tsx"
+        ],
+        "extension": "magic-ui://component/code-comparison/extension.json5"
+      }
+    }
+  ]
+}

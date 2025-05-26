@@ -1,7 +1,6 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
-  "title": "CTA",
   "attributes": {
     "link": {
       "type": {
@@ -43,6 +42,5 @@
       "optional": false,
       "position": 2
     }
-  },
-  "description": "A call to action button."
+  }
 }

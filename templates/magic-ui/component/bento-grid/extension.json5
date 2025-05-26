@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Bento grid customization",
+  "description": "A customization template for the bento grid component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-bento-grid": {
+            "name": "Magic UI - Bento grid",
+            "description": "A modular grid layout for featuring content blocks, use cases, or product highlights.",
+            "schema": "${import('./configuration/bento-grid-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-bento-grid": {
+            "name": "Magic UI - Bento grid",
+            "component": "magic-ui-bento-grid",
+            "content": {
+              "en": "${import('./configuration/bento-grid-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-bento-grid": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

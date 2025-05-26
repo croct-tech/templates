@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "id": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Tweet ID",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The ID of the tweet to display."
+    }
+  }
+}

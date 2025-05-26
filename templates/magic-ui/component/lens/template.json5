@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Lens",
+  "description": "A hover effect that highlights or magnifies content within a section.",
+  "metadata": {
+    "id": "library/magic-ui/lens",
+    "ecosystem": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/cover.png",
+    "installationUrl": "magic-ui://component/lens",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/visualization",
+      "language/javascript",
+      "language/typescript",
+      "library/magic-ui"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "lens",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "components": [
+          "lens-card.tsx"
+        ],
+        "extension": "magic-ui://component/lens/extension.json5"
+      }
+    }
+  ]
+}

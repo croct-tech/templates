@@ -1,0 +1,329 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "plans": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "http://localhost:3000/checkout/freelancer"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Starter"
+              }
+            },
+            "price": {
+              "type": "structure",
+              "attributes": {
+                "monthly": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "$9"
+                  }
+                },
+                "annually": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "$86"
+                  }
+                }
+              }
+            },
+            "features": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "1 user"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Up to 5 projects"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "5GB storage"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Basic support"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Perfect for individuals and small projects"
+              }
+            },
+            "mostPopular": {
+              "type": "boolean",
+              "value": {
+                "type": "static",
+                "value": false
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "http://localhost:3000/checkout/freelancer"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Pro"
+              }
+            },
+            "price": {
+              "type": "structure",
+              "attributes": {
+                "monthly": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "$29"
+                  }
+                },
+                "annually": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "$278"
+                  }
+                }
+              }
+            },
+            "features": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Up to 5 users"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Unlimited projects"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "50GB storage"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Priority support"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Advanced analytics"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Custom integrations"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Ideal for growing teams and businesses"
+              }
+            },
+            "mostPopular": {
+              "type": "boolean",
+              "value": {
+                "type": "static",
+                "value": true
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "http://localhost:3000/checkout/freelancer"
+              }
+            },
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Enterprise"
+              }
+            },
+            "price": {
+              "type": "structure",
+              "attributes": {
+                "monthly": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "$99"
+                  }
+                },
+                "annually": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "$950"
+                  }
+                }
+              }
+            },
+            "features": {
+              "type": "list",
+              "items": [
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Unlimited users"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Unlimited projects"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "500GB storage"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "24/7 dedicated support"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Advanced security"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Custom reporting"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Dedicated account manager"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "SLA guarantees"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "For large organizations with complex needs"
+              }
+            },
+            "mostPopular": {
+              "type": "boolean",
+              "value": {
+                "type": "static",
+                "value": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Simple, Transparent Pricing"
+      }
+    },
+    "subtitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Choose the perfect plan for your needs. Always know what you'll pay."
+      }
+    },
+    "defaultFrequency": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "monthly"
+      }
+    }
+  }
+}

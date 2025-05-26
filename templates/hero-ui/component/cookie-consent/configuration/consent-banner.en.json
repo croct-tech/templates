@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "message": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "We use cookies to provide the best experience. By continuing to use our site, you agree to our [Cookie Policy](https://example.com)."
+      }
+    },
+    "primaryCtaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Accept all"
+      }
+    },
+    "secondaryCtaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Reject all"
+      }
+    }
+  }
+}

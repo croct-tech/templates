@@ -18,5 +18,5 @@ AB testing variations in placement, thumbnail, or autoplay settings can increase
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/video-player
+croct use croct://ui/component/video-player
 ```

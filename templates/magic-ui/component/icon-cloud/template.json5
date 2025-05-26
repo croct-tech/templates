@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Icon cloud",
+  "description": "A floating cloud of icons to showcase integrations, tools, or technologies.",
+  "metadata": {
+    "id": "library/magic-ui/icon-cloud",
+    "ecosystem": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/cover.png",
+    "installationUrl": "magic-ui://component/icon-cloud",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/motion",
+      "interface/visualization",
+      "language/javascript",
+      "language/typescript",
+      "library/magic-ui"
+    ],
+    "relatedTemplates": [
+      "library/magic-ui/orbiting-circles"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "icon-cloud",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "components": [
+          "icon-cloud-demo.tsx"
+        ],
+        "extension": "magic-ui://component/icon-cloud/extension.json5"
+      }
+    }
+  ]
+}

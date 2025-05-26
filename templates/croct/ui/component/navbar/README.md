@@ -14,5 +14,5 @@ variations in structure, labels, or order can improve engagement and guide users
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/navbar
+croct use croct://ui/block/navbar
 ```

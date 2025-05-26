@@ -7,7 +7,7 @@ on:
       - published
 
 jobs:
-  mirror-files:
+  publish-templates:
     permissions:
       id-token: write
       contents: read

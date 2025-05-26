@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "avatars": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "imageUrl": {
+              "type": {
+                "id": "@croct/file",
+                "type": "reference",
+                "properties": {}
+              },
+              "label": "Image",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The image of the profile."
+            },
+            "profileUrl": {
+              "type": {
+                "type": "text",
+                "format": "url"
+              },
+              "label": "Link",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The URL of the profile."
+            }
+          }
+        },
+        "minimumLength": 1
+      },
+      "label": "Avatars",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The avatar circles."
+    },
+    "numPeople": {
+      "type": {
+        "type": "number",
+        "integer": true,
+        "minimum": 1
+      },
+      "label": "Number of people",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "The number appearing in the last circle."
+    }
+  }
+}

@@ -5,7 +5,7 @@
   "metadata": {
     "id": "interface/section/cards-section",
     "verified": true,
-    "author": {
+    "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
@@ -18,6 +18,10 @@
       "interface/marketing",
       "interface/section",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/material-ui/features-section",
+      "library/material-ui/highlights-section"
     ]
   },
   "actions": [

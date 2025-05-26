@@ -1,0 +1,405 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Material UI block",
+  "description": "Import the Material UI block into the project.",
+  "metadata": {
+    "id": "library/material-ui/block",
+    "ecosystem": {
+      "name": "Material UI",
+      "avatarUrl": "https://github.com/mui.png",
+      "websiteUrl": "https://mui.com/?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/block/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/block/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/block/cover.png",
+    "installationUrl": "material-ui://block/block",
+    "categories": [
+      "boilerplate/utility",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/material-ui"
+    ]
+  },
+  "options": {
+    "id": {
+      "type": "string",
+      "description": "The block ID.",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "The dependencies to install.",
+      "default": []
+    },
+    "components": {
+      "type": "array",
+      "description": "The components to import.",
+      "default": []
+    },
+    "utils": {
+      "type": "array",
+      "description": "The utilities to import.",
+      "default": []
+    },
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
+      "then": [
+        {
+          "name": "fail",
+          "title": "Project not found",
+          "message": "This template can only be used in a React project.",
+          "suggestions": [
+            "Navigate to the project directory and try again."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "import",
+      "template": "croct://starter/croct",
+      "options": {
+        "name": "${options.id}-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "defaultHomepage": true,
+        "disableLauncher": true
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": "${['https://pkg.pr.new/@croct/template-ui@a3ef535', '@mui/material', '@emotion/react', '@emotion/styled', '@mui/icons-material', ...options.dependencies]}"
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript"
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "locate-file",
+      "path": "**/*/*.css",
+      "limit": 1,
+      "matcher": {
+        "pattern": "(@import\\s+\"tailwindcss\"|:root|body\\s+\\{)"
+      },
+      "result": "globalCssFiles"
+    },
+    {
+      "name": "test",
+      "condition": "${this.globalCssFiles.length === 0}",
+      "then": [
+        {
+          "name": "print",
+          "semantics": "warning",
+          "title": "No global CSS file detected",
+          "message": "You may need to manually add the Inter and Roboto fonts to your global CSS file.\n\nRead more:\nhttps://mui.com/material-ui/getting-started/installation/#roboto-font"
+        }
+      ],
+      "else": [
+        {
+          "name": "locate-file",
+          "path": "${this.globalCssFiles[0]}",
+          "limit": 1,
+          "matcher": {
+            "pattern": "Inter:wght@300;400;500;600;700"
+          },
+          "result": "registeredCssFiles"
+        },
+        {
+          "name": "print",
+          "message": "${this.globalCssFiles[0]} / ${this.registeredCssFiles.length} CSS files found."
+        },
+        {
+          "name": "test",
+          "condition": "${this.registeredCssFiles.length === 0}",
+          "then": [
+            {
+              "name": "replace-file-content",
+              "files": [
+                {
+                  "path": "${this.globalCssFiles[0]}",
+                  "replacements": [
+                    {
+                      "pattern": "$",
+                      "value": "\n@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${options.id}",
+        "reactExtension": "${this.isTypescript ? '.tsx' : '.jsx'}",
+        "codeExtension": "${this.isTypescript ? '.ts' : '.js'}",
+        "pageBaseName": "${{nextjs: project.path.examples.endsWith('app') ? 'page' : 'index', react: 'page'}[project.platform]}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "examplePath": "${this.exampleDirectory}/${this.pageBaseName}${this.reactExtension}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "componentIndex": 0,
+        "utilityIndex": 0
+      }
+    },
+    {
+      "name": "download",
+      "source": "code/components/theme",
+      "destination": "${project.path.components}/theme",
+      "mapping": {
+        "themePrimitives.ts": "themePrimitives${this.codeExtension}",
+        "dataDisplay.tsx": "dataDisplay${this.reactExtension}",
+        "feedback.tsx": "feedback${this.reactExtension}",
+        "inputs.tsx": "inputs${this.reactExtension}",
+        "navigation.tsx": "navigation${this.reactExtension}",
+        "surfaces.ts": "surfaces${this.codeExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "code/components/SitemarkIcon.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "SitemarkIcon.tsx": "SitemarkIcon${this.reactExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "code/components/AppTheme.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "AppTheme.tsx": "AppTheme${this.reactExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "code/components/ColorModeIconDropdown.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "ColorModeIconDropdown.tsx": "ColorModeIconDropdown${this.reactExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "code/components/ColorModeSelect.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "ColorModeSelect.tsx": "ColorModeSelect${this.reactExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "code/components/AppBar.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "AppBar.tsx": "AppBar${this.reactExtension}"
+      }
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.utilityIndex < options.utils.length}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "utilityFile": "${options.utils[this.utilityIndex]}",
+            "utilityBaseName": "${basename(options.utils[this.utilityIndex], true)}"
+          }
+        },
+        {
+          "name": "download",
+          "source": "material-ui://block/${options.id}/code/utils/${this.utilityFile}",
+          "destination": "${project.path.utilities}",
+          "mapping": {
+            "${this.utilityFile}": "${this.utilityBaseName}${/x$/.test(this.utilityFile) ? this.reactExtension : this.codeExtension}"
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "utilityIndex": "${this.utilityIndex + 1}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.componentIndex < options.components.length}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "componentFile": "${options.components[this.componentIndex]}",
+            "componentBaseName": "${basename(options.components[this.componentIndex], true)}"
+          }
+        },
+        {
+          "name": "download",
+          "source": "material-ui://block/${options.id}/code/components/${this.componentFile}",
+          "destination": "${project.path.components}",
+          "mapping": {
+            "${this.componentFile}": "${this.componentBaseName}${this.reactExtension}"
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "componentIndex": "${this.componentIndex + 1}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleSourceFile": "${this.pageBaseName}.tsx",
+        "exampleFile": "${this.pageBaseName}${this.reactExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "material-ui://block/${options.id}/code/page/${project.platform}/${this.exampleSourceFile}",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "${this.exampleSourceFile}": "${this.exampleFile}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "slotId": "",
+        "slotVersion": ""
+      }
+    },
+    {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "exampleDirectory": "${this.exampleDirectory}",
+            "exampleFile": "${this.exampleFile}",
+            "reactExtension": "${this.reactExtension}",
+            "codeExtension": "${this.codeExtension}",
+            "slotId": "slotId",
+            "slotVersion": "slotVersion"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${this.slotId !== '' && this.slotVersion !== ''}",
+      "then": [
+        {
+          "name": "add-slot",
+          "slots": [
+            "${this.slotId}@${this.slotVersion}"
+          ]
+        },
+        {
+          "name": "replace-file-content",
+          "files": [
+            {
+              "path": "${this.examplePath}",
+              "replacements": [
+                {
+                  "pattern": "%slotId%",
+                  "value": "${this.slotId}"
+                },
+                {
+                  "pattern": "%slotVersion%",
+                  "value": "${this.slotVersion}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.examplePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component successfully imported at `${this.exampleDirectory}/${this.exampleFile}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher",
+          "options": {
+            "path": "${options.id}"
+          }
+        }
+      ]
+    }
+  ]
+}

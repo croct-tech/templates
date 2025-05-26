@@ -22,13 +22,13 @@ you with a **headless CMS**, AB testing, and ready-to-use location-based persona
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use croct://location/geomarketing
+croct use croct://location/geomarketing
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use croct://location/geomarketing --router=page
+croct use croct://location/geomarketing --router=page
 ```
 
 ## Options

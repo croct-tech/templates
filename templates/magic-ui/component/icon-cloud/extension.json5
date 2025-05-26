@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Icon cloud customization",
+  "description": "A customization template for the icon cloud component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-icon-cloud": {
+            "name": "Magic UI - Icon cloud",
+            "description": "A floating cloud of icons to showcase integrations, tools, or technologies.",
+            "schema": "${import('./configuration/icon-cloud-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-icon-cloud": {
+            "name": "Magic UI - Icon cloud",
+            "component": "magic-ui-icon-cloud",
+            "content": {
+              "en": "${import('./configuration/icon-cloud-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-icon-cloud": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

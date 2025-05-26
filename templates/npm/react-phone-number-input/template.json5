@@ -4,7 +4,7 @@
   "description": "A phone field formatted based on the user's location.",
   "metadata": {
     "id": "interface/form/react-phone-number-input",
-    "author": {
+    "ecosystem": {
       "name": "Nikolay",
       "avatarUrl": "https://github.com/catamphetamine.png",
       "websiteUrl": "https://github.com/catamphetamine"
@@ -23,7 +23,8 @@
       "use-case/location"
     ],
     "relatedTemplates": [
-      "interface/component/demo-request-form"
+      "interface/component/demo-request-form",
+      "use-case/location/geomarketing"
     ]
   },
   "options": {
@@ -72,12 +73,13 @@
     },
     {
       "name": "import",
-      "template": "croct://project",
+      "template": "croct://starter/croct",
       "options": {
-        "name": "phone-field-example",
+        "name": "announcement-bar-example",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
+        "defaultHomepage": true,
         "disableLauncher": true
       }
     },

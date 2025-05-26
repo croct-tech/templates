@@ -13,5 +13,5 @@ different arrangements or groupings can make the content feel more relevant and 
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/logo-cloud
+croct use croct://ui/block/logo-cloud
 ```

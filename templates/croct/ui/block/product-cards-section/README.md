@@ -14,5 +14,5 @@ different layouts, imagery, or calls to action can improve relevance and boost p
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/product-cards-section
+croct use croct://ui/block/product-cards-section
 ```

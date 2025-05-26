@@ -1,0 +1,144 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "orbits": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "icons": {
+              "type": {
+                "type": "list",
+                "items": {
+                  "id": "@croct/file",
+                  "type": "reference",
+                  "properties": {
+                    "allowedTypes": [
+                      "image/svg+xml"
+                    ]
+                  }
+                },
+                "itemLabel": "Icon"
+              },
+              "label": "Icons",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The list of icons."
+            },
+            "style": {
+              "type": {
+                "type": "structure",
+                "attributes": {
+                  "iconSize": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 0
+                    },
+                    "label": "Icon size",
+                    "private": false,
+                    "optional": true,
+                    "position": 0,
+                    "description": "The size of the icon in pixels. The default is 30px."
+                  },
+                  "radius": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 0
+                    },
+                    "label": "Circle radius",
+                    "private": false,
+                    "optional": true,
+                    "position": 1,
+                    "description": "The radius of the orbit in pixels. The default is 160px."
+                  },
+                  "path": {
+                    "type": {
+                      "type": "boolean",
+                      "label": {
+                        "true": "Show",
+                        "false": "Do not show"
+                      },
+                      "default": true
+                    },
+                    "label": "Orbit path",
+                    "private": false,
+                    "optional": true,
+                    "position": 2,
+                    "description": "Whether the orbit path should be shown."
+                  },
+                  "reverse": {
+                    "type": {
+                      "type": "boolean",
+                      "label": {
+                        "true": "Counterclockwise",
+                        "false": "Clockwise"
+                      },
+                      "default": false
+                    },
+                    "label": "Direction",
+                    "private": false,
+                    "optional": true,
+                    "position": 3,
+                    "description": "The direction of the animation."
+                  },
+                  "delay": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 0
+                    },
+                    "label": "Delay",
+                    "private": false,
+                    "optional": true,
+                    "position": 4,
+                    "description": "The delay before the animation starts in seconds. The default is 10s."
+                  },
+                  "speed": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 1
+                    },
+                    "label": "Speed",
+                    "private": false,
+                    "optional": true,
+                    "position": 5,
+                    "description": "The speed of the animation. The default is 1."
+                  },
+                  "duration": {
+                    "type": {
+                      "type": "number",
+                      "integer": true,
+                      "minimum": 0
+                    },
+                    "label": "Duration",
+                    "private": false,
+                    "optional": true,
+                    "position": 6,
+                    "description": "The duration of the animation in seconds. The default is 20s."
+                  }
+                }
+              },
+              "label": "Style",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "Customize the style of the orbit."
+            }
+          }
+        },
+        "itemLabel": "Orbit"
+      },
+      "label": "Orbits",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The list of orbits."
+    }
+  }
+}

@@ -20,7 +20,19 @@
     "destination": "magic-ui/$1"
   },
   {
+    "pattern": "^hero-ui://?(.+)$",
+    "destination": "hero-ui/$1"
+  },
+  {
     "pattern": "^https://magicui.design/r/(.+)$",
-    "destination": "magic-ui/ui/$1"
+    "destination": "magic-ui/component/$1"
+  },
+  {
+    "pattern": "^tailwind://?(.+)$",
+    "destination": "tailwind/$1"
+  },
+  {
+    "pattern": "^material-ui://?(.+)$",
+    "destination": "material-ui/$1"
   }
 ]

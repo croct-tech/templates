@@ -22,13 +22,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use croct://ui/block/carousel-section
+croct use croct://ui/block/carousel-section
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use croct://ui/block/carousel-section --router=page
+croct use croct://ui/block/carousel-section --router=page
 ```
 
 ## Options
@@ -41,4 +41,4 @@ The following options are available for this template:
 | `version`     | The Next.js version to use.                      | No       | `latest` |
 | `router`      | The router to use (`app` or `page`).             | No       | `app`    |
 | `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |
-| `extension`   | The URL of an extension template to apply.       | No       | `none`   |
+| `extension`   | The URL of an extension template to apply.       | No       | -        |

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Amperity integration",
+  "description": "An integration template for projects using Croct and Amperity.",
+  "metadata": {
+    "id": "integration/cdp/amperity",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/amperity/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/amperity/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/amperity/cover.png",
+    "categories": [
+      "integration/cdp"
+    ]
+  },
+  "actions": [
+    {
+      "name": "print",
+      "semantics": "info",
+      "title": "Request early access",
+      "message": "This template is still under development, but we're inviting early adopters."
+    },
+    {
+      "name": "prompt",
+      "type": "keypress",
+      "message": "Press any key to request access"
+    },
+    {
+      "name": "open-link",
+      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Amperity%20integration%20template."
+    }
+  ]
+}

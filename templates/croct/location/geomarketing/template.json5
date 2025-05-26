@@ -5,7 +5,7 @@
   "metadata": {
     "id": "use-case/location/geomarketing",
     "verified": true,
-    "author": {
+    "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
@@ -27,6 +27,7 @@
     ],
     "relatedTemplates": [
       "interface/component/announcement-bar",
+      "interface/form/react-phone-number-input",
       "use-case/e-commerce/location"
     ]
   },

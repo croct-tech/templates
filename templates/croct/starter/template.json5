@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Starter",
+  "description": "An alias for the main starter template.",
+  "options": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-croct-app"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "typescript": {
+      "type": "boolean",
+      "description": "Whether to use TypeScript."
+    },
+    "tailwind": {
+      "type": "boolean",
+      "description": "Whether to use Tailwind CSS."
+    },
+    "eslint": {
+      "type": "boolean",
+      "description": "Whether to use ESLint."
+    },
+    "turbopack": {
+      "type": "boolean",
+      "description": "Whether to use TurboPack."
+    },
+    "src-dir": {
+      "type": "boolean",
+      "description": "Whether to use the src directory structure."
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ]
+    },
+    "import-alias": {
+      "type": "string",
+      "description": "The import alias to use."
+    },
+    "defaultHomepage": {
+      "type": "boolean",
+      "description": "Whether to use the default homepage over Croct's."
+    },
+    "disableLauncher": {
+      "type": "boolean",
+      "description": "Whether to disable opening the project in the browser.",
+      "default": false
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct/template.json5",
+      "options": "${options}"
+    }
+  ]
+}

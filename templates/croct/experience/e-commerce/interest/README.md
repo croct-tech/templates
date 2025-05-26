@@ -29,5 +29,5 @@ or [these quantifiers](https://docs.croct.com/reference/cql/expressions/quantifi
 To create a new experience using this template, run:
 
 ```croct-cmd
-croct@latest use croct://experience/e-commerce/interest
+croct use croct://experience/e-commerce/interest
 ```

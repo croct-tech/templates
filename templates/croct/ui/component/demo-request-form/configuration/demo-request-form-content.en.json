@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
   "type": "structure",
   "attributes": {
     "fields": {

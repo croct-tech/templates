@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Lens customization",
+  "description": "A customization template for the lens component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "shadcn-ui://component",
+      "options": {
+        "components": [
+          "button",
+          "card"
+        ]
+      }
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-lens": {
+            "name": "Magic UI - Lens",
+            "description": "A hover effect that highlights or magnifies content within a section.",
+            "schema": "${import('./configuration/lens-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-lens": {
+            "name": "Magic UI - Lens",
+            "component": "magic-ui-lens",
+            "content": {
+              "en": "${import('./configuration/lens-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-lens": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

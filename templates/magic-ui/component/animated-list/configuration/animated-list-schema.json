@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "delay": {
+      "type": {
+        "type": "number",
+        "integer": true
+      },
+      "label": "Delay",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The delay between each item in milliseconds. The default is 1000ms."
+    },
+    "notifications": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "name": {
+              "type": {
+                "type": "text"
+              },
+              "label": "Name",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The notification name."
+            },
+            "description": {
+              "type": {
+                "type": "text"
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The notification description."
+            },
+            "time": {
+              "type": {
+                "type": "text"
+              },
+              "label": "Time",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The time that appears next to the notification name."
+            },
+            "icon": {
+              "type": {
+                "type": "text"
+              },
+              "label": "Icon",
+              "private": false,
+              "optional": false,
+              "position": 3,
+              "description": "The notification emoji."
+            },
+            "color": {
+              "type": {
+                "type": "text",
+                "format": "color"
+              },
+              "label": "Color",
+              "private": false,
+              "optional": false,
+              "position": 4,
+              "description": "The background color of the emoji."
+            }
+          }
+        },
+        "itemLabel": "Notification"
+      },
+      "label": "Notifications",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The list of notifications."
+    }
+  }
+}

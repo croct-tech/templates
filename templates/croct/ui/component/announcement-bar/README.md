@@ -20,13 +20,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/announcement-bar
+croct use croct://ui/component/announcement-bar
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct@latest use croct://ui/component/announcement-bar --router=page
+croct use croct://ui/component/announcement-bar --router=page
 ```
 
 ## Options
@@ -39,5 +39,5 @@ The following options are available for this template:
 | `version`     | The Next.js version to use.                      | No       | `latest` |
 | `router`      | The router to use (`app` or `page`).             | No       | `app`    |
 | `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |
-| `content`     | The URL of the slot content to use.              | No       | `none`   |
-| `extension`   | The URL of an extension template to apply.       | No       | `none`   |
+| `content`     | The URL of the slot content to use.              | No       | -        |
+| `extension`   | The URL of an extension template to apply.       | No       | -        |

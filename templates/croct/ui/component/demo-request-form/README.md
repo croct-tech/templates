@@ -17,5 +17,5 @@ AB testing different layouts or incentives, can increase form completion rates a
 To add this component to your workspace, run:
 
 ```croct-cmd
-croct@latest use croct://ui/component/demo-request-form
+croct use croct://ui/component/demo-request-form
 ```

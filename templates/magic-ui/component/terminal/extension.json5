@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Terminal customization",
+  "description": "A customization template for the terminal component.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "motion"
+      ]
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "magic-ui-terminal": {
+            "name": "Magic UI - Terminal",
+            "description": "A terminal-style UI to showcase commands, output, or interactive code.",
+            "schema": "${import('./configuration/terminal-schema.json')}"
+          }
+        },
+        "slots": {
+          "magic-ui-terminal": {
+            "name": "Magic UI - Terminal",
+            "component": "magic-ui-terminal",
+            "content": {
+              "en": "${import('./configuration/terminal-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "magic-ui-terminal": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    }
+  ]
+}

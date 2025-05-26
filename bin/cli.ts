@@ -22,6 +22,21 @@ import * as process from 'node:process';
 
 const CATALOG_TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/catalog-template.json';
 const TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/template.json';
+const CONTENT_SCHEMA_URL = 'https://schema.croct.com/json/v1/template-content.json';
+const CONTENT_SCHEMA_SCHEMA_URL = 'https://schema.croct.com/json/v1/template-content-schema.json';
+
+const JSON_TEMPLATE_SCHEMAS = [
+    CATALOG_TEMPLATE_SCHEMA_URL,
+    TEMPLATE_SCHEMA_URL,
+];
+
+const JSON_SCHEMAS = [
+    CATALOG_TEMPLATE_SCHEMA_URL,
+    TEMPLATE_SCHEMA_URL,
+    CONTENT_SCHEMA_URL,
+    CONTENT_SCHEMA_SCHEMA_URL,
+];
+
 const BASE_URL = 'https://github.com/croct-tech/templates/blob/master/';
 const CDN_URL = 'https://cdn.croct.io/assets/templates';
 const ASSET_PATH = 'assets';
@@ -31,6 +46,8 @@ const categoryMap = {
     'boilerplate/utility': 'Utilities',
     'framework/nextjs': 'Next.js',
     'framework/react': 'React',
+    'integration/cms': 'CMS',
+    'integration/cdp': 'CDP',
     'interface/code': 'Code',
     'interface/component': 'Component',
     'interface/feedback': 'Feedback',
@@ -44,18 +61,20 @@ const categoryMap = {
     'interface/section': 'Section',
     'interface/social-proof': 'Social proof',
     'interface/visualization': 'Visualization',
+    'language/html': 'HTML',
     'language/javascript': 'JavaScript',
     'language/typescript': 'TypeScript',
-    'language/html': 'HTML',
     'library/framer-motion': 'Framer Motion',
+    'library/hero-ui': 'Hero UI',
     'library/magic-ui': 'Magic UI',
+    'library/material-ui': 'Material UI',
     'library/shadcn-ui': 'Shadcn UI',
     'library/shiki': 'Shiki',
     'library/tailwind-css': 'Tailwind CSS',
     'use-case/e-commerce': 'E-commerce',
     'use-case/experiment': 'Experiment',
-    'use-case/saas': 'SaaS',
     'use-case/location': 'Location',
+    'use-case/saas': 'SaaS',
 };
 
 const technologyCategories = ['library', 'language', 'framework'];
@@ -66,7 +85,7 @@ const templatePropertyOrder: OrderMap = {
         '': [
             'id',
             'verified',
-            'author',
+            'ecosystem',
             'documentationUrl',
             'sourceUrl',
             'demoUrl',
@@ -77,7 +96,7 @@ const templatePropertyOrder: OrderMap = {
             'categories',
             'relatedTemplates',
         ],
-        author: {
+        ecosystem: {
             '': ['name', 'avatarUrl', 'websiteUrl'],
         },
     },
@@ -111,146 +130,155 @@ const formatting: Formatting = {
 };
 
 type TemplateDocumentOptions = {
-  name: string,
-  type: 'string' | 'boolean' | 'number' | 'object' | 'array' | 'reference',
-  description: string,
-  default: string,
-  required: boolean,
+    name: string,
+    type: 'string' | 'boolean' | 'number' | 'object' | 'array' | 'reference',
+    description: string,
+    default: string,
+    required: boolean,
 };
 
 type TemplateDocumentCategory = {
-  id: string,
-  name: string,
-  iconUrl?: string,
+    id: string,
+    name: string,
+    iconUrl?: string,
 };
 
 type TemplateDocument = {
-  id: string,
-  title: string,
-  description: string,
-  documentation: string,
-  demoUrl?: string,
-  deployUrl?: string,
-  coverImageUrl: string,
-  coverVideoUrl?: string,
-  installationUrl: string,
-  sourceUrl: string,
-  categories: TemplateDocumentCategory[],
-  verified?: boolean,
-  relatedTemplates: string[],
-  options: TemplateDocumentOptions[],
-  author: {
-    name: string,
-    avatarUrl: string,
-    websiteUrl: string,
-  },
-  popularity?: number,
-  publishTime?: number,
+    id: string,
+    title: string,
+    description: string,
+    documentation: string,
+    demoUrl?: string,
+    deployUrl?: string,
+    coverImageUrl: string,
+    coverVideoUrl?: string,
+    installationUrl: string,
+    sourceUrl: string,
+    categories: TemplateDocumentCategory[],
+    verified?: boolean,
+    relatedTemplates: string[],
+    options: TemplateDocumentOptions[],
+    ecosystem: {
+        name: string,
+        avatarUrl: string,
+        websiteUrl: string,
+    },
+    popularity?: number,
+    publishTime?: number,
 };
 
 type TemplateCatalog = {
-  categories: string[],
-  catalogTemplates: Record<string, TemplateFile>,
-  otherTemplates: TemplateFile[],
-  violations: Violation[],
+    categories: string[],
+    listedTemplates: TemplateFile[],
+    unlistedTemplates: TemplateFile[],
+    jsonFiles: string[],
+    violations: Violation[],
 };
 
 type TemplateUpdate = {
-  index: TemplateDocument[],
-  covers: Record<string, string>,
-  assets: Record<string, string>,
-  removedTemplates: string[],
-  summary: {
-    indexed: number,
-    additions: number,
-    removals: number,
-    total: number,
-  },
+    index: TemplateDocument[],
+    covers: Record<string, string>,
+    assets: Record<string, string>,
+    removedTemplates: string[],
+    summary: {
+        indexed: number,
+        additions: number,
+        removals: number,
+        total: number,
+    },
 };
 
 type Violation = {
-  path: string,
-  description: string,
-  details?: string[],
+    path: string,
+    description: string,
+    details?: string[],
 };
 
 type TemplateMetadata = {
-  id: string,
-  verified?: boolean,
-  documentationUrl: string,
-  sourceUrl: string,
-  demoUrl?: string,
-  deployUrl?: string,
-  coverImageUrl: string,
-  coverVideoUrl?: string,
-  installationUrl: string,
-  categories: string[],
-  relatedTemplates?: string[],
-  author: {
-    name: string,
-    avatarUrl: string,
-    websiteUrl: string,
-  },
+    id: string,
+    verified?: boolean,
+    documentationUrl: string,
+    sourceUrl: string,
+    demoUrl?: string,
+    deployUrl?: string,
+    coverImageUrl: string,
+    coverVideoUrl?: string,
+    installationUrl: string,
+    categories: string[],
+    relatedTemplates?: string[],
+    ecosystem: {
+        name: string,
+        avatarUrl: string,
+        websiteUrl: string,
+    },
 };
 
 type OptionTypes = {
-  string: {
-    choices?: string[],
-  },
-  boolean: Record<never, never>,
-  number: Record<never, never>,
-  array: Record<never, never>,
-  object: Record<never, never>,
-  reference: Record<never, never>,
+    string: {
+        choices?: string[],
+    },
+    boolean: Record<never, never>,
+    number: Record<never, never>,
+    array: Record<never, never>,
+    object: Record<never, never>,
+    reference: Record<never, never>,
 };
 
 type OptionDefinition<T extends keyof OptionTypes = keyof OptionTypes> = {
-  [K in T]: OptionTypes[K] & {
+    [K in T]: OptionTypes[K] & {
     type: K,
     default?: JsonValue,
     description: string,
     required?: boolean,
-  }
+}
 }[T];
 
 type Template = {
-  title: string,
-  description: string,
-  metadata: TemplateMetadata,
-  options?: Record<string, OptionDefinition>,
-  actions: Array<Record<string, any>>,
+    title: string,
+    description: string,
+    metadata: TemplateMetadata,
+    options?: Record<string, OptionDefinition>,
+    actions: Array<Record<string, any>>,
 };
 
 type CatalogTemplate = Template & {
-  metadata: TemplateMetadata,
+    metadata: TemplateMetadata,
 };
 
 type TemplateFile<T extends Template = Template | CatalogTemplate> = T & {
-  path: string,
+    path: string,
 };
 
 type PropertyAccessor = {
-  path: string,
-  label: string,
-  value?: string,
-  set: (value: string) => void,
+    path: string,
+    label: string,
+    value?: string,
+    set: (value: string) => void,
 };
 
 type UpdateOptions = {
-  catalog: TemplateCatalog,
-  client: TypesenseClient,
-  collection: string,
+    catalog: TemplateCatalog,
+    client: TypesenseClient,
+    collection: string,
 };
 
 type UpdatedDocumentation = {
-  documentation: string,
-  assets: Record<string, string>,
+    documentation: string,
+    assets: Record<string, string>,
 };
+
+type Registry = Array<{
+    pattern: string,
+    destination: string,
+}>;
 
 async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpdate> {
     const {catalog} = options;
     const index = await loadIndexedTemplates(options.client, options.collection);
     const indexedTemplates = new Set(index.map(template => template.id));
+    const listedTemplates = Object.fromEntries(
+        catalog.listedTemplates.map(template => [template.metadata.id, template]),
+    );
 
     const update: TemplateUpdate = {
         index: [],
@@ -266,13 +294,13 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
     };
 
     for (const {id} of index) {
-        if (catalog.catalogTemplates[id] === undefined) {
+        if (listedTemplates[id] === undefined) {
             update.removedTemplates.push(id);
             update.summary.removals++;
         }
     }
 
-    for (const {metadata, ...template} of Object.values(catalog.catalogTemplates)) {
+    for (const {metadata, ...template} of catalog.listedTemplates) {
         const isNew = !indexedTemplates.has(metadata.id);
         const coverImageName = generateCoverFileName(metadata.id, metadata.coverImageUrl);
         const coverVideoName = metadata.coverVideoUrl !== undefined
@@ -299,10 +327,10 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             id: metadata.id,
             title: template.title,
             description: template.description,
-            author: {
-                name: metadata.author.name,
-                avatarUrl: metadata.author.avatarUrl,
-                websiteUrl: metadata.author.websiteUrl,
+            ecosystem: {
+                name: metadata.ecosystem.name,
+                avatarUrl: metadata.ecosystem.avatarUrl,
+                websiteUrl: metadata.ecosystem.websiteUrl,
             },
             categories: metadata.categories.map(
                 category => ({
@@ -433,11 +461,17 @@ async function updateTemplateIndex(client: TypesenseClient, collection: string, 
 
 async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> {
     const categories = new Set<string>();
-    const catalogTemplates: Record<string, TemplateFile> = {};
-    const otherTemplates: TemplateFile[] = [];
+    const listedTemplates: Record<string, TemplateFile> = {};
+    const unlistedTemplates: TemplateFile[] = [];
+    const jsonFiles: string[] = [];
     const violations: Violation[] = [];
-    const validateCatalogTemplate = await createTemplateValidator<CatalogTemplate>(CATALOG_TEMPLATE_SCHEMA_URL);
-    const validateTemplate = await createTemplateValidator<Template>(TEMPLATE_SCHEMA_URL);
+    const validateCatalogTemplate = await createValidator<CatalogTemplate>(CATALOG_TEMPLATE_SCHEMA_URL);
+    const validateTemplate = await createValidator<Template>(TEMPLATE_SCHEMA_URL);
+
+    const registry = JsonParser.parse(
+        readFileSync(join(directory, 'registry.json5'), 'utf-8'),
+        JsonArrayNode,
+    ).toJSON() as Registry;
 
     for (const category of Object.keys(categoryMap)) {
         const iconPath = getCategoryIconFile(category);
@@ -456,7 +490,15 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
         }
     }
 
-    for (const path of findTemplateFiles(directory)) {
+    for (const path of findJsonFiles(directory)) {
+        if (!isTemplate(path)) {
+            violations.push(...await validateJson(path));
+
+            jsonFiles.push(path);
+
+            continue;
+        }
+
         if (!path.endsWith('.json5')) {
             violations.push({
                 path: path,
@@ -468,7 +510,7 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
 
         try {
             templateNode = JsonParser.parse(readFileSync(path, 'utf-8'));
-        } catch (error) {
+        } catch {
             violations.push({
                 path: path,
                 description: 'The file is not a valid JSON.',
@@ -480,9 +522,9 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
         const template = templateNode.toJSON();
 
         const schema = typeof template === 'object'
-          && !Array.isArray(template)
-          && typeof template?.$schema === 'string'
-          && [TEMPLATE_SCHEMA_URL, CATALOG_TEMPLATE_SCHEMA_URL].includes(template.$schema)
+        && !Array.isArray(template)
+        && typeof template?.$schema === 'string'
+        && [TEMPLATE_SCHEMA_URL, CATALOG_TEMPLATE_SCHEMA_URL].includes(template.$schema)
             ? template.$schema
             : null;
 
@@ -514,7 +556,7 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
         }
 
         if (schema === TEMPLATE_SCHEMA_URL) {
-            otherTemplates.push({
+            unlistedTemplates.push({
                 path: path,
                 ...template,
             });
@@ -525,11 +567,34 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
         const {metadata} = template;
         const {id} = metadata;
 
-        if (catalogTemplates[id] !== undefined) {
+        if (listedTemplates[id] !== undefined) {
             violations.push({
                 path: path,
-                description: `The template ID "${id}" is already used by "${catalogTemplates[id].path}".`,
+                description: `The template ID "${id}" is already used by "${listedTemplates[id].path}".`,
             });
+        }
+
+        const {installationUrl} = metadata;
+
+        if (installationUrl !== undefined) {
+            const resolvedPath = resolvePath(new URL(installationUrl), registry);
+
+            if (resolvedPath === null) {
+                violations.push({
+                    path: path,
+                    description: 'The installation URL does not match any registry pattern.',
+                });
+            } else if (!path.startsWith(join(directory, resolvedPath))) {
+                violations.push({
+                    path: path,
+                    description: 'The installation URL does not match the template path.',
+                });
+            } else if (!existsSync(join(directory, resolvedPath, 'template.json5'))) {
+                violations.push({
+                    path: path,
+                    description: 'The installation URL does not point to a valid template.',
+                });
+            }
         }
 
         const urlProperties: PropertyAccessor[] = [
@@ -643,7 +708,7 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
             });
         }
 
-        catalogTemplates[template.metadata.id] = {
+        listedTemplates[template.metadata.id] = {
             path: path,
             ...template,
         };
@@ -666,11 +731,11 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
         }
     }
 
-    for (const template of Object.values(catalogTemplates)) {
+    for (const template of Object.values(listedTemplates)) {
         const relatedTemplates = template.metadata.relatedTemplates ?? [];
 
         for (const relatedTemplate of relatedTemplates) {
-            if (catalogTemplates[relatedTemplate] === undefined) {
+            if (listedTemplates[relatedTemplate] === undefined) {
                 violations.push({
                     path: template.path,
                     description: `Related template "${relatedTemplate}" does not exist.`,
@@ -688,10 +753,101 @@ async function loadTemplateCatalog(directory: string): Promise<TemplateCatalog> 
 
     return {
         categories: Array.from(categories),
-        catalogTemplates: catalogTemplates,
-        otherTemplates: otherTemplates,
+        listedTemplates: Object.values(listedTemplates),
+        unlistedTemplates: unlistedTemplates,
+        jsonFiles: jsonFiles,
         violations: violations,
     };
+}
+
+function resolvePath(url: URL, registry: Registry): string | null {
+    for (const {pattern, destination} of registry) {
+        const match = url.href.match(new RegExp(pattern));
+
+        if (match === null) {
+            continue;
+        }
+
+        return destination.replace(/\$([0-9]+)/g, (_, index) => match[Number.parseInt(index, 10)]);
+    }
+
+    return null;
+}
+
+function isTemplate(path: string): boolean {
+    let object: JsonObjectNode;
+
+    try {
+        object = JsonParser.parse(readFileSync(path, 'utf-8'), JsonObjectNode);
+    } catch {
+        return false;
+    }
+
+    if (!object.has('$schema')) {
+        return false;
+    }
+
+    return JSON_TEMPLATE_SCHEMAS.includes(object.get('$schema').toJSON() as string);
+}
+
+async function validateJson(path: string): Promise<Violation[]> {
+    const violations: Violation[] = [];
+    let json: JsonValueNode;
+
+    try {
+        json = JsonParser.parse(readFileSync(path, 'utf-8'));
+    } catch {
+        violations.push({
+            path: path,
+            description: 'The file is not a valid JSON.',
+        });
+
+        return violations;
+    }
+
+    if (!(json instanceof JsonObjectNode)) {
+        return violations;
+    }
+
+    if (!isFormatted(json)) {
+        violations.push({
+            path: path,
+            description: 'JSON file must be formatted.',
+        });
+    }
+
+    const schema = json.has('$schema') ? json.get('$schema').toJSON() : null;
+
+    if (typeof schema !== 'string' || !JSON_SCHEMAS.includes(schema)) {
+        violations.push({
+            path: path,
+            description: 'The $schema is unknown.',
+        });
+
+        return violations;
+    }
+
+    const validator = await createValidator(schema);
+
+    if (!validator(json.toJSON())) {
+        violations.push({
+            path: path,
+            description: 'The JSON file does not match the schema.',
+            details: validator.errors?.map(error => {
+                let message = error.instancePath === ''
+                    ? error.message ?? 'Unknown error'
+                    : `${error.instancePath}: ${error.message}`;
+
+                for (const [param, value] of Object.entries(error.params)) {
+                    message += `\n${param}: ${value}`;
+                }
+
+                return message;
+            }),
+        });
+    }
+
+    return violations;
 }
 
 function isArraySorted<T extends string | number>(array: T[]): boolean {
@@ -705,9 +861,9 @@ function isArraySorted<T extends string | number>(array: T[]): boolean {
 }
 
 interface OrderMap {
-  '': string[];
+    '': string[];
 
-  [key: string]: OrderMap | string[];
+    [key: string]: OrderMap | string[];
 }
 
 function isFormatted(value: JsonValueNode): boolean {
@@ -775,40 +931,52 @@ function findDuplicates(values: string[]): string[] {
     return duplicates;
 }
 
-async function createTemplateValidator<T>(schemaUrl: string): Promise<ValidateFunction<T>> {
+async function createValidator<T>(schemaUrl: string): Promise<ValidateFunction<T>> {
     const ajv = new Ajv({
         allowUnionTypes: true,
     });
 
     addFormats(ajv);
 
-    return ajv.compile(await loadTemplateSchema<T>(schemaUrl));
+    return ajv.compile(await loadSchema<T>(schemaUrl));
 }
 
-async function loadTemplateSchema<T>(url: string): Promise<JSONSchemaType<T>> {
+const schemaCache: Map<string, JSONSchemaType<any>> = new Map();
+
+async function loadSchema<T>(url: string): Promise<JSONSchemaType<T>> {
+    const cachedSchema = schemaCache.get(url);
+
+    if (cachedSchema !== undefined) {
+        return cachedSchema as JSONSchemaType<T>;
+    }
+
     const response = await fetch(url);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch schema: ${response.statusText}`);
     }
 
-    return response.json() as Promise<JSONSchemaType<T>>;
+    const schema = (await response.json()) as JSONSchemaType<any>;
+
+    schemaCache.set(url, schema);
+
+    return schema as JSONSchemaType<T>;
 }
 
-function findTemplateFiles(directory: string): string[] {
+function findJsonFiles(directory: string): string[] {
     const files: string[] = [];
 
     for (const file of readdirSync(directory)) {
         const path = `${directory}/${file}`;
 
-        if (file === 'template.json' || file === 'template.json5') {
+        if (['.json', '.json5'].includes(extname(file))) {
             files.push(path);
 
             continue;
         }
 
         if (lstatSync(path).isDirectory()) {
-            files.push(...findTemplateFiles(path));
+            files.push(...findJsonFiles(path));
         }
     }
 
@@ -819,6 +987,7 @@ function reportViolations(violations: Violation[]): void {
     const table = new Table({
         colWidths: [40, 40, 40],
         wordWrap: true,
+        wrapOnWordBoundary: false,
     });
 
     table.push([
@@ -839,9 +1008,9 @@ function reportViolations(violations: Violation[]): void {
 }
 
 interface Tree {
-  label: string;
-  children: Record<string, Tree>;
-  count: number;
+    label: string;
+    children: Record<string, Tree>;
+    count: number;
 }
 
 function formatCategoryTree(categories: string[], counts: Record<string, number> = {}): string {
@@ -909,7 +1078,7 @@ function formatCategoryTree(categories: string[], counts: Record<string, number>
 function countCategories(catalog: TemplateCatalog): Record<string, number> {
     const counts: Record<string, Set<string>> = {};
 
-    for (const template of Object.values(catalog.catalogTemplates)) {
+    for (const template of catalog.listedTemplates) {
         for (const category of template.metadata.categories) {
             const path = category.split('/');
 
@@ -943,17 +1112,25 @@ function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate)
 
     let relatedTemplates = 0;
     let categoriesCount = 0;
-    const authors = new Set<string>();
+    let installableTemplates = 0;
+    const ecosystem = new Set<string>();
 
-    for (const template of Object.values(catalog.catalogTemplates)) {
+    for (const template of catalog.listedTemplates) {
         relatedTemplates += template.metadata.relatedTemplates?.length ?? 0;
         categoriesCount += template.metadata.categories?.length ?? 0;
-        authors.add(template.metadata.author.websiteUrl);
+        ecosystem.add(template.metadata.ecosystem.websiteUrl);
+
+        if (template.metadata.installationUrl !== undefined) {
+            installableTemplates++;
+        }
     }
 
     table.push(
         {
             'Current catalog size': `${update.summary.indexed}`,
+        },
+        {
+            'Installable templates': `${installableTemplates}`,
         },
         {
             'Added templates': `${update.summary.additions}`,
@@ -968,7 +1145,7 @@ function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate)
             'Total categories': `${catalog.categories.length}`,
         },
         {
-            'Total authors': `${authors.size}`,
+            'Total ecosystems': `${ecosystem.size}`,
         },
         {
             'Average related templates': (relatedTemplates / update.summary.total).toFixed(2),
@@ -1016,7 +1193,7 @@ async function run(): Promise<void> {
             console.log('Formatting templates...');
 
             const catalog = await loadTemplateCatalog(directory);
-            const templates = [...Object.values(catalog.catalogTemplates), ...catalog.otherTemplates];
+            const templates = [...catalog.listedTemplates, ...catalog.unlistedTemplates];
 
             for (const {path} of templates) {
                 const source = JsonParser.parse(readFileSync(path, 'utf-8'), JsonObjectNode);
@@ -1041,6 +1218,14 @@ async function run(): Promise<void> {
                 formattedTemplate.reset();
 
                 writeFileSync(path, `${formattedTemplate.toString(formatting)}\n`);
+            }
+
+            for (const file of catalog.jsonFiles) {
+                const source = JsonParser.parse(readFileSync(file, 'utf-8'));
+
+                source.reset();
+
+                writeFileSync(file, `${source.toString(formatting)}\n`);
             }
 
             console.log(chalk.green('Templates formatted successfully!'));

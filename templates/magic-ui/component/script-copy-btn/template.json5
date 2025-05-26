@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Script copy button",
+  "description": "A button for quickly copying scripts, commands, or code snippets.",
+  "metadata": {
+    "id": "library/magic-ui/script-copy-btn",
+    "ecosystem": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/script-copy-btn/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/script-copy-btn/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/script-copy-btn/cover.png",
+    "installationUrl": "magic-ui://component/script-copy-btn",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/code",
+      "language/javascript",
+      "language/typescript",
+      "library/framer-motion",
+      "library/magic-ui",
+      "library/shiki"
+    ],
+    "relatedTemplates": [
+      "library/magic-ui/code-comparison",
+      "library/magic-ui/terminal"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "script-copy-btn",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "components": [
+          "copy-command-block.tsx"
+        ],
+        "extension": "magic-ui://component/script-copy-btn/extension.json5"
+      }
+    }
+  ]
+}

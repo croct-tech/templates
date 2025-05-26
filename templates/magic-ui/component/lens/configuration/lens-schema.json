@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Image",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The image."
+    },
+    "zoomFactor": {
+      "type": {
+        "type": "number",
+        "minimum": 1
+      },
+      "label": "Zoom factor",
+      "description": "The magnification factor of the lens",
+      "private": false,
+      "optional": true,
+      "position": 1
+    },
+    "lensSize": {
+      "type": {
+        "type": "number",
+        "minimum": 1
+      },
+      "label": "Lens size",
+      "description": "The size of the lens in pixels (works as a diameter).",
+      "private": false,
+      "optional": true,
+      "position": 2
+    },
+    "lensColor": {
+      "type": {
+        "type": "text",
+        "format": "color"
+      },
+      "label": "Lens color",
+      "description": "The color of the lens (CSS color value).",
+      "private": false,
+      "optional": true,
+      "position": 3
+    },
+    "duration": {
+      "type": {
+        "type": "number",
+        "minimum": 0.1
+      },
+      "label": "Duration",
+      "description": "Duration of the animation when the lens moves (in seconds).",
+      "private": false,
+      "optional": true,
+      "position": 4
+    }
+  }
+}

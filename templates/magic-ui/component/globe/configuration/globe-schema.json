@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "markers": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "latitude": {
+              "type": {
+                "type": "number",
+                "maximum": 90,
+                "minimum": -90
+              },
+              "label": "Latitude",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The latitude of the marker."
+            },
+            "longitude": {
+              "type": {
+                "type": "number",
+                "maximum": 180,
+                "minimum": -180
+              },
+              "label": "Longitude",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The longitude of the marker."
+            },
+            "size": {
+              "type": {
+                "type": "number",
+                "minimum": 0
+              },
+              "label": "Size",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The size of the marker in pixels. The default is 0.01."
+            }
+          }
+        },
+        "itemLabel": "Marker"
+      },
+      "label": "Markers",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "A list of markers to be displayed on the globe."
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Hero video dialog",
+  "description": "A hero section with a video dialog to introduce or demo your product.",
+  "metadata": {
+    "id": "library/magic-ui/hero-video-dialog",
+    "ecosystem": {
+      "name": "Magic UI",
+      "avatarUrl": "https://github.com/magicuidesign.png",
+      "websiteUrl": "https://magicui.design?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/cover.mp4",
+    "installationUrl": "magic-ui://component/hero-video-dialog",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/hero",
+      "interface/marketing",
+      "interface/media",
+      "language/javascript",
+      "language/typescript",
+      "library/magic-ui"
+    ],
+    "relatedTemplates": [
+      "interface/component/video-player"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "../component",
+      "options": {
+        "id": "hero-video-dialog",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "components": [
+          "hero-video-player.tsx"
+        ],
+        "extension": "magic-ui://component/hero-video-dialog/extension.json5"
+      }
+    }
+  ]
+}

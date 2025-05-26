@@ -1,0 +1,160 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Product features"
+      }
+    },
+    "features": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "ViewQuiltRounded"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Dashboard"
+              }
+            },
+            "images": {
+              "type": "structure",
+              "attributes": {
+                "dark": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/201f193a-7de5-44cf-bdd5-afba5403cc77"
+                  }
+                },
+                "light": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/d194c8c9-6070-4ca2-ba64-ef28bb972ca9"
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "This item could provide a snapshot of the most important metrics or data points related to the product."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "EdgesensorHighRounded"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Mobile integration"
+              }
+            },
+            "images": {
+              "type": "structure",
+              "attributes": {
+                "dark": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/d677a355-ef64-4fa5-95ad-4eaebe8789ef"
+                  }
+                },
+                "light": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/7e410126-57fa-471e-905c-a7c5371e2571"
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "This item could provide information about the mobile app version of the product."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "DevicesRounded"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Available on all platforms"
+              }
+            },
+            "images": {
+              "type": "structure",
+              "attributes": {
+                "dark": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/ed4cd705-64b4-4889-8e58-5314e4be1e54"
+                  }
+                },
+                "light": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/47d0fdff-c280-4058-b1df-4d78826610fc"
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "This item could let users know the product is available on all platforms, such as web, mobile, and desktop."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Provide a brief overview of the key features of the product. For example, you could list the number of features, their types or benefits, and add-ons."
+      }
+    }
+  }
+}

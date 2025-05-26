@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TemplateCanvas } from "@croct/template-ui/next"
+import { TemplateCanvas } from "@croct/template-ui/react"
 import { renderMarkdown } from "?/**/*/markdown.{tsx,js}"
 import { fetchContent } from "@croct/plug-next/server"
 import localFont from "next/font/local";
@@ -26,9 +26,8 @@ export default function Home({content}) {
       ctaLabel="Edit this page"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       ctaTarget="_blank"
-      src="#"
       fullScreen
-      portal
+      isolated
     >
       <div
         className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}

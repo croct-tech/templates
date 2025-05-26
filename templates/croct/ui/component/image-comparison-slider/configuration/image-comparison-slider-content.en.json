@@ -1,33 +1,34 @@
 {
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
   "type": "structure",
   "attributes": {
-  "firstImage": {
-    "type": "text",
-    "value": {
-      "type": "static",
-      "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/56afb365-38a9-46fd-b87b-0e2a7068f982"
-    }
-  },
-  "orientation": {
-    "type": "text",
-    "value": {
-      "type": "static",
-      "value": "vertical"
-    }
-  },
-  "secondImage": {
-    "type": "text",
-    "value": {
-      "type": "static",
-      "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/56afb365-38a9-46fd-b87b-0e2a7068f982"
-    }
-  },
-  "startPosition": {
-    "type": "number",
-    "value": {
-      "type": "static",
-      "value": 50
+    "firstImage": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/56afb365-38a9-46fd-b87b-0e2a7068f982"
+      }
+    },
+    "orientation": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "vertical"
+      }
+    },
+    "secondImage": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/56afb365-38a9-46fd-b87b-0e2a7068f982"
+      }
+    },
+    "startPosition": {
+      "type": "number",
+      "value": {
+        "type": "static",
+        "value": 50
+      }
     }
   }
-}
 }

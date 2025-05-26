@@ -1,0 +1,97 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "output": {
+      "label": "Output",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The output that appear in the terminal.",
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "semantics": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "log": {
+                    "label": "Log",
+                    "description": "A neutral message in gray.",
+                    "position": 0,
+                    "default": true
+                  },
+                  "success": {
+                    "label": "Success",
+                    "description": "A confirmation message in green.",
+                    "position": 1
+                  },
+                  "info": {
+                    "label": "Info",
+                    "description": "An informative message in blue.",
+                    "position": 2
+                  },
+                  "error": {
+                    "label": "Error",
+                    "description": "An error message in red.",
+                    "position": 3
+                  }
+                }
+              },
+              "label": "Semantics",
+              "private": false,
+              "position": 0,
+              "description": "The semantics of the output."
+            },
+            "message": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Message",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The content of the line."
+            },
+            "delay": {
+              "type": {
+                "type": "number",
+                "integer": true,
+                "minimum": 0
+              },
+              "label": "Delay",
+              "private": false,
+              "optional": true,
+              "position": 2,
+              "description": "Delay in milliseconds before the animation starts. The default is 0."
+            },
+            "animation": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "typing": {
+                    "label": "Typing",
+                    "position": 0,
+                    "default": true
+                  },
+                  "reveal": {
+                    "label": "Reveal",
+                    "position": 1
+                  }
+                }
+              },
+              "label": "Animation",
+              "private": false,
+              "position": 3,
+              "description": "Defines how the line should appear."
+            }
+          }
+        },
+        "itemLabel": "Line"
+      }
+    }
+  }
+}

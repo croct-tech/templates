@@ -64,11 +64,11 @@ export function HighlightsSection(props: HighlightsSectionProps) {
           <Typography component="h2" variant="h4" gutterBottom>
             {title}
           </Typography>
-          (description && {
+          {description && (
             <Typography variant="body1" sx={{ color: 'grey.400' }}>
               {description}
             </Typography>
-          })
+          )}
         </Box>
         <Grid container spacing={2}>
           {highlights.map((item, index) => (

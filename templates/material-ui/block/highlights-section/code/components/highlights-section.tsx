@@ -16,9 +16,9 @@ import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 
 export type HighlightsSectionProps = {
   title: string,
-  description?: 'QueryStatsRounded' | 'ThumbUpAltRounded' | 'AutoFixHighRounded' | 'ConstructionRounded' | 'SupportAgentRounded' | 'SettingsSuggestRounded',
+  description?: string,
   highlights: {
-    icon: string,
+    icon: 'QueryStatsRounded' | 'ThumbUpAltRounded' | 'AutoFixHighRounded' | 'ConstructionRounded' | 'SupportAgentRounded' | 'SettingsSuggestRounded',
     title: string,
     description: string,
   }[],

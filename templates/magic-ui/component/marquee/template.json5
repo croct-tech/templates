@@ -4,7 +4,7 @@
   "description": "An infinite scrolling component for displaying testimonials, or user reviews.",
   "metadata": {
     "id": "library/magic-ui/marquee",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"
@@ -30,8 +30,7 @@
       "interface/section/testimonial-section",
       "library/magic-ui/bento-grid",
       "library/magic-ui/marquee",
-      "library/material-ui/testimonials-section",
-      "library/tailwind-css/testimonial-section"
+      "library/material-ui/testimonials-section"
     ]
   },
   "options": {

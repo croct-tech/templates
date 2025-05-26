@@ -1,4 +1,4 @@
-import { CtaSection } from "?/**/*/cta-section.{js,jsx,ts,tsx}"
+import { FeaturesDemo } from "?/**/*/features-demo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 
@@ -7,14 +7,14 @@ export default async function Page() {
 
   return (
     <TemplateCanvas
-      title="Tailwind - CTA section"
+      title="Material UI - Features section"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.tailwind&utm_content=cta_section&utm_term=nextjs"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.material_ui&utm_content=features_section&utm_term=nextjs"
       ctaTarget="_blank"
       fullScreen
       isolated
     >
-      <CtaSection {...content} />
+      <FeaturesDemo {...content} />
     </TemplateCanvas>
   );
 }

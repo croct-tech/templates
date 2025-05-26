@@ -5,7 +5,7 @@
   "metadata": {
     "id": "interface/section/logo-cloud",
     "verified": true,
-    "author": {
+    "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
@@ -20,8 +20,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "library/material-ui/logo-collection",
-      "library/tailwind-css/logo-cloud"
+      "library/material-ui/logo-collection"
     ]
   },
   "actions": [

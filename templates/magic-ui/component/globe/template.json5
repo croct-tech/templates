@@ -4,7 +4,7 @@
   "description": "A 3D globe to visualize global presence, activity, or reach.",
   "metadata": {
     "id": "library/magic-ui/globe",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

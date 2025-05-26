@@ -4,7 +4,7 @@
   "description": "A pricing section using Material UI components and Croct.",
   "metadata": {
     "id": "library/material-ui/pricing-section",
-    "author": {
+    "ecosystem": {
       "name": "Material UI",
       "avatarUrl": "https://github.com/mui.png",
       "websiteUrl": "https://mui.com/?utm_source=croct"
@@ -19,8 +19,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "library/shadcn-ui/pricing-page",
-      "library/tailwind-css/pricing-section"
+      "library/shadcn-ui/pricing-page"
     ]
   },
   "actions": [

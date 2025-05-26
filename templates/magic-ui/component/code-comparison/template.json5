@@ -4,7 +4,7 @@
   "description": "A side-by-side code block layout for comparing implementations or versions.",
   "metadata": {
     "id": "library/magic-ui/code-comparison",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

@@ -4,7 +4,7 @@
   "description": "A list of avatars to represent people, brands, or tools.",
   "metadata": {
     "id": "library/magic-ui/avatar-circles",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

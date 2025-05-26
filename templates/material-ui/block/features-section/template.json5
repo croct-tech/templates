@@ -4,7 +4,7 @@
   "description": "A features section using Material UI components and Croct.",
   "metadata": {
     "id": "library/material-ui/features-section",
-    "author": {
+    "ecosystem": {
       "name": "Material UI",
       "avatarUrl": "https://github.com/mui.png",
       "websiteUrl": "https://mui.com/?utm_source=croct"
@@ -25,8 +25,7 @@
     ],
     "relatedTemplates": [
       "interface/section/cards-section",
-      "library/material-ui/highlights-section",
-      "library/tailwind-css/feature-section"
+      "library/material-ui/highlights-section"
     ]
   },
   "options": {

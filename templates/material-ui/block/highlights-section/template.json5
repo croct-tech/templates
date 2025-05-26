@@ -4,7 +4,7 @@
   "description": "A highlights section using Material UI components and Croct.",
   "metadata": {
     "id": "library/material-ui/highlights-section",
-    "author": {
+    "ecosystem": {
       "name": "Material UI",
       "avatarUrl": "https://github.com/mui.png",
       "websiteUrl": "https://mui.com/?utm_source=croct"
@@ -20,8 +20,7 @@
     ],
     "relatedTemplates": [
       "interface/section/cards-section",
-      "library/material-ui/features-section",
-      "library/tailwind-css/feature-section"
+      "library/material-ui/features-section"
     ]
   },
   "actions": [

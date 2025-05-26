@@ -4,7 +4,7 @@
   "description": "Import the Magic UI example into the project.",
   "metadata": {
     "id": "library/magic-ui/component",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

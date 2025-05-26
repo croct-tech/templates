@@ -85,7 +85,7 @@ const templatePropertyOrder: OrderMap = {
         '': [
             'id',
             'verified',
-            'author',
+            'ecosystem',
             'documentationUrl',
             'sourceUrl',
             'demoUrl',
@@ -96,7 +96,7 @@ const templatePropertyOrder: OrderMap = {
             'categories',
             'relatedTemplates',
         ],
-        author: {
+        ecosystem: {
             '': ['name', 'avatarUrl', 'websiteUrl'],
         },
     },
@@ -158,7 +158,7 @@ type TemplateDocument = {
     verified?: boolean,
     relatedTemplates: string[],
     options: TemplateDocumentOptions[],
-    author: {
+    ecosystem: {
         name: string,
         avatarUrl: string,
         websiteUrl: string,
@@ -206,7 +206,7 @@ type TemplateMetadata = {
     installationUrl: string,
     categories: string[],
     relatedTemplates?: string[],
-    author: {
+    ecosystem: {
         name: string,
         avatarUrl: string,
         websiteUrl: string,
@@ -327,10 +327,10 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             id: metadata.id,
             title: template.title,
             description: template.description,
-            author: {
-                name: metadata.author.name,
-                avatarUrl: metadata.author.avatarUrl,
-                websiteUrl: metadata.author.websiteUrl,
+            ecosystem: {
+                name: metadata.ecosystem.name,
+                avatarUrl: metadata.ecosystem.avatarUrl,
+                websiteUrl: metadata.ecosystem.websiteUrl,
             },
             categories: metadata.categories.map(
                 category => ({
@@ -1112,17 +1112,25 @@ function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate)
 
     let relatedTemplates = 0;
     let categoriesCount = 0;
-    const authors = new Set<string>();
+    let installableTemplates = 0;
+    const ecosystem = new Set<string>();
 
     for (const template of catalog.listedTemplates) {
         relatedTemplates += template.metadata.relatedTemplates?.length ?? 0;
         categoriesCount += template.metadata.categories?.length ?? 0;
-        authors.add(template.metadata.author.websiteUrl);
+        ecosystem.add(template.metadata.ecosystem.websiteUrl);
+
+        if (template.metadata.installationUrl !== undefined) {
+            installableTemplates++;
+        }
     }
 
     table.push(
         {
             'Current catalog size': `${update.summary.indexed}`,
+        },
+        {
+            'Installable templates': `${installableTemplates}`,
         },
         {
             'Added templates': `${update.summary.additions}`,
@@ -1137,7 +1145,7 @@ function reportTemplateSummary(catalog: TemplateCatalog, update: TemplateUpdate)
             'Total categories': `${catalog.categories.length}`,
         },
         {
-            'Total authors': `${authors.size}`,
+            'Total ecosystems': `${ecosystem.size}`,
         },
         {
             'Average related templates': (relatedTemplates / update.summary.total).toFixed(2),

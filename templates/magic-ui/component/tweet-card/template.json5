@@ -4,7 +4,7 @@
   "description": "A styled tweet embed to highlight social proof or share updates.",
   "metadata": {
     "id": "library/magic-ui/tweet-card",
-    "author": {
+    "ecosystem": {
       "name": "Magic UI",
       "avatarUrl": "https://github.com/magicuidesign.png",
       "websiteUrl": "https://magicui.design?utm_source=croct"

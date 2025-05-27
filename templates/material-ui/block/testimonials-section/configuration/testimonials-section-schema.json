@@ -87,6 +87,42 @@
                     "optional": false,
                     "position": 2,
                     "description": "The role of the quotee."
+                  },
+                  "companyLogo": {
+                    "type": {
+                      "type": "structure",
+                      "attributes": {
+                        "lightModeLogo": {
+                          "type": {
+                            "id": "@croct/file",
+                            "type": "reference",
+                            "properties": {}
+                          },
+                          "label": "Light mode logo",
+                          "private": false,
+                          "optional": false,
+                          "position": 0,
+                          "description": "The light mode company logo."
+                        },
+                        "darkModeLogo": {
+                          "type": {
+                            "id": "@croct/file",
+                            "type": "reference",
+                            "properties": {}
+                          },
+                          "label": "Dark mode logo",
+                          "private": false,
+                          "optional": false,
+                          "position": 1,
+                          "description": "The dark mode company logo."
+                        }
+                      }
+                    },
+                    "label": "Company logo",
+                    "private": false,
+                    "optional": false,
+                    "position": 3,
+                    "description": "The company logo of the quotee."
                   }
                 }
               },
@@ -98,14 +134,14 @@
             }
           }
         },
-        "minimumLength": 1,
-        "maximumLength": 6
+        "maximumLength": 6,
+        "minimumLength": 1
       },
       "label": "Testimonials",
-      "description": "The list of testimonials.",
       "private": false,
       "optional": false,
-      "position": 2
+      "position": 2,
+      "description": "The list of testimonials."
     }
   },
   "description": "A section of testimonials."

@@ -52,6 +52,25 @@
                     "type": "static",
                     "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/535496ad-70bf-47e6-82d9-f85465d3739c"
                   }
+                },
+                "companyLogo": {
+                  "type": "structure",
+                  "attributes": {
+                    "darkModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/c109535d-3ce6-48fe-bfe4-6d796ca04194"
+                      }
+                    },
+                    "lightModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/b4a111bd-285c-48d2-afeb-e53ab9f18b91"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -89,6 +108,25 @@
                   "value": {
                     "type": "static",
                     "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/44346fb8-f14b-4fe0-a08c-3ecf9839a1d1"
+                  }
+                },
+                "companyLogo": {
+                  "type": "structure",
+                  "attributes": {
+                    "darkModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/93cd92bb-227e-4058-8c1b-4208b80d22d6"
+                      }
+                    },
+                    "lightModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/f283f157-7ce4-40bd-9c0b-0cbfada850a4"
+                      }
+                    }
                   }
                 }
               }
@@ -128,6 +166,25 @@
                     "type": "static",
                     "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/74ba36b1-0890-4f7a-9f26-e90ddef8bbcf"
                   }
+                },
+                "companyLogo": {
+                  "type": "structure",
+                  "attributes": {
+                    "darkModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/0eddc328-784c-480e-9c11-2933254c8b6b"
+                      }
+                    },
+                    "lightModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/a71d7590-8e37-43f8-9557-670233c521f8"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -165,6 +222,25 @@
                   "value": {
                     "type": "static",
                     "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/dcc5a472-758a-41e2-843b-aacafdd5a9a4"
+                  }
+                },
+                "companyLogo": {
+                  "type": "structure",
+                  "attributes": {
+                    "darkModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/84c6303d-0ad5-4895-983f-8cb591b8b364"
+                      }
+                    },
+                    "lightModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/3494fbab-4143-441a-ba37-ea95f9967ebe"
+                      }
+                    }
                   }
                 }
               }
@@ -204,6 +280,25 @@
                     "type": "static",
                     "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/b861c767-de33-4135-a3e0-a9bb3fd67648"
                   }
+                },
+                "companyLogo": {
+                  "type": "structure",
+                  "attributes": {
+                    "darkModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/e4b5ea5a-57d2-417b-aa05-2676dfcb1269"
+                      }
+                    },
+                    "lightModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/0797843f-8c61-4db4-bb79-9163ca87a831"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -241,6 +336,25 @@
                   "value": {
                     "type": "static",
                     "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/c64abe34-fadc-416f-8dd6-d4cf9612c163"
+                  }
+                },
+                "companyLogo": {
+                  "type": "structure",
+                  "attributes": {
+                    "darkModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/4d82beb9-5e16-4768-9e6d-ab15ad9cdc28"
+                      }
+                    },
+                    "lightModeLogo": {
+                      "type": "text",
+                      "value": {
+                        "type": "static",
+                        "value": "https://cdn.croct.io/workspace/customer-assets/c933ce73-632b-4f2e-9764-b29e8eb132e4/7b57fdf9-2434-4846-a1a8-b619c2fa384f"
+                      }
+                    }
                   }
                 }
               }

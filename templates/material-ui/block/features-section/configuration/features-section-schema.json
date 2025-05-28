@@ -104,7 +104,9 @@
             }
           }
         },
-        "itemLabel": "Feature"
+        "itemLabel": "Feature",
+        "minimumLength": 1,
+        "maximumLength": 3
       },
       "label": "Features",
       "private": false,

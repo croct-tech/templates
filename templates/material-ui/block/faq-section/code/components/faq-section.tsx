@@ -67,8 +67,8 @@ export function FAQSection(props: FAQSectionProps) {
       <Box sx={{ width: '100%' }}>
         {questions.map((question, index) => (
           <Accordion
-            expanded={expanded.includes('panel1')}
-            onChange={handleChange('panel1')}
+            expanded={expanded.includes(`panel${index + 1}`)}
+            onChange={handleChange(`panel${index + 1}`)}
             key={index}
           >
             <AccordionSummary

@@ -25,9 +25,9 @@ export type TestimonialsSection = {
       name: string,
       role: string,
       avatar: string,
-      companyLogo: {
-        darkModeLogo: string,
-        lightModeLogo: string
+      logo: {
+        dark: string,
+        light: string
       }
     }
   }>
@@ -105,7 +105,7 @@ export function TestimonialsSection(props: TestimonialsSection) {
                   subheader={testimonial.quotee.role}
                 />
                 <img
-                  src={theme.mode === 'light' ? testimonial.quotee.companyLogo.lightModeLogo : testimonial.quotee.companyLogo.darkModeLogo}
+                  src={theme.mode === 'light' ? testimonial.quotee.logo.light : testimonial.quotee.logo.dark}
                   alt={`Logo ${index + 1}`}
                   style={logoStyle}
                 />

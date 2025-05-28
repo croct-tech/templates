@@ -1,0 +1,94 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Frequently asked questions"
+      }
+    },
+    "questions": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "You can reach our customer support team by emailing [support@email.com](support@email.com) or calling our toll-free number. We're here to assist you promptly."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "How do I contact customer support if I have a question or issue?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Absolutely! We offer a hassle-free return policy. If you're not completely satisfied, you can return the product within [number of days] days for a full refund or exchange."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Can I return the product if it doesn't meet my expectations?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Our product distinguishes itself through its adaptability, durability, and innovative features. We prioritize user satisfaction and continually strive to exceed expectations in every aspect."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "What makes your product stand out from others in the market?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Yes, our product comes with a [length of warranty] warranty. It covers defects in materials and workmanship. If you encounter any issues covered by the warranty, please contact our customer support for assistance."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Is there a warranty on the product, and what does it cover?"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

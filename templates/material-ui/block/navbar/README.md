@@ -17,7 +17,7 @@ croct use material-ui://block/navbar
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct use material-ui://block/features-section --router=page
+croct use material-ui://block/navbar --router=page
 ```
 
 ## Options

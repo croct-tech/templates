@@ -24,7 +24,7 @@ export type NavbarProps = {
   ctas: Array<{
     link: string,
     label: string,
-    apperance: 'text' | 'outlined' | 'contained' 
+    appearance: 'text' | 'outlined' | 'contained' 
   }>
 }
 
@@ -84,7 +84,7 @@ export function Navbar(props: NavbarProps) {
             }}
           >
             {ctas.map((cta, index) => (  
-              <Button color="primary" size="small" variant={cta.apperance} href={cta.link} key={index}>
+              <Button color="primary" size="small" variant={cta.appearance} href={cta.link} key={index}>
                 {cta.label}
               </Button>
             ))}
@@ -125,7 +125,7 @@ export function Navbar(props: NavbarProps) {
 
                 {ctas.map((cta, index) => (
                   <MenuItem key={index}>
-                    <Button color="primary" variant={cta.apperance} fullWidth href={cta.link}>
+                    <Button color="primary" variant={cta.appearance} fullWidth href={cta.link}>
                       {cta.label}
                     </Button>
                   </MenuItem>

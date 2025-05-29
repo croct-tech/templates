@@ -155,14 +155,14 @@ export function FeaturesSection(props: FeaturesSectionProps) {
         >
           {title}
         </Typography>
-        (description && {
+        {description && (
           <Typography
             variant="body1"
             sx={{color: 'text.secondary', mb: {xs: 2, sm: 4}}}
           >
             {description}
           </Typography>
-        })
+        )}
       </Box>
       <Box
         sx={{

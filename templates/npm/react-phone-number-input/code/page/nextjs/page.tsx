@@ -5,8 +5,8 @@ import { evaluate } from "@croct/plug-next/server"
 
 type Location = {
   regionCode: string|null,
-  city: string|null,
-  country: string|null,
+  cityName: string|null,
+  countryName: string|null,
   countryCode: string|null,
 }
 
@@ -32,13 +32,13 @@ export default async function Page() {
             <div className={styles.wrapper}>
               <div className={styles.locationInfo}>
                 <div className={styles.locationIcon}>
-                  {location.city === null ? "🌊" : "📍"}
+                  {location.cityName === null ? "🌊" : "📍"}
                 </div>
                 <div className={styles.locationDetails}>
                   <span className={styles.locationPrimary}>
-                    {location.city ?? "Atlantis" }{location.regionCode && `, ${location.regionCode}`}
+                    {location.cityName ?? "Atlantis" }{location.regionCode && `, ${location.regionCode}`}
                   </span>
-                  <span className={styles.locationSecondary}>{location.country ?? "Island of Atlas"}</span>
+                  <span className={styles.locationSecondary}>{location.countryName ?? "Island of Atlas"}</span>
                 </div>
               </div>
               <div className={styles.inputContainer}>

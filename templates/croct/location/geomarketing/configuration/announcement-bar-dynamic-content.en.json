@@ -50,7 +50,7 @@
           "value": {
             "type": "dynamic",
             "nullable": false,
-            "expression": "'Register now for our **' & location's region & '** launch event!'",
+            "expression": "'Register now for our **' & location's stateName & '** launch event!'",
             "default": "Sign up for our upcoming **launch event** in your region!"
           }
         },

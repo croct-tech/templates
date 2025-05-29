@@ -1,0 +1,182 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "ctas": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/sign-in"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Sign in"
+              }
+            },
+            "appearance": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "text"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://example.com/sign-up"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Sign up"
+              }
+            },
+            "appearance": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "contained"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "items": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Features"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Testimonials"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Highlights"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Pricing"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "FAQ"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "link": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#"
+              }
+            },
+            "label": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Blog"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

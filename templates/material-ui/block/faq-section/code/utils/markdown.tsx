@@ -1,8 +1,8 @@
 import type {ReactNode} from "react"
 import { render } from "@croct/md-lite"
 import Image from "next/image"
-import Typography, { TypographyProps } from "@mui/material/Typography"
-import Link, { LinkProps } from "@mui/material/Link"
+import Typography, { type TypographyProps } from "@mui/material/Typography"
+import Link, { type LinkProps } from "@mui/material/Link"
 
 export type MarkdownStyles = {
   bold?: TypographyProps;

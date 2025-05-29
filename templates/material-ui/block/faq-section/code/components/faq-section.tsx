@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {renderMarkdown} from "?/**/*/markdown.{js,jsx,ts,tsx}"
 
-export type FAQSectionProps = {
+export type FaqSectionProps = {
   title: string,
   description?: string,
   questions: Array<{
@@ -19,18 +19,13 @@ export type FAQSectionProps = {
   }>
 }
 
-export function FAQSection(props: FAQSectionProps) {
+export function FaqSection(props: FaqSectionProps) {
   const {title, description, questions} = props;
   const [expanded, setExpanded] = React.useState<string[]>([]);
 
-  const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(
-        isExpanded
-          ? [...expanded, panel]
-          : expanded.filter((item) => item !== panel),
-      );
-    };
+  const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpanded(isExpanded ? [...expanded, panel] : expanded.filter((item) => item !== panel));
+  };
 
   return (
     <Container

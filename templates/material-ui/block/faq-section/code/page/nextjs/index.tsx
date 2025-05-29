@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import { FAQDemo } from "?/**/*/faq-demo.{js,jsx,ts,tsx}"
+import { FaqDemo } from "?/**/*/faq-demo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 
@@ -22,7 +22,7 @@ export default function Page({content}: PageProps) {
       fullScreen
       isolated
     >
-      <FAQDemo {...content} />
+      <FaqDemo {...content} />
     </TemplateCanvas>
   );
 }

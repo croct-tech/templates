@@ -97,7 +97,7 @@
       ],
       "else": [
         {
-          "name": "initialize"
+          "name": "integrate-croct"
         },
         {
           "name": "test",

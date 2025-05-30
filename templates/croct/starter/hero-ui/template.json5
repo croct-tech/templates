@@ -130,7 +130,7 @@
       }
     },
     {
-      "name": "locate-file",
+      "name": "locate-path",
       "path": "tailwind.config.{js,ts}",
       "limit": 1,
       "depth": 3,
@@ -203,7 +203,7 @@
           }
         },
         {
-          "name": "locate-file",
+          "name": "locate-path",
           "path": "**/*.css",
           "limit": 1,
           "matcher": {
@@ -224,7 +224,7 @@
           "condition": "${this.matches.length === 0}",
           "then": [
             {
-              "name": "locate-file",
+              "name": "locate-path",
               "path": "**/*.css",
               "limit": 1,
               "matcher": {
@@ -289,7 +289,7 @@
           }
         },
         {
-          "name": "locate-file",
+          "name": "locate-path",
           "path": "${this.tailwindConfigFile}",
           "limit": 1,
           "depth": 0,
@@ -310,7 +310,7 @@
           ]
         },
         {
-          "name": "locate-file",
+          "name": "locate-path",
           "path": "${this.tailwindConfigFile}",
           "limit": 1,
           "depth": 0,
@@ -324,7 +324,7 @@
           "condition": "${this.tailwindConfigMatches.length === 0}",
           "then": [
             {
-              "name": "locate-file",
+              "name": "locate-path",
               path: "${this.tailwindConfigFile}",
               "limit": 1,
               "depth": 0,
@@ -360,7 +360,7 @@
               ]
             },
             {
-              "name": "locate-file",
+              "name": "locate-path",
               path: "${this.tailwindConfigFile}",
               "limit": 1,
               "depth": 0,
@@ -390,7 +390,7 @@
               ]
             },
             {
-              "name": "locate-file",
+              "name": "locate-path",
               path: "${this.tailwindConfigFile}",
               "limit": 1,
               "depth": 0,
@@ -428,7 +428,7 @@
       "condition": "${packageManager.name === 'pnpm'}",
       "then": [
         {
-          "name": "locate-file",
+          "name": "locate-path",
           "path": ".npmrc",
           "limit": 1,
           "result": "npmrcMatches"
@@ -445,7 +445,7 @@
           ],
           "else": [
             {
-              "name": "locate-file",
+              "name": "locate-path",
               "path": ".npmrc",
               "limit": 1,
               "matcher": {

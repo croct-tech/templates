@@ -145,10 +145,6 @@
           "result": "registeredCssFiles"
         },
         {
-          "name": "print",
-          "message": "${this.globalCssFiles[0]} / ${this.registeredCssFiles.length} CSS files found."
-        },
-        {
           "name": "test",
           "condition": "${this.registeredCssFiles.length === 0}",
           "then": [

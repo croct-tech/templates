@@ -115,7 +115,7 @@
       }
     },
     {
-      "name": "locate-file",
+      "name": "locate-path",
       "path": "**/*/*.css",
       "limit": 1,
       "matcher": {
@@ -136,7 +136,7 @@
       ],
       "else": [
         {
-          "name": "locate-file",
+          "name": "locate-path",
           "path": "${this.globalCssFiles[0]}",
           "limit": 1,
           "matcher": {

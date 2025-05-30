@@ -73,8 +73,7 @@
               "name": "execute-package",
               "package": "sanity@latest",
               "arguments": [
-                "login",
-                "--no-open",
+                "login"
               ],
               "interactions": true,
             },

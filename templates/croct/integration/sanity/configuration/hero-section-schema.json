@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "preHeading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Pre-heading",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "A short text displayed above the heading."
+    },
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The main title of the section."
+    },
+    "tagline": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Tagline",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "A short text displayed below the heading."
+    },
+    "command": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Command",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The command to show for the use to copy."
+    }
+  }
+}

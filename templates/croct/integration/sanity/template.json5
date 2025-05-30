@@ -23,14 +23,14 @@
       "language/typescript"
     ],
     "relatedTemplates": [
-      "boilerplate/starter/nextjs",
+      "boilerplate/starter/nextjs"
     ]
   },
   "actions": [
     {
       "name": "define",
       "variables": {
-        "projectName": "croct-sanity-project",
+        "projectName": "croct-sanity-project"
       }
     },
     {
@@ -45,7 +45,7 @@
       "package": "giget@latest",
       "arguments": [
         "gh:sanity-io/sanity-template-nextjs-clean",
-        "${this.projectName}",
+        "${this.projectName}"
       ]
     },
     {
@@ -54,12 +54,12 @@
       "arguments": [
         "debug"
       ],
-      "output": "debugOutput",
+      "output": "debugOutput"
     },
     {
       "name": "define",
       "variables": {
-        "isLoggedOut": "${this.debugOutput.includes('Not logged in')}",
+        "isLoggedOut": "${this.debugOutput.includes('Not logged in')}"
       }
     },
     {
@@ -76,7 +76,7 @@
               "arguments": [
                 "login"
               ],
-              "interactions": true,
+              "interactions": true
             },
             {
               "name": "execute-package",
@@ -84,12 +84,12 @@
               "arguments": [
                 "debug"
               ],
-              "output": "debugOutput",
+              "output": "debugOutput"
             },
             {
               "name": "define",
               "variables": {
-                "isLoggedOut": "${this.debugOutput.includes('Not logged in')}",
+                "isLoggedOut": "${this.debugOutput.includes('Not logged in')}"
               }
             },
             {
@@ -113,10 +113,10 @@
                     }
                   ]
                 }
-              ],
+              ]
             }
-          ],
-        },
+          ]
+        }
       ]
     },
     {
@@ -124,7 +124,7 @@
       "path": "${this.projectName}/studio"
     },
     {
-      "name": "install",
+      "name": "install"
     },
     {
       "name": "execute-package",
@@ -135,21 +135,21 @@
         "--create-project",
         "Croct + Sanity starter",
         "--dataset-default",
-        "production",
+        "production"
       ],
-      "output": "initOutput",
+      "output": "initOutput"
     },
     {
       "name": "define",
       "variables": {
         "projectId": "${this.initOutput.match(/Project ID: (\\S+)/)[1]}",
-        "dataset": "${this.initOutput.match(/Dataset: (\\S+)/)[1]}",
+        "dataset": "${this.initOutput.match(/Dataset: (\\S+)/)[1]}"
       }
     },
     {
       "name": "move-path",
       "path": ".env.example",
-      "destination": ".env.local",
+      "destination": ".env.local"
     },
     {
       "name": "replace-file-content",
@@ -165,7 +165,7 @@
               "pattern": "SANITY_DATASET=\"[^\"]*\"",
               "value": "SANITY_DATASET=\"${this.dataset}\""
             }
-          ],
+          ]
         }
       ]
     },
@@ -176,19 +176,19 @@
         "cors",
         "add",
         "http://localhost:3000",
-        "--no-credentials",
+        "--no-credentials"
       ]
     },
     {
       "name": "download",
       "source": "./assets/sample-data.tar.gz",
       "destination": "./",
-      "overwrite": true,
+      "overwrite": true
     },
     {
       "name": "download",
       "source": "./code/studio/schemaTypes/documents/heroSection.ts",
-      "destination": "src/schemaTypes/documents",
+      "destination": "src/schemaTypes/documents"
     },
     {
       "name": "download",
@@ -223,7 +223,7 @@
         "schema",
         "extract",
         "--enforce-required-fields"
-      ],
+      ]
     },
     {
       "name": "change-directory",
@@ -231,13 +231,15 @@
     },
     {
       "name": "add-dependency",
-      "dependencies": ["@croct/template-ui"]
+      "dependencies": [
+        "@croct/template-ui"
+      ]
     },
     {
       "name": "download",
       "source": "./code/generate-read-token.ts",
       "destination": "../",
-      "overwrite": true,
+      "overwrite": true
     },
     {
       "name": "execute-package",
@@ -250,12 +252,12 @@
         "${this.projectId}",
         "${this.dataset}"
       ],
-      "output": "token",
+      "output": "token"
     },
     {
       "name": "move-path",
       "path": ".env.example",
-      "destination": ".env.local",
+      "destination": ".env.local"
     },
     {
       "name": "replace-file-content",
@@ -275,7 +277,7 @@
               "pattern": "SANITY_API_READ_TOKEN=\"[^\"]*\"",
               "value": "SANITY_API_READ_TOKEN=\"${this.token}\""
             }
-          ],
+          ]
         }
       ]
     },
@@ -284,8 +286,8 @@
       "package": "sanity@latest",
       "arguments": [
         "typegen",
-        "generate",
-      ],
+        "generate"
+      ]
     },
     {
       "name": "create-resource",
@@ -371,7 +373,7 @@
               "value": "${project.workspace.url}"
             }
           ]
-        },
+        }
       ]
     },
     {
@@ -379,14 +381,14 @@
       "path": "../"
     },
     {
-      "name": "install",
+      "name": "install"
     },
     {
       "name": "import",
       "template": "croct:/utils/example-launcher",
       "options": {
         "script": "dev",
-        "url": "http://localhost:3000",
+        "url": "http://localhost:3000"
       }
     }
   ]

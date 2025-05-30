@@ -88,7 +88,7 @@ export default function Header() {
               className="flex items-center gap-4 md:gap-6 leading-5 text-sm md:text-base tracking-tight font-normal"
             >
               <li>
-                <Link href="http://localhost:3333/structure/heroSection" className="">
+                <Link href="http://localhost:3333/structure/heroSection" className="" target="_blank">
                   Sanity Studio
                 </Link>
               </li>

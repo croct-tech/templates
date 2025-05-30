@@ -15,7 +15,7 @@ export default function Footer() {
             >
               View on GitHub
             </a>
-            <a href="https://docs.croct.com/reference/sdk/nextjs/installation?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=sanity" className="mx-3 hover:underline">
+            <a href="https://docs.croct.com/reference/sdk/nextjs/installation?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=sanity" className="mx-3 hover:underline" target="_blank">
               Read Next.js Documentation
             </a>
           </div>

@@ -33,7 +33,7 @@
       }
     },
     {
-      "name": "locate-file",
+      "name": "locate-path",
       "path": "${this[options.reference]}",
       "limit": 1,
       "depth": 0,
@@ -50,7 +50,7 @@
           }
         },
         {
-          "name": "locate-file",
+          "name": "locate-path",
           "path": "${this[options.reference]}-${this.attemptNumber}",
           "limit": 1,
           "depth": 0,

@@ -46,7 +46,7 @@
       }
     },
     {
-      "name": "locate-file",
+      "name": "locate-path",
       "path": "tailwind.config.*",
       "limit": 1,
       "depth": 3,

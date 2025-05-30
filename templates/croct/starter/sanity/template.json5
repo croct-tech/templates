@@ -41,23 +41,143 @@
     },
     {
       "name": "execute-package",
+      "package": "giget@latest",
+      "arguments": [
+        "gh:sanity-io/sanity-template-nextjs-clean",
+        "${this.projectName}",
+      ]
+    },
+    {
+      "name": "execute-package",
       "package": "sanity@latest",
       "arguments": [
-        "init",
-        "--create-project",
-        "Croct + Sanity starter",
-        "--dataset-default",
-        "production",
-        "--template",
-        "sanity-io/sanity-template-nextjs-clean",
-        "--output-path",
-        "${this.projectName}"
+        "debug"
       ],
-      "interactions": true,
+      "output": "debugOutput",
+    },
+    {
+      "name": "define",
+      "variables": {
+        "isLoggedOut": "${this.debugOutput.includes('Not logged in')}",
+      }
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.isLoggedOut}",
+      "actions": [
+        {
+          "name": "test",
+          "condition": "${this.isLoggedOut}",
+          "then": [
+            {
+              "name": "execute-package",
+              "package": "sanity@latest",
+              "arguments": [
+                "login",
+                "--no-open",
+              ],
+              "interactions": true,
+            },
+            {
+              "name": "execute-package",
+              "package": "sanity@latest",
+              "arguments": [
+                "debug"
+              ],
+              "output": "debugOutput",
+            },
+            {
+              "name": "define",
+              "variables": {
+                "isLoggedOut": "${this.debugOutput.includes('Not logged in')}",
+              }
+            },
+            {
+              "name": "test",
+              "condition": "${this.isLoggedOut}",
+              "then": [
+                {
+                  "name": "prompt",
+                  "type": "confirmation",
+                  "default": true,
+                  "message": "Failed to log in, try again?",
+                  "result": "retryLogin"
+                },
+                {
+                  "name": "test",
+                  "condition": "${!this.retryLogin}",
+                  "then": [
+                    {
+                      "name": "fail",
+                      "message": "Login canceled."
+                    }
+                  ]
+                }
+              ],
+            }
+          ],
+        },
+      ]
     },
     {
       "name": "change-directory",
       "path": "${this.projectName}/studio"
+    },
+    {
+      "name": "install",
+    },
+    {
+      "name": "execute-package",
+      "package": "sanity@latest",
+      "arguments": [
+        "init",
+        "--bare",
+        "--create-project",
+        "Croct + Sanity starter",
+        "--dataset-default",
+        "production",
+      ],
+      "output": "initOutput",
+    },
+    {
+      "name": "define",
+      "variables": {
+        "projectId": "${this.initOutput.match(/Project ID: (\\S+)/)[1]}",
+        "dataset": "${this.initOutput.match(/Dataset: (\\S+)/)[1]}",
+      }
+    },
+    {
+      "name": "move-path",
+      "path": ".env.example",
+      "destination": ".env.local",
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": ".env.local",
+          "replacements": [
+            {
+              "pattern": "SANITY_STUDIO_PROJECT_ID=\"[^\"]*\"",
+              "value": "SANITY_STUDIO_PROJECT_ID=\"${this.projectId}\""
+            },
+            {
+              "pattern": "SANITY_DATASET=\"[^\"]*\"",
+              "value": "SANITY_DATASET=\"${this.dataset}\""
+            }
+          ],
+        }
+      ]
+    },
+    {
+      "name": "execute-package",
+      "package": "sanity@latest",
+      "arguments": [
+        "cors",
+        "add",
+        "http://localhost:3000",
+        "--no-credentials",
+      ]
     },
     {
       "name": "download",
@@ -88,7 +208,10 @@
       "interactions": [
         {
           "when": "Select target dataset",
-          "then": ["[down]", "[enter]"],
+          "then": [
+            "[down]",
+            "[enter]"
+          ],
           "final": true
         }
       ]
@@ -105,6 +228,56 @@
     {
       "name": "change-directory",
       "path": "../nextjs-app"
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": ["@croct/template-ui"]
+    },
+    {
+      "name": "download",
+      "source": "./code/generate-read-token.ts",
+      "destination": "../",
+      "overwrite": true,
+    },
+    {
+      "name": "execute-package",
+      "package": "sanity@latest",
+      "arguments": [
+        "exec",
+        "../generate-read-token.ts",
+        "--with-user-token",
+        "--",
+        "${this.projectId}",
+        "${this.dataset}"
+      ],
+      "output": "token",
+    },
+    {
+      "name": "move-path",
+      "path": ".env.example",
+      "destination": ".env.local",
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": ".env.local",
+          "replacements": [
+            {
+              "pattern": "NEXT_PUBLIC_SANITY_PROJECT_ID=\"[^\"]*\"",
+              "value": "NEXT_PUBLIC_SANITY_PROJECT_ID=\"${this.projectId}\""
+            },
+            {
+              "pattern": "NEXT_PUBLIC_SANITY_DATASET=\"[^\"]*\"",
+              "value": "NEXT_PUBLIC_SANITY_DATASET=\"${this.dataset}\""
+            },
+            {
+              "pattern": "SANITY_API_READ_TOKEN=\"[^\"]*\"",
+              "value": "SANITY_API_READ_TOKEN=\"${this.token}\""
+            }
+          ],
+        }
+      ]
     },
     {
       "name": "execute-package",
@@ -163,6 +336,12 @@
     },
     {
       "name": "download",
+      "source": "./code/nextjs/app/components/Header.tsx",
+      "destination": "app/components",
+      "overwrite": true
+    },
+    {
+      "name": "download",
       "source": "./code/nextjs/app/page.tsx",
       "destination": "app",
       "overwrite": true
@@ -186,12 +365,15 @@
               "value": "${project.workspace.url}"
             }
           ]
-        }
+        },
       ]
     },
     {
       "name": "change-directory",
       "path": "../"
+    },
+    {
+      "name": "install",
     },
     {
       "name": "import",

@@ -6,6 +6,7 @@ import { heroQuery } from "?/sanity/lib/queries.{js,jsx,ts,tsx}"
 import { client } from "?/sanity/lib/client.{js,jsx,ts,tsx}"
 import { fetchContent } from "@croct/plug-next/server"
 import type { HeroSection } from "?/sanity.types.ts"
+import { LinkButton } from "@croct/template-ui/react"
 
 export default async function Page() {
   const result = await client.fetch<HeroSection>(heroQuery, {slug: "home-hero"}, {
@@ -63,6 +64,14 @@ export default async function Page() {
           </aside>
         </div>
       </div>
+      <LinkButton
+        branded
+        size="lg"
+        label="Edit content"
+        href="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=carousel_section&utm_term=nextjs"
+        target="_blank"
+        position="bottom-right"
+      />
     </>
   );
 }

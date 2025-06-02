@@ -19,5 +19,5 @@ It's the fastest way to add experimentation and personalization on top of Sanity
 Run the following command in an empty directory to create a new project using this template:
 
 ```croct-cmd
-croct@latest use croct://integration/sanity
+croct use croct://integration/sanity
 ```

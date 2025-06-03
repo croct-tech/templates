@@ -394,6 +394,10 @@
                 {
                   "pattern": "%workspaceUrl%/slots/edit/%slotId%/%slotVersion%",
                   "value": "%workspaceUrl%/experiences"
+                },
+                {
+                  "pattern": "Edit content",
+                  "value": "Manage experiment"
                 }
               ]
             }

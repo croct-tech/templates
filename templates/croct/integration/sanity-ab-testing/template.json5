@@ -34,7 +34,6 @@
       "name": "import",
       "template": "croct://integration/sanity",
       "options": {
-        "experienceList": true,
         "extension": "croct://integration/sanity-ab-testing/extension.json5"
       }
     }

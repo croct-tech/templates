@@ -12,6 +12,10 @@
       "type": "reference",
       "description": "The variable name that holds the slot version.",
       "required": true
+    },
+    "pagePath": {
+      "type": "string",
+      "description": "The path to the page where the slot is used.",
     }
   },
   "actions": [
@@ -94,8 +98,33 @@
             "id": "${options.slotId}",
             "version": "${options.slotVersion}"
           }
+        },
+        "experiences": {
+          "0": "experienceId"
         }
       }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.pagePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%/slots/edit/%slotId%/%slotVersion%",
+              "value": "%workspaceUrl%/experiences/%experienceId%/edit"
+            },
+            {
+              "pattern": "%experienceId%",
+              "value": "${this.experienceId}"
+            },
+            {
+              "pattern": "Edit content",
+              "value": "Manage experiment"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

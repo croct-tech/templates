@@ -23,8 +23,19 @@
       "language/typescript"
     ],
     "relatedTemplates": [
-      "boilerplate/starter/nextjs"
+      "boilerplate/starter/nextjs",
+      "integration/cms/sanity-ab-testing"
     ]
+  },
+  "options": {
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    },
+    "experienceList": {
+      "type": "boolean",
+      "description": "Whether to open the admin on the experience list page or not."
+    }
   },
   "actions": [
     {
@@ -290,33 +301,49 @@
       ]
     },
     {
-      "name": "create-resource",
-      "resources": {
-        "components": {
-          "hero-section": {
-            "name": "Hero section",
-            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
-            "schema": "${import('./configuration/hero-section-schema.json')}"
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "slotId": "slotId",
+            "slotVersion": "slotVersion"
           }
-        },
-        "slots": {
-          "home-hero": {
-            "name": "Home hero",
-            "component": "hero-section",
-            "content": {
-              "en": "${import('./configuration/home-hero-content.en.json')}"
+        }
+      ],
+      "else": [
+        {
+          "name": "create-resource",
+          "resources": {
+            "components": {
+              "hero-section": {
+                "name": "Hero section",
+                "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+                "schema": "${import('./configuration/hero-section-schema.json')}"
+              }
+            },
+            "slots": {
+              "home-hero": {
+                "name": "Home hero",
+                "component": "hero-section",
+                "content": {
+                  "en": "${import('./configuration/home-hero-content.en.json')}"
+                }
+              }
+            }
+          },
+          "result": {
+            "slots": {
+              "home-hero": {
+                "id": "slotId",
+                "version": "slotVersion"
+              }
             }
           }
         }
-      },
-      "result": {
-        "slots": {
-          "home-hero": {
-            "id": "slotId",
-            "version": "slotVersion"
-          }
-        }
-      }
+      ]
     },
     {
       "name": "add-slot",
@@ -353,6 +380,28 @@
       "source": "./code/nextjs/app/page.tsx",
       "destination": "app",
       "overwrite": true
+    },
+
+
+    {
+      "name": "test",
+      "condition": "${options.experienceList}",
+      "then": [
+        {
+          "name": "replace-file-content",
+          "files": [
+            {
+              "path": "app/page.tsx",
+              "replacements": [
+                {
+                  "pattern": "%workspaceUrl%/slots/edit/%slotId%/%slotVersion%",
+                  "value": "%workspaceUrl%/experiences"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "replace-file-content",

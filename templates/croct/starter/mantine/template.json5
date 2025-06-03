@@ -262,7 +262,7 @@
         {
           "name": "define",
           "variables": {
-            "pageDirectory": "pages"
+            "pageDirectory": "${project.path.source}/pages"
           }
         },
         {

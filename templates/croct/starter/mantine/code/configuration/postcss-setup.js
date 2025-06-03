@@ -22,9 +22,12 @@ import fs from 'fs';
 
     const jsConfigPath = `./postcss.config.js`;
     const cjsConfigPath = `./postcss.config.cjs`;
+    const defaultConfigPath = fs.existsSync(jsConfigPath) ? jsConfigPath : cjsConfigPath;
 
-    if (fs.existsSync(jsConfigPath)) {
-        fs.writeFileSync(cjsConfigPath, fs.readFileSync(jsConfigPath, 'utf8'));
+    if (fs.existsSync(defaultConfigPath)) {
+        if (defaultConfigPath !== cjsConfigPath) {
+            fs.writeFileSync(cjsConfigPath, fs.readFileSync(defaultConfigPath, 'utf8'));
+        }
 
         try {
             existingConfig = await import(cjsConfigPath).then((module) => module.default ?? module);
@@ -38,10 +41,10 @@ import fs from 'fs';
     const output = `module.exports = ${JSON.stringify(merged, null, 2)};\n`;
 
     // Write back
-    fs.writeFileSync(jsConfigPath, output, 'utf8');
+    fs.writeFileSync(defaultConfigPath, output, 'utf8');
 
     // Clean up
-    if (fs.existsSync(cjsConfigPath)) {
+    if (defaultConfigPath !== cjsConfigPath) {
         fs.unlinkSync(cjsConfigPath);
     }
 

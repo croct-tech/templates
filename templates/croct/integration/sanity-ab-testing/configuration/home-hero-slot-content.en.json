@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "command": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "npx croct@latest use croct://integration/sanity"
+      }
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Croct + Sanity + Next.js"
+      }
+    },
+    "tagline": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Kickstart your project with a template that combines CMS, AB testing, and real-time personalization in one stack."
+      }
+    },
+    "preHeading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "A starter template for"
+      }
+    }
+  }
+}

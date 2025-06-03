@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Sanity CMS integration",
+  "description": "An integration template for projects using Croct and Sanity.",
+  "metadata": {
+    "id": "integration/cms/sanity",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity/cover.png",
+    "installationUrl": "croct://integration/sanity",
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "integration/cms",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs",
+      "integration/cms/sanity"
+    ]
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct://integration/sanity",
+      "options": {
+        "experienceList": true,
+        "extension": "croct://integration/sanity-ab-testing/extension.json5"
+      }
+    }
+  ]
+}

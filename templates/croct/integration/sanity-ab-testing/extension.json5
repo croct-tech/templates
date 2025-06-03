@@ -1,0 +1,101 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Sanity AB testing customization",
+  "description": "A customization template for the Sanity AB testing template.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "all-users": {
+            "name": "All users",
+            "criteria": "true"
+          }
+        },
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Experiment for all users",
+            "draft": true,
+            "audiences": [
+              "all-users"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Tagline copy",
+              "goalId": "command-copy",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Kickstart your project",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Integrate in one command",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-experiment-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "result": {
+        "slots": {
+          "home-hero": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    }
+  ]
+}

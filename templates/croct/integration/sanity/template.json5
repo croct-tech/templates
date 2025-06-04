@@ -24,7 +24,8 @@
     ],
     "relatedTemplates": [
       "boilerplate/starter/nextjs",
-      "integration/cms/sanity-ab-testing"
+      "integration/cms/sanity-ab-testing",
+      "integration/cms/sanity-personalization"
     ]
   },
   "options": {

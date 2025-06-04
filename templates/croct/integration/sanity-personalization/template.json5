@@ -3,17 +3,17 @@
   "title": "Sanity CMS + AB testing",
   "description": "A template for integrating AB testing on a Sanity project.",
   "metadata": {
-    "id": "integration/cms/sanity-ab-testing",
+    "id": "integration/cms/sanity-personalization",
     "verified": true,
     "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-ab-testing/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-ab-testing/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-ab-testing/cover.png",
-    "installationUrl": "croct://integration/sanity-ab-testing",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-personalization/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-personalization/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-personalization/cover.png",
+    "installationUrl": "croct://integration/sanity-personalization",
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",
@@ -25,9 +25,7 @@
     "relatedTemplates": [
       "boilerplate/starter/nextjs",
       "integration/cms/sanity",
-      "integration/cms/sanity-personalization",
-      "use-case/experiment/all-users",
-      "use-case/experiment/segmented"
+      "integration/cms/sanity-ab-testing"
     ]
   },
   "actions": [
@@ -35,7 +33,7 @@
       "name": "import",
       "template": "croct://integration/sanity",
       "options": {
-        "extension": "croct://integration/sanity-ab-testing/extension.json5"
+        "extension": "croct://integration/sanity-personalization/extension.json5"
       }
     }
   ]

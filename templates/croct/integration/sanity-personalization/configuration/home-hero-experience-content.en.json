@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "logos": {
+      "type": "list",
+      "items": [
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/2ad88f1f-0881-4aa7-9b22-c03aa11562dd"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/93a3bf1c-8ba4-4341-9625-a54ce26ba509"
+          }
+        },
+        {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/2169019e-f360-4c82-b5c1-64072819be89"
+          }
+        }
+      ]
+    },
+    "command": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "npx croct@latest use croct://integration/sanity"
+      }
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Next.js 15 starter"
+      }
+    },
+    "tagline": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Kickstart your project with a template that combines Next.js 15, CMS, AB testing, and real-time personalization in one stack."
+      }
+    },
+    "preHeading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "CROCT + SANITY"
+      }
+    }
+  }
+}

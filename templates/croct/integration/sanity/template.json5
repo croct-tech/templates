@@ -23,8 +23,16 @@
       "language/typescript"
     ],
     "relatedTemplates": [
-      "boilerplate/starter/nextjs"
+      "boilerplate/starter/nextjs",
+      "integration/cms/sanity-ab-testing",
+      "integration/cms/sanity-personalization"
     ]
+  },
+  "options": {
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    }
   },
   "actions": [
     {
@@ -227,7 +235,7 @@
     },
     {
       "name": "change-directory",
-      "path": "../nextjs-app"
+      "path": "../frontend"
     },
     {
       "name": "add-dependency",
@@ -290,39 +298,17 @@
       ]
     },
     {
-      "name": "create-resource",
-      "resources": {
-        "components": {
-          "hero-section": {
-            "name": "Hero section",
-            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
-            "schema": "${import('./configuration/hero-section-schema.json')}"
-          }
-        },
-        "slots": {
-          "home-hero": {
-            "name": "Home hero",
-            "component": "hero-section",
-            "content": {
-              "en": "${import('./configuration/home-hero-content.en.json')}"
-            }
-          }
-        }
-      },
-      "result": {
-        "slots": {
-          "home-hero": {
-            "id": "slotId",
-            "version": "slotVersion"
-          }
-        }
+      "name": "define",
+      "variables": {
+        "slotId": "",
+        "slotVersion": ""
       }
     },
     {
-      "name": "add-slot",
-      "slots": [
-        "${this.slotId}"
-      ]
+      "name": "download",
+      "source": "./code/nextjs/lib/markdown.tsx",
+      "destination": "${project.path.utilities}",
+      "overwrite": true
     },
     {
       "name": "download",
@@ -350,9 +336,67 @@
     },
     {
       "name": "download",
+      "source": "./code/nextjs/app/components/SideBySideIcons.tsx",
+      "destination": "app/components",
+      "overwrite": true
+    },
+    {
+      "name": "download",
       "source": "./code/nextjs/app/page.tsx",
       "destination": "app",
       "overwrite": true
+    },
+    {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "slotId": "slotId",
+            "slotVersion": "slotVersion",
+            "pagePath": "app/page.tsx"
+          }
+        }
+      ],
+      "else": [
+        {
+          "name": "create-resource",
+          "resources": {
+            "components": {
+              "hero-section": {
+                "name": "Hero section",
+                "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+                "schema": "${import('./configuration/hero-section-schema.json')}"
+              }
+            },
+            "slots": {
+              "home-hero": {
+                "name": "Home hero",
+                "component": "hero-section",
+                "content": {
+                  "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+                }
+              }
+            }
+          },
+          "result": {
+            "slots": {
+              "home-hero": {
+                "id": "slotId",
+                "version": "slotVersion"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this.slotId}"
+      ]
     },
     {
       "name": "replace-file-content",

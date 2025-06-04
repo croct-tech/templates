@@ -1,6 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
   "type": "structure",
+  "title": "Hero section",
   "attributes": {
     "preHeading": {
       "type": {
@@ -32,7 +33,7 @@
       "label": "Tagline",
       "private": false,
       "optional": false,
-      "position": 2,
+      "position": 3,
       "description": "A short text displayed below the heading."
     },
     "command": {
@@ -43,8 +44,28 @@
       "label": "Command",
       "private": false,
       "optional": false,
-      "position": 3,
+      "position": 4,
       "description": "The command to show for the use to copy."
+    },
+    "logos": {
+      "type": {
+        "type": "list",
+        "items": {
+          "id": "@croct/file",
+          "type": "reference",
+          "properties": {
+            "allowedTypes": [
+              "image/svg+xml"
+            ]
+          }
+        },
+        "itemLabel": "Logo"
+      },
+      "label": "Logos",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "A list of logos."
     }
   }
 }

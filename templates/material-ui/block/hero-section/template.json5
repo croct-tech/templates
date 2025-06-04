@@ -25,7 +25,8 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/section/hero-section"
+      "interface/section/hero-section",
+      "library/mantine/hero-bullets"
     ]
   },
   "options": {

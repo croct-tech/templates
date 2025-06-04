@@ -13,7 +13,7 @@ export default async function Header() {
         <div className="flex items-center justify-between gap-5">
           <Link className="flex items-center gap-2" href="/">
             <span className="text-lg sm:text-2xl pl-2 font-semibold">
-              {settings?.title || "Croct + Sanity + Next.js"}
+              Croct + Sanity + Next.js
             </span>
           </Link>
 

@@ -17,7 +17,7 @@ export default function Footer() {
               View on GitHub
             </a>
             <a
-              href="https://nextjs.org/docs"
+              href="https://nextjs.org/docs?utm_source=croct"
               className="mx-3 hover:underline font-mono"
             >
               Read Next.js Documentation

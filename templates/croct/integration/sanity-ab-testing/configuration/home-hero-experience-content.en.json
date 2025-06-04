@@ -46,7 +46,7 @@
       "type": "text",
       "value": {
         "type": "static",
-        "value": "Kickstart your project with a template that combines CMS, AB testing, and real-time personalization in one stack (experiment)"
+        "value": "Integrate AB testing, real-time personalization, and analytics into your Sanity project in just one command."
       }
     },
     "preHeading": {

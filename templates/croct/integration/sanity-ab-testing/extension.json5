@@ -15,7 +15,7 @@
     },
     "pagePath": {
       "type": "string",
-      "description": "The path to the page where the slot is used.",
+      "description": "The path to the page where the slot is used."
     }
   },
   "actions": [
@@ -80,7 +80,7 @@
                   "content": {
                     "default": {
                       "home-hero": {
-                        "en": "${import('./configuration/home-hero-experiment-content.en.json')}"
+                        "en": "${import('./configuration/home-hero-experience-content.en.json')}"
                       }
                     }
                   },
@@ -121,6 +121,10 @@
             {
               "pattern": "Edit content",
               "value": "Manage experiment"
+            },
+            {
+              "pattern": "utm_content=sanity",
+              "value": "utm_content=sanity-ab-testing"
             }
           ]
         }

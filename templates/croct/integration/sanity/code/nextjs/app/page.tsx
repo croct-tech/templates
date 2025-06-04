@@ -11,11 +11,11 @@ import { LinkButton } from "@croct/template-ui/react"
 import { renderMarkdown } from "?/**/markdown.{js,jsx,ts,tsx}";
 
 export default async function Page() {
-  const result = await client.fetch<HeroSection>(heroQuery, {slug: "home-hero"}, {
+  const result = await client.fetch<HeroSection>(heroQuery, {slug: "%slotId%"}, {
     cache: "force-cache"
   });
 
-  const {content} = await fetchContent('home-hero@1', {
+  const {content} = await fetchContent('%slotId%@1', {
     fallback: result ?? undefined
   });
 
@@ -29,7 +29,7 @@ export default async function Page() {
               className="relative min-h-[40vh] mx-auto max-w-2xl pt-10 xl:pt-20 pb-30 space-y-6 lg:max-w-4xl lg:px-12 flex flex-col items-center justify-center">
               <div className="flex flex-col gap-4 items-center">
                 <div className="text-md leading-6 prose uppercase py-1 px-3 bg-white font-mono italic">
-                  A starter template for
+                  {content.preHeading}
                 </div>
                 <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black">
                   {renderMarkdown(content.heading, {}, {
@@ -95,8 +95,8 @@ export default async function Page() {
       <LinkButton
         branded
         size="lg"
-        label="Manage experiment"
-        href="https://app.croct.com/organizations/vercel/workspaces/vercel/experiences/experience:77b01d1f-6a06-488a-9ffd-15affd002020/edit?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=sanity&utm_term=nextjs"
+        label="Edit content"
+        href="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=sanity"
         target="_blank"
         position="bottom-right"
         theme="light"

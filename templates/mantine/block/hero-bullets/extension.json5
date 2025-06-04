@@ -52,7 +52,7 @@
       },
       "result": {
         "slots": {
-          "material-ui-home-hero": {
+          "mantine-hero-bullets": {
             "id": "${options.slotId}",
             "version": "${options.slotVersion}"
           }

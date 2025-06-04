@@ -48,12 +48,12 @@ export function HeroBullets(props: HeroBulletsProps) {
               </ThemeIcon>
             }
           >
-            {bullets.forEach(bullet => (
-              <List.Item>
+            {bullets.map((bullet, index) => (
+              <List.Item key={index}>
                 <b>{bullet.title}</b> – {bullet.description}
               </List.Item>
             ))}
-          </List>})
+          </List>)}
           <Group mt={30}>
             <Button
               radius="xl"

@@ -32,7 +32,7 @@
           "hero-section": {
             "name": "Hero section",
             "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
-            "schema": "${import('./configuration/hero-section-schema.json')}"
+            "schema": "${import('croct://integration/sanity/configuration/hero-section-schema.json')}"
           }
         },
         "slots": {
@@ -40,7 +40,7 @@
             "name": "Home hero",
             "component": "hero-section",
             "content": {
-              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+              "en": "${import('croct://integration/sanity/configuration/home-hero-slot-content.en.json')}"
             }
           }
         },
@@ -68,7 +68,7 @@
                   "content": {
                     "default": {
                       "home-hero": {
-                        "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+                        "en": "${import('croct://integration/sanity/configuration/home-hero-slot-content.en.json')}"
                       }
                     }
                   },

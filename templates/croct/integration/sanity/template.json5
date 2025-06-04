@@ -234,7 +234,7 @@
     },
     {
       "name": "change-directory",
-      "path": "../nextjs-app"
+      "path": "../frontend"
     },
     {
       "name": "add-dependency",
@@ -305,6 +305,12 @@
     },
     {
       "name": "download",
+      "source": "./code/nextjs/lib/markdown.tsx",
+      "destination": "${project.path.utilities}",
+      "overwrite": true
+    },
+    {
+      "name": "download",
       "source": "./code/nextjs/sanity/lib/queries.ts",
       "destination": "sanity/lib",
       "overwrite": true
@@ -324,6 +330,12 @@
     {
       "name": "download",
       "source": "./code/nextjs/app/components/Footer.tsx",
+      "destination": "app/components",
+      "overwrite": true
+    },
+    {
+      "name": "download",
+      "source": "./code/nextjs/app/components/SideBySideIcons.tsx",
       "destination": "app/components",
       "overwrite": true
     },
@@ -363,7 +375,7 @@
                 "name": "Home hero",
                 "component": "hero-section",
                 "content": {
-                  "en": "${import('./configuration/home-hero-content.en.json')}"
+                  "en": "${import('./configuration/home-hero-slot-content.en.json')}"
                 }
               }
             }

@@ -20,7 +20,7 @@
       "framework/react",
       "language/javascript",
       "language/typescript",
-      "library/mantine",
+      "library/mantine"
     ],
     "relatedTemplates": [
       "boilerplate/starter/nextjs"
@@ -143,7 +143,9 @@
     {
       "name": "execute-package",
       "package": "tsx@latest",
-      "arguments": ["postcss-setup.js"]
+      "arguments": [
+        "postcss-setup.js"
+      ]
     },
     {
       "name": "add-dependency",
@@ -152,13 +154,13 @@
         "postcss",
         "postcss-preset-mantine",
         "postcss-simple-vars"
-      ],
+      ]
     },
     {
       "name": "add-dependency",
       "dependencies": [
-        "@mantine/core",
-      ],
+        "@mantine/core"
+      ]
     },
     {
       "name": "download",
@@ -184,7 +186,7 @@
       "then": [
         {
           "name": "fail",
-          "message": "Unable to locate layout file.",
+          "message": "Unable to locate layout file."
         }
       ],
       "else": [
@@ -200,7 +202,7 @@
             {
               "name": "define",
               "variables": {
-                "isLayoutFile": "${project.platform === 'nextjs' && /layout\\.[jt]sx?$/.test(this.providerFiles[0])}",
+                "isLayoutFile": "${project.platform === 'nextjs' && /layout\\.[jt]sx?$/.test(this.providerFiles[0])}"
               }
             },
             {
@@ -212,7 +214,7 @@
             {
               "name": "test",
               "condition": "${project.platform === 'nextjs'}",
-              "then":[
+              "then": [
                 {
                   "name": "test",
                   "condition": "${this.layoutContent.includes('<head')}",
@@ -222,7 +224,7 @@
                       "variables": {
                         "layoutContent": "${this.layoutContent.replace(/(?<=<head[^>]*>)(\\s*)/, '$1<ColorSchemeScript />$1')}"
                       }
-                    },
+                    }
                   ],
                   "else": [
                     {
@@ -238,7 +240,7 @@
                   "variables": {
                     "layoutContent": "${this.layoutContent.replace(/<html([^>]*)>/, '<html {...mantineHtmlProps} $1>')}"
                   }
-                },
+                }
               ]
             },
             {
@@ -249,7 +251,7 @@
             },
             {
               "name": "resolve-import",
-              "path": "${this.providerFiles[0]}",
+              "path": "${this.providerFiles[0]}"
             }
           ]
         }
@@ -272,61 +274,58 @@
           "result": "pageDirectories"
         },
         {
-            "name": "test",
-            "condition": "${this.pageDirectories.length > 0}",
-            "then": [
-              {
-                "name": "locate-path",
-                "path": "${this.pageDirectory}/_document.{js,jsx,ts,tsx}",
-                "limit": 1,
-                "result": "documentFiles",
-              },
-              {
-                "name": "test",
-                "condition": "${this.documentFiles.length === 0}",
-                "then": [
-                  {
-                    "name": "download",
-                    "source": "./code/_document.tsx",
-                    "destination": "${this.pageDirectory}",
-                    "mapping": {
-                      "_document.tsx": "_document${this.codeExtension}x"
-                    }
+          "name": "test",
+          "condition": "${this.pageDirectories.length > 0}",
+          "then": [
+            {
+              "name": "locate-path",
+              "path": "${this.pageDirectory}/_document.{js,jsx,ts,tsx}",
+              "limit": 1,
+              "result": "documentFiles"
+            },
+            {
+              "name": "test",
+              "condition": "${this.documentFiles.length === 0}",
+              "then": [
+                {
+                  "name": "download",
+                  "source": "./code/_document.tsx",
+                  "destination": "${this.pageDirectory}",
+                  "mapping": {
+                    "_document.tsx": "_document${this.codeExtension}x"
                   }
-                ],
-                "else": [
-                  {
-                    "name": "read-file",
-                    "path": "${this.documentFiles[0]}",
-                    "result": "documentContent"
-                  },
-                  {
-                    "name": "test",
-                    "condition": "${!this.documentContent.includes('mantine')}",
-                    "then": [
-                      {
-                        "name": "define",
-                        "variables": {
-                          "documentContent": "import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';\n${this.documentContent.replace(/(?<=<Head[^>\\/]*>)(\\s*)/, '$1<ColorSchemeScript defaultColorScheme=\"auto\" />$1').replace(/<Head ?([^>]*)\\/>/, '<Head$1><ColorSchemeScript defaultColorScheme=\"auto\" /></Head>').replace(/<Html([^>]*)>/, '<Html {...mantineHtmlProps}$1>')}"
-                        }
-                      },
-                      {
-                        "name": "write-file",
-                        "path": "${this.documentFiles[0]}",
-                        "content": "${this.documentContent}",
-                        "overwrite": true
+                }
+              ],
+              "else": [
+                {
+                  "name": "read-file",
+                  "path": "${this.documentFiles[0]}",
+                  "result": "documentContent"
+                },
+                {
+                  "name": "test",
+                  "condition": "${!this.documentContent.includes('mantine')}",
+                  "then": [
+                    {
+                      "name": "define",
+                      "variables": {
+                        "documentContent": "import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';\n${this.documentContent.replace(/(?<=<Head[^>\\/]*>)(\\s*)/, '$1<ColorSchemeScript defaultColorScheme=\"auto\" />$1').replace(/<Head ?([^>]*)\\/>/, '<Head$1><ColorSchemeScript defaultColorScheme=\"auto\" /></Head>').replace(/<Html([^>]*)>/, '<Html {...mantineHtmlProps}$1>')}"
                       }
-                    ]
-                  }
-                ]
-              }
-
-            ],
-
-        },
+                    },
+                    {
+                      "name": "write-file",
+                      "path": "${this.documentFiles[0]}",
+                      "content": "${this.documentContent}",
+                      "overwrite": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
-
     {
       "name": "test",
       "condition": "${!options.disableLauncher}",

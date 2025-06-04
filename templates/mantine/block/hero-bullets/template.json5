@@ -1,25 +1,32 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Hero section",
-  "description": "A hero section component built with Mantine.",
+  "title": "Hero bullets section",
+  "description": "A hero bullets section component built with Mantine.",
   "metadata": {
-    "id": "library/mantine/hero-section",
+    "id": "library/mantine/hero-bullets",
     "ecosystem": {
       "name": "Mantine",
-      "avatarUrl": "https://github.com/heroui-inc.png",
-      "websiteUrl": "https://heroui.com?utm_source=croct"
+      "avatarUrl": "https://github.com/mantinedev.png",
+      "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-section/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-section/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-section/cover.png",
-    "installationUrl": "mantine://block/hero-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/cover.png",
+    "installationUrl": "mantine://block/hero-bullets",
     "categories": [
       "framework/nextjs",
       "framework/react",
+      "interface/hero",
+      "interface/marketing",
+      "interface/section",
       "language/javascript",
       "language/typescript",
       "library/mantine",
-      "library/tailwind-css"
+      "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "interface/section/hero-section",
+      "library/material-ui/hero-section"
     ]
   },
   "options": {
@@ -53,19 +60,22 @@
       "name": "import",
       "template": "mantine://component/component",
       "options": {
-        "id": "hero-section",
+        "id": "hero-bullets",
         "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
-        "dependencies": ["@tabler/icons-react", "@croct/md-lite"],
+        "dependencies": [
+          "@tabler/icons-react",
+          "@croct/md-lite"
+        ],
         "components": [
-          "HeroSection/index.tsx",
+          "HeroBullets/index.tsx"
         ],
         "utils": [
           "markdown.tsx"
         ],
-        "extension": "mantine://block/hero-section/extension.json5"
+        "extension": "mantine://block/hero-bullets/extension.json5"
       }
     }
   ]

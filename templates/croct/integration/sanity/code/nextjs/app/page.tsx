@@ -37,9 +37,8 @@ export default async function Page() {
                       const [url, color] = parseLink(node.href);
 
                       return (
-                        <span style={{color: color, textDecorationColor: color}}>
+                        <span key={node.index} style={{color: color, textDecorationColor: color}}>
                              <Link
-                               key={node.index}
                                target="_blank"
                                href={url}
                                className="underline hover:text-inherit decoration-inherit text-black underline-offset-8 hover:underline-offset-4 transition-all ease-out"

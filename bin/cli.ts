@@ -67,6 +67,7 @@ const categoryMap = {
     'library/framer-motion': 'Framer Motion',
     'library/hero-ui': 'Hero UI',
     'library/magic-ui': 'Magic UI',
+    'library/mantine': 'Mantine',
     'library/material-ui': 'Material UI',
     'library/shadcn-ui': 'Shadcn UI',
     'library/shiki': 'Shiki',

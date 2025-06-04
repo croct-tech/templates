@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { fileURLToPath } from 'url';
+import {fileURLToPath} from 'url';
 
 (async () => {
     // The configuration you want to enforce

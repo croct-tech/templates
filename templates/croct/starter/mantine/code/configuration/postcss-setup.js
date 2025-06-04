@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 
 (async () => {
     // The configuration you want to enforce
@@ -49,7 +50,7 @@ import fs from 'fs';
     }
 
     // Remove this script file
-    fs.unlinkSync(import.meta.filename);
+    fs.unlinkSync(fileURLToPath(import.meta.url));
 
     // Deep merge utility (no deps)
     function deepMerge(target, source) {

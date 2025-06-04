@@ -1,0 +1,294 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Mantine component",
+  "description": "Import the Mantine example into the project.",
+  "metadata": {
+    "id": "library/mantine/component",
+    "ecosystem": {
+      "name": "Mantine",
+      "avatarUrl": "https://github.com/mantinedev.png",
+      "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/component/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/component/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/component/cover.png",
+    "installationUrl": "mantine://component/component",
+    "categories": [
+      "boilerplate/utility",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/mantine"
+    ]
+  },
+  "options": {
+    "id": {
+      "type": "string",
+      "description": "The component or block ID.",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of the component.",
+      "choices": [
+        "component",
+        "block"
+      ],
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    },
+    "components": {
+      "type": "array",
+      "description": "The components to import."
+    },
+    "utils": {
+      "type": "array",
+      "description": "The utilities to import.",
+      "default": []
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "The dependencies to add to the project.",
+      "default": []
+    },
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct://starter/mantine",
+      "options": {
+        "name": "${options.id}-example",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "defaultHomepage": true,
+        "disableLauncher": true
+      }
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": "${[\"@croct/template-ui\", ...options.dependencies]}"
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript"
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/${options.id}",
+        "codeExtension": "${this.isTypescript ? '.tsx' : '.jsx'}",
+        "pageBaseName": "${{nextjs: project.path.examples.endsWith('app') ? 'page' : 'index', react: 'page'}[project.platform]}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "examplePath": "${this.exampleDirectory}/${this.pageBaseName}${this.codeExtension}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "componentIndex": 0,
+        "utilityIndex": 0
+      }
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.utilityIndex < options.utils.length}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "utilityFile": "${options.utils[this.utilityIndex]}",
+            "utilityBaseName": "${basename(options.utils[this.utilityIndex], true)}"
+          }
+        },
+        {
+          "name": "download",
+          "source": "mantine://${options.type}/${options.id}/code/utils/${this.utilityFile}",
+          "destination": "${project.path.utilities}",
+          "mapping": {
+            "${this.utilityFile}": "${this.utilityBaseName}${/x$/.test(this.codeExtension) ? this.codeExtension : this.codeExtension.slice(0, -1)}"
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "utilityIndex": "${this.utilityIndex + 1}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.componentIndex < options.components.length}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "componentFile": "${options.components[this.componentIndex]}",
+            "componentBaseName": "${basename(options.components[this.componentIndex], true)}"
+          }
+        },
+        {
+          "name": "download",
+          "source": "mantine://${options.type}/${options.id}/code/components/${dirname(this.componentFile)}",
+          "filter": "!${basename(this.componentFile)}",
+          "destination": "${project.path.components}/${dirname(this.componentFile)}"
+        },
+        {
+          "name": "download",
+          "source": "mantine://${options.type}/${options.id}/code/components/${this.componentFile}",
+          "destination": "${project.path.components}/${dirname(this.componentFile)}",
+          "mapping": {
+            "${basename(this.componentFile)}": "${this.componentBaseName}${this.codeExtension}"
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "componentIndex": "${this.componentIndex + 1}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleSourceFile": "${this.pageBaseName}.tsx",
+        "exampleFile": "${this.pageBaseName}${this.codeExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "mantine://${options.type}/${options.id}/code/page/${project.platform}/${this.exampleSourceFile}",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "${this.exampleSourceFile}": "${this.exampleFile}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "slotId": "",
+        "slotVersion": ""
+      }
+    },
+    {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "exampleDirectory": "${this.exampleDirectory}",
+            "exampleFile": "${this.exampleFile}",
+            "codeExtension": "${this.codeExtension}",
+            "slotId": "slotId",
+            "slotVersion": "slotVersion"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${this.slotId !== '' && this.slotVersion !== ''}",
+      "then": [
+        {
+          "name": "add-slot",
+          "slots": [
+            "${this.slotId}@${this.slotVersion}"
+          ]
+        },
+        {
+          "name": "replace-file-content",
+          "files": [
+            {
+              "path": "${this.examplePath}",
+              "replacements": [
+                {
+                  "pattern": "%slotId%",
+                  "value": "${this.slotId}"
+                },
+                {
+                  "pattern": "%slotVersion%",
+                  "value": "${this.slotVersion}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.examplePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component successfully imported at `${this.exampleDirectory}/${this.exampleFile}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher",
+          "options": {
+            "path": "${options.id}"
+          }
+        }
+      ]
+    }
+  ]
+}

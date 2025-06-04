@@ -34,5 +34,9 @@
   {
     "pattern": "^material-ui://?(.+)$",
     "destination": "material-ui/$1"
+  },
+  {
+    "pattern": "^mantine://?(.+)$",
+    "destination": "mantine/$1"
   }
 ]

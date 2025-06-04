@@ -1,10 +1,11 @@
 # Introduction
 
-This template provides a reusable setup for importing [Hero UI](https://heroui.com?utm_source=croct) components, fully integrated
-with Croct for content management, AB testing, and real-time personalization.
+This template provides a reusable setup for importing [Mantine](https://ui.mantine.dev?utm_source=croct) components,
+fully integrated with Croct for content management, AB testing, and real-time personalization.
 
-It supports downloading code, configuring slots, and extending functionality with additional actions. 
-If the current directory does not contain a project, the template creates a new one using [Next.js](https://nextjs.org/?utm_source=croct).
+It supports downloading code, configuring slots, and extending functionality with additional actions.
+If the current directory does not contain a project, the template creates a new one
+using [Next.js](https://nextjs.org/?utm_source=croct).
 
 ## Usage
 
@@ -13,13 +14,13 @@ Here is an example of how to use this template:
 ```json
 {
   "name": "import",
-  "template": "hero-ui://component/component",
+  "template": "mantine://component/component",
   "options": {
-    "id": "animated-list",
+    "id": "hero-section",
     "slotId": "slotId",
     "slotVersion": "slotVersion",
-    "components": ["notification-list.tsx"],
-    "extension": "hero-ui://component/cookie-consent/extension.json5"
+    "components": ["hero-section.tsx"],
+    "extension": "mantine://block/hero-section/extension.json5"
   }
 }
 ```
@@ -28,7 +29,7 @@ Here is an example of how to use this template:
 
 | Option        | Description                                                                | Type        | Required | Default  |
 |---------------|----------------------------------------------------------------------------|-------------|----------|----------|
-| `id`          | A unique identifier for the Hero UI component, as defined in the registry. | `string`    | Yes      | –        |
+| `id`          | A unique identifier for the Mantine component, as defined in the registry. | `string`    | Yes      | –        |
 | `version`     | The version of Next.js to use when generating a new project.               | `string`    | No       | `latest` |
 | `router`      | The router format to use (`app` or `page`).                                | `string`    | No       | `app`    |
 | `slotId`      | The variable name that holds the slot ID created or used by the template.  | `reference` | No       | –        |

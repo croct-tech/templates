@@ -1,13 +1,13 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Mantine block",
+  "title": "Mantine component",
   "description": "Import the Mantine example into the project.",
   "metadata": {
-    "id": "library/mantine/block",
+    "id": "library/mantine/component",
     "ecosystem": {
       "name": "Mantine",
-      "avatarUrl": "https://github.com/heroui-inc.png",
-      "websiteUrl": "https://heroui.com?utm_source=croct"
+      "avatarUrl": "https://github.com/mantinedev.png",
+      "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/component/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/component/template.json5",
@@ -95,7 +95,7 @@
     },
     {
       "name": "add-dependency",
-      "dependencies": "${[\"@croct/template-ui\", ...options.dependencies]}",
+      "dependencies": "${[\"@croct/template-ui\", ...options.dependencies]}"
     },
     {
       "name": "check-dependency",
@@ -171,7 +171,7 @@
           "name": "download",
           "source": "mantine://${options.type}/${options.id}/code/components/${dirname(this.componentFile)}",
           "filter": "!${basename(this.componentFile)}",
-          "destination": "${project.path.components}/${dirname(this.componentFile)}",
+          "destination": "${project.path.components}/${dirname(this.componentFile)}"
         },
         {
           "name": "download",

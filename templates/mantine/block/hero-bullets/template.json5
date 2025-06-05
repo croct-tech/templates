@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Hero section with bullets",
+  "description": "A hero section with bullets built with Mantine.",
+  "metadata": {
+    "id": "library/mantine/hero-bullets",
+    "ecosystem": {
+      "name": "Mantine",
+      "avatarUrl": "https://github.com/mantinedev.png",
+      "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/cover.png",
+    "categories": [
+      "library/mantine"
+    ]
+  },
+  "actions": [
+    {
+      "name": "print",
+      "semantics": "info",
+      "title": "Request early access",
+      "message": "This template is still under development, but we're inviting early adopters."
+    },
+    {
+      "name": "prompt",
+      "type": "keypress",
+      "message": "Press any key to request access"
+    },
+    {
+      "name": "open-link",
+      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Mantine%20hero%20section%20with%20bullets%20template."
+    }
+  ]
+}

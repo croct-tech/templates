@@ -1,0 +1,288 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Marketing page customization",
+  "description": "A customization template for the marketing page template.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "reactExtension": {
+      "type": "string",
+      "description": "The file extension for React files.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "define",
+      "variables": {
+        "faqSlotId": "faq",
+        "faqSlotVersion": "1",
+        "featuresSlotId": "features",
+        "featuresSlotVersion": "1",
+        "heroSlotId": "hero",
+        "heroSlotVersion": "1",
+        "highlightsSlotId": "highlights",
+        "highlightsSlotVersion": "1",
+        "logosSlotId": "logos",
+        "logosSlotVersion": "1",
+        "navbarSlotId": "navbar",
+        "navbarSlotVersion": "1",
+        "pricingSlotId": "pricing",
+        "pricingSlotVersion": "1",
+        "testimonialsSlotId": "testimonials",
+        "testimonialsSlotVersion": "1"
+      }
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "material-ui-faq-section": {
+            "name": "Material UI - FAQ section",
+            "description": "A section of frequently asked questions.",
+            "schema": "${import('./configuration/faq-section-schema.json')}"
+          },
+          "material-ui-features-section": {
+            "name": "Material UI - Features section",
+            "description": "A section of features.",
+            "schema": "${import('./configuration/features-section-schema.json')}"
+          },
+          "material-ui-hero-section": {
+            "name": "Material UI - Hero section",
+            "description": "A hero section with centered headline, email input, and call to action button.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          },
+          "material-ui-highlights-section": {
+            "name": "Material UI - Highlights section",
+            "description": "A section of highlights.",
+            "schema": "${import('./configuration/highlights-section-schema.json')}"
+          },
+          "material-ui-logo-collection": {
+            "name": "Material UI - Logo collection",
+            "description": "A logo cloud section.",
+            "schema": "${import('./configuration/logo-collection-schema.json')}"
+          },
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "material-ui-navbar": {
+            "name": "Material UI - Navbar",
+            "description": "A section of features.",
+            "schema": "${import('./configuration/navbar-schema.json')}"
+          },
+          "material-ui-pricing-section": {
+            "name": "Material UI - Pricing section",
+            "description": "A section of plan cards.",
+            "schema": "${import('./configuration/pricing-section-schema.json')}"
+          },
+          "material-ui-testimonials-section": {
+            "name": "Material UI - Testimonials section",
+            "description": "A section of testimonials.",
+            "schema": "${import('./configuration/testimonials-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "material-ui-faq-section": {
+            "name": "Material UI - FAQ section",
+            "component": "material-ui-faq-section",
+            "content": {
+              "en": "${import('./configuration/faq-section-content.en.json')}"
+            }
+          },
+          "material-ui-home-features": {
+            "name": "Material UI - Features section",
+            "component": "material-ui-features-section",
+            "content": {
+              "en": "${import('./configuration/features-section-content.en.json')}"
+            }
+          },
+          "material-ui-home-hero": {
+            "name": "Material UI - Home hero",
+            "component": "material-ui-hero-section",
+            "content": {
+              "en": "${import('./configuration/hero-section-content.en.json')}"
+            }
+          },
+          "material-ui-home-highlights": {
+            "name": "Material UI - Highlights section",
+            "component": "material-ui-highlights-section",
+            "content": {
+              "en": "${import('./configuration/highlights-section-content.en.json')}"
+            }
+          },
+          "material-ui-logo-collection": {
+            "name": "Material UI - Logo collection",
+            "component": "material-ui-logo-collection",
+            "content": {
+              "en": "${import('./configuration/logo-collection-content.en.json')}"
+            }
+          },
+          "material-ui-navbar": {
+            "name": "Material UI - Navbar",
+            "component": "material-ui-navbar",
+            "content": {
+              "en": "${import('./configuration/navbar-content.en.json')}"
+            }
+          },
+          "material-ui-home-pricing": {
+            "name": "Material UI - Home pricing",
+            "component": "material-ui-pricing-section",
+            "content": {
+              "en": "${import('./configuration/pricing-section-content.en.json')}"
+            }
+          },
+          "material-ui-testimonials-section": {
+            "name": "Material UI - Testimonials section",
+            "component": "material-ui-testimonials-section",
+            "content": {
+              "en": "${import('./configuration/testimonials-section-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "material-ui-faq-section": {
+            "id": "${this.faqSlotId}",
+            "version": "${this.faqSlotVersion}"
+          },
+          "material-ui-home-features": {
+            "id": "${this.featuresSlotId}",
+            "version": "${this.featuresSlotVersion}"
+          },
+          "material-ui-home-hero": {
+            "id": "${this.heroSlotId}",
+            "version": "${this.heroSlotVersion}"
+          },
+          "material-ui-home-highlights": {
+            "id": "${this.highlightsSlotId}",
+            "version": "${this.highlightsSlotVersion}"
+          },
+          "material-ui-logo-collection": {
+            "id": "${this.logosSlotId}",
+            "version": "${this.logosSlotVersion}"
+          },
+          "material-ui-navbar": {
+            "id": "${this.navbarSlotId}",
+            "version": "${this.navbarSlotVersion}"
+          },
+          "material-ui-home-pricing": {
+            "id": "${this.pricingSlotId}",
+            "version": "${this.pricingSlotVersion}"
+          },
+          "material-ui-testimonials-section": {
+            "id": "${this.testimonialsSlotId}",
+            "version": "${this.testimonialsSlotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            },
+            {
+              "pattern": "%faqSlotId%",
+              "value": "${this[this.faqSlotId]}"
+            },
+            {
+              "pattern": "%faqSlotVersion%",
+              "value": "${this[this.faqSlotVersion]}"
+            },
+            {
+              "pattern": "%featuresSlotId%",
+              "value": "${this[this.featuresSlotId]}"
+            },
+            {
+              "pattern": "%featuresSlotVersion%",
+              "value": "${this[this.featuresSlotVersion]}"
+            },
+            {
+              "pattern": "%heroSlotId%",
+              "value": "${this[this.heroSlotId]}"
+            },
+            {
+              "pattern": "%heroSlotVersion%",
+              "value": "${this[this.heroSlotVersion]}"
+            },
+            {
+              "pattern": "%highlightsSlotId%",
+              "value": "${this[this.highlightsSlotId]}"
+            },
+            {
+              "pattern": "%highlightsSlotVersion%",
+              "value": "${this[this.highlightsSlotVersion]}"
+            },
+            {
+              "pattern": "%logosSlotId%",
+              "value": "${this[this.logosSlotId]}"
+            },
+            {
+              "pattern": "%logosSlotVersion%",
+              "value": "${this[this.logosSlotVersion]}"
+            },
+            {
+              "pattern": "%navbarSlotId%",
+              "value": "${this[this.navbarSlotId]}"
+            },
+            {
+              "pattern": "%navbarSlotVersion%",
+              "value": "${this[this.navbarSlotVersion]}"
+            },
+            {
+              "pattern": "%pricingSlotId%",
+              "value": "${this[this.pricingSlotId]}"
+            },
+            {
+              "pattern": "%pricingSlotVersion%",
+              "value": "${this[this.pricingSlotVersion]}"
+            },
+            {
+              "pattern": "%testimonialsSlotId%",
+              "value": "${this[this.testimonialsSlotId]}"
+            },
+            {
+              "pattern": "%testimonialsSlotVersion%",
+              "value": "${this[this.testimonialsSlotVersion]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

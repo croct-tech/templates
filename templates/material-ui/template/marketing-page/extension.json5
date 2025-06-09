@@ -28,22 +28,22 @@
     {
       "name": "define",
       "variables": {
-        "faqSlotId": "faq",
-        "faqSlotVersion": "1",
+        "faqSlotId": "faqSlot",
+        "faqSlotVersion": "faqVersion",
         "featuresSlotId": "features",
-        "featuresSlotVersion": "1",
-        "heroSlotId": "hero",
-        "heroSlotVersion": "1",
-        "highlightsSlotId": "highlights",
-        "highlightsSlotVersion": "1",
-        "logosSlotId": "logos",
-        "logosSlotVersion": "1",
-        "navbarSlotId": "navbar",
-        "navbarSlotVersion": "1",
-        "pricingSlotId": "pricing",
-        "pricingSlotVersion": "1",
-        "testimonialsSlotId": "testimonials",
-        "testimonialsSlotVersion": "1"
+        "featuresSlotVersion": "featuresVersion",
+        "heroSlotId": "heroSlot",
+        "heroSlotVersion": "heroVersion",
+        "highlightsSlotId": "highlightsSlot",
+        "highlightsSlotVersion": "highlightsVersion",
+        "logosSlotId": "logosSlot",
+        "logosSlotVersion": "logosVersion",
+        "navbarSlotId": "navbarSlot",
+        "navbarSlotVersion": "navbarVersion",
+        "pricingSlotId": "pricingSlot",
+        "pricingSlotVersion": "pricingVersion",
+        "testimonialsSlotId": "testimonialsSlot",
+        "testimonialsSlotVersion": "testimonialsVersion"
       }
     },
     {

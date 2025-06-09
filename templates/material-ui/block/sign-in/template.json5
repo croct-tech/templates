@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Sign In",
+  "description": "A sign-in using Material UI components and Croct.",
+  "metadata": {
+    "id": "library/material-ui/sign-in",
+    "ecosystem": {
+      "name": "Material UI",
+      "avatarUrl": "https://github.com/mui.png",
+      "websiteUrl": "https://mui.com/?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-in/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-in/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-in/cover.png",
+    "installationUrl": "material-ui://block/sign-in",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/marketing",
+      "interface/menu",
+      "interface/section",
+      "language/javascript",
+      "language/typescript",
+      "library/material-ui",
+      "use-case/saas"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    }
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "material-ui://block/block",
+      "options": {
+        "id": "sign-in",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "dependencies": [
+          "@mui/icons-material"
+        ],
+        "components": [
+          "custom-icons.tsx",
+          "forgot-password.tsx",
+          "product-information.tsx",
+          "sign-in-form.tsx",
+          "sign-in-section.tsx",
+          "sign-in-demo.tsx"
+        ],
+        "utils": [
+          "markdown.tsx"
+        ],
+        "extension": "material-ui://block/sign-in/extension.json5"
+      }
+    }
+  ]
+}

@@ -3,14 +3,14 @@ import { LinkButton } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 
 export default async function Page() {
-  const navbar = 'material-ui-navbar' != undefined ? await fetchContent('material-ui-navbar@1') : undefined;
-  const hero = 'material-ui-home-hero' != undefined ? await fetchContent('material-ui-home-hero@1') : undefined;
-  const logoCollection = 'material-ui-logo-collection' != undefined ? await fetchContent('material-ui-logo-collection@1') : undefined;
-  const features = 'material-ui-home-features' != undefined ? await fetchContent('material-ui-home-features@1') : undefined;
-  const testimonials = 'material-ui-testimonials-section' != undefined ? await fetchContent('material-ui-testimonials-section@1') : undefined;
-  const highlights = 'material-ui-home-highlights' != undefined ? await fetchContent('material-ui-home-highlights@1') : undefined;
-  const pricing = 'material-ui-home-pricing' != undefined ? await fetchContent('material-ui-home-pricing@1') : undefined;
-  const faq = 'material-ui-faq-section' != undefined ? await fetchContent('material-ui-faq-section@1') : undefined;
+  const navbar = '%navbarSlotId%' != undefined ? await fetchContent('%navbarSlotId%@1') : undefined;
+  const hero = '%heroSlotId%' != undefined ? await fetchContent('%heroSlotId%@%heroSlotVersion%') : undefined;
+  const logoCollection = '%logosSlotId%' != undefined ? await fetchContent('%logosSlotId%@%logosSlotVersion%') : undefined;
+  const features = '%featuresSlotId%' != undefined ? await fetchContent('%featuresSlotId%@%featuresSlotVersion%') : undefined;
+  const testimonials = '%testimonialsSlotId%' != undefined ? await fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%') : undefined;
+  const highlights = '%highlightsSlotId%' != undefined ? await fetchContent('%highlightsSlotId%@%highlightsSlotVersion%') : undefined;
+  const pricing = '%pricingSlotId%' != undefined ? await fetchContent('%pricingSlotId%@%pricingSlotVersion%') : undefined;
+  const faq = '%faqSlotId%' != undefined ? await fetchContent('%faqSlotId%@%faqSlotVersion%') : undefined;
 
   const content = {
     navbar: navbar?.content,

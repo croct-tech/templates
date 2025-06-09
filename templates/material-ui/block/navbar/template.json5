@@ -60,6 +60,7 @@
       "template": "material-ui://block/block",
       "options": {
         "id": "navbar",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",

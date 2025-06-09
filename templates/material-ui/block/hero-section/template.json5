@@ -61,6 +61,7 @@
       "template": "material-ui://block/block",
       "options": {
         "id": "hero-section",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",

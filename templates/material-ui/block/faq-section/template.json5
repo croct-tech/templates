@@ -59,6 +59,7 @@
       "template": "material-ui://block/block",
       "options": {
         "id": "faq-section",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",

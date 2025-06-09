@@ -97,15 +97,15 @@
           }
         },
         "slots": {
-          "material-ui-faq-section": {
-            "name": "Material UI - FAQ section",
+          "material-ui-home-faq": {
+            "name": "Material UI - Home FAQ",
             "component": "material-ui-faq-section",
             "content": {
               "en": "${import('material-ui://block/faq-section/configuration/faq-section-content.en.json')}"
             }
           },
           "material-ui-home-features": {
-            "name": "Material UI - Features section",
+            "name": "Material UI - Home features",
             "component": "material-ui-features-section",
             "content": {
               "en": "${import('material-ui://block/features-section/configuration/features-section-content.en.json')}"
@@ -119,14 +119,14 @@
             }
           },
           "material-ui-home-highlights": {
-            "name": "Material UI - Highlights section",
+            "name": "Material UI - Home highlights",
             "component": "material-ui-highlights-section",
             "content": {
               "en": "${import('material-ui://block/highlights-section/configuration/highlights-section-content.en.json')}"
             }
           },
-          "material-ui-logo-collection": {
-            "name": "Material UI - Logo collection",
+          "material-ui-home-logos": {
+            "name": "Material UI - Home logos",
             "component": "material-ui-logo-collection",
             "content": {
               "en": "${import('material-ui://block/logo-collection/configuration/logo-collection-content.en.json')}"
@@ -146,8 +146,8 @@
               "en": "${import('material-ui://block/pricing-section/configuration/pricing-section-content.en.json')}"
             }
           },
-          "material-ui-testimonials-section": {
-            "name": "Material UI - Testimonials section",
+          "material-ui-home-testimonials": {
+            "name": "Material UI - Home testimonials",
             "component": "material-ui-testimonials-section",
             "content": {
               "en": "${import('material-ui://block/testimonials-section/configuration/testimonials-section-content.en.json')}"
@@ -157,7 +157,7 @@
       },
       "result": {
         "slots": {
-          "material-ui-faq-section": {
+          "material-ui-home-faq": {
             "id": "${this.faqSlotId}",
             "version": "${this.faqSlotVersion}"
           },
@@ -173,7 +173,7 @@
             "id": "${this.highlightsSlotId}",
             "version": "${this.highlightsSlotVersion}"
           },
-          "material-ui-logo-collection": {
+          "material-ui-home-logos": {
             "id": "${this.logosSlotId}",
             "version": "${this.logosSlotVersion}"
           },
@@ -185,7 +185,7 @@
             "id": "${this.pricingSlotId}",
             "version": "${this.pricingSlotVersion}"
           },
-          "material-ui-testimonials-section": {
+          "material-ui-home-testimonials": {
             "id": "${this.testimonialsSlotId}",
             "version": "${this.testimonialsSlotVersion}"
           }

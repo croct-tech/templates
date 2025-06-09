@@ -47,6 +47,12 @@
       "type": "boolean",
       "description": "Whether to use JavaScript instead of TypeScript.",
       "default": false
+    },
+    "slots": {
+      "type": "string",
+      "description": "The slots to install.",
+      "default": 'navbar,hero,logos,features,testimonials,highlights,pricing,faq',
+      "required": false
     }
   },
   "actions": [
@@ -77,7 +83,8 @@
         "utils": [
           "markdown.tsx"
         ],
-        "extension": "material-ui://template/marketing-page/extension.json5"
+        "extension": "material-ui://template/marketing-page/extension.json5",
+        "slots": "${options.slots}"
       }
     }
   ]

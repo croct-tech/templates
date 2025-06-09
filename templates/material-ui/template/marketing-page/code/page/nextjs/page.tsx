@@ -3,14 +3,16 @@ import { LinkButton } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 
 export default async function Page() {
-  const navbar = '%navbarSlotId%' != undefined ? await fetchContent('%navbarSlotId%@1') : undefined;
-  const hero = '%heroSlotId%' != undefined ? await fetchContent('%heroSlotId%@%heroSlotVersion%') : undefined;
-  const logoCollection = '%logosSlotId%' != undefined ? await fetchContent('%logosSlotId%@%logosSlotVersion%') : undefined;
-  const features = '%featuresSlotId%' != undefined ? await fetchContent('%featuresSlotId%@%featuresSlotVersion%') : undefined;
-  const testimonials = '%testimonialsSlotId%' != undefined ? await fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%') : undefined;
-  const highlights = '%highlightsSlotId%' != undefined ? await fetchContent('%highlightsSlotId%@%highlightsSlotVersion%') : undefined;
-  const pricing = '%pricingSlotId%' != undefined ? await fetchContent('%pricingSlotId%@%pricingSlotVersion%') : undefined;
-  const faq = '%faqSlotId%' != undefined ? await fetchContent('%faqSlotId%@%faqSlotVersion%') : undefined;
+  const slots = '%pageSlots%';
+
+  const navbar = slots.includes('navbar') ? await fetchContent('%navbarSlotId%@1') : undefined;
+  const hero = slots.includes('hero') ? await fetchContent('%heroSlotId%@%heroSlotVersion%') : undefined;
+  const logoCollection = slots.includes('logos') ? await fetchContent('%logosSlotId%@%logosSlotVersion%') : undefined;
+  const features = slots.includes('features') ? await fetchContent('%featuresSlotId%@%featuresSlotVersion%') : undefined;
+  const testimonials = slots.includes('testimonials') ? await fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%') : undefined;
+  const highlights = slots.includes('highlights') != undefined ? await fetchContent('%highlightsSlotId%@%highlightsSlotVersion%') : undefined;
+  const pricing = slots.includes('pricing') ? await fetchContent('%pricingSlotId%@%pricingSlotVersion%') : undefined;
+  const faq = slots.includes('faq') ? await fetchContent('%faqSlotId%@%faqSlotVersion%') : undefined;
 
   const content = {
     navbar: navbar?.content,

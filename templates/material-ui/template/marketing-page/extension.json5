@@ -22,6 +22,11 @@
       "type": "string",
       "description": "The file extension for the code files.",
       "required": true
+    },
+    "slots": {
+      "type": "string",
+      "description": "The slots to install.",
+      "required": false
     }
   },
   "actions": [
@@ -198,6 +203,10 @@
         {
           "path": "${options.exampleDirectory}/${options.exampleFile}",
           "replacements": [
+            {
+              "pattern": "%pageSlots%",
+              "value": "${options.slots}"
+            },
             {
               "pattern": "%faqSlotId%",
               "value": "${this[this.faqSlotId]}"

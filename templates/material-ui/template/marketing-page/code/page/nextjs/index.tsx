@@ -19,14 +19,14 @@ export type PageProps = {
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async context => ({
   props: {
-    navbar: '%navbarSlotId%' != undefined ? await fetchContent('%navbarSlotId%@%navbarSlotVersion%', {route: context}) : undefined,
-    hero: '%heroSlotId%' != undefined ? await fetchContent('%heroSlotId%@%heroSlotVersion%', {route: context}) : undefined,
-    logoCollection: '%logosSlotId%' != undefined ? await fetchContent('%logosSlotId%@%logosSlotVersion%', {route: context}) : undefined,
-    features: '%featuresSlotId%' != undefined ? await fetchContent('%featuresSlotId%@%featuresSlotVersion%', {route: context}) : undefined,
-    testimonials: '%testimonialsSlotId%' != undefined ? await fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%', {route: context}) : undefined,
-    highlights: '%highlightsSlotId%' != undefined ? await fetchContent('%highlightsSlotId%@%highlightsSlotVersion%', {route: context}) : undefined,
-    pricing: '%pricingSlotId%' != undefined ? await fetchContent('%pricingSlotId%@%pricingSlotVersion%', {route: context}) : undefined,
-    faq: '%faqSlotId%' != undefined ? await fetchContent('%faqSlotId%@%faqSlotVersion%', {route: context}) : undefined,
+    navbar: '%pageSlots%'.includes('navbar') ? await fetchContent('%navbarSlotId%@%navbarSlotVersion%', {route: context}) : undefined,
+    hero: '%pageSlots%'.includes('hero') ? await fetchContent('%heroSlotId%@%heroSlotVersion%', {route: context}) : undefined,
+    logoCollection: '%pageSlots%'.includes('logos') ? await fetchContent('%logosSlotId%@%logosSlotVersion%', {route: context}) : undefined,
+    features: '%pageSlots%'.includes('features') ? await fetchContent('%featuresSlotId%@%featuresSlotVersion%', {route: context}) : undefined,
+    testimonials: '%pageSlots%'.includes('testimonials') ? await fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%', {route: context}) : undefined,
+    highlights: '%pageSlots%'.includes('highlights') ? await fetchContent('%highlightsSlotId%@%highlightsSlotVersion%', {route: context}) : undefined,
+    pricing: '%pageSlots%'.includes('pricing') ? await fetchContent('%pricingSlotId%@%pricingSlotVersion%', {route: context}) : undefined,
+    faq: '%pageSlots%'.includes('faq') ? await fetchContent('%faqSlotId%@%faqSlotVersion%', {route: context}) : undefined,
   }
 });
 

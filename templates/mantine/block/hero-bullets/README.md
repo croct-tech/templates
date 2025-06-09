@@ -1,8 +1,6 @@
 # Introduction
 
-This template adds the [Mantine hero with bullets](https://ui.mantine.dev/category/hero/#hero-bullets?utm_source=croct)
-block to your project or creates a new project using [Next.js](https://nextjs.org/?utm_source=croct) if none is found in
-the current directory.
+This template adds the [hero section with bullets](https://ui.mantine.dev/category/hero/?utm_source=croct#hero-bullets) from Mantine to your project.
 
 It comes fully integrated with Croct, giving you CMS, AB testing, and personalization out of the box.
 

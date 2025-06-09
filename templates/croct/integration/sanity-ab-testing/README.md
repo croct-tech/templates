@@ -1,12 +1,13 @@
 # Introduction
 
-Looking to add **dynamic content blocks** to your Sanity-powered site?
+Looking to add **AB testing** to your Sanity-powered site?
 
 This template
 combines [Sanity.io](https://www.sanity.io/?utm_source=croct), [Next.js](https://nextjs.org/?utm_source=croct), and
-Croct to help you implement dynamic content without changing your CMS.
+Croct to help you run experiments and analyze results without changing your CMS or integrating with other third-party
+analytics tools.
 
-It's the fastest way to add AB testing and personalization on top of Sanity Studio.
+It's the fastest way to add experimentation on top of Sanity Studio.
 
 Unlike currently available plugins, you can run experiments at the component level rather than the field level. Croct
 replaces static component content with dynamic content, allowing you to manage everything directly on the UI while using
@@ -17,8 +18,7 @@ CDPs to segment visitors or analytics tools to gather insights.
 
 Using Croct, you get:
 
-* AB testing support with real-time audience evaluation
-* Content personalization based on location, behavior, or custom rules
+* AB testing support with real-time audience segmentation
 * Built-in analytics and Bayesian analysis for every variant and experience
 * Seamless compatibility with your existing Sanity schemas
 * Fast implementation with zero CMS migration
@@ -26,10 +26,22 @@ Using Croct, you get:
 > [!NOTE Forever-free]
 > This template is compatible with features available on the forever-free plan.
 
+## What's included
+
+Besides the integration itself, this template creates an AB test for all users who browse the website, splitting them
+into two variants, each with 50% of the traffic.
+
+As an example, the home hero content difference lies in the tagline:
+
+* **Variant A:** _Kickstart your project with a template that combines CMS, AB testing, and real-time personalization in
+  one stack._
+* **Variant B:** _Integrate AB testing, real-time personalization, and analytics into your Sanity project in just one
+  command._
+
 ## Usage
 
-Run the following command in an empty directory to create a new project using this template:
+Run the following command in an empty directory to create a new example project using this template:
 
 ```croct-cmd
-croct use croct://integration/sanity
+croct use croct://integration/sanity-ab-testing
 ```

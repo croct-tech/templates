@@ -1,0 +1,134 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Sanity personalization customization",
+  "description": "A customization template for the Sanity personalization template.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "pagePath": {
+      "type": "string",
+      "description": "The path to the page where the slot is used."
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "nextjs-15": {
+            "name": "Next.js 15",
+            "criteria": "user's stack includes 'nextjs-15'"
+          }
+        },
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('croct://integration/sanity/configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('croct://integration/sanity/configuration/home-hero-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "Personalization for Next.js 15",
+            "draft": true,
+            "audiences": [
+              "nextjs-15"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Hero copy",
+              "goalId": "command-copy",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Next.js",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('croct://integration/sanity/configuration/home-hero-slot-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Next.js 15",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "result": {
+        "slots": {
+          "home-hero": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        },
+        "experiences": {
+          "0": "experienceId"
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.pagePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%/slots/edit/%slotId%/%slotVersion%",
+              "value": "%workspaceUrl%/experiences/%experienceId%/edit"
+            },
+            {
+              "pattern": "%experienceId%",
+              "value": "${this.experienceId}"
+            },
+            {
+              "pattern": "Edit content",
+              "value": "Manage experience"
+            },
+            {
+              "pattern": "utm_content=sanity",
+              "value": "utm_content=sanity-personalization"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

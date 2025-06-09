@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Sanity CMS + AB testing",
+  "description": "A template for running AB tests on a Sanity project.",
+  "metadata": {
+    "id": "integration/cms/sanity-ab-testing",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-ab-testing/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-ab-testing/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-ab-testing/cover.png",
+    "installationUrl": "croct://integration/sanity-ab-testing",
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "integration/cms",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs",
+      "integration/cms/sanity",
+      "integration/cms/sanity-personalization",
+      "use-case/experiment/all-users",
+      "use-case/experiment/segmented"
+    ]
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct://integration/sanity",
+      "options": {
+        "extension": "croct://integration/sanity-ab-testing/extension.json5"
+      }
+    }
+  ]
+}

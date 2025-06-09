@@ -98,12 +98,14 @@
       ]
     },
     {
-      "name": "install",
+      "name": "install"
     },
     {
       "name": "execute-package",
       "package": "./seed",
-      "arguments": ['--force']
+      "arguments": [
+        '--force'
+      ]
     },
     {
       "name": "change-directory",
@@ -166,7 +168,7 @@
       "result": {
         "components": {
           "strapi-dynamic-zone-map": {
-            "id": "dynamicZoneMapComponentId",
+            "id": "dynamicZoneMapComponentId"
           }
         },
         "slots": {
@@ -201,7 +203,9 @@
     },
     {
       "name": "add-slot",
-      "slots": ["${this.homeDynamicZonesSlotId}"],
+      "slots": [
+        "${this.homeDynamicZonesSlotId}"
+      ]
     },
     {
       "name": "download",
@@ -244,7 +248,7 @@
       "path": "../"
     },
     {
-      "name": "install",
+      "name": "install"
     },
     {
       "name": "import",

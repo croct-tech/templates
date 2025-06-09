@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "map": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "slot": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "${this.heroSlotId}"
+              }
+            },
+            "dynamicZone": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "hero"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

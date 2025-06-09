@@ -22,16 +22,6 @@
       "type": "string",
       "description": "The file extension for the code files.",
       "required": true
-    },
-    "slotId": {
-      "type": "reference",
-      "description": "The variable name that holds the slot ID.",
-      "required": true
-    },
-    "slotVersion": {
-      "type": "reference",
-      "description": "The variable name that holds the slot version.",
-      "required": true
     }
   },
   "actions": [
@@ -208,14 +198,6 @@
         {
           "path": "${options.exampleDirectory}/${options.exampleFile}",
           "replacements": [
-            {
-              "pattern": "%slotId%",
-              "value": "${this[options.slotId]}"
-            },
-            {
-              "pattern": "%slotVersion%",
-              "value": "${this[options.slotVersion]}"
-            },
             {
               "pattern": "%faqSlotId%",
               "value": "${this[this.faqSlotId]}"

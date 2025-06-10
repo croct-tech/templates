@@ -48,10 +48,18 @@ export default async function HomePage({ params }: { params: { locale: string } 
       .then(({content}) => content.map)
   ]);
 
+  const componentIndex: Record<string, number> = {};
+
   const dynamicZones = await Promise.all(
     (staticPageData.dynamic_zone as Array<{__component: string}>).map(async zone => {
       const componentId = zone.__component.slice(zone.__component.indexOf('.') + 1);
-      const mapping = slots.find(entry => entry.dynamicZone === componentId);
+
+      componentIndex[componentId] = (componentIndex[componentId] ?? -1) + 1;
+
+      const positionalComponentId = `${componentId}-${componentIndex[componentId]}`;
+
+      const mapping = slots.find(entry => entry.component === positionalComponentId)
+        ?? slots.find(entry => entry.component === componentId);
 
       if (mapping !== undefined) {
         return {

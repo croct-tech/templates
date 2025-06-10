@@ -15,7 +15,7 @@
                 "value": "${this.heroSlotId}"
               }
             },
-            "dynamicZone": {
+            "component": {
               "type": "text",
               "value": {
                 "type": "static",

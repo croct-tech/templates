@@ -160,7 +160,6 @@
             "component": "launchpad-hero-section",
             "content": {
               "en": "${import('./configuration/hero-section-schema-content.en.json')}",
-              "fr": "${import('./configuration/hero-section-schema-content.fr.json')}"
             }
           }
         }

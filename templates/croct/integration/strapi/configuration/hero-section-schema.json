@@ -24,7 +24,7 @@
       "optional": false,
       "position": 1
     },
-    "ctas": {
+    "CTAs": {
       "type": {
         "type": "list",
         "items": {

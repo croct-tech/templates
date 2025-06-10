@@ -154,7 +154,7 @@
           "when": "? Select organization:",
           "then": [
             "[enter]"
-          ],
+          ]
         },
         {
           "when": "You can find your project on Sanity Manage",

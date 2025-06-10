@@ -70,7 +70,7 @@
     },
     {
       "name": "execute-package",
-      "package": "shadcn@latest",
+      "command": "shadcn@latest",
       "arguments": "${['add', ...options.components]}",
       "interactions": [
         {

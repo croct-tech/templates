@@ -50,7 +50,7 @@
     },
     {
       "name": "execute-package",
-      "package": "giget@latest",
+      "command": "giget@latest",
       "arguments": [
         "gh:sanity-io/sanity-template-nextjs-clean",
         "${this.projectName}"
@@ -58,7 +58,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "debug"
       ],
@@ -80,7 +80,7 @@
           "then": [
             {
               "name": "execute-package",
-              "package": "sanity@latest",
+              "command": "sanity@latest",
               "arguments": [
                 "login"
               ],
@@ -88,7 +88,7 @@
             },
             {
               "name": "execute-package",
-              "package": "sanity@latest",
+              "command": "sanity@latest",
               "arguments": [
                 "debug"
               ],
@@ -136,7 +136,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "init",
         "--bare",
@@ -179,7 +179,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "cors",
         "add",
@@ -206,7 +206,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "dataset",
         "import",
@@ -226,7 +226,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "schema",
         "extract",
@@ -251,7 +251,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "exec",
         "../generate-read-token.ts",
@@ -291,7 +291,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "typegen",
         "generate"

@@ -2,7 +2,6 @@ import fs from 'fs';
 import {fileURLToPath} from 'url';
 
 (async () => {
-    // The configuration you want to enforce
     const requiredConfig = {
         plugins: {
             'postcss-preset-mantine': {},

@@ -26,7 +26,7 @@
     "slots": {
       "type": "array",
       "description": "The list of slots to use in the page.",
-      "required": true,
+      "required": true
     }
   },
   "actions": [
@@ -317,35 +317,35 @@
         "slots": {
           "material-ui-home-faq": {
             "id": "faqSlotId",
-            "version": "faqSlotVersion",
+            "version": "faqSlotVersion"
           },
           "material-ui-home-features": {
             "id": "featuresSlotId",
-            "version": "featuresSlotVersion",
+            "version": "featuresSlotVersion"
           },
           "material-ui-home-hero": {
             "id": "heroSlotId",
-            "version": "heroSlotVersion",
+            "version": "heroSlotVersion"
           },
           "material-ui-home-highlights": {
             "id": "highlightsSlotId",
-            "version": "highlightsSlotVersion",
+            "version": "highlightsSlotVersion"
           },
           "material-ui-home-logos": {
             "id": "logosSlotId",
-            "version": "logosSlotVersion",
+            "version": "logosSlotVersion"
           },
           "material-ui-navbar": {
             "id": "navbarSlotId",
-            "version": "navbarSlotVersion",
+            "version": "navbarSlotVersion"
           },
           "material-ui-home-pricing": {
             "id": "pricingSlotId",
-            "version": "pricingSlotVersion",
+            "version": "pricingSlotVersion"
           },
           "material-ui-home-testimonials": {
             "id": "testimonialsSlotId",
-            "version": "testimonialsSlotVersion",
+            "version": "testimonialsSlotVersion"
           }
         }
       }

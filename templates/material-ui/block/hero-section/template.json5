@@ -66,8 +66,8 @@
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "components": [
-          "hero-section.tsx",
-          "hero-demo.tsx"
+          "HeroSection.tsx",
+          "HeroDemo.tsx"
         ],
         "utils": [
           "markdown.tsx"

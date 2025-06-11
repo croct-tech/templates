@@ -2,16 +2,16 @@
 
 import CssBaseline from "@mui/material/CssBaseline"
 import Divider from "@mui/material/Divider"
-import { FaqSection, type FaqSectionProps } from "?/./faq-section.{js,jsx,ts,tsx}"
-import { HeroSection, type HeroSectionProps } from "?/./hero-section.{js,jsx,ts,tsx}";
-import { LogoCollection, type LogoCollectionProps } from "?/./logo-collection.{js,jsx,ts,tsx}";
-import { FeaturesSection, type FeaturesSectionProps } from "?/./features-section.{js,jsx,ts,tsx}";
-import { HighlightsSection, type HighlightsSectionProps } from "?/./highlights-section.{js,jsx,ts,tsx}";
-import { Navbar, type NavbarProps } from "?/./navbar.{js,jsx,ts,tsx}";
-import { PricingSection, type PricingSectionProps } from "?/./pricing-section.{js,jsx,ts,tsx}";
-import { TestimonialsSection, type TestimonialsSectionProps } from "?/./testimonials-section.{js,jsx,ts,tsx}";
+import { FaqSection, type FaqSectionProps } from "?/./FaqSection.{js,jsx,ts,tsx}"
+import { HeroSection, type HeroSectionProps } from "?/./HeroSection.{js,jsx,ts,tsx}";
+import { LogoCollection, type LogoCollectionProps } from "?/./LogoCollection.{js,jsx,ts,tsx}";
+import { FeaturesSection, type FeaturesSectionProps } from "?/./FeaturesSection.{js,jsx,ts,tsx}";
+import { HighlightsSection, type HighlightsSectionProps } from "?/./HighlightsSection.{js,jsx,ts,tsx}";
+import { Navbar, type NavbarProps } from "?/./Navbar.{js,jsx,ts,tsx}";
+import { PricingSection, type PricingSectionProps } from "?/./PricingSection.{js,jsx,ts,tsx}";
+import { TestimonialsSection, type TestimonialsSectionProps } from "?/./TestimonialsSection.{js,jsx,ts,tsx}";
 import { AppTheme } from "?/./AppTheme.{js,jsx,ts,tsx}"
-import { Footer } from "?/./footer.{js,jsx,ts,tsx}"
+import { Footer } from "?/./Footer.{js,jsx,ts,tsx}"
 
 export type PageSectionsProps = {
   navbar?: NavbarProps,
@@ -34,7 +34,7 @@ export function MarketingPage(props: PageSectionsProps) {
       <HeroSection {...sectionProps.hero} />
       <div>
         <LogoCollection {...sectionProps.logos} />
-        <FeaturesSection {...sectionProps} />
+        <FeaturesSection {...sectionProps.features} />
         <Divider />
         <TestimonialsSection {...sectionProps.testimonials} />
         <Divider />

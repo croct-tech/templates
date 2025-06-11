@@ -1,4 +1,4 @@
-import { TestimonialsDemo } from "?/**/*/testimonials-demo.{js,jsx,ts,tsx}"
+import { TestimonialsDemo } from "?/**/*/TestimonialsDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 

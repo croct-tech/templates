@@ -67,8 +67,8 @@
         "javascript": "${options.javascript}",
         "dependencies": [],
         "components": [
-          "testimonials-section.tsx",
-          "testimonials-demo.tsx"
+          "TestimonialsSection.tsx",
+          "TestimonialsDemo.tsx"
         ],
         "extension": "material-ui://block/testimonials-section/extension.json5"
       }

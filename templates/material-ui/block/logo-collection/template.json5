@@ -65,8 +65,8 @@
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "components": [
-          "logo-collection.tsx",
-          "logo-collection-demo.tsx"
+          "LogoCollection.tsx",
+          "LogoCollectionDemo.tsx"
         ],
         "utils": [
           "markdown.tsx"

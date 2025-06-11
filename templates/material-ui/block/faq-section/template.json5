@@ -67,8 +67,8 @@
           "@mui/icons-material"
         ],
         "components": [
-          "faq-section.tsx",
-          "faq-demo.tsx"
+          "FaqSection.tsx",
+          "FaqDemo.tsx"
         ],
         "utils": [
           "markdown.tsx"

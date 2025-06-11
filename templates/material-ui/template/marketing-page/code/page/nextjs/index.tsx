@@ -1,5 +1,5 @@
 import type {GetServerSideProps} from "next"
-import {MarketingPage, type MarketingPageProps} from "?/**/*/marketing-page.{js,jsx,ts,tsx}"
+import {MarketingPage, type MarketingPageProps} from "?/**/*/MarketingPage.{js,jsx,ts,tsx}"
 import {LinkButton} from "@croct/template-ui/react"
 import {fetchContent} from "@croct/plug-next/server"
 

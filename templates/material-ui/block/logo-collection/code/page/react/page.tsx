@@ -1,4 +1,4 @@
-import { LogoCollectionDemo } from "?/**/*/logo-collection-demo.{js,jsx,ts,tsx}"
+import { LogoCollectionDemo } from "?/**/*/LogoCollectionDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 

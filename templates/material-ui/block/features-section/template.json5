@@ -68,8 +68,8 @@
           "@mui/icons-material"
         ],
         "components": [
-          "features-section.tsx",
-          "features-demo.tsx"
+          "FeaturesSection.tsx",
+          "FeaturesDemo.tsx"
         ],
         "extension": "material-ui://block/features-section/extension.json5"
       }

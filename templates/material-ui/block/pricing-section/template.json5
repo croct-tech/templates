@@ -64,8 +64,8 @@
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "components": [
-          "pricing-section.tsx",
-          "pricing-demo.tsx"
+          "PricingSection.tsx",
+          "PricingDemo.tsx"
         ],
         "extension": "material-ui://block/pricing-section/extension.json5"
       }

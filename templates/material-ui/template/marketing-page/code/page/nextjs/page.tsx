@@ -1,4 +1,4 @@
-import {MarketingPage} from "?/**/*/marketing-page.{js,jsx,ts,tsx}"
+import {MarketingPage} from "?/**/*/MarketingPage.{js,jsx,ts,tsx}"
 import {LinkButton} from "@croct/template-ui/react"
 import {fetchContent} from "@croct/plug-next/server"
 

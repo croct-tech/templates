@@ -20,7 +20,7 @@ export default function Page() {
       <LinkButton
         branded
         label="Edit content"
-        href="%workspaceUrl%/slots?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=carousel_section&utm_term=nextjs"
+        href="%workspaceUrl%/slots?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.material_ui&utm_content=marketing_page&utm_term=nextjs"
         target="_blank"
         position="bottom-right"
       />

@@ -169,7 +169,7 @@
             "name": "LaunchPad - Home hero section",
             "component": "launchpad-hero-section",
             "content": {
-              "en": "${import('./configuration/hero-section-schema-content.en.json')}",
+              "en": "${import('./configuration/hero-section-schema-content.en.json')}"
             }
           }
         }

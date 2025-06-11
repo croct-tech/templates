@@ -168,7 +168,18 @@
         "dependencies": [
           "@mui/icons-material"
         ],
-        "components": "${[...this.components, 'footer.tsx', 'marketing-page.tsx']}",
+        "components": [
+          "material-ui://block/faq-section/code/components/FaqSection.tsx",
+          "material-ui://block/features-section/code/components/FeaturesSection.tsx",
+          "material-ui://block/hero-section/code/components/HeroSection.tsx",
+          "material-ui://block/highlights-section/code/components/HighlightsSection.tsx",
+          "material-ui://block/logo-collection/code/components/LogoCollection.tsx",
+          "material-ui://block/navbar/code/components/Navbar.tsx",
+          "material-ui://block/pricing-section/code/components/PricingSection.tsx",
+          "material-ui://block/testimonials-section/code/components/TestimonialsSection.tsx",
+          "Footer.tsx",
+          "MarketingPage.tsx"
+        ],
         "utils": [
           "markdown.tsx"
         ],

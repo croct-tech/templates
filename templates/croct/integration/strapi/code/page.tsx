@@ -89,7 +89,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
     <LinkButton
       branded
       label="Edit this page"
-      href="%workspaceUrl%/slots/edit/%heroSlotId%/%heroSlotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.shadcn_ui&utm_content=pricing_page&utm_term=react"
+      href="%workspaceUrl%/slots/edit/%heroSlotId%/%heroSlotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=strapi"
       target="_blank"
       theme="dark"
       position="bottom-right"

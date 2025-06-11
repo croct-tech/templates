@@ -370,7 +370,7 @@
           "path": "${options.exampleDirectory}/${options.exampleFile}",
           "replacements": [
             {
-              "pattern": "(\\s*)/\\*faq\\*/(.+?)/\\*faq\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*faq\\*/(.+?)/\\*faq\\*/(\\s*,)",
               "value": "${this.faqSlotId ? '$1$2$3' : ''}"
             },
             {
@@ -382,7 +382,7 @@
               "value": "${this.faqSlotVersion}"
             },
             {
-              "pattern": "(\\s*)/\\*features\\*/(.+?)/\\*features\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*features\\*/(.+?)/\\*features\\*/(\\s*,)",
               "value": "${this.featuresSlotId ? '$1$2$3' : ''}"
             },
             {
@@ -394,7 +394,7 @@
               "value": "${this.featuresSlotVersion}"
             },
             {
-              "pattern": "(\\s*)/\\*hero\\*/(.+?)/\\*hero\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*hero\\*/(.+?)/\\*hero\\*/(\\s*,)",
               "value": "${this.heroSlotId ? '$1$2$3' : ''}"
             },
             {
@@ -406,7 +406,7 @@
               "value": "${this.heroSlotVersion}"
             },
             {
-              "pattern": "(\\s*)/\\*highlights\\*/(.+?)/\\*highlights\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*highlights\\*/(.+?)/\\*highlights\\*/(\\s*,)",
               "value": "${this.highlightsSlotId ? '$1$2$3' : ''}"
             },
             {
@@ -418,7 +418,7 @@
               "value": "${this.highlightsSlotVersion}"
             },
             {
-              "pattern": "(\\s*)/\\*logos\\*/(.+?)/\\*logos\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*logos\\*/(.+?)/\\*logos\\*/(\\s*,)",
               "value": "${this.logosSlotId ? '$1$2$3' : ''}"
             },
             {
@@ -430,7 +430,7 @@
               "value": "${this.logosSlotVersion}"
             },
             {
-              "pattern": "(\\s*)/\\*navbar\\*/(.+?)/\\*navbar\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*navbar\\*/(.+?)/\\*navbar\\*/(\\s*,)",
               "value": "${this.navbarSlotId ? '$1$2$3' : ''}"
             },
             {
@@ -442,7 +442,7 @@
               "value": "${this.navbarSlotVersion}"
             },
             {
-              "pattern": "(\\s*)/\\*pricing\\*/(.+?)/\\*pricing\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*pricing\\*/(.+?)/\\*pricing\\*/(\\s*,)",
               "value": "${this.pricingSlotId ? '$1$2$3' : ''}"
             },
             {
@@ -454,7 +454,7 @@
               "value": "${this.pricingSlotVersion}"
             },
             {
-              "pattern": "(\\s*)/\\*testimonials\\*/(.+?)/\\*testimonials\\*/(\\s*)",
+              "pattern": "(\\s*)/\\*testimonials\\*/(.+?)/\\*testimonials\\*/(\\s*,)",
               "value": "${this.testimonialsSlotId ? '$1$2$3' : ''}"
             },
             {

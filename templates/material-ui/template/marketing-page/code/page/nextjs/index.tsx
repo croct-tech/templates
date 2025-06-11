@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
         /*logos*/{content: logos}/*logos*/,
         /*navbar*/{content: navbar}/*navbar*/,
         /*pricing*/{content: pricing}/*pricing*/,
-        /*testimonials*/{content: testimonials}/*testimonials*/
+        /*testimonials*/{content: testimonials}/*testimonials*/,
     ] = await Promise.all([
         /*faq*/fetchContent('%faqSlotId%@%faqSlotVersion%', {route: context})/*faq*/,
         /*features*/fetchContent('%featuresSlotId%@%featuresSlotVersion%', {route: context})/*features*/,
@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
         /*logos*/fetchContent('%logosSlotId%@%logosSlotVersion%', {route: context})/*logos*/,
         /*navbar*/fetchContent('%navbarSlotId%@%navbarSlotVersion%', {route: context})/*navbar*/,
         /*pricing*/fetchContent('%pricingSlotId%@%pricingSlotVersion%', {route: context})/*pricing*/,
-        /*testimonials*/fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%', {route: context})/*testimonials*/
+        /*testimonials*/fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%', {route: context})/*testimonials*/,
     ]);
 
     return {
@@ -38,7 +38,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async context =
                 /*logos*/logos/*logos*/,
                 /*navbar*/navbar/*navbar*/,
                 /*pricing*/pricing/*pricing*/,
-                /*testimonials*/testimonials/*testimonials*/
+                /*testimonials*/testimonials/*testimonials*/,
             }
         }
     }

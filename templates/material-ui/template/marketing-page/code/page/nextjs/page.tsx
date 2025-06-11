@@ -11,7 +11,7 @@ export default async function Page() {
         /*logos*/{content: logos}/*logos*/,
         /*navbar*/{content: navbar}/*navbar*/,
         /*pricing*/{content: pricing}/*pricing*/,
-        /*testimonials*/{content: testimonials}/*testimonials*/
+        /*testimonials*/{content: testimonials}/*testimonials*/,
     ] = await Promise.all([
         /*faq*/fetchContent('%faqSlotId%@%faqSlotVersion%')/*faq*/,
         /*features*/fetchContent('%featuresSlotId%@%featuresSlotVersion%')/*features*/,
@@ -20,7 +20,7 @@ export default async function Page() {
         /*logos*/fetchContent('%logosSlotId%@%logosSlotVersion%')/*logos*/,
         /*navbar*/fetchContent('%navbarSlotId%@%navbarSlotVersion%')/*navbar*/,
         /*pricing*/fetchContent('%pricingSlotId%@%pricingSlotVersion%')/*pricing*/,
-        /*testimonials*/fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%')/*testimonials*/
+        /*testimonials*/fetchContent('%testimonialsSlotId%@%testimonialsSlotVersion%')/*testimonials*/,
     ]);
 
     const content = {
@@ -31,7 +31,7 @@ export default async function Page() {
         /*logos*/logos/*logos*/,
         /*navbar*/navbar/*navbar*/,
         /*pricing*/pricing/*pricing*/,
-        /*testimonials*/testimonials/*testimonials*/
+        /*testimonials*/testimonials/*testimonials*/,
     };
 
     return (

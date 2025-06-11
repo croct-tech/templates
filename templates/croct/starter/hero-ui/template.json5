@@ -261,7 +261,7 @@
             {
               "name": "define",
               "variables": {
-                "rootPath": "${'../'.repeat(this.matches[0].split('/').length - 1)}"
+                "rootPath": "${'../'.repeat(this.matches[0].replace('\\\\', '/').split('/').length - 1)}"
               }
             },
             {

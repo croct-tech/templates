@@ -137,7 +137,7 @@
             {
               "name": "execute-package",
               "runner": "npm",
-              "package": "create-next-app@${options.version ?? 'latest'}",
+              "command": "create-next-app@${options.version ?? 'latest'}",
               "arguments": "${[this.projectName, \
                 ...[options['src-dir'] ? '--src-dir' : '--no-src-dir'],\
                 ...[options.javascript ? '--js' : '--ts'],\

@@ -84,8 +84,7 @@
           "options": [
             {
               "label": "Navbar",
-              "value": "navbar",
-              "selected": true
+              "value": "navbar"
             },
             {
               "label": "Hero section",
@@ -94,29 +93,29 @@
             },
             {
               "label": "Logo collection",
-              "value": "logo-collection",
+              "value": "logo-collection"
+            },
+            {
+              "label": "Features section",
+              "value": "features-section",
               "selected": true
+            },
+            {
+              "label": "Testimonials section",
+              "value": "testimonials-section"
             },
             {
               "label": "Highlights section",
               "value": "highlights-section"
             },
             {
-              "label": "Features section",
-              "value": "features-section"
-            },
-            {
-              "label": "FAQ section",
-              "value": "faq-section"
-            },
-            {
               "label": "Pricing section",
               "value": "pricing-section"
             },
             {
-              "label": "Testimonials section",
-              "value": "testimonials-section"
-            },
+              "label": "FAQ section",
+              "value": "faq-section"
+            }
           ],
           "result": "slots"
         }

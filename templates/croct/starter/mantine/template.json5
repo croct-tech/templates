@@ -142,7 +142,7 @@
     },
     {
       "name": "execute-package",
-      "package": "tsx@latest",
+      "command": "tsx@latest",
       "arguments": [
         "postcss-setup.js"
       ]

@@ -13,8 +13,17 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi/cover.png",
+    "installationUrl": "croct://integration/strapi",
     "categories": [
-      "integration/cms"
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "integration/cms",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs"
     ]
   },
   "actions": [

@@ -16,7 +16,7 @@ import { Footer } from "?/./footer.{js,jsx,ts,tsx}"
 export type PageSectionsProps = {
   navbar?: NavbarProps,
   hero?: HeroSectionProps,
-  logoCollection?: LogoCollectionProps,
+  logos?: LogoCollectionProps,
   features?: FeaturesSectionProps,
   testimonials?: TestimonialsSectionProps,
   highlights?: HighlightsSectionProps,
@@ -25,22 +25,24 @@ export type PageSectionsProps = {
 }
 
 export function MarketingPage(props: PageSectionsProps) {
+  const sectionProps = {...defaultContent, ...props};
+
   return (
-    <AppTheme {...props}>
+    <AppTheme>
       <CssBaseline enableColorScheme />
-      <Navbar {...props.navbar ?? fallback.navbar} />
-      <HeroSection {...props.hero ?? fallback.hero} />
+      <Navbar {...sectionProps.navbar} />
+      <HeroSection {...sectionProps.hero} />
       <div>
-        <LogoCollection {...props.logoCollection ?? fallback.logoCollection} />
-        <FeaturesSection {...props.features ?? fallback.features} />
+        <LogoCollection {...sectionProps.logos} />
+        <FeaturesSection {...sectionProps} />
         <Divider />
-        <TestimonialsSection {...props.testimonials ?? fallback.testimonials} />
+        <TestimonialsSection {...sectionProps.testimonials} />
         <Divider />
-        <HighlightsSection {...props.highlights ?? fallback.highlights} />
+        <HighlightsSection {...sectionProps.highlights} />
         <Divider />
-        <PricingSection {...props.pricing ?? fallback.pricing} />
+        <PricingSection {...sectionProps.pricing} />
         <Divider />
-        <FaqSection {...props.faq ?? fallback.faq} />
+        <FaqSection {...sectionProps.faq} />
         <Divider />
         <Footer />
       </div>
@@ -48,7 +50,7 @@ export function MarketingPage(props: PageSectionsProps) {
   )
 }
 
-const fallback = {
+const defaultContent = {
   "navbar": {
     "_component": "material-ui-navbar@1",
     "ctas": [
@@ -104,7 +106,7 @@ const fallback = {
     "heading": "Our latest **products**",
     "tagline": "Explore our cutting-edge dashboard, delivering high-quality solutions tailored to your needs. Elevate your experience with top-tier features and services."
   },
-  "logoCollection": {
+  "logos": {
     "_component": "material-ui-logo-collection@1",
     "logos": [
       {

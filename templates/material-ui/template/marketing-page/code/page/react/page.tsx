@@ -3,17 +3,15 @@ import { LinkButton } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 
 export default function Page() {
-  const slots = '%pageSlots%';
-
   const content = {
-    navbar: slots.includes('navbar') ? useContent('%navbarSlotId%@%navbarSlotVersion%') : undefined,
-    hero: slots.includes('navbar') ? useContent('%heroSlotId%@%heroSlotVersion%') : undefined,
-    logoCollection: slots.includes('logos') ? useContent('%logosSlotId%@%logosSlotVersion%') : undefined,
-    features: slots.includes('features') ? useContent('%featuresSlotId%@%featuresSlotVersion%') : undefined,
-    testimonials: slots.includes('testimonials') ? useContent('%testimonialsSlotId%@%testimonialsSlotVersion%') : undefined,
-    highlights: slots.includes('highlights') ? useContent('%highlightsSlotId%@%highlightsSlotVersion%') : undefined,
-    pricing: slots.includes('pricing') ? useContent('%pricingSlotId%@%pricingSlotVersion%') : undefined,
-    faq: slots.includes('faq') ? useContent('%faqSlotId%@%faqSlotVersion%') : undefined,
+    /*faq*/faq: useContent('%faqSlotId%@%faqSlotVersion%')/*faq*/,
+    /*features*/features: useContent('%featuresSlotId%@%featuresSlotVersion%')/*features*/,
+    /*hero*/hero: useContent('%heroSlotId%@%heroSlotVersion%')/*hero*/,
+    /*highlights*/highlights: useContent('%highlightsSlotId%@%highlightsSlotVersion%')/*highlights*/,
+    /*logos*/logoCollection: useContent('%logosSlotId%@%logosSlotVersion%')/*logos*/,
+    /*navbar*/navbar: useContent('%navbarSlotId%@%navbarSlotVersion%')/*navbar*/,
+    /*pricing*/pricing: useContent('%pricingSlotId%@%pricingSlotVersion%')/*pricing*/,
+    /*testimonials*/testimonials: useContent('%testimonialsSlotId%@%testimonialsSlotVersion%')/*testimonials*/,
   }
 
   return (

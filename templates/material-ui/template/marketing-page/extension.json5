@@ -24,178 +24,335 @@
       "required": true
     },
     "slots": {
-      "type": "string",
-      "description": "The slots to install.",
-      "required": false
+      "type": "array",
+      "description": "The list of slots to use in the page.",
+      "required": true,
     }
   },
   "actions": [
     {
       "name": "define",
       "variables": {
-        "faqSlotId": "faqSlot",
-        "faqSlotVersion": "faqVersion",
-        "featuresSlotId": "features",
-        "featuresSlotVersion": "featuresVersion",
-        "heroSlotId": "heroSlot",
-        "heroSlotVersion": "heroVersion",
-        "highlightsSlotId": "highlightsSlot",
-        "highlightsSlotVersion": "highlightsVersion",
-        "logosSlotId": "logosSlot",
-        "logosSlotVersion": "logosVersion",
-        "navbarSlotId": "navbarSlot",
-        "navbarSlotVersion": "navbarVersion",
-        "pricingSlotId": "pricingSlot",
-        "pricingSlotVersion": "pricingVersion",
-        "testimonialsSlotId": "testimonialsSlot",
-        "testimonialsSlotVersion": "testimonialsVersion"
+        "faqSlotId": "",
+        "faqSlotVersion": "",
+        "featuresSlotId": "",
+        "featuresSlotVersion": "",
+        "heroSlotId": "",
+        "heroSlotVersion": "",
+        "highlightsSlotId": "",
+        "highlightsSlotVersion": "",
+        "logosSlotId": "",
+        "logosSlotVersion": "",
+        "navbarSlotId": "",
+        "navbarSlotVersion": "",
+        "pricingSlotId": "",
+        "pricingSlotVersion": "",
+        "testimonialsSlotId": "",
+        "testimonialsSlotVersion": "",
+        "components": {},
+        "slots": {},
+        "fetchCalls": []
       }
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('faq-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Material UI - FAQ section",
+              "description": "A section of frequently asked questions.",
+              "schema": "${import('material-ui://block/faq-section/configuration/faq-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home FAQ",
+              "component": "material-ui-faq-section",
+              "content": {
+                "en": "${import('material-ui://block/faq-section/configuration/faq-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'material-ui-faq-section': this.component}}",
+            "slots": "${{...this.slots, 'material-ui-home-faq': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%faqSlotId%@%faqSlotVersion%\\').then(({content}) => [\\'faq\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('features-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Material UI - Features section",
+              "description": "A section of features.",
+              "schema": "${import('material-ui://block/features-section/configuration/features-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home features",
+              "component": "material-ui-features-section",
+              "content": {
+                "en": "${import('material-ui://block/features-section/configuration/features-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'material-ui-features-section': this.component}}",
+            "slots": "${{...this.slots, 'material-ui-home-features': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%featuresSlotId%@%featuresSlotVersion%\\').then(({content}) => [\\'features\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('hero-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Material UI - Hero section",
+              "description": "A hero section with centered headline, email input, and call to action button.",
+              "schema": "${import('material-ui://block/hero-section/configuration/hero-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home hero",
+              "component": "material-ui-hero-section",
+              "content": {
+                "en": "${import('material-ui://block/hero-section/configuration/hero-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'material-ui-hero-section': this.component}}",
+            "slots": "${{...this.slots, 'material-ui-home-hero': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%heroSlotId%@%heroSlotVersion%\\').then(({content}) => [\\'hero\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('highlights-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Material UI - Highlights section",
+              "description": "A section of highlights.",
+              "schema": "${import('material-ui://block/highlights-section/configuration/highlights-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home highlights",
+              "component": "material-ui-highlights-section",
+              "content": {
+                "en": "${import('material-ui://block/highlights-section/configuration/highlights-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'material-ui-highlights-section': this.component}}",
+            "slots": "${{...this.slots, 'material-ui-home-highlights': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%highlightsSlotId%@%highlightsSlotVersion%\\').then(({content}) => [\\'highlights\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('logo-collection')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Material UI - Logo collection",
+              "description": "A logo cloud section.",
+              "schema": "${import('material-ui://block/logo-collection/configuration/logo-collection-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home logos",
+              "component": "material-ui-logo-collection",
+              "content": {
+                "en": "${import('material-ui://block/logo-collection/configuration/logo-collection-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'material-ui-logo-collection': this.component}}",
+            "slots": "${{...this.slots, 'material-ui-home-logos': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%logosSlotId%@%logosSlotVersion%\\').then(({content}) => [\\'logos\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('navbar')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "ctaComponent": {
+              "name": "CTA",
+              "description": "A call to action button.",
+              "schema": "${import('material-ui://block/navbar/configuration/cta-schema.json')}"
+            },
+            "navbarComponent": {
+              "name": "Material UI - Navbar",
+              "description": "A navigation bar with links and a logo.",
+              "schema": "${import('material-ui://block/navbar/configuration/navbar-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Navbar",
+              "component": 'material-ui-navbar',
+              "content": {
+                "en": "${import('material-ui://block/navbar/configuration/navbar-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'cta': this.ctaComponent, 'material-ui-navbar': this.navbarComponent}}",
+            "slots": "${{...this.slots, 'material-ui-navbar': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%navbarSlotId%@%navbarSlotVersion%\\').then(({content}) => [\\'navbar\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('pricing-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": 'Material UI - Pricing section',
+              'description': 'A section of plan cards.',
+              'schema': "${import('material-ui://block/pricing-section/configuration/pricing-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home pricing",
+              "component": "material-ui-pricing-section",
+              "content": {
+                "en": "${import('material-ui://block/pricing-section/configuration/pricing-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'material-ui-pricing-section': this.component}}",
+            "slots": "${{...this.slots, 'material-ui-home-pricing': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%pricingSlotId%@%pricingSlotVersion%\\').then(({content}) => [\\'pricing\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('testimonials-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": 'Material UI - Testimonials section',
+              'description': 'A section of testimonials.',
+              'schema': "${import('material-ui://block/testimonials-section/configuration/testimonials-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home testimonials",
+              "component": "material-ui-testimonials-section",
+              "content": {
+                "en": "${import('material-ui://block/testimonials-section/configuration/testimonials-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'material-ui-testimonials-section': this.component}}",
+            "slots": "${{...this.slots, 'material-ui-home-testimonials': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%testimonialsSlotId%@%testimonialsSlotVersion%\\').then(({content}) => [\\'testimonials\\', content])']}"
+          }
+        }
+      ]
     },
     {
       "name": "create-resource",
       "resources": {
-        "components": {
-          "material-ui-faq-section": {
-            "name": "Material UI - FAQ section",
-            "description": "A section of frequently asked questions.",
-            "schema": "${import('material-ui://block/faq-section/configuration/faq-section-schema.json')}"
-          },
-          "material-ui-features-section": {
-            "name": "Material UI - Features section",
-            "description": "A section of features.",
-            "schema": "${import('material-ui://block/features-section/configuration/features-section-schema.json')}"
-          },
-          "material-ui-hero-section": {
-            "name": "Material UI - Hero section",
-            "description": "A hero section with centered headline, email input, and call to action button.",
-            "schema": "${import('material-ui://block/hero-section/configuration/hero-section-schema.json')}"
-          },
-          "material-ui-highlights-section": {
-            "name": "Material UI - Highlights section",
-            "description": "A section of highlights.",
-            "schema": "${import('material-ui://block/highlights-section/configuration/highlights-section-schema.json')}"
-          },
-          "material-ui-logo-collection": {
-            "name": "Material UI - Logo collection",
-            "description": "A logo cloud section.",
-            "schema": "${import('material-ui://block/logo-collection/configuration/logo-collection-schema.json')}"
-          },
-          "cta": {
-            "name": "CTA",
-            "description": "A call to action button.",
-            "schema": "${import('material-ui://block/navbar/configuration/cta-schema.json')}"
-          },
-          "material-ui-navbar": {
-            "name": "Material UI - Navbar",
-            "description": "A section of features.",
-            "schema": "${import('material-ui://block/navbar/configuration/navbar-schema.json')}"
-          },
-          "material-ui-pricing-section": {
-            "name": "Material UI - Pricing section",
-            "description": "A section of plan cards.",
-            "schema": "${import('material-ui://block/pricing-section/configuration/pricing-section-schema.json')}"
-          },
-          "material-ui-testimonials-section": {
-            "name": "Material UI - Testimonials section",
-            "description": "A section of testimonials.",
-            "schema": "${import('material-ui://block/testimonials-section/configuration/testimonials-section-schema.json')}"
-          }
-        },
-        "slots": {
-          "material-ui-home-faq": {
-            "name": "Material UI - Home FAQ",
-            "component": "material-ui-faq-section",
-            "content": {
-              "en": "${import('material-ui://block/faq-section/configuration/faq-section-content.en.json')}"
-            }
-          },
-          "material-ui-home-features": {
-            "name": "Material UI - Home features",
-            "component": "material-ui-features-section",
-            "content": {
-              "en": "${import('material-ui://block/features-section/configuration/features-section-content.en.json')}"
-            }
-          },
-          "material-ui-home-hero": {
-            "name": "Material UI - Home hero",
-            "component": "material-ui-hero-section",
-            "content": {
-              "en": "${import('material-ui://block/hero-section/configuration/hero-section-content.en.json')}"
-            }
-          },
-          "material-ui-home-highlights": {
-            "name": "Material UI - Home highlights",
-            "component": "material-ui-highlights-section",
-            "content": {
-              "en": "${import('material-ui://block/highlights-section/configuration/highlights-section-content.en.json')}"
-            }
-          },
-          "material-ui-home-logos": {
-            "name": "Material UI - Home logos",
-            "component": "material-ui-logo-collection",
-            "content": {
-              "en": "${import('material-ui://block/logo-collection/configuration/logo-collection-content.en.json')}"
-            }
-          },
-          "material-ui-navbar": {
-            "name": "Material UI - Navbar",
-            "component": "material-ui-navbar",
-            "content": {
-              "en": "${import('material-ui://block/navbar/configuration/navbar-content.en.json')}"
-            }
-          },
-          "material-ui-home-pricing": {
-            "name": "Material UI - Home pricing",
-            "component": "material-ui-pricing-section",
-            "content": {
-              "en": "${import('material-ui://block/pricing-section/configuration/pricing-section-content.en.json')}"
-            }
-          },
-          "material-ui-home-testimonials": {
-            "name": "Material UI - Home testimonials",
-            "component": "material-ui-testimonials-section",
-            "content": {
-              "en": "${import('material-ui://block/testimonials-section/configuration/testimonials-section-content.en.json')}"
-            }
-          }
-        }
+        "components": "${this.components}",
+        "slots": "${this.slots}"
       },
       "result": {
         "slots": {
           "material-ui-home-faq": {
-            "id": "${this.faqSlotId}",
-            "version": "${this.faqSlotVersion}"
+            "id": "faqSlotId",
+            "version": "faqSlotVersion",
           },
           "material-ui-home-features": {
-            "id": "${this.featuresSlotId}",
-            "version": "${this.featuresSlotVersion}"
+            "id": "featuresSlotId",
+            "version": "featuresSlotVersion",
           },
           "material-ui-home-hero": {
-            "id": "${this.heroSlotId}",
-            "version": "${this.heroSlotVersion}"
+            "id": "heroSlotId",
+            "version": "heroSlotVersion",
           },
           "material-ui-home-highlights": {
-            "id": "${this.highlightsSlotId}",
-            "version": "${this.highlightsSlotVersion}"
+            "id": "highlightsSlotId",
+            "version": "highlightsSlotVersion",
           },
           "material-ui-home-logos": {
-            "id": "${this.logosSlotId}",
-            "version": "${this.logosSlotVersion}"
+            "id": "logosSlotId",
+            "version": "logosSlotVersion",
           },
           "material-ui-navbar": {
-            "id": "${this.navbarSlotId}",
-            "version": "${this.navbarSlotVersion}"
+            "id": "navbarSlotId",
+            "version": "navbarSlotVersion",
           },
           "material-ui-home-pricing": {
-            "id": "${this.pricingSlotId}",
-            "version": "${this.pricingSlotVersion}"
+            "id": "pricingSlotId",
+            "version": "pricingSlotVersion",
           },
           "material-ui-home-testimonials": {
-            "id": "${this.testimonialsSlotId}",
-            "version": "${this.testimonialsSlotVersion}"
+            "id": "testimonialsSlotId",
+            "version": "testimonialsSlotVersion",
           }
         }
       }
+    },
+    {
+      "name": "add-slot",
+      "slots": "${[...(this.faqSlotId ? [this.faqSlotId] : []), ...(this.featuresSlotId ? [this.featuresSlotId] : []), ...(this.heroSlotId ? [this.heroSlotId] : []), ...(this.highlightsSlotId ? [this.highlightsSlotId] : []), ...(this.logosSlotId ? [this.logosSlotId] : []), ...(this.navbarSlotId ? [this.navbarSlotId] : []), ...(this.pricingSlotId ? [this.pricingSlotId] : []), ...(this.testimonialsSlotId ? [this.testimonialsSlotId] : [])]}"
     },
     {
       "name": "replace-file-content",
@@ -204,72 +361,109 @@
           "path": "${options.exampleDirectory}/${options.exampleFile}",
           "replacements": [
             {
-              "pattern": "%pageSlots%",
-              "value": "${options.slots}"
+              "pattern": "// %fetchCalls%",
+              "value": "${this.fetchCalls.join(',\n          ')}"
+            }
+          ]
+        },
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "(\\s*)/\\*faq\\*/(.+?)/\\*faq\\*/(\\s*)",
+              "value": "${this.faqSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%faqSlotId%",
-              "value": "${this[this.faqSlotId]}"
+              "value": "${this.faqSlotId}"
             },
             {
               "pattern": "%faqSlotVersion%",
-              "value": "${this[this.faqSlotVersion]}"
+              "value": "${this.faqSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*features\\*/(.+?)/\\*features\\*/(\\s*)",
+              "value": "${this.featuresSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%featuresSlotId%",
-              "value": "${this[this.featuresSlotId]}"
+              "value": "${this.featuresSlotId}"
             },
             {
               "pattern": "%featuresSlotVersion%",
-              "value": "${this[this.featuresSlotVersion]}"
+              "value": "${this.featuresSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*hero\\*/(.+?)/\\*hero\\*/(\\s*)",
+              "value": "${this.heroSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%heroSlotId%",
-              "value": "${this[this.heroSlotId]}"
+              "value": "${this.heroSlotId}"
             },
             {
               "pattern": "%heroSlotVersion%",
-              "value": "${this[this.heroSlotVersion]}"
+              "value": "${this.heroSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*highlights\\*/(.+?)/\\*highlights\\*/(\\s*)",
+              "value": "${this.highlightsSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%highlightsSlotId%",
-              "value": "${this[this.highlightsSlotId]}"
+              "value": "${this.highlightsSlotId}"
             },
             {
               "pattern": "%highlightsSlotVersion%",
-              "value": "${this[this.highlightsSlotVersion]}"
+              "value": "${this.highlightsSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*logos\\*/(.+?)/\\*logos\\*/(\\s*)",
+              "value": "${this.logosSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%logosSlotId%",
-              "value": "${this[this.logosSlotId]}"
+              "value": "${this.logosSlotId}"
             },
             {
               "pattern": "%logosSlotVersion%",
-              "value": "${this[this.logosSlotVersion]}"
+              "value": "${this.logosSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*navbar\\*/(.+?)/\\*navbar\\*/(\\s*)",
+              "value": "${this.navbarSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%navbarSlotId%",
-              "value": "${this[this.navbarSlotId]}"
+              "value": "${this.navbarSlotId}"
             },
             {
               "pattern": "%navbarSlotVersion%",
-              "value": "${this[this.navbarSlotVersion]}"
+              "value": "${this.navbarSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*pricing\\*/(.+?)/\\*pricing\\*/(\\s*)",
+              "value": "${this.pricingSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%pricingSlotId%",
-              "value": "${this[this.pricingSlotId]}"
+              "value": "${this.pricingSlotId}"
             },
             {
               "pattern": "%pricingSlotVersion%",
-              "value": "${this[this.pricingSlotVersion]}"
+              "value": "${this.pricingSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*testimonials\\*/(.+?)/\\*testimonials\\*/(\\s*)",
+              "value": "${this.testimonialsSlotId ? '$1$2$3' : ''}"
             },
             {
               "pattern": "%testimonialsSlotId%",
-              "value": "${this[this.testimonialsSlotId]}"
+              "value": "${this.testimonialsSlotId}"
             },
             {
               "pattern": "%testimonialsSlotVersion%",
-              "value": "${this[this.testimonialsSlotVersion]}"
+              "value": "${this.testimonialsSlotVersion}"
             }
           ]
         }

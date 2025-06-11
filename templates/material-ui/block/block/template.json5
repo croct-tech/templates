@@ -81,8 +81,8 @@
       "description": "The URL of the extension template to apply."
     },
     "slots": {
-      "type": "string",
-      "description": "The slots to install.",
+      "type": "array",
+      "description": "The list of slots to add to the example page.",
       "required": false
     }
   },
@@ -295,7 +295,7 @@
         },
         {
           "name": "download",
-          "source": "material-ui://${options.type}/${options.id}/code/components/${this.componentFile}",
+          "source": "${this.componentFile.startsWith('material-ui://') ? this.componentFile : 'material-ui://' + options.type + '/' + options.id + '/code/components/' + this.componentFile}",
           "destination": "${project.path.components}",
           "mapping": {
             "${this.componentFile}": "${this.componentBaseName}${this.reactExtension}"

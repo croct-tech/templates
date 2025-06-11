@@ -49,13 +49,114 @@
       "default": false
     },
     "slots": {
-      "type": "string",
-      "description": "The slots to install.",
-      "default": 'navbar,hero,logos,features,testimonials,highlights,pricing,faq',
-      "required": false
+      "type": "array",
+      "description": "The slots to use.",
+      "default": []
     }
   },
   "actions": [
+    {
+      "name": "define",
+      "variables": {
+        "slots": "${options.slots}",
+        "components": [],
+        "availableSlots": [
+          "faq-section",
+          "features-section",
+          "hero-section",
+          "highlights-section",
+          "logo-collection",
+          "navbar",
+          "pricing-section",
+          "testimonials-section",
+        ]
+      }
+    },
+    {
+      "name": "test",
+      "condition": "${this.slots.length === 0}",
+      "then": [
+        {
+          "name": "prompt",
+          "message": "Which slots would you like to include in the marketing page?",
+          "type": "multi-choice",
+          "min": 1,
+          "options": [
+            {
+              "label": "Navbar",
+              "value": "navbar",
+              "selected": true
+            },
+            {
+              "label": "Hero section",
+              "value": "hero-section",
+              "selected": true
+            },
+            {
+              "label": "Logo collection",
+              "value": "logo-collection",
+              "selected": true
+            },
+            {
+              "label": "Highlights section",
+              "value": "highlights-section"
+            },
+            {
+              "label": "Features section",
+              "value": "features-section"
+            },
+            {
+              "label": "FAQ section",
+              "value": "faq-section"
+            },
+            {
+              "label": "Pricing section",
+              "value": "pricing-section"
+            },
+            {
+              "label": "Testimonials section",
+              "value": "testimonials-section"
+            },
+          ],
+          "result": "slots"
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "componentIndex": 0
+      }
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.componentIndex < this.slots.length}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "slot": "${this.slots[this.componentIndex]}"
+          }
+        },
+        {
+          "name": "test",
+          "condition": "${!this.availableSlots.includes(this.slot)}",
+          "then": [
+            {
+              "name": "fail",
+              "message": "The slot '${this.slot}' specified in `slots` option is not available."
+            }
+          ]
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${[...this.components, 'material-ui://block/' + this.slot + '/code/components/' + this.slot + '.tsx']}",
+            "componentIndex": "${this.componentIndex + 1}"
+          }
+        }
+      ]
+    },
     {
       "name": "import",
       "template": "material-ui://block/block",
@@ -68,23 +169,12 @@
         "dependencies": [
           "@mui/icons-material"
         ],
-        "components": [
-          "faq-section.tsx",
-          "features-section.tsx",
-          "hero-section.tsx",
-          "highlights-section.tsx",
-          "logo-collection.tsx",
-          "navbar.tsx",
-          "pricing-section.tsx",
-          "testimonials-section.tsx",
-          "footer.tsx",
-          "marketing-page.tsx"
-        ],
+        "components": "${[...this.components, 'footer.tsx', 'marketing-page.tsx']}",
         "utils": [
           "markdown.tsx"
         ],
         "extension": "material-ui://template/marketing-page/extension.json5",
-        "slots": "${options.slots}"
+        "slots": "${this.slots}"
       }
     }
   ]

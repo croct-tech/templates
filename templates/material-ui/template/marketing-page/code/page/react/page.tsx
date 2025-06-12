@@ -1,6 +1,7 @@
 import { MarketingPage } from "?/**/*/MarketingPage.{js,jsx,ts,tsx}"
 import { LinkButton } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
+import { useColorScheme } from "@mui/material/styles";
 
 export default function Page() {
   const content = {
@@ -14,11 +15,14 @@ export default function Page() {
     /*testimonials*/testimonials: useContent('%testimonialsSlotId%@%testimonialsSlotVersion%')/*testimonials*/,
   }
 
+  const theme = useColorScheme();
+
   return (
     <>
       <MarketingPage {...content} />
       <LinkButton
         branded
+        theme={theme.mode}
         label="Edit content"
         href="%workspaceUrl%/slots?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.material_ui&utm_content=marketing_page&utm_term=nextjs"
         target="_blank"

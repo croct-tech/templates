@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Strapi CMS + personalization",
+  "description": "A template for adding personalized content on a Strapi project.",
+  "metadata": {
+    "id": "integration/cms/strapi-personalization",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi-personalization/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi-personalization/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi-personalization/cover.png",
+    "installationUrl": "croct://integration/strapi-personalization",
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "integration/cms",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs",
+      "integration/cms/strapi",
+      "integration/cms/strapi-ab-testing"
+    ]
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct://integration/strapi",
+      "options": {
+        "extension": "croct://integration/strapi-personalization/extension.json5"
+      }
+    }
+  ]
+}

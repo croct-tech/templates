@@ -22,42 +22,12 @@
     {
       "name": "create-resource",
       "resources": {
-
-
         "audiences": {
           "all-users": {
             "name": "All users",
             "criteria": "true"
           }
         },
-
-
-
-        "components": {
-          "strapi-dynamic-zone-map": {
-            "name": "Strapi - Dynamic zone map",
-            "description": "A map for components in a Strapi to slots in Croct.",
-            "schema": "${import('croct://integration/strapi/configuration/dynamic-zone-map-schema.json')}"
-          },
-          "launchpad-hero-section": {
-            "name": "LaunchPad - Hero section",
-            "description": "Main section with title, tagline, and CTAs.",
-            "schema": "${import('croct://integration/strapi/configuration/hero-section-schema.json')}"
-          }
-        },
-        "slots": {
-          "launchpad-home-hero": {
-            "name": "LaunchPad - Home hero",
-            "component": "launchpad-hero-section",
-            "content": {
-              "en": "${import('croct://integration/strapi/configuration/home-hero-content.en.json')}"
-            }
-          }
-        },
-
-
-
-
         "experiences": [
           {
             "name": "🧪 Experiment for all users",
@@ -66,22 +36,22 @@
               "all-users"
             ],
             "slots": [
-              "launchpad-home-hero"
+              "${options.slotId}"
             ],
             "content": {
               "default": {}
             },
             "experiment": {
-              "name": "Tagline copy",
-              "goalId": "command-copy",
+              "name": "Headline copy",
+              "goalId": "sign-up",
               "crossDevice": false,
               "traffic": 1,
               "variants": [
                 {
-                  "name": "Kickstart your project",
+                  "name": "Launch your content",
                   "content": {
                     "default": {
-                      "launchpad-home-hero": {
+                      "${options.slotId}": {
                         "en": "${import('croct://integration/strapi/configuration/home-hero-content.en.json')}"
                       }
                     }
@@ -90,10 +60,10 @@
                   "allocation": 500
                 },
                 {
-                  "name": "Integrate in one command",
+                  "name": "Integrate AB testing",
                   "content": {
                     "default": {
-                      "launchpad-home-hero": {
+                      "${options.slotId}": {
                         "en": "${import('./configuration/home-hero-experience-content.en.json')}"
                       }
                     }

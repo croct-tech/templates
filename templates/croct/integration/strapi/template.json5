@@ -157,7 +157,45 @@
     {
       "name": "integrate-croct"
     },
-
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "strapi-dynamic-zone-map": {
+            "name": "Strapi - Dynamic zone map",
+            "description": "A map for components in a Strapi to slots in Croct.",
+            "schema": "${import('./configuration/dynamic-zone-map-schema.json')}"
+          },
+          "launchpad-hero-section": {
+            "name": "LaunchPad - Hero section",
+            "description": "Main section with title, tagline, and CTAs.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "launchpad-home-hero": {
+            "name": "LaunchPad - Home hero",
+            "component": "launchpad-hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "components": {
+          "strapi-dynamic-zone-map": {
+            "id": "dynamicZoneMapComponentId"
+          }
+        },
+        "slots": {
+          "launchpad-home-hero": {
+            "id": "heroSlotId",
+            "version": "heroSlotVersion"
+          }
+        }
+      }
+    },
     {
       "name": "test",
       "condition": "${options.extension !== null}",
@@ -171,52 +209,8 @@
             "pagePath": "app/page.tsx"
           }
         }
-      ],
-      "else": [
-        {
-          "name": "create-resource",
-          "resources": {
-            "components": {
-              "strapi-dynamic-zone-map": {
-                "name": "Strapi - Dynamic zone map",
-                "description": "A map for components in a Strapi to slots in Croct.",
-                "schema": "${import('./configuration/dynamic-zone-map-schema.json')}"
-              },
-              "launchpad-hero-section": {
-                "name": "LaunchPad - Hero section",
-                "description": "Main section with title, tagline, and CTAs.",
-                "schema": "${import('./configuration/hero-section-schema.json')}"
-              }
-            },
-            "slots": {
-              "launchpad-home-hero": {
-                "name": "LaunchPad - Home hero",
-                "component": "launchpad-hero-section",
-                "content": {
-                  "en": "${import('./configuration/home-hero-content.en.json')}"
-                }
-              }
-            }
-          },
-          "result": {
-            "components": {
-              "strapi-dynamic-zone-map": {
-                "id": "dynamicZoneMapComponentId"
-              }
-            },
-            "slots": {
-              "launchpad-home-hero": {
-                "id": "heroSlotId",
-                "version": "heroSlotVersion"
-              }
-            }
-          }
-        }
       ]
     },
-
-
-
     {
       "name": "create-resource",
       "resources": {

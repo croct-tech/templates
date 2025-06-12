@@ -145,7 +145,7 @@ export function HeroSection(props: HeroSectionProps) {
               hiddenLabel
               size="small"
               variant="outlined"
-              aria-label="Enter your email address"
+              aria-label={form.inputLabel}
               placeholder="Your email address"
               fullWidth
               value={email}
@@ -153,7 +153,7 @@ export function HeroSection(props: HeroSectionProps) {
               slotProps={{
                 htmlInput: {
                   autoComplete: 'off',
-                  'aria-label': 'Enter your email address',
+                  'aria-label': {form.inputLabel},
                 },
               }}
             />

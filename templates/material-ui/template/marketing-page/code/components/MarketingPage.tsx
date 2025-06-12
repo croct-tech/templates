@@ -14,14 +14,14 @@ import { AppTheme } from "?/./AppTheme.{js,jsx,ts,tsx}"
 import { Footer } from "?/./Footer.{js,jsx,ts,tsx}"
 
 export type PageSectionsProps = {
-  navbar?: NavbarProps,
-  hero?: HeroSectionProps,
-  logos?: LogoCollectionProps,
-  features?: FeaturesSectionProps,
-  testimonials?: TestimonialsSectionProps,
-  highlights?: HighlightsSectionProps,
-  pricing?: PricingSectionProps,
-  faq?: FaqSectionProps,
+  navbar: NavbarProps,
+  hero: HeroSectionProps,
+  logos: LogoCollectionProps,
+  features: FeaturesSectionProps,
+  testimonials: TestimonialsSectionProps,
+  highlights: HighlightsSectionProps,
+  pricing: PricingSectionProps,
+  faq: FaqSectionProps,
 }
 
 export function MarketingPage(props: PageSectionsProps) {
@@ -29,30 +29,29 @@ export function MarketingPage(props: PageSectionsProps) {
 
   return (
     <AppTheme>
-      <CssBaseline enableColorScheme />
+      <CssBaseline enableColorScheme/>
       <Navbar {...sectionProps.navbar} />
       <HeroSection {...sectionProps.hero} />
       <div>
         <LogoCollection {...sectionProps.logos} />
         <FeaturesSection {...sectionProps.features} />
-        <Divider />
+        <Divider/>
         <TestimonialsSection {...sectionProps.testimonials} />
-        <Divider />
+        <Divider/>
         <HighlightsSection {...sectionProps.highlights} />
-        <Divider />
+        <Divider/>
         <PricingSection {...sectionProps.pricing} />
-        <Divider />
+        <Divider/>
         <FaqSection {...sectionProps.faq} />
-        <Divider />
-        <Footer />
+        <Divider/>
+        <Footer/>
       </div>
     </AppTheme>
   )
 }
 
-const defaultContent = {
+const defaultContent: PageSectionsProps = {
   "navbar": {
-    "_component": "material-ui-navbar@1",
     "ctas": [
       {
         "link": "https://example.com/sign-in",
@@ -93,7 +92,6 @@ const defaultContent = {
     ]
   },
   "hero": {
-    "_component": "material-ui-hero-section@1",
     "form": {
       "ctaLabel": "Start now",
       "inputLabel": "Your email address"
@@ -107,7 +105,6 @@ const defaultContent = {
     "tagline": "Explore our cutting-edge dashboard, delivering high-quality solutions tailored to your needs. Elevate your experience with top-tier features and services."
   },
   "logos": {
-    "_component": "material-ui-logo-collection@1",
     "logos": [
       {
         "dark": "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg",
@@ -137,7 +134,6 @@ const defaultContent = {
     "title": "Trusted by the best companies"
   },
   "features": {
-    "_component": "material-ui-features-section@1",
     "title": "Product features",
     "features": [
       {
@@ -171,7 +167,6 @@ const defaultContent = {
     "description": "Provide a brief overview of the key features of the product. For example, you could list the number of features, their types or benefits, and add-ons."
   },
   "testimonials": {
-    "_component": "material-ui-testimonials-section@1",
     "title": "Testimonials",
     "description": "See what our customers love about our products. Discover how we excel in efficiency, durability, and satisfaction. Join us for quality, innovation, and reliable support.",
     "testimonials": [
@@ -250,7 +245,6 @@ const defaultContent = {
     ]
   },
   "highlights": {
-    "_component": "material-ui-highlights-section@1",
     "title": "Highlights",
     "highlights": [
       {
@@ -287,7 +281,6 @@ const defaultContent = {
     "description": "Explore why our product stands out: adaptability, durability, user-friendly design, and innovation. Enjoy reliable customer support and precision in every detail."
   },
   "pricing": {
-    "_component": "material-ui-pricing-section@1",
     "plans": [
       {
         "cta": "Sign up for free",
@@ -341,7 +334,6 @@ const defaultContent = {
     "description": "Quickly build an effective pricing table for your potential customers with this layout.\nIt's built with default Material UI components with little customization."
   },
   "faq": {
-    "_component": "material-ui-faq-section@1",
     "title": "Frequently asked questions",
     "questions": [
       {

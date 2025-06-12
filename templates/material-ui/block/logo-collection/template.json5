@@ -68,9 +68,6 @@
           "LogoCollection.tsx",
           "LogoCollectionDemo.tsx"
         ],
-        "utils": [
-          "markdown.tsx"
-        ],
         "extension": "material-ui://block/logo-collection/extension.json5"
       }
     }

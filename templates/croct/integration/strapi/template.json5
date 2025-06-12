@@ -23,7 +23,9 @@
       "language/typescript"
     ],
     "relatedTemplates": [
-      "boilerplate/starter/nextjs"
+      "boilerplate/starter/nextjs",
+      "integration/cms/strapi-ab-testing",
+      "integration/cms/strapi-personalization"
     ]
   },
   "actions": [

@@ -36,7 +36,7 @@
               "all-users"
             ],
             "slots": [
-              "${options.slotId}"
+              "${this[options.slotId]}",
             ],
             "content": {
               "default": {}
@@ -51,7 +51,7 @@
                   "name": "Launch your content",
                   "content": {
                     "default": {
-                      "${options.slotId}": {
+                      "${this[options.slotId]}": {
                         "en": "${import('croct://integration/strapi/configuration/home-hero-content.en.json')}"
                       }
                     }
@@ -63,7 +63,7 @@
                   "name": "Integrate AB testing",
                   "content": {
                     "default": {
-                      "${options.slotId}": {
+                      "${this[options.slotId]}": {
                         "en": "${import('./configuration/home-hero-experience-content.en.json')}"
                       }
                     }
@@ -74,24 +74,9 @@
               ]
             }
           }
-        ],
-
-
-
-
+        ]
       },
       "result": {
-        "components": {
-          "strapi-dynamic-zone-map": {
-            "id": "dynamicZoneMapComponentId"
-          }
-        },
-        "slots": {
-          "launchpad-home-hero": {
-            "id": "heroSlotId",
-            "version": "heroSlotVersion"
-          }
-        },
         "experiences": {
           "0": "experienceId"
         }

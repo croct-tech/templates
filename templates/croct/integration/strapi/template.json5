@@ -206,7 +206,7 @@
           "options": {
             "slotId": "heroSlotId",
             "slotVersion": "heroSlotVersion",
-            "pagePath": "app/page.tsx"
+            "pagePath": "app/[locale]/(marketing)/page.tsx"
           }
         }
       ]
@@ -241,7 +241,7 @@
     },
     {
       "name": "download",
-      "source": "code/page.tsx",
+      "source": "croct://integration/strapi/code/page.tsx",
       "destination": "app/[locale]/(marketing)",
       "overwrite": true
     },

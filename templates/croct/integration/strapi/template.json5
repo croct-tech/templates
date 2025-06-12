@@ -165,11 +165,11 @@
           }
         },
         "slots": {
-          "launchpad-home-hero-section": {
-            "name": "LaunchPad - Home hero section",
+          "launchpad-home-hero": {
+            "name": "LaunchPad - Home hero",
             "component": "launchpad-hero-section",
             "content": {
-              "en": "${import('./configuration/hero-section-schema-content.en.json')}"
+              "en": "${import('./configuration/home-hero-content.en.json')}"
             }
           }
         }
@@ -181,7 +181,7 @@
           }
         },
         "slots": {
-          "launchpad-home-hero-section": {
+          "launchpad-home-hero": {
             "id": "heroSlotId",
             "version": "heroSlotVersion"
           }

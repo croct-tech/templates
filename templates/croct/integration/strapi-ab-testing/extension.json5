@@ -22,28 +22,42 @@
     {
       "name": "create-resource",
       "resources": {
+
+
         "audiences": {
           "all-users": {
             "name": "All users",
             "criteria": "true"
           }
         },
+
+
+
         "components": {
-          "hero-section": {
-            "name": "Hero section",
-            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+          "strapi-dynamic-zone-map": {
+            "name": "Strapi - Dynamic zone map",
+            "description": "A map for components in a Strapi to slots in Croct.",
+            "schema": "${import('croct://integration/strapi/configuration/dynamic-zone-map-schema.json')}"
+          },
+          "launchpad-hero-section": {
+            "name": "LaunchPad - Hero section",
+            "description": "Main section with title, tagline, and CTAs.",
             "schema": "${import('croct://integration/strapi/configuration/hero-section-schema.json')}"
           }
         },
         "slots": {
-          "home-hero": {
-            "name": "Home hero",
-            "component": "hero-section",
+          "launchpad-home-hero": {
+            "name": "LaunchPad - Home hero",
+            "component": "launchpad-hero-section",
             "content": {
-              "en": "${import('croct://integration/strapi/configuration/home-hero-slot-content.en.json')}"
+              "en": "${import('croct://integration/strapi/configuration/home-hero-content.en.json')}"
             }
           }
         },
+
+
+
+
         "experiences": [
           {
             "name": "🧪 Experiment for all users",
@@ -52,7 +66,7 @@
               "all-users"
             ],
             "slots": [
-              "home-hero"
+              "launchpad-home-hero"
             ],
             "content": {
               "default": {}
@@ -67,8 +81,8 @@
                   "name": "Kickstart your project",
                   "content": {
                     "default": {
-                      "home-hero": {
-                        "en": "${import('croct://integration/strapi/configuration/home-hero-slot-content.en.json')}"
+                      "launchpad-home-hero": {
+                        "en": "${import('croct://integration/strapi/configuration/home-hero-content.en.json')}"
                       }
                     }
                   },
@@ -79,7 +93,7 @@
                   "name": "Integrate in one command",
                   "content": {
                     "default": {
-                      "home-hero": {
+                      "launchpad-home-hero": {
                         "en": "${import('./configuration/home-hero-experience-content.en.json')}"
                       }
                     }
@@ -90,13 +104,22 @@
               ]
             }
           }
-        ]
+        ],
+
+
+
+
       },
       "result": {
+        "components": {
+          "strapi-dynamic-zone-map": {
+            "id": "dynamicZoneMapComponentId"
+          }
+        },
         "slots": {
-          "home-hero": {
-            "id": "${options.slotId}",
-            "version": "${options.slotVersion}"
+          "launchpad-home-hero": {
+            "id": "heroSlotId",
+            "version": "heroSlotVersion"
           }
         },
         "experiences": {

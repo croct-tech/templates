@@ -25,6 +25,23 @@ Using Croct, you get:
 > [!NOTE Forever-free]
 > This template is compatible with features available on the forever-free plan.
 
+## How it works
+
+This template leverages the
+Strapi [dynamic zones](https://strapi.io/blog/how-to-create-pages-on-the-fly-with-dynamic-zone?utm_source=croct)
+feature. In Strapi, a dynamic zone is a field that allows you to create flexible content structures by combining
+different types of components. Think of it as a container where you can choose and arrange different reusable blocks to
+build your content pages.
+
+The homepage contains 8 sections, as follows:
+
+![A screenshot of Strapi's admin with the list of dynamic zone components of the homepage.](./intro-illustration-1.png)
+
+To integrate Croct [slot](https://docs.croct.com/explanation/slot) into Strapi, all you have to do is map your
+components and slots:
+
+![A screenshot of Croct's admin with the map of Strapi components to Croct slots.](./intro-illustration-2.png)
+
 ## Usage
 
 Run the following command in an empty directory to create a new project using this template:

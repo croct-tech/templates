@@ -1,0 +1,127 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/d6e0cf03-1bd4-4f52-9f0e-fd632fc7cd47"
+      }
+    },
+    "bullets": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "TypeScript based"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "build type safe applications, all components and hooks export types"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Free and open source"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "all packages have MIT license, you can use Mantine in any project"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "No annoying focus ring"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "focus ring will appear only when user navigates with keyboard"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "A **modern** React components library"
+      }
+    },
+    "tagline": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Build fully functional accessible web applications faster than ever – Mantine includes more than 120 customizable components and hooks to cover you in any situation"
+      }
+    },
+    "primaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Get started"
+          }
+        }
+      }
+    },
+    "secondaryCta": {
+      "type": "structure",
+      "attributes": {
+        "link": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#"
+          }
+        },
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Source code"
+          }
+        }
+      }
+    }
+  }
+}

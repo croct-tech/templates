@@ -1,7 +1,7 @@
 'use client';
 
-// import * as React from 'react';
 import Stack from '@mui/material/Stack';
+import CssBaseline from '@mui/material/CssBaseline';
 import { ColorModeSelect } from '@/components/ColorModeSelect';
 import { SignInForm, type FormProps } from '?/./sign-in-form.{js,jsx,ts,tsx}';
 import { ProductInformation, type ProductInformationProps } from '?/./product-information.{js,jsx,ts,tsx}';
@@ -13,7 +13,8 @@ export type SignInSectionProps = {
 
 export function SignInSection(props: SignInSectionProps) {
   return (
-    <>
+    <Stack>
+      <CssBaseline enableColorScheme />
       <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
       <Stack
         direction="column"
@@ -66,7 +67,7 @@ export function SignInSection(props: SignInSectionProps) {
           </Stack>
         </Stack>
       </Stack>
-    </>
+    </Stack>
   );
 }
 

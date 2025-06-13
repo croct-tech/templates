@@ -1,7 +1,7 @@
 # Introduction
 
-This template adds the testimonials section
-from [Material UI marketing page template](https://mui.com/material-ui/getting-started/templates/marketing-page/?utm_source=croct)
+This template adds the sign in
+from [Material UI marketing page template](https://mui.com/material-ui/getting-started/templates/sign-in-side/?utm_source=croct)
 to your project.
 
 It comes fully integrated with Croct, giving you CMS, AB testing, and personalization out of the box.

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Hero with content on left",
+  "description": "A customization template for the hero section with content on left block.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "mantine-hero-content-left": {
+            "name": "Mantine - Hero content on left",
+            "description": "The big section featured at the top of a page with optional bullets",
+            "schema": "${import('./configuration/hero-section-left-schema.json')}"
+          }
+        },
+        "slots": {
+          "mantine-hero-content-left": {
+            "name": "Mantine - Hero content on left",
+            "component": "mantine-hero-content-left",
+            "content": {
+              "en": "${import('./configuration/hero-section-left-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "mantine-hero-content-left": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

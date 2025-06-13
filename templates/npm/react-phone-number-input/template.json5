@@ -24,6 +24,7 @@
     ],
     "relatedTemplates": [
       "interface/component/demo-request-form",
+      "library/material-ui/sign-up-form",
       "use-case/location/geomarketing"
     ]
   },

@@ -50,7 +50,7 @@
     },
     {
       "name": "execute-package",
-      "package": "giget@latest",
+      "command": "giget@latest",
       "arguments": [
         "gh:sanity-io/sanity-template-nextjs-clean",
         "${this.projectName}"
@@ -58,7 +58,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "debug"
       ],
@@ -80,7 +80,7 @@
           "then": [
             {
               "name": "execute-package",
-              "package": "sanity@latest",
+              "command": "sanity@latest",
               "arguments": [
                 "login"
               ],
@@ -88,7 +88,7 @@
             },
             {
               "name": "execute-package",
-              "package": "sanity@latest",
+              "command": "sanity@latest",
               "arguments": [
                 "debug"
               ],
@@ -129,14 +129,18 @@
     },
     {
       "name": "change-directory",
-      "path": "${this.projectName}/studio"
+      "path": "${this.projectName}"
+    },
+    {
+      "name": "change-directory",
+      "path": "studio"
     },
     {
       "name": "install"
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "init",
         "--bare",
@@ -145,7 +149,29 @@
         "--dataset-default",
         "production"
       ],
+      "interactions": [
+        {
+          "when": "? Select organization:",
+          "then": [
+            "[enter]"
+          ]
+        },
+        {
+          "when": "You can find your project on Sanity Manage",
+          "final": true
+        }
+      ],
       "output": "initOutput"
+    },
+    {
+      "name": "test",
+      "condition": "${!this.initOutput.includes('Project ID:') || !this.initOutput.includes('Dataset:')}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "Unexpected output from Sanity CLI:\n${this.initOutput}"
+        }
+      ]
     },
     {
       "name": "define",
@@ -179,7 +205,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "cors",
         "add",
@@ -206,7 +232,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "dataset",
         "import",
@@ -226,7 +252,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "schema",
         "extract",
@@ -236,6 +262,20 @@
     {
       "name": "change-directory",
       "path": "../frontend"
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "package.json",
+          "replacements": [
+            {
+              "pattern": " --turbopack",
+              "value": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "add-dependency",
@@ -251,7 +291,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "exec",
         "../generate-read-token.ts",
@@ -291,7 +331,7 @@
     },
     {
       "name": "execute-package",
-      "package": "sanity@latest",
+      "command": "sanity@latest",
       "arguments": [
         "typegen",
         "generate"

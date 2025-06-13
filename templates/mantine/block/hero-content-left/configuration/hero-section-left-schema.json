@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The main heading of the hero. "
+    },
+    "tagline": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Tagline",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The tagline of the hero. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
+    },
+    "cta": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "private": false,
+            "optional": false,
+            "position": 0,
+            "description": "The CTA label."
+          },
+          "link": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Link",
+            "private": false,
+            "optional": false,
+            "position": 1,
+            "description": "The CTA link."
+          }
+        }
+      },
+      "label": "CTA",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The call to action button."
+    },
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Background Image",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The background image of the hero."
+    }
+  },
+  "description": "The big section featured at the top of a page with content on the left."
+}

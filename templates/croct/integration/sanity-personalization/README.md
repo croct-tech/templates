@@ -35,6 +35,8 @@ As an example, the home hero content difference lies in the title and tagline:
 * **Default heading:** _Croct + Sanity + Next.js_
 * **Personalized heading:** _Next.js 15 starter_
 
+![A split-screen comparison image showing two versions of the starter home page. The left side shows the default content, and the right side shows personalized content with a different heading.](./intro-illustration.png)
+
 ## Usage
 
 Run the following command in an empty directory to create a new example project using this template:

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Sign-up side customization",
+  "description": "A customization template for the sign-up side component.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "reactExtension": {
+      "type": "string",
+      "description": "The file extension for React files.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "material-ui-bullet-list-content": {
+            "name": "Material UI - Bullet list content",
+            "description": "A section of bullet list content.",
+            "schema": "${import('./configuration/bullet-list-content-schema.json')}"
+          }
+        },
+        "slots": {
+          "material-ui-sign-up-side": {
+            "name": "Material UI - Sign-up side",
+            "component": "material-ui-bullet-list-content",
+            "content": {
+              "en": "${import('./configuration/sign-up-side-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "material-ui-sign-up-side": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Next.js + Mantine project",
+  "description": "A template for bootstrapping a new project with Next.js and Mantine.",
+  "metadata": {
+    "id": "boilerplate/starter/mantine",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/mantine/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/mantine/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/mantine/cover.png",
+    "installationUrl": "croct://starter/mantine",
+    "categories": [
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "language/javascript",
+      "language/typescript",
+      "library/mantine"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs"
+    ]
+  },
+  "options": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-croct-app"
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    },
+    "eslint": {
+      "type": "boolean",
+      "description": "Whether to use ESLint."
+    },
+    "turbopack": {
+      "type": "boolean",
+      "description": "Whether to use TurboPack."
+    },
+    "src-dir": {
+      "type": "boolean",
+      "description": "Whether to use the src directory structure."
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ]
+    },
+    "import-alias": {
+      "type": "string",
+      "description": "The import alias to use."
+    },
+    "defaultHomepage": {
+      "type": "boolean",
+      "description": "Whether to use the default homepage over Croct's."
+    },
+    "disableLauncher": {
+      "type": "boolean",
+      "description": "Whether to disable opening the project in the browser.",
+      "default": false
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "This template is only supported in React projects.",
+          "suggestions": [
+            "Run the command in an empty folder to create a new project."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "isNewProject": "${project.platform === 'unknown'}"
+      }
+    },
+    {
+      "name": "import",
+      "template": "croct://starter/croct",
+      "options": {
+        "name": "${options.name}",
+        "version": "${options.version}",
+        "eslint": "${options.eslint}",
+        "turbopack": "${options.turbopack}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "tailwind": false,
+        "src-dir": "${options['src-dir']}",
+        "disableLauncher": true,
+        "defaultHomepage": "${options.defaultHomepage}"
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript"
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "codeExtension": "${this.isTypescript ? '.ts' : '.js'}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "./code/configuration/postcss-setup.js",
+      "destination": "./",
+      "overwrite": true
+    },
+    {
+      "name": "execute-package",
+      "command": "tsx@latest",
+      "arguments": [
+        "postcss-setup.js"
+      ]
+    },
+    {
+      "name": "add-dependency",
+      "development": true,
+      "dependencies": [
+        "postcss",
+        "postcss-preset-mantine",
+        "postcss-simple-vars"
+      ]
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@mantine/core"
+      ]
+    },
+    {
+      "name": "download",
+      "source": "./code/theme.ts",
+      "destination": "${project.path.source}",
+      "mapping": {
+        "theme.tsx": "theme${this.codeExtension}"
+      },
+      "overwrite": true
+    },
+    {
+      "name": "locate-path",
+      "path": "**/*.{js,jsx,ts,tsx}",
+      "limit": 1,
+      "matcher": {
+        pattern: "<CroctProvider"
+      },
+      "result": "providerFiles"
+    },
+    {
+      "name": "test",
+      "condition": "${this.providerFiles.length === 0}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "Unable to locate layout file."
+        }
+      ],
+      "else": [
+        {
+          "name": "read-file",
+          "path": "${this.providerFiles[0]}",
+          "result": "layoutContent"
+        },
+        {
+          "name": "test",
+          "condition": "${!this.layoutContent.includes('<MantineProvider')}",
+          "then": [
+            {
+              "name": "define",
+              "variables": {
+                "isLayoutFile": "${project.platform === 'nextjs' && /layout\\.[jt]sx?$/.test(this.providerFiles[0])}"
+              }
+            },
+            {
+              "name": "define",
+              "variables": {
+                "layoutContent": "import '@mantine/core/styles.css';\nimport {theme} from '?/**/theme.{js,ts,jsx,tsx}';\nimport { MantineProvider${this.isLayoutFile ? ', ColorSchemeScript, mantineHtmlProps' : ''} } from '@mantine/core';\n${this.layoutContent.replace(/(\\s*)(<CroctProvider[^>]*>)/, '$1$2$1<MantineProvider theme={theme}>').replace(/(\\s*)(?=<\\/CroctProvider>)/, '$1</MantineProvider>$1')}"
+              }
+            },
+            {
+              "name": "test",
+              "condition": "${project.platform === 'nextjs'}",
+              "then": [
+                {
+                  "name": "test",
+                  "condition": "${this.layoutContent.includes('<head')}",
+                  "then": [
+                    {
+                      "name": "define",
+                      "variables": {
+                        "layoutContent": "${this.layoutContent.replace(/(?<=<head[^>]*>)(\\s*)/, '$1<ColorSchemeScript />$1')}"
+                      }
+                    }
+                  ],
+                  "else": [
+                    {
+                      "name": "define",
+                      "variables": {
+                        "layoutContent": "${this.layoutContent.replace(/(?<=<html[^>]*>)(\\s*)/, '$1<head><ColorSchemeScript /></head>$1')}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "define",
+                  "variables": {
+                    "layoutContent": "${this.layoutContent.replace(/<html([^>]*)>/, '<html {...mantineHtmlProps} $1>')}"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "write-file",
+              "path": "${this.providerFiles[0]}",
+              "content": "${this.layoutContent}",
+              "overwrite": true
+            },
+            {
+              "name": "resolve-import",
+              "path": "${this.providerFiles[0]}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "pageDirectory": "${project.path.source}/pages"
+          }
+        },
+        {
+          "name": "locate-path",
+          "path": "${this.pageDirectory}",
+          "limit": 1,
+          "result": "pageDirectories"
+        },
+        {
+          "name": "test",
+          "condition": "${this.pageDirectories.length > 0}",
+          "then": [
+            {
+              "name": "locate-path",
+              "path": "${this.pageDirectory}/_document.{js,jsx,ts,tsx}",
+              "limit": 1,
+              "result": "documentFiles"
+            },
+            {
+              "name": "test",
+              "condition": "${this.documentFiles.length === 0}",
+              "then": [
+                {
+                  "name": "download",
+                  "source": "./code/_document.tsx",
+                  "destination": "${this.pageDirectory}",
+                  "mapping": {
+                    "_document.tsx": "_document${this.codeExtension}x"
+                  }
+                }
+              ],
+              "else": [
+                {
+                  "name": "read-file",
+                  "path": "${this.documentFiles[0]}",
+                  "result": "documentContent"
+                },
+                {
+                  "name": "test",
+                  "condition": "${!this.documentContent.includes('mantine')}",
+                  "then": [
+                    {
+                      "name": "define",
+                      "variables": {
+                        "documentContent": "import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';\n${this.documentContent.replace(/(?<=<Head[^>\\/]*>)(\\s*)/, '$1<ColorSchemeScript defaultColorScheme=\"auto\" />$1').replace(/<Head ?([^>]*)\\/>/, '<Head$1><ColorSchemeScript defaultColorScheme=\"auto\" /></Head>').replace(/<Html([^>]*)>/, '<Html {...mantineHtmlProps}$1>')}"
+                      }
+                    },
+                    {
+                      "name": "write-file",
+                      "path": "${this.documentFiles[0]}",
+                      "content": "${this.documentContent}",
+                      "overwrite": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${!options.disableLauncher}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher"
+        }
+      ]
+    }
+  ]
+}

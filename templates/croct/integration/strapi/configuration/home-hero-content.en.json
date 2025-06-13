@@ -1,0 +1,91 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "CTAs": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/sign-up"
+              }
+            },
+            "text": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Get started"
+              }
+            },
+            "target": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "_self"
+              }
+            },
+            "variant": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "primary"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#features"
+              }
+            },
+            "text": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Know more"
+              }
+            },
+            "target": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "_self"
+              }
+            },
+            "variant": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "simple"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Launch your content into orbit"
+      }
+    },
+    "sub_heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Deliver your web content at warp speed with Croct."
+      }
+    }
+  }
+}

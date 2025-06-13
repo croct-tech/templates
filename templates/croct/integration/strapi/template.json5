@@ -13,25 +13,259 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi/cover.png",
+    "installationUrl": "croct://integration/strapi",
     "categories": [
-      "integration/cms"
+      "boilerplate/starter",
+      "framework/nextjs",
+      "framework/react",
+      "integration/cms",
+      "language/javascript",
+      "language/typescript"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs"
     ]
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
+      "name": "define",
+      "variables": {
+        "projectName": "croct-strapi-project"
+      }
     },
     {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
+      "name": "import",
+      "template": "croct://utils/filename-generator",
+      "options": {
+        "reference": "projectName"
+      }
     },
     {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Strapi%20integration%20template."
+      "name": "execute-package",
+      "command": "giget@latest",
+      "arguments": [
+        "gh:strapi/LaunchPad",
+        "${this.projectName}"
+      ]
+    },
+    {
+      "name": "change-directory",
+      "path": "${this.projectName}/strapi"
+    },
+    {
+      "name": "define",
+      "variables": {
+        "PREVIEW_SECRET": "${uuid()}"
+      }
+    },
+    {
+      "name": "move-path",
+      "path": ".env.example",
+      "destination": ".env"
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "config/admin.ts",
+          "replacements": [
+            {
+              "pattern": "(\\s+)(?=auth:)",
+              "value": "$1autoOpen: false,$1"
+            }
+          ]
+        },
+        {
+          "path": ".env",
+          "replacements": [
+            {
+              "pattern": "APP_KEYS=\"[^\"]*\"",
+              "value": "APP_KEYS=\"${uuid()},${uuid()},${uuid()}\""
+            },
+            {
+              "pattern": "API_TOKEN_SALT=[^\n]*",
+              "value": "API_TOKEN_SALT=${uuid()}"
+            },
+            {
+              "pattern": "ADMIN_JWT_SECRET=[^\n]*",
+              "value": "ADMIN_JWT_SECRET=${uuid()}"
+            },
+            {
+              "pattern": "TRANSFER_TOKEN_SALT=[^\n]*",
+              "value": "TRANSFER_TOKEN_SALT=${uuid()}"
+            },
+            {
+              "pattern": "JWT_SECRET=[^\n]*",
+              "value": "JWT_SECRET=${uuid()}"
+            },
+            {
+              "pattern": "PREVIEW_SECRET=[^\"]*",
+              "value": "PREVIEW_SECRET=${this.PREVIEW_SECRET}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "install"
+    },
+    {
+      "name": "execute-package",
+      "command": "seed",
+      "script": true,
+      "arguments": [
+        '--force'
+      ]
+    },
+    {
+      "name": "change-directory",
+      "path": "../next"
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "@croct/template-ui"
+      ]
+    },
+    {
+      "name": "move-path",
+      "path": ".env.example",
+      "destination": ".env"
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": ".env",
+          "replacements": [
+            {
+              "pattern": "PREVIEW_SECRET=[^\"]*",
+              "value": "PREVIEW_SECRET=${this.PREVIEW_SECRET}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "integrate-croct"
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "strapi-dynamic-zone-map": {
+            "name": "Strapi - Dynamic zone map",
+            "description": "A map for components in a Strapi to slots in Croct.",
+            "schema": "${import('./configuration/dynamic-zone-map-schema.json')}"
+          },
+          "launchpad-hero-section": {
+            "name": "LaunchPad - Hero section",
+            "description": "Main section with title, tagline, and CTAs.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "launchpad-home-hero": {
+            "name": "LaunchPad - Home hero",
+            "component": "launchpad-hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "components": {
+          "strapi-dynamic-zone-map": {
+            "id": "dynamicZoneMapComponentId"
+          }
+        },
+        "slots": {
+          "launchpad-home-hero": {
+            "id": "heroSlotId",
+            "version": "heroSlotVersion"
+          }
+        }
+      }
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "slots": {
+          "launchpad-home-dynamic-zones": {
+            "name": "LaunchPad - Homepage dynamic zones",
+            "component": "${this.dynamicZoneMapComponentId}",
+            "content": {
+              "en": "${import('./configuration/home-dynamic-zones-content.json', {heroSlotId: this.heroSlotId})}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "launchpad-home-dynamic-zones": {
+            "id": "homeDynamicZonesSlotId",
+            "version": "homeDynamicZonesSlotVersion"
+          }
+        }
+      }
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this.homeDynamicZonesSlotId}"
+      ]
+    },
+    {
+      "name": "download",
+      "source": "code/page.tsx",
+      "destination": "app/[locale]/(marketing)",
+      "overwrite": true
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "app/[locale]/(marketing)/page.tsx",
+          "replacements": [
+            {
+              "pattern": "%dynamicZonesSlotId%",
+              "value": "${this.homeDynamicZonesSlotId}"
+            },
+            {
+              "pattern": "%dynamicZonesSlotVersion%",
+              "value": "${this.homeDynamicZonesSlotVersion}"
+            },
+            {
+              "pattern": "%heroSlotId%",
+              "value": "${this.heroSlotId}"
+            },
+            {
+              "pattern": "%heroSlotVersion%",
+              "value": "${this.heroSlotVersion}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "change-directory",
+      "path": "../"
+    },
+    {
+      "name": "install"
+    },
+    {
+      "name": "import",
+      "template": "croct:/utils/example-launcher",
+      "options": {
+        "script": "dev",
+        "url": "http://localhost:3000"
+      }
     }
   ]
 }

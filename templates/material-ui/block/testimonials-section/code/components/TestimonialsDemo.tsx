@@ -1,16 +1,16 @@
 'use client';
 
 import CssBaseline from "@mui/material/CssBaseline"
-import { PricingSection, type PricingSectionProps} from "?/./pricing-section.{js,jsx,ts,tsx}"
+import { TestimonialsSection, type TestimonialsSectionProps} from "?/./TestimonialsSection.{js,jsx,ts,tsx}"
 import { AppTheme } from "?/./AppTheme.{js,jsx,ts,tsx}"
 import { AppAppBar } from "?/./AppBar.{js,jsx,ts,tsx}"
 
-export function PricingDemo(props: PricingSectionProps) {
+export function TestimonialsDemo(props: TestimonialsSectionProps) {
   return (
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
       <AppAppBar />
-      <PricingSection {...props} />
+      <TestimonialsSection {...props} />
     </AppTheme>
   )
 }

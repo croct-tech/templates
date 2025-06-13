@@ -20,7 +20,7 @@ Here is an example of how to use this template:
     "id": "hero-section",
     "slotId": "slotId",
     "slotVersion": "slotVersion",
-    "components": ["hero-section.tsx"],
+    "components": ["HeroSection.tsx"],
     "extension": "material-ui://component/hero-section/extension.json5"
   }
 }

@@ -1,7 +1,7 @@
 # Introduction
 
-This template adds the highlights section
-from [Material UI marketing page template](https://mui.com/material-ui/getting-started/templates/marketing-page/?utm_source=croct)
+This template adds the
+entire [Material UI marketing page template](https://mui.com/material-ui/getting-started/templates/marketing-page/?utm_source=croct)
 to your project.
 
 It comes fully integrated with Croct, giving you CMS, AB testing, and personalization out of the box.
@@ -11,13 +11,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct use material-ui://block/highlights-section
+croct use material-ui://template/marketing-page
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct use material-ui://block/highlights-section --router=page
+croct use material-ui://template/marketing-page --router=page
 ```
 
 ## Options

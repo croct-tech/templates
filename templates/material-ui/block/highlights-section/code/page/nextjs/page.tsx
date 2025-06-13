@@ -1,4 +1,4 @@
-import { HighlightsDemo } from "?/**/*/highlights-demo.{js,jsx,ts,tsx}"
+import { HighlightsDemo } from "?/**/*/HighlightsDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 

@@ -61,13 +61,14 @@
       "template": "material-ui://block/block",
       "options": {
         "id": "testimonials-section",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "dependencies": [],
         "components": [
-          "testimonials-section.tsx",
-          "testimonials-demo.tsx"
+          "TestimonialsSection.tsx",
+          "TestimonialsDemo.tsx"
         ],
         "extension": "material-ui://block/testimonials-section/extension.json5"
       }

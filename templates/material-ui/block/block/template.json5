@@ -28,6 +28,15 @@
       "description": "The block ID.",
       "required": true
     },
+    "type": {
+      "type": "string",
+      "description": "The type of the component.",
+      "choices": [
+        "block",
+        "template"
+      ],
+      "required": true
+    },
     "version": {
       "type": "string",
       "description": "The version of Next.js to use.",
@@ -70,6 +79,11 @@
     "extension": {
       "type": "string",
       "description": "The URL of the extension template to apply."
+    },
+    "slots": {
+      "type": "array",
+      "description": "The list of slots to add to the example page.",
+      "required": false
     }
   },
   "actions": [
@@ -254,7 +268,7 @@
         },
         {
           "name": "download",
-          "source": "material-ui://block/${options.id}/code/utils/${this.utilityFile}",
+          "source": "material-ui://${options.type}/${options.id}/code/utils/${this.utilityFile}",
           "destination": "${project.path.utilities}",
           "mapping": {
             "${this.utilityFile}": "${this.utilityBaseName}${/x$/.test(this.utilityFile) ? this.reactExtension : this.codeExtension}"
@@ -281,7 +295,7 @@
         },
         {
           "name": "download",
-          "source": "material-ui://block/${options.id}/code/components/${this.componentFile}",
+          "source": "${this.componentFile.startsWith('material-ui://') ? this.componentFile : 'material-ui://' + options.type + '/' + options.id + '/code/components/' + this.componentFile}",
           "destination": "${project.path.components}",
           "mapping": {
             "${this.componentFile}": "${this.componentBaseName}${this.reactExtension}"
@@ -304,7 +318,7 @@
     },
     {
       "name": "download",
-      "source": "material-ui://block/${options.id}/code/page/${project.platform}/${this.exampleSourceFile}",
+      "source": "material-ui://${options.type}/${options.id}/code/page/${project.platform}/${this.exampleSourceFile}",
       "destination": "${this.exampleDirectory}",
       "mapping": {
         "${this.exampleSourceFile}": "${this.exampleFile}"
@@ -330,7 +344,8 @@
             "reactExtension": "${this.reactExtension}",
             "codeExtension": "${this.codeExtension}",
             "slotId": "slotId",
-            "slotVersion": "slotVersion"
+            "slotVersion": "slotVersion",
+            "slots": "${options.slots}"
           }
         }
       ]

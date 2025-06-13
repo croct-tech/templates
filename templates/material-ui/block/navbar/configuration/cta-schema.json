@@ -27,7 +27,7 @@
         "type": "text",
         "choices": {
           "text": {
-            "label": "Terciary",
+            "label": "Tertiary",
             "position": 2,
             "description": "Button variant text"
           },

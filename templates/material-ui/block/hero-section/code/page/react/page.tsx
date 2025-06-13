@@ -1,4 +1,4 @@
-import { HeroDemo } from "?/**/*/hero-demo.{js,jsx,ts,tsx}"
+import { HeroDemo } from "?/**/*/HeroDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 

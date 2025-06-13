@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import { PricingDemo } from "?/**/*/pricing-demo.{js,jsx,ts,tsx}"
+import { PricingDemo } from "?/**/*/PricingDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 

@@ -1,4 +1,4 @@
-import { PricingDemo } from "?/**/*/pricing-demo.{js,jsx,ts,tsx}"
+import { PricingDemo } from "?/**/*/PricingDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 

@@ -1,4 +1,4 @@
-import { FaqDemo } from "?/**/*/faq-demo.{js,jsx,ts,tsx}"
+import { FaqDemo } from "?/**/*/FaqDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 

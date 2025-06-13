@@ -1,6 +1,6 @@
 import type { GetServerSideProps } from "next"
 import type { SlotContent } from "@croct/plug-next"
-import { NavbarDemo } from "?/**/*/navbar-demo.{js,jsx,ts,tsx}"
+import { NavbarDemo } from "?/**/*/NavbarDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 

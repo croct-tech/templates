@@ -16,7 +16,7 @@ const logoStyle = {
   opacity: 0.3,
 };
 
-export type TestimonialsSection = {
+export type TestimonialsSectionProps = {
   title: string,
   description?: string,
   testimonials: Array<{
@@ -33,7 +33,7 @@ export type TestimonialsSection = {
   }>
 }
 
-export function TestimonialsSection(props: TestimonialsSection) {
+export function TestimonialsSection(props: TestimonialsSectionProps) {
   const {title, description, testimonials} = props;
   const theme = useColorScheme();
 

@@ -1,7 +1,7 @@
 # Introduction
 
 This template adds the
-[Material UI sign-in page template](https://mui.com/material-ui/getting-started/templates/sign-in-side/?utm_source=croct)
+[Material UI sign-in side template](https://mui.com/material-ui/getting-started/templates/sign-in-side/?utm_source=croct)
 to your project.
 
 It comes fully integrated with Croct, giving you CMS, AB testing, and personalization out of the box.

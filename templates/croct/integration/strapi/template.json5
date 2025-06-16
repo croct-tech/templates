@@ -23,8 +23,16 @@
       "language/typescript"
     ],
     "relatedTemplates": [
-      "boilerplate/starter/nextjs"
+      "boilerplate/starter/nextjs",
+      "integration/cms/strapi-ab-testing",
+      "integration/cms/strapi-personalization"
     ]
+  },
+  "options": {
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    }
   },
   "actions": [
     {
@@ -189,6 +197,27 @@
       }
     },
     {
+      "name": "download",
+      "source": "./code/page.tsx",
+      "destination": "app/[locale]/(marketing)",
+      "overwrite": true
+    },
+    {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "slotId": "heroSlotId",
+            "slotVersion": "heroSlotVersion",
+            "pagePath": "app/[locale]/(marketing)/page.tsx"
+          }
+        }
+      ]
+    },
+    {
       "name": "create-resource",
       "resources": {
         "slots": {
@@ -215,12 +244,6 @@
       "slots": [
         "${this.homeDynamicZonesSlotId}"
       ]
-    },
-    {
-      "name": "download",
-      "source": "code/page.tsx",
-      "destination": "app/[locale]/(marketing)",
-      "overwrite": true
     },
     {
       "name": "replace-file-content",

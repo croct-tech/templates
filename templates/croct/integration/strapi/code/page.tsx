@@ -32,7 +32,6 @@ export async function generateMetadata({
 }
 
 export default async function HomePage({ params }: { params: { locale: string } }) {
-
   const [staticPageData, slots] = await Promise.all([
     await fetchContentType(
       'pages',

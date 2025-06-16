@@ -11,7 +11,7 @@
       "private": false,
       "optional": false,
       "position": 0,
-      "description": "The main heading of the hero. "
+      "description": "The main heading of the hero."
     },
     "tagline": {
       "type": {

@@ -14,19 +14,21 @@ To create a new project using this template, run:
 croct use material-ui://template/marketing-page
 ```
 
-You can customize the template by specifying options:
+You can customize the template by specifying options, like defining which sections should be integrated with Croct
+slots:
 
 ```croct-cmd
-croct use material-ui://template/marketing-page --router=page
+croct use material-ui://template/marketing-page --slots='["hero-section","pricing-section"]'
 ```
 
 ## Options
 
 The following options are available for this template:
 
-| Option        | Description                                      | Required | Default  |
-|---------------|--------------------------------------------------|----------|----------|
-| `projectName` | The name of the project.                         | No       | `my-app` |
-| `version`     | The Next.js version to use.                      | No       | `latest` |
-| `router`      | The router to use (`app` or `page`).             | No       | `app`    |
-| `javascript`  | Whether to use JavaScript instead of TypeScript. | No       | `false`  |
+| Option        | Description                                                                                                                                                                    | Required | Default                                |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|----------------------------------------|
+| `projectName` | The name of the project.                                                                                                                                                       | No       | `my-app`                               |
+| `version`     | The Next.js version to use.                                                                                                                                                    | No       | `latest`                               |
+| `router`      | The router to use (`app` or `page`).                                                                                                                                           | No       | `app`                                  |
+| `javascript`  | Whether to use JavaScript instead of TypeScript.                                                                                                                               | No       | `false`                                |
+| `slots`       | Tha list of slots to use (`navbar`, `hero-section`, `logo-collection`, `features-section`, `testimonials-section`, `highlights-section`, `pricing-section`, and `faq-section`. | No       | `["hero-section", "features-section"]` |

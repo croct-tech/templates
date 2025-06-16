@@ -61,14 +61,14 @@
         "slots": "${options.slots}",
         "components": [],
         "availableSlots": [
-          "faq-section",
-          "features-section",
-          "hero-section",
-          "highlights-section",
-          "logo-collection",
           "navbar",
+          "hero-section",
+          "logo-collection",
+          "features-section",
+          "testimonials-section",
+          "highlights-section",
           "pricing-section",
-          "testimonials-section"
+          "faq-section"
         ]
       }
     },

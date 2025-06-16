@@ -1,0 +1,138 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "description": "Main title of the page.",
+      "private": false,
+      "optional": false,
+      "position": 0
+    },
+    "sub_heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Subheading",
+      "description": "Supporting tagline of the page.",
+      "private": false,
+      "optional": false,
+      "position": 1
+    },
+    "CTAs": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "text": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Label",
+              "description": "Text shown on the CTA.",
+              "private": false,
+              "optional": false,
+              "position": 0
+            },
+            "url": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "URL",
+              "description": "Link destination of the CTA.",
+              "private": false,
+              "optional": false,
+              "position": 1
+            },
+            "target": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "_self": {
+                    "label": "Self",
+                    "position": 0,
+                    "default": true,
+                    "description": "Open in the same frame."
+                  },
+                  "_blank": {
+                    "label": "Blank",
+                    "position": 1,
+                    "default": false,
+                    "description": "Open in a new tab or window."
+                  },
+                  "_parent": {
+                    "label": "Parent",
+                    "position": 2,
+                    "default": false,
+                    "description": "Open in the parent frame."
+                  },
+                  "_top": {
+                    "label": "Top",
+                    "position": 3,
+                    "default": false,
+                    "description": "Open in the topmost frame."
+                  }
+                }
+              },
+              "label": "Target",
+              "description": "Where to open the link.",
+              "private": false,
+              "optional": false,
+              "position": 2
+            },
+            "variant": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "simple": {
+                    "label": "Simple",
+                    "position": 0,
+                    "default": true,
+                    "description": "Default button style."
+                  },
+                  "outline": {
+                    "label": "Outline",
+                    "position": 1,
+                    "default": false,
+                    "description": "Outlined button style."
+                  },
+                  "primary": {
+                    "label": "Primary",
+                    "position": 2,
+                    "default": false,
+                    "description": "Emphasized primary style."
+                  },
+                  "muted": {
+                    "label": "Muted",
+                    "position": 3,
+                    "default": false,
+                    "description": "Subtle secondary style."
+                  }
+                }
+              },
+              "label": "Variant",
+              "description": "Visual style of the CTA.",
+              "private": false,
+              "optional": false,
+              "position": 3
+            }
+          }
+        },
+        "itemLabel": "CTA"
+      },
+      "label": "CTAs",
+      "description": "Call-to-action buttons.",
+      "private": false,
+      "optional": false,
+      "position": 2
+    }
+  }
+}

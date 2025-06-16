@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "map": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "component": {
+              "type": {
+                "type": "text",
+                "pattern": "^[a-z0-9_-]+$",
+                "minimumLength": 1
+              },
+              "label": "Strapi component",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The ID of the component as defined in Strapi."
+            },
+            "slot": {
+              "type": {
+                "type": "text",
+                "pattern": "^[a-z0-9_-]+$",
+                "minimumLength": 1
+              },
+              "label": "Croct slot",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The ID of the slot as defined in Croct."
+            }
+          }
+        },
+        "itemLabel": "Entry"
+      },
+      "label": "Map",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The map of dynamic zones to slots."
+    }
+  }
+}

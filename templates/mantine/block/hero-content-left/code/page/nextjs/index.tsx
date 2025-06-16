@@ -17,7 +17,7 @@ export default function Page({content}: PageProps) {
     <TemplateCanvas
       title="Mantine - Hero with content on left"
       ctaLabel="Edit this content"
-      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.mantine&utm_content=hero_content_lefts&utm_term=nextjs"
+      ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.mantine&utm_content=hero_content_left&utm_term=nextjs"
       ctaTarget="_blank"
       fullScreen
       isolated

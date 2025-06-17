@@ -60,6 +60,7 @@
       "template": "material-ui://block/block",
       "options": {
         "id": "navbar",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
@@ -67,8 +68,8 @@
           "@mui/icons-material"
         ],
         "components": [
-          "navbar.tsx",
-          "navbar-demo.tsx"
+          "Navbar.tsx",
+          "Navbar-demo.tsx"
         ],
         "extension": "material-ui://block/navbar/extension.json5"
       }

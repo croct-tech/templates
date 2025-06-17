@@ -28,8 +28,8 @@ Using Croct, you get:
 
 ## What's included
 
-Besides the integration itself, this template creates an AB test for all users who browse the website, splitting them
-into two variants, each with 50% of the traffic.
+Besides the [integration](http://croct.com/templates/integration/cms/sanity) itself, this template creates an AB test
+for all users who browse the website, splitting them into two variants, each with 50% of the traffic.
 
 As an example, the home hero content difference lies in the tagline:
 
@@ -37,6 +37,8 @@ As an example, the home hero content difference lies in the tagline:
   one stack._
 * **Variant B:** _Integrate AB testing, real-time personalization, and analytics into your Sanity project in just one
   command._
+
+![A split-screen comparison image showing two versions of the starter home page. The left side shows the variant A content, and the right side shows the variant B content.](./intro-illustration.png)
 
 ## Usage
 

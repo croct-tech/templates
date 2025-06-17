@@ -1,4 +1,4 @@
-import { FaqDemo } from "?/**/*/faq-demo.{js,jsx,ts,tsx}"
+import { FaqDemo } from "?/**/*/FaqDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { fetchContent } from "@croct/plug-next/server"
 

@@ -1,16 +1,16 @@
 'use client';
 
 import CssBaseline from "@mui/material/CssBaseline"
-import { LogoCollection, type LogoCollectionProps} from "?/./logo-collection.{js,jsx,ts,tsx}"
+import { FeaturesSection, type FeaturesSectionProps} from "?/./FeaturesSection.{js,jsx,ts,tsx}"
 import { AppTheme } from "?/./AppTheme.{js,jsx,ts,tsx}"
 import { AppAppBar } from "?/./AppBar.{js,jsx,ts,tsx}"
 
-export function LogoCollectionDemo(props: LogoCollectionProps) {
+export function FeaturesDemo(props: FeaturesSectionProps) {
   return (
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
       <AppAppBar />
-      <LogoCollection {...props} />
+      <FeaturesSection {...props} />
     </AppTheme>
   )
 }

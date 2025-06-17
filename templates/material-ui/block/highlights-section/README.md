@@ -11,13 +11,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct use material-ui://block/highlight-section
+croct use material-ui://block/highlights-section
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct use material-ui://block/highlight-section --router=page
+croct use material-ui://block/highlights-section --router=page
 ```
 
 ## Options

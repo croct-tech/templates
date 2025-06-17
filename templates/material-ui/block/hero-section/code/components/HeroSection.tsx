@@ -146,7 +146,7 @@ export function HeroSection(props: HeroSectionProps) {
               size="small"
               variant="outlined"
               aria-label="Enter your email address"
-              placeholder="Your email address"
+              placeholder={form.inputLabel}
               fullWidth
               value={email}
               onChange={(event) => setEmail(event.target.value)}

@@ -60,15 +60,13 @@
       "template": "material-ui://block/block",
       "options": {
         "id": "logo-collection",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "components": [
-          "logo-collection.tsx",
-          "logo-collection-demo.tsx"
-        ],
-        "utils": [
-          "markdown.tsx"
+          "LogoCollection.tsx",
+          "LogoCollectionDemo.tsx"
         ],
         "extension": "material-ui://block/logo-collection/extension.json5"
       }

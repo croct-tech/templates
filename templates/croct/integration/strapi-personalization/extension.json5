@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/template.json",
-  "title": "Sanity personalization customization",
-  "description": "A customization template for the Sanity personalization template.",
+  "title": "Strapi personalization customization",
+  "description": "A customization template for the Strapi personalization template.",
   "options": {
     "slotId": {
       "type": "reference",
@@ -23,40 +23,24 @@
       "name": "create-resource",
       "resources": {
         "audiences": {
-          "nextjs-15": {
-            "name": "Next.js 15",
-            "criteria": "user's stack includes 'nextjs-15'"
-          }
-        },
-        "components": {
-          "hero-section": {
-            "name": "Hero section",
-            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
-            "schema": "${import('croct://integration/sanity/configuration/hero-section-schema.json')}"
-          }
-        },
-        "slots": {
-          "home-hero": {
-            "name": "Home hero",
-            "component": "hero-section",
-            "content": {
-              "en": "${import('croct://integration/sanity/configuration/home-hero-slot-content.en.json')}"
-            }
+          "personalization-interest": {
+            "name": "Personalization interest",
+            "criteria": "user's interests includes 'personalization'"
           }
         },
         "experiences": [
           {
-            "name": "Personalization for Next.js 15",
+            "name": "Personalization interest",
             "draft": true,
             "audiences": [
-              "nextjs-15"
+              "personalization-interest"
             ],
             "slots": [
-              "home-hero"
+              "${this[options.slotId]}"
             ],
             "content": {
               "default": {
-                "home-hero": {
+                "${this[options.slotId]}": {
                   "en": "${import('./configuration/home-hero-experience-content.en.json')}"
                 }
               }
@@ -65,12 +49,6 @@
         ]
       },
       "result": {
-        "slots": {
-          "home-hero": {
-            "id": "${options.slotId}",
-            "version": "${options.slotVersion}"
-          }
-        },
         "experiences": {
           "0": "experienceId"
         }
@@ -83,7 +61,7 @@
           "path": "${options.pagePath}",
           "replacements": [
             {
-              "pattern": "%workspaceUrl%/slots/edit/%slotId%/%slotVersion%",
+              "pattern": "%workspaceUrl%/slots/edit/%heroSlotId%/%heroSlotVersion%",
               "value": "%workspaceUrl%/experiences/%experienceId%/edit"
             },
             {
@@ -91,12 +69,12 @@
               "value": "${this.experienceId}"
             },
             {
-              "pattern": "Edit content",
-              "value": "Manage experience"
+              "pattern": "Edit this page",
+              "value": "Manage personalized content"
             },
             {
-              "pattern": "utm_content=sanity",
-              "value": "utm_content=sanity-personalization"
+              "pattern": "utm_content=strapi",
+              "value": "utm_content=strapi-personalization"
             }
           ]
         }

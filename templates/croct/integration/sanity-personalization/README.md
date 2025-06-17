@@ -28,7 +28,8 @@ Using Croct, you get:
 
 ## What's included
 
-Besides the integration itself, this template creates a personalized experience for users that use Next.js 15.
+Besides the [integration](http://croct.com/templates/integration/cms/sanity) itself, this template creates a
+personalized experience for users that use Next.js 15.
 
 As an example, the home hero content difference lies in the title and tagline:
 

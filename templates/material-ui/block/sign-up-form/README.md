@@ -10,13 +10,13 @@ comes fully integrated with Croct, giving you CMS, AB testing, and personalizati
 To create a new project using this template, run:
 
 ```croct-cmd
-croct use material-ui://block/sign-in-side
+croct use material-ui://block/sign-up-form
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct use material-ui://block/sign-in-side --router=page
+croct use material-ui://block/sign-up-form --router=page
 ```
 
 ## Options

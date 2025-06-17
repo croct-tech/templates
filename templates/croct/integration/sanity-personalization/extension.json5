@@ -55,39 +55,11 @@
               "home-hero"
             ],
             "content": {
-              "default": {}
-            },
-            "experiment": {
-              "name": "Hero copy",
-              "goalId": "command-copy",
-              "crossDevice": false,
-              "traffic": 1,
-              "variants": [
-                {
-                  "name": "Next.js",
-                  "content": {
-                    "default": {
-                      "home-hero": {
-                        "en": "${import('croct://integration/sanity/configuration/home-hero-slot-content.en.json')}"
-                      }
-                    }
-                  },
-                  "baseline": true,
-                  "allocation": 500
-                },
-                {
-                  "name": "Next.js 15",
-                  "content": {
-                    "default": {
-                      "home-hero": {
-                        "en": "${import('./configuration/home-hero-experience-content.en.json')}"
-                      }
-                    }
-                  },
-                  "baseline": false,
-                  "allocation": 500
+              "default": {
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
                 }
-              ]
+              }
             }
           }
         ]

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Strapi personalization customization",
+  "description": "A customization template for the Strapi personalization template.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "pagePath": {
+      "type": "string",
+      "description": "The path to the page where the slot is used."
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "personalization-interest": {
+            "name": "Personalization interest",
+            "criteria": "user's interests includes 'personalization'"
+          }
+        },
+        "experiences": [
+          {
+            "name": "Personalization interest",
+            "draft": true,
+            "audiences": [
+              "personalization-interest"
+            ],
+            "slots": [
+              "${this[options.slotId]}"
+            ],
+            "content": {
+              "default": {
+                "${this[options.slotId]}": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "result": {
+        "experiences": {
+          "0": "experienceId"
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.pagePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%/slots/edit/%heroSlotId%/%heroSlotVersion%",
+              "value": "%workspaceUrl%/experiences/%experienceId%/edit"
+            },
+            {
+              "pattern": "%experienceId%",
+              "value": "${this.experienceId}"
+            },
+            {
+              "pattern": "Edit this page",
+              "value": "Manage personalized content"
+            },
+            {
+              "pattern": "utm_content=strapi",
+              "value": "utm_content=strapi-personalization"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

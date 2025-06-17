@@ -13,6 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi-ab-testing/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi-ab-testing/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi-ab-testing/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/strapi-ab-testing/cover.mp4",
     "installationUrl": "croct://integration/strapi-ab-testing",
     "categories": [
       "boilerplate/starter",

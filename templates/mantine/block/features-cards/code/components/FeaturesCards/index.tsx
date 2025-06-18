@@ -59,7 +59,9 @@ export function FeaturesCards(props: FeaturesCardsProps) {
 
           return (
             <Card key={index} shadow="md" radius="md" className={classes.card} padding="xl">
-              <Icon size={50} stroke={1.5} color={theme.colors.blue[6]} />
+              {Icon && (
+                <Icon size={50} stroke={1.5} color={theme.colors.blue[6]} />
+              )}
               <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
                 {feature.title}
               </Text>

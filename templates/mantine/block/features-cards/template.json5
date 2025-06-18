@@ -26,6 +26,7 @@
     ],
     "relatedTemplates": [
       "interface/section/cards-section",
+      "library/magic-ui/bento-grid",
       "library/material-ui/features-section",
       "library/material-ui/highlights-section"
     ]

@@ -1,4 +1,4 @@
-import { NavbarDemo } from "?/**/*/navbar-demo.{js,jsx,ts,tsx}"
+import { NavbarDemo } from "?/**/*/NavbarDemo.{js,jsx,ts,tsx}"
 import { TemplateCanvas } from "@croct/template-ui/react"
 import { useContent } from "@croct/plug-react"
 

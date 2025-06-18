@@ -1,7 +1,7 @@
 'use client';
 
 import CssBaseline from "@mui/material/CssBaseline"
-import { Navbar, type NavbarProps} from "?/./navbar.{js,jsx,ts,tsx}"
+import { Navbar, type NavbarProps} from "?/./Navbar.{js,jsx,ts,tsx}"
 import { AppTheme } from "?/./AppTheme.{js,jsx,ts,tsx}"
 
 export function NavbarDemo(props: NavbarProps) {

@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/cover.mp4",
     "installationUrl": "npm://swiper/react",
     "categories": [
       "framework/nextjs",

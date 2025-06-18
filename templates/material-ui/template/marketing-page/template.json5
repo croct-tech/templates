@@ -12,6 +12,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/cover.mp4",
     "installationUrl": "material-ui://template/marketing-page",
     "categories": [
       "framework/nextjs",

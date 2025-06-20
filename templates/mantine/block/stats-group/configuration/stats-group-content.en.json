@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "statistic": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "stats": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "456,133"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Page views"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "24% more than in the same month last year, 33% more that two years ago"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "stats": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "2,175"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "New users"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "13% less compared to last month, new user engagement up by 6%"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "stats": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "1,994"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Completed orders"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "1994 orders were completed this month, 97% satisfaction rate"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

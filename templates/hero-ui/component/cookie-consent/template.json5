@@ -20,6 +20,9 @@
       "language/typescript",
       "library/hero-ui",
       "library/tailwind-css"
+    ],
+    "relatedTemplates": [
+      "library/mantine/cookies-banner"
     ]
   },
   "options": {

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Allow cookies"
+      }
+    },
+    "message": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "So the deal is, we want to spy on you. We would like to know what did you have for todays breakfast, where do you live, how much do you earn and like 50 other things. To view our landing page you will have to accept all cookies. That's all, and remember that we are watching..."
+      }
+    },
+    "primaryCta": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Cookies preferences"
+      }
+    },
+    "secondaryCta": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Accept all"
+      }
+    }
+  }
+}

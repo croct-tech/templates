@@ -1,0 +1,41 @@
+.card {
+  height: 240px;
+  max-width: 480px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 5%;
+  margin-left: 30%;
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  padding: var(--mantine-spacing-xl);
+  z-index: 1;
+}
+
+.action {
+  position: absolute;
+  bottom: var(--mantine-spacing-xl);
+  right: var(--mantine-spacing-xl);
+}
+
+.title {
+  color: var(--mantine-color-white);
+  margin-bottom: calc(var(--mantine-spacing-xs) / 2);
+}
+
+.description {
+  color: var(--mantine-color-white);
+  max-width: 220px;
+}
+
+.overlay {
+  background-color: transparent;
+  background-image: linear-gradient(
+    105deg,
+    var(--mantine-color-black) 20%,
+    #312f2f 50%,
+    var(--mantine-color-gray-4) 100%
+  );
+}

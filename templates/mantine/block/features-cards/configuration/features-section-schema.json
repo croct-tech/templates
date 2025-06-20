@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "preTitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Pre-title",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The section pre-title."
+    },
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The section title."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The section description."
+    },
+    "features": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": {
+                "type": "text",
+                "choices": {
+                  "user": {
+                    "label": "User icon",
+                    "position": 1
+                  },
+                  "gauge": {
+                    "label": "Gauge icon",
+                    "position": 0
+                  },
+                  "cookie": {
+                    "label": "Cookie icon",
+                    "position": 2
+                  }
+                }
+              },
+              "label": "Icon",
+              "private": false,
+              "optional": true,
+              "position": 0,
+              "description": "The icon related to the feature."
+            },
+            "title": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The feature title."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 2,
+              "description": "The feature description."
+            }
+          }
+        },
+        "maximumLength": 3,
+        "minimumLength": 1
+      },
+      "label": "Features",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The features list."
+    }
+  },
+  "description": "A section of features with cards."
+}

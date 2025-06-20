@@ -1,0 +1,110 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Integrate effortlessly with any technology stack"
+      }
+    },
+    "features": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "gauge"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Extreme performance"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "user"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Privacy focused"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "cookie"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "No third parties"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "preTitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "BEST COMPANY EVER"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Every once in a while, you’ll see a Golbat that’s missing some fangs. This happens when hunger drives it to try biting a Steel-type Pokémon."
+      }
+    }
+  }
+}

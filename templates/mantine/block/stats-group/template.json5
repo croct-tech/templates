@@ -12,25 +12,66 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/stats-group/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/stats-group/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/stats-group/cover.png",
+    "installationUrl": "mantine://block/stats-group",
     "categories": [
-      "library/mantine"
+      "framework/nextjs",
+      "framework/react",
+      "interface/marketing",
+      "interface/section",
+      "language/javascript",
+      "language/typescript",
+      "library/mantine",
+      "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/material-ui/highlights-section"
     ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    }
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Mantine%20groupped%20stats%20section%20template."
+      "name": "import",
+      "template": "mantine://component/component",
+      "options": {
+        "id": "stats-group",
+        "type": "block",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "dependencies": [
+          "@croct/md-lite"
+        ],
+        "components": [
+          "StatsGroup/index.tsx"
+        ],
+        "utils": [],
+        "extension": "mantine://block/stats-group/extension.json5"
+      }
     }
   ]
 }

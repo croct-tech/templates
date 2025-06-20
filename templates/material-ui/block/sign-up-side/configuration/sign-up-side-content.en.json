@@ -1,0 +1,115 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "content": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "SettingsSuggested"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Adaptable performance"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Construction"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Built to last"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Experience unmatched durability that goes above and beyond with lasting investment."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "ThumbUp"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Great user experience"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Integrate our product into your routine with an intuitive and easy-to-use interface."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "icon": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "AutoFixHighRounded"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Innovative functionality"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Stay ahead with features that set new standards, addressing your evolving needs better than the rest."
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

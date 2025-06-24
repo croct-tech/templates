@@ -10,14 +10,14 @@
           "type": "reference",
           "properties": {}
         },
-        "minimumLength": 1,
-        "maximumLength": 5
+        "maximumLength": 5,
+        "minimumLength": 1
       },
       "label": "Images",
-      "description": "Images to display in the card.",
       "private": false,
       "optional": false,
-      "position": 0
+      "position": 0,
+      "description": "Images to display in the card."
     },
     "title": {
       "type": {
@@ -114,10 +114,10 @@
         }
       },
       "label": "Call to action",
+      "description": "The call to action for the product.",
       "private": false,
-      "optional": true,
-      "position": 5,
-      "description": "The call to action for the product."
+      "optional": false,
+      "position": 5
     }
   }
 }

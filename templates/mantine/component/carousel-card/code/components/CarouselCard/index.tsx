@@ -15,7 +15,7 @@ export type CarouselCardProps = {
     displayPrice: number,
     frequency: string,
   }
-  cta?: {
+  cta: {
     label: string,
     link: string
   }
@@ -76,9 +76,7 @@ export function CarouselCard(props: CarouselCardProps) {
           </Text>
         </div>
 
-        {cta && (
-          <Button radius="md" href={cta.link}>{cta.label}</Button>
-        )}
+        <Button radius="md" href={cta.link}>{cta.label}</Button>
       </Group>
     </Card>
   );

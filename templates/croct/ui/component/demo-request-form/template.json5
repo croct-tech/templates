@@ -21,7 +21,9 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/form/react-phone-number-input"
+      "interface/component/newsletter-form",
+      "interface/form/react-phone-number-input",
+      "library/mantine/email-banner"
     ]
   },
   "actions": [

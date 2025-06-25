@@ -22,7 +22,6 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/component/demo-request-form",
       "library/mantine/email-banner"
     ]
   },

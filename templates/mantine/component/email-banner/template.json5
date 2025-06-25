@@ -25,7 +25,6 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/component/demo-request-form",
       "interface/component/newsletter-form"
     ]
   },

@@ -1,0 +1,12 @@
+.wrapper {
+  padding: calc(var(--mantine-spacing-xl) * 2) var(--mantine-spacing-xl);
+}
+
+.title {
+  font-family: Outfit, var(--mantine-font-family);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: var(--mantine-spacing-md);
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+}

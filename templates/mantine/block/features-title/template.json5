@@ -1,32 +1,33 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Highlights section",
-  "description": "A highlights section using Material UI components and Croct.",
+  "title": "Features section with title",
+  "description": "A features section with title built with Mantine.",
   "metadata": {
-    "id": "library/material-ui/highlights-section",
+    "id": "library/mantine/features-title",
     "ecosystem": {
-      "name": "Material UI",
-      "avatarUrl": "https://github.com/mui.png",
-      "websiteUrl": "https://mui.com/?utm_source=croct"
+      "name": "Mantine",
+      "avatarUrl": "https://github.com/mantinedev.png",
+      "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/highlights-section/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/highlights-section/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/highlights-section/cover.png",
-    "installationUrl": "material-ui://block/highlights-section",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/cover.png",
+    "installationUrl": "mantine://block/features-title",
     "categories": [
       "framework/nextjs",
       "framework/react",
+      "interface/hero",
       "interface/marketing",
       "interface/section",
       "language/javascript",
       "language/typescript",
-      "library/material-ui",
+      "library/mantine",
       "use-case/saas"
     ],
     "relatedTemplates": [
       "interface/section/cards-section",
-      "library/mantine/features-title",
-      "library/material-ui/features-section"
+      "library/material-ui/features-section",
+      "library/material-ui/highlights-section"
     ]
   },
   "options": {
@@ -58,21 +59,22 @@
   "actions": [
     {
       "name": "import",
-      "template": "material-ui://block/block",
+      "template": "mantine://component/component",
       "options": {
-        "id": "highlights-section",
+        "id": "features-title",
         "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "dependencies": [
-          "@mui/icons-material"
+          "@tabler/icons-react",
+          "@croct/md-lite"
         ],
         "components": [
-          "HighlightsSection.tsx",
-          "HighlightsDemo.tsx"
+          "FeaturesTitle/index.tsx"
         ],
-        "extension": "material-ui://block/highlights-section/extension.json5"
+        "utils": [],
+        "extension": "mantine://block/features-title/extension.json5"
       }
     }
   ]

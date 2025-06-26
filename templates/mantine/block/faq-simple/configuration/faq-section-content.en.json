@@ -1,0 +1,113 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Frequently Asked Questions"
+      }
+    },
+    "questions": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "How can I reset my password?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Can I create more that one account?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "How can I subscribe to monthly newsletter?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Do you store credit card information securely?"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "answer": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth."
+              }
+            },
+            "question": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "What payment systems to you work with?"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

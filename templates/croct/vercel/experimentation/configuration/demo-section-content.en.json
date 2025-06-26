@@ -1,0 +1,104 @@
+{
+  "type": "structure",
+  "attributes": {
+    "note": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Click the button below if you want to change the current variant (each variant has a 50% chance)."
+      }
+    },
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png"
+      }
+    },
+    "topics": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Variant A"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Original content with an image indicating variant A."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Variant B"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Alternate content with an image indicating variant B."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "AB testing with Croct"
+      }
+    },
+    "preTitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Headless experimentation"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "This page will each render a different version with a 50% chance:"
+      }
+    },
+    "additionalInfo": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "You can manage your experiment content or configuration and analyze results using Croct's platform."
+      }
+    },
+    "primaryCtaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Track conversion"
+      }
+    },
+    "secondaryCtaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Reset"
+      }
+    }
+  }
+}

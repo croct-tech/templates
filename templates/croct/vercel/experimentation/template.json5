@@ -1,0 +1,267 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Vercel template",
+  "description": "pending",
+  "metadata": {
+    "id": "boilerplate/starter/vercel-ab-testing",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/vercel/experimentation/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/vercel/experimentation.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/vercel/experimentation/cover.png",
+    "installationUrl": "croct://vercel/experimentation",
+    "categories": [
+      "boilerplate/starter"
+    ]
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${!['nextjs', 'react', 'unknown'].includes(project.platform)}",
+      "then": [
+        {
+          "name": "fail",
+          "title": "Project not found",
+          "message": "This template can only be used in a React project.",
+          "suggestions": [
+            "Navigate to the project directory and try again."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "import",
+      "template": "croct://starter/croct",
+      "options": {
+        "name": "croct-template",
+        "version": "latest",
+        "defaultHomepage": true,
+        "disableLauncher": true
+      }
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "tailwindcss"
+        }
+      ],
+      "result": {
+        "tailwindcss": "isTailwindcssInstalled"
+      }
+    },
+    {
+      "name": "test",
+      "condition": "${!this.isTailwindcssInstalled}",
+      "then": [
+        {
+          "name": "fail",
+          "message": "Tailwind CSS is not installed.",
+          "links": [
+            {
+              "label": "Install Tailwind CSS",
+              "url": "https://tailwindcss.com/docs/installation?utm_source=croct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": "${['@croct/template-ui', '@heroicons/react', '@headlessui/react']}"
+    },
+    {
+      "name": "check-dependency",
+      "dependencies": [
+        {
+          "name": "typescript"
+        }
+      ],
+      "result": {
+        "typescript": "isTypescript"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleDirectory": "${project.path.examples}/experiment",
+        "codeExtension": "${this.isTypescript ? '.tsx' : '.jsx'}",
+        "pageBaseName": "${{nextjs: project.path.examples.endsWith('app') ? 'page' : 'index', react: 'page'}[project.platform]}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "examplePath": "${this.exampleDirectory}/${this.pageBaseName}${this.codeExtension}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "componentIndex": 0,
+        "utilityIndex": 0
+      }
+    },
+    {
+      "name": "download",
+      "source": "./code/utils/markdown.tsx",
+      "destination": "${project.path.utilities}",
+      "mapping": {
+        "markdown.tsx": "markdown${/x$/.test(this.codeExtension) ? this.codeExtension : this.codeExtension.slice(0, -1)}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "./code/components/demo-section.tsx",
+      "destination": "${project.path.components}",
+      "mapping": {
+        "demo-section.tsx": "demo-section${this.codeExtension}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "exampleSourceFile": "${this.pageBaseName}.tsx",
+        "exampleFile": "${this.pageBaseName}${this.codeExtension}"
+      }
+    },
+    {
+      "name": "download",
+      "source": "./code/page.tsx",
+      "destination": "${this.exampleDirectory}",
+      "mapping": {
+        "page.tsx": "${this.exampleFile}"
+      }
+    },
+    {
+      "name": "define",
+      "variables": {
+        "slotId": "",
+        "slotVersion": ""
+      }
+    },
+
+
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "content-section": {
+            "name": "Content section",
+            "description": "A section with content, bullets, CTA, and image.",
+            "schema": "${import('./configuration/content-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "demo-section": {
+            "name": "Demo section",
+            "component": "content-section",
+            "content": {
+              "en": "${import('./configuration/demo-section-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "demo-section": {
+            "id": "slotId",
+            "version": "slotVersion"
+          }
+        }
+      }
+    },
+
+
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.exampleDirectory}/${this.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this.slotId}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this.slotVersion}"
+            }
+          ]
+        }
+      ]
+    },
+
+
+
+
+
+
+    {
+      "name": "test",
+      "condition": "${this.slotId !== '' && this.slotVersion !== ''}",
+      "then": [
+        {
+          "name": "add-slot",
+          "slots": [
+            "${this.slotId}@${this.slotVersion}"
+          ]
+        },
+        {
+          "name": "replace-file-content",
+          "files": [
+            {
+              "path": "${this.examplePath}",
+              "replacements": [
+                {
+                  "pattern": "%slotId%",
+                  "value": "${this.slotId}"
+                },
+                {
+                  "pattern": "%slotVersion%",
+                  "value": "${this.slotVersion}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${this.examplePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Component successfully imported at `${this.exampleDirectory}/${this.exampleFile}`."
+    },
+    {
+      "name": "test",
+      "condition": "${project.platform === 'nextjs'}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher",
+          "options": {
+            "path": "experiment"
+          }
+        }
+      ]
+    }
+  ]
+}

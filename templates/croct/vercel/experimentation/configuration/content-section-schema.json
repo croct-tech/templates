@@ -1,0 +1,132 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "preTitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Pre-title",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The pre-title of the section."
+    },
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The main heading of the section."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The description of the section."
+    },
+    "topics": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 0
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 1
+            }
+          }
+        }
+      },
+      "label": "Topics",
+      "private": false,
+      "optional": true,
+      "position": 3,
+      "description": "A list of topics"
+    },
+    "note": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Note",
+      "private": false,
+      "optional": true,
+      "position": 4,
+      "description": "A simple note. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
+    },
+    "primaryCtaLabel": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Primary CTA label",
+      "private": false,
+      "optional": false,
+      "position": 5,
+      "description": "The primary CTA label."
+    },
+    "secondaryCtaLabel": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Secondary CTA label",
+      "private": false,
+      "optional": false,
+      "position": 6,
+      "description": "The secondary CTA label."
+    },
+    "additionalInfo": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Additional info",
+      "private": false,
+      "optional": true,
+      "position": 7,
+      "description": "Small text below the CTA. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
+    },
+    "image": {
+      "type": {
+        "id": "@croct/file",
+        "type": "reference",
+        "properties": {}
+      },
+      "label": "Image",
+      "private": false,
+      "optional": false,
+      "position": 8,
+      "description": "The image of the section."
+    }
+  }
+}

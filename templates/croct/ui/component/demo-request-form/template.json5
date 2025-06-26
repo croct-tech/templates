@@ -22,6 +22,7 @@
     ],
     "relatedTemplates": [
       "interface/form/react-phone-number-input",
+      "library/material-ui/sign-up-form",
       "library/material-ui/sign-up-side"
     ]
   },

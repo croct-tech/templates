@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "email": {
+      "type": "structure",
+      "attributes": {
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Email"
+          }
+        },
+        "placeholder": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "your@email.com"
+          }
+        }
+      }
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Sign up"
+      }
+    },
+    "ctaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Sign up"
+      }
+    },
+    "password": {
+      "type": "structure",
+      "attributes": {
+        "label": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Password"
+          }
+        },
+        "placeholder": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Create a password"
+          }
+        }
+      }
+    }
+  }
+}

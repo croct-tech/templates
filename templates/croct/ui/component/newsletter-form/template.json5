@@ -20,6 +20,9 @@
       "interface/marketing",
       "use-case/e-commerce",
       "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "library/mantine/email-banner"
     ]
   },
   "actions": [

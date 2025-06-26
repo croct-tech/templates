@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Email banner customization",
+  "description": "A customization template for the email banner component.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "mantine-email-banner": {
+            "name": "Mantine - Email banner",
+            "description": "A banner component that drives email subscriptions from users",
+            "schema": "${import('./configuration/email-banner-schema.json')}"
+          }
+        },
+        "slots": {
+          "mantine-email-banner": {
+            "name": "Mantine - Email banner",
+            "component": "mantine-email-banner",
+            "content": {
+              "en": "${import('./configuration/email-banner-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "mantine-email-banner": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

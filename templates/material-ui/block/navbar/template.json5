@@ -25,7 +25,8 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/component/navbar"
+      "interface/component/navbar",
+      "library/mantine/header-simple"
     ]
   },
   "options": {

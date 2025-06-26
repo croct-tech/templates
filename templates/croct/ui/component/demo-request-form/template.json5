@@ -21,7 +21,8 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/form/react-phone-number-input"
+      "interface/form/react-phone-number-input",
+      "library/material-ui/sign-up-side"
     ]
   },
   "actions": [

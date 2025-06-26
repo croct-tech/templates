@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Features section customization",
+  "description": "A customization template for the features section block.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "mantine-features-cards": {
+            "name": "Mantine - Features cards",
+            "description": "The big section featured at the top of a page with optional bullets",
+            "schema": "${import('./configuration/features-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "mantine-features-cards": {
+            "name": "Mantine - Features cards",
+            "component": "mantine-features-cards",
+            "content": {
+              "en": "${import('./configuration/features-section-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "mantine-features-cards": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "%slotId%",
+              "value": "${this[options.slotId]}"
+            },
+            {
+              "pattern": "%slotVersion%",
+              "value": "${this[options.slotVersion]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

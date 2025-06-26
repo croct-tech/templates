@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Strapi AB testing customization",
+  "description": "A customization template for the Strapi AB testing template.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "pagePath": {
+      "type": "string",
+      "description": "The path to the page where the slot is used."
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "all-users": {
+            "name": "All users",
+            "criteria": "true"
+          }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Experiment for all users",
+            "draft": true,
+            "audiences": [
+              "all-users"
+            ],
+            "slots": [
+              "${this[options.slotId]}"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Headline copy",
+              "goalId": "sign-up",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Launch your content",
+                  "content": {
+                    "default": {
+                      "${this[options.slotId]}": {
+                        "en": "${import('croct://integration/strapi/configuration/home-hero-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Integrate AB testing",
+                  "content": {
+                    "default": {
+                      "${this[options.slotId]}": {
+                        "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "result": {
+        "experiences": {
+          "0": "experienceId"
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.pagePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%/slots/edit/%heroSlotId%/%heroSlotVersion%",
+              "value": "%workspaceUrl%/experiences/%experienceId%/edit"
+            },
+            {
+              "pattern": "%experienceId%",
+              "value": "${this.experienceId}"
+            },
+            {
+              "pattern": "Edit this page",
+              "value": "Manage experiment"
+            },
+            {
+              "pattern": "utm_content=strapi",
+              "value": "utm_content=strapi-ab-testing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

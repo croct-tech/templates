@@ -13,6 +13,7 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/cover.png",
+    "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/cover.mp4",
     "installationUrl": "croct://location/geomarketing",
     "categories": [
       "framework/nextjs",

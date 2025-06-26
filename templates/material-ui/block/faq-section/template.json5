@@ -24,7 +24,8 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/section/faq-section"
+      "interface/section/faq-section",
+      "library/mantine/faq-simple"
     ]
   },
   "options": {
@@ -59,6 +60,7 @@
       "template": "material-ui://block/block",
       "options": {
         "id": "faq-section",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
@@ -66,8 +68,8 @@
           "@mui/icons-material"
         ],
         "components": [
-          "faq-section.tsx",
-          "faq-demo.tsx"
+          "FaqSection.tsx",
+          "FaqDemo.tsx"
         ],
         "utils": [
           "markdown.tsx"

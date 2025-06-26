@@ -64,7 +64,7 @@ export default async function Page() {
               <div className="flex items-center flex-col gap-4">
                 <GetStartedCode command={content.command}/>
                 <Link
-                  href="https://docs.croct.com/reference/sdk/nextjs/installation?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=sanity"
+                  href="https://docs.croct.com/reference/sdk/nextjs/integration?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=sanity"
                   className="inline-flex text-brand text-xs md:text-sm underline hover:text-gray-900"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -26,6 +26,7 @@
     ],
     "relatedTemplates": [
       "interface/section/cards-section",
+      "library/mantine/features-cards",
       "library/material-ui/features-section",
       "library/material-ui/highlights-section"
     ]

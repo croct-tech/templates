@@ -1,5 +1,6 @@
 .wrapper {
   padding: calc(var(--mantine-spacing-xl) * 2) var(--mantine-spacing-xl);
+  max-width: 1440px;
 }
 
 .title {

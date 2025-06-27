@@ -21,6 +21,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
+      "library/mantine/faq-simple",
       "library/material-ui/faq-section"
     ]
   },

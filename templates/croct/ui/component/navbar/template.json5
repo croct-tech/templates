@@ -22,6 +22,7 @@
       "use-case/saas"
     ],
     "relatedTemplates": [
+      "library/mantine/header-simple",
       "library/material-ui/navbar"
     ]
   },

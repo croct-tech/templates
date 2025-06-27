@@ -1,0 +1,96 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The title of the form."
+    },
+    "email": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "private": false,
+            "optional": false,
+            "position": 0,
+            "description": "The label of the field."
+          },
+          "placeholder": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Placeholder",
+            "private": false,
+            "optional": false,
+            "position": 1,
+            "description": "The placeholder of the field."
+          }
+        }
+      },
+      "label": "Email",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The email field."
+    },
+    "password": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "private": false,
+            "optional": false,
+            "position": 0,
+            "description": "The label of the field."
+          },
+          "placeholder": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Placeholder",
+            "private": false,
+            "optional": false,
+            "position": 1,
+            "description": "The placeholder of the field."
+          }
+        }
+      },
+      "label": "Password",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The password field."
+    },
+    "ctaLabel": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "CTA label",
+      "private": false,
+      "optional": false,
+      "position": 3,
+      "description": "The label of the CTA."
+    }
+  }
+}

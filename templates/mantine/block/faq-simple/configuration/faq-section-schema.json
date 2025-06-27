@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Title",
+      "private": false,
+      "optional": false,
+      "position": 0,
+      "description": "The title of the section."
+    },
+    "questions": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "question": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Question",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The question in first person."
+            },
+            "answer": {
+              "type": {
+                "type": "text",
+                "format": "multiline",
+                "minimumLength": 1
+              },
+              "label": "Answer",
+              "private": false,
+              "optional": false,
+              "position": 1,
+              "description": "The answer to the question. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
+            }
+          }
+        },
+        "minimumLength": 3,
+        "maximumLength": 6
+      },
+      "label": "Questions",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The list of questions and answers."
+    }
+  }
+}

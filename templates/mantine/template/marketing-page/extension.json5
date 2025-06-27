@@ -1,0 +1,321 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Marketing page customization",
+  "description": "A customization template for the marketing page template.",
+  "options": {
+    "exampleDirectory": {
+      "type": "string",
+      "description": "The path to the example directory.",
+      "required": true
+    },
+    "exampleFile": {
+      "type": "string",
+      "description": "The name of the example file.",
+      "required": true
+    },
+    "reactExtension": {
+      "type": "string",
+      "description": "The file extension for React files.",
+      "required": true
+    },
+    "codeExtension": {
+      "type": "string",
+      "description": "The file extension for the code files.",
+      "required": true
+    },
+    "slots": {
+      "type": "array",
+      "description": "The list of slots to use in the page.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "define",
+      "variables": {
+        "headerSlotId": "",
+        "headerSlotVersion": "",
+        "heroSlotId": "",
+        "heroSlotVersion": "",
+        "featuresCardsSlotId": "",
+        "featuresCardsSlotVersion": "",
+        "featuresTitleSlotId": "",
+        "featuresTitleSlotVersion": "",
+        "statsSlotId": "",
+        "statsSlotVersion": "",
+        "components": {},
+        "slots": {},
+        "fetchCalls": []
+      }
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('header')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Mantine - Simple header",
+              "description": "The navbar section at the top of a page",
+              "schema": "${import('mantine://component/header-simple/configuration/header-simple-schema.json')}"
+            },
+            "slot": {
+              "name": "Mantine - Simple header",
+              "component": "mantine-header-simple",
+              "content": {
+                "en": "${import('mantine://component/header-simple/configuration/header-simple-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'mantine-header-simple': this.component}}",
+            "slots": "${{...this.slots, 'mantine-home-header': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%headerSlotId%@%headerSlotVersion%\\').then(({content}) => [\\'header\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('hero-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Mantine - Hero section",
+              "description": "The big section featured at the top of a page with optional bullets",
+              "schema": "${import('mantine://block/hero-bullets/configuration/hero-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Mantine - Home hero",
+              "component": "mantine-hero-section",
+              "content": {
+                "en": "${import(''mantine://block/hero-bullets/configuration/hero-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'mantine-hero-section': this.component}}",
+            "slots": "${{...this.slots, 'mantine-home-hero': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%heroSlotId%@%heroSlotVersion%\\').then(({content}) => [\\'hero\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('features-cards-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Mantine - Features cards section",
+              "description": "A section of features.",
+              "schema": "${import('mantine://block/features-cards/configuration/features-section-schema.json')}"
+            },
+            "slot": {
+              "name": "Mantine - Features cards section",
+              "component": "mantine-features-cards-section",
+              "content": {
+                "en": "${import('mantine://block/features-cards/configuration/features-section-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'mantine-features-cards-section': this.component}}",
+            "slots": "${{...this.slots, 'mantine-home-features-cards': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%featuresCardsSlotId%@%featuresCardsSlotVersion%\\').then(({content}) => [\\'featuresCards\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('features-title-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Mantine - Features with title",
+              "description": "A section of features with title",
+              "schema": "${import('mantine://block/features-title/configuration/features-title-schema.json')}"
+            },
+            "slot": {
+              "name": "Material UI - Home highlights",
+              "component": "mantine-features-title-section",
+              "content": {
+                "en": "${import('mantine://block/features-title/configuration/features-title-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'mantine-features-title-section': this.component}}",
+            "slots": "${{...this.slots, 'mantine-home-features-title': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%featuresTitleSlotId%@%featuresTitleSlotVersion%\\').then(({content}) => [\\'featuresTitle\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "condition": "${options.slots.includes('stats-group-section')}",
+      "then": [
+        {
+          "name": "define",
+          "variables": {
+            "component": {
+              "name": "Mantine - Stats section",
+              "description": "A statistic section component",
+              "schema": "${import('mantine://block/stats-group/configuration/stats-group-schema.json')}"
+            },
+            "slot": {
+              "name": "Mantine - Stats section",
+              "component": "mantine-stats-group",
+              "content": {
+                "en": "${import('mantine://block/stats-group/configuration/stats-group-content.en.json')}"
+              }
+            }
+          }
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${{...this.components, 'mantine-stats-group': this.component}}",
+            "slots": "${{...this.slots, 'mantine-home-stats': this.slot}}",
+            "fetchCalls": "${[...this.fetchCalls, 'fetchContent(\\'%statsSlotId%@%statsSlotVersion%\\').then(({content}) => [\\'stats\\', content])']}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": "${this.components}",
+        "slots": "${this.slots}"
+      },
+      "result": {
+        "slots": {
+          "mantine-home-header": {
+            "id": "headerSlotId",
+            "version": "headerSlotVersion"
+          },
+          "mantine-home-hero": {
+            "id": "heroSlotId",
+            "version": "heroSlotVersion"
+          },
+          "mantine-home-features-cards": {
+            "id": "featuresCardsSlotId",
+            "version": "featuresCardsSlotVersion"
+          },
+          "mantine-home-features-title": {
+            "id": "featuresTitleSlotId",
+            "version": "featuresTitleSlotVersion"
+          },
+          "mantine-home-stats": {
+            "id": "statsSlotId",
+            "version": "statsSlotVersion"
+          }
+        }
+      }
+    },
+    {
+      "name": "add-slot",
+      "slots": "${[...(this.headerSlotId ? [this.headerSlotId] : []), ...(this.heroSlotId ? [this.heroSlotId] : []), ...(this.featuresCardsSlotId ? [this.featuresCardsSlotId] : []), ...(this.featuresTitleSlotId ? [this.featuresTitleSlotId] : []), ...(this.statsSlotId ? [this.statsSlotId] : [])]}"
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "// %fetchCalls%",
+              "value": "${this.fetchCalls.join(',\n          ')}"
+            }
+          ]
+        },
+        {
+          "path": "${options.exampleDirectory}/${options.exampleFile}",
+          "replacements": [
+            {
+              "pattern": "(\\s*)/\\*header\\*/(.+?)/\\*header\\*/(\\s*,)",
+              "value": "${this.headerSlotId ? '$1$2$3' : ''}"
+            },
+            {
+              "pattern": "%headerSlotId%",
+              "value": "${this.headerSlotId}"
+            },
+            {
+              "pattern": "%headerSlotVersion%",
+              "value": "${this.headerSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*hero\\*/(.+?)/\\*hero\\*/(\\s*,)",
+              "value": "${this.heroSlotId ? '$1$2$3' : ''}"
+            },
+            {
+              "pattern": "%heroSlotId%",
+              "value": "${this.heroSlotId}"
+            },
+            {
+              "pattern": "%heroSlotVersion%",
+              "value": "${this.heroSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*featuresCards\\*/(.+?)/\\*featuresCards\\*/(\\s*,)",
+              "value": "${this.featuresCardsSlotId ? '$1$2$3' : ''}"
+            },
+            {
+              "pattern": "%featuresCardsSlotId%",
+              "value": "${this.featuresCardsSlotId}"
+            },
+            {
+              "pattern": "%featuresCardsSlotVersion%",
+              "value": "${this.featuresCardsSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*featuresTitle\\*/(.+?)/\\*featuresTitle\\*/(\\s*,)",
+              "value": "${this.featuresTitleSlotId ? '$1$2$3' : ''}"
+            },
+            {
+              "pattern": "%featuresTitleSlotId%",
+              "value": "${this.featuresTitleSlotId}"
+            },
+            {
+              "pattern": "%featuresTitleSlotVersion%",
+              "value": "${this.featuresTitleSlotVersion}"
+            },
+            {
+              "pattern": "(\\s*)/\\*stats\\*/(.+?)/\\*stats\\*/(\\s*,)",
+              "value": "${this.statsSlotId ? '$1$2$3' : ''}"
+            },
+            {
+              "pattern": "%statsSlotId%",
+              "value": "${this.statsSlotId}"
+            },
+            {
+              "pattern": "%statsSlotVersion%",
+              "value": "${this.statsSlotVersion}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

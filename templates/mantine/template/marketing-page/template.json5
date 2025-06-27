@@ -1,0 +1,174 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Marketing page template",
+  "description": "A marketing page template using Mantine and Croct.",
+  "metadata": {
+    "id": "library/mantine/marketing-page",
+    "ecosystem": {
+      "name": "Mantine",
+      "avatarUrl": "https://github.com/mantinedev.png",
+      "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/template/marketing-page/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/template/marketing-page/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/template/marketing-page/cover.png",
+    "installationUrl": "mantine://template/marketing-page",
+    "categories": [
+      "framework/nextjs",
+      "framework/react",
+      "interface/marketing",
+      "language/javascript",
+      "language/typescript",
+      "library/mantine",
+      "use-case/saas"
+    ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    },
+    "slots": {
+      "type": "array",
+      "description": "The slots to use.",
+      "default": []
+    }
+  },
+  "actions": [
+    {
+      "name": "define",
+      "variables": {
+        "slots": "${options.slots}",
+        "components": [],
+        "availableSlots": [
+          "header",
+          "hero-section",
+          "features-cards-section",
+          "features-title-section",
+          "stats-group-section"
+        ]
+      }
+    },
+    {
+      "name": "test",
+      "condition": "${this.slots.length === 0}",
+      "then": [
+        {
+          "name": "prompt",
+          "message": "Which slots would you like to include in the marketing page?",
+          "type": "multi-choice",
+          "min": 1,
+          "options": [
+            {
+              "label": "Header",
+              "value": "header"
+            },
+            {
+              "label": "Hero section",
+              "value": "hero-section",
+              "selected": true
+            },
+            {
+              "label": "Features cards section",
+              "value": "features-cards-section",
+              "selected": true
+            },
+            {
+              "label": "Features title section",
+              "value": "features-title-section"
+            },
+            {
+              "label": "Stats group section",
+              "value": "stats-group-section"
+            }
+          ],
+          "result": "slots"
+        }
+      ]
+    },
+    {
+      "name": "define",
+      "variables": {
+        "componentIndex": 0
+      }
+    },
+    {
+      "name": "repeat",
+      "condition": "${this.componentIndex < this.slots.length}",
+      "actions": [
+        {
+          "name": "define",
+          "variables": {
+            "slot": "${this.slots[this.componentIndex]}"
+          }
+        },
+        {
+          "name": "test",
+          "condition": "${!this.availableSlots.includes(this.slot)}",
+          "then": [
+            {
+              "name": "fail",
+              "message": "The slot '${this.slot}' specified in `slots` option is not available."
+            }
+          ]
+        },
+        {
+          "name": "define",
+          "variables": {
+            "components": "${[...this.components, 'material-ui://block/' + this.slot + '/code/components/' + this.slot + '.tsx']}",
+            "componentIndex": "${this.componentIndex + 1}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "import",
+      "template": "material-ui://block/block",
+      "options": {
+        "id": "marketing-page",
+        "type": "template",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "dependencies": [
+          "@tabler/icons-react",
+          "@mantinex/mantine-logo"
+        ],
+        "components": [
+          "mantine://component/header-simple/code/components/HeaderSimple/index.tsx",
+          "mantine://block/hero-bullets/code/components/HeroBullets/index.tsx",
+          "mantine://block/features-cards/code/components/FeaturesCards/index.tsx",
+          "mantine://block/features-title/code/components/FeaturesTitle/index.tsx",
+          "mantine://block/stats-group/code/components/StatsGroup/index.tsx",
+          "Footer/index.tsx",
+          "MarketingPage/index.tsx"
+        ],
+        "utils": [
+          "markdown.tsx"
+        ],
+        "extension": "mantine://template/marketing-page/extension.json5",
+        "slots": "${this.slots}"
+      }
+    }
+  ]
+}

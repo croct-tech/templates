@@ -5,19 +5,38 @@
       "type": "text",
       "value": {
         "type": "static",
-        "value": "Click the button below if you want to change the current variant (each variant has a 50% chance)."
+        "value": "Click the button to reset the test or change the current variant (40% of chance of seeing the default content, 30% chance for variant A, and 30% chance for variant B)."
       }
     },
     "image": {
       "type": "text",
       "value": {
         "type": "static",
-        "value": "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png"
+        "value": "https://cdn.croct.io/workspace/customer-assets/6450780c-6a7e-4ef9-8289-a466bcc3ba58/8296b7ef-53ef-43c1-a294-55f41d1b027a"
       }
     },
     "topics": {
       "type": "list",
       "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Default"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Original content."
+              }
+            }
+          }
+        },
         {
           "type": "structure",
           "attributes": {
@@ -32,7 +51,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "Original content with an image indicating variant A."
+                "value": "Alternate content with an image indicating variant A."
               }
             }
           }
@@ -51,7 +70,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "Alternate content with an image indicating variant B."
+                "value": "Alternate content with an image indicating variant B. \uD83D\uDC48"
               }
             }
           }
@@ -76,14 +95,7 @@
       "type": "text",
       "value": {
         "type": "static",
-        "value": "This page will each render a different version with a 50% chance:"
-      }
-    },
-    "additionalInfo": {
-      "type": "text",
-      "value": {
-        "type": "static",
-        "value": "You can manage your experiment content or configuration and analyze results using Croct's platform."
+        "value": "This page will each render a different version for 60%, each with a 50% chance:"
       }
     },
     "primaryCtaLabel": {

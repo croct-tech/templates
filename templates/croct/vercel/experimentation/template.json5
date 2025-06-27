@@ -72,7 +72,7 @@
     },
     {
       "name": "add-dependency",
-      "dependencies": "${['@croct/template-ui', '@heroicons/react', '@headlessui/react']}"
+      "dependencies": "${['@croct/md-lite', '@heroicons/react', '@headlessui/react']}"
     },
     {
       "name": "check-dependency",
@@ -108,14 +108,6 @@
     },
     {
       "name": "download",
-      "source": "./code/utils/markdown.tsx",
-      "destination": "${project.path.utilities}",
-      "mapping": {
-        "markdown.tsx": "markdown${/x$/.test(this.codeExtension) ? this.codeExtension : this.codeExtension.slice(0, -1)}"
-      }
-    },
-    {
-      "name": "download",
       "source": "./code/components/demo-section.tsx",
       "destination": "${project.path.components}",
       "mapping": {
@@ -144,11 +136,15 @@
         "slotVersion": ""
       }
     },
-
-
     {
       "name": "create-resource",
       "resources": {
+        "audiences": {
+          "all-users": {
+            "name": "All users",
+            "criteria": "true"
+          }
+        },
         "components": {
           "content-section": {
             "name": "Content section",
@@ -161,10 +157,57 @@
             "name": "Demo section",
             "component": "content-section",
             "content": {
-              "en": "${import('./configuration/demo-section-content.en.json')}"
+              "en": "${import('./configuration/demo-section-default-content.en.json')}"
             }
           }
-        }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Experiment for all users",
+            "draft": true,
+            "audiences": [
+              "all-users"
+            ],
+            "slots": [
+              "demo-section"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Demo content",
+              "goalId": "cta-click",
+              "crossDevice": false,
+              "traffic": 0.6,
+              "variants": [
+                {
+                  "name": "Variant A",
+                  "content": {
+                    "default": {
+                      "demo-section": {
+                        "en": "${import('./configuration/demo-section-variant-a-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Variant B",
+                  "content": {
+                    "default": {
+                      "demo-section": {
+                        "en": "${import('./configuration/demo-section-variant-b-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
       },
       "result": {
         "slots": {
@@ -172,11 +215,12 @@
             "id": "slotId",
             "version": "slotVersion"
           }
+        },
+        "experiences": {
+          "0": "experienceId"
         }
       }
     },
-
-
     {
       "name": "replace-file-content",
       "files": [
@@ -190,17 +234,19 @@
             {
               "pattern": "%slotVersion%",
               "value": "${this.slotVersion}"
+            },
+            {
+              "pattern": "%experienceId%",
+              "value": "${this.experienceId}"
+            },
+            {
+              "pattern": "%workspaceUrl%",
+              "value": "${project.workspace.url}"
             }
           ]
         }
       ]
     },
-
-
-
-
-
-
     {
       "name": "test",
       "condition": "${this.slotId !== '' && this.slotVersion !== ''}",

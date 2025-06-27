@@ -104,18 +104,6 @@
       "position": 6,
       "description": "The secondary CTA label."
     },
-    "additionalInfo": {
-      "type": {
-        "type": "text",
-        "format": "multiline",
-        "minimumLength": 1
-      },
-      "label": "Additional info",
-      "private": false,
-      "optional": true,
-      "position": 7,
-      "description": "Small text below the CTA. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
-    },
     "image": {
       "type": {
         "id": "@croct/file",

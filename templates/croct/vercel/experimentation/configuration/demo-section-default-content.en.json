@@ -1,0 +1,116 @@
+{
+  "type": "structure",
+  "attributes": {
+    "note": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Click the button to reset the test or change the current variant (40% of chance of seeing the default content, 30% chance for variant A, and 30% chance for variant B)."
+      }
+    },
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/6450780c-6a7e-4ef9-8289-a466bcc3ba58/668b3411-b85b-4cb4-8a99-17bc14ed0c8b"
+      }
+    },
+    "topics": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Default"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Original content. \uD83D\uDC48"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Variant A"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Alternate content with an image indicating variant A."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Variant B"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Alternate content with an image indicating variant B."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "AB testing with Croct"
+      }
+    },
+    "preTitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Headless experimentation"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "This page will each render a different version for 60%, each with a 50% chance:"
+      }
+    },
+    "primaryCtaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Track conversion"
+      }
+    },
+    "secondaryCtaLabel": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Reset"
+      }
+    }
+  }
+}

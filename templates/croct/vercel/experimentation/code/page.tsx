@@ -6,8 +6,8 @@ export default async function Page() {
   const {content} = await fetchContent('%slotId%@%slotVersion%');
 
   return (
-    <div className="p-10">
+    <>
       <DemoSection {...content} />
-    </div>
+    </>
   );
 }

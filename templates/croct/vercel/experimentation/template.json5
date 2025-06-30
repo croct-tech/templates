@@ -164,7 +164,6 @@
         "experiences": [
           {
             "name": "🧪 Experiment for all users",
-            "draft": true,
             "audiences": [
               "all-users"
             ],
@@ -185,7 +184,7 @@
                   "content": {
                     "default": {
                       "demo-section": {
-                        "en": "${import('./configuration/demo-section-variant-a-content.en.json')}"
+                        "en": "${import('./configuration/demo-section-default-content.en.json')}"
                       }
                     }
                   },
@@ -197,7 +196,7 @@
                   "content": {
                     "default": {
                       "demo-section": {
-                        "en": "${import('./configuration/demo-section-variant-b-content.en.json')}"
+                        "en": "${import('./configuration/demo-section-variant-content.en.json')}"
                       }
                     }
                   },

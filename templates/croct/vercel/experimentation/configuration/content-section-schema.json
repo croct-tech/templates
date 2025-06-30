@@ -71,50 +71,39 @@
       "position": 3,
       "description": "A list of topics"
     },
-    "note": {
+    "button": {
       "type": {
-        "type": "text",
-        "format": "multiline",
-        "minimumLength": 1
+        "type": "structure",
+        "attributes": {
+          "label": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Label",
+            "description": "The label of the button.",
+            "private": false,
+            "optional": false,
+            "position": 0
+          },
+          "color": {
+            "type": {
+              "type": "text",
+              "format": "color"
+            },
+            "label": "Color",
+            "description": "The background color of the button.",
+            "private": false,
+            "optional": false,
+            "position": 1
+          }
+        }
       },
-      "label": "Note",
-      "private": false,
-      "optional": true,
-      "position": 4,
-      "description": "A simple note. It supports basic markdown formatting, like **bold**, *italic*, and [links](https://example.com)."
-    },
-    "primaryCtaLabel": {
-      "type": {
-        "type": "text",
-        "minimumLength": 1
-      },
-      "label": "Primary CTA label",
-      "private": false,
-      "optional": false,
-      "position": 5,
-      "description": "The primary CTA label."
-    },
-    "secondaryCtaLabel": {
-      "type": {
-        "type": "text"
-      },
-      "label": "Secondary CTA label",
-      "private": false,
-      "optional": false,
-      "position": 6,
-      "description": "The secondary CTA label."
-    },
-    "image": {
-      "type": {
-        "id": "@croct/file",
-        "type": "reference",
-        "properties": {}
-      },
-      "label": "Image",
+      "label": "Button",
+      "description": "The button on the right side.",
       "private": false,
       "optional": false,
-      "position": 8,
-      "description": "The image of the section."
+      "position": 4
     }
   }
 }

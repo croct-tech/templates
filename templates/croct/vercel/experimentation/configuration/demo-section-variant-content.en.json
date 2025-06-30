@@ -9,14 +9,14 @@
           "type": "text",
           "value": {
             "type": "static",
-            "value": "#4f39f6"
+            "value": "#00a63e"
           }
         },
         "label": {
           "type": "text",
           "value": {
             "type": "static",
-            "value": "Track conversion"
+            "value": "Click me"
           }
         }
       }
@@ -38,7 +38,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "Original content and experiment baseline. 👈"
+                "value": "Original content and experiment baseline."
               }
             }
           }
@@ -57,7 +57,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "Alternate content different button label and color."
+                "value": "Alternate content different button label and color. 👈"
               }
             }
           }

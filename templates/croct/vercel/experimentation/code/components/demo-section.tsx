@@ -11,25 +11,21 @@ type DemoSectionProps = {
     title: string,
     description: string,
   }[],
-  primaryCtaLabel: string,
-  secondaryCtaLabel: string,
-  note?: string
-  image: string
+  button: {
+    label: string,
+    color: string
+  }
 }
 
 const reset = async () => {
-  console.log("clear cid and reload");
-};
-
-const track = async () => {
-  console.log("track conversion");
-
-  const croct = useCroct();
-  await croct.track('goalCompleted', {goalId: 'cta-click'});
+  document.cookie = "ct.client_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  location.reload();
 };
 
 export function DemoSection(props: DemoSectionProps) {
-  const {preTitle, heading, description, topics, primaryCtaLabel, secondaryCtaLabel, note, image} = props
+  const {preTitle, heading, description, topics, button} = props
+  const croct = useCroct();
+  const track = () => croct.track('goalCompleted', {goalId: 'cta-click'});
 
   return (
     <div className="bg-white">
@@ -64,37 +60,35 @@ export function DemoSection(props: DemoSectionProps) {
                   </dl>
                 )}
                 <p className="mt-6 text-lg/8 text-gray-700">
-                  {note}
+                  Click the button below to change the current variant (each variant has a 50% chance).
                 </p>
                 <div className="mt-8 flex items-center gap-x-6">
-                  <button
-                    type="button"
-                    onClick={track}
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    {primaryCtaLabel}
-                  </button>
                   <button
                     type="button"
                     onClick={reset}
                     className="rounded-md bg-indigo-50 px-3.5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100"
                   >
-                    {secondaryCtaLabel}
+                    Reset and resort experiment
                   </button>
                 </div>
                 <p className="mt-6 text-base/7 text-gray-500">
-                  You can manage your experiment content or configuration and analyze results <a href="%workspaceUrl%/experiences/%experienceId%/edit?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.vercel_experiment" class="font-normal text-indigo-600 underline dark:text-indigo-600 hover:no-underline">here</a>.
+                  You can manage your experiment content and analyze results <a
+                  href="https://app.croct.com/redirect/organizations/-organization-/workspaces/-workspace-/experiences?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.vercel_experiment"
+                  className="font-normal text-indigo-600 underline dark:text-indigo-600 hover:no-underline" target="_blank">here</a>.
                 </p>
               </div>
             </div>
 
-            <img
-              alt="Image"
-              src={image}
-              width={2432}
-              height={1442}
-              className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-            />
+            <div className="mt-8 flex items-center justify-center gap-x-6">
+              <button
+                type="button"
+                onClick={track}
+                style={{ backgroundColor: button.color}}
+                className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                {button.label}
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from "react"
-import { ArrowRightCircle, Check } from "lucide-react"
-import {useCroct} from "@croct/plug-react"
+import { ArrowRightCircle, ArrowRight, Check } from "lucide-react"
+import { useCroct } from "@croct/plug-react"
 import logo from "?/./croct.svg"
 
 type DemoSectionProps = {
@@ -108,9 +108,9 @@ export function DemoSection(props: DemoSectionProps) {
                     <button
                         type="button"
                         onClick={reset}
-                        className="text-sm cursor-pointer font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300"
+                        className="text-sm flex items-center cursor-pointer font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 group"
                     >
-                      {buttons.reset} <span aria-hidden="true">→</span>
+                      {buttons.reset} <span aria-hidden="true"><ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200 ease-in-out" /></span>
                     </button>
                   </div>
 

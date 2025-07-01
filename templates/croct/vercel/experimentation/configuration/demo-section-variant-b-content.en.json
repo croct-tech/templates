@@ -31,7 +31,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "Assigned"
+                "value": "Current"
               }
             },
             "title": {

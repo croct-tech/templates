@@ -74,9 +74,7 @@ export function DemoSection(props: DemoSectionProps) {
                                 />
                                 {feature.title}
                                 {feature.tag && (
-                                    <span
-                                        className="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset bg-indigo-50 text-indigo-700 ring-indigo-700/10 dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-400/30"
-                                    >
+                                    <span className="inline-flex items-center rounded-md px-2 py-2 text-[10px]/2 medium uppercase font-medium ring-1 ring-inset bg-indigo-50 text-indigo-700 ring-indigo-700/10 dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-400/30">
                                       {feature.tag}
                                     </span>
                                 )}

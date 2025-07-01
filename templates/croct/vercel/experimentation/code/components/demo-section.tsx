@@ -1,18 +1,25 @@
 'use client'
 
-import { useCroct } from "@croct/plug-react";
-import { ArrowRightCircleIcon } from '@heroicons/react/20/solid'
+import { useState } from "react"
+import { ArrowRightCircle, Check } from "lucide-react"
+import {useCroct} from "@croct/plug-react"
+import logo from "?/./croct.svg"
 
 type DemoSectionProps = {
+  variant: {
+    name: string
+    color: string
+  }
   preTitle?: string
   heading: string
   description?: string
   topics?: {
-    title: string,
-    description: string,
-  }[],
+    title: string
+    description: string
+    tag?: string
+  }[]
   button: {
-    label: string,
+    label: string
     color: string
   }
 }
@@ -23,75 +30,120 @@ const reset = async () => {
 };
 
 export function DemoSection(props: DemoSectionProps) {
-  const {preTitle, heading, description, topics, button} = props
+  const { variant, preTitle, heading, description, topics, button, } = props
+  const [tracked, setTracked] = useState(false)
   const croct = useCroct();
-  const track = () => croct.track('goalCompleted', {goalId: 'cta-click'});
+  const track = () => {
+    croct.track('goalCompleted', {goalId: 'cta-click'});
+
+    setTracked(true);
+
+    setTimeout(() => {
+      setTracked(false);
+    }, 2000);
+  };
 
   return (
-    <div className="bg-white">
-      <div className="overflow-hidden bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div
-            className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            <div className="lg:pr-8 lg:pt-4">
-              <div className="lg:max-w-lg">
-                {preTitle && (
-                  <h2 className="text-base/7 font-semibold text-indigo-600">{preTitle}</h2>
-                )}
-                <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  {heading}
-                </p>
-                {description && (
-                  <p className="mt-6 text-lg/8 text-gray-700">{description}</p>
-                )}
-                {topics && (
-                  <dl className="mt-5 max-w-xl space-y-5 text-base/7 text-gray-600 lg:max-w-none">
-                    {topics.map((feature) => (
-                      <div key={feature.title} className="relative pl-9">
-                        <dt className="inline font-semibold text-gray-900">
-                          <ArrowRightCircleIcon aria-hidden="true"
-                                                className="absolute left-1 top-1 size-5 text-indigo-600"/>
-                          {feature.title}
-                        </dt>
-                        {' '}
-                        <dd className="inline">{feature.description}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                )}
-                <p className="mt-6 text-lg/8 text-gray-700">
-                  Click the button below to change the current variant (each variant has a 50% chance).
-                </p>
-                <div className="mt-8 flex items-center gap-x-6">
-                  <button
-                    type="button"
-                    onClick={reset}
-                    className="rounded-md bg-indigo-50 px-3.5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100"
-                  >
-                    Reset and resort experiment
-                  </button>
+      <div className="bg-white dark:bg-slate-950 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col justify-between">
+        <nav className="w-full max-w-6xl mx-auto p-8 lg:px-8 overflow-hidden">
+          <a href="https://croct.com" className="flexfocus:outline-none">
+            <img src={logo.src} title="Croct Logo" alt="Croct Logo" className="h-6 w-auto" />
+          </a>
+        </nav>
+
+        <main className="relative isolate overflow-hidden sm:pb-16 flex-1 flex flex-col justify-center items-center">
+          <div className="h-full w-full max-w-6xl p-8 lg:px-8">
+            <div className="mx-auto grid grid-cols-1 items-center gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:grid-cols-2">
+              <div className="lg:pr-8 lg:pt-4">
+                <div>
+                  {preTitle && (
+                      <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">{preTitle}</h2>
+                  )}
+                  <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{heading}</p>
+                  {description && (
+                      <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">{description}</p>
+                  )}
+                  {topics && (
+                      <dl className="mt-10 max-w-xl space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300 lg:max-w-none">
+                        {topics.map((feature, index) => (
+                            <div key={feature.title} className="relative pl-9">
+                              <dt className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                                <ArrowRightCircle
+                                    className="absolute left-1 top-1 h-5 w-5 text-indigo-600 dark:text-indigo-400"
+                                    aria-hidden="true"
+                                />
+                                {feature.title}
+                                {index === 0 && (
+                                    <span
+                                        className="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset bg-indigo-50 text-indigo-700 ring-indigo-700/10 dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-400/30"
+                                    >
+                                      Assigned
+                                    </span>
+                                )}
+                              </dt>
+                              <dd>{feature.description}</dd>
+                            </div>
+                        ))}
+                      </dl>
+                  )}
+
+                  <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+                    <button
+                        type="button"
+                        onClick={track}
+                        style={{ backgroundColor: tracked ? "#22c55e" : variant.color }}
+                        disabled={tracked}
+                        className={
+                            "rounded-md  px-5 py-3 text-base font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition-all duration-300 ease-in-out flex items-center gap-2 active:scale-95"
+                            + (tracked ? "" : " cursor-pointer hover:opacity-90")
+                        }
+                    >
+                      {tracked ? (
+                          <>
+                            <Check className="h-5 w-5" />
+                            <span>Tracked!</span>
+                          </>
+                      ) : (button.label)}
+                    </button>
+                    <button
+                        type="button"
+                        onClick={reset}
+                        className="text-sm cursor-pointer font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300"
+                    >
+                      Reset and resort experiment <span aria-hidden="true">→</span>
+                    </button>
+                  </div>
+
+                  <p className="mt-8 text-sm leading-7 text-gray-500 dark:text-gray-400">
+                    You can manage your experiment content and analyze results <a
+                      href="https://app.croct.com/redirect/organizations/-organization-/workspaces/-workspace-/experiences?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.vercel_experiment"
+                      className="font-normal text-indigo-600 underline dark:text-indigo-600 hover:no-underline" target="_blank">here</a>.
+                  </p>
                 </div>
-                <p className="mt-6 text-base/7 text-gray-500">
-                  You can manage your experiment content and analyze results <a
-                  href="https://app.croct.com/redirect/organizations/-organization-/workspaces/-workspace-/experiences?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.vercel_experiment"
-                  className="font-normal text-indigo-600 underline dark:text-indigo-600 hover:no-underline" target="_blank">here</a>.
-                </p>
+              </div>
+              <div className="flex items-center justify-center">
+                <VariantDisplay variant={variant.name} color={variant.color} className="w-full max-w-md sm:w-[32rem]" />
               </div>
             </div>
-
-            <div className="mt-8 flex items-center justify-center gap-x-6">
-              <button
-                type="button"
-                onClick={track}
-                style={{ backgroundColor: button.color}}
-                className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                {button.label}
-              </button>
-            </div>
           </div>
-        </div>
+        </main>
       </div>
-    </div>
+  )
+}
+
+type VariantDisplayProps = {
+  variant: string,
+  color: string
+  className?: string
+}
+
+function VariantDisplay({ variant, color, className }: VariantDisplayProps) {
+  const baseClasses = "flex items-center justify-center w-full h-80 rounded-xl shadow-xl text-white "
+      + "text-9xl font-bold transition-colors duration-300 ease-in-out"
+
+  return (
+      <div className={`${baseClasses} ${className ?? ""}`} style={{backgroundColor: color}}>
+        <span>{variant}</span>
+      </div>
   )
 }

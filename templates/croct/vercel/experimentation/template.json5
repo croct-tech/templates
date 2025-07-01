@@ -72,7 +72,7 @@
     },
     {
       "name": "add-dependency",
-      "dependencies": "${['@croct/md-lite', '@heroicons/react', '@headlessui/react']}"
+      "dependencies": "${['lucide-react']}"
     },
     {
       "name": "check-dependency",
@@ -105,6 +105,11 @@
         "componentIndex": 0,
         "utilityIndex": 0
       }
+    },
+    {
+      "name": "download",
+      "source": "./code/components/croct.svg",
+      "destination": "${project.path.components}",
     },
     {
       "name": "download",

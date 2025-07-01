@@ -65,7 +65,7 @@ export function DemoSection(props: DemoSectionProps) {
                   )}
                   {topics && (
                       <dl className="mt-10 max-w-xl space-y-4 text-base leading-7 text-gray-600 dark:text-gray-300 lg:max-w-none">
-                        {topics.map((feature, index) => (
+                        {topics.map(feature => (
                             <div key={feature.title} className="relative pl-9">
                               <dt className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
                                 <ArrowRightCircle

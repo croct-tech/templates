@@ -1,26 +1,7 @@
 {
-  "type": "structure",
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
   "type": "structure",
   "attributes": {
-    "button": {
-      "type": "structure",
-      "attributes": {
-        "color": {
-          "type": "text",
-          "value": {
-            "type": "static",
-            "value": "#00a63e"
-          }
-        },
-        "label": {
-          "type": "text",
-          "value": {
-            "type": "static",
-            "value": "Click me"
-          }
-        }
-      }
-    },
     "topics": {
       "type": "list",
       "items": [
@@ -46,6 +27,13 @@
         {
           "type": "structure",
           "attributes": {
+            "tag": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Assigned"
+              }
+            },
             "title": {
               "type": "text",
               "value": {
@@ -57,18 +45,56 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "Alternate content different button label and color. 👈"
+                "value": "Alternate content different button label and color."
               }
             }
           }
         }
       ]
     },
+    "buttons": {
+      "type": "structure",
+      "attributes": {
+        "reset": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Reset and resort experiment"
+          }
+        },
+        "track": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Track my click"
+          }
+        }
+      }
+    },
     "heading": {
       "type": "text",
       "value": {
         "type": "static",
         "value": "AB testing with Croct"
+      }
+    },
+    "variant": {
+      "type": "structure",
+      "attributes": {
+        "name": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "B"
+          }
+        },
+        "color": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#ff2056"
+          }
+        }
       }
     },
     "preTitle": {
@@ -82,7 +108,7 @@
       "type": "text",
       "value": {
         "type": "static",
-        "value": "This page will each render a different button on the right, each with a 50% chance:"
+        "value": "This page displays one of two variants, chosen at random with equal probability."
       }
     }
   }

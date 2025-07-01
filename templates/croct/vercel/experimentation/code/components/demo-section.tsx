@@ -6,10 +6,6 @@ import {useCroct} from "@croct/plug-react"
 import logo from "?/./croct.svg"
 
 type DemoSectionProps = {
-  variant: {
-    name: string
-    color: string
-  }
   preTitle?: string
   heading: string
   description?: string
@@ -18,8 +14,12 @@ type DemoSectionProps = {
     description: string
     tag?: string
   }[]
-  button: {
-    label: string
+  buttons: {
+    reset: string
+    track: string
+  }
+  variant: {
+    name: string
     color: string
   }
 }
@@ -30,7 +30,7 @@ const reset = async () => {
 };
 
 export function DemoSection(props: DemoSectionProps) {
-  const { variant, preTitle, heading, description, topics, button, } = props
+  const { preTitle, heading, description, topics, buttons, variant} = props
   const [tracked, setTracked] = useState(false)
   const croct = useCroct();
   const track = () => {
@@ -73,11 +73,11 @@ export function DemoSection(props: DemoSectionProps) {
                                     aria-hidden="true"
                                 />
                                 {feature.title}
-                                {index === 0 && (
+                                {feature.tag && (
                                     <span
                                         className="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset bg-indigo-50 text-indigo-700 ring-indigo-700/10 dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-400/30"
                                     >
-                                      Assigned
+                                      {feature.tag}
                                     </span>
                                 )}
                               </dt>
@@ -103,14 +103,14 @@ export function DemoSection(props: DemoSectionProps) {
                             <Check className="h-5 w-5" />
                             <span>Tracked!</span>
                           </>
-                      ) : (button.label)}
+                      ) : (buttons.track)}
                     </button>
                     <button
                         type="button"
                         onClick={reset}
                         className="text-sm cursor-pointer font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300"
                     >
-                      Reset and resort experiment <span aria-hidden="true">→</span>
+                      {buttons.reset} <span aria-hidden="true">→</span>
                     </button>
                   </div>
 

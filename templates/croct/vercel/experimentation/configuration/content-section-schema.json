@@ -61,6 +61,17 @@
               "private": false,
               "optional": false,
               "position": 1
+            },
+            "tag": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Tag",
+              "description": "The tag to show alongside the title.",
+              "private": false,
+              "optional": true,
+              "position": 2
             }
           }
         }
@@ -71,17 +82,17 @@
       "position": 3,
       "description": "A list of topics"
     },
-    "button": {
+    "variant": {
       "type": {
         "type": "structure",
         "attributes": {
-          "label": {
+          "name": {
             "type": {
               "type": "text",
               "minimumLength": 1
             },
-            "label": "Label",
-            "description": "The label of the button.",
+            "label": "Name",
+            "description": "The name of the variant.",
             "private": false,
             "optional": false,
             "position": 0
@@ -92,18 +103,54 @@
               "format": "color"
             },
             "label": "Color",
-            "description": "The background color of the button.",
+            "description": "The color of the variant.",
             "private": false,
             "optional": false,
             "position": 1
           }
         }
       },
-      "label": "Button",
-      "description": "The button on the right side.",
+      "label": "Variant",
+      "description": "The variant to show.",
+      "private": false,
+      "optional": false,
+      "position": 5
+    },
+    "buttons": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "reset": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Reset",
+            "description": "The label of the button that resets the variant.",
+            "private": false,
+            "optional": false,
+            "position": 0
+          },
+          "track": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Track",
+            "description": "The label of the button that tracks conversions.",
+            "private": false,
+            "optional": false,
+            "position": 1
+          }
+        }
+      },
+      "label": "Buttons",
+      "description": "The labels of the buttons.",
       "private": false,
       "optional": false,
       "position": 4
     }
-  }
+  },
+  "title": "Content section",
+  "description": "A section with content, bullets, CTA, and image."
 }

@@ -182,14 +182,14 @@
               "name": "Demo content",
               "goalId": "cta-click",
               "crossDevice": false,
-              "traffic": 0.6,
+              "traffic": 1,
               "variants": [
                 {
                   "name": "Variant A",
                   "content": {
                     "default": {
                       "demo-section": {
-                        "en": "${import('./configuration/demo-section-default-content.en.json')}"
+                        "en": "${import('./configuration/demo-section-variant-a-content.en.json')}"
                       }
                     }
                   },
@@ -201,7 +201,7 @@
                   "content": {
                     "default": {
                       "demo-section": {
-                        "en": "${import('./configuration/demo-section-variant-content.en.json')}"
+                        "en": "${import('./configuration/demo-section-variant-b-content.en.json')}"
                       }
                     }
                   },

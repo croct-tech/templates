@@ -1,0 +1,115 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "topics": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "tag": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Current"
+              }
+            },
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Variant A"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Original content and experiment baseline."
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Variant B"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Alternate content different button label and color."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "buttons": {
+      "type": "structure",
+      "attributes": {
+        "reset": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Reset and resort experiment"
+          }
+        },
+        "track": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Track my click"
+          }
+        }
+      }
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "AB testing with Croct"
+      }
+    },
+    "variant": {
+      "type": "structure",
+      "attributes": {
+        "name": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "A"
+          }
+        },
+        "color": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#4f39f6"
+          }
+        }
+      }
+    },
+    "preTitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Headless experimentation"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "This page displays one of two variants, chosen at random with equal probability."
+      }
+    }
+  }
+}

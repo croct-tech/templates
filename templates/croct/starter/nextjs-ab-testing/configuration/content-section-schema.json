@@ -1,0 +1,156 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "preTitle": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Pre-title",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The pre-title of the section."
+    },
+    "heading": {
+      "type": {
+        "type": "text",
+        "minimumLength": 1
+      },
+      "label": "Heading",
+      "private": false,
+      "optional": false,
+      "position": 1,
+      "description": "The main heading of the section."
+    },
+    "description": {
+      "type": {
+        "type": "text",
+        "format": "multiline",
+        "minimumLength": 1
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 2,
+      "description": "The description of the section."
+    },
+    "topics": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "title": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Title",
+              "private": false,
+              "optional": false,
+              "position": 0
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": false,
+              "position": 1
+            },
+            "tag": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Tag",
+              "description": "The tag to show alongside the title.",
+              "private": false,
+              "optional": true,
+              "position": 2
+            }
+          }
+        }
+      },
+      "label": "Topics",
+      "private": false,
+      "optional": true,
+      "position": 3,
+      "description": "A list of topics"
+    },
+    "variant": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "name": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Name",
+            "description": "The name of the variant.",
+            "private": false,
+            "optional": false,
+            "position": 0
+          },
+          "color": {
+            "type": {
+              "type": "text",
+              "format": "color"
+            },
+            "label": "Color",
+            "description": "The color of the variant.",
+            "private": false,
+            "optional": false,
+            "position": 1
+          }
+        }
+      },
+      "label": "Variant",
+      "description": "The variant to show.",
+      "private": false,
+      "optional": false,
+      "position": 5
+    },
+    "buttons": {
+      "type": {
+        "type": "structure",
+        "attributes": {
+          "reset": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Reset",
+            "description": "The label of the button that resets the variant.",
+            "private": false,
+            "optional": false,
+            "position": 0
+          },
+          "track": {
+            "type": {
+              "type": "text",
+              "minimumLength": 1
+            },
+            "label": "Track",
+            "description": "The label of the button that tracks conversions.",
+            "private": false,
+            "optional": false,
+            "position": 1
+          }
+        }
+      },
+      "label": "Buttons",
+      "description": "The labels of the buttons.",
+      "private": false,
+      "optional": false,
+      "position": 4
+    }
+  },
+  "title": "Content section",
+  "description": "A section with content, bullets, CTA, and image."
+}

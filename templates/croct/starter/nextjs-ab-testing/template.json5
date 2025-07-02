@@ -1,0 +1,122 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Croct AB testing integration",
+  "description": "A ready-to-use experiment setup.",
+  "metadata": {
+    "id": "boilerplate/starter/nextjs-ab-testing",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/-ab-testing/template.json5",
+    "installationUrl": "croct://starter/nextjs-ab-testing",
+    "categories": [
+      "boilerplate/starter"
+    ]
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "all-users": {
+            "name": "All users",
+            "criteria": "true"
+          }
+        },
+        "components": {
+          "content-section": {
+            "name": "Content section",
+            "description": "A section with content, bullets, CTA, and image.",
+            "schema": "${import('./configuration/content-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "demo-section": {
+            "name": "Demo section",
+            "component": "content-section",
+            "content": {
+              "en": "${import('./configuration/demo-section-default-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Experiment for all users",
+            "audiences": [
+              "all-users"
+            ],
+            "slots": [
+              "demo-section"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Demo content",
+              "goalId": "cta-click",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Variant A",
+                  "content": {
+                    "default": {
+                      "demo-section": {
+                        "en": "${import('./configuration/demo-section-variant-a-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Variant B",
+                  "content": {
+                    "default": {
+                      "demo-section": {
+                        "en": "${import('./configuration/demo-section-variant-b-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Resources successfully created."
+    },
+    {
+      "name": "create-api-key",
+      "keyName": "Vercel template",
+      "environment": "production",
+      "permissions": [
+        "token_issue"
+      ],
+      "result": "secret"
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "title": "Environment variables",
+      "message": "Add the variables below to your project.\n\n⚠\uFE0F Keep your API key private. Do not share or commit it."
+    },
+    {
+      "name": "print",
+      "message": "\n"
+    },
+    {
+      "name": "print",
+      "message": "`NEXT_PUBLIC_CROCT_APP_ID`\n${project.application.development.publicId}\n\n`CROCT_API_KEY`\n${this.secret}"
+    }
+  ]
+}

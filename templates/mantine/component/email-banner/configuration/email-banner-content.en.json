@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "form": {
+      "type": "structure",
+      "attributes": {
+        "cta": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Subscribe"
+          }
+        },
+        "placeholder": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "Your email"
+          }
+        }
+      }
+    },
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/213ee9c9-e220-4330-a499-f2f74bb6c602"
+      }
+    },
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Wait a minute..."
+      }
+    },
+    "subtitle": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Subscribe to our newsletter!"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "You will never miss important product updates, latest news and community QA sessions. Our newsletter is once a week, every Sunday."
+      }
+    }
+  }
+}

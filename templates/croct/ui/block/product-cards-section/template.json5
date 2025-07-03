@@ -18,6 +18,9 @@
       "interface/marketing",
       "interface/section",
       "use-case/e-commerce"
+    ],
+    "relatedTemplates": [
+      "library/mantine/carousel-card"
     ]
   },
   "actions": [

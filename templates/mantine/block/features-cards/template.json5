@@ -12,25 +12,71 @@
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/cover.png",
+    "installationUrl": "mantine://block/features-cards",
     "categories": [
-      "library/mantine"
+      "framework/nextjs",
+      "framework/react",
+      "interface/hero",
+      "interface/marketing",
+      "interface/section",
+      "language/javascript",
+      "language/typescript",
+      "library/mantine",
+      "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "interface/section/cards-section",
+      "library/magic-ui/bento-grid",
+      "library/material-ui/features-section",
+      "library/material-ui/highlights-section"
     ]
+  },
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "The version of Next.js to use.",
+      "choices": [
+        "13",
+        "14",
+        "15",
+        "latest"
+      ]
+    },
+    "router": {
+      "type": "string",
+      "description": "The router to use.",
+      "choices": [
+        "app",
+        "page"
+      ],
+      "default": "app"
+    },
+    "javascript": {
+      "type": "boolean",
+      "description": "Whether to use JavaScript instead of TypeScript.",
+      "default": false
+    }
   },
   "actions": [
     {
-      "name": "print",
-      "semantics": "info",
-      "title": "Request early access",
-      "message": "This template is still under development, but we're inviting early adopters."
-    },
-    {
-      "name": "prompt",
-      "type": "keypress",
-      "message": "Press any key to request access"
-    },
-    {
-      "name": "open-link",
-      "url": "https://croct.com/contact/support?subject=general-inquiry&message=I%20want%20to%20have%20early%20access%20to%20Mantine%20features%20section%20with%20cards%20template."
+      "name": "import",
+      "template": "mantine://component/component",
+      "options": {
+        "id": "features-cards",
+        "type": "block",
+        "version": "${options.version}",
+        "router": "${options.router}",
+        "javascript": "${options.javascript}",
+        "dependencies": [
+          "@tabler/icons-react",
+          "@croct/md-lite"
+        ],
+        "components": [
+          "FeaturesCards/index.tsx"
+        ],
+        "utils": [],
+        "extension": "mantine://block/features-cards/extension.json5"
+      }
     }
   ]
 }

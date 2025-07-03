@@ -135,7 +135,7 @@
         {
           "name": "define",
           "variables": {
-            "components": "${[...this.components, 'material-ui://block/' + this.slot + '/code/components/' + this.slot + '.tsx']}",
+            "components": "${[...this.components, 'mantine://block/' + this.slot + '/code/components/' + this.slot + '.tsx']}",
             "componentIndex": "${this.componentIndex + 1}"
           }
         }
@@ -143,7 +143,7 @@
     },
     {
       "name": "import",
-      "template": "material-ui://block/block",
+      "template": "mantine://component/component",
       "options": {
         "id": "marketing-page",
         "type": "template",

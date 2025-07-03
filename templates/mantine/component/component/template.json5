@@ -33,7 +33,8 @@
       "description": "The type of the component.",
       "choices": [
         "component",
-        "block"
+        "block",
+        "template"
       ],
       "required": true
     },

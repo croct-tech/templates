@@ -15,6 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/cover.mp4",
     "installationUrl": "croct://location/geomarketing",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

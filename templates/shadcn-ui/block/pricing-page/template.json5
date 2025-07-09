@@ -14,6 +14,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/block/pricing-page/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/shadcn-ui/block/pricing-page/cover.mp4",
     "installationUrl": "shadcn-ui://block/pricing-page",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

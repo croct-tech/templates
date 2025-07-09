@@ -13,6 +13,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/cover.png",
     "installationUrl": "magic-ui://component/lens",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

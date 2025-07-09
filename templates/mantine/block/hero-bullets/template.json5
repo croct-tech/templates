@@ -13,6 +13,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/cover.png",
     "installationUrl": "mantine://block/hero-bullets",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

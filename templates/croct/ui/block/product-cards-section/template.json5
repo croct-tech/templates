@@ -15,9 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/product-cards-section/cover.png",
     "installationUrl": "croct://ui/block/product-cards-section",
     "categories": [
-      "interface/marketing",
-      "interface/section",
-      "use-case/e-commerce"
+      "interface/section"
     ],
     "relatedTemplates": [
       "library/mantine/carousel-card"

@@ -15,10 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/image-comparison-slider/cover.png",
     "installationUrl": "croct://ui/component/image-comparison-slider",
     "categories": [
-      "interface/component",
-      "interface/marketing",
-      "use-case/e-commerce",
-      "use-case/saas"
+      "interface/component"
     ]
   },
   "actions": [

@@ -13,20 +13,18 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/stats-group/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/stats-group/cover.png",
     "installationUrl": "mantine://block/stats-group",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
-      "interface/marketing",
       "interface/section",
       "language/javascript",
       "language/typescript",
-      "library/mantine",
-      "use-case/saas"
+      "library/mantine"
     ],
     "relatedTemplates": [
       "library/material-ui/highlights-section"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

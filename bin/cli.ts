@@ -73,6 +73,7 @@ const categoryMap = {
     'library/shiki': 'Shiki',
     'library/tailwind-css': 'Tailwind CSS',
     'use-case/e-commerce': 'E-commerce',
+    'use-case/experience': 'Experience',
     'use-case/experiment': 'Experiment',
     'use-case/location': 'Location',
     'use-case/saas': 'SaaS',

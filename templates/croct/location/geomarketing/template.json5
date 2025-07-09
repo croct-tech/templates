@@ -15,12 +15,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/location/geomarketing/cover.mp4",
     "installationUrl": "croct://location/geomarketing",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
       "interface/component",
-      "interface/marketing",
       "language/javascript",
       "language/typescript",
       'use-case/e-commerce',
@@ -31,7 +29,8 @@
       "interface/component/announcement-bar",
       "interface/form/react-phone-number-input",
       "use-case/e-commerce/location"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

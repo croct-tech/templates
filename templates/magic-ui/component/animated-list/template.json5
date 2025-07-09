@@ -13,17 +13,18 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/animated-list/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/animated-list/cover.png",
     "installationUrl": "magic-ui://component/animated-list",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
+      'interface/component',
       "interface/feedback",
       "interface/motion",
       "language/javascript",
       "language/typescript",
       "library/framer-motion",
       "library/magic-ui"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

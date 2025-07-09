@@ -14,12 +14,11 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/hero-video-dialog/cover.mp4",
     "installationUrl": "magic-ui://component/hero-video-dialog",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
+      'interface/component',
       "interface/hero",
-      "interface/marketing",
       "interface/media",
       "language/javascript",
       "language/typescript",
@@ -27,7 +26,8 @@
     ],
     "relatedTemplates": [
       "interface/component/video-player"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

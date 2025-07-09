@@ -14,16 +14,16 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/cover.mp4",
     "installationUrl": "material-ui://template/marketing-page",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
       "interface/marketing",
+      'interface/page',
       "language/javascript",
       "language/typescript",
-      "library/material-ui",
-      "use-case/saas"
-    ]
+      "library/material-ui"
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

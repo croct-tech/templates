@@ -15,6 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/cover.png",
     "installationUrl": "croct://experience/saas/abm-campaign",
     "categories": [
+      "use-case/experience",
       "use-case/saas"
     ],
     "relatedTemplates": [

@@ -13,22 +13,20 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/cover.png",
     "installationUrl": "material-ui://block/navbar",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
-      "interface/marketing",
+      "interface/component",
       "interface/menu",
-      "interface/section",
       "language/javascript",
       "language/typescript",
-      "library/material-ui",
-      "use-case/saas"
+      "library/material-ui"
     ],
     "relatedTemplates": [
       "interface/component/navbar",
       "library/mantine/header-simple"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

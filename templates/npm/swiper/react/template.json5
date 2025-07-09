@@ -14,19 +14,17 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/swiper/react/cover.mp4",
     "installationUrl": "npm://swiper/react",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
-      "interface/marketing",
       "interface/section",
       "language/javascript",
-      "language/typescript",
-      "use-case/e-commerce"
+      "language/typescript"
     ],
     "relatedTemplates": [
       "interface/section/carousel-section"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

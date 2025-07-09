@@ -15,6 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/interest/cover.png",
     "installationUrl": "croct://experience/saas/interest",
     "categories": [
+      "use-case/experience",
       "use-case/saas"
     ],
     "relatedTemplates": [

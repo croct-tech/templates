@@ -15,10 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/faq-section/cover.png",
     "installationUrl": "croct://ui/block/faq-section",
     "categories": [
-      "interface/marketing",
-      "interface/section",
-      "use-case/e-commerce",
-      "use-case/saas"
+      "interface/section"
     ],
     "relatedTemplates": [
       "library/mantine/faq-simple",

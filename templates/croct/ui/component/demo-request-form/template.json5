@@ -17,8 +17,7 @@
     "categories": [
       "interface/component",
       "interface/form",
-      "interface/marketing",
-      "use-case/saas"
+      "interface/marketing"
     ],
     "relatedTemplates": [
       "interface/form/react-phone-number-input",

@@ -13,7 +13,6 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-bullets/cover.png",
     "installationUrl": "mantine://block/hero-bullets",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -22,13 +21,13 @@
       "interface/section",
       "language/javascript",
       "language/typescript",
-      "library/mantine",
-      "use-case/saas"
+      "library/mantine"
     ],
     "relatedTemplates": [
       "interface/section/hero-section",
       "library/material-ui/hero-section"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

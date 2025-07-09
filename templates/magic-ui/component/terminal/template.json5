@@ -14,11 +14,10 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/cover.mp4",
     "installationUrl": "magic-ui://component/terminal",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
-      "interface/marketing",
+      'interface/component',
       "interface/motion",
       "language/javascript",
       "language/typescript",
@@ -28,7 +27,8 @@
     "relatedTemplates": [
       "library/magic-ui/code-comparison",
       "library/magic-ui/script-copy-btn"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

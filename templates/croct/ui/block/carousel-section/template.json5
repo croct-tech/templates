@@ -14,19 +14,17 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/carousel-section/cover.png",
     "installationUrl": "croct://ui/block/carousel-section",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
-      "interface/marketing",
       "interface/section",
       "language/javascript",
-      "language/typescript",
-      "use-case/e-commerce"
+      "language/typescript"
     ],
     "relatedTemplates": [
       "interface/section/react-swiper-carousel"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

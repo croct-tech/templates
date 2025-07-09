@@ -13,7 +13,6 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-up-side/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-up-side/cover.png",
     "installationUrl": "material-ui://block/sign-up-side",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -22,13 +21,13 @@
       "interface/section",
       "language/javascript",
       "language/typescript",
-      "library/material-ui",
-      "use-case/saas"
+      "library/material-ui"
     ],
     "relatedTemplates": [
       "interface/component/demo-request-form",
       "interface/form/react-phone-number-input"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

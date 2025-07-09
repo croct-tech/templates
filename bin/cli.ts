@@ -90,10 +90,10 @@ const templatePropertyOrder: OrderMap = {
             'documentationUrl',
             'sourceUrl',
             'demoUrl',
-            'deployUrl',
             'coverImageUrl',
             'coverVideoUrl',
             'installationUrl',
+            'deployable',
             'categories',
             'relatedTemplates',
         ],
@@ -201,7 +201,7 @@ type TemplateMetadata = {
     documentationUrl: string,
     sourceUrl: string,
     demoUrl?: string,
-    deployUrl?: string,
+    deployable?: boolean,
     coverImageUrl: string,
     coverVideoUrl?: string,
     installationUrl: string,
@@ -324,6 +324,24 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             update.assets[file] = path;
         }
 
+        let deployUrl: URL|undefined;
+
+        if (metadata.deployable === true) {
+            deployUrl = new URL('https://vercel.com/new/clone');
+            deployUrl.searchParams.set('repository-url', 'https://github.com/croct-tech/vercel-template');
+            deployUrl.searchParams.set('project-name', metadata.id);
+            deployUrl.searchParams.set('repository-name', metadata.id);
+            deployUrl.searchParams.set('demo-title', template.title);
+            deployUrl.searchParams.set('demo-description', template.description);
+            deployUrl.searchParams.set('demo-image', getCoverUrl(coverImageName));
+            deployUrl.searchParams.set('external-id', metadata.installationUrl);
+            deployUrl.searchParams.set('integration-ids', 'oac_cTQZ22CIXn5XgZXYk2nBwFdU');
+
+            if (metadata.demoUrl !== undefined) {
+                deployUrl.searchParams.set('demo-url', metadata.demoUrl);
+            }
+        }
+
         update.index.push({
             id: metadata.id,
             title: template.title,
@@ -342,7 +360,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             ),
             documentation: documentation,
             demoUrl: metadata.demoUrl,
-            deployUrl: metadata.deployUrl,
+            deployUrl: deployUrl?.toString(),
             coverImageUrl: getCoverUrl(coverImageName),
             coverVideoUrl: coverVideoName !== undefined
                 ? getCoverUrl(coverVideoName)

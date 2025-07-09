@@ -13,6 +13,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/script-copy-btn/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/script-copy-btn/cover.png",
     "installationUrl": "magic-ui://component/script-copy-btn",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

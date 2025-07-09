@@ -13,6 +13,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/image-action-banner/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/image-action-banner/cover.png",
     "installationUrl": "mantine://component/image-action-banner",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

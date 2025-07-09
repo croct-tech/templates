@@ -13,6 +13,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-up-form/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-up-form/cover.png",
     "installationUrl": "material-ui://block/sign-up-form",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

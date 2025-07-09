@@ -13,6 +13,7 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/cover.png",
     "installationUrl": "mantine://block/features-cards",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",

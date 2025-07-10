@@ -33,7 +33,8 @@ export const heroSection = defineType({
       name: "logos",
       title: "Logos",
       type: "array",
-      of: [{ type: "image" }],
+      of: [{ type: "url" }],
+      validation: Rule => Rule.required().min(1),
     }),
     defineField({
       name: "tagline",

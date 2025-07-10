@@ -103,6 +103,7 @@ export const heroQuery = defineQuery(`
     slug,
     preHeading,
     heading,
+    logos,
     tagline,
     command
   }

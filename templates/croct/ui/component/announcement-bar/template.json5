@@ -14,21 +14,19 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/cover.png",
     "installationUrl": "croct://ui/component/announcement-bar",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
       'interface/component',
       'interface/marketing',
       "language/javascript",
-      "language/typescript",
-      "use-case/e-commerce",
-      "use-case/saas"
+      "language/typescript"
     ],
     "relatedTemplates": [
       "interface/component/announcement-bar",
       "use-case/location/geomarketing"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

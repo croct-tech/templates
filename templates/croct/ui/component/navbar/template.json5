@@ -16,10 +16,7 @@
     "installationUrl": "croct://ui/component/navbar",
     "categories": [
       "interface/component",
-      "interface/marketing",
-      "interface/menu",
-      "use-case/e-commerce",
-      "use-case/saas"
+      "interface/menu"
     ],
     "relatedTemplates": [
       "library/mantine/header-simple",

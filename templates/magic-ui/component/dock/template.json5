@@ -14,17 +14,18 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/cover.mp4",
     "installationUrl": "magic-ui://component/dock",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
+      'interface/component',
       "interface/menu",
       "interface/motion",
       "language/javascript",
       "language/typescript",
       "library/framer-motion",
       "library/magic-ui"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

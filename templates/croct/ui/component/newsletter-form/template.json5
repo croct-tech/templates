@@ -17,7 +17,7 @@
     "categories": [
       "interface/component",
       "interface/form",
-      "interface/marketing",
+      "interface/marketing"
       "use-case/e-commerce",
       "use-case/saas"
     ],

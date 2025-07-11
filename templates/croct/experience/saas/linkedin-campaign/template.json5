@@ -15,6 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/linkedin-campaign/cover.png",
     "installationUrl": "croct://experience/saas/linkedin-campaign",
     "categories": [
+      "use-case/experience",
       "use-case/saas"
     ],
     "relatedTemplates": [

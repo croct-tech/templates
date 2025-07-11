@@ -15,7 +15,8 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/e-commerce/cart/cover.png",
     "installationUrl": "croct://experience/e-commerce/cart",
     "categories": [
-      "use-case/e-commerce"
+      "use-case/e-commerce",
+      "use-case/experience"
     ],
     "relatedTemplates": [
       "interface/component/announcement-bar",

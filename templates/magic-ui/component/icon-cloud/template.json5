@@ -13,10 +13,10 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/icon-cloud/cover.png",
     "installationUrl": "magic-ui://component/icon-cloud",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
+      'interface/component',
       "interface/motion",
       "interface/visualization",
       "language/javascript",
@@ -25,7 +25,8 @@
     ],
     "relatedTemplates": [
       "library/magic-ui/orbiting-circles"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

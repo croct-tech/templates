@@ -13,11 +13,11 @@
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/code-comparison/template.json5",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/code-comparison/cover.png",
     "installationUrl": "magic-ui://component/code-comparison",
-    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
       "interface/code",
+      'interface/component',
       "language/javascript",
       "language/typescript",
       "library/framer-motion",
@@ -27,7 +27,8 @@
     "relatedTemplates": [
       "library/magic-ui/script-copy-btn",
       "library/magic-ui/terminal"
-    ]
+    ],
+    "deployable": true
   },
   "options": {
     "version": {

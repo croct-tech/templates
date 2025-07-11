@@ -17,9 +17,7 @@
     "categories": [
       "interface/marketing",
       "interface/section",
-      "interface/social-proof",
-      "use-case/e-commerce",
-      "use-case/saas"
+      "interface/social-proof"
     ],
     "relatedTemplates": [
       "library/magic-ui/marquee",

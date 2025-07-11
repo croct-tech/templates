@@ -15,10 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/video-player/cover.png",
     "installationUrl": "croct://ui/component/video-player",
     "categories": [
-      "interface/component",
-      "interface/marketing",
-      "use-case/e-commerce",
-      "use-case/saas"
+      "interface/component"
     ],
     "relatedTemplates": [
       "library/magic-ui/hero-video-dialog"

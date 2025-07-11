@@ -16,8 +16,7 @@
     "installationUrl": "croct://ui/block/logo-cloud",
     "categories": [
       "interface/marketing",
-      "interface/section",
-      "use-case/saas"
+      "interface/section"
     ],
     "relatedTemplates": [
       "library/material-ui/logo-collection"

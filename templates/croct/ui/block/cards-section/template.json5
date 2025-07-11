@@ -15,9 +15,7 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/block/cards-section/cover.png",
     "installationUrl": "croct://ui/block/cards-section",
     "categories": [
-      "interface/marketing",
-      "interface/section",
-      "use-case/saas"
+      "interface/section"
     ],
     "relatedTemplates": [
       "library/mantine/carousel-card",

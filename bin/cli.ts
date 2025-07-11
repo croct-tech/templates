@@ -24,6 +24,7 @@ const CATALOG_TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/catalog-te
 const TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/template.json';
 const CONTENT_SCHEMA_URL = 'https://schema.croct.com/json/v1/template-content.json';
 const CONTENT_SCHEMA_SCHEMA_URL = 'https://schema.croct.com/json/v1/template-content-schema.json';
+const VERCEL_TEMPLATE_REPOSITORY_URL = 'https://github.com/croct-tech/vercel-template';
 
 const JSON_TEMPLATE_SCHEMAS = [
     CATALOG_TEMPLATE_SCHEMA_URL,
@@ -328,7 +329,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
 
         if (metadata.deployable === true) {
             deployUrl = new URL('https://vercel.com/new/clone');
-            deployUrl.searchParams.set('repository-url', 'https://github.com/croct-tech/vercel-template');
+            deployUrl.searchParams.set('repository-url', VERCEL_TEMPLATE_REPOSITORY_URL);
             deployUrl.searchParams.set('project-name', metadata.id);
             deployUrl.searchParams.set('repository-name', metadata.id);
             deployUrl.searchParams.set('demo-title', template.title);

@@ -349,7 +349,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
                 ? getCoverUrl(coverVideoName)
                 : undefined,
             installationUrl: metadata.installationUrl,
-            sourceUrl: new URL(metadata.sourceUrl, BASE_URL).toString(),
+            sourceUrl: new URL('./', new URL(metadata.sourceUrl, BASE_URL)).toString(),
             verified: metadata.verified ?? false,
             relatedTemplates: metadata.relatedTemplates ?? [],
             options: Object.entries(template.options ?? []).map(

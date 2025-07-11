@@ -1,32 +1,35 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "Email banner",
-  "description": "A email banner component built with Mantine.",
+  "title": "Features section with title",
+  "description": "A features section with title built with Mantine.",
   "metadata": {
-    "id": "library/mantine/email-banner",
+    "id": "library/mantine/features-title",
     "ecosystem": {
       "name": "Mantine",
       "avatarUrl": "https://github.com/mantinedev.png",
       "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/email-banner/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/email-banner/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/email-banner/cover.png",
-    "installationUrl": "mantine://component/email-banner",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/cover.png",
+    "installationUrl": "mantine://block/features-title",
     "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
-      "interface/component",
+      "interface/hero",
       "interface/marketing",
+      "interface/section",
       "language/javascript",
       "language/typescript",
       "library/mantine",
-      "use-case/e-commerce",
       "use-case/saas"
     ],
     "relatedTemplates": [
-      "interface/component/newsletter-form"
+      "interface/section/cards-section",
+      "library/mantine/features-cards",
+      "library/material-ui/features-section",
+      "library/material-ui/highlights-section"
     ]
   },
   "options": {
@@ -60,21 +63,20 @@
       "name": "import",
       "template": "mantine://component/component",
       "options": {
-        "id": "email-banner",
-        "type": "component",
+        "id": "features-title",
+        "type": "block",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "dependencies": [
+          "@tabler/icons-react",
           "@croct/md-lite"
         ],
         "components": [
-          "EmailBanner/index.tsx"
+          "FeaturesTitle/index.tsx"
         ],
-        "utils": [
-          "markdown.tsx"
-        ],
-        "extension": "mantine://component/email-banner/extension.json5"
+        "utils": [],
+        "extension": "mantine://block/features-title/extension.json5"
       }
     }
   ]

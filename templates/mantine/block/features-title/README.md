@@ -1,6 +1,6 @@
 # Introduction
 
-This template adds the [email banner component](https://ui.mantine.dev/category/banners/?utm_source=croct#email-banner) from Mantine to your project.
+This template adds the [features section with title](https://ui.mantine.dev/category/features/?utm_source=croct#features-title) from Mantine to your project.
 
 It comes fully integrated with Croct, giving you CMS, AB testing, and personalization out of the box.
 
@@ -9,13 +9,13 @@ It comes fully integrated with Croct, giving you CMS, AB testing, and personaliz
 To create a new project using this template, run:
 
 ```croct-cmd
-croct use mantine://component/email-banner
+croct use mantine://block/features-title
 ```
 
 You can customize the template by specifying options:
 
 ```croct-cmd
-croct use mantine://component/email-banner --router=page
+croct use mantine://block/features-title --router=page
 ```
 
 ## Options

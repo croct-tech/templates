@@ -330,9 +330,15 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
 
         if (metadata.deployable === true) {
             deployUrl = new URL('https://vercel.com/new/clone');
+
+            const projectName = metadata.id
+                .split('/')
+                .slice(1)
+                .join('-');
+
             deployUrl.searchParams.set('repository-url', VERCEL_TEMPLATE_REPOSITORY_URL);
-            deployUrl.searchParams.set('project-name', metadata.id);
-            deployUrl.searchParams.set('repository-name', metadata.id);
+            deployUrl.searchParams.set('project-name', projectName);
+            deployUrl.searchParams.set('repository-name', projectName);
             deployUrl.searchParams.set('demo-title', template.title);
             deployUrl.searchParams.set('demo-description', template.description);
             // Vercel currently only support specific domain names for demo images.

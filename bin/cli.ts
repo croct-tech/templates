@@ -24,6 +24,7 @@ const CATALOG_TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/catalog-te
 const TEMPLATE_SCHEMA_URL = 'https://schema.croct.com/json/v1/template.json';
 const CONTENT_SCHEMA_URL = 'https://schema.croct.com/json/v1/template-content.json';
 const CONTENT_SCHEMA_SCHEMA_URL = 'https://schema.croct.com/json/v1/template-content-schema.json';
+const VERCEL_TEMPLATE_REPOSITORY_URL = 'https://github.com/croct-tech/vercel-template';
 
 const JSON_TEMPLATE_SCHEMAS = [
     CATALOG_TEMPLATE_SCHEMA_URL,
@@ -90,10 +91,10 @@ const templatePropertyOrder: OrderMap = {
             'documentationUrl',
             'sourceUrl',
             'demoUrl',
-            'deployUrl',
             'coverImageUrl',
             'coverVideoUrl',
             'installationUrl',
+            'deployable',
             'categories',
             'relatedTemplates',
         ],
@@ -201,7 +202,7 @@ type TemplateMetadata = {
     documentationUrl: string,
     sourceUrl: string,
     demoUrl?: string,
-    deployUrl?: string,
+    deployable?: boolean,
     coverImageUrl: string,
     coverVideoUrl?: string,
     installationUrl: string,
@@ -324,6 +325,29 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             update.assets[file] = path;
         }
 
+        let deployUrl: URL|undefined;
+
+        if (metadata.deployable === true) {
+            deployUrl = new URL('https://vercel.com/new/clone');
+            deployUrl.searchParams.set('repository-url', VERCEL_TEMPLATE_REPOSITORY_URL);
+            deployUrl.searchParams.set('project-name', metadata.id);
+            deployUrl.searchParams.set('repository-name', metadata.id);
+            deployUrl.searchParams.set('demo-title', template.title);
+            deployUrl.searchParams.set('demo-description', template.description);
+            // Vercel currently only support specific domain names for demo images.
+            // As a workaround, use a static image hosted on Vercel.
+            // Once Vercel supports custom demo images, it should be replaced with:
+            // deployUrl.searchParams.set('demo-image', getCoverUrl(coverImageName));
+            // eslint-disable-next-line max-len --- Better readability
+            deployUrl.searchParams.set('demo-image', '//vercel.com/api/v1/integrations/assets/oac_cTQZ22CIXn5XgZXYk2nBwFdU/images/89676f3d8212947652677da50aa890bb281de2de.png');
+            deployUrl.searchParams.set('external-id', metadata.installationUrl);
+            deployUrl.searchParams.set('integration-ids', 'oac_cTQZ22CIXn5XgZXYk2nBwFdU');
+
+            if (metadata.demoUrl !== undefined) {
+                deployUrl.searchParams.set('demo-url', metadata.demoUrl);
+            }
+        }
+
         update.index.push({
             id: metadata.id,
             title: template.title,
@@ -342,7 +366,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             ),
             documentation: documentation,
             demoUrl: metadata.demoUrl,
-            deployUrl: metadata.deployUrl,
+            deployUrl: deployUrl?.toString(),
             coverImageUrl: getCoverUrl(coverImageName),
             coverVideoUrl: coverVideoName !== undefined
                 ? getCoverUrl(coverVideoName)

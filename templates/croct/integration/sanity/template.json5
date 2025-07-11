@@ -304,7 +304,7 @@
     {
       "name": "define",
       "variables": {
-        "token": "${this.tokenOutput.match(/Token: (\\S+)/)[1]}",
+        "token": "${this.tokenOutput.match(/Token: (\\S+)/)[1]}"
       }
     },
     {

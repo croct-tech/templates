@@ -35,7 +35,7 @@ async function generateApiToken(projectId: string, dataset: string): Promise<str
     }
 
     try {
-        process.stdout.write(await generateApiToken(projectId, dataset));
+        process.stdout.write('Token: ' + await generateApiToken(projectId, dataset));
     } catch (error) {
         console.error(
             error instanceof Error

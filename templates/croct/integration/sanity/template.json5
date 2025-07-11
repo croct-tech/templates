@@ -146,8 +146,7 @@
         "--bare",
         "--create-project",
         "Croct + Sanity starter",
-        "--dataset-default",
-        "production"
+        "--dataset-default"
       ],
       "interactions": [
         {
@@ -300,7 +299,13 @@
         "${this.projectId}",
         "${this.dataset}"
       ],
-      "output": "token"
+      "output": "tokenOutput"
+    },
+    {
+      "name": "define",
+      "variables": {
+        "token": "${this.tokenOutput.match(/Token: (\\S+)/)[1]}"
+      }
     },
     {
       "name": "move-path",

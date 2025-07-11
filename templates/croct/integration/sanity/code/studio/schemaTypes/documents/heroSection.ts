@@ -30,6 +30,13 @@ export const heroSection = defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
+      name: "logos",
+      title: "Logos",
+      type: "array",
+      of: [{ type: "url" }],
+      validation: Rule => Rule.required().min(1),
+    }),
+    defineField({
       name: "tagline",
       title: "Tagline",
       type: "text",

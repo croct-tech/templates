@@ -25,7 +25,7 @@ export default function Home({content}) {
   return (
     <TemplateCanvas
       title="Next.js 14 starter"
-      ctaLabel="Edit this page"
+      ctaLabel="Edit this content"
       ctaLink="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%"
       ctaTarget="_blank"
       fullScreen

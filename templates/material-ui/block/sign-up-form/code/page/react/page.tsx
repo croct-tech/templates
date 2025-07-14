@@ -10,7 +10,7 @@ export default function Page() {
       <SignUpSection {...content} />
       <LinkButton
         branded
-        label="Edit form"
+        label="Edit this content"
         href="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.material_ui&utm_content=sign_up_form&utm_term=react"
         target="_blank"
         position="bottom-right"

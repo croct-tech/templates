@@ -119,7 +119,7 @@
               "value": "${this.experienceId}"
             },
             {
-              "pattern": "Edit content",
+              "pattern": "Edit this content",
               "value": "Manage experiment"
             },
             {

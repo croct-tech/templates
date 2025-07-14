@@ -23,7 +23,7 @@ export default function Page() {
       <LinkButton
         branded
         theme={theme.mode}
-        label="Edit content"
+        label="Edit this content"
         href="%workspaceUrl%/slots?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.material_ui&utm_content=marketing_page&utm_term=nextjs"
         target="_blank"
         position="bottom-right"

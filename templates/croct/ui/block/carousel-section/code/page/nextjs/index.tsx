@@ -35,7 +35,7 @@ export default function Page({content}: PageProps) {
       </main>
       <LinkButton
         branded
-        label="Edit slider"
+        label="Edit this content"
         href="%workspaceUrl%/slots/edit/%slotId%/%slotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.ui_block&utm_content=carousel_section&utm_term=nextjs"
         target="_blank"
         position="bottom-right"

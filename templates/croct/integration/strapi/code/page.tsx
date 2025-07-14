@@ -87,7 +87,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
     <PageContent pageData={{...staticPageData, dynamic_zone: dynamicZones}} />
     <LinkButton
       branded
-      label="Edit this page"
+      label="Edit this content"
       href="%workspaceUrl%/slots/edit/%heroSlotId%/%heroSlotVersion%?utm_medium=cli&utm_source=template&utm_campaign=00000000.CO.DE.cms_integration&utm_content=strapi"
       target="_blank"
       theme="dark"

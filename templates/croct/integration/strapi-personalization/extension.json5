@@ -69,7 +69,7 @@
               "value": "${this.experienceId}"
             },
             {
-              "pattern": "Edit this page",
+              "pattern": "Edit this content",
               "value": "Manage personalized content"
             },
             {

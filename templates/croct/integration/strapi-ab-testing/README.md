@@ -36,6 +36,9 @@ As an example, the home hero content difference lies in the headline:
 
 ![A split-screen comparison image showing two versions of the starter home page. The left side shows the variant A content, and the right side shows the variant B content.](./intro-illustration.png)
 
+> [!NOTE Official Strapi integration guide]
+> Check [this article](https://strapi.io/integrations/croct?utm_source=croct) for more details about Strapi integration.
+
 ## Usage
 
 Run the following command in an empty directory to create a new example project using this template:

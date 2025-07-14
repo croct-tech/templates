@@ -42,6 +42,9 @@ components and slots:
 
 ![A screenshot of Croct's admin with the map of Strapi components to Croct slots.](./intro-illustration-2.png)
 
+> [!NOTE Official Strapi integration guide]
+> Check [this article](https://strapi.io/integrations/croct?utm_source=croct) for more details about Strapi integration.
+
 ## Usage
 
 Run the following command in an empty directory to create a new project using this template:

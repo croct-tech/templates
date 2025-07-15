@@ -9,9 +9,9 @@
       "avatarUrl": "https://github.com/mantinedev.png",
       "websiteUrl": "https://ui.mantine.dev?utm_source=croct"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-cards/cover.png",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-title/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-title/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-title/cover.png",
     "installationUrl": "mantine://block/features-title",
     "deployable": true,
     "categories": [

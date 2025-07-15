@@ -18,6 +18,7 @@ export function ColorModeSelect(props: SelectProps) {
         setMode(event.target.value as 'system' | 'light' | 'dark')
       }
       SelectDisplayProps={{
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         'data-screenshot': 'toggle-mode',
       }}

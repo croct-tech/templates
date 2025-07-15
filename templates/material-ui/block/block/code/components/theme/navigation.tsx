@@ -10,6 +10,11 @@ import UnfoldMoreRoundedIcon from "@mui/icons-material/UnfoldMoreRounded"
 import { gray, brand } from "?/./themePrimitives.{js,ts}"
 
 /* eslint-disable import/prefer-default-export */
+const CustomIconComponent = forwardRef<SVGSVGElement, SvgIconProps>((props, ref) => (
+  <UnfoldMoreRoundedIcon fontSize="small" {...props} ref={ref} />
+));
+CustomIconComponent.displayName = 'CustomIconComponent';
+
 export const navigationCustomizations: Components<Theme> = {
   MuiMenuItem: {
     styleOverrides: {
@@ -58,9 +63,7 @@ export const navigationCustomizations: Components<Theme> = {
   },
   MuiSelect: {
     defaultProps: {
-      IconComponent: forwardRef<SVGSVGElement, SvgIconProps>((props, ref) => (
-        <UnfoldMoreRoundedIcon fontSize="small" {...props} ref={ref} />
-      )),
+      IconComponent: CustomIconComponent,
     },
     styleOverrides: {
       root: ({ theme }) => ({

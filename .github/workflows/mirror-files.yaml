@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  publish-templates:
+  mirror-files:
     permissions:
       id-token: write
       contents: read

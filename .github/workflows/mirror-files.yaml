@@ -30,9 +30,13 @@ jobs:
 
       - name: Deploy release to GCS
         run: |-
-          rsync -av --exclude='cover.png' --exclude='cover.mp4' --exclude='README.md' templates mirror
-          curl -fL "https://api.github.com/repos/croct-tech/templates/git/trees/HEAD?recursive=true" -o mirror/templates/git-tree.json
+          rsync -av --exclude='cover.png' --exclude='cover.mp4' --exclude='README.md' templates mirror    
+          curl -fL -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/croct-tech/templates/git/trees/HEAD?recursive=true" \
+            -o mirror/templates/git-tree.json
           node -e "const fs = require('fs'); fs.writeFileSync('mirror/templates/git-tree.json', JSON.stringify(JSON.parse(fs.readFileSync('mirror/templates/git-tree.json', 'utf8'))))"
           gsutil -m rsync -r -d mirror/templates "gs://${GCLOUD_BUCKET}/templates"
         env:
           GCLOUD_BUCKET: ${{ secrets.GCLOUD_BUCKET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

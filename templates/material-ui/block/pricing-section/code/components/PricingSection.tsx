@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import type { Theme } from "@mui/material/styles";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -81,22 +82,26 @@ export function PricingSection(props: PricingSectionProps) {
               sx={[
                 {
                   p: 2,
-                  display: 'flex',
-                  flexDirection: 'column',
+                  display: "flex",
+                  flexDirection: "column",
                   gap: 4,
                 },
-                tier.recommended &&
-                  ((theme) => ({
-                    border: 'none',
-                    background:
-                      'radial-gradient(circle at 50% 0%, hsl(220, 20%, 35%), hsl(220, 30%, 6%))',
-                    boxShadow: `0 8px 12px hsla(220, 20%, 42%, 0.2)`,
-                    ...theme.applyStyles('dark', {
-                      background:
-                        'radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))',
-                      boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
-                    }),
-                  })),
+                ...(tier.recommended
+                  ? [
+                      (theme: Theme) => ({
+                        border: "none",
+                        background:
+                          theme.palette.mode === "dark"
+                            ? "radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))"
+                            : "radial-gradient(circle at 50% 0%, hsl(220, 20%, 35%), hsl(220, 30%, 6%))",
+                        boxShadow:
+                          theme.palette.mode === "dark"
+                            ? "0 8px 12px hsla(0, 0%, 0%, 0.8)"
+                            : "0 8px 12px hsla(220, 20%, 42%, 0.2)",
+                      }),
+                    ]
+                  : []
+                ),
               ]}
             >
               <CardContent>

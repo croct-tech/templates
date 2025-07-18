@@ -25,7 +25,7 @@ export type FeatureProps = {
 
 export type FeaturesSectionProps = {
   title: string,
-  description: string,
+  description?: string,
   features: FeatureProps[],
 }
 
@@ -114,7 +114,7 @@ function MobileLayout(
               ? ({
                 '--items-imageLight': `url("${features[selectedItemIndex].images.light}")`,
                 '--items-imageDark': `url("${features[selectedItemIndex].images.dark}")`,
-              } as any)
+              } as React.CSSProperties & {[key: string]: string})
               : {}
           }
         />
@@ -263,7 +263,7 @@ export function FeaturesSection(props: FeaturesSectionProps) {
                   ? ({
                     '--items-imageLight': `url("${features[selectedItemIndex].images.light}")`,
                     '--items-imageDark': `url("${features[selectedItemIndex].images.dark}")`,
-                  } as any)
+                  } as React.CSSProperties & {[key: string]: string})
                   : {}
               }
             />

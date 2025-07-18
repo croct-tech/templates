@@ -69,7 +69,7 @@
         ],
         "components": [
           "Navbar.tsx",
-          "Navbar-demo.tsx"
+          "NavbarDemo.tsx"
         ],
         "extension": "material-ui://block/navbar/extension.json5"
       }

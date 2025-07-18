@@ -79,7 +79,7 @@
       "name": "import",
       "template": "croct://starter/croct",
       "options": {
-        "name": "announcement-bar-example",
+        "name": "phone-number-input-example",
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",

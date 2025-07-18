@@ -153,7 +153,7 @@ const style = css`
   box-shadow: var(--ring-offset-shadow), var(--ring-shadow), var(--shadow);
 }`;
 
-function css(strings: TemplateStringsArray, ...values: any[]): string {
+function css(strings: TemplateStringsArray, ...values: (string | number | undefined)[]): string {
   let raw = '';
 
   for (let index = 0; index < strings.length; index++) {

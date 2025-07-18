@@ -40,12 +40,13 @@ export function FeaturesTitle(props: FeaturesTitleProps) {
           )}
           
           <Button
+            component="a"
             variant="gradient"
             gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
             size="lg"
             radius="md"
             mt="xl"
-            herf={cta.link}
+            href={cta.link}
           >
             {cta.label}
           </Button>

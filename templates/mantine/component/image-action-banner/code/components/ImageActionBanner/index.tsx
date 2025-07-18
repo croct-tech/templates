@@ -36,7 +36,13 @@ export function ImageActionBanner(props: ImageActionBannerProps) {
             })}
         </Text>
 
-        <Button className={classes.action} variant="white" color="dark" size="xs" href={cta.link}>
+        <Button 
+          component="a"
+          className={classes.action} 
+          variant="white" 
+          color="dark" 
+          size="xs" 
+          href={cta.link}>
           {cta.label}
         </Button>
       </div>

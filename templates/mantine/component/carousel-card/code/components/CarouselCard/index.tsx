@@ -76,7 +76,13 @@ export function CarouselCard(props: CarouselCardProps) {
           </Text>
         </div>
 
-        <Button radius="md" href={cta.link}>{cta.label}</Button>
+        <Button
+          component="a" 
+          radius="md" 
+          href={cta.link}
+        >
+          {cta.label}
+        </Button>
       </Group>
     </Card>
   );

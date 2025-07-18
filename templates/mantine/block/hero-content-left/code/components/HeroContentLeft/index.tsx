@@ -37,7 +37,13 @@ export function HeroContentLeft(props: HeroContentLeftProps) {
             })}
         </Text>
 
-        <Button variant="gradient" size="xl" radius="xl" className={classes.control} href={cta.link}>
+        <Button 
+          variant="gradient" 
+          component="a"
+          size="xl" 
+          radius="xl" 
+          className={classes.control} 
+          href={cta.link}>
           {cta.label}
         </Button>
       </Container>

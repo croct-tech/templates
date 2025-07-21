@@ -69,7 +69,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "bun x shadcn@2.8.0 add button"
+                "value": "bun x shadcn@latest add button"
               }
             },
             "tabName": {

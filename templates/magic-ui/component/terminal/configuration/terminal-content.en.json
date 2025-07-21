@@ -26,7 +26,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "pnpm dlx shadcn@2.8.0 init"
+                "value": "pnpm dlx shadcn@latest init"
               }
             },
             "animation": {

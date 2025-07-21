@@ -50,7 +50,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "pnpm dlx shadcn@latest add button"
+                "value": "pnpm dlx shadcn@2.8.0 add button"
               }
             },
             "tabName": {
@@ -69,7 +69,7 @@
               "type": "text",
               "value": {
                 "type": "static",
-                "value": "bun x shadcn@latest add button"
+                "value": "bun x shadcn@2.8.0 add button"
               }
             },
             "tabName": {

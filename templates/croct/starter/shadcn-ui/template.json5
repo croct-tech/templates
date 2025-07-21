@@ -120,7 +120,7 @@
     },
     {
       "name": "execute-package",
-      "command": "shadcn@latest",
+      "command": "shadcn@2.8.0",
       "runner": "npm",
       "arguments": [
         "init"

@@ -11,6 +11,7 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/email-banner/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/email-banner/template.json5",
+    "demoUrl": "https://mantine-email-banner.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/email-banner/cover.png",
     "installationUrl": "mantine://component/email-banner",
     "deployable": true,

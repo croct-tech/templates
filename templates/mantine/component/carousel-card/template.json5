@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/carousel-card/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/carousel-card/template.json5",
+    "demoUrl": "https://mantine-carousel-card.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/carousel-card/cover.png",
     "installationUrl": "mantine://component/carousel-card",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -24,8 +26,7 @@
     "relatedTemplates": [
       "interface/section/cards-section",
       "interface/section/product-cards-section"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/cookie-consent/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/cookie-consent/template.json5",
+    "demoUrl": "https://hero-ui-cookie-consent.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/hero-ui/component/cookie-consent/cover.png",
     "installationUrl": "hero-ui://component/cookie-consent",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -24,8 +26,7 @@
     ],
     "relatedTemplates": [
       "library/mantine/cookies-banner"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

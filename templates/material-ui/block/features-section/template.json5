@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/template.json5",
+    "demoUrl": "https://material-ui-features-section.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/features-section/cover.png",
     "installationUrl": "material-ui://block/features-section",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -25,8 +27,7 @@
       "interface/section/cards-section",
       "library/mantine/features-cards",
       "library/material-ui/highlights-section"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

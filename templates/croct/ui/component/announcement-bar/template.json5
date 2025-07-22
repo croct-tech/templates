@@ -12,8 +12,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/template.json5",
+    "demoUrl": "https://component-announcement-bar.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/ui/component/announcement-bar/cover.png",
     "installationUrl": "croct://ui/component/announcement-bar",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -25,8 +27,7 @@
     "relatedTemplates": [
       "interface/component/announcement-bar",
       "use-case/location/geomarketing"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

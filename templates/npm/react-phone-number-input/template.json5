@@ -11,9 +11,11 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/react-phone-number-input/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/react-phone-number-input/template.json5",
+    "demoUrl": "https://form-react-phone-number-input.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/react-phone-number-input/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/npm/react-phone-number-input/cover.mp4",
     "installationUrl": "npm://react-phone-number-input",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -28,8 +30,7 @@
       "library/material-ui/sign-up-form",
       "library/material-ui/sign-up-side",
       "use-case/location/geomarketing"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

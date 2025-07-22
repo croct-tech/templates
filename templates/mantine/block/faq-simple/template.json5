@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/faq-simple/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/faq-simple/template.json5",
+    "demoUrl": "https://mantine-faq-simple.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/faq-simple/cover.png",
     "installationUrl": "mantine://block/faq-simple",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -24,8 +26,7 @@
     "relatedTemplates": [
       "interface/section/faq-section",
       "library/material-ui/faq-section"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

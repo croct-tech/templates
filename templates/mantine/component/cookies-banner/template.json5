@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/cookies-banner/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/cookies-banner/template.json5",
+    "demoUrl": "https://mantine-cookies-banner.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/component/cookies-banner/cover.png",
     "installationUrl": "mantine://component/cookies-banner",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -25,8 +27,7 @@
       "interface/component/modal-dialog",
       "library/hero-ui/cookie-consent",
       "library/mantine/image-action-banner"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

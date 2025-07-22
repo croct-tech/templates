@@ -11,6 +11,7 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-title/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-title/template.json5",
+    "demoUrl": "https://mantine-features-title.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/features-title/cover.png",
     "installationUrl": "mantine://block/features-title",
     "deployable": true,

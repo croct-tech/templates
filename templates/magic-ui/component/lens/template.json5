@@ -11,7 +11,7 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/template.json5",
-    "demoUrl": "https://magic-ui-code-comparison.preview.croct.live",
+    "demoUrl": "https://magic-ui-lens.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/cover.png",
     "installationUrl": "magic-ui://component/lens",
     "deployable": true,

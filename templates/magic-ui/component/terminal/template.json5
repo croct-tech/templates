@@ -11,9 +11,11 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/template.json5",
+    "demoUrl": "https://magic-ui-terminal.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/terminal/cover.mp4",
     "installationUrl": "magic-ui://component/terminal",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -27,8 +29,7 @@
     "relatedTemplates": [
       "library/magic-ui/code-comparison",
       "library/magic-ui/script-copy-btn"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/template.json5",
+    "demoUrl": "https://magic-ui-code-comparison.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/lens/cover.png",
     "installationUrl": "magic-ui://component/lens",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -21,8 +23,7 @@
       "language/javascript",
       "language/typescript",
       "library/magic-ui"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

@@ -11,9 +11,11 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/template.json5",
+    "demoUrl": "https://magic-ui-dock.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/dock/cover.mp4",
     "installationUrl": "magic-ui://component/dock",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -24,8 +26,7 @@
       "language/typescript",
       "library/framer-motion",
       "library/magic-ui"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

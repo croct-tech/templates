@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/pricing-section/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/pricing-section/template.json5",
+    "demoUrl": "https://material-ui-pricing-section.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/pricing-section/cover.png",
     "installationUrl": "material-ui://block/pricing-section",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -23,8 +25,7 @@
     ],
     "relatedTemplates": [
       "library/shadcn-ui/pricing-page"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

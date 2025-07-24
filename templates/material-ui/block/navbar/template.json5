@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/template.json5",
+    "demoUrl": "https://material-ui-navbar.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/navbar/cover.png",
     "installationUrl": "material-ui://block/navbar",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -25,8 +27,7 @@
     "relatedTemplates": [
       "interface/component/navbar",
       "library/mantine/header-simple"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

@@ -12,8 +12,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/nextjs/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/nextjs/template.json5",
+    "demoUrl": "https://starter-nextjs.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/nextjs/cover.png",
     "installationUrl": "croct://starter/nextjs",
+    "deployable": true,
     "categories": [
       "boilerplate/starter",
       "framework/nextjs",
@@ -23,8 +25,7 @@
     ],
     "relatedTemplates": [
       "boilerplate/starter/shadcn-ui"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "name": {

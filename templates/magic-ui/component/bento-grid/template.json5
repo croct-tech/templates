@@ -11,9 +11,11 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/template.json5",
+    "demoUrl": "https://magic-ui-bento-grid.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/bento-grid/cover.mp4",
     "installationUrl": "magic-ui://component/bento-grid",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -26,8 +28,7 @@
     ],
     "relatedTemplates": [
       "library/magic-ui/marquee"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

@@ -11,8 +11,10 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-content-left/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-content-left/template.json5",
+    "demoUrl": "https://mantine-hero-content-left.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/mantine/block/hero-content-left/cover.png",
     "installationUrl": "mantine://block/hero-content-left",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -27,8 +29,7 @@
       "interface/section/hero-section",
       "library/mantine/hero-bullets",
       "library/material-ui/hero-section"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

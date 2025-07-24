@@ -24,8 +24,8 @@ export type PageSectionsProps = {
   faq: FaqSectionProps,
 }
 
-export function MarketingPage(props: PageSectionsProps) {
-  const sectionProps = {...defaultContent, ...props};
+export function MarketingPage(props: Partial<PageSectionsProps>) {
+  const sectionProps = {...defaultContent, ...props} as PageSectionsProps;
 
   return (
     <AppTheme>

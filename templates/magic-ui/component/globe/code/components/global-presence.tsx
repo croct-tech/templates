@@ -16,6 +16,7 @@ interface GlobalPresenceProps {
 const GLOBE_CONFIG: Omit<COBEOptions, "markers"> = {
   width: 800,
   height: 800,
+  onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,

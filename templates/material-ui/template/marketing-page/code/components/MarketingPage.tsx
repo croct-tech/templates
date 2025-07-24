@@ -25,7 +25,7 @@ export type PageSectionsProps = {
 }
 
 export function MarketingPage(props: Partial<PageSectionsProps>) {
-  const sectionProps = {...defaultContent, ...props} as PageSectionsProps;
+  const sectionProps: PageSectionsProps = {...defaultContent, ...props};
 
   return (
     <AppTheme>

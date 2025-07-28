@@ -341,12 +341,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             deployUrl.searchParams.set('repository-name', projectName);
             deployUrl.searchParams.set('demo-title', template.title);
             deployUrl.searchParams.set('demo-description', template.description);
-            // Vercel currently only support specific domain names for demo images.
-            // As a workaround, use a static image hosted on Vercel.
-            // Once Vercel supports custom demo images, it should be replaced with:
-            // deployUrl.searchParams.set('demo-image', getCoverUrl(coverImageName));
-            // eslint-disable-next-line max-len --- Better readability
-            deployUrl.searchParams.set('demo-image', '//vercel.com/api/v1/integrations/assets/oac_cTQZ22CIXn5XgZXYk2nBwFdU/images/89676f3d8212947652677da50aa890bb281de2de.png');
+            deployUrl.searchParams.set('demo-image', getCoverUrl(coverImageName));
             deployUrl.searchParams.set('external-id', metadata.installationUrl);
             deployUrl.searchParams.set('integration-ids', 'oac_cTQZ22CIXn5XgZXYk2nBwFdU');
 

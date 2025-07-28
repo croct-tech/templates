@@ -41,8 +41,6 @@ export function HighlightsSection(props: HighlightsSectionProps) {
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
-        color: 'white',
-        bgcolor: 'grey.900',
       }}
     >
       <Container
@@ -82,8 +80,6 @@ export function HighlightsSection(props: HighlightsSectionProps) {
                   color: 'inherit',
                   p: 3,
                   height: '100%',
-                  borderColor: 'hsla(220, 25%, 25%, 0.3)',
-                  backgroundColor: 'grey.800',
                 }}
               >
                 <Box sx={{ opacity: '50%' }}>{iconMap[item.icon]}</Box>

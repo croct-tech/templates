@@ -11,6 +11,7 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-in-side/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-in-side/template.json5",
+    "demoUrl": "https://material-ui-sign-in-side.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/block/sign-in-side/cover.png",
     "installationUrl": "material-ui://block/sign-in-side",
     "deployable": true,

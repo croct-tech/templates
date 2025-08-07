@@ -11,9 +11,11 @@
     },
     "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/README.md",
     "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/template.json5",
+    "demoUrl": "https://material-ui-marketing-page.preview.croct.live",
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/cover.png",
     "coverVideoUrl": "https://github.com/croct-tech/templates/blob/master/templates/material-ui/template/marketing-page/cover.mp4",
     "installationUrl": "material-ui://template/marketing-page",
+    "deployable": true,
     "categories": [
       "framework/nextjs",
       "framework/react",
@@ -22,8 +24,7 @@
       "language/javascript",
       "language/typescript",
       "library/material-ui"
-    ],
-    "deployable": true
+    ]
   },
   "options": {
     "version": {

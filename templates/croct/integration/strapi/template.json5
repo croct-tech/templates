@@ -52,7 +52,7 @@
       "name": "execute-package",
       "command": "giget@latest",
       "arguments": [
-        "gh:strapi/LaunchPad",
+        "gh:strapi/LaunchPad#8ccb412934020a02c903f0aadfc0decff644d333",
         "${this.projectName}"
       ]
     },
@@ -118,6 +118,12 @@
       "name": "install"
     },
     {
+      "name": "add-dependency",
+      "dependencies": [
+        "@strapi/types@5.19.0"
+      ]
+    },
+    {
       "name": "execute-package",
       "command": "seed",
       "script": true,
@@ -128,6 +134,13 @@
     {
       "name": "change-directory",
       "path": "../next"
+    },
+    {
+      "name": "add-dependency",
+      "development": true,
+      "dependencies": [
+        "husky"
+      ]
     },
     {
       "name": "add-dependency",

@@ -1,18 +1,12 @@
-// Workaround for https://github.com/eslint/eslint/issues/3458
-require('@rushstack/eslint-patch/modern-module-resolution');
+import { defineConfig } from 'eslint/config';
+import { configs } from '@croct/eslint-plugin';
 
-module.exports = {
-    extends: ['plugin:@croct/typescript'],
-    plugins: ['@croct'],
-    parserOptions: {
-        project: ['**/tsconfig.json'],
-    },
-    overrides: [
-        {
-            files: ['bin/*.ts'],
-            rules: {
-                'no-console': 'off',
-            },
+export default defineConfig(
+    configs.typescript,
+    {
+        files: ['bin/*.ts'],
+        rules: {
+            'no-console': 'off',
         },
-    ],
-};
+    }
+);

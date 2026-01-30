@@ -7,7 +7,7 @@ export default defineConfig(
         files: ['bin/*.ts'],
         rules: {
             'no-console': 'off',
-            '@typescript-eslint/unbound-method': 'off',
+            '@typescript-eslint/no-floating-promises': 'off',
         },
     }
 );

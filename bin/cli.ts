@@ -1356,4 +1356,4 @@ async function run(): Promise<void> {
     await program.parseAsync();
 }
 
-void run();
+run();

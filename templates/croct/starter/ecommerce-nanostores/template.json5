@@ -1,0 +1,316 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Ecommerce + Nanostores starter",
+  "description": "An ecommerce site with personalized banners and product recommendations using Croct Nanostores.",
+  "metadata": {
+    "id": "boilerplate/starter/ecommerce-nanostores",
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/ecommerce-nanostores/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/ecommerce-nanostores/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/starter/ecommerce-nanostores/cover.png",
+    "installationUrl": "croct://starter/ecommerce-nanostores",
+    "categories": [
+      "boilerplate/starter",
+      "framework/react",
+      "language/typescript",
+      "library/nanostores"
+    ],
+    "relatedTemplates": [
+      "boilerplate/starter/nextjs",
+      "boilerplate/starter/shadcn-ui"
+    ]
+  },
+  "options": {
+    "name": {
+      "type": "string",
+      "description": "The name of the project.",
+      "default": "my-croct-shop"
+    },
+    "disableLauncher": {
+      "type": "boolean",
+      "description": "Whether to disable opening the project in the browser.",
+      "default": false
+    }
+  },
+  "actions": [
+    {
+      "name": "test",
+      "condition": "${project.platform === 'unknown'}",
+      "then": [
+        {
+          "name": "print",
+          "semantics": "info",
+          "message": "No project found in the current directory"
+        },
+        {
+          "name": "prompt",
+          "type": "confirmation",
+          "message": "Start a new project?",
+          "default": true,
+          "result": "createProject"
+        },
+        {
+          "name": "test",
+          "condition": "${this.createProject}",
+          "then": [
+            {
+              "name": "define",
+              "variables": {
+                "projectName": "${options.name}"
+              }
+            },
+            {
+              "name": "import",
+              "template": "croct://utils/filename-generator",
+              "options": {
+                "reference": "projectName"
+              }
+            },
+            {
+              "name": "execute-package",
+              "runner": "npm",
+              "command": "create-vite@latest",
+              "arguments": "${[this.projectName, '--template', 'react-ts']}",
+              "interactions": [
+                {
+                  "when": "Ok to proceed",
+                  "then": [
+                    "y",
+                    "[enter]"
+                  ]
+                },
+                {
+                  "when": "Scaffolding project",
+                  "final": true
+                },
+                {
+                  "when": "Done.",
+                  "final": true
+                }
+              ]
+            },
+            {
+              "name": "change-directory",
+              "path": "${this.projectName}"
+            }
+          ],
+          "else": {
+            "name": "fail",
+            "title": "Project not found",
+            "message": "Unable to locate a project in the current directory.",
+            "suggestions": [
+              "Navigate to the project directory and try again."
+            ]
+          }
+        }
+      ],
+      "else": [
+        {
+          "name": "integrate-croct"
+        }
+      ]
+    },
+    {
+      "name": "add-dependency",
+      "dependencies": [
+        "croct-nanostores",
+        "nanostores",
+        "@nanostores/react"
+      ]
+    },
+    {
+      "name": "create-resource",
+      "resources": {
+        "components": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "description": "A small text bar featured at the top of a page.",
+            "schema": "${import('./configuration/announcement-bar-schema.json')}"
+          },
+          "hero-banner": {
+            "name": "Hero banner",
+            "description": "A full-width banner with a title, subtitle, and call-to-action.",
+            "schema": "${import('./configuration/hero-banner-schema.json')}"
+          },
+          "product-cards": {
+            "name": "Product cards",
+            "description": "A section featuring personalized product recommendations.",
+            "schema": "${import('./configuration/product-cards-schema.json')}"
+          }
+        },
+        "slots": {
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "component": "announcement-bar",
+            "content": {
+              "en": "${import('./configuration/announcement-bar-content.en.json')}"
+            }
+          },
+          "home-hero-banner": {
+            "name": "Home hero banner",
+            "component": "hero-banner",
+            "content": {
+              "en": "${import('./configuration/hero-banner-content.en.json')}"
+            }
+          },
+          "recommended-products": {
+            "name": "Recommended products",
+            "component": "product-cards",
+            "content": {
+              "en": "${import('./configuration/product-cards-content.en.json')}"
+            }
+          }
+        }
+      },
+      "result": {
+        "slots": {
+          "announcement-bar": {
+            "id": "announcementBarSlotId",
+            "version": "announcementBarSlotVersion"
+          },
+          "home-hero-banner": {
+            "id": "heroBannerSlotId",
+            "version": "heroBannerSlotVersion"
+          },
+          "recommended-products": {
+            "id": "productsSlotId",
+            "version": "productsSlotVersion"
+          }
+        }
+      }
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this.announcementBarSlotId}@${this.announcementBarSlotVersion}",
+        "${this.heroBannerSlotId}@${this.heroBannerSlotVersion}",
+        "${this.productsSlotId}@${this.productsSlotVersion}"
+      ]
+    },
+    {
+      "name": "download",
+      "source": "code/stores/croct.ts",
+      "destination": "${project.path.source}/stores"
+    },
+    {
+      "name": "download",
+      "source": "code/stores/banner.ts",
+      "destination": "${project.path.source}/stores"
+    },
+    {
+      "name": "download",
+      "source": "code/stores/products.ts",
+      "destination": "${project.path.source}/stores"
+    },
+    {
+      "name": "download",
+      "source": "code/stores/cart.ts",
+      "destination": "${project.path.source}/stores"
+    },
+    {
+      "name": "download",
+      "source": "code/components/AnnouncementBar.tsx",
+      "destination": "${project.path.source}/components"
+    },
+    {
+      "name": "download",
+      "source": "code/components/HeroBanner.tsx",
+      "destination": "${project.path.source}/components"
+    },
+    {
+      "name": "download",
+      "source": "code/components/ProductGrid.tsx",
+      "destination": "${project.path.source}/components"
+    },
+    {
+      "name": "download",
+      "source": "code/components/Cart.tsx",
+      "destination": "${project.path.source}/components"
+    },
+    {
+      "name": "download",
+      "source": "code/App.tsx",
+      "destination": "${project.path.source}",
+      "overwrite": true
+    },
+    {
+      "name": "download",
+      "source": "code/main.tsx",
+      "destination": "${project.path.source}",
+      "overwrite": true
+    },
+    {
+      "name": "download",
+      "source": "code/index.css",
+      "destination": "${project.path.source}",
+      "overwrite": true
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${project.path.source}/stores/croct.ts",
+          "replacements": [
+            {
+              "pattern": "%appId%",
+              "value": "${project.workspace.applicationId}"
+            }
+          ]
+        },
+        {
+          "path": "${project.path.source}/stores/banner.ts",
+          "replacements": [
+            {
+              "pattern": "%announcementBarSlotId%",
+              "value": "${this.announcementBarSlotId}"
+            },
+            {
+              "pattern": "%announcementBarSlotVersion%",
+              "value": "${this.announcementBarSlotVersion}"
+            },
+            {
+              "pattern": "%heroBannerSlotId%",
+              "value": "${this.heroBannerSlotId}"
+            },
+            {
+              "pattern": "%heroBannerSlotVersion%",
+              "value": "${this.heroBannerSlotVersion}"
+            }
+          ]
+        },
+        {
+          "path": "${project.path.source}/stores/products.ts",
+          "replacements": [
+            {
+              "pattern": "%productsSlotId%",
+              "value": "${this.productsSlotId}"
+            },
+            {
+              "pattern": "%productsSlotVersion%",
+              "value": "${this.productsSlotVersion}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Ecommerce project with Nanostores successfully set up."
+    },
+    {
+      "name": "test",
+      "condition": "${!options.disableLauncher}",
+      "then": [
+        {
+          "name": "import",
+          "template": "croct://utils/example-launcher"
+        }
+      ]
+    }
+  ]
+}

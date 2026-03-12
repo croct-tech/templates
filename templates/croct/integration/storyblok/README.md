@@ -2,21 +2,8 @@
 
 Looking to add **AB testing** or **personalization** to your Storyblok-powered site?
 
-This template combines [Storyblok](https://www.storyblok.com?utm_source=croct) and Croct to help you run experiments,
-personalize content by audience, and analyze results without changing your CMS.
+[Optimize by Croct](https://www.storyblok.com/apps/external/optimize) is a Storyblok app that brings personalization and 
+AB testing directly into the Storyblok interface. It connects your Storyblok space to Croct and lets you link any block 
+to a slot, so marketers can manage dynamic content without touching code.
 
-It's the fastest way to add experimentation and personalization on top of Storyblok CMS.
-
-* AB testing support with real-time audience evaluation
-* Content personalization based on location, behavior, or custom rules
-* Built-in analytics for every variant and experience
-* Seamless compatibility with your existing Storyblok schemas
-* Fast to implement with zero CMS migration
-
-## Usage
-
-Run the following command in an empty directory to create a new project using this template:
-
-```croct-cmd
-croct use croct://integration/storyblok
-```
+Please follow [this tutorial](https://docs.croct.com/immersion/tutorials/storyblok-integration) to get started.

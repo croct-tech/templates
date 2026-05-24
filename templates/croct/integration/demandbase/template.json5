@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Demandbase integration",
+  "description": "Activate Demandbase firmographic data for website personalization.",
+  "metadata": {
+    "id": "integration/data-enrichment/demandbase",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/demandbase/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/demandbase/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/demandbase/cover.png",
+    "categories": [
+      "integration/data-enrichment"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/demandbase-data-activation"
+    }
+  ]
+}

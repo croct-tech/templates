@@ -49,6 +49,7 @@ const categoryMap = {
     'framework/react': 'React',
     'integration/cms': 'CMS',
     'integration/cdp': 'CDP',
+    'integration/data-enrichment': 'Data enrichment',
     'interface/code': 'Code',
     'interface/component': 'Component',
     'interface/feedback': 'Feedback',

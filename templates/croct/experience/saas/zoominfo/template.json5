@@ -1,30 +1,30 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "ABM campaign experience",
-  "description": "A personalized experience based on ABM campaigns.",
+  "title": "ZoomInfo experience",
+  "description": "A personalized experience based on ZoomInfo firmographic data.",
   "metadata": {
-    "id": "use-case/saas/abm-campaign",
+    "id": "use-case/saas/zoominfo",
     "verified": true,
     "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/cover.png",
-    "installationUrl": "croct://experience/saas/abm-campaign",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/zoominfo/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/zoominfo/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/zoominfo/cover.png",
+    "installationUrl": "croct://experience/saas/zoominfo",
     "categories": [
       "use-case/experience",
       "use-case/saas"
     ],
     "relatedTemplates": [
+      "integration/data-enrichment/zoominfo",
       "interface/component/announcement-bar",
       "use-case/saas/6sense",
+      "use-case/saas/abm-campaign",
       "use-case/saas/clearbit",
-      "use-case/saas/demandbase",
-      "use-case/saas/linkedin-campaign",
-      "use-case/saas/zoominfo"
+      "use-case/saas/demandbase"
     ]
   },
   "actions": [
@@ -32,9 +32,9 @@
       "name": "create-resource",
       "resources": {
         "audiences": {
-          "acme-abm-campaign": {
-            "name": "ACME ABM campaign",
-            "criteria": "campaign's source is \"linkedin\" and campaign's name matches \"acme\""
+          "abm-zoominfo-financial-services": {
+            "name": "ZoomInfo Financial Services",
+            "criteria": "user's industry is \"Financial Services\""
           }
         },
         "components": {
@@ -72,10 +72,10 @@
         },
         "experiences": [
           {
-            "name": "🎯 ABM campaign",
+            "name": "🏢 ABM ZoomInfo",
             "draft": true,
             "audiences": [
-              "acme-abm-campaign"
+              "abm-zoominfo-financial-services"
             ],
             "slots": [
               "home-hero",

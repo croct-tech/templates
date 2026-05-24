@@ -1,29 +1,29 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
-  "title": "ABM campaign experience",
-  "description": "A personalized experience based on ABM campaigns.",
+  "title": "Clearbit experience",
+  "description": "A personalized experience based on Clearbit firmographic data.",
   "metadata": {
-    "id": "use-case/saas/abm-campaign",
+    "id": "use-case/saas/clearbit",
     "verified": true,
     "ecosystem": {
       "name": "Croct",
       "avatarUrl": "https://github.com/croct-tech.png",
       "websiteUrl": "https://croct.com"
     },
-    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/README.md",
-    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/template.json5",
-    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/abm-campaign/cover.png",
-    "installationUrl": "croct://experience/saas/abm-campaign",
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/clearbit/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/clearbit/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/clearbit/cover.png",
+    "installationUrl": "croct://experience/saas/clearbit",
     "categories": [
       "use-case/experience",
       "use-case/saas"
     ],
     "relatedTemplates": [
+      "integration/data-enrichment/clearbit",
       "interface/component/announcement-bar",
       "use-case/saas/6sense",
-      "use-case/saas/clearbit",
+      "use-case/saas/abm-campaign",
       "use-case/saas/demandbase",
-      "use-case/saas/linkedin-campaign",
       "use-case/saas/zoominfo"
     ]
   },
@@ -32,9 +32,9 @@
       "name": "create-resource",
       "resources": {
         "audiences": {
-          "acme-abm-campaign": {
-            "name": "ACME ABM campaign",
-            "criteria": "campaign's source is \"linkedin\" and campaign's name matches \"acme\""
+          "abm-clearbit-financial-services": {
+            "name": "Clearbit Financial Services",
+            "criteria": "user's industry is \"Financial Services\""
           }
         },
         "components": {
@@ -72,10 +72,10 @@
         },
         "experiences": [
           {
-            "name": "🎯 ABM campaign",
+            "name": "🏢 ABM Clearbit",
             "draft": true,
             "audiences": [
-              "acme-abm-campaign"
+              "abm-clearbit-financial-services"
             ],
             "slots": [
               "home-hero",

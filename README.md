@@ -5,7 +5,7 @@
         <source media="(min-width: 769px) and (prefers-color-scheme: dark)" srcset="https://github.com/croct-tech/plug-js/blob/master/.github/assets/header-dark.svg">
         <source media="(max-width: 768px) and (prefers-color-scheme: dark)" srcset="https://github.com/croct-tech/plug-js/blob/master/.github/assets/header-dark-mobile.svg">
         <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="https://github.com/croct-tech/plug-js/blob/master/.github/assets/header-light-mobile.svg">
-        <img src="https://raw.githubusercontent.com/croct-tech/plug-js/refs/heads/update-readme/.github/assets/header-light-mobile.svg" alt="Croct Templates" title="Croct Templates" width="100%">
+        <img src="https://github.com/croct-tech/plug-js/blob/master/.github/assets/header-light-mobile.svg" alt="Croct Templates" title="Croct Templates" width="100%">
     </picture>
   </a>
   <br/>
@@ -37,7 +37,7 @@ Built by seasoned open-source contributors, we offer a **💚 forever-free plan*
 To use it with [Next.js](https://nextjs.org/), run:
 
 ```sh
-croct use nextjs:/croct
+croct use croct://starter/nextjs
 ```
 
 This will either set up a new Next.js project or add the component to an existing one, fully configured.
@@ -69,19 +69,19 @@ croct use <template-url>
 For example:
 
 ```sh
-croct use https://github.com/croct/templates/tree/main/templates/magic-ui/ui/marquee
+croct use https://github.com/croct-tech/templates/blob/master/templates/magic-ui/component/marquee/template.json5
 ```
 
 This command will fetch and apply the template to your project automatically.
 
-For more information, check the [documentation](https://docs.croct.com/reference/cli?utm_medium=repo&utm_source=template&utm_campaign=00000000.CO.DE.templates).
+For more information, check the [documentation](https://docs.croct.com/reference/cli/templates/overview?utm_medium=repo&utm_source=template&utm_campaign=00000000.CO.DE.templates).
 
 ### Aliases
 
 We support aliases for popular libraries, so you can skip the full URL. For example, to use the [Marquee](https://magicui.design/docs/components/marquee) component from [Magic UI](https://magicui.design/), you can run:
 
 ```sh
-croct use magic-ui:/ui/marquee
+croct use magic-ui://component/marquee
 ```
 
 Or use the component's registry URL:
@@ -139,7 +139,7 @@ The `[organization]` should be the company's domain without `.com`, `.io`, or si
 
 ### Documentation
 
-Check the [documentation](https://docs.croct.com/reference/cli/templates?utm_medium=repo&utm_source=template&utm_campaign=00000000.CO.DE.templates) for more information on how to create and publish templates.
+Check the [documentation](https://docs.croct.com/reference/cli/templates/overview?utm_medium=repo&utm_source=template&utm_campaign=00000000.CO.DE.templates) for more information on how to create and publish templates.
 
 ## License
 

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "HubSpot forms + personalization",
+  "description": "A template for showing personalized HubSpot forms to different audiences.",
+  "metadata": {
+    "id": "integration/crm/hubspot-personalization",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot-personalization/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot-personalization/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot-personalization/cover.png",
+    "installationUrl": "croct://integration/hubspot-personalization",
+    "categories": [
+      "integration/crm"
+    ],
+    "relatedTemplates": [
+      "integration/crm/hubspot",
+      "integration/crm/hubspot-ab-testing"
+    ]
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct://integration/hubspot",
+      "options": {
+        "extension": "croct://integration/hubspot-personalization/extension.json5"
+      }
+    }
+  ]
+}

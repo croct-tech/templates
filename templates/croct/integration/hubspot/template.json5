@@ -1,0 +1,97 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "HubSpot forms integration",
+  "description": "An integration template for personalizing and testing HubSpot forms with Croct.",
+  "metadata": {
+    "id": "integration/crm/hubspot",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot/cover.png",
+    "installationUrl": "croct://integration/hubspot",
+    "categories": [
+      "integration/crm"
+    ],
+    "relatedTemplates": [
+      "integration/crm/hubspot-ab-testing",
+      "integration/crm/hubspot-personalization"
+    ]
+  },
+  "options": {
+    "extension": {
+      "type": "string",
+      "description": "The URL of the extension template to apply."
+    }
+  },
+  "actions": [
+    {
+      "name": "define",
+      "variables": {
+        "slotId": "",
+        "slotVersion": ""
+      }
+    },
+    {
+      "name": "test",
+      "condition": "${options.extension !== null}",
+      "then": [
+        {
+          "name": "import",
+          "template": "${options.extension}",
+          "options": {
+            "slotId": "slotId",
+            "slotVersion": "slotVersion"
+          }
+        }
+      ],
+      "else": [
+        {
+          "name": "create-resource",
+          "resources": {
+            "components": {
+              "hubspot-form": {
+                "name": "HubSpot form",
+                "description": "Stores the ID of the HubSpot form to render.",
+                "schema": "${import('./configuration/hubspot-form-schema.json')}"
+              }
+            },
+            "slots": {
+              "hubspot-form": {
+                "name": "HubSpot form",
+                "component": "hubspot-form",
+                "content": {
+                  "en": "${import('./configuration/hubspot-form-slot-content.en.json')}"
+                }
+              }
+            }
+          },
+          "result": {
+            "slots": {
+              "hubspot-form": {
+                "id": "slotId",
+                "version": "slotVersion"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "add-slot",
+      "slots": [
+        "${this.slotId}"
+      ]
+    },
+    {
+      "name": "print",
+      "semantics": "info",
+      "title": "HubSpot form slot ready",
+      "message": "Fetch the `hubspot-form` slot and render the returned `formId`. Follow the tutorial to embed the form and track submissions: https://docs.croct.com/immersion/tutorials/hubspot-forms"
+    }
+  ]
+}

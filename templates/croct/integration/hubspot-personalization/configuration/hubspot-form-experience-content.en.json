@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "formId": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "22222222-2222-2222-2222-222222222222"
+      }
+    }
+  }
+}

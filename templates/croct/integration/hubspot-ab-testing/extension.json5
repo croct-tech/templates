@@ -1,0 +1,101 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "HubSpot AB testing customization",
+  "description": "A customization template for the HubSpot AB testing template.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "all-users": {
+            "name": "All users",
+            "criteria": "true"
+          }
+        },
+        "components": {
+          "hubspot-form": {
+            "name": "HubSpot form",
+            "description": "Stores the ID of the HubSpot form to render.",
+            "schema": "${import('croct://integration/hubspot/configuration/hubspot-form-schema.json')}"
+          }
+        },
+        "slots": {
+          "hubspot-form": {
+            "name": "HubSpot form",
+            "component": "hubspot-form",
+            "content": {
+              "en": "${import('croct://integration/hubspot/configuration/hubspot-form-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Form experiment",
+            "draft": true,
+            "audiences": [
+              "all-users"
+            ],
+            "slots": [
+              "hubspot-form"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Form variant test",
+              "goalId": "form-submission",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Current form",
+                  "content": {
+                    "default": {
+                      "hubspot-form": {
+                        "en": "${import('croct://integration/hubspot/configuration/hubspot-form-slot-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Alternative form",
+                  "content": {
+                    "default": {
+                      "hubspot-form": {
+                        "en": "${import('./configuration/hubspot-form-experience-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "result": {
+        "slots": {
+          "hubspot-form": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    }
+  ]
+}

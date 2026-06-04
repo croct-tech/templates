@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Storyblok CMS + Demandbase",
+  "description": "A template for adding firmographic personalization on a Storyblok project.",
+  "metadata": {
+    "id": "integration/cms/storyblok-demandbase",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-demandbase/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-demandbase/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-demandbase/cover.png",
+    "installationUrl": "croct://integration/storyblok-demandbase",
+    "categories": [
+      "integration/cms",
+      "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/storyblok",
+      "integration/cms/storyblok-ab-testing",
+      "integration/cms/storyblok-personalization",
+      "integration/data-enrichment/demandbase"
+    ]
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "mid-market-financial-services": {
+            "name": "Mid-market financial services",
+            "criteria": "user's industry is 'Financial Services' and user's employees is 'Mid-market'"
+          }
+        },
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "Mid-market financial services",
+            "draft": true,
+            "audiences": [
+              "mid-market-financial-services"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

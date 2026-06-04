@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Storyblok CMS + AB testing",
+  "description": "A template for running AB tests on a Storyblok project.",
+  "metadata": {
+    "id": "integration/cms/storyblok-ab-testing",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-ab-testing/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-ab-testing/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-ab-testing/cover.png",
+    "installationUrl": "croct://integration/storyblok-ab-testing",
+    "categories": [
+      "integration/cms"
+    ],
+    "relatedTemplates": [
+      "integration/cms/storyblok",
+      "integration/cms/storyblok-6sense",
+      "integration/cms/storyblok-clearbit",
+      "integration/cms/storyblok-demandbase",
+      "integration/cms/storyblok-personalization",
+      "integration/cms/storyblok-zoominfo",
+      "use-case/experiment/all-users",
+      "use-case/experiment/segmented"
+    ]
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "all-users": {
+            "name": "All users",
+            "criteria": "true"
+          }
+        },
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🧪 Experiment for all users",
+            "draft": true,
+            "audiences": [
+              "all-users"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {}
+            },
+            "experiment": {
+              "name": "Home hero tagline",
+              "goalId": "sign-up",
+              "crossDevice": false,
+              "traffic": 1,
+              "variants": [
+                {
+                  "name": "Everything you need",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": true,
+                  "allocation": 500
+                },
+                {
+                  "name": "Ship faster",
+                  "content": {
+                    "default": {
+                      "home-hero": {
+                        "en": "${import('./configuration/home-hero-experiment-content.en.json')}"
+                      }
+                    }
+                  },
+                  "baseline": false,
+                  "allocation": 500
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experiment successfully created."
+    }
+  ]
+}

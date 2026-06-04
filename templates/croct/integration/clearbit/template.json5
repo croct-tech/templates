@@ -15,6 +15,11 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/clearbit/cover.png",
     "categories": [
       "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/sanity-clearbit",
+      "integration/cms/storyblok-clearbit",
+      "integration/cms/strapi-clearbit"
     ]
   },
   "actions": [

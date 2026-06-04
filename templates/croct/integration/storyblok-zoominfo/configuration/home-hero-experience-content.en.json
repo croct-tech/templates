@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "image": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/92544a40-e0e7-4fe0-924e-ebb1feef324b"
+      }
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Built for scaling finance teams"
+      }
+    },
+    "tagline": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Adapt your site to every scaling financial services account, powered by your ZoomInfo data."
+      }
+    }
+  }
+}

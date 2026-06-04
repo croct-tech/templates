@@ -15,6 +15,11 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/demandbase/cover.png",
     "categories": [
       "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/sanity-demandbase",
+      "integration/cms/storyblok-demandbase",
+      "integration/cms/strapi-demandbase"
     ]
   },
   "actions": [

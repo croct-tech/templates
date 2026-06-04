@@ -1,0 +1,106 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "Sanity 6sense personalization customization",
+  "description": "A customization template for the Sanity + 6sense personalization template.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    },
+    "pagePath": {
+      "type": "string",
+      "description": "The path to the page where the slot is used."
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "enterprise-financial-services": {
+            "name": "Enterprise financial services",
+            "criteria": "user's industry is 'Financial Services' and user's employees is '10,000+'"
+          }
+        },
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('croct://integration/sanity/configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('croct://integration/sanity/configuration/home-hero-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "Enterprise financial services",
+            "draft": true,
+            "audiences": [
+              "enterprise-financial-services"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "result": {
+        "slots": {
+          "home-hero": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        },
+        "experiences": {
+          "0": "experienceId"
+        }
+      }
+    },
+    {
+      "name": "replace-file-content",
+      "files": [
+        {
+          "path": "${options.pagePath}",
+          "replacements": [
+            {
+              "pattern": "%workspaceUrl%/slots/edit/%slotId%/%slotVersion%",
+              "value": "%workspaceUrl%/experiences/%experienceId%/edit"
+            },
+            {
+              "pattern": "%experienceId%",
+              "value": "${this.experienceId}"
+            },
+            {
+              "pattern": "Edit this content",
+              "value": "Manage experience"
+            },
+            {
+              "pattern": "utm_content=sanity",
+              "value": "utm_content=sanity-6sense"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

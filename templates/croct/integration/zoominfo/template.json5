@@ -15,6 +15,11 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/zoominfo/cover.png",
     "categories": [
       "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/sanity-zoominfo",
+      "integration/cms/storyblok-zoominfo",
+      "integration/cms/strapi-zoominfo"
     ]
   },
   "actions": [

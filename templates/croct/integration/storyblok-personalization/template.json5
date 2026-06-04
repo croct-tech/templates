@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Storyblok CMS + personalization",
+  "description": "A template for adding content personalization on a Storyblok project.",
+  "metadata": {
+    "id": "integration/cms/storyblok-personalization",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-personalization/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-personalization/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-personalization/cover.png",
+    "installationUrl": "croct://integration/storyblok-personalization",
+    "categories": [
+      "integration/cms"
+    ],
+    "relatedTemplates": [
+      "integration/cms/storyblok",
+      "integration/cms/storyblok-6sense",
+      "integration/cms/storyblok-ab-testing",
+      "integration/cms/storyblok-clearbit",
+      "integration/cms/storyblok-demandbase",
+      "integration/cms/storyblok-zoominfo",
+      "use-case/experiment/all-users",
+      "use-case/experiment/segmented"
+    ]
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "returning-visitors": {
+            "name": "Returning visitors",
+            "criteria": "user is returning"
+          }
+        },
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "Returning visitors",
+            "draft": true,
+            "audiences": [
+              "returning-visitors"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

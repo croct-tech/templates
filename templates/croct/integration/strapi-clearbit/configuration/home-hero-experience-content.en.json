@@ -1,0 +1,91 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "CTAs": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "/sign-up"
+              }
+            },
+            "text": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Get started"
+              }
+            },
+            "target": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "_self"
+              }
+            },
+            "variant": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "primary"
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "url": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "#features"
+              }
+            },
+            "text": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Know more"
+              }
+            },
+            "target": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "_self"
+              }
+            },
+            "variant": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "simple"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Built for growing financial teams"
+      }
+    },
+    "sub_heading": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Greet every mid-sized financial services account with content that fits, powered by your Clearbit data."
+      }
+    }
+  }
+}

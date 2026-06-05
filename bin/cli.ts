@@ -11,8 +11,9 @@ import {
 } from 'fs';
 import {join, extname, dirname} from 'path';
 import {Option, program} from '@commander-js/extra-typings';
-import {Formatting, JsonArrayNode, JsonObjectNode, JsonParser, JsonValueNode} from '@croct/json5-parser';
-import {JsonValue} from '@croct/json';
+import type {Formatting, JsonValueNode} from '@croct/json5-parser';
+import {JsonArrayNode, JsonObjectNode, JsonParser} from '@croct/json5-parser';
+import type {JsonValue} from '@croct/json';
 import Ajv, {type JSONSchemaType, type ValidateFunction} from 'ajv/dist/2019';
 import addFormats from 'ajv-formats';
 import Table from 'cli-table3';
@@ -231,11 +232,11 @@ type OptionTypes = {
 
 type OptionDefinition<T extends keyof OptionTypes = keyof OptionTypes> = {
     [K in T]: OptionTypes[K] & {
-    type: K,
-    default?: JsonValue,
-    description: string,
-    required?: boolean,
-}
+        type: K,
+        default?: JsonValue,
+        description: string,
+        required?: boolean,
+    }
 }[T];
 
 type Template = {
@@ -328,7 +329,7 @@ async function createTemplateUpdate(options: UpdateOptions): Promise<TemplateUpd
             update.assets[file] = path;
         }
 
-        let deployUrl: URL|undefined;
+        let deployUrl: URL | undefined;
 
         if (metadata.deployable === true) {
             deployUrl = new URL('https://vercel.com/new/clone');

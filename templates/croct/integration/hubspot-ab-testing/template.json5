@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "HubSpot forms + AB testing",
+  "description": "A template for running AB tests on HubSpot forms.",
+  "metadata": {
+    "id": "integration/crm/hubspot-ab-testing",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot-ab-testing/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot-ab-testing/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hubspot-ab-testing/cover.png",
+    "installationUrl": "croct://integration/hubspot-ab-testing",
+    "categories": [
+      "integration/crm"
+    ],
+    "relatedTemplates": [
+      "integration/crm/hubspot",
+      "integration/crm/hubspot-personalization",
+      "use-case/experiment/all-users",
+      "use-case/experiment/segmented"
+    ]
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct://integration/hubspot",
+      "options": {
+        "extension": "croct://integration/hubspot-ab-testing/extension.json5"
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template.json",
+  "title": "HubSpot personalization customization",
+  "description": "A customization template for the HubSpot personalization template.",
+  "options": {
+    "slotId": {
+      "type": "reference",
+      "description": "The variable name that holds the slot ID.",
+      "required": true
+    },
+    "slotVersion": {
+      "type": "reference",
+      "description": "The variable name that holds the slot version.",
+      "required": true
+    }
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "returning-users": {
+            "name": "Returning users",
+            "criteria": "user is returning"
+          }
+        },
+        "components": {
+          "hubspot-form": {
+            "name": "HubSpot form",
+            "description": "Stores the ID of the HubSpot form to render.",
+            "schema": "${import('croct://integration/hubspot/configuration/hubspot-form-schema.json')}"
+          }
+        },
+        "slots": {
+          "hubspot-form": {
+            "name": "HubSpot form",
+            "component": "hubspot-form",
+            "content": {
+              "en": "${import('croct://integration/hubspot/configuration/hubspot-form-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "Form personalization for returning users",
+            "draft": true,
+            "audiences": [
+              "returning-users"
+            ],
+            "slots": [
+              "hubspot-form"
+            ],
+            "content": {
+              "default": {
+                "hubspot-form": {
+                  "en": "${import('./configuration/hubspot-form-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "result": {
+        "slots": {
+          "hubspot-form": {
+            "id": "${options.slotId}",
+            "version": "${options.slotVersion}"
+          }
+        }
+      }
+    }
+  ]
+}

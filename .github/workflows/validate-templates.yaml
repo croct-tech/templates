@@ -38,6 +38,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check Git LFS pointers
+        run: |
+          # Fail if any file tracked by Git LFS (per .gitattributes) was
+          # committed as raw content instead of an LFS pointer.
+          violations=()
+          while IFS= read -r file; do
+            filter=$(git check-attr filter -- "$file" | sed 's/^.*: filter: //')
+            [ "$filter" = "lfs" ] || continue
+            header=$(git cat-file blob "HEAD:$file" 2>/dev/null | head -n 1 || true)
+            if [ "$header" != "version https://git-lfs.github.com/spec/v1" ]; then
+              violations+=("$file")
+            fi
+          done < <(git ls-files)
+
+          if [ "${#violations[@]}" -ne 0 ]; then
+            echo "::error::Files tracked by Git LFS but committed as raw content (not LFS pointers):"
+            printf '  - %s\n' "${violations[@]}"
+            echo "Fix locally and commit: git add --renormalize ${violations[*]}"
+            exit 1
+          fi
+          echo "All Git LFS-tracked files are stored as pointers."
+
       - uses: actions/setup-node@v4
         with:
           node-version: 23

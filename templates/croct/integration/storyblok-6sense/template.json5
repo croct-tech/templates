@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Storyblok CMS + 6sense",
+  "description": "A template for adding firmographic personalization on a Storyblok project.",
+  "metadata": {
+    "id": "integration/cms/storyblok-6sense",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-6sense/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-6sense/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok-6sense/cover.png",
+    "installationUrl": "croct://integration/storyblok-6sense",
+    "categories": [
+      "integration/cms",
+      "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/storyblok",
+      "integration/cms/storyblok-ab-testing",
+      "integration/cms/storyblok-personalization",
+      "integration/data-enrichment/6sense"
+    ]
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "enterprise-financial-services": {
+            "name": "Enterprise financial services",
+            "criteria": "user's industry is 'Financial Services' and user's employees is '10,000+'"
+          }
+        },
+        "components": {
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A hero section serves as the primary visual and informational focus at the top of a webpage.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "Enterprise financial services",
+            "draft": true,
+            "audiences": [
+              "enterprise-financial-services"
+            ],
+            "slots": [
+              "home-hero"
+            ],
+            "content": {
+              "default": {
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

@@ -24,8 +24,12 @@
     ],
     "relatedTemplates": [
       "boilerplate/starter/nextjs",
+      "integration/cms/strapi-6sense",
       "integration/cms/strapi-ab-testing",
-      "integration/cms/strapi-personalization"
+      "integration/cms/strapi-clearbit",
+      "integration/cms/strapi-demandbase",
+      "integration/cms/strapi-personalization",
+      "integration/cms/strapi-zoominfo"
     ]
   },
   "options": {

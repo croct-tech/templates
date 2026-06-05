@@ -7,6 +7,12 @@ This template defines a personalized experience for SaaS visitors coming from AB
 It leverages [UTM parameters](https://docs.croct.com/reference/cql/data-types/marketing/campaign) from ad URLs to align onsite
 content with the visitor’s interests, creating a seamless and consistent journey from ad to landing page and beyond.
 
+> [!IMPORTANT]
+> Data enrichment tools
+> If you use tools like [Clearbit](/templates/use-case/saas/clearbit), [Demandbase](/templates/use-case/saas/demandbase), 
+[ZoomInfo](/templates/use-case/saas/zoominfo), or [6sense](/templates/use-case/saas/6sense) to infer firmographic data, 
+you can use it to reach users who visit the website organically.
+
 ## What's included
 
 This experience includes 3 components, 2 slots (an announcement bar and a home hero section), and the following

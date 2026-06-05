@@ -25,7 +25,11 @@
     "relatedTemplates": [
       "boilerplate/starter/nextjs",
       "integration/cms/sanity",
-      "integration/cms/sanity-ab-testing"
+      "integration/cms/sanity-6sense",
+      "integration/cms/sanity-ab-testing",
+      "integration/cms/sanity-clearbit",
+      "integration/cms/sanity-demandbase",
+      "integration/cms/sanity-zoominfo"
     ]
   },
   "actions": [

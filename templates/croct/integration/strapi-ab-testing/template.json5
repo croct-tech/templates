@@ -26,7 +26,11 @@
     "relatedTemplates": [
       "boilerplate/starter/nextjs",
       "integration/cms/strapi",
+      "integration/cms/strapi-6sense",
+      "integration/cms/strapi-clearbit",
+      "integration/cms/strapi-demandbase",
       "integration/cms/strapi-personalization",
+      "integration/cms/strapi-zoominfo",
       "use-case/experiment/all-users",
       "use-case/experiment/segmented"
     ]

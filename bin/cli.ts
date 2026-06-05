@@ -50,6 +50,7 @@ const categoryMap = {
     'integration/cms': 'CMS',
     'integration/cdp': 'CDP',
     'integration/crm': 'CRM',
+    'integration/data-enrichment': 'Data enrichment',
     'interface/code': 'Code',
     'interface/component': 'Component',
     'interface/feedback': 'Feedback',

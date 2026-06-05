@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "ZoomInfo integration",
+  "description": "Activate ZoomInfo firmographic data for website personalization.",
+  "metadata": {
+    "id": "integration/data-enrichment/zoominfo",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/zoominfo/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/zoominfo/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/zoominfo/cover.png",
+    "categories": [
+      "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/sanity-zoominfo",
+      "integration/cms/storyblok-zoominfo",
+      "integration/cms/strapi-zoominfo"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/zoominfo-data-activation"
+    }
+  ]
+}

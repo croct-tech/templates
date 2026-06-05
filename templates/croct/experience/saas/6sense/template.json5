@@ -1,0 +1,104 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "6sense experience",
+  "description": "A personalized experience based on 6sense firmographic data.",
+  "metadata": {
+    "id": "use-case/saas/6sense",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/6sense/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/6sense/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/experience/saas/6sense/cover.png",
+    "installationUrl": "croct://experience/saas/6sense",
+    "categories": [
+      "use-case/experience",
+      "use-case/saas"
+    ],
+    "relatedTemplates": [
+      "integration/data-enrichment/6sense",
+      "interface/component/announcement-bar",
+      "use-case/saas/abm-campaign",
+      "use-case/saas/clearbit",
+      "use-case/saas/demandbase",
+      "use-case/saas/zoominfo"
+    ]
+  },
+  "actions": [
+    {
+      "name": "create-resource",
+      "resources": {
+        "audiences": {
+          "abm-6sense-financial-services": {
+            "name": "6sense Financial Services",
+            "criteria": "user's industry is \"Financial Services\""
+          }
+        },
+        "components": {
+          "cta": {
+            "name": "CTA",
+            "description": "A call to action button.",
+            "schema": "${import('./configuration/cta-schema.json')}"
+          },
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "description": "A small text bar featured at the top of a page.",
+            "schema": "${import('./configuration/announcement-bar-schema.json')}"
+          },
+          "hero-section": {
+            "name": "Hero section",
+            "description": "A big section featured at the top of a page.",
+            "schema": "${import('./configuration/hero-section-schema.json')}"
+          }
+        },
+        "slots": {
+          "home-hero": {
+            "name": "Home hero",
+            "component": "hero-section",
+            "content": {
+              "en": "${import('./configuration/home-hero-slot-content.en.json')}"
+            }
+          },
+          "announcement-bar": {
+            "name": "Announcement bar",
+            "component": "announcement-bar",
+            "content": {
+              "en": "${import('./configuration/announcement-bar-slot-content.en.json')}"
+            }
+          }
+        },
+        "experiences": [
+          {
+            "name": "🏢 ABM 6sense",
+            "draft": true,
+            "audiences": [
+              "abm-6sense-financial-services"
+            ],
+            "slots": [
+              "home-hero",
+              "announcement-bar"
+            ],
+            "content": {
+              "default": {
+                "home-hero": {
+                  "en": "${import('./configuration/home-hero-experience-content.en.json')}"
+                },
+                "announcement-bar": {
+                  "en": "${import('./configuration/announcement-bar-experience-content.en.json')}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "print",
+      "semantics": "success",
+      "message": "Experience successfully created."
+    }
+  ]
+}

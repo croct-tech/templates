@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Sanity CMS + 6sense",
+  "description": "A template for adding firmographic personalization on a Sanity project.",
+  "metadata": {
+    "id": "integration/cms/sanity-6sense",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-6sense/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-6sense/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/sanity-6sense/cover.png",
+    "installationUrl": "croct://integration/sanity-6sense",
+    "categories": [
+      "integration/cms",
+      "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/sanity",
+      "integration/cms/sanity-ab-testing",
+      "integration/cms/sanity-personalization",
+      "integration/data-enrichment/6sense"
+    ]
+  },
+  "actions": [
+    {
+      "name": "import",
+      "template": "croct://integration/sanity",
+      "options": {
+        "extension": "croct://integration/sanity-6sense/extension.json5"
+      }
+    }
+  ]
+}

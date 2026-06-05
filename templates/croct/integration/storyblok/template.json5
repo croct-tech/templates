@@ -15,6 +15,14 @@
     "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/storyblok/cover.png",
     "categories": [
       "integration/cms"
+    ],
+    "relatedTemplates": [
+      "integration/cms/storyblok-6sense",
+      "integration/cms/storyblok-ab-testing",
+      "integration/cms/storyblok-clearbit",
+      "integration/cms/storyblok-demandbase",
+      "integration/cms/storyblok-personalization",
+      "integration/cms/storyblok-zoominfo"
     ]
   },
   "actions": [

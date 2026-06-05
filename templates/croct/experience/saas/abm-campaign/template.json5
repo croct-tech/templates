@@ -20,12 +20,11 @@
     ],
     "relatedTemplates": [
       "interface/component/announcement-bar",
-      "use-case/saas/customer",
-      "use-case/saas/interest",
-      "use-case/saas/landing-page",
+      "use-case/saas/6sense",
+      "use-case/saas/clearbit",
+      "use-case/saas/demandbase",
       "use-case/saas/linkedin-campaign",
-      "use-case/saas/marketing-campaign",
-      "use-case/saas/search-campaign"
+      "use-case/saas/zoominfo"
     ]
   },
   "actions": [

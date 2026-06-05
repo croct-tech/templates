@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "6sense integration",
+  "description": "Activate 6sense firmographic data for website personalization.",
+  "metadata": {
+    "id": "integration/data-enrichment/6sense",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/6sense/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/6sense/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/6sense/cover.png",
+    "categories": [
+      "integration/data-enrichment"
+    ],
+    "relatedTemplates": [
+      "integration/cms/sanity-6sense",
+      "integration/cms/storyblok-6sense",
+      "integration/cms/strapi-6sense"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/6sense-data-activation"
+    }
+  ]
+}

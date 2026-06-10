@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Shopify integration",
+  "description": "Automatically track e-commerce and conversion events.",
+  "metadata": {
+    "id": "integration/e-commerce/shopify",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/shopify/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/shopify/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/shopify/cover.png",
+    "categories": [
+      "integration/e-commerce"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/shopify-integration"
+    }
+  ]
+}

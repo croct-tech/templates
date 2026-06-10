@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Salesforce Commerce integration",
+  "description": "Automatically track e-commerce and conversion events.",
+  "metadata": {
+    "id": "integration/e-commerce/salesforce-commerce",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/salesforce-commerce/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/salesforce-commerce/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/salesforce-commerce/cover.png",
+    "categories": [
+      "integration/e-commerce"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/salesforce-commerce-integration"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
   "title": "VTEX integration",
-  "description": "Automatically track VTEX store events and enrich user profiles in Croct.",
+  "description": "Automatically track e-commerce and conversion events.",
   "metadata": {
     "id": "integration/e-commerce/vtex",
     "verified": true,

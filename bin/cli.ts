@@ -52,6 +52,7 @@ const categoryMap = {
     'integration/cdp': 'CDP',
     'integration/crm': 'CRM',
     'integration/data-enrichment': 'Data enrichment',
+    'integration/e-commerce': 'E-commerce',
     'interface/code': 'Code',
     'interface/component': 'Component',
     'interface/feedback': 'Feedback',

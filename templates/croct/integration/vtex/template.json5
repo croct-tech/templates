@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "VTEX integration",
+  "description": "Automatically track VTEX store events and enrich user profiles in Croct.",
+  "metadata": {
+    "id": "integration/e-commerce/vtex",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/vtex/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/vtex/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/vtex/cover.png",
+    "categories": [
+      "integration/e-commerce"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/vtex-integration"
+    }
+  ]
+}

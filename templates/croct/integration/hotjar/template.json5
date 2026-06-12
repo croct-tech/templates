@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Hotjar integration",
+  "description": "Filter session recordings by experience data.",
+  "metadata": {
+    "id": "integration/session-recording/hotjar",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hotjar/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hotjar/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/hotjar/cover.png",
+    "categories": [
+      "integration/session-recording"
+    ],
+    "relatedTemplates": [
+      "integration/session-recording/clarity"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/hotjar-integration"
+    }
+  ]
+}

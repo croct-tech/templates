@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Google Analytics integration",
+  "description": "Automatically track experience data to Google Analytics.",
+  "metadata": {
+    "id": "integration/analytics/google-analytics",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/google-analytics/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/google-analytics/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/google-analytics/cover.png",
+    "categories": [
+      "integration/analytics"
+    ],
+    "relatedTemplates": [
+      "integration/analytics/amplitude",
+      "integration/analytics/mixpanel"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/google-analytics-integration"
+    }
+  ]
+}

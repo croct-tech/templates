@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Mixpanel integration",
+  "description": "Automatically track experience data to Mixpanel.",
+  "metadata": {
+    "id": "integration/analytics/mixpanel",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/mixpanel/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/mixpanel/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/mixpanel/cover.png",
+    "categories": [
+      "integration/analytics"
+    ],
+    "relatedTemplates": [
+      "integration/analytics/amplitude",
+      "integration/analytics/google-analytics"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/mixpanel-integration"
+    }
+  ]
+}

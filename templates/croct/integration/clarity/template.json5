@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Microsoft Clarity integration",
+  "description": "Filter session recordings by experience data.",
+  "metadata": {
+    "id": "integration/session-recording/clarity",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/clarity/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/clarity/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/clarity/cover.png",
+    "categories": [
+      "integration/session-recording"
+    ],
+    "relatedTemplates": [
+      "integration/session-recording/hotjar"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/clarity-integration"
+    }
+  ]
+}

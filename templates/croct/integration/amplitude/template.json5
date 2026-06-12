@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/catalog-template.json",
+  "title": "Amplitude integration",
+  "description": "Automatically track experience data to Amplitude.",
+  "metadata": {
+    "id": "integration/analytics/amplitude",
+    "verified": true,
+    "ecosystem": {
+      "name": "Croct",
+      "avatarUrl": "https://github.com/croct-tech.png",
+      "websiteUrl": "https://croct.com"
+    },
+    "documentationUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/amplitude/README.md",
+    "sourceUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/amplitude/template.json5",
+    "coverImageUrl": "https://github.com/croct-tech/templates/blob/master/templates/croct/integration/amplitude/cover.png",
+    "categories": [
+      "integration/analytics"
+    ],
+    "relatedTemplates": [
+      "integration/analytics/google-analytics",
+      "integration/analytics/mixpanel"
+    ]
+  },
+  "actions": [
+    {
+      "name": "open-link",
+      "url": "https://docs.croct.com/immersion/tutorials/amplitude-integration"
+    }
+  ]
+}

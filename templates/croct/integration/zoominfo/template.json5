@@ -25,7 +25,7 @@
   "actions": [
     {
       "name": "open-link",
-      "url": "https://docs.croct.com/immersion/tutorials/zoominfo-data-activation"
+      "url": "https://docs.croct.com/immersion/integrations/firmographics/zoominfo"
     }
   ]
 }

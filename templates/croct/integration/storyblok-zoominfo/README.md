@@ -19,7 +19,7 @@ Using Croct, you get:
 ## Prerequisites
 
 To feed firmographic data into the audience, complete the
-[ZoomInfo data activation](https://docs.croct.com/immersion/tutorials/zoominfo-data-activation) first. Until data flows in, visitors keep seeing the default content.
+[ZoomInfo data activation](https://docs.croct.com/immersion/integrations/firmographics/zoominfo) first. Until data flows in, visitors keep seeing the default content.
 
 ## What's included
 
@@ -39,8 +39,7 @@ This template creates a simple **home hero** so you have something to personaliz
   * **Default heading:** _One platform for modern teams_
   * **Personalized heading:** _Built for scaling finance teams_
 
-To wire the slot into your Storyblok-rendered page, follow the
-[Storyblok integration tutorial](https://docs.croct.com/immersion/tutorials/storyblok-integration).
+Learn more about the Storyblok integration on the [integration page](https://croct.com/integrations/storyblok).
 
 ## Usage
 

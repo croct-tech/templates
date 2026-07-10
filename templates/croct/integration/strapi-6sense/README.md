@@ -8,6 +8,9 @@ or buying stage in real time, using the firmographic data you activate from [6se
 
 It's the fastest way to launch account-based personalization on top of Strapi CMS, with no CMS migration.
 
+> [!TIP Integration]
+> Learn more about the Croct + Strapi integration on the [integration page](https://croct.com/integrations/strapi).
+
 Using Croct, you get:
 
 * Firmographic personalization driven by 6sense intent and company data
@@ -21,7 +24,7 @@ Using Croct, you get:
 ## Prerequisites
 
 To feed firmographic data into the audience, complete the
-[6sense data activation](https://docs.croct.com/immersion/tutorials/6sense-data-activation) first. Until data flows in, visitors keep seeing the default content.
+[6sense data activation](https://docs.croct.com/immersion/integrations/firmographics/6sense) first. Until data flows in, visitors keep seeing the default content.
 
 ## What's included
 

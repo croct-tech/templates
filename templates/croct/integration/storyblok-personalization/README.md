@@ -35,8 +35,7 @@ This template creates a simple **home hero** so you have something to personaliz
   * **Default heading:** _One platform for modern teams_
   * **Personalized heading:** _Welcome back to the platform_
 
-To wire the slot into your Storyblok-rendered page, follow the
-[Storyblok integration tutorial](https://docs.croct.com/immersion/tutorials/storyblok-integration).
+Learn more about the Storyblok integration on the [integration page](https://croct.com/integrations/storyblok).
 
 ## Usage
 

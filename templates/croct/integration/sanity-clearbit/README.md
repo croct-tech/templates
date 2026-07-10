@@ -8,6 +8,9 @@ activate from [Clearbit](https://clearbit.com?utm_source=croct).
 
 It's the fastest way to launch account-based personalization on Sanity Studio with no CMS migration.
 
+> [!TIP Integration]
+> Learn more about the Croct + Sanity integration on the [integration page](https://croct.com/integrations/sanity).
+
 Using Croct, you get:
 
 * Firmographic personalization driven by Clearbit company data
@@ -21,7 +24,7 @@ Using Croct, you get:
 ## Prerequisites
 
 To feed firmographic data into the audience, complete the
-[Clearbit data activation](https://docs.croct.com/immersion/tutorials/clearbit-data-activation) first. Until data flows
+[Clearbit data activation](https://docs.croct.com/immersion/integrations/firmographics/clearbit) first. Until data flows
 in, visitors keep seeing the default content.
 
 ## What's included

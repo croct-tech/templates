@@ -91,7 +91,7 @@
       "name": "print",
       "semantics": "info",
       "title": "HubSpot form slot ready",
-      "message": "Fetch the `hubspot-form` slot and render the returned `formId`. Follow the tutorial to embed the form and track submissions: https://docs.croct.com/immersion/tutorials/hubspot-forms"
+      "message": "Fetch the `hubspot-form` slot and render the returned `formId`. Follow the tutorial to embed the form and track submissions: https://docs.croct.com/immersion/integrations/crm/hubspot-forms"
     }
   ]
 }

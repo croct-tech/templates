@@ -8,6 +8,10 @@ Croct to help you implement dynamic content without changing your CMS.
 
 It's the fastest way to add AB testing and personalization on top of Sanity Studio.
 
+> [!TIP Integration]
+> Learn more about the Croct + Sanity integration on the [integration page](https://croct.com/integrations/sanity).
+
+
 Unlike currently available plugins, you can run experiments at the component level rather than the field level. Croct
 replaces static component content with dynamic content, allowing you to manage everything directly on the UI while using
 Sanity content as a [fallback](https://docs.croct.com/reference/sdk/nextjs/content-rendering#fault-tolerance).

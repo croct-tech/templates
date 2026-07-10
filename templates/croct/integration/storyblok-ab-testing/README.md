@@ -36,8 +36,7 @@ This template creates a simple **home hero** so you have something to experiment
   * **Variant A (baseline):** _One platform for modern teams_
   * **Variant B:** _Ship faster with one platform_
 
-To wire the slot into your Storyblok-rendered page, follow the
-[Storyblok integration tutorial](https://docs.croct.com/immersion/tutorials/storyblok-integration).
+Learn more about the Storyblok integration on the [integration page](https://croct.com/integrations/storyblok).
 
 ## Usage
 

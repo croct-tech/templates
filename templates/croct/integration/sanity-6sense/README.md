@@ -8,6 +8,9 @@ firmographic data you activate from [6sense](https://6sense.com?utm_source=croct
 
 It's the fastest way to launch account-based personalization on Sanity Studio with no CMS migration.
 
+> [!TIP Integration]
+> Learn more about the Croct + Sanity integration on the [integration page](https://croct.com/integrations/sanity).
+
 Using Croct, you get:
 
 * Firmographic personalization driven by 6sense intent and company data
@@ -21,7 +24,7 @@ Using Croct, you get:
 ## Prerequisites
 
 To feed firmographic data into the audience, complete the
-[6sense data activation](https://docs.croct.com/immersion/tutorials/6sense-data-activation) first. Until data flows
+[6sense data activation](https://docs.croct.com/immersion/integrations/firmographics/6sense) first. Until data flows
 in, visitors keep seeing the default content.
 
 ## What's included

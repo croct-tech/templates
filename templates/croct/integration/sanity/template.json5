@@ -62,7 +62,7 @@
     },
     {
       "name": "execute-package",
-      "command": "sanity@latest",
+      "command": "sanity@6",
       "arguments": [
         "debug"
       ],
@@ -71,7 +71,7 @@
     {
       "name": "define",
       "variables": {
-        "isLoggedOut": "${this.debugOutput.includes('Not logged in')}"
+        "isLoggedOut": "${this.debugOutput.includes('Not logged in') || this.debugOutput.includes('Session is expired')}"
       }
     },
     {
@@ -84,7 +84,7 @@
           "then": [
             {
               "name": "execute-package",
-              "command": "sanity@latest",
+              "command": "sanity@6",
               "arguments": [
                 "login"
               ],
@@ -92,7 +92,7 @@
             },
             {
               "name": "execute-package",
-              "command": "sanity@latest",
+              "command": "sanity@6",
               "arguments": [
                 "debug"
               ],
@@ -101,7 +101,7 @@
             {
               "name": "define",
               "variables": {
-                "isLoggedOut": "${this.debugOutput.includes('Not logged in')}"
+                "isLoggedOut": "${this.debugOutput.includes('Not logged in') || this.debugOutput.includes('Session is expired')}"
               }
             },
             {
@@ -144,31 +144,23 @@
     },
     {
       "name": "execute-package",
-      "command": "sanity@latest",
+      "command": "sanity@6",
       "arguments": [
-        "init",
-        "--bare",
-        "--create-project",
+        "projects",
+        "create",
         "Croct + Sanity starter",
-        "--dataset-default"
-      ],
-      "interactions": [
-        {
-          "when": "? Select organization:",
-          "then": [
-            "[enter]"
-          ]
-        },
-        {
-          "when": "You can find your project on Sanity Manage",
-          "final": true
-        }
+        "--dataset",
+        "production",
+        "--dataset-visibility",
+        "public",
+        "--json",
+        "--yes"
       ],
       "output": "initOutput"
     },
     {
       "name": "test",
-      "condition": "${!this.initOutput.includes('Project ID:') || !this.initOutput.includes('Dataset:')}",
+      "condition": "${!this.initOutput.includes('projectId')}",
       "then": [
         {
           "name": "fail",
@@ -179,8 +171,8 @@
     {
       "name": "define",
       "variables": {
-        "projectId": "${this.initOutput.match(/Project ID: (\\S+)/)[1]}",
-        "dataset": "${this.initOutput.match(/Dataset: (\\S+)/)[1]}"
+        "projectId": "${this.initOutput.match(/projectId\\W+([a-zA-Z0-9]+)/)[1]}",
+        "dataset": "production"
       }
     },
     {
@@ -208,7 +200,7 @@
     },
     {
       "name": "execute-package",
-      "command": "sanity@latest",
+      "command": "sanity@6",
       "arguments": [
         "cors",
         "add",
@@ -235,31 +227,25 @@
     },
     {
       "name": "execute-package",
-      "command": "sanity@latest",
+      "command": "sanity@6",
       "arguments": [
         "dataset",
         "import",
         "sample-data.tar.gz",
+        "--dataset",
+        "${this.dataset}",
         "--replace"
-      ],
-      "interactions": [
-        {
-          "when": "Select target dataset",
-          "then": [
-            "[down]",
-            "[enter]"
-          ],
-          "final": true
-        }
       ]
     },
     {
       "name": "execute-package",
-      "command": "sanity@latest",
+      "command": "sanity@6",
       "arguments": [
         "schema",
         "extract",
-        "--enforce-required-fields"
+        "--enforce-required-fields",
+        "--path",
+        "../sanity.schema.json"
       ]
     },
     {
@@ -294,7 +280,7 @@
     },
     {
       "name": "execute-package",
-      "command": "sanity@latest",
+      "command": "sanity@6",
       "arguments": [
         "exec",
         "../generate-read-token.ts",
@@ -340,7 +326,7 @@
     },
     {
       "name": "execute-package",
-      "command": "sanity@latest",
+      "command": "sanity@6",
       "arguments": [
         "typegen",
         "generate"

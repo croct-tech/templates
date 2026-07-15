@@ -9,6 +9,10 @@ third-party analytics tools.
 
 It's the fastest way to add content personalization on top of Sanity Studio.
 
+> [!TIP Integration]
+> Learn more about the Croct + Sanity integration on the [integration page](https://croct.com/integrations/sanity).
+
+
 Unlike currently available plugins, you can personalize content at the component level rather than the field level.
 Croct replaces static component content with dynamic content, allowing you to manage everything directly on the UI while
 using Sanity content as a [fallback](https://docs.croct.com/reference/sdk/nextjs/content-rendering#fault-tolerance).

@@ -8,6 +8,9 @@ Croct to help you implement dynamic content without changing your CMS.
 
 It's the fastest way to add AB testing and personalization on top of Strapi.
 
+> [!TIP Integration]
+> Learn more about the Croct + Strapi integration on the [integration page](https://croct.com/integrations/strapi).
+
 Croct replaces static component content with dynamic content, allowing you to manage everything directly on the UI while
 using Strapi content as a [fallback](https://docs.croct.com/reference/sdk/nextjs/content-rendering#fault-tolerance).
 

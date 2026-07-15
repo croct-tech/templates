@@ -34,5 +34,5 @@ croct use croct://integration/hubspot
 ```
 
 Once installed, fetch the slot and embed the returned form ID. The
-[HubSpot forms tutorial](https://docs.croct.com/immersion/tutorials/hubspot-forms) walks through embedding the form and
+[HubSpot forms tutorial](https://docs.croct.com/immersion/integrations/crm/hubspot-forms) walks through embedding the form and
 tracking submissions.

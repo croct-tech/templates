@@ -8,6 +8,9 @@ size in real time, using the firmographic data you activate from [Clearbit](http
 
 It's the fastest way to launch account-based personalization on top of Strapi CMS, with no CMS migration.
 
+> [!TIP Integration]
+> Learn more about the Croct + Strapi integration on the [integration page](https://croct.com/integrations/strapi).
+
 Using Croct, you get:
 
 * Firmographic personalization driven by Clearbit company data
@@ -21,7 +24,7 @@ Using Croct, you get:
 ## Prerequisites
 
 To feed firmographic data into the audience, complete the
-[Clearbit data activation](https://docs.croct.com/immersion/tutorials/clearbit-data-activation) first. Until data flows in, visitors keep seeing the default content.
+[Clearbit data activation](https://docs.croct.com/immersion/integrations/firmographics/clearbit) first. Until data flows in, visitors keep seeing the default content.
 
 ## What's included
 

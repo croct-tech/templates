@@ -28,7 +28,7 @@
   "actions": [
     {
       "name": "open-link",
-      "url": "https://docs.croct.com/immersion/tutorials/storyblok-integration"
+      "url": "https://docs.croct.com/immersion/integrations/cms/storyblok"
     }
   ]
 }

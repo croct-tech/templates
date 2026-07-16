@@ -6,6 +6,9 @@ This template brings account-based personalization to [Storyblok](https://www.st
 Croct, adapting your content to an account's industry, company size, or buying stage in real time, using the firmographic
 data you activate from [6sense](https://6sense.com?utm_source=croct).
 
+> [!TIP Integration]
+> Learn more about the Croct + Storyblok integration by checking the [resulting project repo](https://github.com/croct-tech/croct-storyblok-project) or exploring the [integration page](https://croct.com/integrations/storyblok).
+
 Using Croct, you get:
 
 * Firmographic personalization driven by 6sense intent and company data

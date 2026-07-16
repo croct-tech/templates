@@ -9,7 +9,7 @@ size in real time, using the firmographic data you activate from [Demandbase](ht
 It's the fastest way to launch account-based personalization on top of Strapi CMS, with no CMS migration.
 
 > [!TIP Integration]
-> Learn more about the Croct + Strapi integration on the [integration page](https://croct.com/integrations/strapi).
+> Learn more about the Croct + Strapi integration by exploring the [integration page](https://croct.com/integrations/strapi).
 
 Using Croct, you get:
 

@@ -5,9 +5,16 @@ Looking to add **content personalization** to your Storyblok-powered site?
 This template brings real-time personalization to [Storyblok](https://www.storyblok.com/?utm_source=croct) with Croct,
 adapting your content to each visitor without changing your CMS or integrating with other third-party analytics tools.
 
-Unlike currently available plugins, you can personalize content at the component level rather than the field level.
-Croct replaces static component content with dynamic content, allowing you to manage everything directly on the UI while
-using Storyblok content as a [fallback](https://docs.croct.com/reference/sdk/nextjs/content-rendering#fault-tolerance).
+It's the fastest way to add AB testing and personalization on top of Storyblok.
+
+> [!TIP Integration]
+> Learn more about the Croct + Storyblok integration by checking the [resulting project repo](https://github.com/croct-tech/croct-storyblok-project) or exploring the [integration page](https://croct.com/integrations/storyblok).
+
+Unlike currently available plugins, you can personalize content at the block level rather than the field level. Croct
+replaces static block content with dynamic content, allowing you to manage everything directly on the Storyblok UI.
+
+Since it comes with built-in audience segmentation and analytics, there's no need to work on extra integrations with
+CDPs to segment visitors or analytics tools to gather insights.
 
 Using Croct, you get:
 

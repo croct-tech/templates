@@ -9,7 +9,7 @@ activate from [Demandbase](https://www.demandbase.com?utm_source=croct).
 It's the fastest way to launch account-based personalization on Sanity Studio with no CMS migration.
 
 > [!TIP Integration]
-> Learn more about the Croct + Sanity integration on the [integration page](https://croct.com/integrations/sanity).
+> Learn more about the Croct + Sanity integration by exploring the [integration page](https://croct.com/integrations/sanity).
 
 Using Croct, you get:
 

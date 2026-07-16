@@ -6,5 +6,9 @@ This integration syncs [Clearbit](https://clearbit.com) with Croct, enriching ev
 data, industry signals, and firmographics so marketers can adapt copy, offers, and CTAs to the audience in front of
 them.
 
-Walk through [this tutorial](https://docs.croct.com/immersion/integrations/firmographics/clearbit) to bring Clearbit
-data into Croct and explore [this playbook](https://docs.croct.com/immersion/playbooks/clearbit) to get you started.
+> [!TIP Integration]
+> Learn more about the Croct + Clearbit integration by exploring the [integration page](https://croct.com/integrations/clearbit).
+
+Follow [this tutorial](https://docs.croct.com/immersion/integrations/firmographics/clearbit/integration) to activate
+clearbit data in Croct and [this playbook](https://docs.croct.com/immersion/integrations/firmographics/clearbit/playbook)
+for ideas on how to put it to work.

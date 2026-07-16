@@ -9,7 +9,7 @@ changing your CMS or integrating with other third-party analytics tools.
 It's the fastest way to add experimentation on top of Strapi CMS.
 
 > [!TIP Integration]
-> Learn more about the Croct + Strapi integration on the [integration page](https://croct.com/integrations/strapi).
+> Learn more about the Croct + Strapi integration by checking the [resulting project repo](https://github.com/croct-tech/croct-strapi-project) or exploring the [integration page](https://croct.com/integrations/strapi).
 
 Croct replaces static component content with dynamic content, allowing you to manage everything directly on the UI while
 using Strapi content as a [fallback](https://docs.croct.com/reference/sdk/nextjs/content-rendering#fault-tolerance).

@@ -10,6 +10,9 @@ From there, an [AB test](https://docs.croct.com/explanation/experiment) or
 a [personalized experience](https://docs.croct.com/explanation/experience/introduction) can change the form ID per user,
 and your page renders the matching form automatically.
 
+> [!TIP Integration]
+> Learn more about the Croct + HubSpot forms integration by exploring the [integration page](https://croct.com/integrations/hubspot).
+
 Using Croct, you get:
 
 * AB testing support with real-time audience evaluation

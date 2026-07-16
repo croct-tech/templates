@@ -9,6 +9,9 @@ The form ID lives in a [slot](https://docs.croct.com/explanation/slot), so a
 [personalized experience](https://docs.croct.com/explanation/experience/introduction) changes the slot's return value and
 your page renders the matching form automatically.
 
+> [!TIP Integration]
+> Learn more about the Croct + HubSpot forms integration by exploring the [integration page](https://croct.com/integrations/hubspot).
+
 Using Croct, you get:
 
 * Form personalization based on location, behavior, or custom rules

@@ -109,6 +109,7 @@
     {
       "name": "add-dependency",
       "dependencies": [
+        "@croct/md-lite",
         "@croct/template-ui",
         "lucide-react"
       ]

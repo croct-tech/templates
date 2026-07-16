@@ -269,6 +269,7 @@
     {
       "name": "add-dependency",
       "dependencies": [
+        "@croct/md-lite",
         "@croct/template-ui"
       ]
     },
@@ -463,12 +464,10 @@
       "name": "install"
     },
     {
-      "name": "import",
-      "template": "croct:/utils/example-launcher",
-      "options": {
-        "script": "dev",
-        "url": "http://localhost:3000"
-      }
+      "name": "print",
+      "semantics": "success",
+      "title": "Your project is ready",
+      "message": "To start the development server, run:\n\n`cd ${this.projectName} && npm run dev`\n\nThe command output shows the URLs of the website and the Sanity Studio."
     }
   ]
 }

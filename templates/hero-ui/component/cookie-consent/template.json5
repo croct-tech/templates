@@ -56,6 +56,12 @@
   },
   "actions": [
     {
+      "name": "add-dependency",
+      "dependencies": [
+        "@croct/md-lite"
+      ]
+    },
+    {
       "name": "import",
       "template": "hero-ui://component/component",
       "options": {

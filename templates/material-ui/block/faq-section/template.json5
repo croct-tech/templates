@@ -65,6 +65,7 @@
         "router": "${options.router}",
         "javascript": "${options.javascript}",
         "dependencies": [
+          "@croct/md-lite",
           "@mui/icons-material"
         ],
         "components": [

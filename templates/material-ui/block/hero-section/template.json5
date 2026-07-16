@@ -67,6 +67,9 @@
         "version": "${options.version}",
         "router": "${options.router}",
         "javascript": "${options.javascript}",
+        "dependencies": [
+          "@croct/md-lite"
+        ],
         "components": [
           "HeroSection.tsx",
           "HeroDemo.tsx"

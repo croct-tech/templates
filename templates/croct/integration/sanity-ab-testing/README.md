@@ -10,7 +10,7 @@ analytics tools.
 It's the fastest way to add experimentation on top of Sanity Studio.
 
 > [!TIP Integration]
-> Learn more about the Croct + Sanity integration on the [integration page](https://croct.com/integrations/sanity).
+> Learn more about the Croct + Sanity integration by checking the [resulting project repo](https://github.com/croct-tech/croct-sanity-project) or exploring the [integration page](https://croct.com/integrations/sanity).
 
 
 Unlike currently available plugins, you can run experiments at the component level rather than the field level. Croct

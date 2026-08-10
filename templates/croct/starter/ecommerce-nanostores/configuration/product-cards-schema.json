@@ -1,0 +1,121 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content-schema.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Title",
+      "private": false,
+      "optional": true,
+      "position": 0,
+      "description": "The section heading displayed above the product grid."
+    },
+    "description": {
+      "type": {
+        "type": "text"
+      },
+      "label": "Description",
+      "private": false,
+      "optional": true,
+      "position": 1,
+      "description": "A short description displayed below the section title."
+    },
+    "cards": {
+      "type": {
+        "type": "list",
+        "items": {
+          "type": "structure",
+          "attributes": {
+            "name": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Name",
+              "private": false,
+              "optional": false,
+              "position": 0,
+              "description": "The name of the product."
+            },
+            "description": {
+              "type": {
+                "type": "text",
+                "minimumLength": 1
+              },
+              "label": "Description",
+              "private": false,
+              "optional": true,
+              "position": 1,
+              "description": "A short description of the product."
+            },
+            "image": {
+              "type": {
+                "id": "@croct/file",
+                "type": "reference",
+                "properties": {}
+              },
+              "label": "Image",
+              "private": false,
+              "optional": true,
+              "position": 2,
+              "description": "The product image."
+            },
+            "price": {
+              "type": {
+                "type": "number",
+                "minimum": 0
+              },
+              "label": "Price",
+              "private": false,
+              "optional": false,
+              "position": 3,
+              "description": "The display price of the product."
+            },
+            "cta": {
+              "type": {
+                "type": "structure",
+                "attributes": {
+                  "label": {
+                    "type": {
+                      "type": "text",
+                      "minimumLength": 1
+                    },
+                    "label": "Label",
+                    "private": false,
+                    "optional": false,
+                    "position": 0,
+                    "description": "The label of the button."
+                  },
+                  "link": {
+                    "type": {
+                      "type": "text",
+                      "format": "url"
+                    },
+                    "label": "Link",
+                    "private": false,
+                    "optional": false,
+                    "position": 1,
+                    "description": "The target URL for the button."
+                  }
+                }
+              },
+              "label": "Call to action",
+              "private": false,
+              "optional": true,
+              "position": 4,
+              "description": "The call-to-action button for the product."
+            }
+          }
+        },
+        "itemLabel": "Product card"
+      },
+      "label": "Cards",
+      "private": false,
+      "optional": false,
+      "position": 2,
+      "description": "The list of product cards to display."
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "text": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Free shipping on orders over $50!"
+      }
+    },
+    "link": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "https://example.com/products"
+      }
+    },
+    "style": {
+      "type": "structure",
+      "attributes": {
+        "backgroundColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#000000"
+          }
+        },
+        "textColor": {
+          "type": "text",
+          "value": {
+            "type": "static",
+            "value": "#ffffff"
+          }
+        }
+      }
+    }
+  }
+}

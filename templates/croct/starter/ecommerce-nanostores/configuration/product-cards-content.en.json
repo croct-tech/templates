@@ -1,0 +1,181 @@
+{
+  "$schema": "https://schema.croct.com/json/v1/template-content.json",
+  "type": "structure",
+  "attributes": {
+    "title": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Recommended for you"
+      }
+    },
+    "description": {
+      "type": "text",
+      "value": {
+        "type": "static",
+        "value": "Handpicked products based on your preferences."
+      }
+    },
+    "cards": {
+      "type": "list",
+      "items": [
+        {
+          "type": "structure",
+          "attributes": {
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Classic T-Shirt"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Premium cotton comfort for everyday wear."
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/4ed0d2a8-07e4-4808-a5f5-a163aa114e48"
+              }
+            },
+            "price": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 29.99
+              }
+            },
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Add to cart"
+                  }
+                },
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com/products/classic-t-shirt"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Running Shoes"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Lightweight performance for every run."
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/4ed0d2a8-07e4-4808-a5f5-a163aa114e48"
+              }
+            },
+            "price": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 89.99
+              }
+            },
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Add to cart"
+                  }
+                },
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com/products/running-shoes"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "structure",
+          "attributes": {
+            "name": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Leather Backpack"
+              }
+            },
+            "description": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "Durable everyday carry with timeless style."
+              }
+            },
+            "image": {
+              "type": "text",
+              "value": {
+                "type": "static",
+                "value": "https://cdn.croct.io/workspace/customer-assets/bac910ff-a18e-4ca5-bdd0-155139967ea4/4ed0d2a8-07e4-4808-a5f5-a163aa114e48"
+              }
+            },
+            "price": {
+              "type": "number",
+              "value": {
+                "type": "static",
+                "value": 129.99
+              }
+            },
+            "cta": {
+              "type": "structure",
+              "attributes": {
+                "label": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "Add to cart"
+                  }
+                },
+                "link": {
+                  "type": "text",
+                  "value": {
+                    "type": "static",
+                    "value": "https://example.com/products/leather-backpack"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
